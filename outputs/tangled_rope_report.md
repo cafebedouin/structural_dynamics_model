@@ -1,6 +1,6 @@
 # Tangled Rope Diagnostic Report
 
-**Total Unique Tangled Ropes Found:** 508
+**Total Unique Tangled Ropes Found:** 570
 
 ---
 
@@ -11,7 +11,7 @@
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -47,7 +47,7 @@ N/A
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -70,7 +70,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint aging_longevity_tests appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -156,7 +156,26 @@ N/A
 
 ---
 
-### 9. Tangled Rope: `ai_training_data_dependency`
+### 9. Tangled Rope: `ai_scholar_citation_trap`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint ai_scholar_citation_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 10. Tangled Rope: `ai_training_data_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -175,7 +194,7 @@ N/A
 
 ---
 
-### 10. Tangled Rope: `airbnb_str_regulation`
+### 11. Tangled Rope: `airbnb_str_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -184,7 +203,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint airbnb_str_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -194,12 +213,12 @@ N/A
 
 ---
 
-### 11. Tangled Rope: `alzheimers_levetiracetam`
+### 12. Tangled Rope: `alzheimers_levetiracetam`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -213,7 +232,7 @@ N/A
 
 ---
 
-### 12. Tangled Rope: `apartheid_nuclear_program`
+### 13. Tangled Rope: `apartheid_nuclear_program`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -232,7 +251,7 @@ N/A
 
 ---
 
-### 13. Tangled Rope: `ape_cognition_framework`
+### 14. Tangled Rope: `ape_cognition_framework`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -251,7 +270,7 @@ N/A
 
 ---
 
-### 14. Tangled Rope: `arctic_geopolitical_flashpoint`
+### 15. Tangled Rope: `arctic_geopolitical_flashpoint`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -270,7 +289,7 @@ N/A
 
 ---
 
-### 15. Tangled Rope: `arctic_maritime_control`
+### 16. Tangled Rope: `arctic_maritime_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -289,7 +308,7 @@ N/A
 
 ---
 
-### 16. Tangled Rope: `arg_ev_tariff`
+### 17. Tangled Rope: `arg_ev_tariff`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -308,7 +327,7 @@ N/A
 
 ---
 
-### 17. Tangled Rope: `armra_colostrum_regulation`
+### 18. Tangled Rope: `armra_colostrum_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -327,7 +346,7 @@ N/A
 
 ---
 
-### 18. Tangled Rope: `arrows_impossibility_theorem`
+### 19. Tangled Rope: `arrows_impossibility_theorem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -346,7 +365,7 @@ N/A
 
 ---
 
-### 19. Tangled Rope: `artificial_scarcity_scaffold`
+### 20. Tangled Rope: `artificial_scarcity_scaffold`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `critical`
@@ -365,12 +384,31 @@ N/A
 
 ---
 
-### 20. Tangled Rope: `asce_7_22_seismic_design`
+### 21. Tangled Rope: `artificial_snow_2026`
+
+*   **Claimed Type:** `piton`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint artificial_snow_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 22. Tangled Rope: `asce_7_22_seismic_design`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -384,7 +422,26 @@ N/A
 
 ---
 
-### 21. Tangled Rope: `atrophied_optimization_piton`
+### 23. Tangled Rope: `astm_d638_tensile_testing`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint astm_d638_tensile_testing appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 24. Tangled Rope: `atrophied_optimization_piton`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -403,7 +460,7 @@ N/A
 
 ---
 
-### 22. Tangled Rope: `availability_heuristic`
+### 25. Tangled Rope: `availability_heuristic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -422,7 +479,26 @@ N/A
 
 ---
 
-### 23. Tangled Rope: `bangladesh_july_national_charter`
+### 26. Tangled Rope: `axiom_reasoner_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint axiom_reasoner_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 27. Tangled Rope: `bangladesh_july_national_charter`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -441,7 +517,7 @@ N/A
 
 ---
 
-### 24. Tangled Rope: `bgs_eigenvector_thermalization`
+### 28. Tangled Rope: `bgs_eigenvector_thermalization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -460,14 +536,14 @@ N/A
 
 ---
 
-### 25. Tangled Rope: `big_data_astrophysics_arbitrage`
+### 29. Tangled Rope: `big_data_astrophysics_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -479,12 +555,12 @@ N/A
 
 ---
 
-### 26. Tangled Rope: `blackstone_carried_interest_taxation`
+### 30. Tangled Rope: `blackstone_carried_interest_taxation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -498,7 +574,7 @@ N/A
 
 ---
 
-### 27. Tangled Rope: `bnpl_payment_systems`
+### 31. Tangled Rope: `bnpl_payment_systems`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -517,7 +593,7 @@ N/A
 
 ---
 
-### 28. Tangled Rope: `board_of_peace_2026`
+### 32. Tangled Rope: `board_of_peace_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -536,7 +612,7 @@ N/A
 
 ---
 
-### 29. Tangled Rope: `boiled_pineapple_trend_2026`
+### 33. Tangled Rope: `boiled_pineapple_trend_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -555,7 +631,26 @@ N/A
 
 ---
 
-### 30. Tangled Rope: `brazil_2026_general_elections`
+### 34. Tangled Rope: `boltzmann_universality_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint boltzmann_universality_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 35. Tangled Rope: `brazil_2026_general_elections`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -574,7 +669,7 @@ N/A
 
 ---
 
-### 31. Tangled Rope: `burden_of_proof_scientific`
+### 36. Tangled Rope: `burden_of_proof_scientific`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -583,7 +678,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint burden_of_proof_scientific appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -593,7 +688,7 @@ N/A
 
 ---
 
-### 32. Tangled Rope: `canal_panama_influence`
+### 37. Tangled Rope: `canal_panama_influence`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -612,7 +707,7 @@ N/A
 
 ---
 
-### 33. Tangled Rope: `cancer_prevention`
+### 38. Tangled Rope: `cancer_prevention`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -631,7 +726,7 @@ N/A
 
 ---
 
-### 34. Tangled Rope: `capital_rotation_ai_narrative`
+### 39. Tangled Rope: `capital_rotation_ai_narrative`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -650,7 +745,7 @@ N/A
 
 ---
 
-### 35. Tangled Rope: `carbon_credit_markets_2026`
+### 40. Tangled Rope: `carbon_credit_markets_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -669,7 +764,7 @@ N/A
 
 ---
 
-### 36. Tangled Rope: `carrier_deployment_deterrence`
+### 41. Tangled Rope: `carrier_deployment_deterrence`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -688,7 +783,7 @@ N/A
 
 ---
 
-### 37. Tangled Rope: `champions_bass_fishing_exclusion`
+### 42. Tangled Rope: `champions_bass_fishing_exclusion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -707,7 +802,7 @@ N/A
 
 ---
 
-### 38. Tangled Rope: `china_ev_export_oversupply`
+### 43. Tangled Rope: `china_ev_export_oversupply`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -726,7 +821,7 @@ N/A
 
 ---
 
-### 39. Tangled Rope: `china_vactrain_standard`
+### 44. Tangled Rope: `china_vactrain_standard`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -745,7 +840,7 @@ N/A
 
 ---
 
-### 40. Tangled Rope: `choice_architecture_design`
+### 45. Tangled Rope: `choice_architecture_design`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -764,7 +859,7 @@ N/A
 
 ---
 
-### 41. Tangled Rope: `civilizational_maintenance_debt`
+### 46. Tangled Rope: `civilizational_maintenance_debt`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -783,16 +878,35 @@ N/A
 
 ---
 
-### 42. Tangled Rope: `cma`
+### 47. Tangled Rope: `clawderberg_recursive_slop`
+
+*   **Claimed Type:** `piton`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint clawderberg_recursive_slop appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 48. Tangled Rope: `cma`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint cma appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -802,7 +916,7 @@ N/A
 
 ---
 
-### 43. Tangled Rope: `cmr_001`
+### 49. Tangled Rope: `cmr_001`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -821,7 +935,7 @@ N/A
 
 ---
 
-### 44. Tangled Rope: `cn_tech_decoupling_security_software`
+### 50. Tangled Rope: `cn_tech_decoupling_security_software`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -840,7 +954,7 @@ N/A
 
 ---
 
-### 45. Tangled Rope: `coalition_disinfo_framework_2026`
+### 51. Tangled Rope: `coalition_disinfo_framework_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -859,7 +973,7 @@ N/A
 
 ---
 
-### 46. Tangled Rope: `cobra_effect`
+### 52. Tangled Rope: `cobra_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -878,7 +992,7 @@ N/A
 
 ---
 
-### 47. Tangled Rope: `codex_access`
+### 53. Tangled Rope: `codex_access`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -897,7 +1011,7 @@ N/A
 
 ---
 
-### 48. Tangled Rope: `coffee_cardiovascular_2026`
+### 54. Tangled Rope: `coffee_cardiovascular_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `critical`
@@ -916,7 +1030,7 @@ N/A
 
 ---
 
-### 49. Tangled Rope: `cognitive_diversity_arbitrage`
+### 55. Tangled Rope: `cognitive_diversity_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -935,7 +1049,7 @@ N/A
 
 ---
 
-### 50. Tangled Rope: `cognitive_energy_budget`
+### 56. Tangled Rope: `cognitive_energy_budget`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -954,7 +1068,7 @@ N/A
 
 ---
 
-### 51. Tangled Rope: `coinbase_crypto_volatility`
+### 57. Tangled Rope: `coinbase_crypto_volatility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -973,7 +1087,7 @@ N/A
 
 ---
 
-### 52. Tangled Rope: `cold_dark_matter_paradigm`
+### 58. Tangled Rope: `cold_dark_matter_paradigm`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -992,14 +1106,14 @@ N/A
 
 ---
 
-### 53. Tangled Rope: `college_admissions_market`
+### 59. Tangled Rope: `college_admissions_market`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -1011,7 +1125,7 @@ N/A
 
 ---
 
-### 54. Tangled Rope: `comitatus_bond`
+### 60. Tangled Rope: `comitatus_bond`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1030,7 +1144,7 @@ N/A
 
 ---
 
-### 55. Tangled Rope: `compounding_logic`
+### 61. Tangled Rope: `compounding_logic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1049,7 +1163,7 @@ N/A
 
 ---
 
-### 56. Tangled Rope: `confirmation_bias`
+### 62. Tangled Rope: `confirmation_bias`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1068,7 +1182,7 @@ N/A
 
 ---
 
-### 57. Tangled Rope: `constitutional_consecration`
+### 63. Tangled Rope: `constitutional_consecration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1087,7 +1201,7 @@ N/A
 
 ---
 
-### 58. Tangled Rope: `constitutional_supremacy`
+### 64. Tangled Rope: `constitutional_supremacy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1106,7 +1220,7 @@ N/A
 
 ---
 
-### 59. Tangled Rope: `constraint_yoneda`
+### 65. Tangled Rope: `constraint_yoneda`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1115,7 +1229,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint constraint_yoneda appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1125,7 +1239,7 @@ N/A
 
 ---
 
-### 60. Tangled Rope: `conversational_dogmas_interruption`
+### 66. Tangled Rope: `conversational_dogmas_interruption`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1134,7 +1248,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint conversational_dogmas_interruption appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1144,7 +1258,7 @@ N/A
 
 ---
 
-### 61. Tangled Rope: `corporate_social_responsibility_theater`
+### 67. Tangled Rope: `corporate_social_responsibility_theater`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -1163,7 +1277,26 @@ N/A
 
 ---
 
-### 62. Tangled Rope: `couples_residency_match`
+### 68. Tangled Rope: `cost_of_observation`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint cost_of_observation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 69. Tangled Rope: `couples_residency_match`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1182,7 +1315,7 @@ N/A
 
 ---
 
-### 63. Tangled Rope: `credentialism_national_security`
+### 70. Tangled Rope: `credentialism_national_security`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1201,7 +1334,7 @@ N/A
 
 ---
 
-### 64. Tangled Rope: `crop_defense_dependency`
+### 71. Tangled Rope: `crop_defense_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1220,7 +1353,26 @@ N/A
 
 ---
 
-### 65. Tangled Rope: `cuba_mandatrophic_collapse`
+### 72. Tangled Rope: `cs_ecmo_bridge`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint cs_ecmo_bridge appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 73. Tangled Rope: `cuba_mandatrophic_collapse`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -1239,7 +1391,7 @@ N/A
 
 ---
 
-### 66. Tangled Rope: `cultural_homogenization_social_media`
+### 74. Tangled Rope: `cultural_homogenization_social_media`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1258,7 +1410,7 @@ N/A
 
 ---
 
-### 67. Tangled Rope: `data_privacy_regulation`
+### 75. Tangled Rope: `data_privacy_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1277,7 +1429,7 @@ N/A
 
 ---
 
-### 68. Tangled Rope: `data_replication_paradox`
+### 76. Tangled Rope: `data_replication_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1286,7 +1438,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint data_replication_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1296,7 +1448,7 @@ N/A
 
 ---
 
-### 69. Tangled Rope: `debt_trap_microfinance`
+### 77. Tangled Rope: `debt_trap_microfinance`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -1315,14 +1467,14 @@ N/A
 
 ---
 
-### 70. Tangled Rope: `decision_latency_mismatch`
+### 78. Tangled Rope: `decision_latency_mismatch`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -1334,7 +1486,7 @@ N/A
 
 ---
 
-### 71. Tangled Rope: `digital_euro_cbdc`
+### 79. Tangled Rope: `digital_euro_cbdc`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1353,7 +1505,7 @@ N/A
 
 ---
 
-### 72. Tangled Rope: `digital_identity_tether`
+### 80. Tangled Rope: `digital_identity_tether`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1372,7 +1524,7 @@ N/A
 
 ---
 
-### 73. Tangled Rope: `dionysiac_frenzy`
+### 81. Tangled Rope: `dionysiac_frenzy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1381,7 +1533,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint dionysiac_frenzy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1391,7 +1543,7 @@ N/A
 
 ---
 
-### 74. Tangled Rope: `discover_core_2026`
+### 82. Tangled Rope: `discover_core_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1410,7 +1562,7 @@ N/A
 
 ---
 
-### 75. Tangled Rope: `djia_as_economic_barometer`
+### 83. Tangled Rope: `djia_as_economic_barometer`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1429,7 +1581,7 @@ N/A
 
 ---
 
-### 76. Tangled Rope: `dn_paywall`
+### 84. Tangled Rope: `dn_paywall`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1448,7 +1600,7 @@ N/A
 
 ---
 
-### 77. Tangled Rope: `doomsday_clock_framework`
+### 85. Tangled Rope: `doomsday_clock_framework`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1467,7 +1619,7 @@ N/A
 
 ---
 
-### 78. Tangled Rope: `dunning_kruger_effect`
+### 86. Tangled Rope: `dunning_kruger_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1486,7 +1638,7 @@ N/A
 
 ---
 
-### 79. Tangled Rope: `dutch_minority_govt_2026`
+### 87. Tangled Rope: `dutch_minority_govt_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1505,7 +1657,7 @@ N/A
 
 ---
 
-### 80. Tangled Rope: `edelman_2026_developed_stagnation`
+### 88. Tangled Rope: `edelman_2026_developed_stagnation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1524,7 +1676,7 @@ N/A
 
 ---
 
-### 81. Tangled Rope: `edelman_2026_insularity`
+### 89. Tangled Rope: `edelman_2026_insularity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1543,7 +1695,26 @@ N/A
 
 ---
 
-### 82. Tangled Rope: `elite_overproduction_instability`
+### 90. Tangled Rope: `electrification_scale_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint electrification_scale_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 91. Tangled Rope: `elite_overproduction_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1562,7 +1733,7 @@ N/A
 
 ---
 
-### 83. Tangled Rope: `elliq_ai_companion`
+### 92. Tangled Rope: `elliq_ai_companion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1581,7 +1752,7 @@ N/A
 
 ---
 
-### 84. Tangled Rope: `em_clinical_guidelines`
+### 93. Tangled Rope: `em_clinical_guidelines`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1590,7 +1761,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint em_clinical_guidelines appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1600,7 +1771,7 @@ N/A
 
 ---
 
-### 85. Tangled Rope: `emergency_bridge_scaffold`
+### 94. Tangled Rope: `emergency_bridge_scaffold`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -1609,7 +1780,7 @@ N/A
     *   Institutional (Manager) View: `scaffold`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint emergency_bridge_scaffold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1619,7 +1790,7 @@ N/A
 
 ---
 
-### 86. Tangled Rope: `empty_tomb_transformation`
+### 95. Tangled Rope: `empty_tomb_transformation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1638,7 +1809,26 @@ N/A
 
 ---
 
-### 87. Tangled Rope: `ergo_storage_rent_mechanism`
+### 96. Tangled Rope: `ergo_storage_rent`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint ergo_storage_rent appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 97. Tangled Rope: `ergo_storage_rent_mechanism`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1657,7 +1847,7 @@ N/A
 
 ---
 
-### 88. Tangled Rope: `ergodic_theorems`
+### 98. Tangled Rope: `ergodic_theorems`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1676,7 +1866,7 @@ N/A
 
 ---
 
-### 89. Tangled Rope: `eu_affordable_housing_initiative`
+### 99. Tangled Rope: `eu_affordable_housing_initiative`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1695,7 +1885,7 @@ N/A
 
 ---
 
-### 90. Tangled Rope: `eu_deforestation_regulation`
+### 100. Tangled Rope: `eu_deforestation_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1714,7 +1904,7 @@ N/A
 
 ---
 
-### 91. Tangled Rope: `eu_ev_tariff_wall`
+### 101. Tangled Rope: `eu_ev_tariff_wall`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1733,7 +1923,7 @@ N/A
 
 ---
 
-### 92. Tangled Rope: `eu_irgc_terrorist_designation`
+### 102. Tangled Rope: `eu_irgc_terrorist_designation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1752,7 +1942,7 @@ N/A
 
 ---
 
-### 93. Tangled Rope: `eu_mercosur_trade_agreement`
+### 103. Tangled Rope: `eu_mercosur_trade_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1771,7 +1961,7 @@ N/A
 
 ---
 
-### 94. Tangled Rope: `eu_renewable_energy_mandate`
+### 104. Tangled Rope: `eu_renewable_energy_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1790,7 +1980,7 @@ N/A
 
 ---
 
-### 95. Tangled Rope: `eu_unanimity_rule_foreign_policy`
+### 105. Tangled Rope: `eu_unanimity_rule_foreign_policy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1809,7 +1999,7 @@ N/A
 
 ---
 
-### 96. Tangled Rope: `eurozone_fragmentation_2026`
+### 106. Tangled Rope: `eurozone_fragmentation_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1828,7 +2018,7 @@ N/A
 
 ---
 
-### 97. Tangled Rope: `evfta_trade_agreement`
+### 107. Tangled Rope: `evfta_trade_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1847,7 +2037,7 @@ N/A
 
 ---
 
-### 98. Tangled Rope: `evolutionary_knowledge`
+### 108. Tangled Rope: `evolutionary_knowledge`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1866,7 +2056,26 @@ N/A
 
 ---
 
-### 99. Tangled Rope: `exploration_vs_exploitation`
+### 109. Tangled Rope: `exoplanetary_habitability_arbitrage`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint exoplanetary_habitability_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 110. Tangled Rope: `exploration_vs_exploitation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1885,7 +2094,7 @@ N/A
 
 ---
 
-### 100. Tangled Rope: `extraordinary_narrative_shift`
+### 111. Tangled Rope: `extraordinary_narrative_shift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1904,14 +2113,14 @@ N/A
 
 ---
 
-### 101. Tangled Rope: `factional_instability`
+### 112. Tangled Rope: `factional_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -1923,7 +2132,7 @@ N/A
 
 ---
 
-### 102. Tangled Rope: `fcc_dji_covered_list`
+### 113. Tangled Rope: `fcc_dji_covered_list`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1942,7 +2151,7 @@ N/A
 
 ---
 
-### 103. Tangled Rope: `fda_component_efficacy_standard`
+### 114. Tangled Rope: `fda_component_efficacy_standard`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1961,7 +2170,7 @@ N/A
 
 ---
 
-### 104. Tangled Rope: `fiber_optic_chip_tech`
+### 115. Tangled Rope: `fiber_optic_chip_tech`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1980,7 +2189,7 @@ N/A
 
 ---
 
-### 105. Tangled Rope: `fine_particle_policy`
+### 116. Tangled Rope: `fine_particle_policy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -1999,7 +2208,26 @@ N/A
 
 ---
 
-### 106. Tangled Rope: `fitts_law_industrial_application`
+### 117. Tangled Rope: `fiscal_equalization_friction`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint fiscal_equalization_friction appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 118. Tangled Rope: `fitts_law_industrial_application`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2008,7 +2236,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint fitts_law_industrial_application appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2018,7 +2246,7 @@ N/A
 
 ---
 
-### 107. Tangled Rope: `fmeca_procedures_1980`
+### 119. Tangled Rope: `fmeca_procedures_1980`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `critical`
@@ -2037,7 +2265,7 @@ N/A
 
 ---
 
-### 108. Tangled Rope: `fmt_oncology_2026`
+### 120. Tangled Rope: `fmt_oncology_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `critical`
@@ -2046,7 +2274,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint fmt_oncology_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2056,7 +2284,7 @@ N/A
 
 ---
 
-### 109. Tangled Rope: `framing_effect`
+### 121. Tangled Rope: `framing_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2075,7 +2303,26 @@ N/A
 
 ---
 
-### 110. Tangled Rope: `france_cordon_sanitaire_2026`
+### 122. Tangled Rope: `france_2027_presidential_election`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint france_2027_presidential_election appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 123. Tangled Rope: `france_cordon_sanitaire_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -2094,16 +2341,16 @@ N/A
 
 ---
 
-### 111. Tangled Rope: `france_local_elections_march_2026`
+### 124. Tangled Rope: `france_local_elections_march_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `scaffold`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint france_local_elections_march_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2113,7 +2360,7 @@ N/A
 
 ---
 
-### 112. Tangled Rope: `fraser_river_salmon_regulation`
+### 125. Tangled Rope: `fraser_river_salmon_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2132,7 +2379,7 @@ N/A
 
 ---
 
-### 113. Tangled Rope: `french_ag_land_concentration`
+### 126. Tangled Rope: `french_ag_land_concentration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2151,7 +2398,7 @@ N/A
 
 ---
 
-### 114. Tangled Rope: `future_dsm_integration`
+### 127. Tangled Rope: `future_dsm_integration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2160,7 +2407,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint future_dsm_integration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2170,7 +2417,7 @@ N/A
 
 ---
 
-### 115. Tangled Rope: `g7_debt_trap`
+### 128. Tangled Rope: `g7_debt_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2189,7 +2436,26 @@ N/A
 
 ---
 
-### 116. Tangled Rope: `gaza_aid_permit_revocation`
+### 129. Tangled Rope: `gamblers_ruin_stochastic_extinction`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint gamblers_ruin_stochastic_extinction appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 130. Tangled Rope: `gaza_aid_permit_revocation`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -2208,7 +2474,7 @@ N/A
 
 ---
 
-### 117. Tangled Rope: `gaza_border_control_rafah`
+### 131. Tangled Rope: `gaza_border_control_rafah`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2227,7 +2493,7 @@ N/A
 
 ---
 
-### 118. Tangled Rope: `genetic_predisposition`
+### 132. Tangled Rope: `genetic_predisposition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2246,7 +2512,26 @@ N/A
 
 ---
 
-### 119. Tangled Rope: `geopolitical_insularity_2026`
+### 133. Tangled Rope: `genie_ip_constraint`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint genie_ip_constraint appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 134. Tangled Rope: `geopolitical_insularity_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2265,7 +2550,7 @@ N/A
 
 ---
 
-### 120. Tangled Rope: `gita_kurukshetra`
+### 135. Tangled Rope: `gita_kurukshetra`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2284,7 +2569,7 @@ N/A
 
 ---
 
-### 121. Tangled Rope: `glen_canyon_water_allocation`
+### 136. Tangled Rope: `glen_canyon_water_allocation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2303,7 +2588,7 @@ N/A
 
 ---
 
-### 122. Tangled Rope: `global_digital_divide`
+### 137. Tangled Rope: `global_digital_divide`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2322,7 +2607,7 @@ N/A
 
 ---
 
-### 123. Tangled Rope: `global_stimulus_spree`
+### 138. Tangled Rope: `global_stimulus_spree`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2341,7 +2626,7 @@ N/A
 
 ---
 
-### 124. Tangled Rope: `goodharts_law`
+### 139. Tangled Rope: `goodharts_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2360,7 +2645,7 @@ N/A
 
 ---
 
-### 125. Tangled Rope: `google_ai_search_overview`
+### 140. Tangled Rope: `google_ai_search_overview`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2379,7 +2664,7 @@ N/A
 
 ---
 
-### 126. Tangled Rope: `google_universal_commerce_protocol`
+### 141. Tangled Rope: `google_universal_commerce_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2398,7 +2683,7 @@ N/A
 
 ---
 
-### 127. Tangled Rope: `gpt5_codex_dev_cycle`
+### 142. Tangled Rope: `gpt5_codex_dev_cycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2417,7 +2702,7 @@ N/A
 
 ---
 
-### 128. Tangled Rope: `gpt_store_marketplace`
+### 143. Tangled Rope: `gpt_store_marketplace`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2436,7 +2721,7 @@ N/A
 
 ---
 
-### 129. Tangled Rope: `gradient_descent_optimization`
+### 144. Tangled Rope: `gradient_descent_optimization`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `critical`
@@ -2455,7 +2740,7 @@ N/A
 
 ---
 
-### 130. Tangled Rope: `graph_coloring_complexity`
+### 145. Tangled Rope: `graph_coloring_complexity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2474,7 +2759,7 @@ N/A
 
 ---
 
-### 131. Tangled Rope: `great_awakening_rekindling`
+### 146. Tangled Rope: `great_awakening_rekindling`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2483,7 +2768,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
 *   **Generated Omega:** Distinguishing between intent and consequence in the extraction of institutional authority.
 *   **Suggested Resolution Strategy:**
@@ -2493,7 +2778,7 @@ N/A
 
 ---
 
-### 132. Tangled Rope: `greenland_defence_pact_2026`
+### 147. Tangled Rope: `greenland_defence_pact_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2512,14 +2797,14 @@ N/A
 
 ---
 
-### 133. Tangled Rope: `grete_samsa_transition`
+### 148. Tangled Rope: `grete_samsa_transition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -2531,7 +2816,7 @@ N/A
 
 ---
 
-### 134. Tangled Rope: `guano_wealth_extraction`
+### 149. Tangled Rope: `guano_wealth_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2550,7 +2835,26 @@ N/A
 
 ---
 
-### 135. Tangled Rope: `hammurabi_lex_talionis`
+### 150. Tangled Rope: `guinea_worm_eradication`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint guinea_worm_eradication appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 151. Tangled Rope: `hammurabi_lex_talionis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2559,7 +2863,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint hammurabi_lex_talionis appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2569,7 +2873,7 @@ N/A
 
 ---
 
-### 136. Tangled Rope: `hanlons_razor`
+### 152. Tangled Rope: `hanlons_razor`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2588,7 +2892,7 @@ N/A
 
 ---
 
-### 137. Tangled Rope: `hasbro_licensing_restriction`
+### 153. Tangled Rope: `hasbro_licensing_restriction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2607,7 +2911,7 @@ N/A
 
 ---
 
-### 138. Tangled Rope: `hawthorne_effect`
+### 154. Tangled Rope: `hawthorne_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2626,7 +2930,26 @@ N/A
 
 ---
 
-### 139. Tangled Rope: `help_to_buy_uk`
+### 155. Tangled Rope: `hegemonic_entropy_2026`
+
+*   **Claimed Type:** `piton`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint hegemonic_entropy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 156. Tangled Rope: `help_to_buy_uk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2645,7 +2968,7 @@ N/A
 
 ---
 
-### 140. Tangled Rope: `helsinki_bus_theory`
+### 157. Tangled Rope: `helsinki_bus_theory`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2664,7 +2987,7 @@ N/A
 
 ---
 
-### 141. Tangled Rope: `hershey_salt_strategy`
+### 158. Tangled Rope: `hershey_salt_strategy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2683,7 +3006,26 @@ N/A
 
 ---
 
-### 142. Tangled Rope: `horizon_liability_contract`
+### 159. Tangled Rope: `hoa_covenants`
+
+*   **Claimed Type:** `piton`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint hoa_covenants appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 160. Tangled Rope: `horizon_liability_contract`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2702,7 +3044,7 @@ N/A
 
 ---
 
-### 143. Tangled Rope: `hp_liberalism`
+### 161. Tangled Rope: `hp_liberalism`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2711,7 +3053,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint hp_liberalism appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2721,7 +3063,7 @@ N/A
 
 ---
 
-### 144. Tangled Rope: `hu_2026_election_rules`
+### 162. Tangled Rope: `hu_2026_election_rules`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2730,7 +3072,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint hu_2026_election_rules appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2740,7 +3082,7 @@ N/A
 
 ---
 
-### 145. Tangled Rope: `hub_short_form_tv_market_fragmentation`
+### 163. Tangled Rope: `hub_short_form_tv_market_fragmentation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2759,14 +3101,14 @@ N/A
 
 ---
 
-### 146. Tangled Rope: `hydra_game`
+### 164. Tangled Rope: `hydra_game`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -2778,7 +3120,7 @@ N/A
 
 ---
 
-### 147. Tangled Rope: `ia_digital_preservation`
+### 165. Tangled Rope: `ia_digital_preservation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2787,7 +3129,7 @@ N/A
     *   Institutional (Manager) View: `scaffold`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ia_digital_preservation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2797,7 +3139,7 @@ N/A
 
 ---
 
-### 148. Tangled Rope: `incumbent_steel_production`
+### 166. Tangled Rope: `incumbent_steel_production`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2816,7 +3158,7 @@ N/A
 
 ---
 
-### 149. Tangled Rope: `india_nuclear_liability_act_2010`
+### 167. Tangled Rope: `india_nuclear_liability_act_2010`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2835,7 +3177,7 @@ N/A
 
 ---
 
-### 150. Tangled Rope: `india_semi_mission`
+### 168. Tangled Rope: `india_semi_mission`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2854,7 +3196,7 @@ N/A
 
 ---
 
-### 151. Tangled Rope: `indian_import_tariffs_eu`
+### 169. Tangled Rope: `indian_import_tariffs_eu`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2873,7 +3215,7 @@ N/A
 
 ---
 
-### 152. Tangled Rope: `indo_german_defense_pact`
+### 170. Tangled Rope: `indo_german_defense_pact`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2892,7 +3234,7 @@ N/A
 
 ---
 
-### 153. Tangled Rope: `innovators_dilemma`
+### 171. Tangled Rope: `innovators_dilemma`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2911,7 +3253,7 @@ N/A
 
 ---
 
-### 154. Tangled Rope: `institutional_inertia_lock`
+### 172. Tangled Rope: `institutional_inertia_lock`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2930,14 +3272,14 @@ N/A
 
 ---
 
-### 155. Tangled Rope: `institutional_trust_decay`
+### 173. Tangled Rope: `institutional_trust_decay`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -2949,14 +3291,14 @@ N/A
 
 ---
 
-### 156. Tangled Rope: `insult_wisdom_training`
+### 174. Tangled Rope: `insult_wisdom_training`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -2968,7 +3310,7 @@ N/A
 
 ---
 
-### 157. Tangled Rope: `international_seabed_mining_regime`
+### 175. Tangled Rope: `international_seabed_mining_regime`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -2987,7 +3329,7 @@ N/A
 
 ---
 
-### 158. Tangled Rope: `iron_law_of_oligarchy`
+### 176. Tangled Rope: `iron_law_of_oligarchy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3006,7 +3348,7 @@ N/A
 
 ---
 
-### 159. Tangled Rope: `isa_education_scaffold`
+### 177. Tangled Rope: `isa_education_scaffold`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `critical`
@@ -3025,7 +3367,7 @@ N/A
 
 ---
 
-### 160. Tangled Rope: `israel_egypt_gas_deal`
+### 178. Tangled Rope: `israel_egypt_gas_deal`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3044,7 +3386,7 @@ N/A
 
 ---
 
-### 161. Tangled Rope: `israel_electoral_threshold`
+### 179. Tangled Rope: `israel_electoral_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3063,7 +3405,7 @@ N/A
 
 ---
 
-### 162. Tangled Rope: `israel_gaza_ceasefire_violation`
+### 180. Tangled Rope: `israel_gaza_ceasefire_violation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3082,7 +3424,7 @@ N/A
 
 ---
 
-### 163. Tangled Rope: `israel_norwegian_law`
+### 181. Tangled Rope: `israel_norwegian_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3101,7 +3443,7 @@ N/A
 
 ---
 
-### 164. Tangled Rope: `israel_surplus_vote_agreements`
+### 182. Tangled Rope: `israel_surplus_vote_agreements`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3120,7 +3462,7 @@ N/A
 
 ---
 
-### 165. Tangled Rope: `iterated_function_system_convergence`
+### 183. Tangled Rope: `iterated_function_system_convergence`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3129,7 +3471,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint iterated_function_system_convergence appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3139,7 +3481,7 @@ N/A
 
 ---
 
-### 166. Tangled Rope: `ivt_accessibility_barrier`
+### 184. Tangled Rope: `ivt_accessibility_barrier`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3148,7 +3490,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ivt_accessibility_barrier appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3158,7 +3500,7 @@ N/A
 
 ---
 
-### 167. Tangled Rope: `japanese_energy_scaffold_2025`
+### 185. Tangled Rope: `japanese_energy_scaffold_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3177,7 +3519,7 @@ N/A
 
 ---
 
-### 168. Tangled Rope: `jevons_paradox`
+### 186. Tangled Rope: `jevons_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3196,7 +3538,7 @@ N/A
 
 ---
 
-### 169. Tangled Rope: `jp_eez_enforcement`
+### 187. Tangled Rope: `jp_eez_enforcement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3215,12 +3557,12 @@ N/A
 
 ---
 
-### 170. Tangled Rope: `keltner_relationship_evaluation`
+### 188. Tangled Rope: `keltner_relationship_evaluation`
 
 *   **Claimed Type:** `[social_governance]`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -3234,7 +3576,7 @@ N/A
 
 ---
 
-### 171. Tangled Rope: `kidney_exchange_market`
+### 189. Tangled Rope: `kidney_exchange_market`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `critical`
@@ -3253,7 +3595,7 @@ N/A
 
 ---
 
-### 172. Tangled Rope: `kim_jong_un_succession`
+### 190. Tangled Rope: `kim_jong_un_succession`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3272,7 +3614,7 @@ N/A
 
 ---
 
-### 173. Tangled Rope: `labor_union_dues`
+### 191. Tangled Rope: `labor_union_dues`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3281,7 +3623,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint labor_union_dues appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3291,7 +3633,7 @@ N/A
 
 ---
 
-### 174. Tangled Rope: `landscape_of_fear_2026`
+### 192. Tangled Rope: `landscape_of_fear_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3310,7 +3652,7 @@ N/A
 
 ---
 
-### 175. Tangled Rope: `law_of_diminishing_returns`
+### 193. Tangled Rope: `law_of_diminishing_returns`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3329,7 +3671,7 @@ N/A
 
 ---
 
-### 176. Tangled Rope: `layered_brain_processing`
+### 194. Tangled Rope: `layered_brain_processing`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `critical`
@@ -3348,7 +3690,7 @@ N/A
 
 ---
 
-### 177. Tangled Rope: `lcdm_hubble_tension`
+### 195. Tangled Rope: `lcdm_hubble_tension`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3367,7 +3709,26 @@ N/A
 
 ---
 
-### 178. Tangled Rope: `logistic_map_dynamics`
+### 196. Tangled Rope: `lindy_effect`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint lindy_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 197. Tangled Rope: `logistic_map_dynamics`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3386,7 +3747,7 @@ N/A
 
 ---
 
-### 179. Tangled Rope: `lorenz_attractor_dynamics`
+### 198. Tangled Rope: `lorenz_attractor_dynamics`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3405,7 +3766,7 @@ N/A
 
 ---
 
-### 180. Tangled Rope: `lung_transplant_protocol`
+### 199. Tangled Rope: `lung_transplant_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3424,7 +3785,7 @@ N/A
 
 ---
 
-### 181. Tangled Rope: `mandatrophy_systemic_collapse`
+### 200. Tangled Rope: `mandatrophy_systemic_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3433,7 +3794,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint mandatrophy_systemic_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3443,7 +3804,7 @@ N/A
 
 ---
 
-### 182. Tangled Rope: `manga_distribution_duopoly`
+### 201. Tangled Rope: `manga_distribution_duopoly`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3462,7 +3823,7 @@ N/A
 
 ---
 
-### 183. Tangled Rope: `matching_markets_general`
+### 202. Tangled Rope: `matching_markets_general`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3481,7 +3842,7 @@ N/A
 
 ---
 
-### 184. Tangled Rope: `max_flow_min_cut`
+### 203. Tangled Rope: `max_flow_min_cut`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3490,7 +3851,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint max_flow_min_cut appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3500,7 +3861,7 @@ N/A
 
 ---
 
-### 185. Tangled Rope: `med_diet_consensus_2026`
+### 204. Tangled Rope: `med_diet_consensus_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3519,7 +3880,7 @@ N/A
 
 ---
 
-### 186. Tangled Rope: `medical_residency_match`
+### 205. Tangled Rope: `medical_residency_match`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3538,7 +3899,7 @@ N/A
 
 ---
 
-### 187. Tangled Rope: `mexican_airline_merger`
+### 206. Tangled Rope: `mexican_airline_merger`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3557,7 +3918,7 @@ N/A
 
 ---
 
-### 188. Tangled Rope: `micro_robot_electronics_integration`
+### 207. Tangled Rope: `micro_robot_electronics_integration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3576,7 +3937,7 @@ N/A
 
 ---
 
-### 189. Tangled Rope: `microbiome_symbiosis`
+### 208. Tangled Rope: `microbiome_symbiosis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3595,7 +3956,7 @@ N/A
 
 ---
 
-### 190. Tangled Rope: `microwave_weapon_1`
+### 209. Tangled Rope: `microwave_weapon_1`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3614,7 +3975,7 @@ N/A
 
 ---
 
-### 191. Tangled Rope: `mil_std_461g_emi_control`
+### 210. Tangled Rope: `mil_std_461g_emi_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3633,7 +3994,7 @@ N/A
 
 ---
 
-### 192. Tangled Rope: `mil_std_810f_tailoring`
+### 211. Tangled Rope: `mil_std_810f_tailoring`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3652,7 +4013,7 @@ N/A
 
 ---
 
-### 193. Tangled Rope: `minimax_theorem_game_equilibrium`
+### 212. Tangled Rope: `minimax_theorem_game_equilibrium`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3661,7 +4022,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint minimax_theorem_game_equilibrium appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3671,14 +4032,33 @@ N/A
 
 ---
 
-### 194. Tangled Rope: `moltbook_agent_theater`
+### 213. Tangled Rope: `mit_tfus_2026`
+
+*   **Claimed Type:** `scaffold`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint mit_tfus_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 214. Tangled Rope: `moltbook_agent_theater`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -3690,7 +4070,7 @@ N/A
 
 ---
 
-### 195. Tangled Rope: `moltbot_religion`
+### 215. Tangled Rope: `moltbot_religion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3699,7 +4079,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint moltbot_religion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3709,7 +4089,7 @@ N/A
 
 ---
 
-### 196. Tangled Rope: `monetary_regime_transition`
+### 216. Tangled Rope: `monetary_regime_transition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3728,7 +4108,7 @@ N/A
 
 ---
 
-### 197. Tangled Rope: `mrna_melanoma_therapy`
+### 217. Tangled Rope: `mrna_melanoma_therapy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3747,7 +4127,7 @@ N/A
 
 ---
 
-### 198. Tangled Rope: `ncaa_eligibility_rules`
+### 218. Tangled Rope: `ncaa_eligibility_rules`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3766,7 +4146,7 @@ N/A
 
 ---
 
-### 199. Tangled Rope: `nds_2022_pacing_challenge`
+### 219. Tangled Rope: `nds_2022_pacing_challenge`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3785,14 +4165,14 @@ N/A
 
 ---
 
-### 200. Tangled Rope: `negative_emissions_arbitrage`
+### 220. Tangled Rope: `negative_emissions_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -3804,7 +4184,26 @@ N/A
 
 ---
 
-### 201. Tangled Rope: `network_effects`
+### 221. Tangled Rope: `net_zero_stabilization`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint net_zero_stabilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 222. Tangled Rope: `network_effects`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3823,7 +4222,26 @@ N/A
 
 ---
 
-### 202. Tangled Rope: `neural_substrate_2026`
+### 223. Tangled Rope: `neural_interoperability`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint neural_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 224. Tangled Rope: `neural_substrate_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3842,14 +4260,14 @@ N/A
 
 ---
 
-### 203. Tangled Rope: `neurodiversity_spectrum`
+### 225. Tangled Rope: `neurodiversity_spectrum`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -3861,7 +4279,7 @@ N/A
 
 ---
 
-### 204. Tangled Rope: `new_start_expiration`
+### 226. Tangled Rope: `new_start_expiration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3880,7 +4298,7 @@ N/A
 
 ---
 
-### 205. Tangled Rope: `news_paywall_inequality`
+### 227. Tangled Rope: `news_paywall_inequality`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3899,7 +4317,7 @@ N/A
 
 ---
 
-### 206. Tangled Rope: `nfl_superbowl_halftime_exclusivity`
+### 228. Tangled Rope: `nfl_superbowl_halftime_exclusivity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3918,7 +4336,7 @@ N/A
 
 ---
 
-### 207. Tangled Rope: `nfl_superbowl_marketing_regulation`
+### 229. Tangled Rope: `nfl_superbowl_marketing_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3937,7 +4355,7 @@ N/A
 
 ---
 
-### 208. Tangled Rope: `nine_day_buffer`
+### 230. Tangled Rope: `nine_day_buffer`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3956,7 +4374,7 @@ N/A
 
 ---
 
-### 209. Tangled Rope: `noether_isomorphism_access`
+### 231. Tangled Rope: `noether_isomorphism_access`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3965,7 +4383,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint noether_isomorphism_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3975,7 +4393,7 @@ N/A
 
 ---
 
-### 210. Tangled Rope: `north_sea_wind_grid`
+### 232. Tangled Rope: `north_sea_wind_grid`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -3994,12 +4412,12 @@ N/A
 
 ---
 
-### 211. Tangled Rope: `notary_ink_dependency`
+### 233. Tangled Rope: `notary_ink_dependency`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -4013,7 +4431,26 @@ N/A
 
 ---
 
-### 212. Tangled Rope: `nuclear_vacuum_2026`
+### 234. Tangled Rope: `nsw_transmission_bottleneck`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint nsw_transmission_bottleneck appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 235. Tangled Rope: `nuclear_vacuum_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4032,7 +4469,7 @@ N/A
 
 ---
 
-### 213. Tangled Rope: `ny_private_school_discount`
+### 236. Tangled Rope: `ny_private_school_discount`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4051,7 +4488,7 @@ N/A
 
 ---
 
-### 214. Tangled Rope: `nyc_metrocard_art_licensing`
+### 237. Tangled Rope: `nyc_metrocard_art_licensing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4070,12 +4507,12 @@ N/A
 
 ---
 
-### 215. Tangled Rope: `olympic_medal_allocation`
+### 238. Tangled Rope: `olympic_medal_allocation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -4089,7 +4526,7 @@ N/A
 
 ---
 
-### 216. Tangled Rope: `omega1_patching_process`
+### 239. Tangled Rope: `omega1_patching_process`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4098,7 +4535,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint omega1_patching_process appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4108,7 +4545,64 @@ N/A
 
 ---
 
-### 217. Tangled Rope: `openai_health_review`
+### 240. Tangled Rope: `omelet_perfection_complexity`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint omelet_perfection_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 241. Tangled Rope: `openai_api_access`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint openai_api_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 242. Tangled Rope: `openai_codex_app_constraint`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint openai_codex_app_constraint appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 243. Tangled Rope: `openai_health_review`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4127,7 +4621,7 @@ N/A
 
 ---
 
-### 218. Tangled Rope: `openai_implicit_translator`
+### 244. Tangled Rope: `openai_implicit_translator`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4146,7 +4640,7 @@ N/A
 
 ---
 
-### 219. Tangled Rope: `openai_prism_development`
+### 245. Tangled Rope: `openai_prism_development`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4165,7 +4659,7 @@ N/A
 
 ---
 
-### 220. Tangled Rope: `openbsd_netiquette_protocol`
+### 246. Tangled Rope: `openbsd_netiquette_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4184,7 +4678,7 @@ N/A
 
 ---
 
-### 221. Tangled Rope: `openclaw_data_lock_in`
+### 247. Tangled Rope: `openclaw_data_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4203,7 +4697,7 @@ N/A
 
 ---
 
-### 222. Tangled Rope: `openclaw_regulation`
+### 248. Tangled Rope: `openclaw_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4222,7 +4716,26 @@ N/A
 
 ---
 
-### 223. Tangled Rope: `oral_glp1_market_access`
+### 249. Tangled Rope: `openscholar_peer_review`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint openscholar_peer_review appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 250. Tangled Rope: `oral_glp1_market_access`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4241,7 +4754,7 @@ N/A
 
 ---
 
-### 224. Tangled Rope: `oscar_campaign_spending`
+### 251. Tangled Rope: `oscar_campaign_spending`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4260,7 +4773,7 @@ N/A
 
 ---
 
-### 225. Tangled Rope: `overton_window`
+### 252. Tangled Rope: `overton_window`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4279,7 +4792,7 @@ N/A
 
 ---
 
-### 226. Tangled Rope: `p_g_golden_pear_surveillance`
+### 253. Tangled Rope: `p_g_golden_pear_surveillance`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -4298,7 +4811,7 @@ N/A
 
 ---
 
-### 227. Tangled Rope: `parkinsons_law`
+### 254. Tangled Rope: `parkinsons_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4317,7 +4830,7 @@ N/A
 
 ---
 
-### 228. Tangled Rope: `participatory_observer_hypothesis`
+### 255. Tangled Rope: `participatory_observer_hypothesis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4336,7 +4849,7 @@ N/A
 
 ---
 
-### 229. Tangled Rope: `paxsilica_framework`
+### 256. Tangled Rope: `paxsilica_framework`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4355,7 +4868,7 @@ N/A
 
 ---
 
-### 230. Tangled Rope: `perovskite_self_etching`
+### 257. Tangled Rope: `perovskite_self_etching`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4374,7 +4887,7 @@ N/A
 
 ---
 
-### 231. Tangled Rope: `peter_principle`
+### 258. Tangled Rope: `peter_principle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4393,7 +4906,7 @@ N/A
 
 ---
 
-### 232. Tangled Rope: `planning_fallacy`
+### 259. Tangled Rope: `planning_fallacy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4412,7 +4925,7 @@ N/A
 
 ---
 
-### 233. Tangled Rope: `plastic_asphalt_mandate`
+### 260. Tangled Rope: `plastic_asphalt_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4431,7 +4944,7 @@ N/A
 
 ---
 
-### 234. Tangled Rope: `platform_app_store_duopoly`
+### 261. Tangled Rope: `platform_app_store_duopoly`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4450,7 +4963,26 @@ N/A
 
 ---
 
-### 235. Tangled Rope: `pna`
+### 262. Tangled Rope: `platonic_coparenting_decoupling`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint platonic_coparenting_decoupling appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 263. Tangled Rope: `pna`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4459,7 +4991,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint pna appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4469,7 +5001,7 @@ N/A
 
 ---
 
-### 236. Tangled Rope: `po_investigation_protocol_bias`
+### 264. Tangled Rope: `po_investigation_protocol_bias`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4488,7 +5020,7 @@ N/A
 
 ---
 
-### 237. Tangled Rope: `politeness_face_negotiation`
+### 265. Tangled Rope: `politeness_face_negotiation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4507,16 +5039,16 @@ N/A
 
 ---
 
-### 238. Tangled Rope: `portugal_ad_stability_2026`
+### 266. Tangled Rope: `portugal_ad_stability_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `scaffold`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint portugal_ad_stability_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4526,7 +5058,7 @@ N/A
 
 ---
 
-### 239. Tangled Rope: `portugal_polarization_threshold_2026`
+### 267. Tangled Rope: `portugal_polarization_threshold_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4545,7 +5077,7 @@ N/A
 
 ---
 
-### 240. Tangled Rope: `private_credit_market_opacity`
+### 268. Tangled Rope: `private_credit_market_opacity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4564,7 +5096,7 @@ N/A
 
 ---
 
-### 241. Tangled Rope: `private_identity_integration`
+### 269. Tangled Rope: `private_identity_integration`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `critical`
@@ -4583,7 +5115,7 @@ N/A
 
 ---
 
-### 242. Tangled Rope: `procedural_compliance_theater`
+### 270. Tangled Rope: `procedural_compliance_theater`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -4602,7 +5134,7 @@ N/A
 
 ---
 
-### 243. Tangled Rope: `protocol_capture_eee`
+### 271. Tangled Rope: `protocol_capture_eee`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4611,7 +5143,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint protocol_capture_eee appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4621,7 +5153,7 @@ N/A
 
 ---
 
-### 244. Tangled Rope: `qualified_immunity`
+### 272. Tangled Rope: `qualified_immunity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4640,7 +5172,7 @@ N/A
 
 ---
 
-### 245. Tangled Rope: `qwerty_vs_dvorak`
+### 273. Tangled Rope: `qwerty_vs_dvorak`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4659,7 +5191,7 @@ N/A
 
 ---
 
-### 246. Tangled Rope: `raac_school_maintenance`
+### 274. Tangled Rope: `raac_school_maintenance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4678,7 +5210,7 @@ N/A
 
 ---
 
-### 247. Tangled Rope: `rare_earth_dependency`
+### 275. Tangled Rope: `rare_earth_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4697,7 +5229,7 @@ N/A
 
 ---
 
-### 248. Tangled Rope: `rare_earth_export_restrictions`
+### 276. Tangled Rope: `rare_earth_export_restrictions`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4716,7 +5248,7 @@ N/A
 
 ---
 
-### 249. Tangled Rope: `rare_earth_hydrogen_extraction`
+### 277. Tangled Rope: `rare_earth_hydrogen_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4735,7 +5267,7 @@ N/A
 
 ---
 
-### 250. Tangled Rope: `rare_earth_seabed_mining`
+### 278. Tangled Rope: `rare_earth_seabed_mining`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4754,14 +5286,109 @@ N/A
 
 ---
 
-### 251. Tangled Rope: `royal_navy_middle_east_withdrawal`
+### 279. Tangled Rope: `recipe_scaling_ai`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint recipe_scaling_ai appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 280. Tangled Rope: `regulatory_capture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint regulatory_capture appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 281. Tangled Rope: `repair_probe_incomplete`
+
+*   **Claimed Type:** `N/A`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint repair_probe_incomplete appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 282. Tangled Rope: `rosen_bridge_protocol`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint rosen_bridge_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 283. Tangled Rope: `rotation_seven_black_soil`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint rotation_seven_black_soil appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 284. Tangled Rope: `royal_navy_middle_east_withdrawal`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -4773,14 +5400,14 @@ N/A
 
 ---
 
-### 252. Tangled Rope: `rule_update_failure`
+### 285. Tangled Rope: `rule_update_failure`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -4792,7 +5419,26 @@ N/A
 
 ---
 
-### 253. Tangled Rope: `sa_renewable_price_differential`
+### 286. Tangled Rope: `russells_paradox_self_reference`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint russells_paradox_self_reference appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 287. Tangled Rope: `sa_renewable_price_differential`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4811,12 +5457,12 @@ N/A
 
 ---
 
-### 254. Tangled Rope: `sadhu_integrity_protocol`
+### 288. Tangled Rope: `sadhu_integrity_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -4830,7 +5476,7 @@ N/A
 
 ---
 
-### 255. Tangled Rope: `sapir_whorf_hypothesis`
+### 289. Tangled Rope: `sapir_whorf_hypothesis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4849,7 +5495,7 @@ N/A
 
 ---
 
-### 256. Tangled Rope: `sat_csp_complexity`
+### 290. Tangled Rope: `sat_csp_complexity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4868,7 +5514,7 @@ N/A
 
 ---
 
-### 257. Tangled Rope: `seedance_export_restriction`
+### 291. Tangled Rope: `seedance_export_restriction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4887,7 +5533,7 @@ N/A
 
 ---
 
-### 258. Tangled Rope: `semantic_overload_friction`
+### 292. Tangled Rope: `semantic_overload_friction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4906,7 +5552,7 @@ N/A
 
 ---
 
-### 259. Tangled Rope: `semiconductor_fabrication_chokepoint`
+### 293. Tangled Rope: `semiconductor_fabrication_chokepoint`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4925,7 +5571,7 @@ N/A
 
 ---
 
-### 260. Tangled Rope: `semiconductor_mission_2026`
+### 294. Tangled Rope: `semiconductor_mission_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4944,7 +5590,7 @@ N/A
 
 ---
 
-### 261. Tangled Rope: `shadow_fleet_sanctions_evasion`
+### 295. Tangled Rope: `shadow_fleet_sanctions_evasion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4963,7 +5609,7 @@ N/A
 
 ---
 
-### 262. Tangled Rope: `shield_east_fortification`
+### 296. Tangled Rope: `shield_east_fortification`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -4982,7 +5628,7 @@ N/A
 
 ---
 
-### 263. Tangled Rope: `shobies_existential_commitment`
+### 297. Tangled Rope: `shobies_existential_commitment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5001,7 +5647,7 @@ N/A
 
 ---
 
-### 264. Tangled Rope: `sk_ai_act_2026`
+### 298. Tangled Rope: `sk_ai_act_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5020,7 +5666,7 @@ N/A
 
 ---
 
-### 265. Tangled Rope: `sm_addictive_design`
+### 299. Tangled Rope: `sm_addictive_design`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5039,14 +5685,14 @@ N/A
 
 ---
 
-### 266. Tangled Rope: `smartphone_ubiquity`
+### 300. Tangled Rope: `smartphone_ubiquity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -5058,7 +5704,7 @@ N/A
 
 ---
 
-### 267. Tangled Rope: `social_loafing`
+### 301. Tangled Rope: `social_loafing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5077,7 +5723,7 @@ N/A
 
 ---
 
-### 268. Tangled Rope: `social_media_participation_threshold`
+### 302. Tangled Rope: `social_media_participation_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5096,7 +5742,7 @@ N/A
 
 ---
 
-### 269. Tangled Rope: `social_narrative_casting`
+### 303. Tangled Rope: `social_narrative_casting`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5115,7 +5761,7 @@ N/A
 
 ---
 
-### 270. Tangled Rope: `soe_property_bailout`
+### 304. Tangled Rope: `soe_property_bailout`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5134,7 +5780,26 @@ N/A
 
 ---
 
-### 271. Tangled Rope: `sorites_paradox`
+### 305. Tangled Rope: `somatic_focusing_awareness`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint somatic_focusing_awareness appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 306. Tangled Rope: `sorites_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5153,7 +5818,7 @@ N/A
 
 ---
 
-### 272. Tangled Rope: `south_china_sea_arbitration_2016_2026`
+### 307. Tangled Rope: `south_china_sea_arbitration_2016_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5172,7 +5837,7 @@ N/A
 
 ---
 
-### 273. Tangled Rope: `sovereignty_as_arbitrage`
+### 308. Tangled Rope: `sovereignty_as_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5191,7 +5856,7 @@ N/A
 
 ---
 
-### 274. Tangled Rope: `st_petersburg_paradox`
+### 309. Tangled Rope: `st_petersburg_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5210,7 +5875,7 @@ N/A
 
 ---
 
-### 275. Tangled Rope: `start_treaty`
+### 310. Tangled Rope: `start_treaty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5229,7 +5894,7 @@ N/A
 
 ---
 
-### 276. Tangled Rope: `sti_clinical_testing_bottleneck`
+### 311. Tangled Rope: `sti_clinical_testing_bottleneck`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5248,7 +5913,7 @@ N/A
 
 ---
 
-### 277. Tangled Rope: `strait_coercion_2025`
+### 312. Tangled Rope: `strait_coercion_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5257,7 +5922,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint strait_coercion_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5267,7 +5932,7 @@ N/A
 
 ---
 
-### 278. Tangled Rope: `strange_attractor_dynamics`
+### 313. Tangled Rope: `strange_attractor_dynamics`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -5286,7 +5951,7 @@ N/A
 
 ---
 
-### 279. Tangled Rope: `strange_attractor_systemic_risk`
+### 314. Tangled Rope: `strange_attractor_systemic_risk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5295,7 +5960,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint strange_attractor_systemic_risk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5305,7 +5970,7 @@ N/A
 
 ---
 
-### 280. Tangled Rope: `strategic_deep_sea_rare_earth_mining`
+### 315. Tangled Rope: `strategic_deep_sea_rare_earth_mining`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5324,7 +5989,7 @@ N/A
 
 ---
 
-### 281. Tangled Rope: `streaming_bundling_mandate`
+### 316. Tangled Rope: `streaming_bundling_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5343,7 +6008,7 @@ N/A
 
 ---
 
-### 282. Tangled Rope: `student_loan_default_cliff`
+### 317. Tangled Rope: `student_loan_default_cliff`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5362,7 +6027,7 @@ N/A
 
 ---
 
-### 283. Tangled Rope: `student_loan_interest_accrual`
+### 318. Tangled Rope: `student_loan_interest_accrual`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5381,7 +6046,7 @@ N/A
 
 ---
 
-### 284. Tangled Rope: `sunk_cost_fallacy`
+### 319. Tangled Rope: `sunk_cost_fallacy`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -5400,7 +6065,7 @@ N/A
 
 ---
 
-### 285. Tangled Rope: `swift_legacy_piton`
+### 320. Tangled Rope: `swift_legacy_piton`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5419,7 +6084,7 @@ N/A
 
 ---
 
-### 286. Tangled Rope: `taiwan_university_application_system`
+### 321. Tangled Rope: `taiwan_university_application_system`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5438,14 +6103,33 @@ N/A
 
 ---
 
-### 287. Tangled Rope: `teaching_horses_to_sing`
+### 322. Tangled Rope: `tcp_rfc9293_interoperability`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint tcp_rfc9293_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 323. Tangled Rope: `teaching_horses_to_sing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -5457,14 +6141,14 @@ N/A
 
 ---
 
-### 288. Tangled Rope: `temporal_scale_arbitrage`
+### 324. Tangled Rope: `temporal_scale_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -5476,7 +6160,7 @@ N/A
 
 ---
 
-### 289. Tangled Rope: `texas_insurance_market_instability`
+### 325. Tangled Rope: `texas_insurance_market_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5495,7 +6179,7 @@ N/A
 
 ---
 
-### 290. Tangled Rope: `the_churn_systemic_upheaval`
+### 326. Tangled Rope: `the_churn_systemic_upheaval`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
@@ -5514,7 +6198,7 @@ N/A
 
 ---
 
-### 291. Tangled Rope: `theory_of_visitors`
+### 327. Tangled Rope: `theory_of_visitors`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5533,7 +6217,7 @@ N/A
 
 ---
 
-### 292. Tangled Rope: `tiktok_us_divestiture_mandate`
+### 328. Tangled Rope: `tiktok_us_divestiture_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5552,7 +6236,7 @@ N/A
 
 ---
 
-### 293. Tangled Rope: `trade_secret_law`
+### 329. Tangled Rope: `trade_secret_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5571,14 +6255,14 @@ N/A
 
 ---
 
-### 294. Tangled Rope: `tragedy_of_the_commons`
+### 330. Tangled Rope: `tragedy_of_the_commons`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -5590,14 +6274,14 @@ N/A
 
 ---
 
-### 295. Tangled Rope: `transformer_self_attention`
+### 331. Tangled Rope: `transformer_self_attention`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `unknown`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -5609,7 +6293,7 @@ N/A
 
 ---
 
-### 296. Tangled Rope: `traveling_salesperson_problem`
+### 332. Tangled Rope: `traveling_salesperson_problem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5628,7 +6312,26 @@ N/A
 
 ---
 
-### 297. Tangled Rope: `trump_critical_minerals`
+### 333. Tangled Rope: `trillion_bond_rush_2026`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `critical`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Constraint trillion_bond_rush_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 334. Tangled Rope: `trump_critical_minerals`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5647,7 +6350,7 @@ N/A
 
 ---
 
-### 298. Tangled Rope: `trump_epa_greenhouse_gas_reversal`
+### 335. Tangled Rope: `trump_epa_greenhouse_gas_reversal`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5666,7 +6369,7 @@ N/A
 
 ---
 
-### 299. Tangled Rope: `trump_indian_tariffs_2026`
+### 336. Tangled Rope: `trump_indian_tariffs_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5685,7 +6388,7 @@ N/A
 
 ---
 
-### 300. Tangled Rope: `trump_making_china_great_2026`
+### 337. Tangled Rope: `trump_making_china_great_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5704,7 +6407,7 @@ N/A
 
 ---
 
-### 301. Tangled Rope: `trump_second_term_authoritarianism_2026`
+### 338. Tangled Rope: `trump_second_term_authoritarianism_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5713,7 +6416,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint trump_second_term_authoritarianism_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5723,7 +6426,7 @@ N/A
 
 ---
 
-### 302. Tangled Rope: `tsp_computational_complexity`
+### 339. Tangled Rope: `tsp_computational_complexity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5732,7 +6435,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint tsp_computational_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5742,7 +6445,7 @@ N/A
 
 ---
 
-### 303. Tangled Rope: `uk_help_to_buy_scheme`
+### 340. Tangled Rope: `uk_help_to_buy_scheme`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5761,7 +6464,7 @@ N/A
 
 ---
 
-### 304. Tangled Rope: `uk_hicbc_trap`
+### 341. Tangled Rope: `uk_hicbc_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5780,7 +6483,7 @@ N/A
 
 ---
 
-### 305. Tangled Rope: `uk_necc_formation`
+### 342. Tangled Rope: `uk_necc_formation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5799,7 +6502,7 @@ N/A
 
 ---
 
-### 306. Tangled Rope: `ukraine_tight_gas_pilot`
+### 343. Tangled Rope: `ukraine_tight_gas_pilot`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -5818,7 +6521,7 @@ N/A
 
 ---
 
-### 307. Tangled Rope: `ulysses_aeolus_1904`
+### 344. Tangled Rope: `ulysses_aeolus_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5827,7 +6530,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_aeolus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5837,7 +6540,7 @@ N/A
 
 ---
 
-### 308. Tangled Rope: `ulysses_calypso_1904`
+### 345. Tangled Rope: `ulysses_calypso_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5846,7 +6549,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_calypso_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5856,7 +6559,7 @@ N/A
 
 ---
 
-### 309. Tangled Rope: `ulysses_cyclops_1904`
+### 346. Tangled Rope: `ulysses_cyclops_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5865,7 +6568,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_cyclops_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5875,7 +6578,7 @@ N/A
 
 ---
 
-### 310. Tangled Rope: `ulysses_eumaeus_1904`
+### 347. Tangled Rope: `ulysses_eumaeus_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5884,7 +6587,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_eumaeus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5894,7 +6597,7 @@ N/A
 
 ---
 
-### 311. Tangled Rope: `ulysses_ithaca_1904`
+### 348. Tangled Rope: `ulysses_ithaca_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5903,7 +6606,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_ithaca_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5913,7 +6616,7 @@ N/A
 
 ---
 
-### 312. Tangled Rope: `ulysses_lestrygonians_1904`
+### 349. Tangled Rope: `ulysses_lestrygonians_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5922,7 +6625,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_lestrygonians_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5932,7 +6635,7 @@ N/A
 
 ---
 
-### 313. Tangled Rope: `ulysses_lotus_1904`
+### 350. Tangled Rope: `ulysses_lotus_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5941,7 +6644,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_lotus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5951,7 +6654,7 @@ N/A
 
 ---
 
-### 314. Tangled Rope: `ulysses_nausicaa_1904`
+### 351. Tangled Rope: `ulysses_nausicaa_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5960,7 +6663,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_nausicaa_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5970,7 +6673,7 @@ N/A
 
 ---
 
-### 315. Tangled Rope: `ulysses_rocks_1904`
+### 352. Tangled Rope: `ulysses_rocks_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5979,7 +6682,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_rocks_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5989,7 +6692,7 @@ N/A
 
 ---
 
-### 316. Tangled Rope: `ulysses_school_1904`
+### 353. Tangled Rope: `ulysses_school_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -5998,7 +6701,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_school_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6008,7 +6711,7 @@ N/A
 
 ---
 
-### 317. Tangled Rope: `ulysses_scylla_1904`
+### 354. Tangled Rope: `ulysses_scylla_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -6017,7 +6720,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_scylla_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6027,7 +6730,7 @@ N/A
 
 ---
 
-### 318. Tangled Rope: `ulysses_sirens_1904`
+### 355. Tangled Rope: `ulysses_sirens_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -6036,7 +6739,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_sirens_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6046,7 +6749,7 @@ N/A
 
 ---
 
-### 319. Tangled Rope: `ulysses_tower_1904`
+### 356. Tangled Rope: `ulysses_tower_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
@@ -6055,7 +6758,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_tower_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6065,7 +6768,7 @@ N/A
 
 ---
 
-### 320. Tangled Rope: `un_high_seas_treaty_2026`
+### 357. Tangled Rope: `un_high_seas_treaty_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6084,7 +6787,7 @@ N/A
 
 ---
 
-### 321. Tangled Rope: `union_protection_underperformance`
+### 358. Tangled Rope: `union_protection_underperformance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6103,7 +6806,7 @@ N/A
 
 ---
 
-### 322. Tangled Rope: `us_arms_transfer_policy`
+### 359. Tangled Rope: `us_arms_transfer_policy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6122,7 +6825,7 @@ N/A
 
 ---
 
-### 323. Tangled Rope: `us_china_chip_tariffs_v2`
+### 360. Tangled Rope: `us_china_chip_tariffs_v2`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6141,7 +6844,7 @@ N/A
 
 ---
 
-### 324. Tangled Rope: `us_debt_ceiling`
+### 361. Tangled Rope: `us_debt_ceiling`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6160,7 +6863,7 @@ N/A
 
 ---
 
-### 325. Tangled Rope: `us_employer_health_insurance`
+### 362. Tangled Rope: `us_employer_health_insurance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6179,7 +6882,7 @@ N/A
 
 ---
 
-### 326. Tangled Rope: `us_iran_drone_conflict`
+### 363. Tangled Rope: `us_iran_drone_conflict`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6198,7 +6901,7 @@ N/A
 
 ---
 
-### 327. Tangled Rope: `us_labor_mobility`
+### 364. Tangled Rope: `us_labor_mobility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6217,7 +6920,7 @@ N/A
 
 ---
 
-### 328. Tangled Rope: `us_legal_standard_reasonable_doubt`
+### 365. Tangled Rope: `us_legal_standard_reasonable_doubt`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6236,7 +6939,7 @@ N/A
 
 ---
 
-### 329. Tangled Rope: `us_sanctions_icc_israel_case`
+### 366. Tangled Rope: `us_sanctions_icc_israel_case`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6255,7 +6958,7 @@ N/A
 
 ---
 
-### 330. Tangled Rope: `us_taiwan_arms_sales`
+### 367. Tangled Rope: `us_taiwan_arms_sales`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6274,7 +6977,7 @@ N/A
 
 ---
 
-### 331. Tangled Rope: `us_tariffs_2025`
+### 368. Tangled Rope: `us_tariffs_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6293,7 +6996,7 @@ N/A
 
 ---
 
-### 332. Tangled Rope: `us_usmca_china_leverage`
+### 369. Tangled Rope: `us_usmca_china_leverage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6312,7 +7015,7 @@ N/A
 
 ---
 
-### 333. Tangled Rope: `us_visa_lottery`
+### 370. Tangled Rope: `us_visa_lottery`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6331,7 +7034,7 @@ N/A
 
 ---
 
-### 334. Tangled Rope: `usc_26_469_passive_loss`
+### 371. Tangled Rope: `usc_26_469_passive_loss`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6350,7 +7053,7 @@ N/A
 
 ---
 
-### 335. Tangled Rope: `vienna_quantum_superposition_2026`
+### 372. Tangled Rope: `vienna_quantum_superposition_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6369,7 +7072,7 @@ N/A
 
 ---
 
-### 336. Tangled Rope: `visibility_bias_governance`
+### 373. Tangled Rope: `visibility_bias_governance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6388,7 +7091,7 @@ N/A
 
 ---
 
-### 337. Tangled Rope: `vns_implant_for_trd`
+### 374. Tangled Rope: `vns_implant_for_trd`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6407,7 +7110,7 @@ N/A
 
 ---
 
-### 338. Tangled Rope: `wikipedia_notability_requirement_2026`
+### 375. Tangled Rope: `wikipedia_notability_requirement_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6426,7 +7129,7 @@ N/A
 
 ---
 
-### 339. Tangled Rope: `wpl_scotland`
+### 376. Tangled Rope: `wpl_scotland`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6445,7 +7148,7 @@ N/A
 
 ---
 
-### 340. Tangled Rope: `yangtze_fishing_ban`
+### 377. Tangled Rope: `yangtze_fishing_ban`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6464,7 +7167,7 @@ N/A
 
 ---
 
-### 341. Tangled Rope: `yc_equity_squeeze`
+### 378. Tangled Rope: `yc_equity_squeeze`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `critical`
@@ -6473,7 +7176,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint yc_equity_squeeze appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6483,7 +7186,26 @@ N/A
 
 ---
 
-### 342. Tangled Rope: `academic_peer_review_gatekeeping`
+### 379. Tangled Rope: `absorbing_markov_chain_trap`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: tangled_rope)
+*   **Generated Omega:** Constraint absorbing_markov_chain_trap appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 380. Tangled Rope: `academic_peer_review_gatekeeping`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -6502,7 +7224,7 @@ N/A
 
 ---
 
-### 343. Tangled Rope: `access_arbitrage`
+### 381. Tangled Rope: `access_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -6521,12 +7243,12 @@ N/A
 
 ---
 
-### 344. Tangled Rope: `advice_as_dangerous_gift`
+### 382. Tangled Rope: `advice_as_dangerous_gift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -6540,7 +7262,7 @@ N/A
 
 ---
 
-### 345. Tangled Rope: `ai_cognitive_diversity_arbitrage`
+### 383. Tangled Rope: `ai_cognitive_diversity_arbitrage`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -6559,7 +7281,7 @@ N/A
 
 ---
 
-### 346. Tangled Rope: `ai_edu_decentralization`
+### 384. Tangled Rope: `ai_edu_decentralization`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -6578,7 +7300,7 @@ N/A
 
 ---
 
-### 347. Tangled Rope: `ai_task_horizon_reliability`
+### 385. Tangled Rope: `ai_task_horizon_reliability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -6597,7 +7319,7 @@ N/A
 
 ---
 
-### 348. Tangled Rope: `alternative_sovereignty_scaffold`
+### 386. Tangled Rope: `alternative_sovereignty_scaffold`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `unknown`
@@ -6616,7 +7338,7 @@ N/A
 
 ---
 
-### 349. Tangled Rope: `ancient_grudge_verona`
+### 387. Tangled Rope: `ancient_grudge_verona`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -6635,7 +7357,7 @@ N/A
 
 ---
 
-### 350. Tangled Rope: `antifragility`
+### 388. Tangled Rope: `antifragility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -6654,7 +7376,7 @@ N/A
 
 ---
 
-### 351. Tangled Rope: `asymmetric_computational_difficulty`
+### 389. Tangled Rope: `asymmetric_computational_difficulty`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `unknown`
@@ -6673,7 +7395,7 @@ N/A
 
 ---
 
-### 352. Tangled Rope: `availability_heuristic`
+### 390. Tangled Rope: `availability_heuristic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -6692,7 +7414,7 @@ N/A
 
 ---
 
-### 353. Tangled Rope: `axiom_of_choice`
+### 391. Tangled Rope: `axiom_of_choice`
 
 *   **Claimed Type:** `mountain`
 *   **Severity:** `high`
@@ -6701,7 +7423,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** Constraint axiom_of_choice appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6711,7 +7433,7 @@ N/A
 
 ---
 
-### 354. Tangled Rope: `bayes_theorem_cognitive_bias`
+### 392. Tangled Rope: `bayes_theorem_cognitive_bias`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6720,7 +7442,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -6730,7 +7452,7 @@ N/A
 
 ---
 
-### 355. Tangled Rope: `beehiiv_platform_model`
+### 393. Tangled Rope: `beehiiv_platform_model`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -6749,7 +7471,7 @@ N/A
 
 ---
 
-### 356. Tangled Rope: `brain_network_paradigm_2026`
+### 394. Tangled Rope: `brain_network_paradigm_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6768,7 +7490,7 @@ N/A
 
 ---
 
-### 357. Tangled Rope: `buffons_needle_pi_estimation`
+### 395. Tangled Rope: `buffons_needle_pi_estimation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -6787,7 +7509,7 @@ N/A
 
 ---
 
-### 358. Tangled Rope: `buffons_needle_pi_estimation`
+### 396. Tangled Rope: `buffons_needle_pi_estimation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -6806,7 +7528,26 @@ N/A
 
 ---
 
-### 359. Tangled Rope: `canada_goose_realignment_2026`
+### 397. Tangled Rope: `burden_of_proof_legal_criminal`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `high`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** The objectivity vs. subjectivity of the "reasonable doubt" standard.
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 398. Tangled Rope: `canada_goose_realignment_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `high`
@@ -6825,7 +7566,7 @@ N/A
 
 ---
 
-### 360. Tangled Rope: `castration_longevity_choice`
+### 399. Tangled Rope: `castration_longevity_choice`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -6844,12 +7585,12 @@ N/A
 
 ---
 
-### 361. Tangled Rope: `china_africa_zero_tariff_2026`
+### 400. Tangled Rope: `china_africa_zero_tariff_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -6863,7 +7604,7 @@ N/A
 
 ---
 
-### 362. Tangled Rope: `china_taiwan_reunification_mandate`
+### 401. Tangled Rope: `china_taiwan_reunification_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -6882,7 +7623,7 @@ N/A
 
 ---
 
-### 363. Tangled Rope: `choice_architecture_design`
+### 402. Tangled Rope: `choice_architecture_design`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -6901,7 +7642,7 @@ N/A
 
 ---
 
-### 364. Tangled Rope: `climate_event_attribution`
+### 403. Tangled Rope: `climate_event_attribution`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6920,7 +7661,7 @@ N/A
 
 ---
 
-### 365. Tangled Rope: `climate_policy_extraction`
+### 404. Tangled Rope: `climate_policy_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -6939,7 +7680,7 @@ N/A
 
 ---
 
-### 366. Tangled Rope: `climate_target_one_point_five`
+### 405. Tangled Rope: `climate_target_one_point_five`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -6958,7 +7699,7 @@ N/A
 
 ---
 
-### 367. Tangled Rope: `climate_target_one_point_five`
+### 406. Tangled Rope: `climate_target_one_point_five`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -6977,7 +7718,7 @@ N/A
 
 ---
 
-### 368. Tangled Rope: `cognac_geopolitical_risk`
+### 407. Tangled Rope: `cognac_geopolitical_risk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -6996,7 +7737,7 @@ N/A
 
 ---
 
-### 369. Tangled Rope: `cognitive_bicycle_scaffold`
+### 408. Tangled Rope: `cognitive_bicycle_scaffold`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -7015,7 +7756,7 @@ N/A
 
 ---
 
-### 370. Tangled Rope: `colombia_2026_presidential_election`
+### 409. Tangled Rope: `colombia_2026_presidential_election`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7024,7 +7765,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint colombia_2026_presidential_election appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7034,7 +7775,7 @@ N/A
 
 ---
 
-### 371. Tangled Rope: `confirmation_bias`
+### 410. Tangled Rope: `confirmation_bias`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -7053,16 +7794,16 @@ N/A
 
 ---
 
-### 372. Tangled Rope: `constraint_lagrange_multipliers`
+### 411. Tangled Rope: `constraint_lagrange_multipliers`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint constraint_lagrange_multipliers appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7072,16 +7813,16 @@ N/A
 
 ---
 
-### 373. Tangled Rope: `constraint_riemann_mapping`
+### 412. Tangled Rope: `constraint_riemann_mapping`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint constraint_riemann_mapping appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7091,7 +7832,7 @@ N/A
 
 ---
 
-### 374. Tangled Rope: `copyright_protection`
+### 413. Tangled Rope: `copyright_protection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -7110,7 +7851,7 @@ N/A
 
 ---
 
-### 375. Tangled Rope: `copyright_protection`
+### 414. Tangled Rope: `copyright_protection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7129,7 +7870,7 @@ N/A
 
 ---
 
-### 376. Tangled Rope: `cow_field_poop`
+### 415. Tangled Rope: `cow_field_poop`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7148,7 +7889,7 @@ N/A
 
 ---
 
-### 377. Tangled Rope: `creative_commons_licensing`
+### 416. Tangled Rope: `creative_commons_licensing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7167,7 +7908,7 @@ N/A
 
 ---
 
-### 378. Tangled Rope: `crispr_genomic_rewrite_2026`
+### 417. Tangled Rope: `crispr_genomic_rewrite_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7186,7 +7927,26 @@ N/A
 
 ---
 
-### 379. Tangled Rope: `damped_harmonics`
+### 418. Tangled Rope: `cuban_missile_crisis_excomm_deliberation`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `moderate`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Uncertainty over Soviet command-and-control and response doctrine during the crisis.
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 419. Tangled Rope: `damped_harmonics`
 
 *   **Claimed Type:** `mountain`
 *   **Severity:** `high`
@@ -7205,7 +7965,7 @@ N/A
 
 ---
 
-### 380. Tangled Rope: `dead_sea_effect`
+### 420. Tangled Rope: `dead_sea_effect`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -7224,7 +7984,64 @@ N/A
 
 ---
 
-### 381. Tangled Rope: `e2ee_digital_privacy_2026`
+### 421. Tangled Rope: `deferential_realism_framework`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 422. Tangled Rope: `dexy_gold_protocol`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `moderate`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Resilience of redemption locks against sophisticated economic attacks.
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 423. Tangled Rope: `dldr_information_policy`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 424. Tangled Rope: `e2ee_digital_privacy_2026`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -7243,7 +8060,7 @@ N/A
 
 ---
 
-### 382. Tangled Rope: `ec_meta_manus_block`
+### 425. Tangled Rope: `ec_meta_manus_block`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7262,7 +8079,7 @@ N/A
 
 ---
 
-### 383. Tangled Rope: `edelman_2026_developing_volatility`
+### 426. Tangled Rope: `edelman_2026_developing_volatility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7281,7 +8098,45 @@ N/A
 
 ---
 
-### 384. Tangled Rope: `emotional_cycles_2026`
+### 427. Tangled Rope: `education_unbundling_implementation`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
+*   **Generated Omega:** Constraint education_unbundling_implementation appears as rope to individuals but snare to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 428. Tangled Rope: `emergency_oversight_bureau`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, scaffold, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
+*   **Generated Omega:** Constraint emergency_oversight_bureau appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 429. Tangled Rope: `emotional_cycles_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7290,7 +8145,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: scaffold)
 *   **Generated Omega:** Constraint emotional_cycles_2026 appears as snare to individuals but scaffold to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7300,7 +8155,7 @@ N/A
 
 ---
 
-### 385. Tangled Rope: `epstein_document_release_2026`
+### 430. Tangled Rope: `epstein_document_release_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7319,7 +8174,26 @@ N/A
 
 ---
 
-### 386. Tangled Rope: `ergo_autolykos_asic_resistance`
+### 431. Tangled Rope: `erasmus_rejoining_scaffold`
+
+*   **Claimed Type:** `scaffold`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, scaffold, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: scaffold)
+*   **Generated Omega:** Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 432. Tangled Rope: `ergo_autolykos_asic_resistance`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `unknown`
@@ -7338,7 +8212,7 @@ N/A
 
 ---
 
-### 387. Tangled Rope: `ergo_lets_protocol`
+### 433. Tangled Rope: `ergo_lets_protocol`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -7357,7 +8231,7 @@ N/A
 
 ---
 
-### 388. Tangled Rope: `ergo_mixer_protocol`
+### 434. Tangled Rope: `ergo_mixer_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -7376,7 +8250,7 @@ N/A
 
 ---
 
-### 389. Tangled Rope: `eu_digital_services_act`
+### 435. Tangled Rope: `eu_digital_services_act`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7395,7 +8269,45 @@ N/A
 
 ---
 
-### 390. Tangled Rope: `extraordinary_narrative_shift`
+### 436. Tangled Rope: `exoplanetary_habitability_arbitrage`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `high`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Is the research strategy driven by necessity or by funding incentives?
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 437. Tangled Rope: `exoplanetary_habitability_arbitrage`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `moderate`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** What is the true statistical frequency of solar systems like ours?
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 438. Tangled Rope: `extraordinary_narrative_shift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -7414,7 +8326,7 @@ N/A
 
 ---
 
-### 391. Tangled Rope: `faa_boeing_regulatory_capture`
+### 439. Tangled Rope: `faa_boeing_regulatory_capture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7433,7 +8345,7 @@ N/A
 
 ---
 
-### 392. Tangled Rope: `faint_blue_neural_bifurcation`
+### 440. Tangled Rope: `faint_blue_neural_bifurcation`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -7452,7 +8364,7 @@ N/A
 
 ---
 
-### 393. Tangled Rope: `fed_shutdown_2026`
+### 441. Tangled Rope: `fed_shutdown_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7471,7 +8383,7 @@ N/A
 
 ---
 
-### 394. Tangled Rope: `finnish_ubi_experiment`
+### 442. Tangled Rope: `finnish_ubi_experiment`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -7490,12 +8402,12 @@ N/A
 
 ---
 
-### 395. Tangled Rope: `fnl_shadow_probe`
+### 443. Tangled Rope: `fnl_shadow_probe`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -7509,7 +8421,7 @@ N/A
 
 ---
 
-### 396. Tangled Rope: `franchisee_corporate_squeeze`
+### 444. Tangled Rope: `franchisee_corporate_squeeze`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7528,7 +8440,7 @@ N/A
 
 ---
 
-### 397. Tangled Rope: `frankenstein_creation_hubris`
+### 445. Tangled Rope: `frankenstein_creation_hubris`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7547,12 +8459,12 @@ N/A
 
 ---
 
-### 398. Tangled Rope: `gemini_scientific_advancement`
+### 446. Tangled Rope: `gemini_scientific_advancement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -7566,12 +8478,12 @@ N/A
 
 ---
 
-### 399. Tangled Rope: `germany_tennet_takeover`
+### 447. Tangled Rope: `germany_tennet_takeover`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -7585,7 +8497,7 @@ N/A
 
 ---
 
-### 400. Tangled Rope: `germline_regulation_threshold_2026`
+### 448. Tangled Rope: `germline_regulation_threshold_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7604,7 +8516,7 @@ N/A
 
 ---
 
-### 401. Tangled Rope: `gilgamesh_mortality_limit`
+### 449. Tangled Rope: `gilgamesh_mortality_limit`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7623,7 +8535,7 @@ N/A
 
 ---
 
-### 402. Tangled Rope: `global_hoarding_scaling_laws`
+### 450. Tangled Rope: `global_hoarding_scaling_laws`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7642,7 +8554,7 @@ N/A
 
 ---
 
-### 403. Tangled Rope: `global_protocol_entrenchment`
+### 451. Tangled Rope: `global_protocol_entrenchment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7661,7 +8573,26 @@ N/A
 
 ---
 
-### 404. Tangled Rope: `golden_handcuffs`
+### 452. Tangled Rope: `glp1_payload_efficiency_pivot`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `high`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
+*   **Generated Omega:** Constraint glp1_payload_efficiency_pivot appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 453. Tangled Rope: `golden_handcuffs`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7680,7 +8611,26 @@ N/A
 
 ---
 
-### 405. Tangled Rope: `great_awakening_rekindling`
+### 454. Tangled Rope: `goodstein_theorem_finite_proof`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
+*   **Generated Omega:** Constraint goodstein_theorem_finite_proof appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 455. Tangled Rope: `great_awakening_rekindling`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7689,7 +8639,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
 *   **Generated Omega:** Constraint great_awakening_rekindling appears as rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7699,7 +8649,7 @@ N/A
 
 ---
 
-### 406. Tangled Rope: `great_mongolian_road_economic_dependency`
+### 456. Tangled Rope: `great_mongolian_road_economic_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7718,7 +8668,7 @@ N/A
 
 ---
 
-### 407. Tangled Rope: `greshams_law`
+### 457. Tangled Rope: `greshams_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7737,12 +8687,12 @@ N/A
 
 ---
 
-### 408. Tangled Rope: `gs1_gln_identification`
+### 458. Tangled Rope: `gs1_gln_identification`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -7756,16 +8706,35 @@ N/A
 
 ---
 
-### 409. Tangled Rope: `gs_market_clearing`
+### 459. Tangled Rope: `gs1_standardized_identification`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `high`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
+*   **Generated Omega:** Constraint gs1_standardized_identification appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 460. Tangled Rope: `gs_market_clearing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint gs_market_clearing appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7775,7 +8744,7 @@ N/A
 
 ---
 
-### 410. Tangled Rope: `happiness_of_others`
+### 461. Tangled Rope: `happiness_of_others`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7794,7 +8763,7 @@ N/A
 
 ---
 
-### 411. Tangled Rope: `harm_principle_liberty`
+### 462. Tangled Rope: `harm_principle_liberty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7813,7 +8782,7 @@ N/A
 
 ---
 
-### 412. Tangled Rope: `hawthorne_effect`
+### 463. Tangled Rope: `hawthorne_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -7832,7 +8801,7 @@ N/A
 
 ---
 
-### 413. Tangled Rope: `hedonic_adaptation_baseline`
+### 464. Tangled Rope: `hedonic_adaptation_baseline`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7851,7 +8820,7 @@ N/A
 
 ---
 
-### 414. Tangled Rope: `helsinki_bus_theory`
+### 465. Tangled Rope: `helsinki_bus_theory`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -7870,7 +8839,7 @@ N/A
 
 ---
 
-### 415. Tangled Rope: `hominin_evolutionary_bottleneck`
+### 466. Tangled Rope: `hominin_evolutionary_bottleneck`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -7889,7 +8858,7 @@ N/A
 
 ---
 
-### 416. Tangled Rope: `inner_model_confirmation_bias`
+### 467. Tangled Rope: `inner_model_confirmation_bias`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7898,7 +8867,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -7908,7 +8877,7 @@ N/A
 
 ---
 
-### 417. Tangled Rope: `inner_model_theory_constraints`
+### 468. Tangled Rope: `inner_model_theory_constraints`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -7927,7 +8896,7 @@ N/A
 
 ---
 
-### 418. Tangled Rope: `israeli_settlement_policy_authority_restriction`
+### 469. Tangled Rope: `israeli_settlement_policy_authority_restriction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7946,7 +8915,7 @@ N/A
 
 ---
 
-### 419. Tangled Rope: `iss_ped_ban`
+### 470. Tangled Rope: `iss_ped_ban`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -7965,12 +8934,12 @@ N/A
 
 ---
 
-### 420. Tangled Rope: `jupiter_composition_knowledge_gap`
+### 471. Tangled Rope: `jupiter_composition_knowledge_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -7984,7 +8953,7 @@ N/A
 
 ---
 
-### 421. Tangled Rope: `juvenile_underclass_2026`
+### 472. Tangled Rope: `juvenile_underclass_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -8003,7 +8972,7 @@ N/A
 
 ---
 
-### 422. Tangled Rope: `kjv_puritan_new_world_exit`
+### 473. Tangled Rope: `kjv_puritan_new_world_exit`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -8022,7 +8991,7 @@ N/A
 
 ---
 
-### 423. Tangled Rope: `kjv_puritan_new_world_exit`
+### 474. Tangled Rope: `kjv_puritan_new_world_exit`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -8041,7 +9010,7 @@ N/A
 
 ---
 
-### 424. Tangled Rope: `kjv_textual_authority`
+### 475. Tangled Rope: `kjv_textual_authority`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8060,7 +9029,7 @@ N/A
 
 ---
 
-### 425. Tangled Rope: `knowledge_action_gap`
+### 476. Tangled Rope: `knowledge_action_gap`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -8079,7 +9048,7 @@ N/A
 
 ---
 
-### 426. Tangled Rope: `large_cardinal_foundations`
+### 477. Tangled Rope: `large_cardinal_foundations`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -8088,7 +9057,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** Constraint large_cardinal_foundations appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8098,7 +9067,7 @@ N/A
 
 ---
 
-### 427. Tangled Rope: `layered_brain_processing`
+### 478. Tangled Rope: `layered_brain_processing`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -8117,7 +9086,7 @@ N/A
 
 ---
 
-### 428. Tangled Rope: `layered_brain_processing`
+### 479. Tangled Rope: `layered_brain_processing`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -8136,7 +9105,7 @@ N/A
 
 ---
 
-### 429. Tangled Rope: `lcdm_small_scale_anomalies`
+### 480. Tangled Rope: `lcdm_small_scale_anomalies`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8155,7 +9124,7 @@ N/A
 
 ---
 
-### 430. Tangled Rope: `legacy_system_technical_debt`
+### 481. Tangled Rope: `legacy_system_technical_debt`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -8174,7 +9143,26 @@ N/A
 
 ---
 
-### 431. Tangled Rope: `linguistic_relativity_cultural_framing`
+### 482. Tangled Rope: `lindy_effect`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `moderate`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
+*   **Generated Omega:** Whether the Lindy Effect holds for rapidly iterating digital phenomena.
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 483. Tangled Rope: `linguistic_relativity_cultural_framing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8193,7 +9181,7 @@ N/A
 
 ---
 
-### 432. Tangled Rope: `lln_convergence`
+### 484. Tangled Rope: `lln_convergence`
 
 *   **Claimed Type:** `mountain`
 *   **Severity:** `high`
@@ -8212,7 +9200,7 @@ N/A
 
 ---
 
-### 433. Tangled Rope: `lsd_microdosing_professional_openness`
+### 485. Tangled Rope: `lsd_microdosing_professional_openness`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8231,7 +9219,7 @@ N/A
 
 ---
 
-### 434. Tangled Rope: `lula_hemisphere_2026`
+### 486. Tangled Rope: `lula_hemisphere_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `unknown`
@@ -8250,7 +9238,7 @@ N/A
 
 ---
 
-### 435. Tangled Rope: `magna_carta_liberties`
+### 487. Tangled Rope: `magna_carta_liberties`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -8269,7 +9257,26 @@ N/A
 
 ---
 
-### 436. Tangled Rope: `manganese_catalysis_2026`
+### 488. Tangled Rope: `maha_recovery_2026`
+
+*   **Claimed Type:** `scaffold`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `scaffold`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: scaffold)
+*   **Generated Omega:** Constraint maha_recovery_2026 appears as snare to individuals but scaffold to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 489. Tangled Rope: `manganese_catalysis_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `high`
@@ -8288,7 +9295,7 @@ N/A
 
 ---
 
-### 437. Tangled Rope: `mars_rovers_navigational_autonomy`
+### 490. Tangled Rope: `mars_rovers_navigational_autonomy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8307,16 +9314,16 @@ N/A
 
 ---
 
-### 438. Tangled Rope: `matching_market_congestion_externality`
+### 491. Tangled Rope: `matching_market_congestion_externality`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint matching_market_congestion_externality appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8326,7 +9333,7 @@ N/A
 
 ---
 
-### 439. Tangled Rope: `mco_unit_system_discontinuity`
+### 492. Tangled Rope: `mco_unit_system_discontinuity`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -8345,7 +9352,7 @@ N/A
 
 ---
 
-### 440. Tangled Rope: `meta_nda`
+### 493. Tangled Rope: `meta_nda`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8364,7 +9371,7 @@ N/A
 
 ---
 
-### 441. Tangled Rope: `meta_nuclear_power_agreement`
+### 494. Tangled Rope: `meta_nuclear_power_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8383,7 +9390,7 @@ N/A
 
 ---
 
-### 442. Tangled Rope: `metamorphosis_samsa`
+### 495. Tangled Rope: `metamorphosis_samsa`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `unknown`
@@ -8402,7 +9409,7 @@ N/A
 
 ---
 
-### 443. Tangled Rope: `micro_robot_electronics_integration`
+### 496. Tangled Rope: `micro_robot_electronics_integration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -8421,7 +9428,7 @@ N/A
 
 ---
 
-### 444. Tangled Rope: `microbiome_symbiosis`
+### 497. Tangled Rope: `microbiome_symbiosis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -8440,16 +9447,16 @@ N/A
 
 ---
 
-### 445. Tangled Rope: `migration_decision_threshold`
+### 498. Tangled Rope: `migration_decision_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint migration_decision_threshold appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8459,12 +9466,12 @@ N/A
 
 ---
 
-### 446. Tangled Rope: `moores_law`
+### 499. Tangled Rope: `moores_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -8478,7 +9485,7 @@ N/A
 
 ---
 
-### 447. Tangled Rope: `mutual_defection_equilibrium`
+### 500. Tangled Rope: `mutual_defection_equilibrium`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -8497,7 +9504,7 @@ N/A
 
 ---
 
-### 448. Tangled Rope: `mvt_theorem_constraint`
+### 501. Tangled Rope: `mvt_theorem_constraint`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -8506,7 +9513,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -8516,7 +9523,7 @@ N/A
 
 ---
 
-### 449. Tangled Rope: `narrative_engineering_2026`
+### 502. Tangled Rope: `narrative_engineering_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `high`
@@ -8535,7 +9542,7 @@ N/A
 
 ---
 
-### 450. Tangled Rope: `nasa_faster_better_cheaper`
+### 503. Tangled Rope: `nasa_faster_better_cheaper`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -8554,7 +9561,7 @@ N/A
 
 ---
 
-### 451. Tangled Rope: `nash_equilibrium_coordination`
+### 504. Tangled Rope: `nash_equilibrium_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -8573,7 +9580,7 @@ N/A
 
 ---
 
-### 452. Tangled Rope: `nato_arctic_defense_cooperation`
+### 505. Tangled Rope: `nato_arctic_defense_cooperation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8592,7 +9599,7 @@ N/A
 
 ---
 
-### 453. Tangled Rope: `neuroplasticity_plateau`
+### 506. Tangled Rope: `neuroplasticity_plateau`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -8611,7 +9618,7 @@ N/A
 
 ---
 
-### 454. Tangled Rope: `nonstandard_arithmetic_models`
+### 507. Tangled Rope: `nonstandard_arithmetic_models`
 
 *   **Claimed Type:** `mountain`
 *   **Severity:** `high`
@@ -8630,7 +9637,7 @@ N/A
 
 ---
 
-### 455. Tangled Rope: `nuclear_order_2026`
+### 508. Tangled Rope: `nuclear_order_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `unknown`
@@ -8649,12 +9656,12 @@ N/A
 
 ---
 
-### 456. Tangled Rope: `olympic_legacy_curling_investment`
+### 509. Tangled Rope: `olympic_legacy_curling_investment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -8668,7 +9675,26 @@ N/A
 
 ---
 
-### 457. Tangled Rope: `path_dependence_lock_in`
+### 510. Tangled Rope: `paris_municipal_reform_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
+*   **Generated Omega:** Constraint paris_municipal_reform_2026 appears as rope to individuals but snare to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 511. Tangled Rope: `path_dependence_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -8687,7 +9713,7 @@ N/A
 
 ---
 
-### 458. Tangled Rope: `peano_curve_mapping`
+### 512. Tangled Rope: `peano_curve_mapping`
 
 *   **Claimed Type:** `mountain`
 *   **Severity:** `high`
@@ -8706,7 +9732,7 @@ N/A
 
 ---
 
-### 459. Tangled Rope: `permissive_software_licensing`
+### 513. Tangled Rope: `permissive_software_licensing`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -8725,7 +9751,7 @@ N/A
 
 ---
 
-### 460. Tangled Rope: `perseverance_ai_drive`
+### 514. Tangled Rope: `perseverance_ai_drive`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -8744,7 +9770,7 @@ N/A
 
 ---
 
-### 461. Tangled Rope: `platform_cooperativism_governance`
+### 515. Tangled Rope: `platform_cooperativism_governance`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -8763,7 +9789,26 @@ N/A
 
 ---
 
-### 462. Tangled Rope: `power_set_axiomatic_extraction`
+### 516. Tangled Rope: `postman_survival_protocol`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 517. Tangled Rope: `power_set_axiomatic_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8772,7 +9817,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint power_set_axiomatic_extraction appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8782,7 +9827,7 @@ N/A
 
 ---
 
-### 463. Tangled Rope: `project_vault_2026`
+### 518. Tangled Rope: `project_vault_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8801,7 +9846,7 @@ N/A
 
 ---
 
-### 464. Tangled Rope: `proof_of_work_consensus`
+### 519. Tangled Rope: `proof_of_work_consensus`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -8820,7 +9865,7 @@ N/A
 
 ---
 
-### 465. Tangled Rope: `public_domain_commons`
+### 520. Tangled Rope: `public_domain_commons`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -8839,12 +9884,12 @@ N/A
 
 ---
 
-### 466. Tangled Rope: `publishing_embargo`
+### 521. Tangled Rope: `publishing_embargo`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -8858,7 +9903,26 @@ N/A
 
 ---
 
-### 467. Tangled Rope: `qwerty_vs_dvorak`
+### 522. Tangled Rope: `quantum_entanglement_protocol`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `high`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
+*   **Generated Omega:** Constraint quantum_entanglement_protocol appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 523. Tangled Rope: `qwerty_vs_dvorak`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -8877,7 +9941,7 @@ N/A
 
 ---
 
-### 468. Tangled Rope: `railway_gauge_standard`
+### 524. Tangled Rope: `railway_gauge_standard`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -8896,16 +9960,35 @@ N/A
 
 ---
 
-### 469. Tangled Rope: `ritual_transition_scaffold`
+### 525. Tangled Rope: `rfc9293_state_machine`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
+*   **Generated Omega:** Constraint rfc9293_state_machine appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 526. Tangled Rope: `ritual_transition_scaffold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -8915,7 +9998,7 @@ N/A
 
 ---
 
-### 470. Tangled Rope: `rn_proteus_adoption`
+### 527. Tangled Rope: `rn_proteus_adoption`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -8934,7 +10017,7 @@ N/A
 
 ---
 
-### 471. Tangled Rope: `rogers_commission_institutional_analysis`
+### 528. Tangled Rope: `rogers_commission_institutional_analysis`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -8953,7 +10036,7 @@ N/A
 
 ---
 
-### 472. Tangled Rope: `rogue_wave_control_2026`
+### 529. Tangled Rope: `rogue_wave_control_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -8972,12 +10055,12 @@ N/A
 
 ---
 
-### 473. Tangled Rope: `sadhu_integrity_protocol`
+### 530. Tangled Rope: `sadhu_integrity_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -8991,7 +10074,7 @@ N/A
 
 ---
 
-### 474. Tangled Rope: `satellite_d2m_standard`
+### 531. Tangled Rope: `satellite_d2m_standard`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9010,7 +10093,7 @@ N/A
 
 ---
 
-### 475. Tangled Rope: `scientific_paradigm_lifecycle`
+### 532. Tangled Rope: `scientific_paradigm_lifecycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9029,7 +10112,7 @@ N/A
 
 ---
 
-### 476. Tangled Rope: `self_surpassing`
+### 533. Tangled Rope: `self_surpassing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9038,7 +10121,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** Constraint self_surpassing appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9048,7 +10131,45 @@ N/A
 
 ---
 
-### 477. Tangled Rope: `sig_usd_protocol`
+### 534. Tangled Rope: `ship_of_theseus`
+
+*   **Claimed Type:** `piton`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
+*   **Generated Omega:** Constraint ship_of_theseus appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 535. Tangled Rope: `shitty_feedback_handling`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `unknown`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: tangled_rope)
+*   **Generated Omega:** Constraint shitty_feedback_handling appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 536. Tangled Rope: `sig_usd_protocol`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -9057,7 +10178,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: mountain, institutional: snare)
 *   **Generated Omega:** Constraint sig_usd_protocol appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9067,7 +10188,7 @@ N/A
 
 ---
 
-### 478. Tangled Rope: `sig_usd_protocol`
+### 537. Tangled Rope: `sig_usd_protocol`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -9076,7 +10197,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: mountain, institutional: snare)
 *   **Generated Omega:** Integrity and manipulation-resistance of the ERG/USD price oracle.
 *   **Suggested Resolution Strategy:**
@@ -9086,7 +10207,26 @@ N/A
 
 ---
 
-### 479. Tangled Rope: `solar_system_weirdness`
+### 538. Tangled Rope: `skills_based_hiring`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `moderate`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Rate of skill obsolescence and its impact on the long-term extractiveness of continuous certification.
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 539. Tangled Rope: `solar_system_weirdness`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -9105,7 +10245,7 @@ N/A
 
 ---
 
-### 480. Tangled Rope: `solar_system_weirdness`
+### 540. Tangled Rope: `solar_system_weirdness`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -9124,7 +10264,7 @@ N/A
 
 ---
 
-### 481. Tangled Rope: `solar_system_weirdness`
+### 541. Tangled Rope: `solar_system_weirdness`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -9143,7 +10283,7 @@ N/A
 
 ---
 
-### 482. Tangled Rope: `stable_marriage_coordination`
+### 542. Tangled Rope: `stable_marriage_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9162,7 +10302,7 @@ N/A
 
 ---
 
-### 483. Tangled Rope: `starwars_evolutionary_mutation`
+### 543. Tangled Rope: `starwars_evolutionary_mutation`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -9181,7 +10321,7 @@ N/A
 
 ---
 
-### 484. Tangled Rope: `steinmetz_valuation_asymmetry`
+### 544. Tangled Rope: `steinmetz_valuation_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9200,7 +10340,7 @@ N/A
 
 ---
 
-### 485. Tangled Rope: `stoic_logos_governance`
+### 545. Tangled Rope: `stoic_logos_governance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9219,7 +10359,7 @@ N/A
 
 ---
 
-### 486. Tangled Rope: `superbowl_advertising_extraction`
+### 546. Tangled Rope: `superbowl_advertising_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9238,7 +10378,7 @@ N/A
 
 ---
 
-### 487. Tangled Rope: `taiwan_ids_program`
+### 547. Tangled Rope: `taiwan_ids_program`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9257,7 +10397,7 @@ N/A
 
 ---
 
-### 488. Tangled Rope: `taiwan_strait_hegemony_shift`
+### 548. Tangled Rope: `taiwan_strait_hegemony_shift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9276,7 +10416,7 @@ N/A
 
 ---
 
-### 489. Tangled Rope: `technological_point_of_no_return`
+### 549. Tangled Rope: `technological_point_of_no_return`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9295,7 +10435,7 @@ N/A
 
 ---
 
-### 490. Tangled Rope: `the_wall_procedural_barrier`
+### 550. Tangled Rope: `the_wall_procedural_barrier`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -9314,7 +10454,7 @@ N/A
 
 ---
 
-### 491. Tangled Rope: `trade_secret_law`
+### 551. Tangled Rope: `trade_secret_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -9333,7 +10473,7 @@ N/A
 
 ---
 
-### 492. Tangled Rope: `transient_event_detection`
+### 552. Tangled Rope: `transient_event_detection`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -9352,7 +10492,7 @@ N/A
 
 ---
 
-### 493. Tangled Rope: `trivial_topology_info_asymmetry`
+### 553. Tangled Rope: `trivial_topology_info_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9361,7 +10501,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -9371,7 +10511,7 @@ N/A
 
 ---
 
-### 494. Tangled Rope: `trojan_war_spoils`
+### 554. Tangled Rope: `trojan_war_spoils`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -9390,7 +10530,26 @@ N/A
 
 ---
 
-### 495. Tangled Rope: `udhr_1948`
+### 555. Tangled Rope: `tsp_duplicate_elimination`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 556. Tangled Rope: `udhr_1948`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -9399,7 +10558,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** Constraint udhr_1948 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9409,7 +10568,7 @@ N/A
 
 ---
 
-### 496. Tangled Rope: `udhr_1948`
+### 557. Tangled Rope: `udhr_1948`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -9418,7 +10577,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** The gap between declared rights and their practical enforcement.
 *   **Suggested Resolution Strategy:**
@@ -9428,7 +10587,7 @@ N/A
 
 ---
 
-### 497. Tangled Rope: `udhr_1948`
+### 558. Tangled Rope: `udhr_1948`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -9437,7 +10596,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** The debate over whether UDHR values are universal or culturally specific.
 *   **Suggested Resolution Strategy:**
@@ -9447,7 +10606,7 @@ N/A
 
 ---
 
-### 498. Tangled Rope: `ulysses_circe_1904`
+### 559. Tangled Rope: `ulysses_circe_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -9456,7 +10615,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Generated Omega:** Constraint ulysses_circe_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9466,7 +10625,7 @@ N/A
 
 ---
 
-### 499. Tangled Rope: `ulysses_hades_1904`
+### 560. Tangled Rope: `ulysses_hades_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -9475,7 +10634,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_hades_1904 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9485,7 +10644,7 @@ N/A
 
 ---
 
-### 500. Tangled Rope: `ulysses_oxen_1904`
+### 561. Tangled Rope: `ulysses_oxen_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -9494,7 +10653,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Generated Omega:** Constraint ulysses_oxen_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9504,7 +10663,7 @@ N/A
 
 ---
 
-### 501. Tangled Rope: `ulysses_penelope_1904`
+### 562. Tangled Rope: `ulysses_penelope_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -9513,7 +10672,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Generated Omega:** Constraint ulysses_penelope_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9523,7 +10682,7 @@ N/A
 
 ---
 
-### 502. Tangled Rope: `ulysses_proteus_1904`
+### 563. Tangled Rope: `ulysses_proteus_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -9532,7 +10691,7 @@ N/A
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Generated Omega:** Constraint ulysses_proteus_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9542,7 +10701,26 @@ N/A
 
 ---
 
-### 503. Tangled Rope: `us_canada_geopolitical_asymmetry`
+### 564. Tangled Rope: `unclos_2026`
+
+*   **Claimed Type:** `rope`
+*   **Severity:** `high`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** false_ci_rope
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
+*   **Generated Omega:** Constraint unclos_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 565. Tangled Rope: `us_canada_geopolitical_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9561,7 +10739,7 @@ N/A
 
 ---
 
-### 504. Tangled Rope: `us_military_recruitment_advertising`
+### 566. Tangled Rope: `us_military_recruitment_advertising`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9580,7 +10758,7 @@ N/A
 
 ---
 
-### 505. Tangled Rope: `visa_ipo_regulatory_compliance`
+### 567. Tangled Rope: `visa_ipo_regulatory_compliance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9589,7 +10767,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint visa_ipo_regulatory_compliance appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9599,7 +10777,7 @@ N/A
 
 ---
 
-### 506. Tangled Rope: `visa_judgment_sharing_agreement`
+### 568. Tangled Rope: `visa_judgment_sharing_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9608,7 +10786,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint visa_judgment_sharing_agreement appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9618,7 +10796,7 @@ N/A
 
 ---
 
-### 507. Tangled Rope: `visa_judgment_sharing_agreement`
+### 569. Tangled Rope: `visa_judgment_sharing_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -9627,7 +10805,7 @@ N/A
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** The fairness of the liability allocation formula, which is detailed in a confidential legal exhibit.
 *   **Suggested Resolution Strategy:**
@@ -9637,12 +10815,12 @@ N/A
 
 ---
 
-### 508. Tangled Rope: `working_dog_training`
+### 570. Tangled Rope: `working_dog_training`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `unknown`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope

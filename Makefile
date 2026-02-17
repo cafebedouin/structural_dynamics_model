@@ -361,7 +361,6 @@ $(CORPUS_DATA): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[CORPUS] Extracting corpus data..."
 	python3 $(PYTHON_DIR)/extract_corpus_data.py \
 		--output-txt $(OUTPUT_TXT) \
-		--testsets $(TESTSETS)/ \
 		--json-output $@ 2>&1 | tail -5
 	echo "[CORPUS] Done -> corpus_data.json"
 

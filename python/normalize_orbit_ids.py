@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Normalize orbit_data.json keys: internal constraint IDs → .pl filename stems."""
+"""Normalize orbit_data.json keys to canonical constraint IDs (from constraint_claim/2)."""
 
 import json
 import os
@@ -10,23 +10,20 @@ SCRIPT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
 ORBIT_JSON = SCRIPT_DIR / '..' / 'outputs' / 'orbit_data.json'
 TESTSETS_DIR = SCRIPT_DIR / '..' / 'prolog' / 'testsets'
 
-ID_PATTERN = re.compile(
-    r'(?:constraint_metric|base_extractiveness)\s*\(\s*(\w+)\s*,'
-)
+CLAIM_PATTERN = re.compile(r'constraint_claim\((\w+),')
 
 
-def build_internal_to_filename():
-    """Scan .pl files → {internal_id: filename_stem}"""
+def build_stem_to_canonical():
+    """Scan .pl files → {filename_stem: canonical_id} from constraint_claim/2."""
     mapping = {}
     for pl_file in TESTSETS_DIR.glob('*.pl'):
         stem = pl_file.stem
         content = pl_file.read_text(encoding='utf-8', errors='replace')
-        for match in ID_PATTERN.finditer(content):
+        match = CLAIM_PATTERN.search(content)
+        if match:
             atom = match.group(1)
-            if atom[0].isupper() or atom.startswith('_'):
-                continue
-            if atom not in mapping:
-                mapping[atom] = stem
+            if atom != stem:
+                mapping[stem] = atom
     return mapping
 
 
@@ -35,18 +32,23 @@ def normalize():
         print("orbit_data.json not found — skipping normalization")
         return
 
-    mapping = build_internal_to_filename()
+    stem_to_canonical = build_stem_to_canonical()
+    # Also build reverse set of all canonical IDs for quick membership check
+    canonical_ids = set(stem_to_canonical.values())
+
     orbit = json.loads(ORBIT_JSON.read_text(encoding='utf-8'))
 
     normalized = {}
     renamed, unchanged, collisions = 0, 0, 0
-    for internal_id, data in orbit.items():
-        canonical = mapping.get(internal_id, internal_id)
+    for key, data in orbit.items():
+        # If key is already a canonical ID, keep it
+        # If key is a filename stem with a different canonical ID, convert it
+        canonical = stem_to_canonical.get(key, key)
         if canonical in normalized:
             collisions += 1
             continue
         normalized[canonical] = data
-        if canonical != internal_id:
+        if canonical != key:
             renamed += 1
         else:
             unchanged += 1

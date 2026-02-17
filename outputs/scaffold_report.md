@@ -13,7 +13,7 @@
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ai_superpowers_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -70,7 +70,7 @@ N/A
     *   **Institutional (Manager) View:** `tangled_rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint fmt_oncology_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -104,10 +104,11 @@ N/A
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint mit_tfus_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -122,10 +123,11 @@ N/A
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint portugal_ad_stability_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -181,7 +183,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `rope`
 *   **Structural Signature Analysis:** coupling_invariant_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** Constraint boundary_protocol appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -253,7 +255,9 @@ N/A
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, scaffold, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: scaffold)
@@ -307,7 +311,9 @@ N/A
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[scaffold, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: scaffold)

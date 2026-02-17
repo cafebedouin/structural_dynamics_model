@@ -51,7 +51,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint agent_opt_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -161,7 +161,9 @@ N/A
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -330,7 +332,9 @@ N/A
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -465,7 +469,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint epstein_espionage_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -503,7 +507,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint epstein_honeytrap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -575,7 +579,9 @@ N/A
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -592,7 +598,9 @@ N/A
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -687,6 +695,7 @@ N/A
 *   **Perspectival Breakdown:**
     *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -857,6 +866,7 @@ N/A
 *   **Perspectival Breakdown:**
     *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -911,6 +921,7 @@ N/A
 *   **Claimed Type:** `piton`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -1026,6 +1037,7 @@ N/A
 *   **Perspectival Breakdown:**
     *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -1141,7 +1153,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_aeolus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1160,7 +1172,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_calypso_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1179,7 +1191,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_cyclops_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1198,7 +1210,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_eumaeus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1217,7 +1229,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_ithaca_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1236,7 +1248,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_lestrygonians_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1255,7 +1267,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_lotus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1274,7 +1286,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_nausicaa_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1293,7 +1305,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_rocks_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1312,7 +1324,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_school_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1331,7 +1343,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_scylla_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1350,7 +1362,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_sirens_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1369,7 +1381,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_tower_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1444,7 +1456,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** constructed_high_extraction
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: tangled_rope)
 *   **Generated Omega:** Constraint erised_expectation appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1557,7 +1569,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[piton, rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: rope, institutional: piton)
 *   **Generated Omega:** Constraint milano_cortina_2026 appears as rope to individuals but piton to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1610,7 +1622,9 @@ N/A
 *   **Claimed Type:** `piton`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `rope`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
@@ -1669,7 +1683,7 @@ N/A
     *   **Institutional (Manager) View:** `tangled_rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Generated Omega:** Constraint ulysses_circe_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1688,7 +1702,7 @@ N/A
     *   **Institutional (Manager) View:** `tangled_rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Generated Omega:** Constraint ulysses_hades_1904 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1707,7 +1721,7 @@ N/A
     *   **Institutional (Manager) View:** `tangled_rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Generated Omega:** Constraint ulysses_oxen_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1726,7 +1740,7 @@ N/A
     *   **Institutional (Manager) View:** `tangled_rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Generated Omega:** Constraint ulysses_penelope_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1745,7 +1759,7 @@ N/A
     *   **Institutional (Manager) View:** `tangled_rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_natural_law
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Generated Omega:** Constraint ulysses_proteus_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**

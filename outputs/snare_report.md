@@ -146,7 +146,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint burden_of_proof_scientific appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -241,7 +241,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint emergency_bridge_scaffold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -256,7 +256,9 @@ N/A
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[scaffold, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -463,6 +465,7 @@ N/A
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
@@ -538,7 +541,9 @@ N/A
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[scaffold, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -559,7 +564,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint scam_compound_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -726,7 +731,9 @@ N/A
 *   **Claimed Type:** `snare`
 *   **Severity:** `critical`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
+    *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
 *   **Orbit Signature:** `[scaffold, unknown]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
@@ -914,10 +921,11 @@ N/A
 *   **Claimed Type:** `snare`
 *   **Severity:** `unknown`
 *   **Perspectival Breakdown:**
+    *   **Individual (Powerless) View:** `tangled_rope`
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: tangled_rope)
 *   **Generated Omega:** Constraint absorbing_markov_chain_trap appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**

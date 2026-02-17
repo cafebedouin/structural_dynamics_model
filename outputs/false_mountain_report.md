@@ -199,7 +199,7 @@ N/A
 ### 13. False Mountain: `agent_opt_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -215,7 +215,7 @@ N/A
 ### 14. False Mountain: `aging_longevity_tests`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -407,7 +407,7 @@ N/A
 ### 26. False Mountain: `ai_superpowers_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -439,7 +439,7 @@ N/A
 ### 28. False Mountain: `airbnb_str_regulation`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1143,7 +1143,7 @@ N/A
 ### 72. False Mountain: `blackstone_tra`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1287,7 +1287,7 @@ N/A
 ### 81. False Mountain: `burali_forti_paradox`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[mountain, scaffold]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1319,7 +1319,7 @@ N/A
 ### 83. False Mountain: `burden_of_proof_scientific`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1591,7 +1591,7 @@ N/A
 ### 100. False Mountain: `cg_israelgaza_20231012`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1863,7 +1863,7 @@ N/A
 ### 117. False Mountain: `cma`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2279,7 +2279,7 @@ N/A
 ### 143. False Mountain: `constraint_interaction_explosion`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2295,7 +2295,7 @@ N/A
 ### 144. False Mountain: `constraint_yoneda`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2343,7 +2343,7 @@ N/A
 ### 147. False Mountain: `conversational_dogmas_interruption`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2711,7 +2711,7 @@ N/A
 ### 170. False Mountain: `data_replication_paradox`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2887,7 +2887,7 @@ N/A
 ### 181. False Mountain: `dionysiac_frenzy`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3159,7 +3159,7 @@ N/A
 ### 198. False Mountain: `em_clinical_guidelines`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3175,7 +3175,7 @@ N/A
 ### 199. False Mountain: `emergency_bridge_scaffold`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3319,7 +3319,7 @@ N/A
 ### 208. False Mountain: `epstein_espionage_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3351,7 +3351,7 @@ N/A
 ### 210. False Mountain: `epstein_honeytrap`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3639,7 +3639,7 @@ N/A
 ### 228. False Mountain: `exoplanetary_habitability_arbitrage`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3815,7 +3815,7 @@ N/A
 ### 239. False Mountain: `financial_drag`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3911,7 +3911,7 @@ N/A
 ### 245. False Mountain: `fitts_law_industrial_application`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3959,7 +3959,7 @@ N/A
 ### 248. False Mountain: `fmt_oncology_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4039,7 +4039,7 @@ N/A
 ### 253. False Mountain: `france_local_elections_march_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4103,7 +4103,7 @@ N/A
 ### 257. False Mountain: `future_dsm_integration`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4295,7 +4295,7 @@ N/A
 ### 269. False Mountain: `gig_economy_algorithmic_management`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4583,7 +4583,7 @@ N/A
 ### 287. False Mountain: `great_awakening_rekindling`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `rope`
@@ -4727,7 +4727,7 @@ N/A
 ### 296. False Mountain: `hammurabi_lex_talionis`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4951,7 +4951,7 @@ N/A
 ### 310. False Mountain: `hp_liberalism`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4967,7 +4967,7 @@ N/A
 ### 311. False Mountain: `hu_2026_election_rules`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5063,7 +5063,7 @@ N/A
 ### 317. False Mountain: `ia_digital_preservation`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5783,7 +5783,7 @@ N/A
 ### 362. False Mountain: `iterated_function_system_convergence`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5799,7 +5799,7 @@ N/A
 ### 363. False Mountain: `ivt_accessibility_barrier`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5959,7 +5959,7 @@ N/A
 ### 373. False Mountain: `labor_union_dues`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6311,7 +6311,7 @@ N/A
 ### 395. False Mountain: `mandatrophy_systemic_collapse`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6391,7 +6391,7 @@ N/A
 ### 400. False Mountain: `max_flow_min_cut`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6631,7 +6631,7 @@ N/A
 ### 415. False Mountain: `minimax_theorem_game_equilibrium`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6679,7 +6679,7 @@ N/A
 ### 418. False Mountain: `mit_tfus_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6775,7 +6775,7 @@ N/A
 ### 424. False Mountain: `moltbot_religion`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7159,7 +7159,7 @@ N/A
 ### 448. False Mountain: `noether_isomorphism_access`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7383,7 +7383,7 @@ N/A
 ### 462. False Mountain: `omega1_patching_process`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7975,7 +7975,7 @@ N/A
 ### 499. False Mountain: `pna`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8055,7 +8055,7 @@ N/A
 ### 504. False Mountain: `portugal_ad_stability_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8231,7 +8231,7 @@ N/A
 ### 515. False Mountain: `protocol_capture_eee`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8615,7 +8615,7 @@ N/A
 ### 539. False Mountain: `rosen_bridge_protocol`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8823,7 +8823,7 @@ N/A
 ### 552. False Mountain: `scam_compound_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9431,7 +9431,7 @@ N/A
 ### 590. False Mountain: `strait_coercion_2025`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9463,7 +9463,7 @@ N/A
 ### 592. False Mountain: `strange_attractor_systemic_risk`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9767,7 +9767,7 @@ N/A
 ### 611. False Mountain: `tcp_rfc9293_interoperability`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10151,7 +10151,7 @@ N/A
 ### 635. False Mountain: `trump_second_term_authoritarianism_2026`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10167,7 +10167,7 @@ N/A
 ### 636. False Mountain: `tsp_computational_complexity`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10183,7 +10183,7 @@ N/A
 ### 637. False Mountain: `tx_hispanic_pivot`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10343,7 +10343,7 @@ N/A
 ### 647. False Mountain: `ulysses_aeolus_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10359,7 +10359,7 @@ N/A
 ### 648. False Mountain: `ulysses_calypso_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10375,7 +10375,7 @@ N/A
 ### 649. False Mountain: `ulysses_cyclops_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10391,7 +10391,7 @@ N/A
 ### 650. False Mountain: `ulysses_eumaeus_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10407,7 +10407,7 @@ N/A
 ### 651. False Mountain: `ulysses_ithaca_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10423,7 +10423,7 @@ N/A
 ### 652. False Mountain: `ulysses_lestrygonians_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10439,7 +10439,7 @@ N/A
 ### 653. False Mountain: `ulysses_lotus_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10455,7 +10455,7 @@ N/A
 ### 654. False Mountain: `ulysses_nausicaa_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10471,7 +10471,7 @@ N/A
 ### 655. False Mountain: `ulysses_rocks_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10487,7 +10487,7 @@ N/A
 ### 656. False Mountain: `ulysses_school_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10503,7 +10503,7 @@ N/A
 ### 657. False Mountain: `ulysses_scylla_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10519,7 +10519,7 @@ N/A
 ### 658. False Mountain: `ulysses_sirens_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10535,7 +10535,7 @@ N/A
 ### 659. False Mountain: `ulysses_tower_1904`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11223,7 +11223,7 @@ N/A
 ### 702. False Mountain: `yc_equity_squeeze`
 
 *   **Severity:** `critical`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11287,7 +11287,7 @@ N/A
 ### 706. False Mountain: `absorbing_markov_chain_trap`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: snare, institutional: tangled_rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11447,7 +11447,7 @@ N/A
 ### 716. False Mountain: `axiom_of_choice`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -11543,7 +11543,7 @@ N/A
 ### 722. False Mountain: `boundary_protocol`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -11847,7 +11847,7 @@ N/A
 ### 741. False Mountain: `colombia_2026_presidential_election`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -11863,7 +11863,7 @@ N/A
 ### 742. False Mountain: `constraint_lagrange_multipliers`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -11879,7 +11879,7 @@ N/A
 ### 743. False Mountain: `constraint_riemann_mapping`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -11975,7 +11975,7 @@ N/A
 ### 749. False Mountain: `decentralized_infrastructure_rope`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `rope`
@@ -12055,7 +12055,7 @@ N/A
 ### 754. False Mountain: `education_unbundling_implementation`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `rope`
@@ -12087,7 +12087,7 @@ N/A
 ### 756. False Mountain: `emotional_cycles_2026`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: snare, institutional: scaffold)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12199,7 +12199,7 @@ N/A
 ### 763. False Mountain: `erised_expectation`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: snare, institutional: tangled_rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12295,7 +12295,7 @@ N/A
 ### 769. False Mountain: `family_succession_system`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -12519,7 +12519,7 @@ N/A
 ### 783. False Mountain: `goodstein_theorem_finite_proof`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -12599,7 +12599,7 @@ N/A
 ### 788. False Mountain: `gs_market_clearing`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -12887,7 +12887,7 @@ N/A
 ### 806. False Mountain: `large_cardinal_foundations`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -13063,7 +13063,7 @@ N/A
 ### 817. False Mountain: `matching_market_congestion_externality`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -13143,7 +13143,7 @@ N/A
 ### 822. False Mountain: `migration_decision_threshold`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -13159,7 +13159,7 @@ N/A
 ### 823. False Mountain: `milano_cortina_2026`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[piton, rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: rope, institutional: piton)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `rope`
@@ -13479,7 +13479,7 @@ N/A
 ### 843. False Mountain: `power_set_axiomatic_extraction`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -13703,7 +13703,7 @@ N/A
 ### 857. False Mountain: `self_surpassing`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -13751,7 +13751,7 @@ N/A
 ### 860. False Mountain: `sig_usd_protocol`
 
 *   **Severity:** `moderate`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: mountain, institutional: snare)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -14055,7 +14055,7 @@ N/A
 ### 879. False Mountain: `udhr_1948`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -14071,7 +14071,7 @@ N/A
 ### 880. False Mountain: `ulysses_circe_1904`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14087,7 +14087,7 @@ N/A
 ### 881. False Mountain: `ulysses_hades_1904`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -14103,7 +14103,7 @@ N/A
 ### 882. False Mountain: `ulysses_oxen_1904`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14119,7 +14119,7 @@ N/A
 ### 883. False Mountain: `ulysses_penelope_1904`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14135,7 +14135,7 @@ N/A
 ### 884. False Mountain: `ulysses_proteus_1904`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14231,7 +14231,7 @@ N/A
 ### 890. False Mountain: `visa_ipo_regulatory_compliance`
 
 *   **Severity:** `unknown`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
@@ -14247,7 +14247,7 @@ N/A
 ### 891. False Mountain: `visa_judgment_sharing_agreement`
 
 *   **Severity:** `moderate`
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `tangled_rope`
