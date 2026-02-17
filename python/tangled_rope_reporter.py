@@ -1,119 +1,92 @@
-import re
+import json
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from orbit_utils import load_orbit_data, get_orbit_signature, format_orbit_signature
 
-def parse_log_content(content):
-    """
-    Parses the log content to find and extract details for any constraint
-    that is classified as a Tangled Rope from any perspective.
-    """
-    tangled_ropes = []
-    
-    # Split the entire log into chunks, each starting with a new scenario load.
-    scenario_chunks = re.split(r'(?=\[SCENARIO MANAGER\] Clearing Knowledge Base...)', content)
+_SCRIPT_DIR = Path(__file__).parent
+_PIPELINE_JSON = _SCRIPT_DIR / '..' / 'outputs' / 'pipeline_output.json'
 
-    for chunk in scenario_chunks:
-        if not chunk.strip():
-            continue
 
-        # Get the name of the constraint being tested in this chunk
-        name_match = re.search(r'Loading:.*?testsets/(.+?)\.pl', chunk)
-        if not name_match:
-            continue
-        constraint_name = name_match.group(1)
+def load_pipeline_data():
+    try:
+        with open(_PIPELINE_JSON, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"Error: Pipeline output not found at {_PIPELINE_JSON}", file=sys.stderr)
+        sys.exit(1)
 
-        # The trigger: Find 'tangled_rope' in any perspective classification
-        perspectives_section_match = re.search(r'\[CONSTRAINT INVENTORY: INDEXICAL AUDIT\]\s*\n(.*?)(?=\n\n\[CROSS-DOMAIN ISOMORPHISM|\Z)', chunk, re.DOTALL)
-        if not perspectives_section_match:
-            continue
 
-        perspectives_section = perspectives_section_match.group(1)
-        if 'tangled_rope' not in perspectives_section:
-            continue # This scenario does not contain a tangled rope classification.
+def _format_gap_alert(gap):
+    gap_type = gap.get('gap_type', '')
+    parts = []
+    for key in ('powerless_type', 'institutional_type', 'analytical_type',
+                'moderate_type'):
+        if key in gap:
+            parts.append(f"{key.replace('_type', '')}: {gap[key]}")
+    detail = ', '.join(parts)
+    if 'alert' in gap_type.lower() or 'masked' in gap_type.lower():
+        return f"! ALERT: {gap_type} ({detail})"
+    return f"! GAP: {gap_type} ({detail})"
 
-        tr_data = {
-            'name': constraint_name,
-            'claimed_type': 'N/A',
-            'powerless_view': 'N/A',
-            'institutional_view': 'N/A',
-            'analytical_view': 'N/A',
-            'structural_signature': 'N/A',
+
+def filter_tangled_ropes(constraints):
+    """Return constraints where ANY non-unknown perspective == 'tangled_rope'."""
+    results = []
+    for c in constraints:
+        perspectives = c.get('perspectives', {})
+        if any(v == 'tangled_rope' for v in perspectives.values()):
+            results.append(c)
+    return results
+
+
+def normalize_entries(constraints):
+    """One entry per omega (same as Family A diagnostic pattern)."""
+    entries = []
+    for c in constraints:
+        base = {
+            'name': c['id'],
+            'claimed_type': c.get('claimed_type') or 'N/A',
+            'powerless_view': c.get('perspectives', {}).get('powerless') or 'N/A',
+            'institutional_view': c.get('perspectives', {}).get('institutional') or 'N/A',
+            'analytical_view': c.get('perspectives', {}).get('analytical') or 'N/A',
+            'structural_signature': c.get('signature') or 'N/A',
             'related_gap_alert': 'N/A',
-            'omega_question': 'N/A',
-            'severity': 'N/A',
-            'resolution_strategy': ''
+            'resolution_strategy': c.get('resolution_strategy') or 'N/A',
         }
 
-        # Extract original claimed type
-        claimed_type_match = re.search(r'^\s*Claimed Type: (\w+)', perspectives_section, re.MULTILINE)
-        if claimed_type_match:
-            tr_data['claimed_type'] = claimed_type_match.group(1)
+        gaps = c.get('gaps') or []
+        if gaps:
+            base['related_gap_alert'] = _format_gap_alert(gaps[0])
 
-        # FINAL FIX: More robust perspective parsing
-        for line in perspectives_section.split('\n'):
-            # Match the pattern like "- [context...]: classification (Match...)"
-            match = re.search(r'-\s\[context\(.*?\)\]:\s*(\w+)', line)
-            if not match:
-                continue
-            
-            classification = match.group(1)
-            if 'powerless' in line:
-                tr_data['powerless_view'] = classification
-            elif 'institutional' in line:
-                tr_data['institutional_view'] = classification
-            elif 'analytical' in line:
-                tr_data['analytical_view'] = classification
+        omegas = c.get('omegas') or []
+        if not omegas:
+            entry = dict(base)
+            entry['omega_question'] = 'N/A'
+            entry['severity'] = 'N/A'
+            entries.append(entry)
+        else:
+            for omega in omegas:
+                entry = dict(base)
+                entry['omega_question'] = omega.get('question') or 'N/A'
+                entry['severity'] = omega.get('severity') or 'N/A'
+                entries.append(entry)
+    return entries
 
-        # Extract Structural Signature Analysis (non-greedy)
-        signature_match = re.search(r'→\s*(.+)', chunk)
-        if signature_match:
-            tr_data['structural_signature'] = signature_match.group(1).strip()
-        
-        # Extract related gap/alert (if any)
-        gap_alert_match = re.search(r'(!\s(?:ALERT|GAP):\s*.+)', chunk)
-        if gap_alert_match:
-            tr_data['related_gap_alert'] = gap_alert_match.group(1).strip()
 
-        # Extract Omega Question specifically
-        omega_question_match = re.search(r'Question:\s*(.+)', chunk)
-        if omega_question_match:
-            tr_data['omega_question'] = omega_question_match.group(1).strip()
-
-        # Extract Severity from the Triage section
-        triage_section_match = re.search(r'\[OMEGA TRIAGE & PRIORITIZATION\](.*?)(?=\n\n|\n\[OMEGA RESOLUTION)', chunk, re.DOTALL)
-        if triage_section_match:
-            if '[critical]' in triage_section_match.group(1):
-                tr_data['severity'] = 'critical'
-            elif '[high]' in triage_section_match.group(1):
-                tr_data['severity'] = 'high'
-        
-        # Extract Resolution Strategy
-        res_match = re.search(r'RESOLUTION STRATEGY:\s*\n(.*?)(?:\n\s*└─|\n\n### START LLM REFINEMENT MANIFEST|\Z)', chunk, re.DOTALL)
-        if res_match:
-            strategy = res_match.group(1).strip()
-            cleaned_strategy = "\n".join(line.strip().lstrip('│').lstrip() for line in strategy.split('\n'))
-            tr_data['resolution_strategy'] = cleaned_strategy.strip()
-
-        tangled_ropes.append(tr_data)
-
-    # Deduplicate
-    unique_trs = []
+def dedup_entries(entries):
     seen = set()
-    for tr in tangled_ropes:
-        identifier = (tr['name'], tr['omega_question']) 
-        if identifier not in seen:
-            unique_trs.append(tr)
-            seen.add(identifier)
+    unique = []
+    for e in entries:
+        key = (e['name'], e.get('omega_question', ''))
+        if key not in seen:
+            seen.add(key)
+            unique.append(e)
+    return unique
 
-    return unique_trs
 
 def generate_markdown_report(tr_data, output_path, orbit_data=None):
-    """
-    Generates a Markdown report from the list of Tangled Rope data.
-    """
     sorted_trs = sorted(tr_data, key=lambda x: (x['severity'] != 'critical', x['name']))
 
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -125,12 +98,12 @@ def generate_markdown_report(tr_data, output_path, orbit_data=None):
             f.write(f"### {i}. Tangled Rope: `{tr['name']}`\n\n")
             f.write(f"*   **Claimed Type:** `{tr['claimed_type']}`\n")
             f.write(f"*   **Severity:** `{tr['severity']}`\n")
-            
+
             f.write(f"*   **Perspectival Breakdown:**\n")
             f.write(f"    *   Individual (Powerless) View: `{tr['powerless_view']}`\n")
             f.write(f"    *   Institutional (Manager) View: `{tr['institutional_view']}`\n")
             f.write(f"    *   Analytical View: `{tr['analytical_view']}`\n")
-            
+
             f.write(f"*   **Structural Signature Analysis:** {tr['structural_signature']}\n")
             orbit_sig = get_orbit_signature(orbit_data or {}, tr['name'])
             f.write(f"*   **Orbit Signature:** `{format_orbit_signature(orbit_sig)}`\n")
@@ -140,35 +113,31 @@ def generate_markdown_report(tr_data, output_path, orbit_data=None):
             f.write(f"    ```\n{tr['resolution_strategy']}\n    ```\n\n")
             f.write("---\n\n")
 
+
 def main():
-    """
-    Main function to run the reporter.
-    """
     script_dir = Path(__file__).parent
-    log_file = script_dir / '../outputs/output.txt'
     report_file = script_dir / '../outputs/tangled_rope_report.md'
-    
-    print("Parsing log file to find Tangled Ropes (based on analyzed perspectives)...")
-    
-    try:
-        with open(log_file, 'r', encoding='utf-8') as f:
-            log_content = f.read()
-    except FileNotFoundError:
-        print(f"Error: Log file not found at {log_file}", file=sys.stderr)
-        sys.exit(1)
-        
-    tr_data = parse_log_content(log_content)
+
+    print("Parsing pipeline output to find Tangled Ropes (based on analyzed perspectives)...")
+
+    pipeline_data = load_pipeline_data()
+    constraints = pipeline_data['per_constraint']
+
+    filtered = filter_tangled_ropes(constraints)
+    entries = normalize_entries(filtered)
+    entries = dedup_entries(entries)
     orbit_data = load_orbit_data()
 
-    if tr_data:
-        print(f"Found {len(tr_data)} constraints classified as Tangled Ropes.")
+    if entries:
+        print(f"Found {len(entries)} constraints classified as Tangled Ropes.")
         print(f"Generating report at {report_file}...")
-        generate_markdown_report(tr_data, report_file, orbit_data)
+        generate_markdown_report(entries, report_file, orbit_data)
         print("Report generated successfully.")
     else:
-        print("No constraints classified as Tangled Ropes found in the log file.")
+        print("No constraints classified as Tangled Ropes found.")
         with open(report_file, 'w', encoding='utf-8') as f:
             f.write("# Tangled Rope Diagnostic Report\n\n**Total Unique Tangled Ropes Found:** 0\n")
+
 
 if __name__ == '__main__':
     main()

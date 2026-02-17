@@ -184,23 +184,32 @@ fi
 # ==============================================================================
 step "Generating category reports"
 
-declare -A REPORTERS=(
-    ["snare"]="snare_reporter.py"
-    ["rope"]="rope_reporter.py"
+# Family A+B: use parameterized type_reporter.py
+for category in snare rope scaffold piton mountain; do
+    output=$(python3 "$PYTHON_DIR/type_reporter.py" --type "$category" 2>&1) || true
+    count=$(echo "$output" | grep -oP 'Found \K\d+' | head -1 || true)
+    # Map 'mountain' back to 'true_mountain' for display
+    display_name="$category"
+    [ "$category" = "mountain" ] && display_name="true_mountain"
+    if [ -n "$count" ] && [ "$count" -gt 0 ]; then
+        ok "$display_name: $count found -> ${display_name}_report.md"
+    else
+        echo -e "  ${CYAN}--${NC}  $display_name: 0 found"
+    fi
+done
+
+# Family C: separate reporters (different entity models)
+declare -A REPORTERS_C=(
     ["tangled_rope"]="tangled_rope_reporter.py"
-    ["true_mountain"]="true_mountain_reporter.py"
     ["false_mountain"]="false_mountain_reporter.py"
-    ["scaffold"]="scaffold_reporter.py"
-    ["piton"]="piton_reporter.py"
 )
 
-for category in snare rope tangled_rope true_mountain false_mountain scaffold piton; do
-    reporter="${REPORTERS[$category]}"
+for category in tangled_rope false_mountain; do
+    reporter="${REPORTERS_C[$category]}"
     report_file="$OUTPUT_DIR/${category}_report.md"
 
     if [ -f "$PYTHON_DIR/$reporter" ]; then
         output=$(python3 "$PYTHON_DIR/$reporter" 2>&1) || true
-        # Extract count from reporter output
         count=$(echo "$output" | grep -oP 'Found \K\d+' | head -1 || true)
         if [ -n "$count" ] && [ "$count" -gt 0 ]; then
             ok "$category: $count found -> ${category}_report.md"
