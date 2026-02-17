@@ -112,30 +112,7 @@ derive_veto_actors :-
 dr_diagnostic_report(IntervalID) :-
     % Automated Veto Player Derivation
     derive_veto_actors,
-    
     format('~n=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ~w ===~n', [IntervalID]),
-    
-    % --- SECTION 1: CONSTRAINT INVENTORY ---
-    format('~n[CONSTRAINT INVENTORY]~n'),
-    (   setof(line(Name, State, Intensity), 
-              (constraint_status(Name, State, Intensity), 
-               narrative_ontology:constraint_metric(Name, _, _)), 
-              UniqueLines)
-    ->  forall(member(line(N, S, I), UniqueLines),
-               (   format('  - ~w: ~w (Intensity: ~2f)~n', [N, S, I]),
-                   % Trigger Isomorphism Check for High-Risk Types
-                   check_for_social_twins(N, S)
-               ))
-    ;   format('  No active constraints found.~n')
-    ),
-    
-    % --- SECTION 2: FEASIBILITY BRIDGE ---
-    format('~n[FEASIBILITY BRIDGE]~n'),
-    % Using _ConsName resolves the singleton variable warning
-    forall((narrative_ontology:recommendation(RID, Summary),
-            narrative_ontology:affects_constraint(RID, _ConsName)),
-           (recommendation_feasibility(RID, Stat, Vs),
-            format('  - ~w (~w): ~w | Vetoes: ~w~n', [RID, Summary, Stat, Vs]))),
     format('====================================================~n').
 
 %% check_for_social_twins(+Name, +State)

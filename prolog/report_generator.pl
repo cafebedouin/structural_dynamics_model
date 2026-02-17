@@ -101,10 +101,7 @@ generate_full_report(IntervalID) :-
         )
     ),
 
-    % --- SECTION 2: ISOMORPHISM AUDIT ---
-    generate_isomorphism_audit(IntervalID),
-
-    % --- SECTION 2A: COMPREHENSIVE CROSS-DOMAIN AUDIT ---
+    % --- SECTION 2: COMPREHENSIVE CROSS-DOMAIN AUDIT ---
     cross_domain_audit,
 
     % --- SECTION 3: META-LOGICAL AUDIT ---
@@ -468,14 +465,18 @@ display_isomorphisms([iso(C, T, S, Ty)|Rest]) :-
 %  Provides detailed analysis of constraints claiming "Mountain" status
 %  but failing validation. Explains WHY each fails and recommends reclassification.
 forensic_audit_false_mountains :-
-    format('~n[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]~n'),
-    (   setof(C-Ctx, Sev^(drl_core:dr_mismatch(C, Ctx, type_1_false_mountain, Sev)),
-              FalseMountains)
-    ->  (length(FalseMountains, Count),
-         format('  Detected ~w constraint(s) falsely claiming "Mountain" status:~n~n', [Count]),
-         forall(member(C-Context, FalseMountains),
-                forensic_explain_false_mountain(C, Context)))
-    ;   format('  All mountains are structurally validated.~n')
+    %  Only print when at least one constraint claims mountain status
+    (   narrative_ontology:constraint_claim(_, mountain)
+    ->  format('~n[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]~n'),
+        (   setof(C-Ctx, Sev^(drl_core:dr_mismatch(C, Ctx, type_1_false_mountain, Sev)),
+                  FalseMountains)
+        ->  (length(FalseMountains, Count),
+             format('  Detected ~w constraint(s) falsely claiming "Mountain" status:~n~n', [Count]),
+             forall(member(C-Context, FalseMountains),
+                    forensic_explain_false_mountain(C, Context)))
+        ;   format('  All mountains are structurally validated.~n')
+        )
+    ;   true  % No mountains claimed — suppress entirely
     ).
 
 %% forensic_explain_false_mountain(+Constraint, +Context)
@@ -769,10 +770,10 @@ generate_omega_triage :-
     findall(OID, narrative_ontology:omega_variable(OID, _, _), AllOmegas),
     (AllOmegas = []
     -> format('  No omegas to triage.~n')
-    ;  % Then organize by severity
+    ;  % Then organize by severity (once/1 prevents cross-clause double-counting)
        forall(member(Sev, [critical, high, moderate, low]),
               (findall(OID,
-                       (member(OID, AllOmegas), omega_severity(OID, Sev)),
+                       (member(OID, AllOmegas), once(omega_severity(OID, Sev))),
                        OIDs),
                (OIDs \= []
                -> (length(OIDs, N),
@@ -791,7 +792,6 @@ generate_omega_triage :-
 %  Scans ALL constraints in current KB and reports cross-domain structural twins.
 %  This provides a comprehensive view of isomorphic patterns across different domains.
 cross_domain_audit :-
-    format('~n[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]~n'),
     findall(iso(C1, C2, Score, Cat1, Cat2),
             (narrative_ontology:constraint_claim(C1, _),
              domain_priors:category_of(C1, Cat1),
@@ -801,8 +801,9 @@ cross_domain_audit :-
              C1 @< C2),     % Prevent duplicate pairs (A,B) and (B,A)
             Isos),
     (Isos = []
-    -> format('  No cross-domain isomorphisms detected.~n')
-    ;  (length(Isos, N),
+    -> true  % Suppress entirely when no cross-domain twins found
+    ;  (format('~n[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]~n'),
+        length(Isos, N),
         format('  Found ~w cross-domain structural twins:~n~n', [N]),
         forall(member(iso(C1, C2, S, Cat1, Cat2), Isos),
                (format('  ~w (~w) ≈ ~w (~w)~n', [C1, Cat1, C2, Cat2]),

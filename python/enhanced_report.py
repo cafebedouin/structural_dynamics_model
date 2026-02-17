@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
 """
-Enhanced Constraint Report — Runs the Prolog per-constraint report, then
-appends four JSON-sourced sections drawn from the Python pipeline outputs.
+Enhanced Constraint Report — Two-Stream Architecture
+
+Runs the Prolog per-constraint report (Stream 1: Live Diagnosis), then
+inserts five Python-built corpus context sections (Stream 2) between
+the LOGICAL FINGERPRINT and DR EXECUTIVE SUMMARY sections.
+
+Stream 1: Live Prolog subprocess stdout
+Stream 2: Python-built sections from batch JSON/markdown data
+  A. CORPUS POSITIONING
+  B. ORBIT CONTEXT
+  C. MAXENT SHADOW CLASSIFICATION
+  D. ENRICHED OMEGA CONTEXT
+  E. STRUCTURAL CONTEXT
 
 Inputs:
   prolog/testsets/{ID}.pl          — constraint testset (must exist)
+  outputs/pipeline_output.json     — batch pipeline results + diagnostic
   outputs/orbit_data.json          — orbit signatures per constraint
   outputs/enriched_omega_data.json — triaged omega violations
   outputs/corpus_data.json         — corpus metrics and analysis
@@ -16,7 +28,9 @@ Outputs:
   outputs/constraint_reports/{ID}_report.md
 
 Usage:
-  python3 python/enhanced_report.py columbia_2026_elections
+  python3 python/enhanced_report.py columbia_2026_elections   # specific constraint
+  python3 python/enhanced_report.py foo bar baz               # multiple constraints
+  python3 python/enhanced_report.py                           # auto: testsets modified in last hour
 """
 
 import json
@@ -24,6 +38,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 # --- Path Setup ---
@@ -34,8 +49,13 @@ PROLOG_DIR = PROJECT_ROOT / "prolog"
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 REPORTS_DIR = OUTPUTS_DIR / "constraint_reports"
 
+# --- Splice markers ---
 
-# --- JSON Loaders (graceful fallback) ---
+MARKER_FP = "--- LOGICAL FINGERPRINT ---"
+MARKER_EXEC = "===================================================="
+
+
+# --- JSON/Text Loaders (graceful fallback) ---
 
 def load_json(path, label):
     """Load a JSON file, returning None with a stderr warning on failure."""
@@ -94,10 +114,226 @@ def run_prolog_report(constraint_id):
         sys.exit(1)
 
 
-# --- Section Builders ---
+# --- Helpers ---
+
+def _compact_types(perspectives):
+    """Summarize perspectives as 'type1 (ctx1), type2 (ctx2)' — one ctx per unique type."""
+    type_to_ctx = {}
+    for ctx in ["powerless", "moderate", "institutional", "analytical"]:
+        t = perspectives.get(ctx)
+        if t and t not in type_to_ctx:
+            type_to_ctx[t] = ctx
+    return ", ".join(f"{t} ({ctx})" for t, ctx in type_to_ctx.items())
+
+
+# --- Header Builder ---
+
+def build_header(pipeline_data):
+    """Build 3-line corpus summary header from diagnostic + validation sections."""
+    if pipeline_data is None:
+        return ""
+
+    diag = pipeline_data.get("diagnostic")
+    val = pipeline_data.get("validation")
+    if not diag:
+        return ""
+
+    corpus_size = diag.get("corpus_size", "?")
+    type_dist = diag.get("type_distribution", {})
+    network = diag.get("network_stability", "unknown")
+    omega_count = val.get("omega_count", 0) if val else 0
+    critical = val.get("omega_by_severity", {}).get("critical", 0) if val else 0
+
+    # Format type distribution in standard order
+    type_order = ["mountain", "rope", "tangled_rope", "snare", "piton", "scaffold"]
+    type_parts = [f"{type_dist[t]} {t}" for t in type_order if t in type_dist]
+    for t, count in sorted(type_dist.items()):
+        if t not in type_order:
+            type_parts.append(f"{count} {t}")
+
+    lines = [
+        f"CORPUS CONTEXT: {corpus_size} constraints",
+        f"  Types: {', '.join(type_parts)}",
+        f"  Network stability: {network} | {omega_count} omegas ({critical} critical)",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+# --- Live Prolog Extraction (minimal regex) ---
+
+def extract_live_perspectives(prolog_output):
+    """Extract claimed type and perspective types from Prolog INDEXICAL AUDIT block.
+
+    Uses two regex patterns only:
+      1. 'Claimed Type: X' line
+      2. perspective lines: '[context(agent_power(X),...))]: type'
+    """
+    claimed = None
+    perspectives = {}
+
+    m = re.search(r'Claimed Type:\s+(\S+)', prolog_output)
+    if m:
+        claimed = m.group(1)
+
+    for m in re.finditer(
+        r'agent_power\((\w+)\)[^\n]+\]:\s+(\w+)',
+        prolog_output
+    ):
+        power = m.group(1)
+        ctype = m.group(2)
+        if power in ("powerless", "moderate", "institutional", "analytical"):
+            perspectives[power] = ctype
+
+    return claimed, perspectives
+
+
+# --- Section A: CORPUS POSITIONING ---
+
+def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
+    """Section A: CORPUS POSITIONING from pipeline_output.json + live Prolog output."""
+    lines = ["", "--- CORPUS POSITIONING ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [pipeline_output.json not available]")
+        return "\n".join(lines)
+
+    diag = pipeline_data.get("diagnostic", {})
+    val = pipeline_data.get("validation", {})
+    per_constraint = pipeline_data.get("per_constraint", [])
+
+    key = constraint_id.lower()
+
+    # Find this constraint in per_constraint array
+    entry = None
+    for pc in per_constraint:
+        if pc.get("id", "").lower() == key:
+            entry = pc
+            break
+
+    # Extract live perspectives from Prolog output
+    live_claimed, live_perspectives = extract_live_perspectives(prolog_output)
+    in_batch = entry is not None
+
+    # --- This Constraint block ---
+    lines.append("  This Constraint:")
+
+    if in_batch:
+        claimed = entry.get("claimed_type", "N/A")
+        batch_persp = entry.get("perspectives", {})
+        signature = entry.get("signature", "N/A")
+        purity = entry.get("purity_score")
+        purity_band = entry.get("purity_band", "N/A")
+        coupling = entry.get("coupling", {})
+        coupling_cat = coupling.get("category", "N/A")
+        coupling_score = coupling.get("score")
+        boltzmann = coupling.get("boltzmann", "unknown")
+
+        lines.append(f"    Claimed Type:     {claimed}")
+
+        # Live types from Prolog
+        if live_perspectives:
+            live_str = _compact_types(live_perspectives)
+            if live_str:
+                lines.append(f"    Live Type:        {live_str}")
+
+        # Batch types + agreement check
+        batch_str = _compact_types(batch_persp)
+        if batch_str:
+            if live_perspectives and batch_persp == live_perspectives:
+                lines.append(f"    Batch Type:       {batch_str}   [AGREES WITH LIVE]")
+            elif live_perspectives:
+                lines.append(f"    Batch Type:       {batch_str}")
+            else:
+                lines.append(f"    Batch Type:       {batch_str}")
+
+        lines.append(f"    Signature:        {signature}")
+
+        if purity is not None:
+            lines.append(f"    Purity:           {purity} ({purity_band})")
+        else:
+            lines.append(f"    Purity:           N/A ({purity_band})")
+
+        if coupling_score is not None:
+            lines.append(f"    Coupling:         {coupling_cat} (score: {coupling_score})")
+        else:
+            lines.append(f"    Coupling:         {coupling_cat}")
+
+        lines.append(f"    Boltzmann:        {boltzmann}")
+
+    else:
+        # New constraint — not in batch
+        if live_claimed:
+            lines.append(f"    Claimed Type:     {live_claimed}")
+        if live_perspectives:
+            live_str = _compact_types(live_perspectives)
+            if live_str:
+                lines.append(f"    Live Type:        {live_str}")
+        lines.append("    Batch Type:       [not yet in batch — run full pipeline to include]")
+        lines.append("    Signature:        [from Prolog output above]")
+        lines.append("    Purity:           [not yet in batch]")
+        lines.append("    Coupling:         [not yet in batch]")
+
+    # --- Corpus Distribution block ---
+    lines.append("")
+    lines.append("  Corpus Distribution:")
+
+    type_dist = diag.get("type_distribution", {})
+    purity_dist = diag.get("purity_summary", {})
+    coupling_dist = diag.get("coupling_summary", {})
+    sig_dist = val.get("signature_distribution", {}) if val else {}
+
+    type_order = ["mountain", "rope", "tangled_rope", "snare", "piton", "scaffold"]
+    type_parts = [f"{type_dist[t]} {t}" for t in type_order if t in type_dist]
+    for t, count in sorted(type_dist.items()):
+        if t not in type_order:
+            type_parts.append(f"{count} {t}")
+    lines.append(f"    Type:      {' | '.join(type_parts)}")
+
+    purity_order = ["pristine", "sound", "borderline", "contaminated", "degraded"]
+    purity_parts = [f"{purity_dist[p]} {p}" for p in purity_order if p in purity_dist]
+    lines.append(f"    Purity:    {' | '.join(purity_parts)}")
+
+    coupling_order = ["strongly_coupled", "weakly_coupled", "independent", "inconclusive"]
+    coupling_parts = []
+    for c in coupling_order:
+        if c in coupling_dist:
+            label = c.replace("_coupled", "")
+            coupling_parts.append(f"{coupling_dist[c]} {label}")
+    lines.append(f"    Coupling:  {' | '.join(coupling_parts)}")
+
+    if sig_dist:
+        sig_parts = [f"{count} {sig}" for sig, count in
+                     sorted(sig_dist.items(), key=lambda x: -x[1])]
+        if len(sig_parts) > 5:
+            sig_parts = sig_parts[:5] + ["..."]
+        lines.append(f"    Signature: {' | '.join(sig_parts)}")
+
+    # --- Positioning block (batch constraints only) ---
+    if in_batch:
+        lines.append("")
+        lines.append("  Positioning:")
+        signature = entry.get("signature", "unknown")
+        if sig_dist and signature in sig_dist:
+            sig_count = sig_dist[signature]
+            corpus_size = diag.get("corpus_size", 1)
+            sig_pct = (sig_count / corpus_size) * 100
+            lines.append(f"    This constraint is a {signature} ({sig_pct:.1f}% of corpus shares this signature)")
+
+        purity_band = entry.get("purity_band", "unknown")
+        if purity_dist and purity_band in purity_dist:
+            band_count = purity_dist[purity_band]
+            corpus_size = diag.get("corpus_size", 1)
+            band_pct = (band_count / corpus_size) * 100
+            lines.append(f"    Purity band: {purity_band} ({band_pct:.1f}% of corpus in this band)")
+
+    return "\n".join(lines)
+
+
+# --- Section B: ORBIT CONTEXT ---
 
 def build_orbit_section(constraint_id, orbit_data, omega_data):
-    """Section 1: ORBIT CONTEXT from orbit_data.json + omega family lookup."""
+    """Section B: ORBIT CONTEXT from orbit_data.json + omega family lookup."""
     lines = ["", "--- ORBIT CONTEXT ---", ""]
 
     if orbit_data is None:
@@ -108,8 +344,7 @@ def build_orbit_section(constraint_id, orbit_data, omega_data):
     entry = orbit_data.get(key)
     if entry is None:
         lines.append(
-            "  Not found in orbit analysis — constraint may not have been\n"
-            "  included in batch run or may lack sufficient index configurations."
+            "  Not yet in orbit analysis — run full pipeline to include."
         )
         return "\n".join(lines)
 
@@ -122,13 +357,7 @@ def build_orbit_section(constraint_id, orbit_data, omega_data):
 
     lines.append(f"  Orbit Signature:    [{', '.join(sig)}]")
     lines.append(f"  Orbit Span:         {len(sig)}")
-    lines.append(f"  Number of Contexts: {len(contexts)}")
     lines.append(f"  Gauge Status:       {gauge}")
-    lines.append("")
-    lines.append("  Per-context types:")
-    for ctx in ["powerless", "moderate", "institutional", "analytical"]:
-        val = contexts.get(ctx, "N/A")
-        lines.append(f"    {ctx:15s} -> {val}")
 
     # Family ID from enriched omega data
     family = None
@@ -138,12 +367,12 @@ def build_orbit_section(constraint_id, orbit_data, omega_data):
                 family = omega.get("family")
                 break
     if family:
-        lines.append(f"\n  Orbit Family ID:    {family}")
-    else:
-        lines.append(f"\n  Orbit Family ID:    No family assignment (no omega generated)")
+        lines.append(f"  Orbit Family ID:    {family}")
 
     return "\n".join(lines)
 
+
+# --- Section C: MAXENT SHADOW CLASSIFICATION ---
 
 def parse_maxent_tables(maxent_text):
     """Parse high-uncertainty and hard-disagreement tables from maxent_report.md."""
@@ -166,7 +395,6 @@ def parse_maxent_tables(maxent_text):
         re.MULTILINE
     )
 
-    # Split into sections to avoid cross-matching
     hu_section = ""
     hd_section = ""
 
@@ -175,7 +403,6 @@ def parse_maxent_tables(maxent_text):
 
     if hu_marker in maxent_text:
         start = maxent_text.index(hu_marker)
-        # Find next ## header
         rest = maxent_text[start + len(hu_marker):]
         end = rest.find("\n## ")
         hu_section = rest[:end] if end != -1 else rest
@@ -187,7 +414,7 @@ def parse_maxent_tables(maxent_text):
         if end == -1:
             end = rest.find("\n### ")
             if end != -1 and rest[end+5:end+20].strip().startswith("Soft"):
-                pass  # include soft disagreements section boundary
+                pass
             else:
                 end = -1
         hd_section = rest[:end] if end != -1 else rest
@@ -216,7 +443,7 @@ def parse_maxent_tables(maxent_text):
 
 
 def build_maxent_section(constraint_id, maxent_text):
-    """Section 2: MAXENT SHADOW CLASSIFICATION from maxent_report.md."""
+    """Section C: MAXENT SHADOW CLASSIFICATION from maxent_report.md."""
     lines = ["", "--- MAXENT SHADOW CLASSIFICATION ---", ""]
 
     if maxent_text is None:
@@ -229,6 +456,17 @@ def build_maxent_section(constraint_id, maxent_text):
     in_hard = key in hard_dis
     in_hu = key in high_unc
 
+    # Check if constraint appears anywhere in the maxent report
+    in_report = key in maxent_text.lower()
+
+    if not in_report:
+        # Not in MaxEnt batch at all
+        lines.append(
+            "  Not yet in MaxEnt batch — run full pipeline to include.\n"
+            "  (MaxEnt validates classification stability across the full corpus.)"
+        )
+        return "\n".join(lines)
+
     if in_hard:
         hd = hard_dis[key]
         h_norm = high_unc[key]["h_norm"] if in_hu else "below threshold"
@@ -239,20 +477,23 @@ def build_maxent_section(constraint_id, maxent_text):
         lines.append(f"  Distribution:  {hd['distribution']}")
     elif in_hu:
         hu = high_unc[key]
-        lines.append(f"  High Uncertainty (but types agree)")
+        lines.append("  High Uncertainty (types agree)")
         lines.append(f"  H_norm:        {hu['h_norm']}")
         lines.append(f"  Confidence:    {hu['confidence']}")
-        lines.append(f"  Top P:         {hu['top_p']}")
-        lines.append(f"  Det Type:      {hu['det_type']}")
-        lines.append(f"  Shadow Top:    {hu['shadow_top']}")
     else:
+        # Found in report but not in any flagged table — genuinely stable
         lines.append("  No MaxEnt flags — classification is stable (low entropy, types agree)")
 
     return "\n".join(lines)
 
 
+# --- Section D: ENRICHED OMEGA CONTEXT ---
+
 def build_omega_section(constraint_id, omega_data):
-    """Section 3: ENRICHED OMEGA CONTEXT from enriched_omega_data.json."""
+    """Section D: ENRICHED OMEGA CONTEXT from enriched_omega_data.json.
+
+    Only shows enrichment-unique fields: severity_score, gap_class, gap_pattern, family.
+    """
     lines = ["", "--- ENRICHED OMEGA CONTEXT ---", ""]
 
     if omega_data is None:
@@ -267,36 +508,33 @@ def build_omega_section(constraint_id, omega_data):
 
     if not matches:
         lines.append(
-            "  No omega violations detected — perspectives agree on\n"
-            "  classification for this constraint."
+            "  Not yet enriched — see live omega results in report sections below.\n"
+            "  (Run full pipeline to include in severity scoring and family grouping.)"
         )
         return "\n".join(lines)
 
     for i, omega in enumerate(matches):
         if i > 0:
             lines.append("")
-        lines.append(f"  Omega Name:          {omega.get('name', 'N/A')}")
-        lines.append(f"  Severity Score:      {omega.get('severity_score', 'N/A')}")
-        lines.append(f"  Severity Category:   {omega.get('severity', 'N/A')}")
-        lines.append(f"  Gap Class:           {omega.get('gap_class', 'N/A')}")
-        lines.append(f"  Gap Pattern:         {omega.get('gap_pattern', 'N/A')}")
-        lines.append(f"  Epsilon:             {omega.get('epsilon', 'N/A')}")
-        lines.append(f"  Suppression:         {omega.get('suppression', 'N/A')}")
-        lines.append(f"  Family ID:           {omega.get('family', 'N/A')}")
-        lines.append(f"  Resolution Strategy: {omega.get('resolution_strategy', 'N/A')}")
+        lines.append(f"  Omega: {omega.get('name', 'N/A')}")
+        lines.append(f"    Severity Score:    {omega.get('severity_score', 'N/A')}")
+        lines.append(f"    Gap Class:         {omega.get('gap_class', 'N/A')}")
+        lines.append(f"    Gap Pattern:       {omega.get('gap_pattern', 'N/A')}")
+        lines.append(f"    Family ID:         {omega.get('family', 'N/A')}")
 
     return "\n".join(lines)
 
 
+# --- Section E: STRUCTURAL CONTEXT ---
+
 def build_structural_section(constraint_id, corpus_data, pattern_text, covering_text):
-    """Section 4: STRUCTURAL CONTEXT from corpus_data.json + markdown reports."""
+    """Section E: STRUCTURAL CONTEXT from corpus_data.json + markdown reports."""
     lines = ["", "--- STRUCTURAL CONTEXT ---", ""]
 
     key = constraint_id.lower()
 
     # --- Corpus data: analysis sub-object ---
     if corpus_data and "constraints" in corpus_data:
-        # Case-insensitive lookup
         cdata = None
         for cid, val in corpus_data["constraints"].items():
             if cid.lower() == key:
@@ -324,16 +562,17 @@ def build_structural_section(constraint_id, corpus_data, pattern_text, covering_
         elif cdata:
             lines.append("  [No analysis sub-object in corpus_data for this constraint]")
         else:
-            lines.append("  [Constraint not found in corpus_data.json]")
+            lines.append(
+                "  Not yet in corpus — run full pipeline to include.\n"
+                "  (Variance, twin group, and covering analysis require batch corpus data.)"
+            )
     else:
         lines.append("  [corpus_data.json not available]")
 
     # --- Pattern mining: structural twins ---
     lines.append("")
     if pattern_text:
-        # Search the twin group table for rows containing the constraint ID
         twin_found = False
-        # Table rows: | Signature | Count | Types Present | Domains | Examples |
         twin_row_re = re.compile(
             r'^\| ([^|]+)\| *(\d+) \| ([^|]+)\| ([^|]+)\| ([^|]+)\|',
             re.MULTILINE
@@ -345,21 +584,19 @@ def build_structural_section(constraint_id, corpus_data, pattern_text, covering_
                 count = m.group(2).strip()
                 types = m.group(3).strip()
                 twin_found = True
-                lines.append(f"  Structural Twin Group:")
+                lines.append("  Structural Twin Group:")
                 lines.append(f"    Signature:   {sig}")
                 lines.append(f"    Group Size:  {count}")
                 lines.append(f"    Types:       {types}")
                 break
         if not twin_found:
-            lines.append("  Structural Twins: Not in any structural twin group")
+            lines.append("  Structural Twins:     [not found in batch twin analysis]")
     else:
         lines.append("  [pattern_mining.md not available]")
 
     # --- Covering analysis: transition detail ---
     lines.append("")
     if covering_text:
-        # Find rows matching this constraint in the transition detail table
-        # | Constraint | D1 | Sigma | Type1 | D2 | Sigma2 | Type2 | Axis |
         transitions = []
         for line in covering_text.splitlines():
             if line.startswith("| ") and key in line.lower():
@@ -371,11 +608,11 @@ def build_structural_section(constraint_id, corpus_data, pattern_text, covering_
 
         if transitions:
             unique_transitions = sorted(set(transitions))
-            lines.append(f"  Covering Analysis:")
+            lines.append("  Covering Analysis:")
             lines.append(f"    Missed Transitions: {len(transitions)}")
             lines.append(f"    Unique Type Shifts:  {', '.join(unique_transitions)}")
         else:
-            lines.append("  Covering Analysis: No missed transitions on expanded grid")
+            lines.append("  Covering Analysis:    [not found in batch covering analysis]")
     else:
         lines.append("  [covering_analysis.md not available]")
 
@@ -384,61 +621,133 @@ def build_structural_section(constraint_id, corpus_data, pattern_text, covering_
 
 # --- Report Assembly ---
 
-def assemble_report(prolog_output, sections):
-    """Insert the four sections between LOGICAL FINGERPRINT and SYSTEM INSIGHTS."""
-    marker_fp = "--- LOGICAL FINGERPRINT ---"
-    marker_si = "--- SYSTEM INSIGHTS ---"
+def assemble_report(header, prolog_output, sections):
+    """Insert corpus context sections between LOGICAL FINGERPRINT and DR EXECUTIVE SUMMARY.
 
+    Splits Prolog output at the first ==== line after --- LOGICAL FINGERPRINT ---.
+    """
     insertion = "\n".join(sections)
 
-    if marker_fp in prolog_output and marker_si in prolog_output:
-        # Split at SYSTEM INSIGHTS marker — insert before it
-        before_si, after_si = prolog_output.split(marker_si, 1)
-        return before_si + insertion + "\n\n" + marker_si + after_si
-    else:
-        # Markers not found — append at end
-        print("[WARN] Section markers not found in Prolog output; appending sections at end",
-              file=sys.stderr)
-        return prolog_output + "\n" + insertion
+    fp_idx = prolog_output.find(MARKER_FP)
+    if fp_idx == -1:
+        # Fallback: append at end
+        return header + prolog_output + "\n" + insertion
+
+    # Find the ==== delimiter that starts DR EXECUTIVE SUMMARY
+    after_fp = prolog_output[fp_idx:]
+    exec_offset = after_fp.find("\n" + MARKER_EXEC)
+    if exec_offset == -1:
+        return header + prolog_output + "\n" + insertion
+
+    split_point = fp_idx + exec_offset
+    before = prolog_output[:split_point]
+    after = prolog_output[split_point:]
+    return header + before + "\n" + insertion + "\n" + after
 
 
-# --- Main ---
+# --- Pipeline Dashboard ---
 
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: python3 python/enhanced_report.py <constraint_id>", file=sys.stderr)
-        sys.exit(1)
+def run_dashboard():
+    """Run pipeline_dashboard.sh to show corpus health before report generation."""
+    dashboard = PROJECT_ROOT / "scripts" / "pipeline_dashboard.sh"
+    if not dashboard.exists():
+        print("[WARN] pipeline_dashboard.sh not found, skipping", file=sys.stderr)
+        return
+    try:
+        subprocess.run(
+            ["bash", str(dashboard)],
+            cwd=str(PROJECT_ROOT), timeout=30
+        )
+    except subprocess.TimeoutExpired:
+        print("[WARN] Dashboard timed out after 30s, continuing", file=sys.stderr)
+    except OSError as e:
+        print(f"[WARN] Dashboard failed: {e}", file=sys.stderr)
 
-    constraint_id = sys.argv[1]
-    print(f"Generating enhanced report for: {constraint_id}")
 
-    # Step 1: Run Prolog report
+# --- Recent Testset Discovery ---
+
+def find_recent_testsets(hours=1):
+    """Find .pl testset files modified within the last `hours` hours."""
+    testsets_dir = PROLOG_DIR / "testsets"
+    if not testsets_dir.exists():
+        return []
+    cutoff = time.time() - (hours * 3600)
+    recent = []
+    for pl_file in sorted(testsets_dir.glob("*.pl")):
+        if pl_file.stat().st_mtime >= cutoff:
+            constraint_id = pl_file.stem
+            recent.append(constraint_id)
+    return recent
+
+
+# --- Per-Constraint Report Generation ---
+
+def generate_report(constraint_id, data):
+    """Generate a single constraint report. `data` is the shared loaded data dict."""
+    print(f"\nGenerating enhanced report for: {constraint_id}")
+
     prolog_output = run_prolog_report(constraint_id)
 
-    # Step 2: Load data sources
-    orbit_data = load_json(OUTPUTS_DIR / "orbit_data.json", "orbit_data.json")
-    omega_data = load_json(OUTPUTS_DIR / "enriched_omega_data.json", "enriched_omega_data.json")
-    corpus_data = load_json(OUTPUTS_DIR / "corpus_data.json", "corpus_data.json")
-    maxent_text = load_text(OUTPUTS_DIR / "maxent_report.md", "maxent_report.md")
-    pattern_text = load_text(OUTPUTS_DIR / "pattern_mining.md", "pattern_mining.md")
-    covering_text = load_text(OUTPUTS_DIR / "covering_analysis.md", "covering_analysis.md")
+    header = build_header(data["pipeline"])
+    sec_positioning = build_corpus_positioning(constraint_id, data["pipeline"], prolog_output)
+    sec_orbit = build_orbit_section(constraint_id, data["orbit"], data["omega"])
+    sec_maxent = build_maxent_section(constraint_id, data["maxent"])
+    sec_omega = build_omega_section(constraint_id, data["omega"])
+    sec_structural = build_structural_section(
+        constraint_id, data["corpus"], data["pattern"], data["covering"]
+    )
 
-    # Step 3: Build the four sections
-    sec_orbit = build_orbit_section(constraint_id, orbit_data, omega_data)
-    sec_maxent = build_maxent_section(constraint_id, maxent_text)
-    sec_omega = build_omega_section(constraint_id, omega_data)
-    sec_structural = build_structural_section(constraint_id, corpus_data, pattern_text, covering_text)
+    full_report = assemble_report(
+        header, prolog_output,
+        [sec_positioning, sec_orbit, sec_maxent, sec_omega, sec_structural]
+    )
 
-    # Step 4: Assemble
-    full_report = assemble_report(prolog_output, [sec_orbit, sec_maxent, sec_omega, sec_structural])
-
-    # Step 5: Write output
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     out_path = REPORTS_DIR / f"{constraint_id}_report.md"
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(full_report)
 
     print(f"Report written to: {out_path}")
+
+
+# --- Main ---
+
+def main():
+    # Determine which constraints to process
+    if len(sys.argv) >= 2:
+        constraint_ids = sys.argv[1:]
+    else:
+        # Auto-discover testsets modified in the last hour
+        constraint_ids = find_recent_testsets(hours=1)
+        if not constraint_ids:
+            print("No arguments given and no testsets modified in the last hour.", file=sys.stderr)
+            print("Usage: python3 python/enhanced_report.py [constraint_id ...]", file=sys.stderr)
+            print("       (or modify a testset in prolog/testsets/ and re-run)", file=sys.stderr)
+            sys.exit(1)
+        print(f"Auto-detected {len(constraint_ids)} recently modified testset(s):")
+        for cid in constraint_ids:
+            print(f"  {cid}")
+
+    # Run dashboard first
+    run_dashboard()
+
+    # Load all data sources once
+    data = {
+        "pipeline": load_json(OUTPUTS_DIR / "pipeline_output.json", "pipeline_output.json"),
+        "orbit":    load_json(OUTPUTS_DIR / "orbit_data.json", "orbit_data.json"),
+        "omega":    load_json(OUTPUTS_DIR / "enriched_omega_data.json", "enriched_omega_data.json"),
+        "corpus":   load_json(OUTPUTS_DIR / "corpus_data.json", "corpus_data.json"),
+        "maxent":   load_text(OUTPUTS_DIR / "maxent_report.md", "maxent_report.md"),
+        "pattern":  load_text(OUTPUTS_DIR / "pattern_mining.md", "pattern_mining.md"),
+        "covering": load_text(OUTPUTS_DIR / "covering_analysis.md", "covering_analysis.md"),
+    }
+
+    # Generate reports
+    for constraint_id in constraint_ids:
+        generate_report(constraint_id, data)
+
+    if len(constraint_ids) > 1:
+        print(f"\nDone: {len(constraint_ids)} reports generated.")
 
 
 if __name__ == "__main__":

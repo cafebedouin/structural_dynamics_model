@@ -39,23 +39,16 @@ run_all_tests(IntervalID) :-
     constraint_indexing:default_context(Ctx),
     run_all_tests(IntervalID, Ctx).
 
-run_all_tests(IntervalID, Context) :-
+run_all_tests(IntervalID, _Context) :-
     format('~n>>> INITIATING DR-AUDIT SUITE: ~w~n', [IntervalID]),
-    
-    % Step 1: Data Repair
-    data_repair:repair_interval(IntervalID),
 
-    % Step 2: Verification Gate
+    % Step 1: Verification Gate
     (   data_verification:verify_all,
         data_verification:check_paired_measurements
     ->  format('[OK] Verification passed.~n')
     ;   format('[FAIL] Verification failed for ~w.~n', [IntervalID]), fail),
 
-    % Step 3: Indexical Audit
-    forall(narrative_ontology:constraint_claim(C, _),
-           constraint_indexing:compare_perspectives(C, Context)),
-
-    % Step 3b: Per-Index Validation
+    % Step 2: Per-Index Validation
     % For each declared classification, compute dr_type and compare.
     % Mismatches are informational - they show where domain priors
     % differ from computed classifications (desired behavior).
@@ -80,10 +73,7 @@ run_all_tests(IntervalID, Context) :-
     forall(narrative_ontology:constraint_claim(C2, _),
            ( catch(logical_fingerprint:print_fingerprint(C2), _, true) )),
 
-    % Step 6: System Insights
-    format('~n--- SYSTEM INSIGHTS ---~n'),
-    narrative_ontology:count_unresolved_omegas(OmegaCount),
-    format('  Omegas Identified: ~w~n', [OmegaCount]),
+    % Step 6: Full Report (includes omega generation + triage)
     report_generator:generate_full_report(IntervalID).
 
 % Ensure quick_check uses the predicates from the authoritative module

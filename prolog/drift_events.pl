@@ -34,12 +34,12 @@
 
     % Shared utilities (needed by transition_paths, network_dynamics, drift_report)
     safe_metric/3,
-    metric_trend/2,
+    metric_trend/3,
     metric_at/4,
-    collect_purity_decline_signals/2,
-    last/2
+    collect_purity_decline_signals/2
 ]).
 
+:- use_module(library(lists), [last/2]).
 :- use_module(narrative_ontology).
 :- use_module(config).
 :- use_module(drl_core).
@@ -90,10 +90,6 @@ metric_trend(C, Metric, Trend) :-
     ;   Delta < -0.05 -> Trend = decreasing
     ;   Trend = stable
     ).
-
-%% last(+List, -Last)
-last([X], X).
-last([_|T], X) :- last(T, X).
 
 /* ================================================================
    2. INDIVIDUAL DRIFT EVENT DETECTORS

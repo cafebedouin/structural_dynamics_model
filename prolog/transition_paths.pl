@@ -9,6 +9,7 @@
     predicted_terminal_state/3
 ]).
 
+:- use_module(library(lists), [last/2]).
 :- use_module(narrative_ontology).
 :- use_module(config).
 :- use_module(drl_core).
@@ -106,7 +107,7 @@ degradation_chain(C, Chain, evidence(time_span, T1, T2)) :-
     length(Chain, Len),
     Len > 1,
     Sorted = [T1-_|_],
-    drift_events:last(Sorted, T2-_).
+    last(Sorted, T2-_).
 
 %% classify_snapshot(+C, +Time, -Type)
 %  Classifies a constraint at a specific time using measurements available.
