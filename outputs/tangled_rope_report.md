@@ -1,6 +1,6 @@
 # Tangled Rope Diagnostic Report
 
-**Total Unique Tangled Ropes Found:** 570
+**Total Unique Tangled Ropes Found:** 569
 
 ---
 
@@ -9504,26 +9504,7 @@ N/A
 
 ---
 
-### 501. Tangled Rope: `mvt_theorem_constraint`
-
-*   **Claimed Type:** `rope`
-*   **Severity:** `N/A`
-*   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `tangled_rope`
-    *   Institutional (Manager) View: `tangled_rope`
-    *   Analytical View: `tangled_rope`
-*   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[tangled_rope]`
-*   **Related Gap/Alert:** N/A
-*   **Generated Omega:** N/A
-*   **Suggested Resolution Strategy:**
-    ```
-N/A
-    ```
-
----
-
-### 502. Tangled Rope: `narrative_engineering_2026`
+### 501. Tangled Rope: `narrative_engineering_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `high`
@@ -9542,7 +9523,7 @@ N/A
 
 ---
 
-### 503. Tangled Rope: `nasa_faster_better_cheaper`
+### 502. Tangled Rope: `nasa_faster_better_cheaper`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -9561,7 +9542,7 @@ N/A
 
 ---
 
-### 504. Tangled Rope: `nash_equilibrium_coordination`
+### 503. Tangled Rope: `nash_equilibrium_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9580,7 +9561,7 @@ N/A
 
 ---
 
-### 505. Tangled Rope: `nato_arctic_defense_cooperation`
+### 504. Tangled Rope: `nato_arctic_defense_cooperation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9599,7 +9580,7 @@ N/A
 
 ---
 
-### 506. Tangled Rope: `neuroplasticity_plateau`
+### 505. Tangled Rope: `neuroplasticity_plateau`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9618,7 +9599,7 @@ N/A
 
 ---
 
-### 507. Tangled Rope: `nonstandard_arithmetic_models`
+### 506. Tangled Rope: `nonstandard_arithmetic_models`
 
 *   **Claimed Type:** `mountain`
 *   **Severity:** `high`
@@ -9637,7 +9618,7 @@ N/A
 
 ---
 
-### 508. Tangled Rope: `nuclear_order_2026`
+### 507. Tangled Rope: `nuclear_order_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `unknown`
@@ -9656,7 +9637,7 @@ N/A
 
 ---
 
-### 509. Tangled Rope: `olympic_legacy_curling_investment`
+### 508. Tangled Rope: `olympic_legacy_curling_investment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9675,7 +9656,7 @@ N/A
 
 ---
 
-### 510. Tangled Rope: `paris_municipal_reform_2026`
+### 509. Tangled Rope: `paris_municipal_reform_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9694,7 +9675,7 @@ N/A
 
 ---
 
-### 511. Tangled Rope: `path_dependence_lock_in`
+### 510. Tangled Rope: `path_dependence_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9713,7 +9694,7 @@ N/A
 
 ---
 
-### 512. Tangled Rope: `peano_curve_mapping`
+### 511. Tangled Rope: `peano_curve_mapping`
 
 *   **Claimed Type:** `mountain`
 *   **Severity:** `high`
@@ -9732,7 +9713,7 @@ N/A
 
 ---
 
-### 513. Tangled Rope: `permissive_software_licensing`
+### 512. Tangled Rope: `permissive_software_licensing`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -9751,7 +9732,7 @@ N/A
 
 ---
 
-### 514. Tangled Rope: `perseverance_ai_drive`
+### 513. Tangled Rope: `perseverance_ai_drive`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -9770,7 +9751,7 @@ N/A
 
 ---
 
-### 515. Tangled Rope: `platform_cooperativism_governance`
+### 514. Tangled Rope: `platform_cooperativism_governance`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -9789,7 +9770,7 @@ N/A
 
 ---
 
-### 516. Tangled Rope: `postman_survival_protocol`
+### 515. Tangled Rope: `postman_survival_protocol`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -9808,7 +9789,7 @@ N/A
 
 ---
 
-### 517. Tangled Rope: `power_set_axiomatic_extraction`
+### 516. Tangled Rope: `power_set_axiomatic_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9827,7 +9808,7 @@ N/A
 
 ---
 
-### 518. Tangled Rope: `project_vault_2026`
+### 517. Tangled Rope: `project_vault_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9846,7 +9827,7 @@ N/A
 
 ---
 
-### 519. Tangled Rope: `proof_of_work_consensus`
+### 518. Tangled Rope: `proof_of_work_consensus`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -9865,7 +9846,7 @@ N/A
 
 ---
 
-### 520. Tangled Rope: `public_domain_commons`
+### 519. Tangled Rope: `public_domain_commons`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -9884,7 +9865,7 @@ N/A
 
 ---
 
-### 521. Tangled Rope: `publishing_embargo`
+### 520. Tangled Rope: `publishing_embargo`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9903,7 +9884,7 @@ N/A
 
 ---
 
-### 522. Tangled Rope: `quantum_entanglement_protocol`
+### 521. Tangled Rope: `quantum_entanglement_protocol`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -9922,7 +9903,7 @@ N/A
 
 ---
 
-### 523. Tangled Rope: `qwerty_vs_dvorak`
+### 522. Tangled Rope: `qwerty_vs_dvorak`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -9941,7 +9922,7 @@ N/A
 
 ---
 
-### 524. Tangled Rope: `railway_gauge_standard`
+### 523. Tangled Rope: `railway_gauge_standard`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -9960,7 +9941,7 @@ N/A
 
 ---
 
-### 525. Tangled Rope: `rfc9293_state_machine`
+### 524. Tangled Rope: `rfc9293_state_machine`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -9979,7 +9960,7 @@ N/A
 
 ---
 
-### 526. Tangled Rope: `ritual_transition_scaffold`
+### 525. Tangled Rope: `ritual_transition_scaffold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9998,7 +9979,7 @@ N/A
 
 ---
 
-### 527. Tangled Rope: `rn_proteus_adoption`
+### 526. Tangled Rope: `rn_proteus_adoption`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -10017,7 +9998,7 @@ N/A
 
 ---
 
-### 528. Tangled Rope: `rogers_commission_institutional_analysis`
+### 527. Tangled Rope: `rogers_commission_institutional_analysis`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -10036,7 +10017,7 @@ N/A
 
 ---
 
-### 529. Tangled Rope: `rogue_wave_control_2026`
+### 528. Tangled Rope: `rogue_wave_control_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10055,7 +10036,7 @@ N/A
 
 ---
 
-### 530. Tangled Rope: `sadhu_integrity_protocol`
+### 529. Tangled Rope: `sadhu_integrity_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -10074,7 +10055,7 @@ N/A
 
 ---
 
-### 531. Tangled Rope: `satellite_d2m_standard`
+### 530. Tangled Rope: `satellite_d2m_standard`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10093,7 +10074,7 @@ N/A
 
 ---
 
-### 532. Tangled Rope: `scientific_paradigm_lifecycle`
+### 531. Tangled Rope: `scientific_paradigm_lifecycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10112,7 +10093,7 @@ N/A
 
 ---
 
-### 533. Tangled Rope: `self_surpassing`
+### 532. Tangled Rope: `self_surpassing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -10131,7 +10112,7 @@ N/A
 
 ---
 
-### 534. Tangled Rope: `ship_of_theseus`
+### 533. Tangled Rope: `ship_of_theseus`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `unknown`
@@ -10150,7 +10131,7 @@ N/A
 
 ---
 
-### 535. Tangled Rope: `shitty_feedback_handling`
+### 534. Tangled Rope: `shitty_feedback_handling`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -10169,7 +10150,7 @@ N/A
 
 ---
 
-### 536. Tangled Rope: `sig_usd_protocol`
+### 535. Tangled Rope: `sig_usd_protocol`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -10188,7 +10169,7 @@ N/A
 
 ---
 
-### 537. Tangled Rope: `sig_usd_protocol`
+### 536. Tangled Rope: `sig_usd_protocol`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -10207,7 +10188,7 @@ N/A
 
 ---
 
-### 538. Tangled Rope: `skills_based_hiring`
+### 537. Tangled Rope: `skills_based_hiring`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -10226,7 +10207,7 @@ N/A
 
 ---
 
-### 539. Tangled Rope: `solar_system_weirdness`
+### 538. Tangled Rope: `solar_system_weirdness`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -10245,7 +10226,7 @@ N/A
 
 ---
 
-### 540. Tangled Rope: `solar_system_weirdness`
+### 539. Tangled Rope: `solar_system_weirdness`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -10264,7 +10245,7 @@ N/A
 
 ---
 
-### 541. Tangled Rope: `solar_system_weirdness`
+### 540. Tangled Rope: `solar_system_weirdness`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -10283,7 +10264,7 @@ N/A
 
 ---
 
-### 542. Tangled Rope: `stable_marriage_coordination`
+### 541. Tangled Rope: `stable_marriage_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10302,7 +10283,7 @@ N/A
 
 ---
 
-### 543. Tangled Rope: `starwars_evolutionary_mutation`
+### 542. Tangled Rope: `starwars_evolutionary_mutation`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -10321,7 +10302,7 @@ N/A
 
 ---
 
-### 544. Tangled Rope: `steinmetz_valuation_asymmetry`
+### 543. Tangled Rope: `steinmetz_valuation_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10340,7 +10321,7 @@ N/A
 
 ---
 
-### 545. Tangled Rope: `stoic_logos_governance`
+### 544. Tangled Rope: `stoic_logos_governance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10359,7 +10340,7 @@ N/A
 
 ---
 
-### 546. Tangled Rope: `superbowl_advertising_extraction`
+### 545. Tangled Rope: `superbowl_advertising_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -10378,7 +10359,7 @@ N/A
 
 ---
 
-### 547. Tangled Rope: `taiwan_ids_program`
+### 546. Tangled Rope: `taiwan_ids_program`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10397,7 +10378,7 @@ N/A
 
 ---
 
-### 548. Tangled Rope: `taiwan_strait_hegemony_shift`
+### 547. Tangled Rope: `taiwan_strait_hegemony_shift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -10416,7 +10397,7 @@ N/A
 
 ---
 
-### 549. Tangled Rope: `technological_point_of_no_return`
+### 548. Tangled Rope: `technological_point_of_no_return`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -10435,7 +10416,7 @@ N/A
 
 ---
 
-### 550. Tangled Rope: `the_wall_procedural_barrier`
+### 549. Tangled Rope: `the_wall_procedural_barrier`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -10454,7 +10435,7 @@ N/A
 
 ---
 
-### 551. Tangled Rope: `trade_secret_law`
+### 550. Tangled Rope: `trade_secret_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -10473,7 +10454,7 @@ N/A
 
 ---
 
-### 552. Tangled Rope: `transient_event_detection`
+### 551. Tangled Rope: `transient_event_detection`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `unknown`
@@ -10492,7 +10473,7 @@ N/A
 
 ---
 
-### 553. Tangled Rope: `trivial_topology_info_asymmetry`
+### 552. Tangled Rope: `trivial_topology_info_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10511,7 +10492,7 @@ N/A
 
 ---
 
-### 554. Tangled Rope: `trojan_war_spoils`
+### 553. Tangled Rope: `trojan_war_spoils`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `high`
@@ -10530,7 +10511,7 @@ N/A
 
 ---
 
-### 555. Tangled Rope: `tsp_duplicate_elimination`
+### 554. Tangled Rope: `tsp_duplicate_elimination`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -10549,7 +10530,7 @@ N/A
 
 ---
 
-### 556. Tangled Rope: `udhr_1948`
+### 555. Tangled Rope: `udhr_1948`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -10568,7 +10549,7 @@ N/A
 
 ---
 
-### 557. Tangled Rope: `udhr_1948`
+### 556. Tangled Rope: `udhr_1948`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `moderate`
@@ -10587,7 +10568,7 @@ N/A
 
 ---
 
-### 558. Tangled Rope: `udhr_1948`
+### 557. Tangled Rope: `udhr_1948`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -10606,7 +10587,7 @@ N/A
 
 ---
 
-### 559. Tangled Rope: `ulysses_circe_1904`
+### 558. Tangled Rope: `ulysses_circe_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -10625,7 +10606,7 @@ N/A
 
 ---
 
-### 560. Tangled Rope: `ulysses_hades_1904`
+### 559. Tangled Rope: `ulysses_hades_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -10644,7 +10625,7 @@ N/A
 
 ---
 
-### 561. Tangled Rope: `ulysses_oxen_1904`
+### 560. Tangled Rope: `ulysses_oxen_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -10663,7 +10644,7 @@ N/A
 
 ---
 
-### 562. Tangled Rope: `ulysses_penelope_1904`
+### 561. Tangled Rope: `ulysses_penelope_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -10682,7 +10663,7 @@ N/A
 
 ---
 
-### 563. Tangled Rope: `ulysses_proteus_1904`
+### 562. Tangled Rope: `ulysses_proteus_1904`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `high`
@@ -10701,7 +10682,7 @@ N/A
 
 ---
 
-### 564. Tangled Rope: `unclos_2026`
+### 563. Tangled Rope: `unclos_2026`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `high`
@@ -10720,7 +10701,7 @@ N/A
 
 ---
 
-### 565. Tangled Rope: `us_canada_geopolitical_asymmetry`
+### 564. Tangled Rope: `us_canada_geopolitical_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `high`
@@ -10739,7 +10720,7 @@ N/A
 
 ---
 
-### 566. Tangled Rope: `us_military_recruitment_advertising`
+### 565. Tangled Rope: `us_military_recruitment_advertising`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10758,7 +10739,7 @@ N/A
 
 ---
 
-### 567. Tangled Rope: `visa_ipo_regulatory_compliance`
+### 566. Tangled Rope: `visa_ipo_regulatory_compliance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10777,7 +10758,7 @@ N/A
 
 ---
 
-### 568. Tangled Rope: `visa_judgment_sharing_agreement`
+### 567. Tangled Rope: `visa_judgment_sharing_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`
@@ -10796,7 +10777,7 @@ N/A
 
 ---
 
-### 569. Tangled Rope: `visa_judgment_sharing_agreement`
+### 568. Tangled Rope: `visa_judgment_sharing_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `moderate`
@@ -10815,7 +10796,7 @@ N/A
 
 ---
 
-### 570. Tangled Rope: `working_dog_training`
+### 569. Tangled Rope: `working_dog_training`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `unknown`

@@ -34,6 +34,7 @@
 :- use_module(structural_signatures).
 :- use_module(drl_core).
 :- use_module(drl_modal_logic).
+:- use_module(drl_counterfactual).
 :- use_module(corpus_loader).
 :- use_module(library(lists)).
 :- use_module(library(apply)).
@@ -45,6 +46,7 @@
    ================================================================ */
 
 :- dynamic gc_edge/4.             % gc_edge(C1, C2, Strength, Source) where C1 @< C2
+:- dynamic gc_inferred_edge/3.    % gc_inferred_edge(C1, C2, Strength) where C1 @< C2
 :- dynamic gc_node_type/3.        % gc_node_type(C, Context, Type)
 :- dynamic gc_node_purity/3.      % gc_node_purity(C, IntrinsicP, EffP)
 :- dynamic gc_sweep_result/5.     % gc_sweep_result(Thresh, NEdges, NComps, LargestSize, LargestFrac)
@@ -74,6 +76,7 @@ precompute_all_edges(Constraints, Context) :-
     (   gc_edges_precomputed
     ->  true  % already done
     ;   retractall(gc_edge(_, _, _, _)),
+        retractall(gc_inferred_edge(_, _, _)),
         % Save original threshold
         config:param(network_coupling_threshold, OrigThresh),
         % Set to near-zero to capture everything
@@ -82,12 +85,19 @@ precompute_all_edges(Constraints, Context) :-
         length(Constraints, N),
         format(user_error, '[giant] Pre-computing edges for ~w constraints (threshold=0.01)...~n', [N]),
         precompute_edges_loop(Constraints, Context, 0, N),
+        % Separately capture inferred_coupling edges for ALL pairs
+        % of constraints that have gradient data. This bypasses
+        % deduplicate_neighbors which loses inferred sources when
+        % an explicit/shared edge exists for the same pair.
+        precompute_inferred_edges(Constraints),
         % Restore original threshold
         retract(config:param(network_coupling_threshold, 0.01)),
         assertz(config:param(network_coupling_threshold, OrigThresh)),
         % Count total edges
         aggregate_all(count, gc_edge(_, _, _, _), EdgeCount),
-        format(user_error, '[giant] Pre-computed ~w undirected edge records.~n', [EdgeCount]),
+        aggregate_all(count, gc_inferred_edge(_, _, _), InferredCount),
+        format(user_error, '[giant] Pre-computed ~w non-inferred + ~w inferred edge records.~n',
+               [EdgeCount, InferredCount]),
         assertz(gc_edges_precomputed)
     ).
 
@@ -124,24 +134,95 @@ assert_edge_canonical(C1, C2, Strength, Source) :-
     ;   assertz(gc_edge(A, B, Strength, Source))
     ).
 
+%% assert_inferred_canonical(+C1, +C2, +Strength)
+%  Stores inferred_coupling edge with canonical ordering (C1 @< C2).
+%  If edge already exists, keeps the stronger one.
+assert_inferred_canonical(C1, C2, Strength) :-
+    (   C1 @< C2 -> A = C1, B = C2 ; A = C2, B = C1 ),
+    (   gc_inferred_edge(A, B, ExistStr)
+    ->  (   Strength > ExistStr
+        ->  retract(gc_inferred_edge(A, B, ExistStr)),
+            assertz(gc_inferred_edge(A, B, Strength))
+        ;   true
+        )
+    ;   assertz(gc_inferred_edge(A, B, Strength))
+    ).
+
+%% precompute_inferred_edges(+Constraints)
+%  Discovers all inferred_coupling edges by enumerating all pairs of
+%  constraints that have temporal gradient data. infer_structural_coupling/3
+%  requires both arguments to be bound, so we must enumerate explicitly.
+precompute_inferred_edges(Constraints) :-
+    % Find constraints that have gradient data (needed for coupling inference)
+    findall(C,
+        (   member(C, Constraints),
+            drl_counterfactual:dr_gradient_at(C, _, _)
+        ),
+        GradRaw),
+    sort(GradRaw, GradCs),
+    length(GradCs, NG),
+    format(user_error, '[giant] Found ~w constraints with gradient data for inferred coupling.~n', [NG]),
+    % Enumerate all ordered pairs and try to infer coupling
+    forall(
+        (   member(C1, GradCs),
+            member(C2, GradCs),
+            C1 @< C2,
+            catch(drl_counterfactual:infer_structural_coupling(C1, C2, Str), _, fail),
+            Str >= 0.01
+        ),
+        assert_inferred_canonical(C1, C2, Str)
+    ).
+
 %% edges_at_threshold(+Threshold, -Edges)
 %  Returns edges that survive a given coupling threshold.
-%  Explicit and shared_agent edges always survive.
-%  Inferred_coupling edges survive only if Strength >= Threshold.
+%  An (A,B) pair survives if:
+%    - gc_edge has an always-surviving source (explicit, shared_beneficiary, shared_victim), OR
+%    - gc_inferred_edge has strength >= Threshold
+%  Deduplicates by (A,B) pair.
 edges_at_threshold(Threshold, Edges) :-
+    % Collect always-surviving edges as A-B pairs
+    findall(
+        A-B,
+        (   gc_edge(A, B, _, Src),
+            always_survives(Src)
+        ),
+        AlwaysPairs
+    ),
+    % Collect inferred edges that pass the threshold
+    findall(
+        A-B,
+        (   gc_inferred_edge(A, B, Strength),
+            Strength >= Threshold
+        ),
+        InferredPairs
+    ),
+    % Merge and deduplicate by pair
+    append(AlwaysPairs, InferredPairs, AllPairs),
+    sort(AllPairs, UniquePairs),
+    % Convert back to edge/4 terms (use best available strength/source)
     findall(
         edge(A, B, S, Src),
-        (   gc_edge(A, B, S, Src),
-            edge_survives_threshold(S, Src, Threshold)
+        (   member(A-B, UniquePairs),
+            best_edge_info(A, B, S, Src)
         ),
         Edges
     ).
 
-edge_survives_threshold(_, explicit, _) :- !.
-edge_survives_threshold(_, shared_beneficiary, _) :- !.
-edge_survives_threshold(_, shared_victim, _) :- !.
-edge_survives_threshold(Strength, inferred_coupling, Threshold) :-
-    Strength >= Threshold.
+%% always_survives(+Source)
+%  Sources that survive regardless of threshold.
+always_survives(explicit).
+always_survives(shared_beneficiary).
+always_survives(shared_victim).
+
+%% best_edge_info(+A, +B, -Strength, -Source)
+%  Returns the best strength/source for a canonical pair.
+%  Prefers gc_edge info if available, falls back to gc_inferred_edge.
+best_edge_info(A, B, S, Src) :-
+    (   gc_edge(A, B, S, Src)
+    ->  true
+    ;   gc_inferred_edge(A, B, S),
+        Src = inferred_coupling
+    ).
 
 /* ================================================================
    GRAPH ALGORITHMS

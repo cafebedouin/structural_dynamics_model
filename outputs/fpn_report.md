@@ -43,10 +43,10 @@ Average EP shift by constraint type:
 
 | Type | Count | Avg One-Hop EP | Avg FPN EP | Avg Shift |
 |------|-------|---------------|------------|-----------|
-| mountain | 126 | 0.9841 | 0.9841 | 0.0000 |
+| mountain | 127 | 0.9840 | 0.9840 | 0.0000 |
 | rope | 47 | 0.8543 | 0.8534 | 0.0009 |
 | snare | 511 | 0.4485 | 0.4485 | 0.0001 |
-| tangled_rope | 323 | 0.5011 | 0.5006 | 0.0004 |
+| tangled_rope | 322 | 0.4999 | 0.4995 | 0.0004 |
 
 ---
 *End of FPN report*

@@ -859,7 +859,7 @@ Families sorted by population (largest first).
 - `whitehead_incompleteness`
 - `whitehead_problem_undecidability`
 
-### `[tangled_rope]` — 104 constraints
+### `[tangled_rope]` — 103 constraints
 
 *Gauge-invariant: tangled coordination-extraction from all perspectives*
 
@@ -927,7 +927,6 @@ Families sorted by population (largest first).
 - `micro_robot_electronics_integration`
 - `microbiome_symbiosis`
 - `mutual_defection_equilibrium`
-- `mvt_theorem_constraint`
 - `narrative_engineering_2026`
 - `nasa_faster_better_cheaper`
 - `nash_equilibrium_coordination`
@@ -1019,6 +1018,25 @@ Families sorted by population (largest first).
 - `russells_paradox_self_reference`
 - `trillion_bond_rush_2026`
 
+### `[mountain,scaffold]` — 14 constraints
+
+*2-type orbit: [mountain,scaffold]*
+
+- `biological_curiosity`
+- `burali_forti_paradox`
+- `click_chemistry_paradigm_2026`
+- `climate_attribution_2026`
+- `currys_paradox`
+- `endowment_effect`
+- `ergo_nipopows`
+- `galois_theory_symmetry`
+- `genetic_algorithms_evolution`
+- `heuristic_optimization`
+- `hilberts_hotel_infinity`
+- `information_foraging_theory`
+- `mvt_theorem_constraint`
+- `skolems_paradox`
+
 ### `[scaffold,snare,tangled_rope]` — 13 constraints
 
 *3-type orbit: [scaffold,snare,tangled_rope]*
@@ -1036,24 +1054,6 @@ Families sorted by population (largest first).
 - `openscholar_peer_review`
 - `perovskite_self_etching`
 - `project_vault_2026`
-
-### `[mountain,scaffold]` — 13 constraints
-
-*2-type orbit: [mountain,scaffold]*
-
-- `biological_curiosity`
-- `burali_forti_paradox`
-- `click_chemistry_paradigm_2026`
-- `climate_attribution_2026`
-- `currys_paradox`
-- `endowment_effect`
-- `ergo_nipopows`
-- `galois_theory_symmetry`
-- `genetic_algorithms_evolution`
-- `heuristic_optimization`
-- `hilberts_hotel_infinity`
-- `information_foraging_theory`
-- `skolems_paradox`
 
 ### `[scaffold,snare]` — 8 constraints
 
@@ -1147,12 +1147,12 @@ Families sorted by population (largest first).
 ### Types Observed
 
 - **indexically_opaque**: appears in 4 families (17 constraints total)
-- **mountain**: appears in 3 families (128 constraints total)
+- **mountain**: appears in 3 families (129 constraints total)
 - **piton**: appears in 1 families (6 constraints total)
 - **rope**: appears in 11 families (761 constraints total)
-- **scaffold**: appears in 6 families (52 constraints total)
+- **scaffold**: appears in 6 families (53 constraints total)
 - **snare**: appears in 8 families (519 constraints total)
-- **tangled_rope**: appears in 10 families (542 constraints total)
+- **tangled_rope**: appears in 10 families (541 constraints total)
 
 ### Type Co-occurrence
 
@@ -1163,7 +1163,7 @@ Which types appear together in multi-type orbits:
 - [indexically_opaque,rope,tangled_rope] (3 constraints)
 - [indexically_opaque,snare,tangled_rope] (3 constraints)
 - [mountain,rope] (1 constraints)
-- [mountain,scaffold] (13 constraints)
+- [mountain,scaffold] (14 constraints)
 - [piton,rope] (6 constraints)
 - [rope,scaffold] (1 constraints)
 - [rope,scaffold,tangled_rope] (2 constraints)
@@ -1210,8 +1210,8 @@ Which types appear together in multi-type orbits:
 
 ## Gauge Invariance Summary
 
-- **Gauge-invariant** (single type across all contexts): 244 constraints (23.6%)
-- **Gauge-variant** (type changes with observer): 789 constraints (76.4%)
+- **Gauge-invariant** (single type across all contexts): 243 constraints (23.5%)
+- **Gauge-variant** (type changes with observer): 790 constraints (76.5%)
 
 ---
 *End of orbit report*

@@ -22,12 +22,12 @@ Usage:      run_scenario('file.pl', interval_id).
 | Metric | Value |
 |--------|-------|
 | Total nodes (constraints) | 1033 |
-| Connected nodes (degree > 0) | 543 |
-| Isolated nodes (degree 0) | 490 |
-| Edges | 775 |
-| Graph density | 0.001454 |
-| Average degree | 1.50 |
-| Connected components | 792 |
+| Connected nodes (degree > 0) | 551 |
+| Isolated nodes (degree 0) | 482 |
+| Edges | 797 |
+| Graph density | 0.001495 |
+| Average degree | 1.54 |
+| Connected components | 785 |
 | E-R critical edge count (n/2) | 516.5 |
 
 ### Degree Distribution
@@ -38,25 +38,25 @@ Usage:      run_scenario('file.pl', interval_id).
 | Min | 0 |
 | Q1 | 0 |
 | Median | 1 |
-| Q3 | 1 |
+| Q3 | 2 |
 | Max | 10 |
-| Mean | 1.06 |
+| Mean | 1.10 |
 
 #### Degree Histogram
 
 | Degree Range | Count |
 |-------------|-------|
-| 0 (isolated) | 490 |
-| 1 | 289 |
+| 0 (isolated) | 482 |
+| 1 | 290 |
 | 2-3 | 183 |
-| 4-6 | 55 |
-| 7-10 | 16 |
+| 4-6 | 61 |
+| 7-10 | 17 |
 | 11-20 | 0 |
 | 21+ | 0 |
 
 ### Connected Components
 
-**792 components** found.
+**785 components** found.
 
 **Largest component**: 41 nodes (4.0% of network)
 
@@ -80,14 +80,14 @@ Usage:      run_scenario('file.pl', interval_id).
 | 12 | 8 | 0.008 |
 | 13 | 8 | 0.008 |
 | 14 | 8 | 0.008 |
-| 15 | 7 | 0.007 |
+| 15 | 8 | 0.008 |
 ### Type Distribution
 
 | Type | Count | Fraction |
 |------|-------|----------|
-| mountain | 128 | 0.124 |
+| mountain | 129 | 0.125 |
 | rope | 51 | 0.049 |
-| tangled_rope | 335 | 0.324 |
+| tangled_rope | 334 | 0.323 |
 | snare | 519 | 0.502 |
 
 ### Purity Landscape
@@ -112,7 +112,7 @@ Usage:      run_scenario('file.pl', interval_id).
 | Median | 0.558 |
 | Q3 | 0.575 |
 | Max | 1.000 |
-| Mean | 0.551 |
+| Mean | 0.552 |
 
 #### Purity Zone Distribution
 
@@ -144,11 +144,11 @@ Usage:      run_scenario('file.pl', interval_id).
 | erasmus_rejoining_scaffold | tangled_rope | 3 | 0.50 | 0.394 | 1.50 |
 | academic_fashion_modernism_2026 | snare | 1 | 1.00 | 0.354 | 1.00 |
 | boom_bust_path_dependency | rope | 7 | 0.10 | 0.552 | 0.70 |
+| silklink_2026 | rope | 6 | 0.10 | 0.432 | 0.60 |
 | abstraction_leakage | tangled_rope | 1 | 0.50 | 0.312 | 0.50 |
 | open_source_commons | rope | 4 | 0.10 | 0.991 | 0.40 |
 | ice_memory_archive | rope | 3 | 0.10 | 0.833 | 0.30 |
 | cuny_light_2026 | rope | 2 | 0.10 | -1.000 | 0.20 |
-| asean_ceasefire_2011 | rope | 1 | 0.10 | 0.980 | 0.10 |
 
 
 ---
@@ -162,23 +162,23 @@ For each threshold, only `inferred_coupling` edges are filtered; `explicit` and 
 
 | Threshold | Edges | Components | Largest | Fraction |
 |-----------|-------|------------|---------|----------|
-| 0.100 | 775 | 792 | 41 | 0.040 |
-| 0.150 | 775 | 792 | 41 | 0.040 |
-| 0.200 | 775 | 792 | 41 | 0.040 |
-| 0.250 | 775 | 792 | 41 | 0.040 |
-| 0.300 | 775 | 792 | 41 | 0.040 |
-| 0.350 | 775 | 792 | 41 | 0.040 |
-| 0.400 | 775 | 792 | 41 | 0.040 |
-| 0.450 | 775 | 792 | 41 | 0.040 |
-| 0.500 | 775 | 792 | 41 | 0.040 |
-| 0.550 | 775 | 792 | 41 | 0.040 |
-| 0.600 | 775 | 792 | 41 | 0.040 |
-| 0.650 | 775 | 792 | 41 | 0.040 |
-| 0.700 | 775 | 792 | 41 | 0.040 |
-| 0.750 | 775 | 792 | 41 | 0.040 |
-| 0.800 | 775 | 792 | 41 | 0.040 |
-| 0.850 | 775 | 792 | 41 | 0.040 |
-| 0.900 | 775 | 792 | 41 | 0.040 |
+| 0.100 | 797 | 785 | 41 | 0.040 |
+| 0.150 | 797 | 785 | 41 | 0.040 |
+| 0.200 | 797 | 785 | 41 | 0.040 |
+| 0.250 | 797 | 785 | 41 | 0.040 |
+| 0.300 | 797 | 785 | 41 | 0.040 |
+| 0.350 | 797 | 785 | 41 | 0.040 |
+| 0.400 | 797 | 785 | 41 | 0.040 |
+| 0.450 | 797 | 785 | 41 | 0.040 |
+| 0.500 | 797 | 785 | 41 | 0.040 |
+| 0.550 | 790 | 787 | 41 | 0.040 |
+| 0.600 | 790 | 787 | 41 | 0.040 |
+| 0.650 | 790 | 787 | 41 | 0.040 |
+| 0.700 | 790 | 787 | 41 | 0.040 |
+| 0.750 | 790 | 787 | 41 | 0.040 |
+| 0.800 | 790 | 787 | 41 | 0.040 |
+| 0.850 | 790 | 787 | 41 | 0.040 |
+| 0.900 | 790 | 787 | 41 | 0.040 |
 
 **Erdos-Renyi prediction**: For a random graph with n=1033 nodes, the giant component emerges when the number of edges exceeds n/2 = 516.5.
 
@@ -218,16 +218,16 @@ The network is inherently fragmented.
 
 The edge set is context-independent (edges come from `affects_constraint`, `infer_structural_coupling`, and `shared_agent_link` — none of which depend on observer context). What changes across contexts is the **type classification** and hence the **contamination dynamics**.
 
-**Fixed topology**: 775 edges, 792 components, largest = 41 nodes (threshold = 0.500)
+**Fixed topology**: 797 edges, 785 components, largest = 41 nodes (threshold = 0.500)
 
 ### Type Distribution by Context
 
 | Type | Institutional/Local | Moderate/National | Analytical/Global (default) |
 |------|------|------|------|
-| mountain | 114 | 114 | 128 |
+| mountain | 114 | 114 | 129 |
 | rope | 758 | 61 | 51 |
-| scaffold | 52 | 14 | 0 |
-| tangled_rope | 105 | 485 | 335 |
+| scaffold | 53 | 15 | 0 |
+| tangled_rope | 104 | 484 | 334 |
 | piton | 0 | 0 | 0 |
 | snare | 0 | 359 | 519 |
 | indexically_opaque | 4 | 0 | 0 |
@@ -239,9 +239,9 @@ Number of constraints that are active contamination sources (type strength > 0, 
 
 | Context | Snare | Piton | Tangled Rope | Scaffold | Total Sources |
 |---------|-------|-------|-------------|----------|---------------|
-| Institutional/Local | 0 | 0 | 105 | 52 | 157 |
-| Moderate/National | 359 | 0 | 485 | 14 | 858 |
-| Analytical/Global (default) | 519 | 0 | 335 | 0 | 854 |
+| Institutional/Local | 0 | 0 | 104 | 53 | 157 |
+| Moderate/National | 359 | 0 | 484 | 15 | 858 |
+| Analytical/Global (default) | 519 | 0 | 334 | 0 | 853 |
 
 ### Key Finding
 
@@ -253,23 +253,23 @@ Since edges are context-independent, the network topology (connected components,
 
 ```prolog
 %% Sweep results: gc_sweep_result(Threshold, NEdges, NComponents, LargestSize, LargestFraction)
-gc_sweep_result(0.100, 775, 792, 41, 0.040).
-gc_sweep_result(0.150, 775, 792, 41, 0.040).
-gc_sweep_result(0.200, 775, 792, 41, 0.040).
-gc_sweep_result(0.250, 775, 792, 41, 0.040).
-gc_sweep_result(0.300, 775, 792, 41, 0.040).
-gc_sweep_result(0.350, 775, 792, 41, 0.040).
-gc_sweep_result(0.400, 775, 792, 41, 0.040).
-gc_sweep_result(0.450, 775, 792, 41, 0.040).
-gc_sweep_result(0.500, 775, 792, 41, 0.040).
-gc_sweep_result(0.550, 775, 792, 41, 0.040).
-gc_sweep_result(0.600, 775, 792, 41, 0.040).
-gc_sweep_result(0.650, 775, 792, 41, 0.040).
-gc_sweep_result(0.700, 775, 792, 41, 0.040).
-gc_sweep_result(0.750, 775, 792, 41, 0.040).
-gc_sweep_result(0.800, 775, 792, 41, 0.040).
-gc_sweep_result(0.850, 775, 792, 41, 0.040).
-gc_sweep_result(0.900, 775, 792, 41, 0.040).
+gc_sweep_result(0.100, 797, 785, 41, 0.040).
+gc_sweep_result(0.150, 797, 785, 41, 0.040).
+gc_sweep_result(0.200, 797, 785, 41, 0.040).
+gc_sweep_result(0.250, 797, 785, 41, 0.040).
+gc_sweep_result(0.300, 797, 785, 41, 0.040).
+gc_sweep_result(0.350, 797, 785, 41, 0.040).
+gc_sweep_result(0.400, 797, 785, 41, 0.040).
+gc_sweep_result(0.450, 797, 785, 41, 0.040).
+gc_sweep_result(0.500, 797, 785, 41, 0.040).
+gc_sweep_result(0.550, 790, 787, 41, 0.040).
+gc_sweep_result(0.600, 790, 787, 41, 0.040).
+gc_sweep_result(0.650, 790, 787, 41, 0.040).
+gc_sweep_result(0.700, 790, 787, 41, 0.040).
+gc_sweep_result(0.750, 790, 787, 41, 0.040).
+gc_sweep_result(0.800, 790, 787, 41, 0.040).
+gc_sweep_result(0.850, 790, 787, 41, 0.040).
+gc_sweep_result(0.900, 790, 787, 41, 0.040).
 ```
 
 ---

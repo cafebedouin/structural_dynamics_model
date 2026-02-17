@@ -4,7 +4,7 @@
 
 ### Key Findings
 
-1. **[HIGH]** Found 32 structural signatures shared by 5+ constraints
+1. **[HIGH]** Found 33 structural signatures shared by 5+ constraints
    - Action: Investigate if these represent distinct categories beyond current framework
 
 2. **[HIGH]** Found 592 hybrid constraints (high extraction + high suppression)
@@ -19,9 +19,9 @@
    - Action: Consider formalizing 'scaffold' as new category
    - Details: Type distribution: {'tangled_rope': 122, 'rope': 6, 'piton': 5, 'snare': 3, 'scaffold': 3, '[social_governance]': 1}
 
-5. **[MEDIUM]** Found 135 constraints matching 'wings' pattern
+5. **[MEDIUM]** Found 137 constraints matching 'wings' pattern
    - Action: Consider formalizing 'wings' as new category
-   - Details: Type distribution: {'mountain': 128, 'rope': 6, 'tangled_rope': 1}
+   - Details: Type distribution: {'mountain': 128, 'rope': 8, 'tangled_rope': 1}
 
 ## Structural Twins
 
@@ -31,26 +31,26 @@ Constraints with identical structural signatures but different claimed types.
 
 | Signature | Count | Types Present | Domains | Examples |
 |-----------|-------|---------------|---------|----------|
-| (0.6, 0.7, False, True)        |    76 | piton, snare, tangled_rope | piton, snare    | ai_performance_watermark, ai_religion_regulation |
-| (0.8, 0.7, False, True)        |    68 | piton, snare, tangled_rope | piton, snare    | abstraction_boundary_overrun, adaptive_lag_trap |
-| (0.8, 0.8, False, True)        |    68 | piton, snare, tangled_rope | piton, snare    | ad_fus_coordination, ai_driven_surveillance_sensor_layer |
-| (0.6, 0.8, False, True)        |    51 | piton, tangled_rope  | piton, snare    | ai_compute_capital_moat, airbnb_str_regulation |
-| (0.9, 0.8, False, True)        |    50 | piton, snare, tangled_rope | piton, snare    | adversarial_truth_decay, agency_atrophy |
-| (0.5, 0.7, False, True)        |    42 | piton, snare, tangled_rope | piton, snare    | ai_auditability_gap, ai_training_data_dependency |
-| (0.7, 0.8, False, True)        |    42 | piton, snare, tangled_rope | piton, snare    | ai_banal_capture, ai_professional_displacement |
-| (0.1, 0.1, True, False)        |    39 | rope, mountain       | rope, mountain  | banach_fixed_point_theorem, banach_tarski_paradox |
-| (0.5, 0.8, False, True)        |    38 | scaffold, piton, tangled_rope | scaffold, piton, snare | ai_adoption_stigma, artificial_scarcity_scaffold |
-| (0.8, 0.9, False, True)        |    35 | piton, snare, tangled_rope | piton, snare    | ad_synaptic_deficit, apartheid_nuclear_program |
-| (0.8, 0.6, False, True)        |    24 | piton, rope, snare, tangled_rope | piton, rope, snare | academic_peer_review_gatekeeping, academic_tenure_system |
-| (0.5, 0.6, False, True)        |    23 | piton, snare, tangled_rope | piton, snare    | ai_task_horizon_reliability, armra_colostrum_regulation |
-| (0.4, 0.5, False, True)        |    19 | scaffold, rope, tangled_rope | scaffold, rope, tangled_rope | bgs_eigenvector_thermalization, constraint_yoneda |
-| (0.7, 0.6, False, True)        |    16 | piton, snare, tangled_rope | piton, snare    | abstraction_leakage, carrying_capacity |
-| (0.3, 0.5, False, True)        |    16 | scaffold, [social_governance], tangled_rope | scaffold, tangled_rope | alzheimers_levetiracetam, china_africa_zero_tariff_2026 |
-| (0.2, 0.1, True, False)        |    16 | rope, mountain       | rope, mountain  | axiom_of_choice, base_pair_complementarity |
-| (0.9, 0.7, False, True)        |    15 | piton, tangled_rope  | piton, snare    | bureaucratic_legibility_collapse, capital_misallocation_spiral |
-| (0.7, 0.7, False, True)        |    14 | piton, tangled_rope  | piton, snare    | awareness_without_leverage, cb_far_beyond_human |
+| (0.6, 0.7, False, True)        |    76 | piton, snare, tangled_rope | snare, piton    | ai_performance_watermark, ai_religion_regulation |
+| (0.8, 0.7, False, True)        |    68 | piton, snare, tangled_rope | snare, piton    | abstraction_boundary_overrun, adaptive_lag_trap |
+| (0.8, 0.8, False, True)        |    68 | piton, snare, tangled_rope | snare, piton    | ad_fus_coordination, ai_driven_surveillance_sensor_layer |
+| (0.6, 0.8, False, True)        |    51 | piton, tangled_rope  | snare, piton    | ai_compute_capital_moat, airbnb_str_regulation |
+| (0.9, 0.8, False, True)        |    50 | tangled_rope, snare, piton | snare, piton    | adversarial_truth_decay, agency_atrophy |
+| (0.5, 0.7, False, True)        |    42 | piton, snare, tangled_rope | snare, piton    | ai_auditability_gap, ai_training_data_dependency |
+| (0.7, 0.8, False, True)        |    42 | piton, snare, tangled_rope | snare, piton    | ai_banal_capture, ai_professional_displacement |
+| (0.1, 0.1, True, False)        |    40 | mountain, rope       | mountain, rope  | banach_fixed_point_theorem, banach_tarski_paradox |
+| (0.5, 0.8, False, True)        |    38 | piton, scaffold, tangled_rope | piton, tangled_rope, snare | ai_adoption_stigma, artificial_scarcity_scaffold |
+| (0.8, 0.9, False, True)        |    35 | piton, snare, tangled_rope | snare, piton    | ad_synaptic_deficit, apartheid_nuclear_program |
+| (0.8, 0.6, False, True)        |    24 | piton, rope, snare, tangled_rope | rope, snare, piton | academic_peer_review_gatekeeping, academic_tenure_system |
+| (0.5, 0.6, False, True)        |    23 | piton, snare, tangled_rope | snare, piton    | ai_task_horizon_reliability, armra_colostrum_regulation |
+| (0.4, 0.5, False, True)        |    19 | rope, scaffold, tangled_rope | rope, scaffold, tangled_rope | bgs_eigenvector_thermalization, constraint_yoneda |
+| (0.7, 0.6, False, True)        |    16 | piton, snare, tangled_rope | snare, piton    | abstraction_leakage, carrying_capacity |
+| (0.3, 0.5, False, True)        |    16 | [social_governance], scaffold, tangled_rope | scaffold, tangled_rope | alzheimers_levetiracetam, china_africa_zero_tariff_2026 |
+| (0.2, 0.1, True, False)        |    16 | mountain, rope       | mountain, rope  | axiom_of_choice, base_pair_complementarity |
+| (0.9, 0.7, False, True)        |    15 | piton, tangled_rope  | snare, piton    | bureaucratic_legibility_collapse, capital_misallocation_spiral |
+| (0.7, 0.7, False, True)        |    14 | piton, tangled_rope  | snare, piton    | awareness_without_leverage, cb_far_beyond_human |
 | (0.5, 0.5, False, True)        |    13 | rope, tangled_rope   | rope, snare, tangled_rope | access_arbitrage, aging_longevity_tests |
-| (0.6, 0.6, False, True)        |    13 | piton, tangled_rope  | piton, snare    | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
+| (0.6, 0.6, False, True)        |    13 | tangled_rope, piton  | snare, piton    | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
 
 ## Candidate Category Analysis
 
@@ -124,11 +124,11 @@ No constraints match this pattern.
 **Pattern:** Low extraction + Low suppression + Emerges naturally
 **Interpretation:** Enabling constraints, opposite of snare
 
-**Constraints matching pattern:** 135
+**Constraints matching pattern:** 137
 
 **Current type distribution:**
 - mountain: 128
-- rope: 6
+- rope: 8
 - tangled_rope: 1
 
 **Examples:**
@@ -208,7 +208,7 @@ Constraints with mid-range metrics suggesting transitional states.
 
 ## Recommendations
 
-### 1. Found 32 structural signatures shared by 5+ constraints
+### 1. Found 33 structural signatures shared by 5+ constraints
 
 **Priority:** HIGH
 
@@ -243,13 +243,13 @@ Constraints with mid-range metrics suggesting transitional states.
 
 **Details:** Type distribution: {'tangled_rope': 122, 'rope': 6, 'piton': 5, 'snare': 3, 'scaffold': 3, '[social_governance]': 1}
 
-### 5. Found 135 constraints matching 'wings' pattern
+### 5. Found 137 constraints matching 'wings' pattern
 
 **Priority:** MEDIUM
 
 **Recommended Action:** Consider formalizing 'wings' as new category
 
-**Details:** Type distribution: {'mountain': 128, 'rope': 6, 'tangled_rope': 1}
+**Details:** Type distribution: {'mountain': 128, 'rope': 8, 'tangled_rope': 1}
 
 ### 6. Found 319 constraints with mid-range metrics
 

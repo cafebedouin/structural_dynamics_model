@@ -6,16 +6,16 @@
 
 | Property | Value |
 |----------|-------|
-| **Total hypotheses** | 36 |
+| **Total hypotheses** | 35 |
 | **Genuine findings** | 10 |
-| **Override artifacts** | 26 |
+| **Override artifacts** | 25 |
 | **Subsystems available** | [maxent,dirac,drift,signature,mismatch,fingerprint] |
 
 ### Hypothesis Counts by Class
 
 | Class | Count | Category |
 |-------|-------|----------|
-| signature_override_artifact | 26 | artifact |
+| signature_override_artifact | 25 | artifact |
 | deep_deception | 0 | genuine |
 | metric_structural_divergence | 0 | genuine |
 | confirmed_liminal | 10 | genuine |
@@ -32,10 +32,10 @@ How many MaxEnt hard disagreements are explained by known signature overrides?
 
 | Metric | Count |
 |--------|-------|
-| **Total hard disagreements** | 177 |
-| **Explained by override** | 26 |
-| **Unexplained** | 151 |
-| **Explanation rate** | 14.7% |
+| **Total hard disagreements** | 182 |
+| **Explained by override** | 25 |
+| **Unexplained** | 157 |
+| **Explanation rate** | 13.7% |
 
 A significant portion of hard disagreements are mechanistic artifacts of known signature override rules. These constraints have metrics that predict one type, but a structural signature unconditionally forces a different classification.
 
@@ -43,7 +43,7 @@ A significant portion of hard disagreements are mechanistic artifacts of known s
 
 | Signature | Count |
 |-----------|-------|
-| false_ci_rope | 26 |
+| false_ci_rope | 25 |
 
 ## Genuine Findings
 
@@ -55,13 +55,13 @@ Triple-confirmed liminality: high entropy + multi-type orbit + active drift even
 |------------|------------|---------|--------------|
 | astm_d638_tensile_testing | 0.85 | triple_confirmed_liminality | H=0.40 orbit=[rope,tangled_rope] |
 | boiled_pineapple_trend_2026 | 0.85 | triple_confirmed_liminality | H=0.45 orbit=[rope,snare,tangled_rope] |
-| cuban_missile_crisis_excomm_deliberation | 0.85 | triple_confirmed_liminality | H=0.43 orbit=[rope,tangled_rope] |
-| dexy_gold_protocol | 0.85 | triple_confirmed_liminality | H=0.42 orbit=[rope,tangled_rope] |
+| cuban_missile_crisis_excomm_deliberation | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,tangled_rope] |
+| dexy_gold_protocol | 0.85 | triple_confirmed_liminality | H=0.43 orbit=[rope,tangled_rope] |
 | djia_as_economic_barometer | 0.85 | triple_confirmed_liminality | H=0.41 orbit=[rope,tangled_rope] |
 | dldr_information_policy | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,tangled_rope] |
 | fiscal_equalization_friction | 0.85 | triple_confirmed_liminality | H=0.42 orbit=[scaffold,tangled_rope] |
 | france_cordon_sanitaire_2026 | 0.85 | triple_confirmed_liminality | H=0.42 orbit=[rope,tangled_rope] |
-| quine_self_replication | 0.85 | triple_confirmed_liminality | H=0.52 orbit=[mountain,rope] |
+| quine_self_replication | 0.85 | triple_confirmed_liminality | H=0.51 orbit=[mountain,rope] |
 | silklink_2026 | 0.85 | triple_confirmed_liminality | H=0.47 orbit=[rope,scaffold] |
 
 ## Highest-Confidence Hypotheses (Top 20)

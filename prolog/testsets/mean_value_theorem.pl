@@ -85,8 +85,8 @@ narrative_ontology:constraint_metric(mvt_theorem_constraint, theater_ratio, 0.10
 % structural_signatures.pl. Uncomment and set for mountain constraints.
 % Without these, the NL signature defaults to 0.5 and fails certification.
 %
-% narrative_ontology:constraint_metric(mvt_theorem_constraint, accessibility_collapse, 0.95).
-% narrative_ontology:constraint_metric(mvt_theorem_constraint, resistance, 0.05).
+narrative_ontology:constraint_metric(mvt_theorem_constraint, accessibility_collapse, 0.95).
+narrative_ontology:constraint_metric(mvt_theorem_constraint, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(mvt_theorem_constraint, rope).
@@ -101,7 +101,7 @@ narrative_ontology:human_readable(mvt_theorem_constraint, "Application of the Me
 % or enforcement. Required for the mountain metric gate: without this,
 % the classify_from_metrics mountain clause will not fire.
 %
-% domain_priors:emerges_naturally(mvt_theorem_constraint).
+domain_priors:emerges_naturally(mvt_theorem_constraint).
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % These feed the directionality derivation chain: the engine computes

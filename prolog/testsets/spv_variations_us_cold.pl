@@ -43,6 +43,7 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2.
 
 /* ==========================================================================
@@ -90,6 +91,11 @@ narrative_ontology:constraint_metric(spv_variations_us_cold, theater_ratio, 0.05
 % coordination model built on top of the physical law.
 narrative_ontology:constraint_claim(spv_variations_us_cold, rope).
 narrative_ontology:human_readable(spv_variations_us_cold, "Stratospheric Polar Vortex Variations (US Cold Outbreaks)").
+
+% --- Emergence flag (required for mountain constraints) ---
+% The stratospheric polar vortex is a natural atmospheric phenomenon
+% governed by physical laws — it emerges naturally without human design.
+domain_priors:emerges_naturally(spv_variations_us_cold).
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % Who benefits from this constraint existing? (i.e., the predictive model)

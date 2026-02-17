@@ -159,7 +159,7 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `quine_self_replication`
 
-### `shift(mountain, scaffold, scaffold, mountain)` — 13 constraints
+### `shift(mountain, scaffold, scaffold, mountain)` — 14 constraints
 
 - `biological_curiosity`
 - `burali_forti_paradox`
@@ -173,6 +173,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `heuristic_optimization`
 - `hilberts_hotel_infinity`
 - `information_foraging_theory`
+- `mvt_theorem_constraint`
 - `skolems_paradox`
 
 ### `shift(piton, rope, rope, rope)` — 6 constraints
@@ -1015,7 +1016,7 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `private_credit_market_opacity`
 
-### `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` — 104 constraints
+### `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` — 103 constraints
 
 - `academic_peer_review_gatekeeping`
 - `ai_cognitive_diversity_arbitrage`
@@ -1081,7 +1082,6 @@ Each family groups constraints with identical perspectival shift — same classi
 - `micro_robot_electronics_integration`
 - `microbiome_symbiosis`
 - `mutual_defection_equilibrium`
-- `mvt_theorem_constraint`
 - `narrative_engineering_2026`
 - `nasa_faster_better_cheaper`
 - `nash_equilibrium_coordination`
@@ -1466,7 +1466,7 @@ Maps shift pattern families to gauge orbit signatures.
 - `shift(indexically_opaque, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
 - `shift(mountain, mountain, mountain, mountain)` (114 constraints): orbit `[mountain]`
 - `shift(mountain, rope, rope, mountain)` (1 constraints): orbit `[mountain,rope]`
-- `shift(mountain, scaffold, scaffold, mountain)` (13 constraints): orbit `[mountain,scaffold]`
+- `shift(mountain, scaffold, scaffold, mountain)` (14 constraints): orbit `[mountain,scaffold]`
 - `shift(piton, rope, rope, rope)` (6 constraints): orbit `[piton,rope]`
 - `shift(rope, rope, rope, rope)` (26 constraints): orbit `[rope]`
 - `shift(rope, rope, rope, tangled_rope)` (1 constraints): orbit `[rope,tangled_rope]`
@@ -1485,7 +1485,7 @@ Maps shift pattern families to gauge orbit signatures.
 - `shift(tangled_rope, tangled_rope, scaffold, snare)` (12 constraints): orbit `[scaffold,snare,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` (15 constraints): orbit `[scaffold,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` (104 constraints): orbit `[tangled_rope]`
+- `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` (103 constraints): orbit `[tangled_rope]`
 - `shift(unknown, unknown, unknown, unknown)` (1 constraints): orbit `[unknown]`
 ---
 *End of fingerprint report*
