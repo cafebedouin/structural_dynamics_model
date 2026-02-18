@@ -75,7 +75,7 @@ echo ""
 echo -e "${BOLD}  CORPUS COMPOSITION (from corpus data)${NC}"
 if [ -f "$OUTPUT_DIR/corpus_data.json" ]; then
     python3 -c "
-import json
+import json, os
 with open('$OUTPUT_DIR/corpus_data.json') as f:
     data = json.load(f)
 from collections import Counter
@@ -84,8 +84,37 @@ for cid, c in data['constraints'].items():
     ct = c.get('claimed_type')
     if ct:
         types[ct] += 1
+# Try to load confidence cross-tab from pipeline_output.json
+type_bands = {}
+pipe_path = '$OUTPUT_DIR/pipeline_output.json'
+if os.path.exists(pipe_path):
+    try:
+        with open(pipe_path) as f2:
+            pdata = json.load(f2)
+        for pc in pdata.get('per_constraint', []):
+            ct = pc.get('claimed_type')
+            band = pc.get('confidence_band')
+            if ct and band:
+                if ct not in type_bands:
+                    type_bands[ct] = Counter()
+                type_bands[ct][band] += 1
+    except Exception:
+        pass
 for t in ['mountain', 'rope', 'tangled_rope', 'snare', 'scaffold', 'piton']:
-    print(f'  {t + \":\":16s} {types.get(t, 0)}')
+    count = types.get(t, 0)
+    extra = ''
+    if t in type_bands and count > 0:
+        tb = type_bands[t]
+        total = sum(tb.values())
+        parts = []
+        for band in ['deep', 'borderline']:
+            n = tb.get(band, 0)
+            if n > 0:
+                pct = round(n / total * 100)
+                parts.append(f'{pct}% {band}')
+        if parts:
+            extra = '  (' + ', '.join(parts) + ')'
+    print(f'  {t + \":\":16s} {count}{extra}')
 " 2>/dev/null || echo "  (error reading corpus_data.json)"
 else
     echo "  (corpus_data.json not available)"
@@ -157,6 +186,44 @@ if [ -f "$OUTPUT_DIR/maxent_report.md" ]; then
     echo "  Hard Disagreements: $ME_HARD"
 else
     echo "  (not generated)"
+fi
+echo ""
+
+# --------------------------------------------------------------------------
+# Classification confidence (from pipeline_output.json enrichment)
+# --------------------------------------------------------------------------
+echo -e "${BOLD}  CLASSIFICATION CONFIDENCE${NC}"
+if [ -f "$OUTPUT_DIR/pipeline_output.json" ]; then
+    python3 -c "
+import json, sys
+with open('$OUTPUT_DIR/pipeline_output.json') as f:
+    data = json.load(f)
+pcs = data.get('per_constraint', [])
+bands = {}
+total_conf = 0.0
+conf_count = 0
+for pc in pcs:
+    b = pc.get('confidence_band')
+    if b is None:
+        continue
+    bands[b] = bands.get(b, 0) + 1
+    c = pc.get('confidence')
+    if c is not None:
+        total_conf += c
+        conf_count += 1
+if not bands:
+    print('  (confidence fields not yet available)')
+    sys.exit(0)
+total = sum(bands.values())
+for label in ['deep', 'moderate', 'borderline']:
+    n = bands.get(label, 0)
+    pct = n / total * 100 if total else 0
+    print(f'  {label + \":\":16s} {n:>4d} ({pct:.1f}%)')
+if conf_count:
+    print(f'  {\"Mean Confidence:\":16s} {total_conf / conf_count:.4f}')
+" 2>/dev/null || echo "  (error reading pipeline_output.json)"
+else
+    echo "  (pipeline_output.json not available)"
 fi
 echo ""
 

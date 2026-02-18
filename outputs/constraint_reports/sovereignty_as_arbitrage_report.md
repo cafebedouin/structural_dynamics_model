@@ -1,6 +1,7 @@
 CORPUS CONTEXT: 1034 constraints
   Types: 128 mountain, 60 rope, 663 tangled_rope, 68 snare, 92 piton, 21 scaffold, 1 [social_governance]
   Network stability: cascading | 887 omegas (702 critical)
+  Confidence: 403 deep (39%) | 162 moderate (16%) | 467 borderline (45%)
 
 ====================================================
    STRUCTURAL ANALYSIS STACK INITIALIZED             
@@ -96,28 +97,41 @@ Checking Interval: sovereignty_as_arbitrage (0-10)
     Purity:           0.623 (borderline)
     Coupling:         strongly_coupled (score: 0.75)
     Boltzmann:        unknown
+    Confidence:       0.9990 (deep)
+    Rival Type:       snare (P=0.0009)
+    Margin:           +0.9980
+    Boundary:         tangled_rope->snare
+    Tangled psi:      0.4792 (genuinely_tangled)
+    Coalition:        institutional_dissent
 
   Corpus Distribution:
     Type:      128 mountain | 60 rope | 663 tangled_rope | 68 snare | 92 piton | 21 scaffold | 1 [social_governance]
     Purity:    143 pristine | 57 sound | 362 borderline | 434 contaminated | 12 degraded
     Coupling:  809 strongly | 52 weakly | 146 independent | 26 inconclusive
     Signature: 789 false_ci_rope | 114 natural_law | 91 false_natural_law | 14 constructed_low_extraction | 13 constructed_high_extraction | ...
+    Confidence: 403 deep | 162 moderate | 467 borderline (mean: 0.530)
 
   Positioning:
     This constraint is a false_ci_rope (76.3% of corpus shares this signature)
     Purity band: borderline (35.0% of corpus in this band)
+    Confidence band: deep (39.1% of corpus in this band)
+    Boundary zone: tangled_rope->snare (553 constraints share this boundary)
 
 --- ORBIT CONTEXT ---
 
   Orbit Signature:    [rope, tangled_rope]
   Orbit Span:         2
   Gauge Status:       Gauge-Variant
-  Orbit Family ID:    F018
+  Orbit Family ID:    F038
 
 --- MAXENT SHADOW CLASSIFICATION ---
 
-  Not yet in MaxEnt batch — run full pipeline to include.
-  (MaxEnt validates classification stability across the full corpus.)
+  Classification is stable (low entropy, types agree)
+  Confidence:    0.9990 (deep)
+  Rival Type:    snare (P=0.0009)
+  Margin:        +0.9980
+  Entropy:       0.0048
+  Distribution:  tangled_rope: 0.999, snare: 0.001, piton: 0.000
 
 --- ENRICHED OMEGA CONTEXT ---
 
@@ -125,12 +139,12 @@ Checking Interval: sovereignty_as_arbitrage (0-10)
     Severity Score:    0.486
     Gap Class:         coordination_washing
     Gap Pattern:       snare_masked_as_rope
-    Family ID:         F018
+    Family ID:         F038
 
 --- STRUCTURAL CONTEXT ---
 
-  Variance Ratio:      0.42857142857142855 (low variance)
-  Index Configs:       7
+  Variance Ratio:      0.75 (high variance)
+  Index Configs:       4
   Types Produced:      3
 
   Structural Twins:     [not found in batch twin analysis]

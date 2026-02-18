@@ -115,6 +115,14 @@ CONFIDENCE_REPORT := $(OUTPUT_DIR)/classification_confidence_report.md
 BOUNDARY_NORM_DATA   := $(OUTPUT_DIR)/boundary_normality_data.json
 BOUNDARY_NORM_REPORT := $(OUTPUT_DIR)/boundary_normality_report.md
 
+# Boolean feature independence analysis
+BOOLEAN_INDEP_DATA   := $(OUTPUT_DIR)/boolean_independence_data.json
+BOOLEAN_INDEP_REPORT := $(OUTPUT_DIR)/boolean_independence_report.md
+
+# Institutional dissent analysis
+INST_DISSENT_DATA   := $(OUTPUT_DIR)/institutional_dissent_data.json
+INST_DISSENT_REPORT := $(OUTPUT_DIR)/institutional_dissent_report.md
+
 # Meta report
 META_REPORT := $(OUTPUT_DIR)/meta_report.txt
 
@@ -129,6 +137,8 @@ PROLOG_ANALYSES := $(FINGERPRINT_REPORT) $(ORBIT_STAMP) $(FPN_REPORT) \
 PIPELINE_OUTPUTS := $(TYPE_REPORTS) $(OMEGA_DATA) $(OMEGA_ENRICH_STAMP) \
                     $(CORPUS_DATA) $(VARIANCE_REPORT) $(PATTERN_REPORT) $(SUFFICIENCY_REPORT) \
                     $(ENRICH_STAMP) $(TANGLED_DECOMP_REPORT) $(CONFIDENCE_REPORT) $(BOUNDARY_NORM_DATA) \
+                    $(BOOLEAN_INDEP_DATA) \
+                    $(INST_DISSENT_DATA) \
                     $(PROLOG_ANALYSES) $(ORBIT_NORM_STAMP) \
                     $(OUTPUT_TXT) $(PIPELINE_JSON) $(META_REPORT)
 
@@ -460,6 +470,24 @@ $(BOUNDARY_NORM_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
 	echo "[BOUNDARY] Done -> boundary_normality_data.json + boundary_normality_report.md"
 
 # ==============================================================================
+# BOOLEAN INDEPENDENCE — depends on enriched pipeline + corpus_data
+# ==============================================================================
+
+$(BOOLEAN_INDEP_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
+	echo "[BOOL] Running boolean feature independence analysis..."
+	python3 $(PYTHON_DIR)/boolean_independence.py 2>&1 || true
+	echo "[BOOL] Done -> boolean_independence_data.json + boolean_independence_report.md"
+
+# ==============================================================================
+# INSTITUTIONAL DISSENT — depends on enriched pipeline + corpus_data
+# ==============================================================================
+
+$(INST_DISSENT_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
+	echo "[DISSENT] Running institutional dissent analysis..."
+	python3 $(PYTHON_DIR)/institutional_dissent_analysis.py 2>&1 || true
+	echo "[DISSENT] Done -> institutional_dissent_data.json + institutional_dissent_report.md"
+
+# ==============================================================================
 # OMEGA ENRICHMENT — depends on omega_data + corpus_data + orbit_norm
 # ==============================================================================
 
@@ -508,6 +536,8 @@ clean:
 	rm -f $(OUTPUT_DIR)/tangled_rope_decomposition_report.md
 	rm -f $(OUTPUT_DIR)/classification_confidence_report.md
 	rm -f $(OUTPUT_DIR)/boundary_normality_data.json $(OUTPUT_DIR)/boundary_normality_report.md
+	rm -f $(OUTPUT_DIR)/boolean_independence_data.json $(OUTPUT_DIR)/boolean_independence_report.md
+	rm -f $(OUTPUT_DIR)/institutional_dissent_data.json $(OUTPUT_DIR)/institutional_dissent_report.md
 	rm -f $(OUTPUT_DIR)/meta_report.txt
 	rm -rf $(STAMP_DIR)
 	echo "Clean."

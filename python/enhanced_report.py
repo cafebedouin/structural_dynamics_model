@@ -126,6 +126,17 @@ def _compact_types(perspectives):
     return ", ".join(f"{t} ({ctx})" for t, ctx in type_to_ctx.items())
 
 
+def find_constraint_entry(pipeline_data, constraint_id):
+    """Find a constraint in pipeline_output.json per_constraint array."""
+    if pipeline_data is None:
+        return None
+    key = constraint_id.lower()
+    for pc in pipeline_data.get("per_constraint", []):
+        if pc.get("id", "").lower() == key:
+            return pc
+    return None
+
+
 # --- Header Builder ---
 
 def build_header(pipeline_data):
@@ -155,8 +166,25 @@ def build_header(pipeline_data):
         f"CORPUS CONTEXT: {corpus_size} constraints",
         f"  Types: {', '.join(type_parts)}",
         f"  Network stability: {network} | {omega_count} omegas ({critical} critical)",
-        "",
     ]
+
+    # Confidence distribution from per_constraint
+    per_constraint = pipeline_data.get("per_constraint", [])
+    band_counts = {}
+    for pc in per_constraint:
+        b = pc.get("confidence_band")
+        if b:
+            band_counts[b] = band_counts.get(b, 0) + 1
+    if band_counts:
+        parts = []
+        for band in ["deep", "moderate", "borderline"]:
+            n = band_counts.get(band, 0)
+            total = sum(band_counts.values())
+            pct = round(n / total * 100) if total else 0
+            parts.append(f"{n} {band} ({pct}%)")
+        lines.append(f"  Confidence: {' | '.join(parts)}")
+
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -202,14 +230,8 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
     val = pipeline_data.get("validation", {})
     per_constraint = pipeline_data.get("per_constraint", [])
 
-    key = constraint_id.lower()
-
     # Find this constraint in per_constraint array
-    entry = None
-    for pc in per_constraint:
-        if pc.get("id", "").lower() == key:
-            entry = pc
-            break
+    entry = find_constraint_entry(pipeline_data, constraint_id)
 
     # Extract live perspectives from Prolog output
     live_claimed, live_perspectives = extract_live_perspectives(prolog_output)
@@ -261,6 +283,30 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
 
         lines.append(f"    Boltzmann:        {boltzmann}")
 
+        # Confidence fields
+        conf = entry.get("confidence")
+        conf_band = entry.get("confidence_band")
+        if conf is not None:
+            lines.append(f"    Confidence:       {conf:.4f} ({conf_band})")
+            rival = entry.get("rival_type")
+            rival_p = entry.get("rival_prob")
+            if rival and rival_p is not None:
+                lines.append(f"    Rival Type:       {rival} (P={rival_p:.4f})")
+            margin = entry.get("confidence_margin")
+            if margin is not None:
+                lines.append(f"    Margin:           {margin:+.4f}")
+            boundary = entry.get("boundary")
+            if boundary:
+                lines.append(f"    Boundary:         {boundary}")
+
+        # Tangled rope fields
+        t_psi = entry.get("tangled_psi")
+        if t_psi is not None:
+            t_band = entry.get("tangled_band", "N/A")
+            coalition = entry.get("coalition_type", "N/A")
+            lines.append(f"    Tangled psi:      {t_psi:.4f} ({t_band})")
+            lines.append(f"    Coalition:        {coalition}")
+
     else:
         # New constraint — not in batch
         if live_claimed:
@@ -273,6 +319,7 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
         lines.append("    Signature:        [from Prolog output above]")
         lines.append("    Purity:           [not yet in batch]")
         lines.append("    Coupling:         [not yet in batch]")
+        lines.append("    Confidence:       [not yet in batch]")
 
     # --- Corpus Distribution block ---
     lines.append("")
@@ -309,6 +356,23 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
             sig_parts = sig_parts[:5] + ["..."]
         lines.append(f"    Signature: {' | '.join(sig_parts)}")
 
+    # Confidence distribution across corpus
+    conf_bands = {}
+    conf_sum = 0.0
+    conf_n = 0
+    for pc in per_constraint:
+        b = pc.get("confidence_band")
+        if b:
+            conf_bands[b] = conf_bands.get(b, 0) + 1
+        c = pc.get("confidence")
+        if c is not None:
+            conf_sum += c
+            conf_n += 1
+    if conf_bands:
+        band_parts = [f"{conf_bands.get(b, 0)} {b}" for b in ["deep", "moderate", "borderline"] if b in conf_bands]
+        mean_str = f" (mean: {conf_sum / conf_n:.3f})" if conf_n else ""
+        lines.append(f"    Confidence: {' | '.join(band_parts)}{mean_str}")
+
     # --- Positioning block (batch constraints only) ---
     if in_batch:
         lines.append("")
@@ -326,6 +390,18 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
             corpus_size = diag.get("corpus_size", 1)
             band_pct = (band_count / corpus_size) * 100
             lines.append(f"    Purity band: {purity_band} ({band_pct:.1f}% of corpus in this band)")
+
+        conf_band = entry.get("confidence_band")
+        if conf_band and conf_bands:
+            cb_count = conf_bands.get(conf_band, 0)
+            cb_total = sum(conf_bands.values())
+            cb_pct = (cb_count / cb_total) * 100 if cb_total else 0
+            lines.append(f"    Confidence band: {conf_band} ({cb_pct:.1f}% of corpus in this band)")
+        boundary = entry.get("boundary")
+        if boundary:
+            # Count how many constraints share this boundary
+            boundary_count = sum(1 for pc in per_constraint if pc.get("boundary") == boundary)
+            lines.append(f"    Boundary zone: {boundary} ({boundary_count} constraints share this boundary)")
 
     return "\n".join(lines)
 
@@ -374,115 +450,61 @@ def build_orbit_section(constraint_id, orbit_data, omega_data):
 
 # --- Section C: MAXENT SHADOW CLASSIFICATION ---
 
-def parse_maxent_tables(maxent_text):
-    """Parse high-uncertainty and hard-disagreement tables from maxent_report.md."""
-    high_uncertainty = {}
-    hard_disagreements = {}
-
-    if not maxent_text:
-        return high_uncertainty, hard_disagreements
-
-    # High Uncertainty table:
-    # | Constraint | Det Type | Shadow Top | H_norm | Confidence | Top P |
-    hu_pattern = re.compile(
-        r'^\| (\S+) \| (\S+) \| (\S+) \| ([0-9.]+) \| ([0-9.]+) \| ([0-9.]+) \|',
-        re.MULTILINE
-    )
-    # Hard Disagreements table:
-    # | Constraint | Det Type | Shadow Top | Distribution |
-    hd_pattern = re.compile(
-        r'^\| (\S+) \| (\S+) \| (\S+) \| (.+?) \|',
-        re.MULTILINE
-    )
-
-    hu_section = ""
-    hd_section = ""
-
-    hu_marker = "## High Uncertainty Constraints"
-    hd_marker = "### Hard Disagreements"
-
-    if hu_marker in maxent_text:
-        start = maxent_text.index(hu_marker)
-        rest = maxent_text[start + len(hu_marker):]
-        end = rest.find("\n## ")
-        hu_section = rest[:end] if end != -1 else rest
-
-    if hd_marker in maxent_text:
-        start = maxent_text.index(hd_marker)
-        rest = maxent_text[start + len(hd_marker):]
-        end = rest.find("\n## ")
-        if end == -1:
-            end = rest.find("\n### ")
-            if end != -1 and rest[end+5:end+20].strip().startswith("Soft"):
-                pass
-            else:
-                end = -1
-        hd_section = rest[:end] if end != -1 else rest
-
-    for m in hu_pattern.finditer(hu_section):
-        cid = m.group(1).lower()
-        high_uncertainty[cid] = {
-            "det_type": m.group(2),
-            "shadow_top": m.group(3),
-            "h_norm": m.group(4),
-            "confidence": m.group(5),
-            "top_p": m.group(6),
-        }
-
-    for m in hd_pattern.finditer(hd_section):
-        name = m.group(1)
-        if name.lower() in ("constraint", "------------", ""):
-            continue
-        hard_disagreements[name.lower()] = {
-            "det_type": m.group(2),
-            "shadow_top": m.group(3),
-            "distribution": m.group(4).strip(),
-        }
-
-    return high_uncertainty, hard_disagreements
-
-
-def build_maxent_section(constraint_id, maxent_text):
-    """Section C: MAXENT SHADOW CLASSIFICATION from maxent_report.md."""
+def build_maxent_section(constraint_id, pipeline_data):
+    """Section C: MAXENT SHADOW CLASSIFICATION from pipeline_output.json."""
     lines = ["", "--- MAXENT SHADOW CLASSIFICATION ---", ""]
 
-    if maxent_text is None:
-        lines.append("  [maxent_report.md not available]")
+    if pipeline_data is None:
+        lines.append("  [pipeline_output.json not available]")
         return "\n".join(lines)
 
-    high_unc, hard_dis = parse_maxent_tables(maxent_text)
-    key = constraint_id.lower()
-
-    in_hard = key in hard_dis
-    in_hu = key in high_unc
-
-    # Check if constraint appears anywhere in the maxent report
-    in_report = key in maxent_text.lower()
-
-    if not in_report:
-        # Not in MaxEnt batch at all
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
         lines.append(
             "  Not yet in MaxEnt batch — run full pipeline to include.\n"
             "  (MaxEnt validates classification stability across the full corpus.)"
         )
         return "\n".join(lines)
 
-    if in_hard:
-        hd = hard_dis[key]
-        h_norm = high_unc[key]["h_norm"] if in_hu else "below threshold"
-        lines.append(f"  HARD DISAGREEMENT: Pipeline says {hd['det_type']}, MaxEnt says {hd['shadow_top']}")
-        lines.append(f"  H_norm:        {h_norm}")
-        lines.append(f"  Det Type:      {hd['det_type']}")
-        lines.append(f"  Shadow Top:    {hd['shadow_top']}")
-        lines.append(f"  Distribution:  {hd['distribution']}")
-    elif in_hu:
-        hu = high_unc[key]
-        lines.append("  High Uncertainty (types agree)")
-        lines.append(f"  H_norm:        {hu['h_norm']}")
-        lines.append(f"  Confidence:    {hu['confidence']}")
+    claimed = entry.get("claimed_type", "unknown")
+    top_type = entry.get("maxent_top_type")
+    conf = entry.get("confidence")
+    conf_band = entry.get("confidence_band")
+    rival = entry.get("rival_type")
+    rival_p = entry.get("rival_prob")
+    margin = entry.get("confidence_margin")
+    entropy = entry.get("confidence_entropy")
+    probs = entry.get("maxent_probs", {})
+
+    if conf is None:
+        lines.append("  [confidence fields not yet enriched — re-run pipeline]")
+        return "\n".join(lines)
+
+    # Determine classification status
+    hard_disagreement = top_type is not None and top_type != claimed
+    high_uncertainty = entropy is not None and entropy > 0.5
+
+    if hard_disagreement:
+        lines.append(f"  HARD DISAGREEMENT: Pipeline says {claimed}, MaxEnt says {top_type}")
+    elif high_uncertainty:
+        lines.append("  High Uncertainty (types agree but entropy is elevated)")
     else:
-        # Found in report but not in any flagged table — genuinely stable
-        lines.append("  No MaxEnt flags — classification is stable (low entropy, types agree)")
+        lines.append("  Classification is stable (low entropy, types agree)")
+
+    lines.append(f"  Confidence:    {conf:.4f} ({conf_band})")
+    if rival:
+        lines.append(f"  Rival Type:    {rival} (P={rival_p:.4f})" if rival_p is not None else f"  Rival Type:    {rival}")
+    if margin is not None:
+        lines.append(f"  Margin:        {margin:+.4f}")
+    if entropy is not None:
+        lines.append(f"  Entropy:       {entropy:.4f}")
+
+    # Top-3 probability distribution
+    if probs:
+        sorted_probs = sorted(probs.items(), key=lambda x: -x[1])[:3]
+        dist_parts = [f"{t}: {p:.3f}" for t, p in sorted_probs if p > 0]
+        if dist_parts:
+            lines.append(f"  Distribution:  {', '.join(dist_parts)}")
 
     return "\n".join(lines)
 
@@ -691,7 +713,7 @@ def generate_report(constraint_id, data):
     header = build_header(data["pipeline"])
     sec_positioning = build_corpus_positioning(constraint_id, data["pipeline"], prolog_output)
     sec_orbit = build_orbit_section(constraint_id, data["orbit"], data["omega"])
-    sec_maxent = build_maxent_section(constraint_id, data["maxent"])
+    sec_maxent = build_maxent_section(constraint_id, data["pipeline"])
     sec_omega = build_omega_section(constraint_id, data["omega"])
     sec_structural = build_structural_section(
         constraint_id, data["corpus"], data["pattern"], data["covering"]
