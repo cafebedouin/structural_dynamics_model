@@ -25,6 +25,7 @@
     maxent_run/2,                    % maxent_run(Context, Summary)
     maxent_multi_run/2,              % maxent_multi_run(Contexts, Summaries)
     maxent_distribution/3,           % maxent_distribution(C, Context, Distribution)
+    maxent_distribution_raw/3,       % maxent_distribution_raw(C, Context, Distribution)
     maxent_confidence/3,             % maxent_confidence(C, Context, Confidence)
     maxent_entropy/3,                % maxent_entropy(C, Context, NormalizedEntropy)
     maxent_disagreement/3,           % maxent_disagreement(C, Context, DisagreementInfo)
@@ -59,6 +60,7 @@
    ================================================================ */
 
 :- dynamic maxent_dist/3.           % maxent_dist(Constraint, Context, TypeProbList)
+:- dynamic maxent_dist_raw/3.       % maxent_dist_raw(Constraint, Context, TypeProbList) — pre-override
 :- dynamic maxent_profile/3.        % maxent_profile(Type, MetricName, params(Mu, Sigma))
 :- dynamic maxent_prior/2.          % maxent_prior(Type, Prior)
 :- dynamic maxent_run_info/3.       % maxent_run_info(Context, NConstraints, Timestamp)
@@ -87,6 +89,7 @@ maxent_n_types(6).
 
 maxent_cleanup :-
     retractall(maxent_dist(_, _, _)),
+    retractall(maxent_dist_raw(_, _, _)),
     retractall(maxent_profile(_, _, _)),
     retractall(maxent_prior(_, _)),
     retractall(maxent_run_info(_, _, _)).
@@ -366,6 +369,11 @@ entropy_acc(_Type-P, Acc, NewAcc) :-
 maxent_distribution(C, Context, Dist) :-
     maxent_dist(C, Context, Dist).
 
+%% maxent_distribution_raw(+C, +Context, -Distribution)
+%  Raw (pre-override) distribution for override impact analysis.
+maxent_distribution_raw(C, Context, Dist) :-
+    maxent_dist_raw(C, Context, Dist).
+
 %% maxent_entropy(+C, +Context, -HNorm)
 maxent_entropy(C, Context, HNorm) :-
     maxent_dist(C, Context, Dist),
@@ -591,6 +599,7 @@ maxent_classify_one(C, Context) :-
         TypeLogLPairs),
     (   TypeLogLPairs \= []
     ->  normalize_log_probs(TypeLogLPairs, NormDist),
+        assertz(maxent_dist_raw(C, Context, NormDist)),
         apply_signature_override(C, NormDist, FinalDist),
         assertz(maxent_dist(C, Context, FinalDist))
     ;   true

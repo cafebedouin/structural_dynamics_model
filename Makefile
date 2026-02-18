@@ -102,12 +102,18 @@ SUFFICIENCY_JSON   := $(OUTPUT_DIR)/index_sufficiency.json
 # Omega enrichment stamp
 OMEGA_ENRICH_STAMP := $(STAMP_DIR)/omega_enrich
 
-# Tangled rope decomposition
-TANGLED_DECOMP := $(OUTPUT_DIR)/tangled_decomposition_data.json
+# Pipeline enrichment stamp
+ENRICH_STAMP := $(STAMP_DIR)/enrich_pipeline
 
-# Classification confidence analysis
-CONFIDENCE_DATA   := $(OUTPUT_DIR)/classification_confidence_data.json
+# Tangled rope decomposition (report only, data lives in pipeline_output.json)
+TANGLED_DECOMP_REPORT := $(OUTPUT_DIR)/tangled_rope_decomposition_report.md
+
+# Classification confidence analysis (report only, data lives in pipeline_output.json)
 CONFIDENCE_REPORT := $(OUTPUT_DIR)/classification_confidence_report.md
+
+# Boundary normality analysis
+BOUNDARY_NORM_DATA   := $(OUTPUT_DIR)/boundary_normality_data.json
+BOUNDARY_NORM_REPORT := $(OUTPUT_DIR)/boundary_normality_report.md
 
 # Meta report
 META_REPORT := $(OUTPUT_DIR)/meta_report.txt
@@ -122,7 +128,7 @@ PROLOG_ANALYSES := $(FINGERPRINT_REPORT) $(ORBIT_STAMP) $(FPN_REPORT) \
 
 PIPELINE_OUTPUTS := $(TYPE_REPORTS) $(OMEGA_DATA) $(OMEGA_ENRICH_STAMP) \
                     $(CORPUS_DATA) $(VARIANCE_REPORT) $(PATTERN_REPORT) $(SUFFICIENCY_REPORT) \
-                    $(TANGLED_DECOMP) $(CONFIDENCE_DATA) \
+                    $(ENRICH_STAMP) $(TANGLED_DECOMP_REPORT) $(CONFIDENCE_REPORT) $(BOUNDARY_NORM_DATA) \
                     $(PROLOG_ANALYSES) $(ORBIT_NORM_STAMP) \
                     $(OUTPUT_TXT) $(PIPELINE_JSON) $(META_REPORT)
 
@@ -417,22 +423,41 @@ $(SUFFICIENCY_REPORT): $(CORPUS_DATA) $(PIPELINE_JSON)
 	echo "[ANALYSIS] Done -> index_sufficiency.md + index_sufficiency.json"
 
 # ==============================================================================
-# TANGLED ROPE DECOMPOSITION — depends on corpus_data + pipeline_json + orbit_norm
+# PIPELINE ENRICHMENT — adds derived fields to pipeline_output.json in-place
 # ==============================================================================
 
-$(TANGLED_DECOMP): $(CORPUS_DATA) $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
+$(ENRICH_STAMP): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP) | $(STAMP_DIR)
+	echo "[ENRICH] Enriching pipeline_output.json..."
+	python3 $(PYTHON_DIR)/enrich_pipeline_json.py 2>&1 || true
+	touch $@
+	echo "[ENRICH] Done."
+
+# ==============================================================================
+# TANGLED ROPE DECOMPOSITION — depends on enriched pipeline + corpus_data
+# ==============================================================================
+
+$(TANGLED_DECOMP_REPORT): $(ENRICH_STAMP) $(CORPUS_DATA)
 	echo "[TANGLED] Running tangled rope decomposition..."
 	python3 $(PYTHON_DIR)/tangled_decomposition.py 2>&1 || true
-	echo "[TANGLED] Done -> tangled_decomposition_data.json + tangled_rope_decomposition_report.md"
+	echo "[TANGLED] Done -> tangled_rope_decomposition_report.md"
 
 # ==============================================================================
-# CLASSIFICATION CONFIDENCE — depends on corpus_data + pipeline_json + orbit_norm
+# CLASSIFICATION CONFIDENCE — depends on enriched pipeline + corpus_data
 # ==============================================================================
 
-$(CONFIDENCE_DATA): $(CORPUS_DATA) $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
+$(CONFIDENCE_REPORT): $(ENRICH_STAMP) $(CORPUS_DATA)
 	echo "[CONFIDENCE] Running classification confidence analysis..."
 	python3 $(PYTHON_DIR)/classification_confidence.py 2>&1 || true
-	echo "[CONFIDENCE] Done -> classification_confidence_data.json + classification_confidence_report.md"
+	echo "[CONFIDENCE] Done -> classification_confidence_report.md"
+
+# ==============================================================================
+# BOUNDARY NORMALITY — depends on enriched pipeline + corpus_data
+# ==============================================================================
+
+$(BOUNDARY_NORM_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
+	echo "[BOUNDARY] Running boundary normality analysis..."
+	python3 $(PYTHON_DIR)/boundary_normality.py 2>&1 || true
+	echo "[BOUNDARY] Done -> boundary_normality_data.json + boundary_normality_report.md"
 
 # ==============================================================================
 # OMEGA ENRICHMENT — depends on omega_data + corpus_data + orbit_norm
@@ -480,8 +505,9 @@ clean:
 	rm -f $(OUTPUT_DIR)/corpus_data.json
 	rm -f $(OUTPUT_DIR)/variance_analysis.md $(OUTPUT_DIR)/pattern_mining.md
 	rm -f $(OUTPUT_DIR)/index_sufficiency.md $(OUTPUT_DIR)/index_sufficiency.json
-	rm -f $(OUTPUT_DIR)/tangled_decomposition_data.json $(OUTPUT_DIR)/tangled_rope_decomposition_report.md
-	rm -f $(OUTPUT_DIR)/classification_confidence_data.json $(OUTPUT_DIR)/classification_confidence_report.md
+	rm -f $(OUTPUT_DIR)/tangled_rope_decomposition_report.md
+	rm -f $(OUTPUT_DIR)/classification_confidence_report.md
+	rm -f $(OUTPUT_DIR)/boundary_normality_data.json $(OUTPUT_DIR)/boundary_normality_report.md
 	rm -f $(OUTPUT_DIR)/meta_report.txt
 	rm -rf $(STAMP_DIR)
 	echo "Clean."

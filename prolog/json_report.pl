@@ -277,6 +277,11 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_maxent_probs(S, C, MaxEntCtx),
     format(S, ',~n', []),
 
+    % raw_maxent_probs (pre-override distribution for override impact analysis)
+    format(S, '      "raw_maxent_probs": ', []),
+    write_raw_maxent_probs(S, C, MaxEntCtx),
+    format(S, ',~n', []),
+
     % maxent_entropy (normalized Shannon entropy)
     write_maxent_entropy_field(S, C, MaxEntCtx),
 
@@ -308,6 +313,16 @@ write_maxent_dist_entries(S, [Type-Prob]) :- !,
 write_maxent_dist_entries(S, [Type-Prob|Rest]) :-
     format(S, '"~w": ~6f, ', [Type, Prob]),
     write_maxent_dist_entries(S, Rest).
+
+%% write_raw_maxent_probs(+Stream, +Constraint, +Context)
+%  Pre-override distribution for override impact analysis.
+write_raw_maxent_probs(S, C, Ctx) :-
+    (   maxent_classifier:maxent_distribution_raw(C, Ctx, Dist)
+    ->  format(S, '{', []),
+        write_maxent_dist_entries(S, Dist),
+        format(S, '}', [])
+    ;   format(S, 'null', [])
+    ).
 
 %% write_maxent_entropy_field(+Stream, +Constraint, +Context)
 write_maxent_entropy_field(S, C, Ctx) :-

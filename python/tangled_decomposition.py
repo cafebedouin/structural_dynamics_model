@@ -773,20 +773,29 @@ def main():
                     print(f"    computed: {computed_d}")
         return
 
-    # Decompose tangled_rope fiber
-    print("[TANGLED] Decomposing tangled_rope fiber...", file=sys.stderr)
-    tangled_ids = [cid for cid, c in constraints.items() if c["claimed_type"] == "tangled_rope"]
-    tangled_ids.sort()
+    # Build tangled_data from enriched pipeline_output.json fields
+    print("[TANGLED] Building tangled_rope data from enriched pipeline...", file=sys.stderr)
 
     tangled_data = []
-    for cid in tangled_ids:
-        c = constraints[cid]
+    for entry in per_constraint:
+        if entry.get("claimed_type") != "tangled_rope":
+            continue
+        cid = entry["id"]
+        c = constraints.get(cid, {})
         dist = distributions.get(cid, {})
-        psi = compute_psi(dist)
-        band = classify_band(psi)
-        coalition = classify_coalition(c.get("orbit_contexts", {}))
 
-        entry = {
+        # Use enriched fields if available, fall back to computation
+        psi = entry.get("tangled_psi")
+        if psi is None:
+            psi = compute_psi(dist)
+        band = entry.get("tangled_band")
+        if band is None:
+            band = classify_band(psi)
+        coalition = entry.get("coalition_type")
+        if coalition is None:
+            coalition = classify_coalition(c.get("orbit_contexts", {}))
+
+        tangled_entry = {
             "id": cid,
             "psi": round(psi, 6),
             "band": band,
@@ -797,48 +806,24 @@ def main():
             "p_mountain": round(dist.get("mountain", 0.0), 6),
             "p_scaffold": round(dist.get("scaffold", 0.0), 6),
             "p_piton": round(dist.get("piton", 0.0), 6),
-            "extractiveness": c["extractiveness"],
-            "suppression": c["suppression"],
-            "theater_ratio": c["theater_ratio"],
-            "signature": c.get("signature"),
+            "extractiveness": c.get("extractiveness", entry.get("base_extractiveness")),
+            "suppression": c.get("suppression", entry.get("suppression")),
+            "theater_ratio": c.get("theater_ratio", entry.get("theater_ratio")),
+            "signature": c.get("signature", entry.get("signature")),
             "domain": c.get("domain"),
-            "human_readable": c.get("human_readable"),
+            "human_readable": c.get("human_readable", entry.get("human_readable")),
             "orbit_contexts": c.get("orbit_contexts", {}),
         }
-        tangled_data.append(entry)
+        tangled_data.append(tangled_entry)
+
+    tangled_data.sort(key=lambda d: d["id"])
 
     band_counts = Counter(d["band"] for d in tangled_data)
     print(f"[TANGLED] {len(tangled_data)} tangled_rope constraints decomposed:", file=sys.stderr)
     for band in ["rope_leaning", "genuinely_tangled", "snare_leaning"]:
         print(f"  {band}: {band_counts.get(band, 0)}", file=sys.stderr)
 
-    # Write JSON output
-    output_data = {
-        "metadata": {
-            "total_constraints": len(constraints),
-            "total_tangled_rope": len(tangled_data),
-            "psi_formula": "P(snare) / (P(rope) + P(snare) + 0.001)",
-            "band_thresholds": {
-                "rope_leaning": f"psi < {PSI_ROPE_LEANING}",
-                "genuinely_tangled": f"{PSI_ROPE_LEANING} <= psi <= {PSI_SNARE_LEANING}",
-                "snare_leaning": f"psi > {PSI_SNARE_LEANING}",
-            },
-            "maxent_validation": {
-                "n_tested": n_tested,
-                "n_passed": n_passed,
-                "tolerance": 0.05,
-            },
-            "band_counts": dict(band_counts),
-            "coalition_counts": dict(Counter(d["coalition_type"] for d in tangled_data)),
-        },
-        "constraints": tangled_data,
-    }
-
-    with open(DECOMP_JSON, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=2)
-    print(f"[TANGLED] Wrote {DECOMP_JSON}", file=sys.stderr)
-
-    # Write report
+    # Write report only (no JSON data file — data lives in pipeline_output.json)
     report = generate_report(tangled_data, (n_tested, n_passed, failures),
                              len(constraints), len(tangled_data))
     with open(DECOMP_REPORT, "w", encoding="utf-8") as f:

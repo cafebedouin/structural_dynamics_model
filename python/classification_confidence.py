@@ -34,7 +34,6 @@ from tangled_decomposition import (
 ROOT_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT_DIR / "outputs"
 
-CONFIDENCE_JSON = OUTPUT_DIR / "classification_confidence_data.json"
 CONFIDENCE_REPORT = OUTPUT_DIR / "classification_confidence_report.md"
 
 N_TYPES = len(MAXENT_TYPES)
@@ -501,48 +500,67 @@ def main():
     constraints = load_all_data()
     print(f"[CONFIDENCE] Loaded {len(constraints)} constraints.", file=sys.stderr)
 
-    # --- Compute distributions WITH overrides ---
-    # Primary: use pipeline_output.json maxent_probs if available
+    # --- Read distributions from pipeline_output.json ---
     pipeline_raw = load_json(PIPELINE_JSON, "pipeline_output")
     per_constraint = pipeline_raw.get("per_constraint", [])
-    json_dists = {}
+
+    dists_override = {}
+    dists_raw = {}
     for entry in per_constraint:
+        cid = entry.get("id")
         probs = entry.get("maxent_probs")
         if probs and isinstance(probs, dict):
-            json_dists[entry["id"]] = probs
+            dists_override[cid] = probs
+        raw_probs = entry.get("raw_maxent_probs")
+        if raw_probs and isinstance(raw_probs, dict):
+            dists_raw[cid] = raw_probs
 
-    if json_dists:
-        print(f"[CONFIDENCE] Using pipeline_output.json maxent_probs for {len(json_dists)} constraints (with overrides).", file=sys.stderr)
-        dists_override = json_dists
-        # Fill in any missing from Python replication
-        if len(dists_override) < len(constraints):
-            fallback = maxent_classify(constraints, apply_overrides=True)
-            for cid in constraints:
-                if cid not in dists_override:
-                    dists_override[cid] = fallback.get(cid, {})
-    else:
+    print(f"[CONFIDENCE] Override distributions: {len(dists_override)}, Raw distributions: {len(dists_raw)}.", file=sys.stderr)
+
+    # Fall back to Python replication only if pipeline lacks distributions
+    if not dists_override:
         print("[CONFIDENCE] No maxent_probs in pipeline_output.json, computing via Python replication.", file=sys.stderr)
         dists_override = maxent_classify(constraints, apply_overrides=True)
+    if not dists_raw:
+        print("[CONFIDENCE] No raw_maxent_probs in pipeline_output.json, computing via Python replication.", file=sys.stderr)
+        dists_raw = maxent_classify(constraints, apply_overrides=False)
 
-    print(f"[CONFIDENCE] Override distributions: {len(dists_override)}.", file=sys.stderr)
-
-    # --- Compute distributions WITHOUT overrides ---
-    print("[CONFIDENCE] Computing raw distributions (no overrides)...", file=sys.stderr)
-    dists_raw = maxent_classify(constraints, apply_overrides=False)
-    print(f"[CONFIDENCE] Raw distributions: {len(dists_raw)}.", file=sys.stderr)
-
-    # --- Per-constraint confidence metrics ---
-    print("[CONFIDENCE] Computing per-constraint confidence metrics...", file=sys.stderr)
+    # --- Build per-constraint confidence metrics from enriched fields ---
+    print("[CONFIDENCE] Building per-constraint confidence metrics...", file=sys.stderr)
     all_metrics = []
+    enriched_by_id = {e["id"]: e for e in per_constraint}
+
     for cid, c in sorted(constraints.items()):
+        enriched = enriched_by_id.get(cid, {})
         dist = dists_override.get(cid, {})
-        m = compute_confidence_metrics(cid, c, dist)
+
+        # Use pre-computed enriched fields if available, else compute
+        if enriched.get("confidence") is not None:
+            m = {
+                "id": cid,
+                "claimed_type": c.get("claimed_type"),
+                "confidence": enriched["confidence"],
+                "rival_type": enriched.get("rival_type"),
+                "rival_prob": enriched.get("rival_prob", 0.0),
+                "margin": enriched.get("confidence_margin", 0.0),
+                "entropy": enriched.get("confidence_entropy", 0.0),
+                "band": enriched.get("confidence_band"),
+                "boundary": enriched.get("boundary"),
+                "signature": c.get("signature"),
+                "purity_score": c.get("purity_score"),
+                "purity_band": c.get("purity_band"),
+                "domain": c.get("domain"),
+                "human_readable": c.get("human_readable"),
+            }
+        else:
+            m = compute_confidence_metrics(cid, c, dist)
+
         if m:
             all_metrics.append(m)
 
-    print(f"[CONFIDENCE] Computed metrics for {len(all_metrics)} constraints.", file=sys.stderr)
+    print(f"[CONFIDENCE] Built metrics for {len(all_metrics)} constraints.", file=sys.stderr)
 
-    # --- Override comparison ---
+    # --- Override comparison from pipeline distributions ---
     print("[CONFIDENCE] Computing override vs raw comparison...", file=sys.stderr)
     override_data = {}
     for cid, c in constraints.items():
@@ -554,37 +572,7 @@ def main():
     type_changes = sum(1 for d in override_data.values() if d and d["top_type_changed"])
     print(f"[CONFIDENCE] Override impact: {band_changes} band changes, {type_changes} top-type changes.", file=sys.stderr)
 
-    # --- Write JSON ---
-    output_data = {
-        "metadata": {
-            "total_constraints": len(constraints),
-            "total_analyzed": len(all_metrics),
-            "band_counts": dict(Counter(m["band"] for m in all_metrics)),
-            "override_impact": {
-                "band_changes": band_changes,
-                "top_type_changes": type_changes,
-            },
-        },
-        "constraints": [],
-    }
-
-    for m in all_metrics:
-        cid = m["id"]
-        entry = dict(m)
-        # Add both distributions
-        entry["dist_override"] = {t: round(p, 6) for t, p in dists_override.get(cid, {}).items()}
-        entry["dist_raw"] = {t: round(p, 6) for t, p in dists_raw.get(cid, {}).items()}
-        # Add override comparison
-        od = override_data.get(cid)
-        if od:
-            entry["override_comparison"] = od
-        output_data["constraints"].append(entry)
-
-    with open(CONFIDENCE_JSON, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=2)
-    print(f"[CONFIDENCE] Wrote {CONFIDENCE_JSON}", file=sys.stderr)
-
-    # --- Generate report ---
+    # --- Generate report only (no JSON data file — data lives in pipeline_output.json) ---
     print("[CONFIDENCE] Generating report...", file=sys.stderr)
     report = generate_report(all_metrics, override_data, constraints, dists_override, dists_raw)
     with open(CONFIDENCE_REPORT, "w", encoding="utf-8") as f:
