@@ -24,6 +24,8 @@
 :- use_module(corpus_loader).
 :- use_module(domain_priors).
 :- use_module(data_repair).
+:- use_module(covering_analysis).
+:- use_module(maxent_classifier).
 
 :- use_module(library(lists)).
 
@@ -43,10 +45,15 @@ run_json_report :-
     length(Constraints, CorpusSize),
     format(user_error, '[json] Found ~w constraints.~n', [CorpusSize]),
 
+    % Precompute MaxEnt distributions for all constraints
+    constraint_indexing:default_context(MaxEntCtx),
+    maxent_classifier:maxent_precompute(Constraints, MaxEntCtx),
+    format(user_error, '[json] MaxEnt precompute done.~n', []),
+
     % Write JSON
     setup_call_cleanup(
         open('../outputs/pipeline_output.json', write, S),
-        write_pipeline_json(S, Constraints, CorpusSize),
+        write_pipeline_json(S, Constraints, CorpusSize, MaxEntCtx),
         close(S)
     ),
     format(user_error, '[json] Wrote pipeline_output.json (~w constraints)~n', [CorpusSize]).
@@ -55,13 +62,13 @@ run_json_report :-
    TIER 2 — SECTION BUILDERS
    ================================================================ */
 
-%% write_pipeline_json(+Stream, +Constraints, +CorpusSize)
-write_pipeline_json(S, Constraints, CorpusSize) :-
+%% write_pipeline_json(+Stream, +Constraints, +CorpusSize, +MaxEntCtx)
+write_pipeline_json(S, Constraints, CorpusSize, MaxEntCtx) :-
     format(S, '{~n', []),
 
     % Section 1: per_constraint
     format(S, '  "per_constraint": [~n', []),
-    write_per_constraint_array(S, Constraints),
+    write_per_constraint_array(S, Constraints, MaxEntCtx),
     format(S, '  ],~n', []),
 
     % Section 2: diagnostic
@@ -90,17 +97,17 @@ write_pipeline_json(S, Constraints, CorpusSize) :-
    PER-CONSTRAINT ARRAY
    ================================================================ */
 
-%% write_per_constraint_array(+Stream, +Constraints)
-write_per_constraint_array(_, []).
-write_per_constraint_array(S, [C]) :-
+%% write_per_constraint_array(+Stream, +Constraints, +MaxEntCtx)
+write_per_constraint_array(_, [], _).
+write_per_constraint_array(S, [C], MaxEntCtx) :-
     !,
-    write_per_constraint_entry(S, C, false).
-write_per_constraint_array(S, [C|Rest]) :-
-    write_per_constraint_entry(S, C, true),
-    write_per_constraint_array(S, Rest).
+    write_per_constraint_entry(S, C, false, MaxEntCtx).
+write_per_constraint_array(S, [C|Rest], MaxEntCtx) :-
+    write_per_constraint_entry(S, C, true, MaxEntCtx),
+    write_per_constraint_array(S, Rest, MaxEntCtx).
 
-%% write_per_constraint_entry(+Stream, +Constraint, +TrailingComma)
-write_per_constraint_entry(S, C, Comma) :-
+%% write_per_constraint_entry(+Stream, +Constraint, +TrailingComma, +MaxEntCtx)
+write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     format(S, '    {~n', []),
 
     % id
@@ -265,11 +272,58 @@ write_per_constraint_entry(S, C, Comma) :-
     write_json_string(S, TopicDomain),
     format(S, ',~n', []),
 
+    % maxent_probs (6-type probability distribution from shadow classifier)
+    format(S, '      "maxent_probs": ', []),
+    write_maxent_probs(S, C, MaxEntCtx),
+    format(S, ',~n', []),
+
+    % maxent_entropy (normalized Shannon entropy)
+    write_maxent_entropy_field(S, C, MaxEntCtx),
+
+    % maxent_top_type (shadow classifier's top pick)
+    write_maxent_top_type_field(S, C, MaxEntCtx),
+
     % resolution_strategy — deferred
     format(S, '      "resolution_strategy": null~n', []),
 
     % Close object
     (Comma == true -> format(S, '    },~n', []) ; format(S, '    }~n', [])).
+
+/* ================================================================
+   MAXENT FIELDS
+   ================================================================ */
+
+%% write_maxent_probs(+Stream, +Constraint, +Context)
+write_maxent_probs(S, C, Ctx) :-
+    (   maxent_classifier:maxent_distribution(C, Ctx, Dist)
+    ->  format(S, '{', []),
+        write_maxent_dist_entries(S, Dist),
+        format(S, '}', [])
+    ;   format(S, 'null', [])
+    ).
+
+write_maxent_dist_entries(_, []).
+write_maxent_dist_entries(S, [Type-Prob]) :- !,
+    format(S, '"~w": ~6f', [Type, Prob]).
+write_maxent_dist_entries(S, [Type-Prob|Rest]) :-
+    format(S, '"~w": ~6f, ', [Type, Prob]),
+    write_maxent_dist_entries(S, Rest).
+
+%% write_maxent_entropy_field(+Stream, +Constraint, +Context)
+write_maxent_entropy_field(S, C, Ctx) :-
+    (   maxent_classifier:maxent_entropy(C, Ctx, HNorm)
+    ->  format(S, '      "maxent_entropy": ~6f,~n', [HNorm])
+    ;   format(S, '      "maxent_entropy": null,~n', [])
+    ).
+
+%% write_maxent_top_type_field(+Stream, +Constraint, +Context)
+write_maxent_top_type_field(S, C, Ctx) :-
+    (   maxent_classifier:maxent_top_type(C, Ctx, TopType)
+    ->  format(S, '      "maxent_top_type": ', []),
+        write_json_string(S, TopType),
+        format(S, ',~n', [])
+    ;   format(S, '      "maxent_top_type": null,~n', [])
+    ).
 
 /* ================================================================
    PERSPECTIVES

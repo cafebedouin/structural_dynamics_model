@@ -102,6 +102,13 @@ SUFFICIENCY_JSON   := $(OUTPUT_DIR)/index_sufficiency.json
 # Omega enrichment stamp
 OMEGA_ENRICH_STAMP := $(STAMP_DIR)/omega_enrich
 
+# Tangled rope decomposition
+TANGLED_DECOMP := $(OUTPUT_DIR)/tangled_decomposition_data.json
+
+# Classification confidence analysis
+CONFIDENCE_DATA   := $(OUTPUT_DIR)/classification_confidence_data.json
+CONFIDENCE_REPORT := $(OUTPUT_DIR)/classification_confidence_report.md
+
 # Meta report
 META_REPORT := $(OUTPUT_DIR)/meta_report.txt
 
@@ -115,6 +122,7 @@ PROLOG_ANALYSES := $(FINGERPRINT_REPORT) $(ORBIT_STAMP) $(FPN_REPORT) \
 
 PIPELINE_OUTPUTS := $(TYPE_REPORTS) $(OMEGA_DATA) $(OMEGA_ENRICH_STAMP) \
                     $(CORPUS_DATA) $(VARIANCE_REPORT) $(PATTERN_REPORT) $(SUFFICIENCY_REPORT) \
+                    $(TANGLED_DECOMP) $(CONFIDENCE_DATA) \
                     $(PROLOG_ANALYSES) $(ORBIT_NORM_STAMP) \
                     $(OUTPUT_TXT) $(PIPELINE_JSON) $(META_REPORT)
 
@@ -176,7 +184,7 @@ $(OUTPUT_TXT): $(PREP_STAMP)
 
 $(PIPELINE_JSON): $(PREP_STAMP)
 	echo "[JSON] Generating structured JSON report..."
-	(cd $(PROLOG_DIR) && swipl -l stack.pl -l json_report.pl -g "run_json_report, halt.") 2>/dev/null
+	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l maxent_classifier.pl -l json_report.pl -g "run_json_report, halt.") 2>/dev/null
 	echo "[JSON] Done -> pipeline_output.json"
 
 # ==============================================================================
@@ -409,6 +417,24 @@ $(SUFFICIENCY_REPORT): $(CORPUS_DATA) $(PIPELINE_JSON)
 	echo "[ANALYSIS] Done -> index_sufficiency.md + index_sufficiency.json"
 
 # ==============================================================================
+# TANGLED ROPE DECOMPOSITION — depends on corpus_data + pipeline_json + orbit_norm
+# ==============================================================================
+
+$(TANGLED_DECOMP): $(CORPUS_DATA) $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
+	echo "[TANGLED] Running tangled rope decomposition..."
+	python3 $(PYTHON_DIR)/tangled_decomposition.py 2>&1 || true
+	echo "[TANGLED] Done -> tangled_decomposition_data.json + tangled_rope_decomposition_report.md"
+
+# ==============================================================================
+# CLASSIFICATION CONFIDENCE — depends on corpus_data + pipeline_json + orbit_norm
+# ==============================================================================
+
+$(CONFIDENCE_DATA): $(CORPUS_DATA) $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
+	echo "[CONFIDENCE] Running classification confidence analysis..."
+	python3 $(PYTHON_DIR)/classification_confidence.py 2>&1 || true
+	echo "[CONFIDENCE] Done -> classification_confidence_data.json + classification_confidence_report.md"
+
+# ==============================================================================
 # OMEGA ENRICHMENT — depends on omega_data + corpus_data + orbit_norm
 # ==============================================================================
 
@@ -454,6 +480,8 @@ clean:
 	rm -f $(OUTPUT_DIR)/corpus_data.json
 	rm -f $(OUTPUT_DIR)/variance_analysis.md $(OUTPUT_DIR)/pattern_mining.md
 	rm -f $(OUTPUT_DIR)/index_sufficiency.md $(OUTPUT_DIR)/index_sufficiency.json
+	rm -f $(OUTPUT_DIR)/tangled_decomposition_data.json $(OUTPUT_DIR)/tangled_rope_decomposition_report.md
+	rm -f $(OUTPUT_DIR)/classification_confidence_data.json $(OUTPUT_DIR)/classification_confidence_report.md
 	rm -f $(OUTPUT_DIR)/meta_report.txt
 	rm -rf $(STAMP_DIR)
 	echo "Clean."
