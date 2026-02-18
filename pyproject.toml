@@ -1,0 +1,20 @@
+[project]
+name = "structural-dynamics-model"
+version = "0.1.0"
+description = "Dependency-aware pipeline for structural dynamics analysis"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pandas",
+]
+
+[project.optional-dependencies]
+stats = [
+    "scipy",
+    "scikit-learn",
+    "statsmodels",
+]
+ai = [
+    "google-genai",
+    "anthropic",
+]

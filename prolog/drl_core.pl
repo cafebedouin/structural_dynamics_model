@@ -168,9 +168,46 @@ is_piton(_C, _Context, fail).
 % C needed for structural property lookups (coordination, enforcement, theater).
 %
 % Priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > unknown
+%
+% TWO-HUB ARCHITECTURE:
+%   Classification variation across observers originates from TWO independent hubs:
+%
+%   Hub 1 — Power-scaling sigmoid (constraint_indexing.pl:231-238)
+%     derive_directionality/3 → sigmoid_f/2 → χ = ε × f(d) × σ(S)
+%     Drives: snare Chi gate, tangled_rope Chi gate, rope Chi gate,
+%             scaffold Chi ceiling, piton Chi ceiling.
+%     Source of variation: different observer positions yield different d values,
+%     producing different χ values that cross different threshold gates.
+%
+%   Hub 2 — Effective immutability table (constraint_indexing.pl:151-177)
+%     effective_immutability(TimeHorizon, ExitOptions) → mountain | rope
+%     Drives: mountain gate (requires immutability = mountain),
+%             rope gate (requires immutability = rope OR emerges_naturally),
+%             snare_immutability_check (cross-stalk: ANY context sees rope).
+%     Source of variation: different time/exit positions yield different
+%     mutability perceptions, independently of power-scaling.
+%
+%   Hub interaction points:
+%     - Mountain gate: requires BOTH low χ (Hub 1) AND immutability = mountain (Hub 2)
+%     - snare_immutability_check/1: crosses stalk boundaries via Hub 2 to verify
+%       that at least one standard context perceives changeability (rope)
+%     - Constraints where Hub 1 and Hub 2 give conflicting signals
+%       (e.g., high χ but immutability = mountain) are exactly the false mountains
+%
+%   Outside both hubs:
+%     - Piton: uses theater_ratio, which is structurally fixed (not power-indexed).
+%       Pitons appear in H^0 (global sections) — same type from every position.
+%     - Boolean features (emerges_naturally, requires_active_enforcement,
+%       has_coordination_function): structural facts, not observer-indexed.
 
 % Categorical: Cross-stalk query (existential) — checks mutability across site points
 %% snare_immutability_check(+Context)
+%  Hub 2 interaction point: this predicate crosses stalk boundaries by
+%  checking Hub 2 (effective_immutability) across ALL standard contexts.
+%  This is where the two hubs interact most critically — Hub 1 (sigmoid)
+%  may push Chi above the snare floor, but Hub 2 must confirm that the
+%  constraint is perceived as changeable from at least one position.
+%
 %  The snare gate should only be blocked by STRUCTURAL immutability
 %  (genuine mountains like gravity), not POWER-INDEXED immutability
 %  (constraints that appear immutable from powerless but are changeable

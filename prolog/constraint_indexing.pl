@@ -37,7 +37,12 @@
     agent_power/1,
     time_horizon/1,
     exit_options/1,
-    spatial_scope/1
+    spatial_scope/1,
+
+    % Observer accessibility (formal restriction operator)
+    observer_accessible/3,
+    feature_access/3,
+    classify_from_restricted/3
 ]).
 
 :- multifile constraint_classification/3.
@@ -142,8 +147,23 @@ constraint_claim_indexed(Constraint, Type) :-
     constraint_classification(Constraint, Type, Ctx).
 
 % ============================================================================
-% HELPER PREDICATES - EFFECTIVE IMMUTABILITY
+% HELPER PREDICATES - EFFECTIVE IMMUTABILITY (Hub 2)
 % ============================================================================
+% Hub 2 of the two-hub perspectival architecture. This table is an
+% independent source of classification variation — it determines mutability
+% perception from TIME × EXIT, completely independent of Hub 1 (sigmoid
+% power-scaling on the extraction dimension).
+%
+% A constraint can be classified differently across contexts purely because
+% of this table, even if the sigmoid produces identical χ values. This is
+% most visible at the mountain gate (requires BOTH low χ AND immutability
+% = mountain) and at snare_immutability_check/1 (which crosses stalk
+% boundaries by checking this table across all standard contexts).
+%
+% The discrete (TIME × EXIT) → {mountain, rope} lookup resists continuous
+% sigmoid parameterization: temporal perception of changeability is
+% fundamentally discontinuous (generational/trapped = mountain, but
+% generational/constrained = rope — a single exit_options step flips it).
 
 % Can this be changed given time horizon and exit options?
 % Returns: mountain (unchangeable) or rope (changeable)
@@ -540,6 +560,190 @@ perspective_gap(Constraint, Gap) :-
     Type1 \= Type2,
     Context1 \= Context2,
     Gap = gap(Type1-Context1, Type2-Context2).
+
+% ============================================================================
+% OBSERVER ACCESSIBILITY — FORMAL RESTRICTION OPERATOR
+% ============================================================================
+% The DR equivalent of a partial trace: projects the full constraint record
+% to what is structurally accessible from a given observer position.
+%
+% A powerless observer experiences extraction (χ) but cannot separate it
+% into components (ε, σ, theater). They cannot identify beneficiaries,
+% see alternative systems, or distinguish mountains from snares. This is
+% the epistemic trap that makes snares look like "just how things are."
+%
+% The accessibility table formalizes what gauge_fixed/3 detects post-hoc:
+% an observer in a gauge-fixed frame sees a restricted view that may lead
+% to systematically different conclusions than the full-data classification.
+%
+% Testable prediction: the set of constraints where classify_from_restricted
+% differs from dr_type/3 should match the set with gauge_fixed = true.
+% ============================================================================
+
+% ----------------------------------------------------------------------------
+% Feature Accessibility Table
+% ----------------------------------------------------------------------------
+% Access levels:
+%   full      — true value is observable and measurable
+%   partial   — value is observable but with limited precision
+%   felt_only — effect is experienced but cannot be quantified or separated
+%   none      — feature is not accessible from this position
+
+%% feature_access(+PowerLevel, +Feature, -Access)
+
+% Powerless: experiences extraction as undifferentiated constraint
+feature_access(powerless,     raw_extraction, none).
+feature_access(powerless,     suppression,    felt_only).
+feature_access(powerless,     beneficiaries,  none).
+feature_access(powerless,     alternatives,   none).
+feature_access(powerless,     theater_ratio,  none).
+feature_access(powerless,     cross_context,  none).
+
+% Moderate: can partially see structural features but not the full picture
+feature_access(moderate,      raw_extraction, partial).
+feature_access(moderate,      suppression,    partial).
+feature_access(moderate,      beneficiaries,  partial).
+feature_access(moderate,      alternatives,   partial).
+feature_access(moderate,      theater_ratio,  partial).
+feature_access(moderate,      cross_context,  none).
+
+% Powerful: better visibility, especially of alternatives
+feature_access(powerful,      raw_extraction, partial).
+feature_access(powerful,      suppression,    partial).
+feature_access(powerful,      beneficiaries,  partial).
+feature_access(powerful,      alternatives,   full).
+feature_access(powerful,      theater_ratio,  partial).
+feature_access(powerful,      cross_context,  none).
+
+% Organized: collective action reveals suppression and beneficiary structure
+feature_access(organized,     raw_extraction, partial).
+feature_access(organized,     suppression,    full).
+feature_access(organized,     beneficiaries,  full).
+feature_access(organized,     alternatives,   full).
+feature_access(organized,     theater_ratio,  partial).
+feature_access(organized,     cross_context,  none).
+
+% Institutional: full structural visibility (except meta-level)
+feature_access(institutional, raw_extraction, full).
+feature_access(institutional, suppression,    full).
+feature_access(institutional, beneficiaries,  full).
+feature_access(institutional, alternatives,   full).
+feature_access(institutional, theater_ratio,  full).
+feature_access(institutional, cross_context,  none).
+
+% Analytical: full visibility including cross-context (meta-level)
+feature_access(analytical,    raw_extraction, full).
+feature_access(analytical,    suppression,    full).
+feature_access(analytical,    beneficiaries,  full).
+feature_access(analytical,    alternatives,   full).
+feature_access(analytical,    theater_ratio,  full).
+feature_access(analytical,    cross_context,  full).
+
+% ----------------------------------------------------------------------------
+% Restriction Operator
+% ----------------------------------------------------------------------------
+
+%% observer_accessible(+Constraint, +Context, -RestrictedView)
+%  Projects the full constraint record to what is accessible from Context.
+%  RestrictedView = view(Chi, VisibleEps, VisibleSupp, VisibleTheater,
+%                        KnownBeneficiaries, PerceivedMutability)
+%
+%  Chi is always accessible — it is what the observer experiences.
+%  Other features are restricted per the feature_access/3 table.
+observer_accessible(C, Context, RestrictedView) :-
+    valid_context(Context),
+    Context = context(agent_power(Power), _, _, _),
+    % Chi is always accessible — experienced extraction
+    (extractiveness_for_agent(C, Context, Chi0) -> Chi = Chi0 ; Chi = 0.0),
+    % Restrict raw extraction
+    restrict_continuous(Power, raw_extraction, C, extractiveness, Chi, VisibleEps),
+    % Restrict suppression
+    restrict_continuous(Power, suppression, C, suppression_raw, Chi, VisibleSupp),
+    % Restrict theater ratio
+    restrict_continuous(Power, theater_ratio, C, theater, 0.0, VisibleTheater),
+    % Restrict beneficiary knowledge
+    restrict_beneficiaries(Power, C, KnownBeneficiaries),
+    % Perceived mutability (always accessible via direct experience)
+    (effective_immutability_for_context(Context, Mut) -> PerceivedMutability = Mut ; PerceivedMutability = unknown),
+    RestrictedView = view(Chi, VisibleEps, VisibleSupp, VisibleTheater,
+                          KnownBeneficiaries, PerceivedMutability).
+
+%% restrict_continuous(+Power, +Feature, +C, +MetricKey, +ChiFallback, -Value)
+%  Applies access restriction to a continuous metric.
+%  full → true value; partial → true value (imprecise); felt_only → Chi proxy; none → unknown.
+restrict_continuous(Power, Feature, C, MetricKey, ChiFallback, Value) :-
+    feature_access(Power, Feature, Access),
+    restrict_by_access(Access, C, MetricKey, ChiFallback, Value).
+
+restrict_by_access(full, C, MetricKey, _, Value) :-
+    get_true_metric(C, MetricKey, Value), !.
+restrict_by_access(partial, C, MetricKey, _, Value) :-
+    get_true_metric(C, MetricKey, Value), !.
+restrict_by_access(felt_only, _, _, ChiFallback, ChiFallback) :- !.
+restrict_by_access(none, _, _, _, unknown).
+
+%% get_true_metric(+C, +MetricKey, -Value)
+get_true_metric(C, extractiveness, Val) :-
+    (constraint_data:base_extractiveness(C, Val) -> true ; Val = 0.0).
+get_true_metric(C, suppression_raw, Val) :-
+    config:param(suppression_metric_name, MetricName),
+    (narrative_ontology:constraint_metric(C, MetricName, Val) -> true ; Val = 0.0).
+get_true_metric(C, theater, Val) :-
+    config:param(theater_metric_name, TheaterName),
+    (narrative_ontology:constraint_metric(C, TheaterName, Val) -> true ; Val = 0.0).
+
+%% restrict_beneficiaries(+Power, +C, -Known)
+restrict_beneficiaries(Power, C, Known) :-
+    feature_access(Power, beneficiaries, Access),
+    restrict_beneficiaries_by_access(Access, C, Known).
+
+restrict_beneficiaries_by_access(full, C, Beneficiaries) :-
+    findall(B, narrative_ontology:constraint_beneficiary(C, B), Beneficiaries), !.
+restrict_beneficiaries_by_access(partial, C, Partial) :-
+    findall(B, narrative_ontology:constraint_beneficiary(C, B), All),
+    length(All, N),
+    Visible is max(1, N // 2),
+    length(Partial, Visible),
+    append(Partial, _, All), !.
+restrict_beneficiaries_by_access(_, _, []).
+
+% ----------------------------------------------------------------------------
+% Classification from Restricted Data
+% ----------------------------------------------------------------------------
+
+%% classify_from_restricted(+Constraint, +Context, -RestrictedType)
+%  Attempts classification using only observer-accessible features.
+%  Where features are inaccessible, uses conservative defaults that
+%  conflate what the observer cannot distinguish.
+%
+%  The gap between RestrictedType and dr_type/3 measures the epistemic
+%  cost of the observer's position. When they differ, the observer is
+%  in a gauge-fixed frame (or near one).
+classify_from_restricted(C, Context, RestrictedType) :-
+    observer_accessible(C, Context, view(Chi, VisEps, VisSupp, VisTheater,
+                                          _KnownBen, PerceivedMut)),
+    resolve_for_classification(VisEps, Chi, Eps),
+    resolve_for_classification(VisSupp, Chi, Supp),
+    resolve_for_classification(VisTheater, 0.0, Theater),
+    restricted_classify(C, Eps, Chi, Supp, Theater, PerceivedMut, RestrictedType).
+
+%% resolve_for_classification(+MaybeValue, +Fallback, -Value)
+%  Converts unknown/felt_only values to numeric for classification.
+resolve_for_classification(unknown, Fallback, Fallback).
+resolve_for_classification(Value, _, Value) :- number(Value).
+
+%% restricted_classify(+C, +Eps, +Chi, +Supp, +Theater, +Mutability, -Type)
+%  Simplified cascade using only the resolved restricted metrics.
+restricted_classify(_C, Eps, _Chi, Supp, _Theater, mountain, mountain) :-
+    Supp =< 0.05, Eps =< 0.25, !.
+restricted_classify(_C, Eps, Chi, Supp, _Theater, _Mut, snare) :-
+    Chi >= 0.66, Eps >= 0.46, Supp >= 0.60, !.
+restricted_classify(_C, Eps, Chi, _Supp, _Theater, _Mut, rope) :-
+    Chi =< 0.35, Eps =< 0.45, !.
+restricted_classify(_C, Eps, Chi, _Supp, Theater, _Mut, piton) :-
+    number(Theater), Theater >= 0.70,
+    Chi =< 0.25, Eps > 0.10, !.
+restricted_classify(_C, _Eps, _Chi, _Supp, _Theater, _Mut, indeterminate).
 
 % ============================================================================
 % INTEGRATION NOTES
