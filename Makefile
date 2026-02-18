@@ -155,7 +155,7 @@ quick: $(PIPELINE_OUTPUTS)
 # Quality gates only
 check: $(LINT_ERRORS)
 	echo "[CHECK] Running duplicate checker..."
-	python3 $(PYTHON_DIR)/duplicate_checker.py --dir $(TESTSETS) 2>&1 || true
+	python3 $(PYTHON_DIR)/duplicate_checker.py --dir $(TESTSETS) 2>&1 || echo "[WARN] duplicate_checker failed (non-critical, continuing)"
 	echo "[CHECK] Done."
 
 # Auto-fix AI-generated Prolog artifacts (writes to testset files)
@@ -190,7 +190,7 @@ $(OUTPUT_TXT): $(PREP_STAMP)
 	echo "[TEST] Running Prolog test suite..."
 	echo "Initializing Validation Suite - $$(date)" > $@
 	echo "------------------------------------------" >> $@
-	(cd $(PROLOG_DIR) && swipl -g "[validation_suite], run_dynamic_suite, halt.") >> $@ 2>&1 || true
+	(cd $(PROLOG_DIR) && swipl -g "[validation_suite], run_dynamic_suite, halt.") >> $@ 2>&1 || echo "[WARN] validation_suite failed (non-critical, continuing)"
 	echo "------------------------------------------" >> $@
 	echo "Test suite completed at: $$(date)" >> $@
 	echo "[TEST] Done -> output.txt"
@@ -229,14 +229,14 @@ $(LINT_ERRORS): $(PREP_STAMP)
 # --- Fingerprint (direct output) ---
 $(FINGERPRINT_REPORT): $(PREP_STAMP)
 	echo "[PROLOG] Fingerprint analysis..."
-	(cd $(PROLOG_DIR) && swipl -g "[fingerprint_report], halt.") > $@ 2>/dev/null || true
+	(cd $(PROLOG_DIR) && swipl -g "[fingerprint_report], halt.") > $@ 2>/dev/null || echo "[WARN] fingerprint_report failed (non-critical, continuing)"
 	echo "[PROLOG] Done -> fingerprint_report.md"
 
 # --- Orbit (produces orbit_report.md + orbit_data.json, stamp target) ---
 $(ORBIT_STAMP): $(PREP_STAMP) | $(STAMP_DIR)
 	echo "[PROLOG] Orbit analysis..."
 	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl \
-		-l orbit_report.pl -g "run_orbit_report, halt.") > $(OUTPUT_DIR)/orbit_report_raw.md 2>/dev/null || true
+		-l orbit_report.pl -g "run_orbit_report, halt.") > $(OUTPUT_DIR)/orbit_report_raw.md 2>/dev/null
 	if [ -s $(OUTPUT_DIR)/orbit_report_raw.md ]; then \
 		sed -n '/<!-- ORBIT_REPORT_START -->/,$$p' $(OUTPUT_DIR)/orbit_report_raw.md | tail -n +2 > $(OUTPUT_DIR)/orbit_report.md; \
 	else \
@@ -250,7 +250,7 @@ $(ORBIT_STAMP): $(PREP_STAMP) | $(STAMP_DIR)
 $(FPN_REPORT): $(PREP_STAMP)
 	echo "[PROLOG] FPN analysis..."
 	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l fpn_report.pl \
-		-g "run_fpn_report, halt.") > $(OUTPUT_DIR)/fpn_report_raw.md 2>/dev/null || true
+		-g "run_fpn_report, halt.") > $(OUTPUT_DIR)/fpn_report_raw.md 2>/dev/null || echo "[WARN] fpn_report failed (non-critical, continuing)"
 	if [ -s $(OUTPUT_DIR)/fpn_report_raw.md ]; then \
 		sed -n '/<!-- FPN_REPORT_START -->/,$$p' $(OUTPUT_DIR)/fpn_report_raw.md | tail -n +2 > $@; \
 	else \
@@ -264,7 +264,7 @@ $(MAXENT_REPORT): $(PREP_STAMP)
 	echo "[PROLOG] MaxEnt analysis..."
 	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl \
 		-l maxent_classifier.pl -l maxent_report.pl \
-		-g "run_maxent_report, halt.") > $(OUTPUT_DIR)/maxent_report_raw.md 2>/dev/null || true
+		-g "run_maxent_report, halt.") > $(OUTPUT_DIR)/maxent_report_raw.md 2>/dev/null || echo "[WARN] maxent_report failed (non-critical, continuing)"
 	if [ -s $(OUTPUT_DIR)/maxent_report_raw.md ]; then \
 		sed -n '/<!-- MAXENT_REPORT_START -->/,$$p' $(OUTPUT_DIR)/maxent_report_raw.md | tail -n +2 > $@; \
 	else \
@@ -279,7 +279,7 @@ $(ABDUCTIVE_REPORT): $(PREP_STAMP)
 	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl \
 		-l dirac_classification.pl -l maxent_classifier.pl \
 		-l abductive_engine.pl -l abductive_report.pl \
-		-g "run_abductive_report, halt.") > $(OUTPUT_DIR)/abductive_report_raw.md 2>/dev/null || true
+		-g "run_abductive_report, halt.") > $(OUTPUT_DIR)/abductive_report_raw.md 2>/dev/null || echo "[WARN] abductive_report failed (non-critical, continuing)"
 	if [ -s $(OUTPUT_DIR)/abductive_report_raw.md ]; then \
 		sed -n '/<!-- ABDUCTIVE_REPORT_START -->/,$$p' $(OUTPUT_DIR)/abductive_report_raw.md | tail -n +2 > $@; \
 	else \
@@ -295,7 +295,7 @@ $(TRAJECTORY_REPORT): $(PREP_STAMP)
 	if [ "$$TRAJ_ENABLED" = "1" ]; then \
 		(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl \
 			-l maxent_classifier.pl -l trajectory_mining.pl \
-			-l trajectory_report.pl -g "run_trajectory_report, halt.") > $(OUTPUT_DIR)/trajectory_report_raw.md 2>/dev/null || true; \
+			-l trajectory_report.pl -g "run_trajectory_report, halt.") > $(OUTPUT_DIR)/trajectory_report_raw.md 2>/dev/null || echo "[WARN] trajectory_report failed (non-critical, continuing)"; \
 		if [ -s $(OUTPUT_DIR)/trajectory_report_raw.md ]; then \
 			sed -n '/<!-- TRAJECTORY_REPORT_START -->/,$$p' $(OUTPUT_DIR)/trajectory_report_raw.md | tail -n +2 > $@; \
 		else \
@@ -312,21 +312,21 @@ $(TRAJECTORY_REPORT): $(PREP_STAMP)
 $(COVERING_REPORT): $(PREP_STAMP)
 	echo "[PROLOG] Covering analysis..."
 	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl \
-		-g "run_covering_analysis, halt.") > $@ 2>/dev/null || true
+		-g "run_covering_analysis, halt.") > $@ 2>/dev/null || echo "[WARN] covering_analysis failed (non-critical, continuing)"
 	echo "[PROLOG] Done -> covering_analysis.md"
 
 # --- Giant component (direct output) ---
 $(GC_REPORT): $(PREP_STAMP)
 	echo "[PROLOG] Giant component analysis..."
 	(cd $(PROLOG_DIR) && swipl -l stack.pl -l giant_component_analysis.pl \
-		-g "run_giant_component_analysis, halt.") > $@ 2>/dev/null || true
+		-g "run_giant_component_analysis, halt.") > $@ 2>/dev/null || echo "[WARN] giant_component_analysis failed (non-critical, continuing)"
 	echo "[PROLOG] Done -> giant_component_analysis.md"
 
 # --- Coupling protocol (direct output) ---
 $(CP_REPORT): $(PREP_STAMP)
 	echo "[PROLOG] Coupling protocol..."
 	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l inferred_coupling_protocol.pl \
-		-g "run_coupling_protocol, halt.") > $@ 2>/dev/null || true
+		-g "run_coupling_protocol, halt.") > $@ 2>/dev/null || echo "[WARN] coupling_protocol failed (non-critical, continuing)"
 	echo "[PROLOG] Done -> coupling_protocol.md"
 
 # --- MaxEnt diagnostic (direct output) ---
@@ -334,7 +334,7 @@ $(MAXDIAG_REPORT): $(PREP_STAMP)
 	echo "[PROLOG] MaxEnt diagnostic..."
 	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l maxent_classifier.pl \
 		-l dirac_classification.pl -l maxent_diagnostic.pl \
-		-g "run_maxent_diagnostic, halt.") > $@ 2>/dev/null || true
+		-g "run_maxent_diagnostic, halt.") > $@ 2>/dev/null || echo "[WARN] maxent_diagnostic failed (non-critical, continuing)"
 	echo "[PROLOG] Done -> maxent_diagnostic_report.md"
 
 # ==============================================================================
@@ -344,7 +344,7 @@ $(MAXDIAG_REPORT): $(PREP_STAMP)
 $(ORBIT_NORM_STAMP): $(ORBIT_STAMP) | $(STAMP_DIR)
 	echo "[NORM] Normalizing orbit data IDs..."
 	if [ -f $(OUTPUT_DIR)/orbit_data.json ]; then \
-		python3 $(PYTHON_DIR)/normalize_orbit_ids.py 2>&1 || true; \
+		python3 $(PYTHON_DIR)/normalize_orbit_ids.py 2>&1; \
 	fi
 	touch $@
 	echo "[NORM] Done."
@@ -356,37 +356,37 @@ $(ORBIT_NORM_STAMP): $(ORBIT_STAMP) | $(STAMP_DIR)
 # Family A: type_reporter.py --type <category>
 $(SNARE_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating snare report..."
-	python3 $(PYTHON_DIR)/type_reporter.py --type snare 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type snare 2>&1 || echo "[WARN] snare_report failed (non-critical, continuing)"
 	echo "[REPORT] Done -> snare_report.md"
 
 $(ROPE_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating rope report..."
-	python3 $(PYTHON_DIR)/type_reporter.py --type rope 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type rope 2>&1 || echo "[WARN] rope_report failed (non-critical, continuing)"
 	echo "[REPORT] Done -> rope_report.md"
 
 $(SCAFFOLD_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating scaffold report..."
-	python3 $(PYTHON_DIR)/type_reporter.py --type scaffold 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type scaffold 2>&1 || echo "[WARN] scaffold_report failed (non-critical, continuing)"
 	echo "[REPORT] Done -> scaffold_report.md"
 
 $(PITON_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating piton report..."
-	python3 $(PYTHON_DIR)/type_reporter.py --type piton 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type piton 2>&1 || echo "[WARN] piton_report failed (non-critical, continuing)"
 	echo "[REPORT] Done -> piton_report.md"
 
 $(MOUNTAIN_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating true_mountain report..."
-	python3 $(PYTHON_DIR)/type_reporter.py --type mountain 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type mountain 2>&1 || echo "[WARN] true_mountain_report failed (non-critical, continuing)"
 	echo "[REPORT] Done -> true_mountain_report.md"
 
 $(TANGLED_ROPE_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating tangled_rope report..."
-	python3 $(PYTHON_DIR)/type_reporter.py --type tangled_rope 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type tangled_rope 2>&1 || echo "[WARN] tangled_rope_report failed (non-critical, continuing)"
 	echo "[REPORT] Done -> tangled_rope_report.md"
 
 $(FALSE_MOUNTAIN_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating false_mountain report..."
-	python3 $(PYTHON_DIR)/type_reporter.py --type false_mountain 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type false_mountain 2>&1 || echo "[WARN] false_mountain_report failed (non-critical, continuing)"
 	echo "[REPORT] Done -> false_mountain_report.md"
 
 # ==============================================================================
@@ -396,7 +396,7 @@ $(FALSE_MOUNTAIN_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 # omega_reporter.py produces both omega_report.md and omega_data.json
 $(OMEGA_DATA): $(PIPELINE_JSON)
 	echo "[OMEGA] Generating omega report..."
-	python3 $(PYTHON_DIR)/omega_reporter.py 2>&1 || true
+	python3 $(PYTHON_DIR)/omega_reporter.py 2>&1 || echo "[WARN] omega_reporter failed (non-critical, continuing)"
 	echo "[OMEGA] Done -> omega_report.md + omega_data.json"
 
 # ==============================================================================
@@ -439,7 +439,7 @@ $(SUFFICIENCY_REPORT): $(CORPUS_DATA) $(PIPELINE_JSON)
 
 $(ENRICH_STAMP): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP) | $(STAMP_DIR)
 	echo "[ENRICH] Producing enriched_pipeline.json..."
-	python3 $(PYTHON_DIR)/enrich_pipeline_json.py 2>&1 || true
+	python3 $(PYTHON_DIR)/enrich_pipeline_json.py 2>&1
 	touch $@
 	echo "[ENRICH] Done -> enriched_pipeline.json"
 
@@ -449,7 +449,7 @@ $(ENRICH_STAMP): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP) | $(STAMP_DIR)
 
 $(TANGLED_DECOMP_REPORT): $(ENRICH_STAMP) $(CORPUS_DATA)
 	echo "[TANGLED] Running tangled rope decomposition..."
-	python3 $(PYTHON_DIR)/tangled_decomposition.py 2>&1 || true
+	python3 $(PYTHON_DIR)/tangled_decomposition.py 2>&1 || echo "[WARN] tangled_decomposition failed (non-critical, continuing)"
 	echo "[TANGLED] Done -> tangled_rope_decomposition_report.md"
 
 # ==============================================================================
@@ -458,7 +458,7 @@ $(TANGLED_DECOMP_REPORT): $(ENRICH_STAMP) $(CORPUS_DATA)
 
 $(CONFIDENCE_REPORT): $(ENRICH_STAMP) $(CORPUS_DATA)
 	echo "[CONFIDENCE] Running classification confidence analysis..."
-	python3 $(PYTHON_DIR)/classification_confidence.py 2>&1 || true
+	python3 $(PYTHON_DIR)/classification_confidence.py 2>&1 || echo "[WARN] classification_confidence failed (non-critical, continuing)"
 	echo "[CONFIDENCE] Done -> classification_confidence_report.md"
 
 # ==============================================================================
@@ -467,7 +467,7 @@ $(CONFIDENCE_REPORT): $(ENRICH_STAMP) $(CORPUS_DATA)
 
 $(BOUNDARY_NORM_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
 	echo "[BOUNDARY] Running boundary normality analysis..."
-	python3 $(PYTHON_DIR)/boundary_normality.py 2>&1 || true
+	python3 $(PYTHON_DIR)/boundary_normality.py 2>&1 || echo "[WARN] boundary_normality failed (non-critical, continuing)"
 	echo "[BOUNDARY] Done -> boundary_normality_data.json + boundary_normality_report.md"
 
 # ==============================================================================
@@ -476,7 +476,7 @@ $(BOUNDARY_NORM_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
 
 $(BOOLEAN_INDEP_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
 	echo "[BOOL] Running boolean feature independence analysis..."
-	python3 $(PYTHON_DIR)/boolean_independence.py 2>&1 || true
+	python3 $(PYTHON_DIR)/boolean_independence.py 2>&1 || echo "[WARN] boolean_independence failed (non-critical, continuing)"
 	echo "[BOOL] Done -> boolean_independence_data.json + boolean_independence_report.md"
 
 # ==============================================================================
@@ -485,7 +485,7 @@ $(BOOLEAN_INDEP_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
 
 $(INST_DISSENT_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
 	echo "[DISSENT] Running institutional dissent analysis..."
-	python3 $(PYTHON_DIR)/institutional_dissent_analysis.py 2>&1 || true
+	python3 $(PYTHON_DIR)/institutional_dissent_analysis.py 2>&1 || echo "[WARN] institutional_dissent failed (non-critical, continuing)"
 	echo "[DISSENT] Done -> institutional_dissent_data.json + institutional_dissent_report.md"
 
 # ==============================================================================
@@ -495,7 +495,7 @@ $(INST_DISSENT_DATA): $(ENRICH_STAMP) $(CORPUS_DATA)
 $(OMEGA_ENRICH_STAMP): $(OMEGA_DATA) $(CORPUS_DATA) $(ORBIT_NORM_STAMP) | $(STAMP_DIR)
 	echo "[ENRICH] Enriching omega report..."
 	if [ -f $(OUTPUT_DIR)/corpus_data.json ] && [ -f $(OUTPUT_DIR)/omega_data.json ]; then \
-		python3 $(PYTHON_DIR)/omega_enricher.py 2>&1 || true; \
+		python3 $(PYTHON_DIR)/omega_enricher.py 2>&1 || echo "[WARN] omega_enricher failed (non-critical, continuing)"; \
 	else \
 		echo "[ENRICH] Skipping (missing dependencies)"; \
 	fi
@@ -508,7 +508,7 @@ $(OMEGA_ENRICH_STAMP): $(OMEGA_DATA) $(CORPUS_DATA) $(ORBIT_NORM_STAMP) | $(STAM
 
 $(META_REPORT): $(PIPELINE_JSON) $(OUTPUT_TXT) $(ORBIT_NORM_STAMP)
 	echo "[META] Generating meta-report..."
-	python3 $(PYTHON_DIR)/meta_reporter.py > $@ 2>&1 || true
+	python3 $(PYTHON_DIR)/meta_reporter.py > $@ 2>&1 || echo "[WARN] meta_reporter failed (non-critical, continuing)"
 	echo "[META] Done -> meta_report.txt"
 
 # ==============================================================================
