@@ -16,35 +16,15 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+from shared.loader import read_config
+
 BASE_DIR = Path("/home/scott/bin/structural_dynamics_model/prolog")
 TESTSETS_DIR = BASE_DIR / 'testsets'
 DOMAIN_REGISTRY = BASE_DIR / 'domain_registry.pl'
 OUTPUT_FILE = BASE_DIR / 'domain_priors_expanded.pl'
 STATS_OUTPUT = Path("/home/scott/bin/structural_dynamics_model/outputs/domain_corpus_stats.json")
 
-
-def _read_config_thresholds():
-    """Read param/2 threshold values from prolog/config.pl."""
-    config_path = BASE_DIR / 'config.pl'
-    thresholds = {}
-    try:
-        with open(config_path, 'r', encoding='utf-8') as f:
-            for line in f:
-                match = re.search(r"param\((\w+),\s*([\d.]+)\)", line)
-                if match:
-                    param_name = match.group(1)
-                    if param_name.endswith('_metric_name'):
-                        continue
-                    try:
-                        thresholds[param_name] = float(match.group(2))
-                    except ValueError:
-                        pass
-    except Exception as e:
-        print(f"Warning: Could not read thresholds from {config_path}: {e}", file=sys.stderr)
-    return thresholds
-
-
-_config = _read_config_thresholds()
+_config = read_config()
 ROPE_EXTRACTION_CEILING = _config.get('rope_extraction_ceiling', 0.15)
 SNARE_EXTRACTION_FLOOR = _config.get('snare_epsilon_floor', 0.46)
 

@@ -57,7 +57,6 @@ Chi formula: chi = eps * pi(Power) * sigma(Scope)
 """
 
 import json
-import re
 import sys
 from collections import defaultdict, Counter
 from pathlib import Path
@@ -82,25 +81,9 @@ PI_ANALYTICAL = _PM["analytical"]
 # THRESHOLDS — loaded from prolog/config.pl (single source of truth)
 # =============================================================================
 
-def _read_config():
-    """Read param/2 values from prolog/config.pl."""
-    config_path = Path(__file__).resolve().parent.parent / "prolog" / "config.pl"
-    thresholds = {}
-    try:
-        with open(config_path, 'r', encoding='utf-8') as f:
-            for line in f:
-                match = re.search(r"param\((\w+),\s*(-?[\d.]+)\)", line)
-                if match:
-                    param_name = match.group(1)
-                    try:
-                        thresholds[param_name] = float(match.group(2))
-                    except ValueError:
-                        pass
-    except Exception as e:
-        print(f"Warning: Could not read {config_path}: {e}", file=sys.stderr)
-    return thresholds
+from shared.loader import read_config
 
-_CFG = _read_config()
+_CFG = read_config()
 
 # Scope modifiers (sigma)
 SIGMA_LOCAL = _CFG.get('scope_modifier_local', 0.8)

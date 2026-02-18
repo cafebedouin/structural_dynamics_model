@@ -11,33 +11,16 @@ where d is directionality in [0.0, 1.0].
 """
 
 import math
-import re
 import sys
 from pathlib import Path
+
+from shared.loader import read_config
 
 # =============================================================================
 # THRESHOLDS — loaded from prolog/config.pl (single source of truth)
 # =============================================================================
 
-def _read_config():
-    """Read param/2 values from prolog/config.pl."""
-    config_path = Path(__file__).resolve().parent.parent / "prolog" / "config.pl"
-    thresholds = {}
-    try:
-        with open(config_path, 'r', encoding='utf-8') as f:
-            for line in f:
-                match = re.search(r"param\((\w+),\s*(-?[\d.]+)\)", line)
-                if match:
-                    param_name = match.group(1)
-                    try:
-                        thresholds[param_name] = float(match.group(2))
-                    except ValueError:
-                        pass
-    except Exception as e:
-        print(f"Warning: Could not read {config_path}: {e}", file=sys.stderr)
-    return thresholds
-
-_CFG = _read_config()
+_CFG = read_config()
 
 # Sigmoid parameters
 SIGMOID_LOWER = _CFG.get('sigmoid_lower', -0.20)

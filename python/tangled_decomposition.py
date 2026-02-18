@@ -21,110 +21,37 @@ Usage:
 import argparse
 import json
 import math
-import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+
+from shared.loader import load_json, read_config, load_all_data, PIPELINE_JSON, OUTPUT_DIR
+from shared.constants import (
+    MAXENT_TYPES, N_TYPES, BOOLEAN_SPECS, PSI_ROPE_LEANING, PSI_SNARE_LEANING,
+    compute_psi, classify_band, classify_coalition,
+)
 
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-OUTPUT_DIR = ROOT_DIR / "outputs"
 PROLOG_DIR = ROOT_DIR / "prolog"
 
-PIPELINE_JSON = OUTPUT_DIR / "pipeline_output.json"
-CORPUS_JSON = OUTPUT_DIR / "corpus_data.json"
-ORBIT_JSON = OUTPUT_DIR / "orbit_data.json"
 MAXENT_REPORT = OUTPUT_DIR / "maxent_report.md"
 
 DECOMP_JSON = OUTPUT_DIR / "tangled_decomposition_data.json"
 DECOMP_REPORT = OUTPUT_DIR / "tangled_rope_decomposition_report.md"
 
 # ---------------------------------------------------------------------------
-# Config reader (same pattern as sigmoid.py)
+# Config
 # ---------------------------------------------------------------------------
 
-def _read_config():
-    """Read param/2 values from prolog/config.pl."""
-    config_path = PROLOG_DIR / "config.pl"
-    thresholds = {}
-    try:
-        with open(config_path, "r", encoding="utf-8") as f:
-            for line in f:
-                match = re.search(r"param\((\w+),\s*(-?[\d.]+)\)", line)
-                if match:
-                    try:
-                        thresholds[match.group(1)] = float(match.group(2))
-                    except ValueError:
-                        pass
-    except Exception as e:
-        print(f"Warning: Could not read {config_path}: {e}", file=sys.stderr)
-    return thresholds
-
-
-_CFG = _read_config()
+_CFG = read_config()
 
 BOOLEAN_PENALTY = _CFG.get("maxent_boolean_penalty", -4.0)
 BOOLEAN_BONUS = _CFG.get("maxent_boolean_bonus", 1.0)
 OVERRIDE_STRENGTH = _CFG.get("maxent_signature_override_strength", 0.95)
-
-MAXENT_TYPES = ["mountain", "rope", "tangled_rope", "snare", "scaffold", "piton"]
-N_TYPES = len(MAXENT_TYPES)
-
-# ---------------------------------------------------------------------------
-# Data loading
-# ---------------------------------------------------------------------------
-
-def load_json(path, label):
-    """Load a JSON file, returning {} on failure."""
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Warning: Could not load {label} ({path}): {e}", file=sys.stderr)
-        return {}
-
-
-def load_all_data():
-    """Load pipeline, corpus, and orbit data. Return unified per-constraint dict."""
-    pipeline_raw = load_json(PIPELINE_JSON, "pipeline_output")
-    corpus_raw = load_json(CORPUS_JSON, "corpus_data")
-    orbit_raw = load_json(ORBIT_JSON, "orbit_data")
-
-    per_constraint = pipeline_raw.get("per_constraint", [])
-    pipeline_by_id = {e["id"]: e for e in per_constraint}
-    corpus_constraints = corpus_raw.get("constraints", {})
-
-    constraints = {}
-    for cid, pdata in pipeline_by_id.items():
-        cdata = corpus_constraints.get(cid, {})
-        metrics = cdata.get("metrics", {})
-
-        entry = {
-            "id": cid,
-            "claimed_type": pdata.get("claimed_type"),
-            "extractiveness": pdata.get("base_extractiveness", metrics.get("extractiveness", 0.0)),
-            "suppression": pdata.get("suppression", metrics.get("suppression", 0.0)),
-            "theater_ratio": pdata.get("theater_ratio", 0.0),
-            "signature": pdata.get("signature"),
-            "emerges_naturally": pdata.get("emerges_naturally", metrics.get("emerges_naturally", False)),
-            "requires_active_enforcement": pdata.get("requires_active_enforcement",
-                                                      metrics.get("requires_enforcement", False)),
-            "beneficiaries": pdata.get("beneficiaries", cdata.get("beneficiaries", [])),
-            "victims": pdata.get("victims", cdata.get("victims", [])),
-            "perspectives": pdata.get("perspectives", {}),
-            "purity_score": pdata.get("purity_score"),
-            "purity_band": pdata.get("purity_band"),
-            "human_readable": pdata.get("human_readable"),
-            "domain": pdata.get("topic_domain") or pdata.get("domain"),
-            "orbit_contexts": orbit_raw.get(cid, {}).get("contexts", {}),
-            "orbit_signature": orbit_raw.get(cid, {}).get("orbit_signature", []),
-        }
-        constraints[cid] = entry
-
-    return constraints
 
 # ---------------------------------------------------------------------------
 # Boolean features (derived from JSON, matching Prolog definitions)
@@ -162,22 +89,6 @@ def eval_boolean(c, feature):
     if feature == "natural_law_without_beneficiary":
         return natural_law_without_beneficiary(c)
     return False
-
-# ---------------------------------------------------------------------------
-# MaxEnt boolean specs (from maxent_classifier.pl:155-163)
-# ---------------------------------------------------------------------------
-
-BOOLEAN_SPECS = [
-    ("mountain",     "emerges_naturally",            "required"),
-    ("mountain",     "requires_active_enforcement",  "forbidden"),
-    ("snare",        "natural_law_without_beneficiary", "forbidden"),
-    ("scaffold",     "has_coordination_function",    "required"),
-    ("rope",         "emerges_naturally",            "bonus"),
-    ("tangled_rope", "natural_law_without_beneficiary", "forbidden"),
-    ("tangled_rope", "requires_active_enforcement",  "required"),
-    ("tangled_rope", "has_coordination_function",    "required"),
-    ("tangled_rope", "has_asymmetric_extraction",    "required"),
-]
 
 # Default profiles (from maxent_classifier.pl:122-139)
 DEFAULT_PROFILES = {
@@ -442,73 +353,6 @@ def validate_maxent(computed_dists, known_dists, tolerance=0.05):
                                                 for t in known_dist}))
 
     return n_tested, n_passed, failures
-
-# ---------------------------------------------------------------------------
-# Decomposition
-# ---------------------------------------------------------------------------
-
-PSI_ROPE_LEANING = 0.3
-PSI_SNARE_LEANING = 0.7
-
-
-def compute_psi(dist):
-    """psi = P(snare) / (P(rope) + P(snare) + 0.001). Continuous snare-lean in [0,1]."""
-    p_rope = dist.get("rope", 0.0)
-    p_snare = dist.get("snare", 0.0)
-    return p_snare / (p_rope + p_snare + 0.001)
-
-
-def classify_band(psi):
-    """Classify into rope_leaning / genuinely_tangled / snare_leaning."""
-    if psi < PSI_ROPE_LEANING:
-        return "rope_leaning"
-    if psi > PSI_SNARE_LEANING:
-        return "snare_leaning"
-    return "genuinely_tangled"
-
-
-def classify_coalition(orbit_contexts):
-    """Classify coalition type from orbit contexts (4 perspectives).
-
-    | Coalition Type | Pattern |
-    |---|---|
-    | uniform_tangled | All 4 agree on tangled_rope |
-    | institutional_dissent | Institutional sees rope/scaffold, majority others see tangled_rope/snare |
-    | analytical_dissent | Analytical sees differently from powerless+moderate consensus |
-    | split_field | 3+ distinct types across perspectives |
-    | other | None of the above |
-    """
-    if not orbit_contexts or len(orbit_contexts) < 4:
-        return "other"
-
-    inst = orbit_contexts.get("institutional")
-    anal = orbit_contexts.get("analytical")
-    mod = orbit_contexts.get("moderate")
-    pwl = orbit_contexts.get("powerless")
-
-    all_types = [inst, anal, mod, pwl]
-    distinct = set(all_types)
-
-    # uniform_tangled: all 4 agree on tangled_rope
-    if all(t == "tangled_rope" for t in all_types):
-        return "uniform_tangled"
-
-    # split_field: 3+ distinct types
-    if len(distinct) >= 3:
-        return "split_field"
-
-    # institutional_dissent: institutional sees rope/scaffold, majority others see tangled_rope/snare
-    others = [anal, mod, pwl]
-    if inst in ("rope", "scaffold"):
-        tangled_snare_count = sum(1 for t in others if t in ("tangled_rope", "snare"))
-        if tangled_snare_count >= 2:
-            return "institutional_dissent"
-
-    # analytical_dissent: analytical sees differently from powerless+moderate consensus
-    if pwl == mod and anal != pwl:
-        return "analytical_dissent"
-
-    return "other"
 
 # ---------------------------------------------------------------------------
 # Report generation

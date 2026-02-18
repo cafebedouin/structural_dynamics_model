@@ -129,14 +129,7 @@ OUTPUT_MD = BASE / 'outputs' / 'enriched_omega_report.md'
 OUTPUT_JSON = BASE / 'outputs' / 'enriched_omega_data.json'
 
 
-def load_json(path):
-    """Load JSON file, return empty structure on failure."""
-    try:
-        with open(path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Warning: Could not load {path}: {e}", file=sys.stderr)
-        return {}
+from shared.loader import load_json
 
 
 def infer_gap_pattern(omega_name):

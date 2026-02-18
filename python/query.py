@@ -25,25 +25,11 @@ from pathlib import Path
 
 import pandas as pd
 
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "outputs"
+from shared.loader import load_json, OUTPUT_DIR
 
 VALID_PERSPECTIVES = ["powerless", "moderate", "institutional", "analytical"]
 VALID_PURITY_BANDS = ["pristine", "sound", "borderline", "degraded", "contaminated"]
 VALID_OMEGA_SEVERITIES = ["critical", "high", "medium", "low"]
-
-
-# ---------------------------------------------------------------------------
-# Data loading
-# ---------------------------------------------------------------------------
-
-def load_json(path, label):
-    """Load a JSON file, returning {} on failure."""
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Warning: Could not load {label} ({path}): {e}", file=sys.stderr)
-        return {}
 
 
 def format_orbit_signature(signature):

@@ -5,31 +5,7 @@ import sys
 import argparse
 from pathlib import Path
 
-
-def _read_config_thresholds():
-    """Read param/2 threshold values from prolog/config.pl.
-
-    Uses the same pattern as structural_linter.py to ensure a single source
-    of truth for all classification thresholds.
-    """
-    config_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'prolog', 'config.pl')
-    thresholds = {}
-    try:
-        with open(config_path, 'r', encoding='utf-8') as f:
-            for line in f:
-                match = re.search(r"param\((\w+),\s*([\d.]+)\)", line)
-                if match:
-                    param_name = match.group(1)
-                    if param_name.endswith('_metric_name'):
-                        continue
-                    try:
-                        thresholds[param_name] = float(match.group(2))
-                    except ValueError:
-                        pass
-    except Exception as e:
-        print(f"Warning: Could not read thresholds from {config_path}: {e}", file=sys.stderr)
-    return thresholds
-
+from shared.loader import read_config
 
 # Explicit mapping: Python constant name → config.pl param name → fallback default
 _PARAM_MAP = {
@@ -40,7 +16,7 @@ _PARAM_MAP = {
     'FALSE_MOUNTAIN_THRESHOLD':       ('false_mountain_extraction_threshold',  0.90),
 }
 
-_config = _read_config_thresholds()
+_config = read_config()
 ROPE_EXTRACTION_CEILING        = _config.get(_PARAM_MAP['ROPE_EXTRACTION_CEILING'][0],        _PARAM_MAP['ROPE_EXTRACTION_CEILING'][1])
 TANGLED_ROPE_EXTRACTION_FLOOR  = _config.get(_PARAM_MAP['TANGLED_ROPE_EXTRACTION_FLOOR'][0],  _PARAM_MAP['TANGLED_ROPE_EXTRACTION_FLOOR'][1])
 TANGLED_ROPE_EXTRACTION_CEIL   = _config.get(_PARAM_MAP['TANGLED_ROPE_EXTRACTION_CEIL'][0],   _PARAM_MAP['TANGLED_ROPE_EXTRACTION_CEIL'][1])

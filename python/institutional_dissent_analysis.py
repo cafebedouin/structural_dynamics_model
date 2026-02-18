@@ -46,9 +46,7 @@ except ImportError:
 ROOT_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT_DIR / "outputs"
 
-PIPELINE_JSON = OUTPUT_DIR / "pipeline_output.json"
-CORPUS_JSON = OUTPUT_DIR / "corpus_data.json"
-ORBIT_JSON = OUTPUT_DIR / "orbit_data.json"
+from shared.loader import load_json, PIPELINE_JSON, CORPUS_JSON, ORBIT_JSON
 
 REPORT_PATH = OUTPUT_DIR / "institutional_dissent_report.md"
 DATA_PATH = OUTPUT_DIR / "institutional_dissent_data.json"
@@ -67,20 +65,6 @@ class _SafeEncoder(json.JSONEncoder):
         if hasattr(obj, 'item'):
             return obj.item()
         return super().default(obj)
-
-
-# ---------------------------------------------------------------------------
-# Data loading
-# ---------------------------------------------------------------------------
-
-def load_json(path, label):
-    """Load a JSON file, returning {} on failure."""
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Warning: Could not load {label} ({path}): {e}", file=sys.stderr)
-        return {}
 
 
 def descriptive_stats(values):

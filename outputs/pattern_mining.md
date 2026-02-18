@@ -31,26 +31,26 @@ Constraints with identical structural signatures but different claimed types.
 
 | Signature | Count | Types Present | Domains | Examples |
 |-----------|-------|---------------|---------|----------|
-| (0.6, 0.7, False, True)        |    76 | tangled_rope, snare, piton | political, economic, environmental, technological/economic/biological, technological/economic | ai_performance_watermark, ai_religion_regulation |
-| (0.8, 0.7, False, True)        |    68 | tangled_rope, snare, piton | biological/economic/social, technological/cybernetic/security, economic/technological/regulatory | abstraction_boundary_overrun, adaptive_lag_trap |
-| (0.8, 0.8, False, True)        |    68 | tangled_rope, snare, piton | geopolitical/technological, organizational/political, geopolitical/political | ad_fus_coordination, ai_driven_surveillance_sensor_layer |
-| (0.6, 0.8, False, True)        |    51 | tangled_rope, piton  | geopolitical/technological, technological/economic, political/social/legal | ai_compute_capital_moat, airbnb_str_regulation |
-| (0.9, 0.8, False, True)        |    50 | tangled_rope, snare, piton | social/political/informational, technological/labor, informational/psychological/sociological | adversarial_truth_decay, agency_atrophy |
-| (0.5, 0.7, False, True)        |    42 | tangled_rope, snare, piton | geopolitical/technological, political/institutional, scientific | ai_auditability_gap, ai_training_data_dependency |
-| (0.7, 0.8, False, True)        |    42 | tangled_rope, snare, piton | social/philosophical, geopolitical/information, social/psychological/economic | ai_banal_capture, ai_professional_displacement |
-| (0.1, 0.1, True, False)        |    40 | mountain, rope       | logical/economic, sociological/artistic, technological/physical | banach_fixed_point_theorem, banach_tarski_paradox |
-| (0.5, 0.8, False, True)        |    38 | scaffold, tangled_rope, piton | technological/biological, social/cognitive/technological, social/artistic/biological | ai_adoption_stigma, artificial_scarcity_scaffold |
-| (0.8, 0.9, False, True)        |    35 | tangled_rope, snare, piton | political/military, social/technological, technological/military | ad_synaptic_deficit, apartheid_nuclear_program |
-| (0.8, 0.6, False, True)        |    24 | tangled_rope, snare, piton, rope | biological/cognitive/educational, social/environmental, social/technological | academic_peer_review_gatekeeping, academic_tenure_system |
-| (0.5, 0.6, False, True)        |    23 | tangled_rope, snare, piton | social, economic, technological, geopolitical, economic/social/cognitive | ai_task_horizon_reliability, armra_colostrum_regulation |
-| (0.4, 0.5, False, True)        |    19 | scaffold, tangled_rope, rope | scientific (mathematical physics / quantum chaos), social, economic/social | bgs_eigenvector_thermalization, constraint_yoneda |
-| (0.7, 0.6, False, True)        |    16 | tangled_rope, snare, piton | economic/political, technological/cognitive, psychological/social | abstraction_leakage, carrying_capacity |
-| (0.3, 0.5, False, True)        |    16 | scaffold, tangled_rope, [social_governance] | investigation/testing, social, technological/economic | alzheimers_levetiracetam, china_africa_zero_tariff_2026 |
-| (0.2, 0.1, True, False)        |    16 | mountain, rope       | technological (mathematics), mathematical, scientific/political/economic | axiom_of_choice, base_pair_complementarity |
-| (0.9, 0.7, False, True)        |    15 | tangled_rope, piton  | economic/political, technological/cybernetic/organizational, economic/technological/logistical | bureaucratic_legibility_collapse, capital_misallocation_spiral |
-| (0.7, 0.7, False, True)        |    14 | tangled_rope, piton  | economic/social, political/technological, technological/social | awareness_without_leverage, cb_far_beyond_human |
-| (0.5, 0.5, False, True)        |    13 | tangled_rope, rope   | economic/social, social, political/technological | access_arbitrage, aging_longevity_tests |
-| (0.6, 0.6, False, True)        |    13 | tangled_rope, piton  | economic/political, economic/technological/political, technological/social | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
+| (0.6, 0.7, False, True)        |    76 | piton, snare, tangled_rope | bio_industrial, social/cognitive, economic/political | ai_performance_watermark, ai_religion_regulation |
+| (0.8, 0.7, False, True)        |    68 | piton, snare, tangled_rope | political/social, technological/computational, biological/technological/social | abstraction_boundary_overrun, adaptive_lag_trap |
+| (0.8, 0.8, False, True)        |    68 | piton, snare, tangled_rope | geopolitical/technological, political/social, economic/technological/infrastructural | ad_fus_coordination, ai_driven_surveillance_sensor_layer |
+| (0.6, 0.8, False, True)        |    51 | piton, tangled_rope  | geopolitical/technological, social/cognitive, economic/political | ai_compute_capital_moat, airbnb_str_regulation |
+| (0.9, 0.8, False, True)        |    50 | piton, snare, tangled_rope | technological/infrastructural/economic, social/informational/technological, economic/psychological/technological | adversarial_truth_decay, agency_atrophy |
+| (0.5, 0.7, False, True)        |    42 | piton, snare, tangled_rope | geopolitical/technological, social/economic/linguistic, social/political/religious | ai_auditability_gap, ai_training_data_dependency |
+| (0.7, 0.8, False, True)        |    42 | piton, snare, tangled_rope | political/social, social/philosophical, geopolitical/maritime | ai_banal_capture, ai_professional_displacement |
+| (0.1, 0.1, True, False)        |    40 | mountain, rope       | biological/technological/social, mathematical / logical, technological/computational | banach_fixed_point_theorem, banach_tarski_paradox |
+| (0.5, 0.8, False, True)        |    38 | piton, scaffold, tangled_rope | political/social, philosophical/social/technological, social/political/religious | ai_adoption_stigma, artificial_scarcity_scaffold |
+| (0.8, 0.9, False, True)        |    35 | piton, snare, tangled_rope | political/social, economic/political, political/military/technological | ad_synaptic_deficit, apartheid_nuclear_program |
+| (0.8, 0.6, False, True)        |    24 | piton, snare, tangled_rope, rope | social/economic/technological, technological/social, social/cultural | academic_peer_review_gatekeeping, academic_tenure_system |
+| (0.5, 0.6, False, True)        |    23 | piton, snare, tangled_rope | religious/social, social/economic/religious, economic, technological, geopolitical | ai_task_horizon_reliability, armra_colostrum_regulation |
+| (0.4, 0.5, False, True)        |    19 | rope, scaffold, tangled_rope | social/psychological, economic/legal/technological, political | bgs_eigenvector_thermalization, constraint_yoneda |
+| (0.7, 0.6, False, True)        |    16 | piton, snare, tangled_rope | political, psychological/social, technological/social | abstraction_leakage, carrying_capacity |
+| (0.3, 0.5, False, True)        |    16 | [social_governance], scaffold, tangled_rope | social/psychological, political, economic | alzheimers_levetiracetam, china_africa_zero_tariff_2026 |
+| (0.2, 0.1, True, False)        |    16 | mountain, rope       | mathematical/logical, mathematical, mathematical/technological | axiom_of_choice, base_pair_complementarity |
+| (0.9, 0.7, False, True)        |    15 | piton, tangled_rope  | social/psychological, technological/cybernetic/organizational, political/organizational/informational | bureaucratic_legibility_collapse, capital_misallocation_spiral |
+| (0.7, 0.7, False, True)        |    14 | piton, tangled_rope  | political/technological, technological/social, psychological/economic | awareness_without_leverage, cb_far_beyond_human |
+| (0.5, 0.5, False, True)        |    13 | rope, tangled_rope   | health/economic, political/technological, mathematical/technological | access_arbitrage, aging_longevity_tests |
+| (0.6, 0.6, False, True)        |    13 | piton, tangled_rope  | social/wellness/technological, political/social, political | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
 
 ## Candidate Category Analysis
 

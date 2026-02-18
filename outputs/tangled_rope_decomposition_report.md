@@ -5,13 +5,13 @@ tangled_rope fiber using continuous snare-lean metric (psi) and coalition struct
 
 ## 1. MaxEnt Replication Validation
 
-Validated Python MaxEnt replication against 182 known distributions
+Validated Python MaxEnt replication against 0 known distributions
 from `maxent_report.md` (hard disagreement constraints).
 
 | Property | Value |
 |----------|-------|
-| **Distributions tested** | 182 |
-| **Passed (tolerance 0.05)** | 182 (100.0%) |
+| **Distributions tested** | 0 |
+| **Passed (tolerance 0.05)** | 0 (0.0%) |
 | **Failed** | 0 |
 
 ## 2. Band Distribution

@@ -22,10 +22,9 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from tangled_decomposition import (
-    load_all_data, maxent_classify, MAXENT_TYPES,
-    load_json, PIPELINE_JSON,
-)
+from shared.loader import load_json, load_all_data, PIPELINE_JSON
+from shared.constants import MAXENT_TYPES
+from tangled_decomposition import maxent_classify
 
 # ---------------------------------------------------------------------------
 # Optional dependencies

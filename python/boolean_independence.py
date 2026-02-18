@@ -46,13 +46,11 @@ except ImportError:
 ROOT_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT_DIR / "outputs"
 
-PIPELINE_JSON = OUTPUT_DIR / "pipeline_output.json"
-CORPUS_JSON = OUTPUT_DIR / "corpus_data.json"
+from shared.loader import load_json, PIPELINE_JSON, CORPUS_JSON
+from shared.constants import MAXENT_TYPES
 
 REPORT_PATH = OUTPUT_DIR / "boolean_independence_report.md"
 DATA_PATH = OUTPUT_DIR / "boolean_independence_data.json"
-
-MAXENT_TYPES = ["mountain", "rope", "tangled_rope", "snare", "scaffold", "piton"]
 
 
 class _SafeEncoder(json.JSONEncoder):
@@ -61,20 +59,6 @@ class _SafeEncoder(json.JSONEncoder):
         if hasattr(obj, 'item'):
             return obj.item()
         return super().default(obj)
-
-
-# ---------------------------------------------------------------------------
-# Data loading
-# ---------------------------------------------------------------------------
-
-def load_json(path, label):
-    """Load a JSON file, returning {} on failure."""
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Warning: Could not load {label} ({path}): {e}", file=sys.stderr)
-        return {}
 
 
 def load_constraints():

@@ -16,40 +16,19 @@ Usage:
 """
 
 import json
-import math
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from tangled_decomposition import (
-    load_all_data, maxent_classify, _read_config,
-    MAXENT_TYPES, apply_signature_override,
-    load_json, PIPELINE_JSON,
-)
+from shared.loader import load_json, load_all_data, PIPELINE_JSON, OUTPUT_DIR
+from shared.constants import MAXENT_TYPES, N_TYPES, shannon_entropy
+from tangled_decomposition import maxent_classify, apply_signature_override
 
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
-OUTPUT_DIR = ROOT_DIR / "outputs"
-
 CONFIDENCE_REPORT = OUTPUT_DIR / "classification_confidence_report.md"
-
-N_TYPES = len(MAXENT_TYPES)
-
-# ---------------------------------------------------------------------------
-# Per-constraint confidence metrics (Section 3.1)
-# ---------------------------------------------------------------------------
-
-def shannon_entropy(dist):
-    """Normalized Shannon entropy of a probability distribution."""
-    h = 0.0
-    for p in dist.values():
-        if p > 1e-15:
-            h -= p * math.log(p)
-    h_max = math.log(N_TYPES)
-    return h / h_max if h_max > 0 else 0.0
 
 
 def compute_confidence_metrics(cid, c, dist):

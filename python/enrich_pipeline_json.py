@@ -15,82 +15,19 @@ Usage:
 """
 
 import json
-import math
 import sys
 from pathlib import Path
+
+from shared.loader import PIPELINE_JSON, OUTPUT_DIR
+from shared.constants import (
+    shannon_entropy, compute_psi, classify_band, classify_coalition,
+)
 
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
-OUTPUT_DIR = ROOT_DIR / "outputs"
-
-PIPELINE_JSON = OUTPUT_DIR / "pipeline_output.json"
 ORBIT_JSON = OUTPUT_DIR / "orbit_data.json"
-
-MAXENT_TYPES = ["mountain", "rope", "tangled_rope", "snare", "scaffold", "piton"]
-N_TYPES = len(MAXENT_TYPES)
-
-# ---------------------------------------------------------------------------
-# Imported logic (inlined from tangled_decomposition.py / classification_confidence.py)
-# ---------------------------------------------------------------------------
-
-PSI_ROPE_LEANING = 0.3
-PSI_SNARE_LEANING = 0.7
-
-
-def shannon_entropy(dist):
-    """Normalized Shannon entropy of a probability distribution."""
-    h = 0.0
-    for p in dist.values():
-        if p > 1e-15:
-            h -= p * math.log(p)
-    h_max = math.log(N_TYPES)
-    return h / h_max if h_max > 0 else 0.0
-
-
-def compute_psi(dist):
-    """psi = P(snare) / (P(rope) + P(snare) + 0.001). Continuous snare-lean in [0,1]."""
-    p_rope = dist.get("rope", 0.0)
-    p_snare = dist.get("snare", 0.0)
-    return p_snare / (p_rope + p_snare + 0.001)
-
-
-def classify_band(psi):
-    """Classify into rope_leaning / genuinely_tangled / snare_leaning."""
-    if psi < PSI_ROPE_LEANING:
-        return "rope_leaning"
-    if psi > PSI_SNARE_LEANING:
-        return "snare_leaning"
-    return "genuinely_tangled"
-
-
-def classify_coalition(orbit_contexts):
-    """Classify coalition type from orbit contexts (4 perspectives)."""
-    if not orbit_contexts or len(orbit_contexts) < 4:
-        return "other"
-
-    inst = orbit_contexts.get("institutional")
-    anal = orbit_contexts.get("analytical")
-    mod = orbit_contexts.get("moderate")
-    pwl = orbit_contexts.get("powerless")
-
-    all_types = [inst, anal, mod, pwl]
-    distinct = set(all_types)
-
-    if all(t == "tangled_rope" for t in all_types):
-        return "uniform_tangled"
-    if len(distinct) >= 3:
-        return "split_field"
-    others = [anal, mod, pwl]
-    if inst in ("rope", "scaffold"):
-        tangled_snare_count = sum(1 for t in others if t in ("tangled_rope", "snare"))
-        if tangled_snare_count >= 2:
-            return "institutional_dissent"
-    if pwl == mod and anal != pwl:
-        return "analytical_dissent"
-    return "other"
 
 
 # ---------------------------------------------------------------------------
