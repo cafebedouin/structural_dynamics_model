@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -111,6 +112,7 @@ narrative_ontology:constraint_metric(reciprocity_laws_math, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(reciprocity_laws_math, mountain).
 narrative_ontology:human_readable(reciprocity_laws_math, "Mathematical Reciprocity Laws (Quadratic)").
+narrative_ontology:topic_domain(reciprocity_laws_math, "mathematical/logical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the structure of number fields.

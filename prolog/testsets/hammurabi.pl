@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(hammurabi_lex_talionis, theater_ratio, 0.10
 % Constraint self-claim: The code claims to be divine, immutable law.
 narrative_ontology:constraint_claim(hammurabi_lex_talionis, tangled_rope).
 narrative_ontology:human_readable(hammurabi_lex_talionis, "The Law of Retaliation (Lex Talionis) in Hammurabi's Code").
+narrative_ontology:topic_domain(hammurabi_lex_talionis, "political/social").
 
 % Binary flags & structural properties
 domain_priors:requires_active_enforcement(hammurabi_lex_talionis). % Requires state-level execution/mutilation.

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(ritual_without_belief, theater_ratio, 0.95)
 % The institution claims it is for coordination and stability.
 narrative_ontology:constraint_claim(ritual_without_belief, tangled_rope).
 narrative_ontology:human_readable(ritual_without_belief, "The Hollow Orthopraxy").
+narrative_ontology:topic_domain(ritual_without_belief, "social/organizational/religious").
 
 % Binary flags
 domain_priors:requires_active_enforcement(ritual_without_belief). % Required for Tangled Rope

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(google_ai_search_overview, theater_ratio, 0
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(google_ai_search_overview, tangled_rope).
 narrative_ontology:human_readable(google_ai_search_overview, "Google's AI-Powered Search Summary Layer (Gemini)").
+narrative_ontology:topic_domain(google_ai_search_overview, "technological/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(google_ai_search_overview). % The AI layer is an actively maintained algorithmic choice.

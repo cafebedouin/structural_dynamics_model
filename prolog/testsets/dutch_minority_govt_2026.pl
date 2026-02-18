@@ -42,7 +42,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(dutch_minority_govt_2026, theater_ratio, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(dutch_minority_govt_2026, tangled_rope).
 narrative_ontology:human_readable(dutch_minority_govt_2026, "Dutch Minority Government External Support Agreement (2026)").
+narrative_ontology:topic_domain(dutch_minority_govt_2026, "political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(dutch_minority_govt_2026). % Required for Tangled Rope

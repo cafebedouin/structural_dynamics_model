@@ -22,7 +22,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -127,6 +128,7 @@ narrative_ontology:measurement(ec_ex_t5, emotional_cycles_2026, extractiveness, 
 % ============================================================================
 narrative_ontology:constraint_claim(emotional_cycles_2026, tangled_rope).
 narrative_ontology:human_readable(emotional_cycles_2026, "The Kelley-Connor Cycle of Change").
+narrative_ontology:topic_domain(emotional_cycles_2026, "psychology/behavioral_science").
 domain_priors:requires_active_enforcement(emotional_cycles_2026).
 narrative_ontology:interval(emotional_cycles_2026, 0, 10).
 narrative_ontology:has_sunset_clause(emotional_cycles_2026).

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(hp_liberalism, theater_ratio, 0.78).
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(hp_liberalism, tangled_rope).
 narrative_ontology:human_readable(hp_liberalism, "The Potterverse Liberalism Constraint").
+narrative_ontology:topic_domain(hp_liberalism, "socio_political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(hp_liberalism). % Required for Tangled Rope (maintaining "canon" moral guides).

@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(incentive_surface_warping, theater_ratio, 0
 % The system's true nature is a hybrid of coordination and extraction.
 narrative_ontology:constraint_claim(incentive_surface_warping, tangled_rope).
 narrative_ontology:human_readable(incentive_surface_warping, "The Perverse Optimization Trap (Goodhart's Law)").
+narrative_ontology:topic_domain(incentive_surface_warping, "economic/organizational/technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(incentive_surface_warping).

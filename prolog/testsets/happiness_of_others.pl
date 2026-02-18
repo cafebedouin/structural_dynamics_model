@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(happiness_of_others, theater_ratio, 0.15).
 % It claims to be a form of social coordination (mutual care).
 narrative_ontology:constraint_claim(happiness_of_others, tangled_rope).
 narrative_ontology:human_readable(happiness_of_others, "The Social Responsibility for the Happiness of Others").
+narrative_ontology:topic_domain(happiness_of_others, "social/psychological").
 
 % Binary flags
 % The social norm requires active enforcement through praise, guilt, and expectation.

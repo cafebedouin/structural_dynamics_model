@@ -44,7 +44,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(fgh_hierarchy_2026, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(fgh_hierarchy_2026, mountain).
 narrative_ontology:human_readable(fgh_hierarchy_2026, "The Fast-Growing Hierarchy").
+narrative_ontology:topic_domain(fgh_hierarchy_2026, "mathematical/computational").
 
 % --- Binary flags ---
 % No flags needed for a Mountain.

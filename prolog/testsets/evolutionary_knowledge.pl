@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(evolutionary_knowledge, theater_ratio, 0.75
 % It presents as an unavoidable natural process.
 narrative_ontology:constraint_claim(evolutionary_knowledge, tangled_rope).
 narrative_ontology:human_readable(evolutionary_knowledge, "The Primordial Pain-Epistemic Constraint").
+narrative_ontology:topic_domain(evolutionary_knowledge, "biological/philosophy/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(evolutionary_knowledge). % Maintained by the "Cruel Gene" or academic standards.

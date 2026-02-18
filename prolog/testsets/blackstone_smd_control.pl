@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(blackstone_smd_control, theater_ratio, 0.10
 % but its function is pure enforcement of founder control.
 narrative_ontology:constraint_claim(blackstone_smd_control, tangled_rope).
 narrative_ontology:human_readable(blackstone_smd_control, "Blackstone Senior Managing Director Voting Control").
+narrative_ontology:topic_domain(blackstone_smd_control, "economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(blackstone_smd_control). % Required for Tangled Rope (enforced via corporate charter and Delaware law).

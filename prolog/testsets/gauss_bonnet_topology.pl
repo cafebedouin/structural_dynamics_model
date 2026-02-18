@@ -29,7 +29,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -97,6 +98,7 @@ narrative_ontology:constraint_metric(gauss_bonnet_topology, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(gauss_bonnet_topology, mountain).
 narrative_ontology:human_readable(gauss_bonnet_topology, "Gauss-Bonnet Theorem (Curvature-Topology Link)").
+narrative_ontology:topic_domain(gauss_bonnet_topology, "mathematical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the axioms of calculus and topology.

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(knowledge_action_gap, theater_ratio, 0.25).
 % It presents as an immutable fact of human nature ("people are just lazy/irrational").
 narrative_ontology:constraint_claim(knowledge_action_gap, snare).
 narrative_ontology:human_readable(knowledge_action_gap, "The Informational Friction Barrier").
+narrative_ontology:topic_domain(knowledge_action_gap, "social/technological").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(knowledge_action_gap). % Enforcement via cognitive/social friction.

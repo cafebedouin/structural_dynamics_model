@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(asymmetric_burden_distribution, theater_rat
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(asymmetric_burden_distribution, piton).
 narrative_ontology:human_readable(asymmetric_burden_distribution, "The Externalization Lever").
+narrative_ontology:topic_domain(asymmetric_burden_distribution, "economic/social/logistical").
 
 % Binary flags
 domain_priors:requires_active_enforcement(asymmetric_burden_distribution). % Required for Tangled Rope

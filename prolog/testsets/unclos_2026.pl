@@ -22,7 +22,8 @@
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:extractiveness_for_agent/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@
 narrative_ontology:interval(unclos_era, 1982, 2026).
 narrative_ontology:constraint_claim(unclos_2026, rope).
 narrative_ontology:human_readable(unclos_2026, "UN Convention on the Law of the Sea (2026 Context)").
+narrative_ontology:topic_domain(unclos_2026, "legal/geopolitical/environmental").
 
 % Base extractiveness: 0.3
 % Rationale: While largely fair, it "extracts" absolute freedom of navigation 

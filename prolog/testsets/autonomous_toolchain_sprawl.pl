@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(autonomous_toolchain_sprawl, theater_ratio,
 % The toolchain is presented as an essential coordination mechanism.
 narrative_ontology:constraint_claim(autonomous_toolchain_sprawl, piton).
 narrative_ontology:human_readable(autonomous_toolchain_sprawl, "The Recursive Maintenance Trap").
+narrative_ontology:topic_domain(autonomous_toolchain_sprawl, "technological").
 
 % Binary flags
 % The complexity requires active enforcement of standards and practices to prevent collapse.

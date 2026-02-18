@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,6 +55,7 @@
 narrative_ontology:interval(shitty_feedback_handling, 0, 10).
 narrative_ontology:constraint_claim(shitty_feedback_handling, rope).
 narrative_ontology:human_readable(shitty_feedback_handling, "The Protocol for Handling Shitty Feedback").
+narrative_ontology:topic_domain(shitty_feedback_handling, "social/professional").
 
 % Base extractiveness: Moderate (0.4)
 % Rationale: Shitty feedback extracts emotional energy, time, and potentially 

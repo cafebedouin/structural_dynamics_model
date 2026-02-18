@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(taiwan_existential_sovereignty, theater_rat
 % The geopolitical arrangement is maintained by active pressure and deterrence.
 narrative_ontology:constraint_claim(taiwan_existential_sovereignty, tangled_rope).
 narrative_ontology:human_readable(taiwan_existential_sovereignty, "The Taiwan Existential Sovereignty Constraint").
+narrative_ontology:topic_domain(taiwan_existential_sovereignty, "political/economic/technological").
 
 % Binary flags
 % Requires constant military patrols, diplomatic maneuvering, and economic statecraft.

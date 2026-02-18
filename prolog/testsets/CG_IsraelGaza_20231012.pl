@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(cg_israelgaza_20231012, theater_ratio, 0.20
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(cg_israelgaza_20231012, tangled_rope).
 narrative_ontology:human_readable(cg_israelgaza_20231012, "Israeli Blockade of Gaza Strip").
+narrative_ontology:topic_domain(cg_israelgaza_20231012, "political").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(cg_israelgaza_20231012).      % Mandatory if Scaffold

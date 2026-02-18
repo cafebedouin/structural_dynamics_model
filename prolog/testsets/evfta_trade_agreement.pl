@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(evfta_trade_agreement, theater_ratio, 0.20)
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(evfta_trade_agreement, tangled_rope).
 narrative_ontology:human_readable(evfta_trade_agreement, "EU-Vietnam Free Trade Agreement (EVFTA)").
+narrative_ontology:topic_domain(evfta_trade_agreement, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(evfta_trade_agreement). % Required for Tangled Rope

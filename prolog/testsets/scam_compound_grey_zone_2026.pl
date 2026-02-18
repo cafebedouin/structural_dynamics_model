@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(scam_compound_2026, theater_ratio, 0.65).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(scam_compound_2026, snare).
+narrative_ontology:topic_domain(scam_compound_2026, "social/humanitarian/criminal").
 narrative_ontology:human_readable(scam_compound_2026, "The Southeast Asian Scam Compound \"Grey Zone\"").
 
 % --- Binary flags ---

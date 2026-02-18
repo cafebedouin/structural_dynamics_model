@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(model_collapse_feedback_loop, theater_ratio
 % The labs claim this is a necessary coordination mechanism for scaling.
 narrative_ontology:constraint_claim(model_collapse_feedback_loop, tangled_rope).
 narrative_ontology:human_readable(model_collapse_feedback_loop, "The Autophagous Intelligence Trap").
+narrative_ontology:topic_domain(model_collapse_feedback_loop, "technological/AI/informational").
 
 % Binary flags
 % The market pressure to use the latest, largest (synthetically trained) models

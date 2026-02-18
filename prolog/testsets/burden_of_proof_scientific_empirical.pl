@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(burden_of_proof_scientific, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(burden_of_proof_scientific, snare).
 narrative_ontology:human_readable(burden_of_proof_scientific, "Statistical Significance Threshold (p < 0.05)").
+narrative_ontology:topic_domain(burden_of_proof_scientific, "technological/social").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(burden_of_proof_scientific). % Required for Tangled Rope

@@ -38,7 +38,8 @@
     narrative_ontology:affects_constraint/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(no_cloning_theorem, resistance, 0.01).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(no_cloning_theorem, mountain).
 narrative_ontology:human_readable(no_cloning_theorem, "The No-Cloning Theorem").
+narrative_ontology:topic_domain(no_cloning_theorem, "technological").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The theorem is a mathematical derivation from the postulates of quantum

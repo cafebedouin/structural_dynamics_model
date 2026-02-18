@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -107,6 +108,7 @@ narrative_ontology:constraint_metric(three_body_unpredictability, resistance, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(three_body_unpredictability, mountain).
 narrative_ontology:human_readable(three_body_unpredictability, "The Three-Body Problem (Computational Irreducibility)").
+narrative_ontology:topic_domain(three_body_unpredictability, "technological/scientific").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint emerges from the natural laws of physics without human design.

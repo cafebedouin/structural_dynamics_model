@@ -32,7 +32,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(fossil_fuel_lock_in, resistance, 0.05).
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(fossil_fuel_lock_in, mountain).
 narrative_ontology:human_readable(fossil_fuel_lock_in, "Fossilized Regionalism (Alberta Carbon-Path Dependency)").
+narrative_ontology:topic_domain(fossil_fuel_lock_in, "economic/political").
 
 % --- Emergence flag ---
 domain_priors:emerges_naturally(fossil_fuel_lock_in).

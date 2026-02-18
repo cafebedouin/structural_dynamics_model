@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(nash_equilibrium_coordination, theater_rati
 % It is often presented as an inescapable law of rational behavior.
 narrative_ontology:constraint_claim(nash_equilibrium_coordination, tangled_rope).
 narrative_ontology:human_readable(nash_equilibrium_coordination, "Nash Equilibrium").
+narrative_ontology:topic_domain(nash_equilibrium_coordination, "economic/social").
 
 % Binary flags
 % The equilibrium is "enforced" by the rational calculations of the agents themselves.

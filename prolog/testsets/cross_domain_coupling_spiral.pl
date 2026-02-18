@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(cross_domain_coupling_spiral, theater_ratio
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(cross_domain_coupling_spiral, tangled_rope).
 narrative_ontology:human_readable(cross_domain_coupling_spiral, "The Entangled Dependency Vortex").
+narrative_ontology:topic_domain(cross_domain_coupling_spiral, "technological/economic/cybernetic").
 
 % Binary flags and structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(cross_domain_coupling_spiral).

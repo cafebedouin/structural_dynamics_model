@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(us_venezuela_blockade, theater_ratio, 0.20)
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_venezuela_blockade, snare).
 narrative_ontology:human_readable(us_venezuela_blockade, "Proposed US Naval Blockade of Venezuelan Oil Tankers").
+narrative_ontology:topic_domain(us_venezuela_blockade, "geopolitical/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_venezuela_blockade). % The blockade is pure enforcement.

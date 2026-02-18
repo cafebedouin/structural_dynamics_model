@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:constraint_metric(minimax_theorem_game_equilibrium, theater_r
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(minimax_theorem_game_equilibrium, tangled_rope).
 narrative_ontology:human_readable(minimax_theorem_game_equilibrium, "Minimax Theorem Enforcement in Strategic Games").
+narrative_ontology:topic_domain(minimax_theorem_game_equilibrium, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(minimax_theorem_game_equilibrium). % Active enforcement of the equilibrium to maintain the extraction dynamic.

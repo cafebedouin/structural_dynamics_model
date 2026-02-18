@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(ergo_storage_rent, theater_ratio, 0.1).
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(ergo_storage_rent, tangled_rope).
 narrative_ontology:human_readable(ergo_storage_rent, "Ergo Storage Rent (UTXO Demurrage)").
+narrative_ontology:topic_domain(ergo_storage_rent, "technological/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(ergo_storage_rent). % Required for Tangled Rope

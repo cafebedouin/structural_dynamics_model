@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(qualified_immunity, theater_ratio, 0.1).
 % The judiciary presents it as a necessary coordination tool to prevent chilling government action.
 narrative_ontology:constraint_claim(qualified_immunity, tangled_rope).
 narrative_ontology:human_readable(qualified_immunity, "Qualified Immunity Doctrine").
+narrative_ontology:topic_domain(qualified_immunity, "political/legal").
 
 % Binary flags
 domain_priors:requires_active_enforcement(qualified_immunity). % Requires active judicial enforcement via summary judgment.

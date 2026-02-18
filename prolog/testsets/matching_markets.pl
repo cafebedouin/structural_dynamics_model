@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(matching_market_congestion_externality, the
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(matching_market_congestion_externality, tangled_rope).
 narrative_ontology:human_readable(matching_market_congestion_externality, "Matching Market Congestion Externality").
+narrative_ontology:topic_domain(matching_market_congestion_externality, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(matching_market_congestion_externality). % The platform's algorithm is the enforcement mechanism.

@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(endocrine_disruption_society, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(endocrine_disruption_society, tangled_rope).
 narrative_ontology:human_readable(endocrine_disruption_society, "Systemic Endocrine Disruption via Industrial Chemicals").
+narrative_ontology:topic_domain(endocrine_disruption_society, "social/environmental/biological").
 
 % --- Binary flags ---
 % Enforcement is the active maintenance of regulatory standards that permit

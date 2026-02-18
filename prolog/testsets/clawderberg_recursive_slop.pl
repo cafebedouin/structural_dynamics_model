@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(clawderberg_recursive_slop, theater_ratio, 
 % for "synthetic data generation".
 narrative_ontology:constraint_claim(clawderberg_recursive_slop, piton).
 narrative_ontology:human_readable(clawderberg_recursive_slop, "The Recursive Slop Loop").
+narrative_ontology:topic_domain(clawderberg_recursive_slop, "technological").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(clawderberg_recursive_slop, current_ai_training_algorithms).

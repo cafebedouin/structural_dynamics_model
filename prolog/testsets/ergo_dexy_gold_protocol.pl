@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(dexy_gold_protocol, theater_ratio, 0.11).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(dexy_gold_protocol, tangled_rope).
 narrative_ontology:human_readable(dexy_gold_protocol, "DexyGold Seigniorage Mechanism").
+narrative_ontology:topic_domain(dexy_gold_protocol, "economic/technological").
 
 % --- Binary flags ---
 % The protocol's rules (e.g., redemption locks) are enforced by the smart

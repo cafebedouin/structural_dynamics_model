@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(shobies_existential_commitment, theater_rat
 % It claims to be a fundamental mechanism for achieving results.
 narrative_ontology:constraint_claim(shobies_existential_commitment, tangled_rope).
 narrative_ontology:human_readable(shobies_existential_commitment, "The Risk-Safety Paradox").
+narrative_ontology:topic_domain(shobies_existential_commitment, "social/existential").
 
 % Binary flags
 % The commitment is an internal, psychological enforcement mechanism.

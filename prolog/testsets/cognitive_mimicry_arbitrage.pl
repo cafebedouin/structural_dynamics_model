@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(cma, theater_ratio, 0.10).
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(cma, tangled_rope).
 narrative_ontology:human_readable(cma, "Cognitive Mimicry Arbitrage").
+narrative_ontology:topic_domain(cma, "technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(cma). % Required for Tangled Rope (massive compute for training)

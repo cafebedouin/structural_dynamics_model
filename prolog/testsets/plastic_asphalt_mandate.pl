@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(plastic_asphalt_mandate, theater_ratio, 0.3
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(plastic_asphalt_mandate, tangled_rope).
 narrative_ontology:human_readable(plastic_asphalt_mandate, "Government Mandate for Plastic-Infused Asphalt").
+narrative_ontology:topic_domain(plastic_asphalt_mandate, "economic/environmental/political").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(plastic_asphalt_mandate).      % Mandatory if Scaffold

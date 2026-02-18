@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(rogers_commission_institutional_analysis, t
 % The system claimed to be a coordination mechanism for achieving ambitious goals.
 narrative_ontology:constraint_claim(rogers_commission_institutional_analysis, snare).
 narrative_ontology:human_readable(rogers_commission_institutional_analysis, "The Silent Safety Silo (NASA Decision-Making Pre-Challenger)").
+narrative_ontology:topic_domain(rogers_commission_institutional_analysis, "political/technological").
 
 % Binary flags
 % Requires active enforcement via "Launch Fever" and the marginalization

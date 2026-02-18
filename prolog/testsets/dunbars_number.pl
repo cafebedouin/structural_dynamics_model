@@ -44,7 +44,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -108,6 +109,7 @@ narrative_ontology:constraint_metric(dunbars_number, resistance, 0.01).
 % The analytical view is that this is a fixed feature of human biology.
 narrative_ontology:constraint_claim(dunbars_number, mountain).
 narrative_ontology:human_readable(dunbars_number, "Dunbar's Number (Cognitive Limit)").
+narrative_ontology:topic_domain(dunbars_number, "social/biological").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint arises from the structure of human cognition without design.

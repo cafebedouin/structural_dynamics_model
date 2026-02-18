@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -62,6 +63,7 @@
 narrative_ontology:interval(glp1_market_impact_2026, 2024, 2030).
 narrative_ontology:constraint_claim(glp1_payload_efficiency_pivot, rope).
 narrative_ontology:human_readable(glp1_payload_efficiency_pivot, "GLP-1 Adoption and the Airline Fuel-Weight Constraint").
+narrative_ontology:topic_domain(glp1_payload_efficiency_pivot, "economic/technological").
 
 % Base extractiveness score: Low-Moderate (0.35)
 % Rationale: The "extraction" is beneficial (fuel savings). However, there is 

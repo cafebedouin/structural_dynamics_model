@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(elite_identity_capture_2026, theater_ratio,
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(elite_identity_capture_2026, tangled_rope).
 narrative_ontology:human_readable(elite_identity_capture_2026, "Elite Identity Capture (Staley-Bagg Synthesis)").
+narrative_ontology:topic_domain(elite_identity_capture_2026, "political/social").
 
 % --- Binary flags ---
 % The process of "buying off" dissent requires continuous cultural and economic

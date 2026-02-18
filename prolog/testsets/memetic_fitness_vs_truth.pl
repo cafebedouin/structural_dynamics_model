@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(memetic_fitness_vs_truth, theater_ratio, 0.
 % The platform frames this as a necessary mechanism for coordinating attention.
 narrative_ontology:constraint_claim(memetic_fitness_vs_truth, piton).
 narrative_ontology:human_readable(memetic_fitness_vs_truth, "The Viral Distortion").
+narrative_ontology:topic_domain(memetic_fitness_vs_truth, "social/informational/technological").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(memetic_fitness_vs_truth). % Algorithmic promotion/demotion is active enforcement.

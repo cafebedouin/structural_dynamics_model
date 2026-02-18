@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,6 +55,7 @@
 narrative_ontology:interval(somatic_focusing_awareness, 0, 10).
 narrative_ontology:constraint_claim(somatic_focusing_awareness, rope).
 narrative_ontology:human_readable(somatic_focusing_awareness, "Somatic Focusing Awareness").
+narrative_ontology:topic_domain(somatic_focusing_awareness, "social/psychological").
 
 % Base extractiveness: 0.2.
 % This is a "nourishing" practice that aims to prevent the "poison" of reactive speaking.

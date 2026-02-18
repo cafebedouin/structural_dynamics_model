@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(hub_short_form_tv_market_fragmentation, the
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(hub_short_form_tv_market_fragmentation, tangled_rope).
 narrative_ontology:human_readable(hub_short_form_tv_market_fragmentation, "Short-Form Video's Impact on Traditional TV Market Fragmentation").
+narrative_ontology:topic_domain(hub_short_form_tv_market_fragmentation, "economic").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(hub_short_form_tv_market_fragmentation).      % Mandatory if Scaffold

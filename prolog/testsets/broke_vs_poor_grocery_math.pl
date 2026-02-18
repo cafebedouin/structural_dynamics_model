@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(broke_vs_poor_grocery_math, theater_ratio, 
 % It is presented as a necessary consequence of scarcity, enforced by the checkout.
 narrative_ontology:constraint_claim(broke_vs_poor_grocery_math, tangled_rope).
 narrative_ontology:human_readable(broke_vs_poor_grocery_math, "The Cognitive Load of Poverty (Grocery Math)").
+narrative_ontology:topic_domain(broke_vs_poor_grocery_math, "economic/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(broke_vs_poor_grocery_math). % Enforced by the point-of-sale system.

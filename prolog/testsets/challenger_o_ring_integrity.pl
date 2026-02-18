@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(challenger_o_ring_integrity, theater_ratio,
 % Management framed the decision as a manageable risk (coordination), but it was pure enforcement of schedule.
 narrative_ontology:constraint_claim(challenger_o_ring_integrity, tangled_rope).
 narrative_ontology:human_readable(challenger_o_ring_integrity, "Challenger SRB O-Ring Integrity Failure").
+narrative_ontology:topic_domain(challenger_o_ring_integrity, "technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(challenger_o_ring_integrity). % Required active management override of engineering advice.

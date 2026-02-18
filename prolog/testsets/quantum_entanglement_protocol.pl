@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@
 narrative_ontology:interval(interstellar_quantum_link, 0, 10).
 narrative_ontology:constraint_claim(quantum_entanglement_protocol, rope).
 narrative_ontology:human_readable(quantum_entanglement_protocol, "Instantaneous Quantum Entanglement Communication (Hypothetical)").
+narrative_ontology:topic_domain(quantum_entanglement_protocol, "technological/scientific").
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. Low; while the infrastructure is expensive, it 

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(em_clinical_guidelines, theater_ratio, 0.25
 % The system is presented as a pure coordination mechanism for quality improvement.
 narrative_ontology:constraint_claim(em_clinical_guidelines, tangled_rope).
 narrative_ontology:human_readable(em_clinical_guidelines, "Emergency Medicine Clinical Guidelines").
+narrative_ontology:topic_domain(em_clinical_guidelines, "medical/legal/institutional").
 
 % Binary flags
 domain_priors:requires_active_enforcement(em_clinical_guidelines). % Required for Tangled Rope; enforced via audits and legal "standard of care".

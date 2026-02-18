@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(guthrie_kidnapping_2026, theater_ratio, 0.8
 % The constraint's claim is one of raw power enforcement.
 narrative_ontology:constraint_claim(guthrie_kidnapping_2026, snare).
 narrative_ontology:human_readable(guthrie_kidnapping_2026, "The Guthrie Ransom & Post-Truth Verification Crisis").
+narrative_ontology:topic_domain(guthrie_kidnapping_2026, "social/technological").
 
 % The constraint requires continuous, active coercion.
 domain_priors:requires_active_enforcement(guthrie_kidnapping_2026).

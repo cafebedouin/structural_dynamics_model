@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -103,6 +104,7 @@ narrative_ontology:constraint_metric(solar_system_weirdness, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(solar_system_weirdness, rope).
 narrative_ontology:human_readable(solar_system_weirdness, "The Solar System Configuration Anomaly").
+narrative_ontology:topic_domain(solar_system_weirdness, "technological/scientific").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The physical laws of planetary formation emerge naturally.

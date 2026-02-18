@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(deep_earth_hydrogen_availability, resistanc
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(deep_earth_hydrogen_availability, mountain).
 narrative_ontology:human_readable(deep_earth_hydrogen_availability, "Deep Earth Hydrogen Availability Limit").
+narrative_ontology:topic_domain(deep_earth_hydrogen_availability, "technological").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(deep_earth_hydrogen_availability).      % Mandatory if Scaffold

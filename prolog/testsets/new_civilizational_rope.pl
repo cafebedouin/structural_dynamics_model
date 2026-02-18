@@ -23,7 +23,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -62,6 +63,7 @@ narrative_ontology:constraint_metric(decentralized_infrastructure_rope, theater_
 % Constraint classification claim
 narrative_ontology:constraint_claim(decentralized_infrastructure_rope, tangled_rope).
 narrative_ontology:human_readable(decentralized_infrastructure_rope, "The Auditable Bridge").
+narrative_ontology:topic_domain(decentralized_infrastructure_rope, "technological/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(decentralized_infrastructure_rope). % Automated protocol enforcement.

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(c_physical_blue_wavelength, resistance, 0.0
 % A physical law is the canonical example of a Mountain claim.
 narrative_ontology:constraint_claim(c_physical_blue_wavelength, mountain).
 narrative_ontology:human_readable(c_physical_blue_wavelength, "The Physical Wavelength of Blue Light").
+narrative_ontology:topic_domain(c_physical_blue_wavelength, "scientific/physical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint emerges naturally from the laws of physics without human design.

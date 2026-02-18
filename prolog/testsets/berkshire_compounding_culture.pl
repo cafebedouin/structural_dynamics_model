@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -102,6 +103,7 @@ narrative_ontology:constraint_metric(berkshire_compounding_culture, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(berkshire_compounding_culture, rope).
 narrative_ontology:human_readable(berkshire_compounding_culture, "The Berkshire Hathaway Culture of Compounding").
+narrative_ontology:topic_domain(berkshire_compounding_culture, "economic").
 
 % --- Binary flags ---
 % Rationale: Maintaining the culture requires "wisdom and vigilance" against

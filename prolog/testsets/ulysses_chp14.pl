@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(ulysses_oxen_1904, theater_ratio, 0.98).
 % Constraint classification claim
 narrative_ontology:constraint_claim(ulysses_oxen_1904, piton).
 narrative_ontology:human_readable(ulysses_oxen_1904, "The Gestation Mountain (Holles Street)").
+narrative_ontology:topic_domain(ulysses_oxen_1904, "biological/linguistic/medical").
 
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_oxen_1904, biological_continuance).

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(cognitive_energy_budget, theater_ratio, 0.4
 % Constraint self-claim: Platforms frame their systems as coordination tools.
 narrative_ontology:constraint_claim(cognitive_energy_budget, tangled_rope).
 narrative_ontology:human_readable(cognitive_energy_budget, "The Attention Exhaustion Trap").
+narrative_ontology:topic_domain(cognitive_energy_budget, "cognitive/technological/social").
 
 % Binary flags & Structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(cognitive_energy_budget). % Dark patterns, notification engines require constant maintenance.

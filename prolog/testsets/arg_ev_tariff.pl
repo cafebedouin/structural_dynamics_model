@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(arg_ev_tariff, theater_ratio, 0.20).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(arg_ev_tariff, tangled_rope).
 narrative_ontology:human_readable(arg_ev_tariff, "Argentine Tariff on Chinese Electric Vehicles").
+narrative_ontology:topic_domain(arg_ev_tariff, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(arg_ev_tariff). % Required for Tangled Rope

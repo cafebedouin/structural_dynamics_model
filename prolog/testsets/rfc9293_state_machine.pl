@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -55,6 +56,7 @@
 narrative_ontology:interval(rfc9293_state_machine, 0, 10).
 narrative_ontology:constraint_claim(rfc9293_state_machine, tangled_rope).
 narrative_ontology:human_readable(rfc9293_state_machine, "TCP State Machine Constraints").
+narrative_ontology:topic_domain(rfc9293_state_machine, "technological/institutional").
 
 % Base extractiveness: 0.2 (Moderate overhead). 
 % Requires memory for Transmission Control Blocks (TCBs) even in idle states.

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(wikipedia_noncommercial_model, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(wikipedia_noncommercial_model, rope).
 narrative_ontology:human_readable(wikipedia_noncommercial_model, "Wikipedia's Non-Commercial, Volunteer-Driven Model").
+narrative_ontology:topic_domain(wikipedia_noncommercial_model, "technological").
 
 % --- Binary flags ---
 % domain_priors:requires_active_enforcement is declared to resolve a SCAFFOLD_DANGER_ZONE

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(edelman_2026_developed_stagnation, theater_
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(edelman_2026_developed_stagnation, tangled_rope).
 narrative_ontology:human_readable(edelman_2026_developed_stagnation, "The Developed Market Stagnation Trap").
+narrative_ontology:topic_domain(edelman_2026_developed_stagnation, "economic/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(edelman_2026_developed_stagnation). % Required for Tangled Rope

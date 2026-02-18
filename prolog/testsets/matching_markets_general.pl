@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -55,6 +56,7 @@
 narrative_ontology:interval(matching_markets_general, 0, 10).
 narrative_ontology:constraint_claim(matching_markets_general, tangled_rope).
 narrative_ontology:human_readable(matching_markets_general, "Matching Markets (Non-Commodity Exchange)").
+narrative_ontology:topic_domain(matching_markets_general, "economic/social/technological").
 
 % Base extractiveness: 0.4.
 % Markets extract "signal" (effort, status, credentials) from participants 

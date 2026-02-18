@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(genie_ip_constraint, theater_ratio, 0.1).
 % Constraint classification claim
 narrative_ontology:constraint_claim(genie_ip_constraint, tangled_rope).
 narrative_ontology:human_readable(genie_ip_constraint, "Google's Project Genie IP Concerns").
+narrative_ontology:topic_domain(genie_ip_constraint, "technological").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(genie_ip_constraint).      % Mandatory if Scaffold

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(blackstone_tra, theater_ratio, 0.05).
 % It claims to be a constructed financial agreement for sharing tax benefits.
 narrative_ontology:constraint_claim(blackstone_tra, tangled_rope).
 narrative_ontology:human_readable(blackstone_tra, "Blackstone Tax Receivable Agreement (TRA)").
+narrative_ontology:topic_domain(blackstone_tra, "economic").
 
 % Binary flags
 % The TRA is a core contractual obligation requiring legal enforcement.

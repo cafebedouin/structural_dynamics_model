@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(ghost_fishing_gear, theater_ratio, 0.15).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ghost_fishing_gear, snare).
 narrative_ontology:human_readable(ghost_fishing_gear, "Persistence of Abandoned, Lost, or Discarded Fishing Gear (ALDFG)").
+narrative_ontology:topic_domain(ghost_fishing_gear, "ecological/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ghost_fishing_gear). % Preventing this requires enforcement.

@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(milano_cortina_2026, theater_ratio, 0.98).
 % Constraint classification claim
 narrative_ontology:constraint_claim(milano_cortina_2026, piton).
 narrative_ontology:human_readable(milano_cortina_2026, "Milano Cortina 2026 Winter Olympics").
+narrative_ontology:topic_domain(milano_cortina_2026, "social/political/technological").
 
 % Structural Property Declarations
 % Coordination function is established by the massive logistical scale.

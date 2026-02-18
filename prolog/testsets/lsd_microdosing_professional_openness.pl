@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -56,6 +57,7 @@
 narrative_ontology:interval(lsd_microdosing_professional_openness, 0, 10).
 narrative_ontology:constraint_claim(lsd_microdosing_professional_openness, tangled_rope).
 narrative_ontology:human_readable(lsd_microdosing_professional_openness, "The Permanent Openness Shift from Microdosing").
+narrative_ontology:topic_domain(lsd_microdosing_professional_openness, "psychological/professional/biochemical").
 
 % Base extractiveness score (0.4 = Moderate)
 % Rationale: The practice extracts the user's "baseline" personality stability 

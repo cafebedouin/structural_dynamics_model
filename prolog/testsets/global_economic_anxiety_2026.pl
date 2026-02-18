@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(global_economic_anxiety_2026, theater_ratio
 % Constraint classification claim
 narrative_ontology:constraint_claim(global_economic_anxiety_2026, piton).
 narrative_ontology:human_readable(global_economic_anxiety_2026, "The Global Economic Anxiety Snare").
+narrative_ontology:topic_domain(global_economic_anxiety_2026, "economic/social").
 
 % Primary keys for the classification engine
 % High-extraction stakeholders

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(student_loan_interest_accrual, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(student_loan_interest_accrual, tangled_rope).
 narrative_ontology:human_readable(student_loan_interest_accrual, "Student Loan Interest Accrual").
+narrative_ontology:topic_domain(student_loan_interest_accrual, "economic").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(student_loan_interest_accrual).      % Mandatory if Scaffold

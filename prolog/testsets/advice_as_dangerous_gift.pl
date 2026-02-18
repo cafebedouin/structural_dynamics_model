@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ narrative_ontology:constraint_metric(advice_as_dangerous_gift, theater_ratio, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(advice_as_dangerous_gift, tangled_rope).
 narrative_ontology:human_readable(advice_as_dangerous_gift, "The Hazard of Counsel").
+narrative_ontology:topic_domain(advice_as_dangerous_gift, "social/philosophical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(advice_as_dangerous_gift). % Enforced by social norms of responsibility/blame.

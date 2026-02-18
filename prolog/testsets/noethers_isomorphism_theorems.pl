@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(noether_isomorphism_access, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(noether_isomorphism_access, tangled_rope).
 narrative_ontology:human_readable(noether_isomorphism_access, "Access to Noether's Isomorphism Theorems").
+narrative_ontology:topic_domain(noether_isomorphism_access, "technological").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(noether_isomorphism_access).      % Mandatory if Scaffold

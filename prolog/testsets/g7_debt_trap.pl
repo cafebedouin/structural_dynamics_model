@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:constraint_metric(g7_debt_trap, theater_ratio, 0.30).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(g7_debt_trap, tangled_rope).
 narrative_ontology:human_readable(g7_debt_trap, "G7 Debt Trap for Developing Nations").
+narrative_ontology:topic_domain(g7_debt_trap, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(g7_debt_trap). %Active enforcement through repayment schedules and conditionality.

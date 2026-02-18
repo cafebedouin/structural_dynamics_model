@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(8k_tv_limit_2026, theater_ratio, 0.90).
 % The marketing push claimed 8K was the next step in media standards.
 narrative_ontology:constraint_claim(8k_tv_limit_2026, piton).
 narrative_ontology:human_readable(8k_tv_limit_2026, "The 8K Television Saturation Limit").
+narrative_ontology:topic_domain(8k_tv_limit_2026, "technological/economic").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(8k_tv_limit_2026, premium_4k_manufacturers).

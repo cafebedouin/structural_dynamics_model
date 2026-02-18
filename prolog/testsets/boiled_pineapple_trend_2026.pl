@@ -26,7 +26,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:constraint_metric(boiled_pineapple_trend_2026, theater_ratio,
 % Constraint classification claim
 narrative_ontology:constraint_claim(boiled_pineapple_trend_2026, piton).
 narrative_ontology:human_readable(boiled_pineapple_trend_2026, "The Bromelain Denaturing Piton (Viral Pineapple Tea)").
+narrative_ontology:topic_domain(boiled_pineapple_trend_2026, "social/wellness/technological").
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

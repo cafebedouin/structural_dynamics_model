@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, theater_rat
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(burden_of_proof_legal_criminal, rope).
+narrative_ontology:topic_domain(burden_of_proof_legal_criminal, "political/social").
 narrative_ontology:human_readable(burden_of_proof_legal_criminal, "\"Beyond a Reasonable Doubt\" (Criminal Legal Burden)").
 
 % --- Binary flags ---

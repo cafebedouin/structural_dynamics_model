@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(suanne_coup_of_peace, theater_ratio, 0.05).
 % The heckling is framed as a legitimate part of "home court advantage."
 narrative_ontology:constraint_claim(suanne_coup_of_peace, tangled_rope).
 narrative_ontology:human_readable(suanne_coup_of_peace, "The Hostile Social Environment at the Lead Basketball Game").
+narrative_ontology:topic_domain(suanne_coup_of_peace, "social/cultural").
 
 % Binary flags
 domain_priors:requires_active_enforcement(suanne_coup_of_peace). % The heckling is an active, coordinated performance.

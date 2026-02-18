@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(mit_tfus_2026, theater_ratio, 0.12).
 % Constraint classification claim
 narrative_ontology:constraint_claim(mit_tfus_2026, scaffold).
 narrative_ontology:human_readable(mit_tfus_2026, "MIT tFUS Causal Consciousness Roadmap").
+narrative_ontology:topic_domain(mit_tfus_2026, "technological/biological").
 
 % Primary keys for the classification engine
 % High-extraction stakeholders

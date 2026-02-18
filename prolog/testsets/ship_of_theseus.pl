@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(ship_of_theseus, theater_ratio, 0.80).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ship_of_theseus, piton).
 narrative_ontology:human_readable(ship_of_theseus, "Identity Continuity Constraint").
+narrative_ontology:topic_domain(ship_of_theseus, "philosophical").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(ship_of_theseus).      % Mandatory if Scaffold

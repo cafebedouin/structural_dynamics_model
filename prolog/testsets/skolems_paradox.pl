@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -100,6 +101,7 @@ narrative_ontology:constraint_metric(skolems_paradox, resistance, 0.05).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(skolems_paradox, mountain).
 narrative_ontology:human_readable(skolems_paradox, "Skolem's Paradox (The Relativity of Cardinality)").
+narrative_ontology:topic_domain(skolems_paradox, "technological/logic").
 
 % --- Binary flags ---
 % No active enforcement needed.

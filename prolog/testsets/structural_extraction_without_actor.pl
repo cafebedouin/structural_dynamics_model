@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(structural_extraction_without_actor, theate
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(structural_extraction_without_actor, piton).
 narrative_ontology:human_readable(structural_extraction_without_actor, "The Inertial Rent Siphon").
+narrative_ontology:topic_domain(structural_extraction_without_actor, "economic/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(structural_extraction_without_actor). % Required for Tangled Rope

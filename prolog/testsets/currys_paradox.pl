@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -97,6 +98,7 @@ narrative_ontology:constraint_metric(currys_paradox, resistance, 0.05).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(currys_paradox, mountain).
 narrative_ontology:human_readable(currys_paradox, "Curry's Paradox").
+narrative_ontology:topic_domain(currys_paradox, "analytical/logic").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the interaction of implication, self-reference, and contraction.

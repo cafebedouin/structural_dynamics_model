@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(spv_variations_us_cold, theater_ratio, 0.05
 % coordination model built on top of the physical law.
 narrative_ontology:constraint_claim(spv_variations_us_cold, rope).
 narrative_ontology:human_readable(spv_variations_us_cold, "Stratospheric Polar Vortex Variations (US Cold Outbreaks)").
+narrative_ontology:topic_domain(spv_variations_us_cold, "atmospheric_science").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The stratospheric polar vortex is a natural atmospheric phenomenon

@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(compounding_logic, theater_ratio, 0.05).
 % It claims to be a neutral, mathematical law of nature.
 narrative_ontology:constraint_claim(compounding_logic, tangled_rope).
 narrative_ontology:human_readable(compounding_logic, "The Law of Compounding Returns").
+narrative_ontology:topic_domain(compounding_logic, "economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(compounding_logic). % Requires a stable currency, property rights, and contract law to function.

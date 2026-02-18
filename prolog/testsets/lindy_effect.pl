@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -96,6 +97,7 @@ narrative_ontology:constraint_metric(lindy_effect, theater_ratio, 0.11).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(lindy_effect, tangled_rope).
 narrative_ontology:human_readable(lindy_effect, "The Lindy Effect").
+narrative_ontology:topic_domain(lindy_effect, "social/intellectual").
 
 % --- Binary flags ---
 % The effect is self-reinforcing through cumulative advantage and cognitive bias.

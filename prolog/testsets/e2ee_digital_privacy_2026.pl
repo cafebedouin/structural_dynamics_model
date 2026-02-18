@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -55,6 +56,7 @@
 narrative_ontology:interval(e2ee_digital_privacy_2026, 0, 10).
 narrative_ontology:constraint_claim(e2ee_digital_privacy_2026, rope).
 narrative_ontology:human_readable(e2ee_digital_privacy_2026, "End-to-End Encryption (E2EE)").
+narrative_ontology:topic_domain(e2ee_digital_privacy_2026, "technological/political/social").
 
 % Base extractiveness: 0.05 (Very Low)
 % Rationale: E2EE is fundamentally protective rather than extractive; it prevents 

@@ -41,7 +41,8 @@
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(26usc469_real_estate_exemption, theater_rat
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(26usc469_real_estate_exemption, tangled_rope).
 narrative_ontology:human_readable(26usc469_real_estate_exemption, "The Real Estate Professional Exemption (Passive Activity Loss Rules)").
+narrative_ontology:topic_domain(26usc469_real_estate_exemption, "economic/legal").
 
 % --- Binary flags ---
 % Requires active enforcement by the IRS during audits.

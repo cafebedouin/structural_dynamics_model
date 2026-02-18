@@ -40,7 +40,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(frontex_pushback_coordination, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(frontex_pushback_coordination, tangled_rope).
 narrative_ontology:human_readable(frontex_pushback_coordination, "Frontex-Coordinated Asylum Suppression at EU Maritime Borders").
+narrative_ontology:topic_domain(frontex_pushback_coordination, "political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(frontex_pushback_coordination). % Required for Tangled Rope

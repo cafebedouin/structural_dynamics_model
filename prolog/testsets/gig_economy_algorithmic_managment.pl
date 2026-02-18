@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(gig_economy_algorithmic_management, theater
 % The platform claims the algorithm is a neutral, efficient coordination tool.
 narrative_ontology:constraint_claim(gig_economy_algorithmic_management, tangled_rope).
 narrative_ontology:human_readable(gig_economy_algorithmic_management, "Algorithmic Management in the Gig Economy").
+narrative_ontology:topic_domain(gig_economy_algorithmic_management, "economic/technological").
 
 % Binary flags
 % The system requires constant, automated enforcement (deactivations, warnings, incentive changes).

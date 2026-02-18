@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(ergodic_theorems, theater_ratio, 0.10).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ergodic_theorems, tangled_rope).
 narrative_ontology:human_readable(ergodic_theorems, "The Misapplication of Ergodic Theorems in Non-Ergodic Systems").
+narrative_ontology:topic_domain(ergodic_theorems, "economic/scientific").
 
 % --- Binary flags ---
 % The suppression of non-ergodic viewpoints in economic curricula and policy

@@ -41,7 +41,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(po_investigation_protocol_bias, theater_rat
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(po_investigation_protocol_bias, tangled_rope).
 narrative_ontology:human_readable(po_investigation_protocol_bias, "Post Office Investigation Protocol Bias (Presumption of Guilt)").
+narrative_ontology:topic_domain(po_investigation_protocol_bias, "legal / institutional").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(po_investigation_protocol_bias). % Required for Tangled Rope

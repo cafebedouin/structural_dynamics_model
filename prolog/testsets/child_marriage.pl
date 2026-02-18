@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(child_marriage, theater_ratio, 0.20).
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(child_marriage, snare).
 narrative_ontology:human_readable(child_marriage, "Child Marriage as a Social Constraint").
+narrative_ontology:topic_domain(child_marriage, "social/religious").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(child_marriage).      % Mandatory if Scaffold

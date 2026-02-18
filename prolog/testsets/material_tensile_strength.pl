@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(material_tensile_strength, resistance, 0.0)
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(material_tensile_strength, mountain).
 narrative_ontology:human_readable(material_tensile_strength, "Ultimate Tensile Strength (UTS)").
+narrative_ontology:topic_domain(material_tensile_strength, "technological").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Required for the mountain metric gate: without this, the classify_from_metrics

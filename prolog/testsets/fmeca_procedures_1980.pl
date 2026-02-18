@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@
 narrative_ontology:interval(fmeca_standard_era, 1980, 2026).
 narrative_ontology:constraint_claim(fmeca_procedures_1980, rope).
 narrative_ontology:human_readable(fmeca_procedures_1980, "MIL-STD-1629A (FMECA Procedures)").
+narrative_ontology:topic_domain(fmeca_procedures_1980, "technological/military/legal").
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.4). While it aims for safety, it "extracts" significant 

@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(confirmation_bias, theater_ratio, 0.10).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(confirmation_bias, tangled_rope).
 narrative_ontology:human_readable(confirmation_bias, "Confirmation Bias (Socially Amplified)").
+narrative_ontology:topic_domain(confirmation_bias, "social/cognitive/technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(confirmation_bias). % Required for Tangled Rope

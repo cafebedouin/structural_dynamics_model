@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(mexican_airline_merger, theater_ratio, 0.30
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(mexican_airline_merger, tangled_rope).
 narrative_ontology:human_readable(mexican_airline_merger, "Mexican Airline Merger Antitrust Exemption").
+narrative_ontology:topic_domain(mexican_airline_merger, "economic").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(mexican_airline_merger).      % Mandatory if Scaffold

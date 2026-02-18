@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(taiwan_grand_bargain, theater_ratio, 0.50).
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(taiwan_grand_bargain, tangled_rope).
 narrative_ontology:human_readable(taiwan_grand_bargain, "The U.S.-China Taiwan Grand Bargain").
+narrative_ontology:topic_domain(taiwan_grand_bargain, "economic/geopolitical").
 
 % Binary flags
 domain_priors:requires_active_enforcement(taiwan_grand_bargain). % Requires treaties, tariffs, and diplomatic pressure.

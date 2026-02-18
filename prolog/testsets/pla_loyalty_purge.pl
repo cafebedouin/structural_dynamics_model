@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(pla_loyalty_purge, theater_ratio, 0.30).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(pla_loyalty_purge, tangled_rope).
 narrative_ontology:human_readable(pla_loyalty_purge, "PLA Loyalty Purge Mechanism").
+narrative_ontology:topic_domain(pla_loyalty_purge, "political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(pla_loyalty_purge). % Required for Tangled Rope. The CCDI actively investigates and removes officials.

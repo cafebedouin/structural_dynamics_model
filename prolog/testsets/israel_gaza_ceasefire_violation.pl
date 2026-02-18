@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(israel_gaza_ceasefire_violation, theater_ra
 % Constraint classification claim
 narrative_ontology:constraint_claim(israel_gaza_ceasefire_violation, tangled_rope).
 narrative_ontology:human_readable(israel_gaza_ceasefire_violation, "Israel-Gaza Ceasefire Violation").
+narrative_ontology:topic_domain(israel_gaza_ceasefire_violation, "political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(israel_gaza_ceasefire_violation). % Required for Tangled Rope

@@ -32,7 +32,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ narrative_ontology:constraint_metric(climate_policy_extraction, theater_ratio, 0
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(climate_policy_extraction, tangled_rope).
 narrative_ontology:human_readable(climate_policy_extraction, "The Decarbonization Snare (Climate-Identity Collision)").
+narrative_ontology:topic_domain(climate_policy_extraction, "environmental/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(climate_policy_extraction). % Required for Tangled Rope

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(gaza_aid_permit_revocation, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(gaza_aid_permit_revocation, snare).
 narrative_ontology:human_readable(gaza_aid_permit_revocation, "Revocation of Work Permits for Local Aid Workers in Gaza").
+narrative_ontology:topic_domain(gaza_aid_permit_revocation, "political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(gaza_aid_permit_revocation). % Enforced by COGAT and military.

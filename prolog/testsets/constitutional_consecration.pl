@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(constitutional_consecration, theater_ratio,
 % The speech frames the sacrifice as necessary for a coordination goal ("government of the people... shall not perish").
 narrative_ontology:constraint_claim(constitutional_consecration, tangled_rope).
 narrative_ontology:human_readable(constitutional_consecration, "The Proposition of Equality as a Binding Sacrifice").
+narrative_ontology:topic_domain(constitutional_consecration, "political/legal").
 
 % Binary flags
 domain_priors:requires_active_enforcement(constitutional_consecration). % Required for Tangled Rope. The "great task remaining" is active enforcement.

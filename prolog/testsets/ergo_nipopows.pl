@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(ergo_nipopows, resistance, 0.05).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ergo_nipopows, mountain).
 narrative_ontology:human_readable(ergo_nipopows, "Non-Interactive Proofs of Proof-of-Work (NiPoPoWs)").
+narrative_ontology:topic_domain(ergo_nipopows, "technological/cryptographic").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint emerges from the mathematical properties of hash functions

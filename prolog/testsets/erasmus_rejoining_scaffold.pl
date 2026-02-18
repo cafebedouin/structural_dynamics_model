@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(erasmus_rejoining_scaffold, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(erasmus_rejoining_scaffold, scaffold).
 narrative_ontology:human_readable(erasmus_rejoining_scaffold, "UK's potential re-entry into the EU Erasmus+ student exchange program").
+narrative_ontology:topic_domain(erasmus_rejoining_scaffold, "political").
 
 % --- Binary flags ---
 narrative_ontology:has_sunset_clause(erasmus_rejoining_scaffold).      % Mandatory for Scaffold. A future government could withdraw.

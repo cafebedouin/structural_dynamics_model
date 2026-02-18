@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(attention_market_cannibalization, theater_r
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(attention_market_cannibalization, tangled_rope).
 narrative_ontology:human_readable(attention_market_cannibalization, "The Cognitive Exhaustion Loop").
+narrative_ontology:topic_domain(attention_market_cannibalization, "economic/psychological/technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(attention_market_cannibalization). % Required for Tangled Rope

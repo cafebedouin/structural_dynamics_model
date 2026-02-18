@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(circadian_decoupling_arbitrage, theater_rat
 % Constraint self-claim: The system is presented as a necessary coordination tool.
 narrative_ontology:constraint_claim(circadian_decoupling_arbitrage, tangled_rope).
 narrative_ontology:human_readable(circadian_decoupling_arbitrage, "The Circadian Decoupling Arbitrage").
+narrative_ontology:topic_domain(circadian_decoupling_arbitrage, "bio_industrial").
 
 % Binary flags and structural properties
 domain_priors:requires_active_enforcement(circadian_decoupling_arbitrage). % Enforcement via environmental lighting, scheduling, and pharma protocols.

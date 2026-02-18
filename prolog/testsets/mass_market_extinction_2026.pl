@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(mass_market_extinction_2026, theater_ratio,
 % The system's collapse is presented as a constructed market outcome ("the consumer has spoken").
 narrative_ontology:constraint_claim(mass_market_extinction_2026, tangled_rope).
 narrative_ontology:human_readable(mass_market_extinction_2026, "The Mass Market Paperback Sunset").
+narrative_ontology:topic_domain(mass_market_extinction_2026, "economic/cultural").
 
 % The rigid distribution and pricing contracts required active enforcement to maintain.
 domain_priors:requires_active_enforcement(mass_market_extinction_2026).

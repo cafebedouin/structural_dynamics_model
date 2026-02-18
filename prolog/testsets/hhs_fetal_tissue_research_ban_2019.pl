@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(hhs_fetal_tissue_research_ban_2019, theater
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(hhs_fetal_tissue_research_ban_2019, snare).
 narrative_ontology:human_readable(hhs_fetal_tissue_research_ban_2019, "2019 HHS Ban on Fetal Tissue Research Funding").
+narrative_ontology:topic_domain(hhs_fetal_tissue_research_ban_2019, "Political / Scientific").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(hhs_fetal_tissue_research_ban_2019).

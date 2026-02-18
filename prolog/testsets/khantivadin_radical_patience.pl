@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(khantivadin_radical_patience, theater_ratio
 % The teaching derived from the event claims to be a natural law of enlightenment.
 narrative_ontology:constraint_claim(khantivadin_radical_patience, tangled_rope).
 narrative_ontology:human_readable(khantivadin_radical_patience, "The Teacher of Patience (Khantivadin)").
+narrative_ontology:topic_domain(khantivadin_radical_patience, "religious/ethical").
 
 % Binary flags
 domain_priors:requires_active_enforcement(khantivadin_radical_patience). % The king's violence is active and direct.

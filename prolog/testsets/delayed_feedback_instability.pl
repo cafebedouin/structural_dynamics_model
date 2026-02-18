@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(delayed_feedback_instability, theater_ratio
 % consequence of complex interactions, a natural law of feedback.
 narrative_ontology:constraint_claim(delayed_feedback_instability, tangled_rope).
 narrative_ontology:human_readable(delayed_feedback_instability, "The Oscillation Trap").
+narrative_ontology:topic_domain(delayed_feedback_instability, "systems_engineering/economics/ecology").
 
 % Binary flags & Structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(delayed_feedback_instability).

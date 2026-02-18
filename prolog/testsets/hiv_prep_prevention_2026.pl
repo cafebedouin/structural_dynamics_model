@@ -43,7 +43,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -103,6 +104,7 @@ narrative_ontology:constraint_metric(hiv_prep_prevention_2026, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(hiv_prep_prevention_2026, mountain).
 narrative_ontology:human_readable(hiv_prep_prevention_2026, "PrEP-Mediated HIV Prevention").
+narrative_ontology:topic_domain(hiv_prep_prevention_2026, "technological/social").
 
 % --- Binary flags ---
 % Rationale: Requires active adherence (daily pill) and medical monitoring.

@@ -40,7 +40,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:omega_variable/3,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(mars_rovers_navigational_autonomy, theater_
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(mars_rovers_navigational_autonomy, tangled_rope).
 narrative_ontology:human_readable(mars_rovers_navigational_autonomy, "Mars Surface Navigational Autonomy (AutoNav)").
+narrative_ontology:topic_domain(mars_rovers_navigational_autonomy, "technological").
 
 % --- Binary flags ---
 % Rationale: The onboard hazard avoidance software actively halts the rover

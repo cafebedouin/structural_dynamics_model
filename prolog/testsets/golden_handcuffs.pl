@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -60,6 +61,7 @@
 narrative_ontology:interval(golden_handcuffs, 0, 10).
 narrative_ontology:constraint_claim(golden_handcuffs, tangled_rope).
 narrative_ontology:human_readable(golden_handcuffs, "Golden Handcuffs (Vesting-Based Retention)").
+narrative_ontology:topic_domain(golden_handcuffs, "economic/social").
 
 % Base extractiveness: Moderate (0.4).
 % While the employee receives high compensation, the organization extracts 

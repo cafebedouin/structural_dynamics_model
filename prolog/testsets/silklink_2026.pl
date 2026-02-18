@@ -25,7 +25,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:interval/3,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:has_sunset_clause(silklink_2026).
 % Constraint self-claim (analytical classification)
 narrative_ontology:constraint_claim(silklink_2026, scaffold).
 narrative_ontology:human_readable(silklink_2026, "SilkLink Syria-Saudi Telecom Project").
+narrative_ontology:topic_domain(silklink_2026, "technological/economic").
 
 narrative_ontology:constraint_beneficiary(silklink_2026, stc_group_dominance).
 narrative_ontology:constraint_victim(silklink_2026, legacy_intermediary_carriers).

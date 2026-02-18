@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(legibility_trap, theater_ratio, 0.92).
 % The system claims to be a necessary tool for coordination and governance.
 narrative_ontology:constraint_claim(legibility_trap, tangled_rope).
 narrative_ontology:human_readable(legibility_trap, "The Grid-Map Displacement").
+narrative_ontology:topic_domain(legibility_trap, "political/social/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(legibility_trap). % Mandatory for Tangled Rope

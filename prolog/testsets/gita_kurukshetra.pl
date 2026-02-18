@@ -26,7 +26,8 @@
     narrative_ontology:omega_variable/3,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(gita_kurukshetra, theater_ratio, 0.34).
 % This is the definition of a Tangled Rope.
 narrative_ontology:constraint_claim(gita_kurukshetra, tangled_rope).
 narrative_ontology:human_readable(gita_kurukshetra, "The Duty of the Kshatriya (Warrior Caste)").
+narrative_ontology:topic_domain(gita_kurukshetra, "religious/philosophical/social").
 
 % --- Binary flags ---
 % The high suppression score reflects active social/ideological enforcement.

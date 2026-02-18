@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:constraint_metric(genetic_predisposition, theater_ratio, 0.1)
 % The system claims to be a rational coordination mechanism for managing risk.
 narrative_ontology:constraint_claim(genetic_predisposition, tangled_rope).
 narrative_ontology:human_readable(genetic_predisposition, "Socio-Economic Response to Genetic Predisposition").
+narrative_ontology:topic_domain(genetic_predisposition, "technological/social/economic").
 
 % Binary flags
 % The system requires laws (e.g., GINA in the US) and regulations to function

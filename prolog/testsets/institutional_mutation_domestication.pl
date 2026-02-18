@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(institutional_mutation_domestication, theat
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(institutional_mutation_domestication, tangled_rope).
 narrative_ontology:human_readable(institutional_mutation_domestication, "The Jedi Bureaucratic Capture").
+narrative_ontology:topic_domain(institutional_mutation_domestication, "political/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(institutional_mutation_domestication). % Required for Tangled Rope

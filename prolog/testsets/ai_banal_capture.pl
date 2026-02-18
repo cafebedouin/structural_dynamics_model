@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(ai_banal_capture, theater_ratio, 0.58).
 % AI is marketed as a coordination/productivity tool.
 narrative_ontology:constraint_claim(ai_banal_capture, tangled_rope).
 narrative_ontology:human_readable(ai_banal_capture, "The Banal Cognitive Engine").
+narrative_ontology:topic_domain(ai_banal_capture, "technological/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(ai_banal_capture). % Enforcement via platform terms, API access rules, and market dominance.

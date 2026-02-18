@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(lung_transplant_protocol, theater_ratio, 0.
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(lung_transplant_protocol, tangled_rope).
 narrative_ontology:human_readable(lung_transplant_protocol, "Lung Transplant Allocation Protocol").
+narrative_ontology:topic_domain(lung_transplant_protocol, "social").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(lung_transplant_protocol).      % Mandatory if Scaffold

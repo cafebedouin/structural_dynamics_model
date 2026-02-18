@@ -23,7 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(alignment_tax_tradeoff, theater_ratio, 0.76
 % Constraint classification claim
 narrative_ontology:constraint_claim(alignment_tax_tradeoff, piton).
 narrative_ontology:human_readable(alignment_tax_tradeoff, "The Safety-Performance Divergence").
+narrative_ontology:topic_domain(alignment_tax_tradeoff, "technological/AI/economic").
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(alignment_tax_tradeoff).

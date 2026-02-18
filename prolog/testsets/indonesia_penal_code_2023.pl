@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(indonesia_penal_code_2023, theater_ratio, 0
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(indonesia_penal_code_2023, tangled_rope).
 narrative_ontology:human_readable(indonesia_penal_code_2023, "Indonesia's 2023 Penal Code (KUHP) Criminalizing Personal Liberties").
+narrative_ontology:topic_domain(indonesia_penal_code_2023, "political/social").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(indonesia_penal_code_2023). % Required for Tangled Rope

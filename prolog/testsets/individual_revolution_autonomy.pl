@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(individual_revolution_autonomy, theater_rat
 % Constraint classification claim
 narrative_ontology:constraint_claim(individual_revolution_autonomy, tangled_rope).
 narrative_ontology:human_readable(individual_revolution_autonomy, "The One-Man Revolution").
+narrative_ontology:topic_domain(individual_revolution_autonomy, "political/social").
 
 % Structural property derivation hooks
 % High extraction (> 0.46) requires beneficiary/victim declaration for proper modeling.

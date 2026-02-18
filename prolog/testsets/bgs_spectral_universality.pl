@@ -23,7 +23,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -112,6 +113,7 @@ narrative_ontology:constraint_metric(bgs_spectral_universality, resistance, 0.01
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(bgs_spectral_universality, mountain).
 narrative_ontology:human_readable(bgs_spectral_universality, "BGS Spectral Universality — Random Matrix Statistics").
+narrative_ontology:topic_domain(bgs_spectral_universality, "scientific (mathematical physics / quantum chaos)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This is a mathematical regularity that emerges from the structure of

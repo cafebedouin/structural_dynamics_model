@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(rare_earth_dependency, theater_ratio, 0.20)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(rare_earth_dependency, tangled_rope).
 narrative_ontology:human_readable(rare_earth_dependency, "Strategic Rare Earth Element Dependency").
+narrative_ontology:topic_domain(rare_earth_dependency, "economic/geopolitical").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(rare_earth_dependency).      % Mandatory if Scaffold

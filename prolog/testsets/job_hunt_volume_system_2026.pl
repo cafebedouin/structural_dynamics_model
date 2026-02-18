@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(job_hunt_volume_system_2026, theater_ratio,
 % It claims to be a necessary mechanism for enforcing quality and managing volume.
 narrative_ontology:constraint_claim(job_hunt_volume_system_2026, tangled_rope).
 narrative_ontology:human_readable(job_hunt_volume_system_2026, "The Algorithmic Volume Filter in Modern Recruitment").
+narrative_ontology:topic_domain(job_hunt_volume_system_2026, "economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(job_hunt_volume_system_2026). % The ATS and HR processes must be actively maintained.

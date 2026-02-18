@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(awareness_without_leverage, theater_ratio, 
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(awareness_without_leverage, tangled_rope).
 narrative_ontology:human_readable(awareness_without_leverage, "The Cassandra Paradox").
+narrative_ontology:topic_domain(awareness_without_leverage, "social/political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(awareness_without_leverage). % Required for Tangled Rope

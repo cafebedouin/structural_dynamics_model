@@ -30,7 +30,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(banach_fixed_point, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(banach_fixed_point, mountain).
 narrative_ontology:human_readable(banach_fixed_point, "Banach Fixed-Point Theorem").
+narrative_ontology:topic_domain(banach_fixed_point, "mathematical/logical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Required for the mountain metric gate.

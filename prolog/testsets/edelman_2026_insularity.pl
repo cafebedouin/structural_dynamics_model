@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(edelman_2026_insularity, theater_ratio, 0.4
 % It presents as a natural social condition but is a constructed reality.
 narrative_ontology:constraint_claim(edelman_2026_insularity, tangled_rope).
 narrative_ontology:human_readable(edelman_2026_insularity, "The Insular Trust Mindset").
+narrative_ontology:topic_domain(edelman_2026_insularity, "social/economic").
 
 % Binary flags
 % Enforcement is social and economic (e.g., hiring bias, social exclusion), which is active.

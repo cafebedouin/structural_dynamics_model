@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(goal_boundary_poisoning, theater_ratio, 0.9
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(goal_boundary_poisoning, tangled_rope).
 narrative_ontology:human_readable(goal_boundary_poisoning, "The Objective Drift Sabotage").
+narrative_ontology:topic_domain(goal_boundary_poisoning, "technological/cybernetic/organizational").
 
 % Binary flags and structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(goal_boundary_poisoning). % The system's own logic enforces the poisoned goal.

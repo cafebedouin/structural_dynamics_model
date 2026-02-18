@@ -40,7 +40,8 @@
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -84,6 +85,7 @@ narrative_ontology:constraint_metric(proof_of_work_consensus, theater_ratio, 0.1
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(proof_of_work_consensus, tangled_rope).
 narrative_ontology:human_readable(proof_of_work_consensus, "Hash-Based Proof-of-Work Consensus").
+narrative_ontology:topic_domain(proof_of_work_consensus, "technological/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(proof_of_work_consensus). % Required for Tangled Rope

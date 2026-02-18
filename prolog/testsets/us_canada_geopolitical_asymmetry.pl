@@ -40,7 +40,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(us_canada_geopolitical_asymmetry, theater_r
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_canada_geopolitical_asymmetry, tangled_rope).
 narrative_ontology:human_readable(us_canada_geopolitical_asymmetry, "The Geopolitical Constraint of US Proximity on Canadian Sovereignty").
+narrative_ontology:topic_domain(us_canada_geopolitical_asymmetry, "geopolitical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_canada_geopolitical_asymmetry). % The latent threat of US power is a form of continuous, passive enforcement.

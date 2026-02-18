@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(us_employer_health_insurance, theater_ratio
 % Analytical Claim: It is a Tangled Rope (Hybrid coordination/extraction)
 narrative_ontology:constraint_claim(us_employer_health_insurance, tangled_rope).
 narrative_ontology:human_readable(us_employer_health_insurance, "US Employer-Sponsored Insurance (ESI) System").
+narrative_ontology:topic_domain(us_employer_health_insurance, "economic/social").
 
 % Structural property derivations
 narrative_ontology:constraint_beneficiary(us_employer_health_insurance, large_enterprises).

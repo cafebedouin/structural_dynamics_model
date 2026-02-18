@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(self_surpassing, theater_ratio, 0.1).
 % Constraint self-claim (what Zarathustra claims it to be)
 narrative_ontology:constraint_claim(self_surpassing, tangled_rope).
 narrative_ontology:human_readable(self_surpassing, "The Rearing of the Superman (Übermensch)").
+narrative_ontology:topic_domain(self_surpassing, "philosophical/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(self_surpassing). % Requires active will-to-power.

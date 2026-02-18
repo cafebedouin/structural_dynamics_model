@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(lcdm_small_scale_anomalies, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(lcdm_small_scale_anomalies, tangled_rope).
 narrative_ontology:human_readable(lcdm_small_scale_anomalies, "Lambda-CDM Cosmological Model (Small-Scale Structure)").
+narrative_ontology:topic_domain(lcdm_small_scale_anomalies, "scientific/cosmological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(lcdm_small_scale_anomalies). % Via peer review, funding panels, conference programming.

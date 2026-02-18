@@ -27,7 +27,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(hegemonic_entropy_2026, theater_ratio, 0.78
 % Constraint classification claim
 narrative_ontology:constraint_claim(hegemonic_entropy_2026, piton).
 narrative_ontology:human_readable(hegemonic_entropy_2026, "The Asymmetry of Hegemonic Decay").
+narrative_ontology:topic_domain(hegemonic_entropy_2026, "economic/political").
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

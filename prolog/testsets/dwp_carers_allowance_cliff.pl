@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -84,6 +85,7 @@ narrative_ontology:constraint_metric(dwp_carers_allowance_cliff, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(dwp_carers_allowance_cliff, tangled_rope).
 narrative_ontology:human_readable(dwp_carers_allowance_cliff, "UK DWP Carer's Allowance Earnings Cliff").
+narrative_ontology:topic_domain(dwp_carers_allowance_cliff, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(dwp_carers_allowance_cliff). % Required for Tangled Rope

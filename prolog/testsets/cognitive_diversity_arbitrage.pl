@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(cognitive_diversity_arbitrage, theater_rati
 % The corporate framing is that this is a beneficial coordination mechanism.
 narrative_ontology:constraint_claim(cognitive_diversity_arbitrage, tangled_rope).
 narrative_ontology:human_readable(cognitive_diversity_arbitrage, "Cognitive Diversity Arbitrage in the Workplace").
+narrative_ontology:topic_domain(cognitive_diversity_arbitrage, "economic/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(cognitive_diversity_arbitrage). % Requires active HR policies, management training, and support systems.

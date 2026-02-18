@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(citation_collapse_dynamics, theater_ratio, 
 % It claims to be a coordination tool for knowledge synthesis.
 narrative_ontology:constraint_claim(citation_collapse_dynamics, piton).
 narrative_ontology:human_readable(citation_collapse_dynamics, "The Recursive Grounding Decay").
+narrative_ontology:topic_domain(citation_collapse_dynamics, "technological/academic/informational").
 
 % Binary flags
 % Enforcement is algorithmic; network effects and the sheer volume of data

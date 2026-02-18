@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(absorbing_markov_chain_trap, theater_ratio,
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(absorbing_markov_chain_trap, snare).
 narrative_ontology:human_readable(absorbing_markov_chain_trap, "State Space Trap in Absorbing Markov Chain").
+narrative_ontology:topic_domain(absorbing_markov_chain_trap, "technological").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(absorbing_markov_chain_trap).      % Mandatory if Scaffold

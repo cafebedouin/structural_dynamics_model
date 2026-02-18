@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(epstein_espionage_2026, theater_ratio, 0.76
 % Constraint classification claim
 narrative_ontology:constraint_claim(epstein_espionage_2026, piton).
 narrative_ontology:human_readable(epstein_espionage_2026, "The Epstein-Starmer Sovereignty Crisis").
+narrative_ontology:topic_domain(epstein_espionage_2026, "political/espionage").
 
 % Primary keys for the classification engine
 % High-extraction stakeholders

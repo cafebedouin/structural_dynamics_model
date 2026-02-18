@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(trump_critical_minerals, theater_ratio, 0.2
 % Constraint classification claim
 narrative_ontology:constraint_claim(trump_critical_minerals, tangled_rope).
 narrative_ontology:human_readable(trump_critical_minerals, "Trump Critical Minerals Stockpile Project").
+narrative_ontology:topic_domain(trump_critical_minerals, "economic/political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(trump_critical_minerals). % Required for Tangled Rope

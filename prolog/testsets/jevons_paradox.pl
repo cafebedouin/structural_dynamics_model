@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(jevons_paradox, theater_ratio, 0.10).
 % It claims to be a coordination mechanism for economic growth via efficiency.
 narrative_ontology:constraint_claim(jevons_paradox, tangled_rope).
 narrative_ontology:human_readable(jevons_paradox, "Jevons Paradox (The Rebound Effect)").
+narrative_ontology:topic_domain(jevons_paradox, "economic/technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(jevons_paradox). % Required for Tangled Rope. Enforced by market price signals.

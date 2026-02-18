@@ -41,7 +41,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(us_tariffs_2025, theater_ratio, 0.20).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_tariffs_2025, tangled_rope).
 narrative_ontology:human_readable(us_tariffs_2025, "2025 United States Tariff Policy on Imported Goods").
+narrative_ontology:topic_domain(us_tariffs_2025, "economic/political").
 
 % --- Binary flags ---
 % Tariffs require active enforcement by customs agencies at ports of entry.

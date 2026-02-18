@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(us_legal_standard_reasonable_doubt, theater
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_legal_standard_reasonable_doubt, tangled_rope).
+narrative_ontology:topic_domain(us_legal_standard_reasonable_doubt, "political/legal").
 narrative_ontology:human_readable(us_legal_standard_reasonable_doubt, "The US Legal Standard of \"Guilt Beyond a Reasonable Doubt\" in Political Prosecutions").
 
 % --- Binary flags ---

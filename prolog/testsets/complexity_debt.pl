@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(complexity_debt, theater_ratio, 0.45).
 % Constraint self-claim: The system claims to be essential for coordination.
 narrative_ontology:constraint_claim(complexity_debt, tangled_rope).
 narrative_ontology:human_readable(complexity_debt, "The Cumulative Fragility Surcharge").
+narrative_ontology:topic_domain(complexity_debt, "technological/organizational").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(complexity_debt).

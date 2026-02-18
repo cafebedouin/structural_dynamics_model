@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(synthetic_data_feedback_loop, theater_ratio
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(synthetic_data_feedback_loop, tangled_rope).
 narrative_ontology:human_readable(synthetic_data_feedback_loop, "The Model Autophagy Trap").
+narrative_ontology:topic_domain(synthetic_data_feedback_loop, "technological/AI/informational").
 
 % Binary flags
 domain_priors:requires_active_enforcement(synthetic_data_feedback_loop). % Required for Tangled Rope

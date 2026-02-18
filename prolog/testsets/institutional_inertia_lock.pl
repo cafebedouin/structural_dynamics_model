@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(institutional_inertia_lock, theater_ratio, 
 % Constraint self-claim: The bureaucracy claims it's a necessary coordination mechanism.
 narrative_ontology:constraint_claim(institutional_inertia_lock, tangled_rope).
 narrative_ontology:human_readable(institutional_inertia_lock, "The Sunk-Cost Regulatory Trap").
+narrative_ontology:topic_domain(institutional_inertia_lock, "political/technological").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(institutional_inertia_lock).

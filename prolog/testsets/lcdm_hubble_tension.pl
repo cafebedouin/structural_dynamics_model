@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -101,6 +102,7 @@ narrative_ontology:constraint_metric(lcdm_hubble_tension, theater_ratio, 0.10).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(lcdm_hubble_tension, tangled_rope).
 narrative_ontology:human_readable(lcdm_hubble_tension, "The Hubble Tension within the Lambda-CDM Cosmological Model").
+narrative_ontology:topic_domain(lcdm_hubble_tension, "scientific").
 
 % --- Binary flags ---
 % The model is "enforced" by peer review, funding, and institutional consensus.

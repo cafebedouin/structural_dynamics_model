@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -96,6 +97,7 @@ narrative_ontology:constraint_metric(sadhu_integrity_protocol, theater_ratio, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(sadhu_integrity_protocol, tangled_rope).
 narrative_ontology:human_readable(sadhu_integrity_protocol, "The Integrity Requirement (Sadhu's Sugar)").
+narrative_ontology:topic_domain(sadhu_integrity_protocol, "social/ethical").
 
 % --- Binary flags ---
 % The Sadhu must actively enforce this rule upon himself.

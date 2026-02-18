@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(gaza_border_control_rafah, theater_ratio, 0
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(gaza_border_control_rafah, tangled_rope).
 narrative_ontology:human_readable(gaza_border_control_rafah, "Control regime over the Gaza-Egypt (Rafah) border crossing").
+narrative_ontology:topic_domain(gaza_border_control_rafah, "geopolitical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(gaza_border_control_rafah). % Mandatory for Tangled Rope. The border is physically guarded.

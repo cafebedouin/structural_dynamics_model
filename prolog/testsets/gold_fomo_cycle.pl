@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(gold_fomo_cycle, theater_ratio, 0.40).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(gold_fomo_cycle, tangled_rope).
 narrative_ontology:human_readable(gold_fomo_cycle, "The Gold Price 'Fear of Missing Out' Cycle").
+narrative_ontology:topic_domain(gold_fomo_cycle, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(gold_fomo_cycle). % Required for Tangled Rope. The cycle is enforced by media narratives and broker marketing.

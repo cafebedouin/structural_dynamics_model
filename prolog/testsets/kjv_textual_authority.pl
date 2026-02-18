@@ -20,7 +20,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -55,6 +56,7 @@
 narrative_ontology:interval(kjv_textual_authority, 0, 10).
 narrative_ontology:constraint_claim(kjv_textual_authority, tangled_rope).
 narrative_ontology:human_readable(kjv_textual_authority, "The King James Textual Monopoly").
+narrative_ontology:topic_domain(kjv_textual_authority, "religious/linguistic/political").
 
 % Base extractiveness: 0.4 (Moderate)
 % It provides high utility (standardized language) but extracts 

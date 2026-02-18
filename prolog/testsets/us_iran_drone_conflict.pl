@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(us_iran_drone_conflict, theater_ratio, 0.2)
 % Constraint classification claim
 narrative_ontology:constraint_claim(us_iran_drone_conflict, tangled_rope).
 narrative_ontology:human_readable(us_iran_drone_conflict, "US-Iran Drone Conflict and Escalation").
+narrative_ontology:topic_domain(us_iran_drone_conflict, "political").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(us_iran_drone_conflict).      % Mandatory if Scaffold

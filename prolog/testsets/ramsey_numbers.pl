@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -98,6 +99,7 @@ narrative_ontology:constraint_metric(ramsey_numbers, resistance, 0.05).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ramsey_numbers, mountain).
 narrative_ontology:human_readable(ramsey_numbers, "Inevitability of Order (Ramsey's Theorem)").
+narrative_ontology:topic_domain(ramsey_numbers, "mathematical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Required for the mountain metric gate: without this, the classify_from_metrics

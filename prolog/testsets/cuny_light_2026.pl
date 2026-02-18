@@ -26,7 +26,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -62,6 +63,7 @@ domain_priors:requires_active_enforcement(cuny_light_2026).
 % Primary keys for classification engine
 narrative_ontology:constraint_claim(cuny_light_2026, rope).
 narrative_ontology:human_readable(cuny_light_2026, "Metasurface Light Steering (CUNY ASRC)").
+narrative_ontology:topic_domain(cuny_light_2026, "technology/physics").
 
 narrative_ontology:constraint_metric(cuny_light_2026, extractiveness, 0.05).
 narrative_ontology:constraint_metric(cuny_light_2026, suppression_requirement, 0.02).

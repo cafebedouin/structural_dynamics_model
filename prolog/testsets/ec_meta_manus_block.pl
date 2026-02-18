@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(ec_meta_manus_block, theater_ratio, 0.10).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ec_meta_manus_block, tangled_rope).
 narrative_ontology:human_readable(ec_meta_manus_block, "European Commission's block of Meta's acquisition of Manus VR").
+narrative_ontology:topic_domain(ec_meta_manus_block, "economic/technological").
 
 % --- Binary flags ---
 % The block required active investigation and a formal ruling by the EC.

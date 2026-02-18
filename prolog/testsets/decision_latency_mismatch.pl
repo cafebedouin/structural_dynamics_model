@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(decision_latency_mismatch, theater_ratio, 0
 % It claims to be a coordination mechanism (providing liquidity), hiding its extractive nature.
 narrative_ontology:constraint_claim(decision_latency_mismatch, tangled_rope).
 narrative_ontology:human_readable(decision_latency_mismatch, "High-Frequency Regulatory Lag").
+narrative_ontology:topic_domain(decision_latency_mismatch, "technological/economic").
 
 % Binary flags & Structural properties for Tangled Rope
 % The latency gap is maintained by a complex web of exchange rules and infrastructure

@@ -45,7 +45,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(bh_merger_gravitational_infall, resistance,
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(bh_merger_gravitational_infall, mountain).
 narrative_ontology:human_readable(bh_merger_gravitational_infall, "Gravitational Infall of Supermassive Black Holes").
+narrative_ontology:topic_domain(bh_merger_gravitational_infall, "physical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint emerges naturally from the physical properties of mass and

@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(agent_opt_2026, theater_ratio, 0.74).
 % Constraint classification claim
 narrative_ontology:constraint_claim(agent_opt_2026, piton).
 narrative_ontology:human_readable(agent_opt_2026, "The Agentive Optimism Gap").
+narrative_ontology:topic_domain(agent_opt_2026, "political/social").
 
 % Primary keys for the classification engine
 % High-extraction stakeholders

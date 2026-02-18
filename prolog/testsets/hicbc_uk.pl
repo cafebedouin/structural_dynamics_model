@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(hicbc_uk, theater_ratio, 0.20).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(hicbc_uk, tangled_rope).
 narrative_ontology:human_readable(hicbc_uk, "UK High Income Child Benefit Charge (HICBC)").
+narrative_ontology:topic_domain(hicbc_uk, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(hicbc_uk). % Required for Tangled Rope. The charge is enforced by HMRC via the tax system.

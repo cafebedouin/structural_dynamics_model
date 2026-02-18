@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(gale_shapley, theater_ratio, 0.10).
 % Proponents frame it as a pure, fair coordination mechanism to prevent chaos.
 narrative_ontology:constraint_claim(gale_shapley, tangled_rope).
 narrative_ontology:human_readable(gale_shapley, "Gale-Shapley Stable Matching Algorithm (as applied in markets)").
+narrative_ontology:topic_domain(gale_shapley, "economic/technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(gale_shapley). % The NRMP actively enforces its rules.

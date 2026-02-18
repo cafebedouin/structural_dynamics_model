@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(hanlons_razor, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a tool for rational coordination.
 narrative_ontology:constraint_claim(hanlons_razor, tangled_rope).
+narrative_ontology:topic_domain(hanlons_razor, "social/cognitive").
 narrative_ontology:human_readable(hanlons_razor, "Hanlon's Razor (\"Never attribute to malice that which is adequately explained by stupidity.\")").
 
 % Binary flags

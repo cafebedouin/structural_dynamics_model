@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(vertebrate_turning_point_2026, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(vertebrate_turning_point_2026, rope).
 narrative_ontology:human_readable(vertebrate_turning_point_2026, "The Genetic Turning Point for Vertebrate Evolution (Scientific Model)").
+narrative_ontology:topic_domain(vertebrate_turning_point_2026, "biological/scientific").
 
 % --- Binary flags ---
 % Scientific consensus requires active maintenance (peer review, grant allocation)

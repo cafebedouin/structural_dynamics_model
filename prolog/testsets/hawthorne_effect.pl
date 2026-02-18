@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -102,6 +103,7 @@ narrative_ontology:constraint_metric(hawthorne_effect, theater_ratio, 0.19).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(hawthorne_effect, tangled_rope).
 narrative_ontology:human_readable(hawthorne_effect, "The Hawthorne Effect (Observer Effect)").
+narrative_ontology:topic_domain(hawthorne_effect, "social/economic").
 
 % --- Binary flags ---
 % The "gaze" of the observer or the knowledge of a study constitutes a form

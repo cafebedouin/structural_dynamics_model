@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(us_vaccine_recommendation_dismantling_2026,
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_vaccine_recommendation_dismantling_2026, snare).
 narrative_ontology:human_readable(us_vaccine_recommendation_dismantling_2026, "Dismantling of National Childhood Vaccine Recommendations").
+narrative_ontology:topic_domain(us_vaccine_recommendation_dismantling_2026, "political/social").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_vaccine_recommendation_dismantling_2026). % Enforcement to prevent CDC etc. from issuing guidance.

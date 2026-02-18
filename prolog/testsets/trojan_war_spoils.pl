@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(trojan_war_spoils, theater_ratio, 0.0).
 % Constraint self-claim: The Greeks claim this is merely the enforcement of military custom.
 narrative_ontology:constraint_claim(trojan_war_spoils, snare).
 narrative_ontology:human_readable(trojan_war_spoils, "The Allocation of Captives after the Fall of Troy").
+narrative_ontology:topic_domain(trojan_war_spoils, "military/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(trojan_war_spoils). % The Greek army is present to enforce the allocation.

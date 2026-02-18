@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(interface_contract_breakdown, theater_ratio
 % The platform claims the API is for coordination, masking the extraction.
 narrative_ontology:constraint_claim(interface_contract_breakdown, tangled_rope).
 narrative_ontology:human_readable(interface_contract_breakdown, "The Protocol Dissolution").
+narrative_ontology:topic_domain(interface_contract_breakdown, "technological").
 
 % Binary flags
 % Enforcement is the platform's ability to deprecate old versions, forcing compliance.

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(chrome_imagen2_integration, theater_ratio, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(chrome_imagen2_integration, tangled_rope).
+narrative_ontology:topic_domain(chrome_imagen2_integration, "technological/economic").
 narrative_ontology:human_readable(chrome_imagen2_integration, "Integration of \"free\" AI image generation (Imagen 2) into Google Chrome").
 
 % --- Binary flags ---

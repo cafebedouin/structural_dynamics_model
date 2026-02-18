@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(necessary_day_job, theater_ratio, 0.10).
 % an unfortunate but unavoidable feature of a market economy.
 narrative_ontology:constraint_claim(necessary_day_job, tangled_rope).
 narrative_ontology:human_readable(necessary_day_job, "The Necessary Day Job for Creatives").
+narrative_ontology:topic_domain(necessary_day_job, "economic/social").
 
 % Binary flags & Structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(necessary_day_job).

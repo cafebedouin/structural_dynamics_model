@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(migration_decision_threshold, theater_ratio
 % alternatives), enforced by border regimes. This is the definition of a Tangled Rope.
 narrative_ontology:constraint_claim(migration_decision_threshold, tangled_rope).
 narrative_ontology:human_readable(migration_decision_threshold, "The Migration Decision Threshold (Cost-Benefit Equilibrium)").
+narrative_ontology:topic_domain(migration_decision_threshold, "economic/social").
 
 % --- Binary flags ---
 % The system is upheld by legal border regimes, visa requirements, and

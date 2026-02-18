@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(trump_making_china_great_2026, theater_rati
 % Claims to be enforcing national interest, a classic framing for extractive policy.
 narrative_ontology:constraint_claim(trump_making_china_great_2026, tangled_rope).
 narrative_ontology:human_readable(trump_making_china_great_2026, "The Trumpian Post-Western Order").
+narrative_ontology:topic_domain(trump_making_china_great_2026, "political/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(trump_making_china_great_2026). % Required for Tangled Rope

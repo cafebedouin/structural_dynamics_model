@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -59,6 +60,7 @@
 narrative_ontology:interval(magna_carta_liberties, 0, 10).
 narrative_ontology:constraint_claim(magna_carta_liberties, rope).
 narrative_ontology:human_readable(magna_carta_liberties, "The Great Charter of Liberties").
+narrative_ontology:topic_domain(magna_carta_liberties, "political/legal").
 
 % Base extractiveness: Moderate (0.4)
 % Rationale: While it limits the King's extraction, it codifies standard 

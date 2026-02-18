@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(dk_foreign_convict_expulsion, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(dk_foreign_convict_expulsion, tangled_rope).
 narrative_ontology:human_readable(dk_foreign_convict_expulsion, "Denmark's Foreign Convict Expulsion Law").
+narrative_ontology:topic_domain(dk_foreign_convict_expulsion, "political/social").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(dk_foreign_convict_expulsion). % Required for Tangled Rope

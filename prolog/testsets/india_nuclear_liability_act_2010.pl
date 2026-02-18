@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(india_nuclear_liability_act_2010, theater_r
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(india_nuclear_liability_act_2010, tangled_rope).
 narrative_ontology:human_readable(india_nuclear_liability_act_2010, "India's Civil Liability for Nuclear Damage Act of 2010").
+narrative_ontology:topic_domain(india_nuclear_liability_act_2010, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(india_nuclear_liability_act_2010). % Required for Tangled Rope

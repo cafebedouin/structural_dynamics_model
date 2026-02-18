@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:constraint_metric(rare_earth_hydrogen_extraction, theater_rat
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(rare_earth_hydrogen_extraction, tangled_rope).
 narrative_ontology:human_readable(rare_earth_hydrogen_extraction, "Rare Earth Element Dependency for Core Hydrogen Extraction").
+narrative_ontology:topic_domain(rare_earth_hydrogen_extraction, "economic, technological, geopolitical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(rare_earth_hydrogen_extraction). % Required for Tangled Rope

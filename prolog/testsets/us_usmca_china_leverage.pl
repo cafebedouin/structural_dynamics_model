@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(us_usmca_china_leverage, theater_ratio, 0.1
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_usmca_china_leverage, tangled_rope).
 narrative_ontology:human_readable(us_usmca_china_leverage, "US leveraging of USMCA ratification to constrain Canadian foreign policy on China").
+narrative_ontology:topic_domain(us_usmca_china_leverage, "geopolitical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_usmca_china_leverage). % Required for Tangled Rope

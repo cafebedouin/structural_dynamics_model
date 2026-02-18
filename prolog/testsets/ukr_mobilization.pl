@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(ukr_mobilization, theater_ratio, 0.20).
 % Constraint classification claim
 narrative_ontology:constraint_claim(ukr_mobilization, tangled_rope).
 narrative_ontology:human_readable(ukr_mobilization, "Ukrainian Mobilization Law").
+narrative_ontology:topic_domain(ukr_mobilization, "political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(ukr_mobilization). % Required for Tangled Rope

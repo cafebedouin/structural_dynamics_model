@@ -22,7 +22,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(wikipedia_crowdsourcing_2026, suppression_r
 % Constraint classification claim
 narrative_ontology:constraint_claim(wikipedia_crowdsourcing_2026, rope).
 narrative_ontology:human_readable(wikipedia_crowdsourcing_2026, "Wikipedia Crowdsourced Knowledge Governance").
+narrative_ontology:topic_domain(wikipedia_crowdsourcing_2026, "technological/social/political").
 
 % Enforcement requirements
 % Requires active enforcement (The "clever system" of editor hierarchy).

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(global_stimulus_spree, theater_ratio, 0.30)
 % Governments frame this as essential coordination for national security and economic vitality.
 narrative_ontology:constraint_claim(global_stimulus_spree, tangled_rope).
 narrative_ontology:human_readable(global_stimulus_spree, "The 2026 Global Fiscal Stimulus Surge").
+narrative_ontology:topic_domain(global_stimulus_spree, "economic/political").
 
 % Binary flags
 % Required for Tangled Rope: enforcement of taxation and debt servicing.

@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(ergot_grain_poisoning, theater_ratio, 0.10)
 % distribution system was a human construction.
 narrative_ontology:constraint_claim(ergot_grain_poisoning, tangled_rope).
 narrative_ontology:human_readable(ergot_grain_poisoning, "The Ergot/Famine Dilemma").
+narrative_ontology:topic_domain(ergot_grain_poisoning, "social/technological/biological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(ergot_grain_poisoning). % Required for Tangled Rope. Millers actively sold bad grain.

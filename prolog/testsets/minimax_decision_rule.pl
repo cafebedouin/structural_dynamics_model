@@ -44,7 +44,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -109,6 +110,7 @@ narrative_ontology:constraint_metric(minimax_decision_rule, resistance, 0.01).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(minimax_decision_rule, mountain).
 narrative_ontology:human_readable(minimax_decision_rule, "Minimax Decision Rule").
+narrative_ontology:topic_domain(minimax_decision_rule, "technological/mathematical").
 
 % --- Binary flags ---
 % No active enforcement needed; it's a principle of logic.

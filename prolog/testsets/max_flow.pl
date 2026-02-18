@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -99,6 +100,7 @@ narrative_ontology:constraint_metric(max_flow_min_cut, theater_ratio, 0.05).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(max_flow_min_cut, tangled_rope).
 narrative_ontology:human_readable(max_flow_min_cut, "Socio-Technical Bottlenecks Governed by Max-Flow Principles").
+narrative_ontology:topic_domain(max_flow_min_cut, "technological/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(max_flow_min_cut). % Required for Tangled Rope

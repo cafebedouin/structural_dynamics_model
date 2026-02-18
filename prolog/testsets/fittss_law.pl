@@ -42,7 +42,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -97,6 +98,7 @@ narrative_ontology:constraint_metric(fitts_law_industrial_application, theater_r
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(fitts_law_industrial_application, tangled_rope).
 narrative_ontology:human_readable(fitts_law_industrial_application, "Fitts’s Law (Industrial Application)").
+narrative_ontology:topic_domain(fitts_law_industrial_application, "technological/economic").
 
 % --- Binary flags ---
 % Rationale: The economic benefits are enforced through quotas, performance

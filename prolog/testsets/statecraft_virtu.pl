@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(statecraft_virtu, theater_ratio, 0.10).
 % The system is presented as a necessary mechanism for order and security.
 narrative_ontology:constraint_claim(statecraft_virtu, tangled_rope).
 narrative_ontology:human_readable(statecraft_virtu, "Machiavellian Virtù and State Maintenance").
+narrative_ontology:topic_domain(statecraft_virtu, "political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(statecraft_virtu). % Requires "good arms and good laws."

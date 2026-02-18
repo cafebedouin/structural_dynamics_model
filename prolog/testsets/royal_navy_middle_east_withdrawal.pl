@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(royal_navy_middle_east_withdrawal, theater_
 % The government frames this as a deliberate, strategic reallocation.
 narrative_ontology:constraint_claim(royal_navy_middle_east_withdrawal, tangled_rope).
 narrative_ontology:human_readable(royal_navy_middle_east_withdrawal, "End of Permanent Royal Navy Presence in the Gulf").
+narrative_ontology:topic_domain(royal_navy_middle_east_withdrawal, "political/security").
 
 % Binary flags
 domain_priors:requires_active_enforcement(royal_navy_middle_east_withdrawal). % The withdrawal is an active policy choice.

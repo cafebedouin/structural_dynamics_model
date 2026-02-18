@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(bor_tax_exemption_nl, theater_ratio, 0.40).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(bor_tax_exemption_nl, tangled_rope).
 narrative_ontology:human_readable(bor_tax_exemption_nl, "Dutch Business Succession Scheme (BOR)").
+narrative_ontology:topic_domain(bor_tax_exemption_nl, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(bor_tax_exemption_nl). % The Tax Authority (Belastingdienst) must administer this complex regulation.

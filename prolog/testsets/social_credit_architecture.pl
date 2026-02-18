@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(social_credit_architecture, theater_ratio, 
 % coordination function and severe asymmetric extraction.
 narrative_ontology:constraint_claim(social_credit_architecture, tangled_rope).
 narrative_ontology:human_readable(social_credit_architecture, "Social Credit Architecture").
+narrative_ontology:topic_domain(social_credit_architecture, "social/political/technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(social_credit_architecture). % Required for Tangled Rope

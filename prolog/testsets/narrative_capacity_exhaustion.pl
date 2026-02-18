@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(narrative_capacity_exhaustion, theater_rati
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(narrative_capacity_exhaustion, tangled_rope).
 narrative_ontology:human_readable(narrative_capacity_exhaustion, "The Storytelling Burnout").
+narrative_ontology:topic_domain(narrative_capacity_exhaustion, "social/technological").
 
 % Binary flags and structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(narrative_capacity_exhaustion). % Algorithmic downranking is active enforcement.

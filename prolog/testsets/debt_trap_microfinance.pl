@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(debt_trap_microfinance, theater_ratio, 0.30
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(debt_trap_microfinance, snare).
 narrative_ontology:human_readable(debt_trap_microfinance, "Microfinance Debt Trap").
+narrative_ontology:topic_domain(debt_trap_microfinance, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(debt_trap_microfinance). % Required for Tangled Rope, applicable to Snare.

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(cholesterol_pill_cost, theater_ratio, 0.2).
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(cholesterol_pill_cost, tangled_rope).
 narrative_ontology:human_readable(cholesterol_pill_cost, "Cost of Patented Cholesterol Medication").
+narrative_ontology:topic_domain(cholesterol_pill_cost, "economic").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(cholesterol_pill_cost).      % Mandatory if Scaffold

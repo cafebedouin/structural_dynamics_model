@@ -45,7 +45,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(eu_affordable_housing_initiative, theater_r
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(eu_affordable_housing_initiative, tangled_rope).
 narrative_ontology:human_readable(eu_affordable_housing_initiative, "EU Affordable Housing Initiative (2025)").
+narrative_ontology:topic_domain(eu_affordable_housing_initiative, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(eu_affordable_housing_initiative). % Required for Tangled Rope: EU must monitor fund allocation and compliance.

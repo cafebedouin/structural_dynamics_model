@@ -27,7 +27,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(nsw_transmission_bottleneck, theater_ratio,
 
 narrative_ontology:constraint_claim(nsw_transmission_bottleneck, snare).
 narrative_ontology:human_readable(nsw_transmission_bottleneck, "NSW Regional Transmission Congestion").
+narrative_ontology:topic_domain(nsw_transmission_bottleneck, "technological/political").
 
 % Structural relationships
 narrative_ontology:constraint_beneficiary(nsw_transmission_bottleneck, gas_peaker_plants_nsw).

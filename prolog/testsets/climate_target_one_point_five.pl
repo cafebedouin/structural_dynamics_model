@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(climate_target_one_point_five, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(climate_target_one_point_five, tangled_rope).
 narrative_ontology:human_readable(climate_target_one_point_five, "The 1.5°C Global Warming Target").
+narrative_ontology:topic_domain(climate_target_one_point_five, "political/environmental").
 
 % --- Binary flags ---
 % Rationale: Requires active enforcement through UN summits and international agreements.

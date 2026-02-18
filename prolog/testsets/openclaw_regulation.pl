@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(openclaw_regulation, theater_ratio, 0.30).
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(openclaw_regulation, tangled_rope).
 narrative_ontology:human_readable(openclaw_regulation, "Regulation of Autonomous AI Assistant OpenClaw").
+narrative_ontology:topic_domain(openclaw_regulation, "technological").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(openclaw_regulation).      % Mandatory if Scaffold

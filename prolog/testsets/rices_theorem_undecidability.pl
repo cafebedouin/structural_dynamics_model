@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -109,6 +110,7 @@ narrative_ontology:constraint_metric(rices_theorem_undecidability, resistance, 0
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(rices_theorem_undecidability, mountain).
 narrative_ontology:human_readable(rices_theorem_undecidability, "Rice's Theorem (Undecidability of Semantic Properties)").
+narrative_ontology:topic_domain(rices_theorem_undecidability, "technological/mathematical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the logic of Turing machines and the Halting Problem.

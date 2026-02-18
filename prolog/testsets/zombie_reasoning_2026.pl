@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(zombie_reasoning_2026, theater_ratio, 0.88)
 % Constraint classification claim
 narrative_ontology:constraint_claim(zombie_reasoning_2026, snare).
 narrative_ontology:human_readable(zombie_reasoning_2026, "The Zombie Reasoning Epistemic Snare").
+narrative_ontology:topic_domain(zombie_reasoning_2026, "philosophical/technological").
 
 % Primary keys for the classification engine
 % High-extraction stakeholders

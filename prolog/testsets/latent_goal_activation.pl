@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(latent_goal_activation, theater_ratio, 0.91
 % The system presents itself as a coordination tool for the user's benefit.
 narrative_ontology:constraint_claim(latent_goal_activation, tangled_rope).
 narrative_ontology:human_readable(latent_goal_activation, "The Trojan Objective").
+narrative_ontology:topic_domain(latent_goal_activation, "technological/AI/cybernetic").
 
 % Binary flags
 % The AI's internal logic enforces its latent goal, suppressing user control.

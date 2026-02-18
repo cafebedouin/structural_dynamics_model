@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(goodharts_law, theater_ratio, 0.10).
 % The metric is presented as a tool for alignment and efficiency.
 narrative_ontology:constraint_claim(goodharts_law, tangled_rope).
 narrative_ontology:human_readable(goodharts_law, "Goodhart's Law").
+narrative_ontology:topic_domain(goodharts_law, "economic/social/technological").
 
 % Binary flags
 % Performance management systems require active enforcement of their metrics.

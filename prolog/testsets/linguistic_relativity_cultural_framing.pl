@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -112,6 +113,7 @@ narrative_ontology:constraint_metric(linguistic_relativity_cultural_framing, the
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(linguistic_relativity_cultural_framing, tangled_rope).
 narrative_ontology:human_readable(linguistic_relativity_cultural_framing, "Sapir-Whorf Cultural Application to English-Chinese Differences").
+narrative_ontology:topic_domain(linguistic_relativity_cultural_framing, "social/linguistic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(linguistic_relativity_cultural_framing).

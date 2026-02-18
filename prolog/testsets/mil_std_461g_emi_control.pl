@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(mil_std_461g_emi_control, theater_ratio, 0.
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(mil_std_461g_emi_control, tangled_rope).
 narrative_ontology:human_readable(mil_std_461g_emi_control, "MIL-STD-461G EMI Control Standard").
+narrative_ontology:topic_domain(mil_std_461g_emi_control, "technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(mil_std_461g_emi_control). % Required for Tangled Rope. Compliance requires active testing and verification.

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(naming_as_control, theater_ratio, 0.55).
 % The authority claims this is a necessary tool for social order.
 narrative_ontology:constraint_claim(naming_as_control, tangled_rope).
 narrative_ontology:human_readable(naming_as_control, "The Ontological Hegemony").
+narrative_ontology:topic_domain(naming_as_control, "social/political/linguistic").
 
 % Binary flags & Structural properties for Tangled Rope
 % Enforcement is social, legal, and economic; using unapproved terms

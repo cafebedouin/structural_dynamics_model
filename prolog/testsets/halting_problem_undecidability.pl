@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -99,6 +100,7 @@ narrative_ontology:constraint_metric(halting_problem_undecidability, resistance,
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(halting_problem_undecidability, mountain).
 narrative_ontology:human_readable(halting_problem_undecidability, "The Undecidability of the Halting Problem").
+narrative_ontology:topic_domain(halting_problem_undecidability, "mathematical/technological").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint emerges naturally from the logic of self-reference in

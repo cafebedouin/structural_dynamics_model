@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(boundary_dissolution_risk, theater_ratio, 0
 % The platform claims its system is for coordination.
 narrative_ontology:constraint_claim(boundary_dissolution_risk, tangled_rope).
 narrative_ontology:human_readable(boundary_dissolution_risk, "The Infinite Porosity Trap").
+narrative_ontology:topic_domain(boundary_dissolution_risk, "technological/labor").
 
 % Binary flags & structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(boundary_dissolution_risk).

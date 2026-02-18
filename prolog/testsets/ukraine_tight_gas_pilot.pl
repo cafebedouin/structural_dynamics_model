@@ -40,7 +40,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(ukraine_tight_gas_pilot, theater_ratio, 0.1
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ukraine_tight_gas_pilot, tangled_rope).
 narrative_ontology:human_readable(ukraine_tight_gas_pilot, "Ukraine Tight Gas Pilot Project Framework").
+narrative_ontology:topic_domain(ukraine_tight_gas_pilot, "economic/geopolitical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ukraine_tight_gas_pilot). % Required for Tangled Rope

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(prestige_signal_inflation, theater_ratio, 0
 % Constraint self-claim: The system claims to be a pure coordination mechanism.
 narrative_ontology:constraint_claim(prestige_signal_inflation, piton).
 narrative_ontology:human_readable(prestige_signal_inflation, "The Credential Red Queen").
+narrative_ontology:topic_domain(prestige_signal_inflation, "social/economic/educational").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(prestige_signal_inflation).

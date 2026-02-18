@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(frankenstein_creation_hubris, theater_ratio
 % Victor's act is framed as a constructed effort for scientific progress.
 narrative_ontology:constraint_claim(frankenstein_creation_hubris, tangled_rope).
 narrative_ontology:human_readable(frankenstein_creation_hubris, "The Creator's Burden").
+narrative_ontology:topic_domain(frankenstein_creation_hubris, "technological/social").
 
 % Binary flags
 % The constraint is enforced by the Creature's physical capabilities and

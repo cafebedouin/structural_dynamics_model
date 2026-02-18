@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(latent_regulatory_bomb, theater_ratio, 0.10
 % The agency claims it's a necessary tool for maintaining order.
 narrative_ontology:constraint_claim(latent_regulatory_bomb, tangled_rope).
 narrative_ontology:human_readable(latent_regulatory_bomb, "The Compliance Time-Trigger").
+narrative_ontology:topic_domain(latent_regulatory_bomb, "political/technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(latent_regulatory_bomb). % Required for Tangled Rope

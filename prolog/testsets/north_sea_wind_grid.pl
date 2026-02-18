@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(north_sea_wind_grid, theater_ratio, 0.15).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(north_sea_wind_grid, tangled_rope).
 narrative_ontology:human_readable(north_sea_wind_grid, "The North Sea 100GW Multinational Wind Power Grid Initiative").
+narrative_ontology:topic_domain(north_sea_wind_grid, "geopolitical/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(north_sea_wind_grid). % Requires international treaties, funding laws, and regulatory oversight.

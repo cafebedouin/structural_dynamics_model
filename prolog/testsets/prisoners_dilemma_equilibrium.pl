@@ -36,7 +36,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     omega_variable/5,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(prisoners_dilemma_equilibrium, resistance, 
 % The Nash Equilibrium is presented as a logical, mathematical inevitability.
 narrative_ontology:constraint_claim(prisoners_dilemma_equilibrium, mountain).
 narrative_ontology:human_readable(prisoners_dilemma_equilibrium, "The Prisoner's Dilemma (Nash Equilibrium)").
+narrative_ontology:topic_domain(prisoners_dilemma_equilibrium, "logical/economic").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The equilibrium emerges from the mathematical structure of the game without

@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(wpl_scotland, theater_ratio, 0.15).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(wpl_scotland, tangled_rope).
 narrative_ontology:human_readable(wpl_scotland, "Scotland's Workplace Parking Levy (WPL)").
+narrative_ontology:topic_domain(wpl_scotland, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(wpl_scotland). % Councils must monitor employers and collect the levy.

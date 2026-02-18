@@ -40,7 +40,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:omega_variable/3,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:constraint_metric(copyleft_viral_licensing, theater_ratio, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(copyleft_viral_licensing, rope).
 narrative_ontology:human_readable(copyleft_viral_licensing, "Copyleft Viral Licensing (e.g., GPL)").
+narrative_ontology:topic_domain(copyleft_viral_licensing, "technological/legal").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(copyleft_viral_licensing).

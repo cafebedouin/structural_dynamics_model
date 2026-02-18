@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(inference_cost_scaling_law, theater_ratio, 
 % mechanism to fund and organize the massive capital required for progress.
 narrative_ontology:constraint_claim(inference_cost_scaling_law, tangled_rope).
 narrative_ontology:human_readable(inference_cost_scaling_law, "The Computational Tollgate").
+narrative_ontology:topic_domain(inference_cost_scaling_law, "technological/economic").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(inference_cost_scaling_law). % Enforcement via proprietary hardware/APIs and capital requirements.

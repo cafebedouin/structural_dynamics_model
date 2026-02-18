@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(bureaucratic_legibility_collapse, theater_r
 % Constraint self-claim: The institution claims this is a necessary coordination tool.
 narrative_ontology:constraint_claim(bureaucratic_legibility_collapse, tangled_rope).
 narrative_ontology:human_readable(bureaucratic_legibility_collapse, "The Administrative Whiteout").
+narrative_ontology:topic_domain(bureaucratic_legibility_collapse, "political/organizational/informational").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(bureaucratic_legibility_collapse).

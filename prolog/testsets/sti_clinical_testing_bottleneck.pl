@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(sti_clinical_testing_bottleneck, theater_ra
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(sti_clinical_testing_bottleneck, tangled_rope).
 narrative_ontology:human_readable(sti_clinical_testing_bottleneck, "Requirement for Clinical Lab Testing for Chlamydia/Gonorrhea").
+narrative_ontology:topic_domain(sti_clinical_testing_bottleneck, "technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(sti_clinical_testing_bottleneck). % Required for Tangled Rope. Enforced by medical regulations and licensing.

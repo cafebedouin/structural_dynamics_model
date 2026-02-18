@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(us_israel_faa_502b_nonenforcement, theater_
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_israel_faa_502b_nonenforcement, tangled_rope).
 narrative_ontology:human_readable(us_israel_faa_502b_nonenforcement, "Non-enforcement of US Foreign Assistance Act Section 502B for Israel").
+narrative_ontology:topic_domain(us_israel_faa_502b_nonenforcement, "geopolitical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_israel_faa_502b_nonenforcement). % Required for Tangled Rope

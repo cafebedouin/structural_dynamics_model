@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(private_credit_market_opacity, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(private_credit_market_opacity, tangled_rope).
 narrative_ontology:human_readable(private_credit_market_opacity, "Opacity and Systemic Risk Externalization in Private Credit Markets").
+narrative_ontology:topic_domain(private_credit_market_opacity, "economic").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(private_credit_market_opacity).

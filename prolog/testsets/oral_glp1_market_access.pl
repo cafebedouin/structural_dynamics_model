@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(oral_glp1_market_access, theater_ratio, 0.1
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(oral_glp1_market_access, tangled_rope).
 narrative_ontology:human_readable(oral_glp1_market_access, "Patent-Protected Market for Oral GLP-1 Agonists").
+narrative_ontology:topic_domain(oral_glp1_market_access, "economic/technological/healthcare").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(oral_glp1_market_access). % Required for Tangled Rope

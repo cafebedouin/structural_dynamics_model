@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(crispr_genomic_rewrite_2026, theater_ratio,
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(crispr_genomic_rewrite_2026, tangled_rope).
 narrative_ontology:human_readable(crispr_genomic_rewrite_2026, "CRISPR Genomic Programmability").
+narrative_ontology:topic_domain(crispr_genomic_rewrite_2026, "technological/biological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(crispr_genomic_rewrite_2026). % Required for Tangled Rope

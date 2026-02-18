@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -98,6 +99,7 @@ narrative_ontology:constraint_metric(stable_marriage_coordination, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(stable_marriage_coordination, tangled_rope).
 narrative_ontology:human_readable(stable_marriage_coordination, "Stable Marriage Problem (Gale-Shapley Algorithm)").
+narrative_ontology:topic_domain(stable_marriage_coordination, "economic/social").
 
 % --- Binary flags ---
 % Required for Tangled Rope. In real-world applications (e.g., NRMP), the

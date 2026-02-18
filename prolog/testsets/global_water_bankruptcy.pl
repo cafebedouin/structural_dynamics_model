@@ -27,7 +27,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(global_water_bankruptcy, theater_ratio, 0.4
 % The UN and member states frame their interventions as coordination.
 narrative_ontology:constraint_claim(global_water_bankruptcy, tangled_rope).
 narrative_ontology:human_readable(global_water_bankruptcy, "The Global Water Bankruptcy Constraint").
+narrative_ontology:topic_domain(global_water_bankruptcy, "environmental/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(global_water_bankruptcy). % Mandatory monitoring and policy enforcement required.

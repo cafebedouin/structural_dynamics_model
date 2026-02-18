@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(dionysiac_frenzy, theater_ratio, 0.10).
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(dionysiac_frenzy, tangled_rope).
 narrative_ontology:human_readable(dionysiac_frenzy, "Dionysiac Religious Possession").
+narrative_ontology:topic_domain(dionysiac_frenzy, "religious/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(dionysiac_frenzy). % Required for Tangled Rope

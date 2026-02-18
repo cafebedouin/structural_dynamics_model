@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(social_media_participation_threshold, theat
 % Platforms claim to be pure coordination tools for connecting people.
 narrative_ontology:constraint_claim(social_media_participation_threshold, tangled_rope).
 narrative_ontology:human_readable(social_media_participation_threshold, "The 2025 Digital Participation Threshold").
+narrative_ontology:topic_domain(social_media_participation_threshold, "social/technological").
 
 % Binary flags
 % Rationale: Social enforcement via network effects requires continuous user

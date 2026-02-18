@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:constraint_metric(iran_mandatrophic_collapse, theater_ratio, 
 % The regime frames its actions as necessary enforcement for national survival.
 narrative_ontology:constraint_claim(iran_mandatrophic_collapse, tangled_rope).
 narrative_ontology:human_readable(iran_mandatrophic_collapse, "Iranian Mandatrophy (The Water-Economic Choke)").
+narrative_ontology:topic_domain(iran_mandatrophic_collapse, "political/economic/technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(iran_mandatrophic_collapse). % Requires heavy active enforcement (Basij crackdowns, surveillance).

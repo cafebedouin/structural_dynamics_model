@@ -24,7 +24,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@
 narrative_ontology:interval(asshole_filter_2015, 0, 10).
 narrative_ontology:constraint_claim(asshole_filter_2015, snare).
 narrative_ontology:human_readable(asshole_filter_2015, "The Asshole Filter").
+narrative_ontology:topic_domain(asshole_filter_2015, "psychological/social").
 
 % Base Properties
 domain_priors:base_extractiveness(asshole_filter_2015, 0.75).

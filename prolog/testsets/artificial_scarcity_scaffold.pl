@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(artificial_scarcity_scaffold, theater_ratio
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(artificial_scarcity_scaffold, scaffold).
 narrative_ontology:human_readable(artificial_scarcity_scaffold, "The Resource-Migration Scaffold").
+narrative_ontology:topic_domain(artificial_scarcity_scaffold, "technological/economic").
 
 % Binary flags
 % Mandatory for Scaffold classification: A sunset clause exists for the transition.

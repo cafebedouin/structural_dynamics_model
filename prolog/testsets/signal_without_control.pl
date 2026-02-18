@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(signal_without_control, theater_ratio, 0.85
 % The platform claims this is a coordination tool for providing information.
 narrative_ontology:constraint_claim(signal_without_control, tangled_rope).
 narrative_ontology:human_readable(signal_without_control, "The Passive Observational Trap").
+narrative_ontology:topic_domain(signal_without_control, "technological/social").
 
 % Required for Tangled Rope: The illusion of control and the platform's terms of service
 % require active enforcement to prevent users from building their own control interfaces.

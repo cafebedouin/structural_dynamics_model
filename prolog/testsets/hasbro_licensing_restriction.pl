@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(hasbro_licensing_restriction, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(hasbro_licensing_restriction, tangled_rope).
 narrative_ontology:human_readable(hasbro_licensing_restriction, "Hasbro Licensing Restriction on Licensed Properties").
+narrative_ontology:topic_domain(hasbro_licensing_restriction, "economic").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(hasbro_licensing_restriction).      % Mandatory if Scaffold

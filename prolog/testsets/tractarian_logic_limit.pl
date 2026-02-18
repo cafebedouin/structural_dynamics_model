@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(tractarian_logic_limit, theater_ratio, 0.10
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(tractarian_logic_limit, snare).
 narrative_ontology:human_readable(tractarian_logic_limit, "The Limits of Language (Tractatus)").
+narrative_ontology:topic_domain(tractarian_logic_limit, "philosophical/logical").
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2

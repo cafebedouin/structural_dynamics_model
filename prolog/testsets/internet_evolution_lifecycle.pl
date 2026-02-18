@@ -31,7 +31,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(internet_evolution_lifecycle, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(internet_evolution_lifecycle, tangled_rope).
 narrative_ontology:human_readable(internet_evolution_lifecycle, "The Lifecycle of the Open Internet").
+narrative_ontology:topic_domain(internet_evolution_lifecycle, "technological/social").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(internet_evolution_lifecycle). % Terms of Service, API rules, algorithmic moderation.

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:constraint_metric(marriage_market_asymmetry_2026, theater_rat
 % Constraint self-claim: The norms are presented as social constructs, not natural law.
 narrative_ontology:constraint_claim(marriage_market_asymmetry_2026, tangled_rope).
 narrative_ontology:human_readable(marriage_market_asymmetry_2026, "The Asymmetric Information Snare (Women Asking Out)").
+narrative_ontology:topic_domain(marriage_market_asymmetry_2026, "social/psychological/economic").
 
 % Binary flags & Structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(marriage_market_asymmetry_2026).

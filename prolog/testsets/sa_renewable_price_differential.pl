@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(sa_renewable_price_differential, theater_ra
 
 narrative_ontology:constraint_claim(sa_renewable_price_differential, tangled_rope).
 narrative_ontology:human_readable(sa_renewable_price_differential, "SA Renewable Price Arbitrage Proxy").
+narrative_ontology:topic_domain(sa_renewable_price_differential, "economic/technological").
 
 domain_priors:requires_active_enforcement(sa_renewable_price_differential). % Market bidding rules.
 

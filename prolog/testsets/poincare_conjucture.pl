@@ -38,7 +38,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:omega_variable/3,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -101,6 +102,7 @@ narrative_ontology:constraint_metric(poincare_conjecture, resistance, 0.01).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(poincare_conjecture, mountain).
 narrative_ontology:human_readable(poincare_conjecture, "The Poincaré Conjecture (Mathematical Theorem)").
+narrative_ontology:topic_domain(poincare_conjecture, "mathematical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The theorem emerges from the axioms of topology without human enforcement.

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(carrier_deployment_deterrence, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(carrier_deployment_deterrence, tangled_rope).
 narrative_ontology:human_readable(carrier_deployment_deterrence, "US Carrier Strike Group Deployment as Regional Deterrent").
+narrative_ontology:topic_domain(carrier_deployment_deterrence, "geopolitical/military").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(carrier_deployment_deterrence). % A carrier group is the definition of active enforcement.

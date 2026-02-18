@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(rent_seeking_equilibrium, theater_ratio, 0.
 % It claims to be a coordination mechanism for market stability.
 narrative_ontology:constraint_claim(rent_seeking_equilibrium, tangled_rope).
 narrative_ontology:human_readable(rent_seeking_equilibrium, "The Toll-Bridge Stagnation").
+narrative_ontology:topic_domain(rent_seeking_equilibrium, "economic/political").
 
 % Binary flags
 % Rent-seeking regulations require state power to enforce barriers to entry.

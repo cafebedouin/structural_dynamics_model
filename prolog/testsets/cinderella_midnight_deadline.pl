@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(cinderella_midnight_deadline, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(cinderella_midnight_deadline, scaffold).
 narrative_ontology:human_readable(cinderella_midnight_deadline, "The Fairy Godmother's Midnight Deadline").
+narrative_ontology:topic_domain(cinderella_midnight_deadline, "magical/social").
 
 % --- Binary flags ---
 narrative_ontology:has_sunset_clause(cinderella_midnight_deadline).      % Mandatory if Scaffold

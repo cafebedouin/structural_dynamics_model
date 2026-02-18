@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(cs_ecmo_bridge, theater_ratio, 0.10).
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(cs_ecmo_bridge, tangled_rope).
 narrative_ontology:human_readable(cs_ecmo_bridge, "ECMO Bridge to Transplant").
+narrative_ontology:topic_domain(cs_ecmo_bridge, "technological").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(cs_ecmo_bridge).      % Mandatory if Scaffold

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(uk_graduate_visa_salary_threshold, theater_
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(uk_graduate_visa_salary_threshold, snare).
 narrative_ontology:human_readable(uk_graduate_visa_salary_threshold, "UK Graduate Visa Minimum Salary Threshold").
+narrative_ontology:topic_domain(uk_graduate_visa_salary_threshold, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(uk_graduate_visa_salary_threshold). % Required for Tangled Rope

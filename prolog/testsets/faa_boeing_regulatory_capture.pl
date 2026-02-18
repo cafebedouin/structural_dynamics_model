@@ -47,7 +47,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -111,6 +112,7 @@ narrative_ontology:constraint_metric(faa_boeing_regulatory_capture, theater_rati
 % expertise) but extraction has grown into the coordination structure.
 narrative_ontology:constraint_claim(faa_boeing_regulatory_capture, tangled_rope).
 narrative_ontology:human_readable(faa_boeing_regulatory_capture, "FAA-Boeing Organizational Designation Authorization (ODA)").
+narrative_ontology:topic_domain(faa_boeing_regulatory_capture, "political/economic").
 
 % Structural properties — 2 beneficiaries, 2 victims
 % (Deliberately below coalition threshold of 3 victims to keep

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(raac_school_maintenance, theater_ratio, 0.4
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(raac_school_maintenance, tangled_rope).
 narrative_ontology:human_readable(raac_school_maintenance, "Systemic Response to RAAC Concrete Failures in UK Schools").
+narrative_ontology:topic_domain(raac_school_maintenance, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(raac_school_maintenance). % The process requires active surveys, funding applications, and management.

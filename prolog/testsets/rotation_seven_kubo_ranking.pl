@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(rotation_seven_kubo_ranking, theater_ratio,
 % It presents itself as an immutable law of their world to suppress dissent.
 narrative_ontology:constraint_claim(rotation_seven_kubo_ranking, tangled_rope).
 narrative_ontology:human_readable(rotation_seven_kubo_ranking, "R7 Kubo Credit and Ranking System").
+narrative_ontology:topic_domain(rotation_seven_kubo_ranking, "economic/social").
 
 % Binary flags
 % Enforced via wristbands, medical isolation, and supervisor authority.

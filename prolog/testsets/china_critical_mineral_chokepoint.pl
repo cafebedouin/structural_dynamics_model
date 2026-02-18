@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(china_critical_mineral_chokepoint, theater_
 % Constraint self-claim: It is framed as a tool of national industrial strategy and enforcement of trade rules.
 narrative_ontology:constraint_claim(china_critical_mineral_chokepoint, tangled_rope).
 narrative_ontology:human_readable(china_critical_mineral_chokepoint, "China's Strategic Chokepoint in Critical Mineral Processing").
+narrative_ontology:topic_domain(china_critical_mineral_chokepoint, "economic/political/technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(china_critical_mineral_chokepoint). % Required for Tangled Rope

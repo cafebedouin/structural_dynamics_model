@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(elite_overproduction_instability, theater_r
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(elite_overproduction_instability, tangled_rope).
 narrative_ontology:human_readable(elite_overproduction_instability, "The Aspirant's Bottleneck").
+narrative_ontology:topic_domain(elite_overproduction_instability, "social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(elite_overproduction_instability). % Gatekeeping, credential validation, etc.

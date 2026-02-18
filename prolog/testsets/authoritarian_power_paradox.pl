@@ -26,7 +26,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@
 narrative_ontology:interval(authoritarian_power_paradox, 0, 10).
 narrative_ontology:constraint_claim(authoritarian_power_paradox, snare).
 narrative_ontology:human_readable(authoritarian_power_paradox, "The Paradox of Authoritarian Centralization").
+narrative_ontology:topic_domain(authoritarian_power_paradox, "political/social/technological").
 
 % Base Properties
 domain_priors:base_extractiveness(authoritarian_power_paradox, 0.80).

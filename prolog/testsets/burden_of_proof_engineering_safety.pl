@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, theater
 % It claims to be a coordination mechanism for making decisions under uncertainty.
 narrative_ontology:constraint_claim(burden_of_proof_engineering_safety, snare).
 narrative_ontology:human_readable(burden_of_proof_engineering_safety, "Reversal of the Engineering Burden of Proof").
+narrative_ontology:topic_domain(burden_of_proof_engineering_safety, "technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(burden_of_proof_engineering_safety). % NASA management explicitly demanded Thiokol "prove it" was unsafe.

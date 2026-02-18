@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(great_awakening_rekindling, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(great_awakening_rekindling, tangled_rope).
 narrative_ontology:human_readable(great_awakening_rekindling, "The Great Awakening's Reframing of Biblical Authority").
+narrative_ontology:topic_domain(great_awakening_rekindling, "religious/social").
 
 % --- Binary flags ---
 % The movement was sustained by itinerant preachers and revival meetings, which

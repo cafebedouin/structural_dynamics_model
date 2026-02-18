@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ narrative_ontology:constraint_metric(orbital_data_center_2026, theater_ratio, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(orbital_data_center_2026, tangled_rope).
 narrative_ontology:human_readable(orbital_data_center_2026, "SpaceX Million-Satellite Orbital Compute Network").
+narrative_ontology:topic_domain(orbital_data_center_2026, "technological/geopolitical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(orbital_data_center_2026). % Required for Tangled Rope

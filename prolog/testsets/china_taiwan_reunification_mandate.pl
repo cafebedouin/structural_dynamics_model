@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:constraint_metric(china_taiwan_reunification_mandate, theater
 % The state presents reunification not as a policy but as an inevitable, natural historical conclusion.
 narrative_ontology:constraint_claim(china_taiwan_reunification_mandate, tangled_rope).
 narrative_ontology:human_readable(china_taiwan_reunification_mandate, "The Mandate of National Rejuvenation (PRC Perspective)").
+narrative_ontology:topic_domain(china_taiwan_reunification_mandate, "political").
 
 % Binary flags
 % Requires constant diplomatic pressure, ADIZ incursions, and blockade rehearsals.

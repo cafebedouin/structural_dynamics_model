@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(us_embargo_cuba, theater_ratio, 0.30).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_embargo_cuba, snare).
 narrative_ontology:human_readable(us_embargo_cuba, "US Embargo of Cuba").
+narrative_ontology:topic_domain(us_embargo_cuba, "political/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_embargo_cuba). % Required for Tangled Rope

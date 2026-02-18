@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(net_zero_stabilization, theater_ratio, 0.10
 % It is presented as a discovery of an immutable physical law.
 narrative_ontology:constraint_claim(net_zero_stabilization, tangled_rope).
 narrative_ontology:human_readable(net_zero_stabilization, "The Net Zero Carbon Constraint").
+narrative_ontology:topic_domain(net_zero_stabilization, "scientific/political/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(net_zero_stabilization). % Required for Tangled Rope. Policy, treaties, and carbon markets are all enforcement mechanisms.

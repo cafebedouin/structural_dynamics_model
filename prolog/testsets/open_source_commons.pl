@@ -18,7 +18,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* 1. NARRATIVE CONTEXT */
 /**
@@ -32,6 +33,7 @@
 /* 2. BASE PROPERTIES */
 narrative_ontology:constraint_claim(open_source_commons, rope).
 narrative_ontology:human_readable(open_source_commons, "The Mutual Garden").
+narrative_ontology:topic_domain(open_source_commons, "social/technological").
 
 domain_priors:base_extractiveness(open_source_commons, 0.05). % Near Mountain-low extraction
 domain_priors:suppression_score(open_source_commons, 0.10).   % High exit options

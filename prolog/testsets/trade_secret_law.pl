@@ -40,7 +40,8 @@
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(trade_secret_law, theater_ratio, 0.30).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(trade_secret_law, tangled_rope).
 narrative_ontology:human_readable(trade_secret_law, "Trade Secret Law (Information Ownership)").
+narrative_ontology:topic_domain(trade_secret_law, "legal/economic").
 
 % --- Binary flags ---
 % This is a legal framework that requires courts and litigation to function.

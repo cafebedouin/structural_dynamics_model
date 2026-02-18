@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(union_protection_underperformance, theater_
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(union_protection_underperformance, tangled_rope).
+narrative_ontology:topic_domain(union_protection_underperformance, "economic").
 narrative_ontology:human_readable(union_protection_underperformance, "\"Just Cause\" Protection for Underperforming Union Employees").
 
 % Binary flags

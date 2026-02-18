@@ -40,7 +40,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(automatic_enrollment_defaults, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(automatic_enrollment_defaults, rope).
 narrative_ontology:human_readable(automatic_enrollment_defaults, "Automatic Enrollment Defaults in Retirement Plans").
+narrative_ontology:topic_domain(automatic_enrollment_defaults, "economic/social").
 
 % --- Binary flags ---
 % The policy requires active, ongoing implementation by payroll systems for each

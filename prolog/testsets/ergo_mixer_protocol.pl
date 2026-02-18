@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(ergo_mixer_protocol, theater_ratio, 0.32).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ergo_mixer_protocol, tangled_rope).
 narrative_ontology:human_readable(ergo_mixer_protocol, "ErgoMixer Privacy Mechanism").
+narrative_ontology:topic_domain(ergo_mixer_protocol, "technological/social").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ergo_mixer_protocol). % Enforcement is cryptographic.

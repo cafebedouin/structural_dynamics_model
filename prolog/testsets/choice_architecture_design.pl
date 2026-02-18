@@ -41,7 +41,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:omega_variable/3,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -98,6 +99,7 @@ narrative_ontology:constraint_metric(choice_architecture_design, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(choice_architecture_design, tangled_rope).
 narrative_ontology:human_readable(choice_architecture_design, "Libertarian Paternalist Nudges").
+narrative_ontology:topic_domain(choice_architecture_design, "psychological/economic/social").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(choice_architecture_design). % Required for Tangled Rope

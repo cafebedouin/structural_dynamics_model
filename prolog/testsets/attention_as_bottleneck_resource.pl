@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(attention_as_bottleneck_resource, theater_r
 % The platforms claim this is a coordination mechanism for value.
 narrative_ontology:constraint_claim(attention_as_bottleneck_resource, piton).
 narrative_ontology:human_readable(attention_as_bottleneck_resource, "The Finite Cognitive Aperture").
+narrative_ontology:topic_domain(attention_as_bottleneck_resource, "social/technological/economic").
 
 % Binary flags
 % Required for Tangled Rope: active engineering of systems to capture attention.

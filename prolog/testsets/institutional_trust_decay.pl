@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(institutional_trust_decay, theater_ratio, 0
 % The institution claims its structures are for coordination, hiding the decay.
 narrative_ontology:constraint_claim(institutional_trust_decay, piton).
 narrative_ontology:human_readable(institutional_trust_decay, "The Legitimacy Void").
+narrative_ontology:topic_domain(institutional_trust_decay, "social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(institutional_trust_decay).

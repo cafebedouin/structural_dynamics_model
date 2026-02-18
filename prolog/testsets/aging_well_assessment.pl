@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(aging_longevity_tests, theater_ratio, 0.35)
 % The system claims to be a pure coordination mechanism for health.
 narrative_ontology:constraint_claim(aging_longevity_tests, tangled_rope).
 narrative_ontology:human_readable(aging_longevity_tests, "The Commercialized Functional Aging Assessment System").
+narrative_ontology:topic_domain(aging_longevity_tests, "health/economic").
 
 % Binary flags
 % The system requires active promotion, certification, and integration into

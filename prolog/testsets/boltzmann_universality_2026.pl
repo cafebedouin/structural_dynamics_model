@@ -25,7 +25,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:interval/3,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(boltzmann_universality_2026, theater_ratio,
 % Constraint self-claim (analytical classification)
 narrative_ontology:constraint_claim(boltzmann_universality_2026, tangled_rope).
 narrative_ontology:human_readable(boltzmann_universality_2026, "The Boltzmann Distribution Uniqueness Proof").
+narrative_ontology:topic_domain(boltzmann_universality_2026, "physics/economics/mathematics").
 domain_priors:requires_active_enforcement(boltzmann_universality_2026).
 
 narrative_ontology:constraint_beneficiary(boltzmann_universality_2026, interdisciplinary_modeling_fidelity).

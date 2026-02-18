@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(guinea_worm_eradication, theater_ratio, 0.1
 % Constraint classification claim
 narrative_ontology:constraint_claim(guinea_worm_eradication, tangled_rope).
 narrative_ontology:human_readable(guinea_worm_eradication, "Global Guinea Worm Eradication Program").
+narrative_ontology:topic_domain(guinea_worm_eradication, "social").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(guinea_worm_eradication).      % Mandatory if Scaffold

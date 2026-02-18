@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(global_digital_divide, theater_ratio, 0.30)
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(global_digital_divide, tangled_rope).
 narrative_ontology:human_readable(global_digital_divide, "Global Digital Divide").
+narrative_ontology:topic_domain(global_digital_divide, "economic").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(global_digital_divide).      % Mandatory if Scaffold

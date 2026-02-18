@@ -36,7 +36,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -84,6 +85,7 @@ narrative_ontology:constraint_metric(kjv_linguistic_residue, theater_ratio, 0.85
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(kjv_linguistic_residue, piton).
 narrative_ontology:human_readable(kjv_linguistic_residue, "The KJV Aesthetic as a Cognitive Constraint").
+narrative_ontology:topic_domain(kjv_linguistic_residue, "linguistic/cultural").
 
 % --- Binary flags ---
 % No active enforcement; the constraint persists through cultural inertia.

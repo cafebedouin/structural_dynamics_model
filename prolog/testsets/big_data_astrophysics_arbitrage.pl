@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(big_data_astrophysics_arbitrage, theater_ra
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(big_data_astrophysics_arbitrage, tangled_rope).
 narrative_ontology:human_readable(big_data_astrophysics_arbitrage, "Big Data Arbitrage in Modern Astrophysics").
+narrative_ontology:topic_domain(big_data_astrophysics_arbitrage, "technological").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(big_data_astrophysics_arbitrage).      % Mandatory if Scaffold

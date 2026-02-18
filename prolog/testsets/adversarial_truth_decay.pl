@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(adversarial_truth_decay, theater_ratio, 0.9
 % The architects claim it's a coordination tool for sentiment, hiding its extractive nature.
 narrative_ontology:constraint_claim(adversarial_truth_decay, piton).
 narrative_ontology:human_readable(adversarial_truth_decay, "The Epistemic Siege").
+narrative_ontology:topic_domain(adversarial_truth_decay, "social/technological/political").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(adversarial_truth_decay). % The information flood is an active enforcement mechanism.

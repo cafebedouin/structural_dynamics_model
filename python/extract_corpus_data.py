@@ -126,7 +126,8 @@ class CorpusExtractor:
 
             # Fields previously parsed from .pl files
             constraint.human_readable = entry.get('human_readable')
-            constraint.domain = entry.get('domain')
+            # Prefer topic_domain (subject area) over domain (classification type)
+            constraint.domain = entry.get('topic_domain') or entry.get('domain')
             constraint.emerges_naturally = entry.get('emerges_naturally')
             constraint.requires_enforcement = entry.get('requires_active_enforcement')
 

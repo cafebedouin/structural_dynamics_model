@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(value_alignment_drift, theater_ratio, 0.55)
 % Constraint classification claim
 narrative_ontology:constraint_claim(value_alignment_drift, tangled_rope).
 narrative_ontology:human_readable(value_alignment_drift, "The Purpose Creep").
+narrative_ontology:topic_domain(value_alignment_drift, "technological/social").
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(value_alignment_drift).

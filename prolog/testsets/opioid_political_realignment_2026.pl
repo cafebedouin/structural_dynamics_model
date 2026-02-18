@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(opioid_political_realignment_2026, theater_
 % coordination around shared values, masking the extractive origins.
 narrative_ontology:constraint_claim(opioid_political_realignment_2026, tangled_rope).
 narrative_ontology:human_readable(opioid_political_realignment_2026, "Opioid-Induced Political Capture").
+narrative_ontology:topic_domain(opioid_political_realignment_2026, "political/economic/social").
 
 % Binary flags & Structural properties for Tangled Rope classification
 % Enforcement is political/structural: the machinery that translates votes into

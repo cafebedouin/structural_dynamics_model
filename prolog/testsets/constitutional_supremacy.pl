@@ -40,7 +40,8 @@
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -84,6 +85,7 @@ narrative_ontology:constraint_metric(constitutional_supremacy, theater_ratio, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(constitutional_supremacy, tangled_rope).
 narrative_ontology:human_readable(constitutional_supremacy, "The Supremacy of Written Constitutions and Judicial Review").
+narrative_ontology:topic_domain(constitutional_supremacy, "legal/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(constitutional_supremacy). % Required for Tangled Rope

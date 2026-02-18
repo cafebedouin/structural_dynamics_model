@@ -31,7 +31,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -105,6 +106,7 @@ test(bridge_creates_constraint_claim) :-
     % After repair, constraint_claim should exist (bridged from analytical classification)
     narrative_ontology:constraint_claim(repair_probe_incomplete, _Type).
 narrative_ontology:human_readable(repair_probe_incomplete, "Data Repair Bridge Probe (Deliberately Incomplete)").
+narrative_ontology:topic_domain(repair_probe_incomplete, "investigation/testing").
 
 test(bridge_creates_suppression_metric) :-
     % After repair, suppression metric should exist (bridged from domain_priors or config default)

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(iron_law_of_oligarchy, theater_ratio, 0.15)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(iron_law_of_oligarchy, tangled_rope).
 narrative_ontology:human_readable(iron_law_of_oligarchy, "The Iron Law of Oligarchy").
+narrative_ontology:topic_domain(iron_law_of_oligarchy, "political/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(iron_law_of_oligarchy). % Required for Tangled Rope

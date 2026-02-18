@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(irreversible_policy_commitment, theater_rat
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(irreversible_policy_commitment, tangled_rope).
 narrative_ontology:human_readable(irreversible_policy_commitment, "The Burned Bridge Protocol").
+narrative_ontology:topic_domain(irreversible_policy_commitment, "political/economic").
 
 % Binary flags & Structural properties
 domain_priors:requires_active_enforcement(irreversible_policy_commitment). % Required for Tangled Rope

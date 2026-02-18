@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -101,6 +102,7 @@ narrative_ontology:constraint_metric(weierstrass_proof_limits, resistance, 0.05)
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(weierstrass_proof_limits, mountain).
 narrative_ontology:human_readable(weierstrass_proof_limits, "The Existence of Continuous, Nowhere-Differentiable Functions").
+narrative_ontology:topic_domain(weierstrass_proof_limits, "technological").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint is a mathematical truth, emerging naturally from axioms

@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(vns_implant_for_trd, theater_ratio, 0.10).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(vns_implant_for_trd, tangled_rope).
 narrative_ontology:human_readable(vns_implant_for_trd, "Vagus Nerve Stimulation (VNS) Implant for Treatment-Resistant Depression").
+narrative_ontology:topic_domain(vns_implant_for_trd, "technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(vns_implant_for_trd). % Requires FDA approval, insurance reimbursement policies, surgical standards.

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(ai_task_horizon_reliability, theater_ratio,
 % It is presented as an unavoidable, natural limit of the current technology paradigm.
 narrative_ontology:constraint_claim(ai_task_horizon_reliability, tangled_rope).
 narrative_ontology:human_readable(ai_task_horizon_reliability, "The AI Task Horizon and Reliability Bottleneck").
+narrative_ontology:topic_domain(ai_task_horizon_reliability, "technological/economic").
 
 % Binary flags
 % Enforcement is the market pressure and platform design choices that perpetuate the bottleneck.

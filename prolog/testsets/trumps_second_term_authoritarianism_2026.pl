@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(trump_second_term_authoritarianism_2026, th
 % The regime claims its actions are necessary for law and order.
 narrative_ontology:constraint_claim(trump_second_term_authoritarianism_2026, tangled_rope).
 narrative_ontology:human_readable(trump_second_term_authoritarianism_2026, "Electoral Authoritarianism (Trump II, Year One)").
+narrative_ontology:topic_domain(trump_second_term_authoritarianism_2026, "political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(trump_second_term_authoritarianism_2026). % Requires paramilitary deployment and judicial pressure.

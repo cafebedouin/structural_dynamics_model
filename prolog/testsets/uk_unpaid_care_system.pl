@@ -40,7 +40,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(uk_unpaid_care_system, theater_ratio, 0.20)
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(uk_unpaid_care_system, snare).
 narrative_ontology:human_readable(uk_unpaid_care_system, "The UK's reliance on unpaid carers for social and healthcare").
+narrative_ontology:topic_domain(uk_unpaid_care_system, "economic/social").
 
 % --- Binary flags ---
 % The rules governing Carer's Allowance and eligibility are actively enforced.

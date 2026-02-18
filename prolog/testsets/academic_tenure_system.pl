@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(academic_tenure_system, theater_ratio, 0.52
 % Constraint classification claim
 narrative_ontology:constraint_claim(academic_tenure_system, tangled_rope).
 narrative_ontology:human_readable(academic_tenure_system, "Academic Tenure System").
+narrative_ontology:topic_domain(academic_tenure_system, "economic/social").
 
 % Constraint metric facts used by classification engine
 domain_priors:requires_active_enforcement(academic_tenure_system).

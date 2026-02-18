@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(board_of_peace_2026, theater_ratio, 0.80).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(board_of_peace_2026, tangled_rope).
 narrative_ontology:human_readable(board_of_peace_2026, "The 2026 'Board of Peace' Initiative").
+narrative_ontology:topic_domain(board_of_peace_2026, "political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(board_of_peace_2026). % Required for Tangled Rope

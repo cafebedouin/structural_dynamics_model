@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:constraint_metric(p_g_golden_pear_surveillance, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(p_g_golden_pear_surveillance, snare).
 narrative_ontology:human_readable(p_g_golden_pear_surveillance, "Procter & Gamble's Golden Pear Microcontent Surveillance").
+narrative_ontology:topic_domain(p_g_golden_pear_surveillance, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(p_g_golden_pear_surveillance). % Required for Tangled Rope

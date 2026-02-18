@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(manganese_catalysis_2026, theater_ratio, 0.
 % Constraint classification claim
 narrative_ontology:constraint_claim(manganese_catalysis_2026, scaffold).
 narrative_ontology:human_readable(manganese_catalysis_2026, "Manganese-Formate Fuel Pathway").
+narrative_ontology:topic_domain(manganese_catalysis_2026, "technological/economic").
 
 % Primary keys for the classification engine
 % Beneficial and victim actors (E < 0.46 typically means broader coordination)

@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(rotation_seven_isolation, theater_ratio, 0.
 % It claims to be a necessary coordination mechanism for public health.
 narrative_ontology:constraint_claim(rotation_seven_isolation, snare).
 narrative_ontology:human_readable(rotation_seven_isolation, "R7 Medical Isolation Protocol").
+narrative_ontology:topic_domain(rotation_seven_isolation, "political/technological/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(rotation_seven_isolation). % Requires monitoring, locked wards, etc.

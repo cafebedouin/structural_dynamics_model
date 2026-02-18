@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(yangtze_fishing_ban, theater_ratio, 0.30).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(yangtze_fishing_ban, tangled_rope).
 narrative_ontology:human_readable(yangtze_fishing_ban, "Yangtze River Fishing Ban").
+narrative_ontology:topic_domain(yangtze_fishing_ban, "economic, environmental, political").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(yangtze_fishing_ban).      % Mandatory if Scaffold

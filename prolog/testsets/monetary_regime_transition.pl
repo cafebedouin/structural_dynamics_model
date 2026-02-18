@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(monetary_regime_transition, theater_ratio, 
 % Fiat systems are presented as necessary tools for economic coordination.
 narrative_ontology:constraint_claim(monetary_regime_transition, tangled_rope).
 narrative_ontology:human_readable(monetary_regime_transition, "Sovereign Fiat Currency Regime").
+narrative_ontology:topic_domain(monetary_regime_transition, "economic/political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(monetary_regime_transition). % Legal tender laws, capital controls.

@@ -19,7 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@
 narrative_ontology:interval(adverse_possession, 0, 10).
 narrative_ontology:constraint_claim(adverse_possession, snare).
 narrative_ontology:human_readable(adverse_possession, "Adverse Possession (Squatter's Rights)").
+narrative_ontology:topic_domain(adverse_possession, "economic/political/social").
 
 % Base Properties
 % Rationale: High extraction (0.65) as the legal title is liquidated and 

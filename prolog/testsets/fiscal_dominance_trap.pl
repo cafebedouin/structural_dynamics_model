@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(fiscal_dominance_trap, theater_ratio, 0.85)
 % Constraint self-claim: The system claims to be necessary coordination for stability.
 narrative_ontology:constraint_claim(fiscal_dominance_trap, piton).
 narrative_ontology:human_readable(fiscal_dominance_trap, "The Debt-Monetary Bind").
+narrative_ontology:topic_domain(fiscal_dominance_trap, "economic/political").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(fiscal_dominance_trap).

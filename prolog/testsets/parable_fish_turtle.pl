@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(parable_fish_turtle, theater_ratio, 0.10).
 % The parable presents itself as a constructed lesson about natural limits.
 narrative_ontology:constraint_claim(parable_fish_turtle, tangled_rope).
 narrative_ontology:human_readable(parable_fish_turtle, "The Ontological Lake (Fish and Turtle Parable)").
+narrative_ontology:topic_domain(parable_fish_turtle, "philosophical/social").
 
 % Binary flags
 % The "rules" of the fish's world are enforced by physics (it cannot breathe air).

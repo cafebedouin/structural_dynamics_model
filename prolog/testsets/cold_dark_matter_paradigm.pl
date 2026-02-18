@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -99,6 +100,7 @@ narrative_ontology:constraint_metric(cold_dark_matter_paradigm, theater_ratio, 0
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(cold_dark_matter_paradigm, tangled_rope).
 narrative_ontology:human_readable(cold_dark_matter_paradigm, "The Lambda-CDM model's 'cold dark matter' tenet as a dominant scientific paradigm").
+narrative_ontology:topic_domain(cold_dark_matter_paradigm, "scientific").
 
 % --- Binary flags ---
 % Enforcement is active through peer review, grant allocation, and academic hiring.

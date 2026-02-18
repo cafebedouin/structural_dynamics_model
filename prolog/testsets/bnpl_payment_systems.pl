@@ -41,7 +41,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(bnpl_payment_systems, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(bnpl_payment_systems, tangled_rope).
+narrative_ontology:topic_domain(bnpl_payment_systems, "economic").
 narrative_ontology:human_readable(bnpl_payment_systems, "\"Buy Now, Pay Later\" (BNPL) Payment Systems").
 
 % --- Binary flags ---

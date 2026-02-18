@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -103,6 +104,7 @@ narrative_ontology:constraint_metric(climate_attribution_2026, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(climate_attribution_2026, rope).
 narrative_ontology:human_readable(climate_attribution_2026, "Extreme Weather Attribution Science").
+narrative_ontology:topic_domain(climate_attribution_2026, "scientific/political/economic").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This flag is critical. The physical weather events emerge naturally. The

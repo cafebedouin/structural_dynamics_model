@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(cartel_drone_surveillance_el_paso, theater_
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(cartel_drone_surveillance_el_paso, snare).
 narrative_ontology:human_readable(cartel_drone_surveillance_el_paso, "Cartel Drone Surveillance Monopoly over El Paso Border Area").
+narrative_ontology:topic_domain(cartel_drone_surveillance_el_paso, "geopolitical/technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(cartel_drone_surveillance_el_paso). % Drones must be actively flown and monitored.

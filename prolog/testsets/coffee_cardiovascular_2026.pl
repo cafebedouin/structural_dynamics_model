@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(coffee_cardiovascular_2026, theater_ratio, 
 % Constraint classification claim
 narrative_ontology:constraint_claim(coffee_cardiovascular_2026, scaffold).
 narrative_ontology:human_readable(coffee_cardiovascular_2026, "The Caffeine Paradox Realignment").
+narrative_ontology:topic_domain(coffee_cardiovascular_2026, "medical/health").
 
 % Primary keys for the classification engine
 % High-fidelity stakeholders

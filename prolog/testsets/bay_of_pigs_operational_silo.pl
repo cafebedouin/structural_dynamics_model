@@ -26,7 +26,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@
 narrative_ontology:interval(bay_of_pigs_operational_silo, 0, 10).
 narrative_ontology:constraint_claim(bay_of_pigs_operational_silo, snare).
 narrative_ontology:human_readable(bay_of_pigs_operational_silo, "The CIA-Pentagon Intelligence/Action Silo (Operation Zapata)").
+narrative_ontology:topic_domain(bay_of_pigs_operational_silo, "political/military").
 
 % Base Properties
 % Rationale: 0.90 extraction of life and political capital.

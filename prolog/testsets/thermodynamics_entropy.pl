@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -103,6 +104,7 @@ domain_priors:emerges_naturally(thermodynamics_entropy).
 % As a fundamental, unchangeable law of physics, its structural type is Mountain.
 narrative_ontology:constraint_claim(thermodynamics_entropy, mountain).
 narrative_ontology:human_readable(thermodynamics_entropy, "The Second Law of Thermodynamics (Entropy)").
+narrative_ontology:topic_domain(thermodynamics_entropy, "technological").
 
 % --- Binary flags ---
 % No active enforcement is required; it is an emergent property of statistical mechanics.

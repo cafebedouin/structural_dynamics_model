@@ -22,7 +22,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(ancestral_pueblo_hydrology, theater_ratio, 
 % Constraint classification claim
 narrative_ontology:constraint_claim(ancestral_pueblo_hydrology, tangled_rope).
 narrative_ontology:human_readable(ancestral_pueblo_hydrology, "Ancestral Puebloan Hydrological Debt").
+narrative_ontology:topic_domain(ancestral_pueblo_hydrology, "environmental/social").
 
 % Mandatory keys for classification engine v3.4
 % REQUIRED: Sunset clause for Scaffold classification (Far View Reservoir).

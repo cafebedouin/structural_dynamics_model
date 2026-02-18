@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(medieval_church_hegemony, theater_ratio, 0.
 % It presented itself as divine, unchangeable law.
 narrative_ontology:constraint_claim(medieval_church_hegemony, tangled_rope).
 narrative_ontology:human_readable(medieval_church_hegemony, "The Medieval Ecclesiastical Hegemony").
+narrative_ontology:topic_domain(medieval_church_hegemony, "religious/economic/political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(medieval_church_hegemony). % Required for Tangled Rope (Inquisition, Interdicts, Tithe collectors).

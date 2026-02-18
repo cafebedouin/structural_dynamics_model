@@ -27,7 +27,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(greenland_seizure_trade_war, theater_ratio,
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(greenland_seizure_trade_war, tangled_rope).
 narrative_ontology:human_readable(greenland_seizure_trade_war, "The Greenland Seizure Threat and Transatlantic Strife").
+narrative_ontology:topic_domain(greenland_seizure_trade_war, "geopolitical/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(greenland_seizure_trade_war). % Rationale: Maintained via explicit threats of military action and economic retaliation.

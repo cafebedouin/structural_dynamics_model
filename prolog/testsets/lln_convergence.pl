@@ -44,7 +44,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(lln_convergence, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(lln_convergence, mountain).
 narrative_ontology:human_readable(lln_convergence, "Law of Large Numbers (LLN)").
+narrative_ontology:topic_domain(lln_convergence, "mathematical").
 
 % --- Binary flags ---
 % No active enforcement needed for a mathematical theorem.

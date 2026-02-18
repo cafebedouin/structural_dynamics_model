@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -100,6 +101,7 @@ narrative_ontology:constraint_metric(lavender_ai_targeting, theater_ratio, 0.10)
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(lavender_ai_targeting, tangled_rope).
+narrative_ontology:topic_domain(lavender_ai_targeting, "technological/military").
 narrative_ontology:human_readable(lavender_ai_targeting, "\"Lavender\" AI-Powered Targeting System in Gaza").
 
 % --- Binary flags ---

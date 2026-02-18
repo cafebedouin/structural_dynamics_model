@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -110,6 +111,7 @@ narrative_ontology:constraint_metric(galois_theory_symmetry, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(galois_theory_symmetry, mountain).
 narrative_ontology:human_readable(galois_theory_symmetry, "Galois Theory (Symmetry of Roots)").
+narrative_ontology:topic_domain(galois_theory_symmetry, "mathematical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the axioms of fields and groups.

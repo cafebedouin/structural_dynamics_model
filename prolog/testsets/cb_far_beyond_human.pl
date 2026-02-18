@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -62,6 +63,7 @@ narrative_ontology:constraint_metric(cb_far_beyond_human, theater_ratio, 0.20).
 % Constraint classification claim
 narrative_ontology:constraint_claim(cb_far_beyond_human, tangled_rope).
 narrative_ontology:human_readable(cb_far_beyond_human, "AI Alignment Problem").
+narrative_ontology:topic_domain(cb_far_beyond_human, "technological").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(cb_far_beyond_human).      % Mandatory if Scaffold

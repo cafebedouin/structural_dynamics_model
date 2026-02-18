@@ -41,7 +41,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -84,6 +85,7 @@ narrative_ontology:constraint_metric(digital_euro_cbdc, theater_ratio, 0.25).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(digital_euro_cbdc, tangled_rope).
 narrative_ontology:human_readable(digital_euro_cbdc, "The European Union's Central Bank Digital Currency (CBDC)").
+narrative_ontology:topic_domain(digital_euro_cbdc, "economic/technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(digital_euro_cbdc). % Programmability and transaction limits are not emergent.

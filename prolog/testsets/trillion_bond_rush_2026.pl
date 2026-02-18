@@ -24,7 +24,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:interval/3,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(trillion_bond_rush_2026, theater_ratio, 0.1
 % Constraint self-claim (analytical classification)
 narrative_ontology:constraint_claim(trillion_bond_rush_2026, snare).
 narrative_ontology:human_readable(trillion_bond_rush_2026, "Global $1 Trillion Bond Issuance Record").
+narrative_ontology:topic_domain(trillion_bond_rush_2026, "economic/financial").
 
 narrative_ontology:constraint_beneficiary(trillion_bond_rush_2026, debt_capital_markets).
 narrative_ontology:constraint_victim(trillion_bond_rush_2026, generational_fiscal_health).

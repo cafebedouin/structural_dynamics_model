@@ -36,7 +36,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -97,6 +98,7 @@ narrative_ontology:constraint_metric(busy_beaver_noncomputability, resistance, 0
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(busy_beaver_noncomputability, mountain).
 narrative_ontology:human_readable(busy_beaver_noncomputability, "The Non-Computability of the Busy Beaver Function (Σ)").
+narrative_ontology:topic_domain(busy_beaver_noncomputability, "technological/mathematical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint emerges naturally from the axioms of computation without

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(discover_core_2026, theater_ratio, 0.45).
 % The platform claims the update is a coordination mechanism for quality.
 narrative_ontology:constraint_claim(discover_core_2026, tangled_rope).
 narrative_ontology:human_readable(discover_core_2026, "Google Discover Feb 2026 Core Update").
+narrative_ontology:topic_domain(discover_core_2026, "economic/technological").
 
 % Binary flags
 % Required for Tangled Rope: the algorithmic update is actively enforced.

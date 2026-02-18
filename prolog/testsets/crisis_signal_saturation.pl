@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(crisis_signal_saturation, theater_ratio, 0.
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(crisis_signal_saturation, piton).
 narrative_ontology:human_readable(crisis_signal_saturation, "The Perpetual Alarm Fatigue").
+narrative_ontology:topic_domain(crisis_signal_saturation, "informational/psychological/sociological").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(crisis_signal_saturation).

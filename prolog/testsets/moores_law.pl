@@ -40,7 +40,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -102,6 +103,7 @@ narrative_ontology:constraint_metric(moores_law, theater_ratio, 0.02).
 % asymmetric extraction, and requires active enforcement.
 narrative_ontology:constraint_claim(moores_law, tangled_rope).
 narrative_ontology:human_readable(moores_law, "Moore's Law as an Industrial Convention").
+narrative_ontology:topic_domain(moores_law, "technological/economic").
 
 % --- Binary flags ---
 % Rationale: Requires active, massive capital investment and industry-wide

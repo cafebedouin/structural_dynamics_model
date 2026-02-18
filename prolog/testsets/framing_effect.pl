@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(framing_effect, theater_ratio, 0.15).
 % The system sees it as a constructed mechanism.
 narrative_ontology:constraint_claim(framing_effect, tangled_rope).
 narrative_ontology:human_readable(framing_effect, "The Framing Effect (as applied in choice architecture)").
+narrative_ontology:topic_domain(framing_effect, "social/political/technological").
 
 % Binary flags
 % The *application* of the bias requires active enforcement of the message/frame.

@@ -23,7 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(anticipatory_capacity_failure, theater_rati
 % Constraint classification claim
 narrative_ontology:constraint_claim(anticipatory_capacity_failure, piton).
 narrative_ontology:human_readable(anticipatory_capacity_failure, "The Blindside Equilibrium").
+narrative_ontology:topic_domain(anticipatory_capacity_failure, "organizational/technological/cognitive").
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(anticipatory_capacity_failure).

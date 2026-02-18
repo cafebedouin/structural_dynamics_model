@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(mandatrophic_margin_collapse, theater_ratio
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(mandatrophic_margin_collapse, tangled_rope).
 narrative_ontology:human_readable(mandatrophic_margin_collapse, "Mandatrophy (The Extraction of Margin for Mandate)").
+narrative_ontology:topic_domain(mandatrophic_margin_collapse, "institutional/technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(mandatrophic_margin_collapse). % Required for Tangled Rope

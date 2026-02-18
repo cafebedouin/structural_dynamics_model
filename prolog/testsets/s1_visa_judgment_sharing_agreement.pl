@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(visa_judgment_sharing_agreement, theater_ra
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(visa_judgment_sharing_agreement, tangled_rope).
 narrative_ontology:human_readable(visa_judgment_sharing_agreement, "Visa Judgment Sharing Agreement (AMEX Antitrust Case)").
+narrative_ontology:topic_domain(visa_judgment_sharing_agreement, "legal/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(visa_judgment_sharing_agreement). % Required for Tangled Rope

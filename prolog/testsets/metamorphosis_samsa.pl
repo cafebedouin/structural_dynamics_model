@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(metamorphosis_samsa, theater_ratio, 0.10).
 % but its function is pure coercive extraction (enforcement).
 narrative_ontology:constraint_claim(metamorphosis_samsa, snare).
 narrative_ontology:human_readable(metamorphosis_samsa, "The Samsa Family's Debt Bondage").
+narrative_ontology:topic_domain(metamorphosis_samsa, "economic/social/biological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(metamorphosis_samsa). % The family must lock the door; the Clerk threatens legal action.

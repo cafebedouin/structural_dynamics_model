@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(legitimacy_without_effectiveness, theater_r
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(legitimacy_without_effectiveness, piton).
 narrative_ontology:human_readable(legitimacy_without_effectiveness, "The Hollow Mandate").
+narrative_ontology:topic_domain(legitimacy_without_effectiveness, "political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(legitimacy_without_effectiveness).

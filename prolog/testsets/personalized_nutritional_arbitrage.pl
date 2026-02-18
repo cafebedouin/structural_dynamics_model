@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(pna, theater_ratio, 0.15).
 % Platforms market themselves as a pure coordination tool for health.
 narrative_ontology:constraint_claim(pna, tangled_rope).
 narrative_ontology:human_readable(pna, "Personalized Nutritional Arbitrage").
+narrative_ontology:topic_domain(pna, "economic/technological/healthcare").
 
 % Binary flags
 domain_priors:requires_active_enforcement(pna). % Requires active user data logging and sample submission.

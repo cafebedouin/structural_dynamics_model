@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(slow_crisis_invisibility, theater_ratio, 0.
 % Constraint self-claim: It presents as an unchangeable fact of human nature/cognition.
 narrative_ontology:constraint_claim(slow_crisis_invisibility, snare).
 narrative_ontology:human_readable(slow_crisis_invisibility, "Generational Baseline Shift").
+narrative_ontology:topic_domain(slow_crisis_invisibility, "social/environmental").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(slow_crisis_invisibility). % Enforcement is via short-term incentive structures (e.g., election cycles).

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(neuroplasticity_plateau, theater_ratio, 0.4
 % The system built on the biological reality claims it's just a natural law.
 narrative_ontology:constraint_claim(neuroplasticity_plateau, tangled_rope).
 narrative_ontology:human_readable(neuroplasticity_plateau, "The Synaptic Pruning Limit").
+narrative_ontology:topic_domain(neuroplasticity_plateau, "biological/cognitive/educational").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(neuroplasticity_plateau). % Enforcement via economic pressure, performance reviews, obsolescence.

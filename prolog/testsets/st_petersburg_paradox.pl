@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(st_petersburg_paradox, theater_ratio, 0.10)
 % The paradox presents itself as an immutable mathematical law.
 narrative_ontology:constraint_claim(st_petersburg_paradox, tangled_rope).
 narrative_ontology:human_readable(st_petersburg_paradox, "St. Petersburg Paradox (Divergent Expected Value)").
+narrative_ontology:topic_domain(st_petersburg_paradox, "mathematical/economic").
 
 % Binary flags
 % The application of utility theory requires enforcement (e.g., house limits,

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:constraint_metric(eurozone_fragmentation_2026, theater_ratio,
 % The system claims to be a coordination mechanism for stability.
 narrative_ontology:constraint_claim(eurozone_fragmentation_2026, tangled_rope).
 narrative_ontology:human_readable(eurozone_fragmentation_2026, "Eurozone Inflation Disparity and Monetary Policy Rigidity").
+narrative_ontology:topic_domain(eurozone_fragmentation_2026, "economic/political").
 
 % Binary flags
 % The single monetary policy requires continuous active enforcement and intervention by the ECB.

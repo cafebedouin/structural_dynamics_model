@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(identity_stack_incompatibility, theater_rat
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(identity_stack_incompatibility, tangled_rope).
 narrative_ontology:human_readable(identity_stack_incompatibility, "The Fragmented Digital Self").
+narrative_ontology:topic_domain(identity_stack_incompatibility, "technological/social/legal").
 
 % Binary flags and structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(identity_stack_incompatibility). % Enforced via ToS and technical lock-in.

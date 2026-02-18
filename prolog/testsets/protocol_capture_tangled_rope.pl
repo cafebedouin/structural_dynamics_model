@@ -28,7 +28,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(protocol_capture_eee, theater_ratio, 0.40).
 % The platform claims its proprietary extensions are necessary for coordination and stability.
 narrative_ontology:constraint_claim(protocol_capture_eee, tangled_rope).
 narrative_ontology:human_readable(protocol_capture_eee, "The Captured Commons (Embrace, Extend, Extinguish)").
+narrative_ontology:topic_domain(protocol_capture_eee, "technological/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(protocol_capture_eee). % Legal/Technical enforcement of EULA/API terms.

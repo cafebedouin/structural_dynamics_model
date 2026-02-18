@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(strait_coercion_2025, theater_ratio, 0.35).
 % The activity is framed as a necessary enforcement of sovereignty claims.
 narrative_ontology:constraint_claim(strait_coercion_2025, tangled_rope).
 narrative_ontology:human_readable(strait_coercion_2025, "Normalized Taiwan Strait Military Coercion").
+narrative_ontology:topic_domain(strait_coercion_2025, "political/military").
 
 % Binary flags
 domain_priors:requires_active_enforcement(strait_coercion_2025). % Required for Tangled Rope

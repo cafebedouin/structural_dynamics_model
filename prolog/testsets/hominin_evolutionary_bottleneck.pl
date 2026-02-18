@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(hominin_evolutionary_bottleneck, theater_ra
 % The scientific consensus is a constructed framework based on evidence.
 narrative_ontology:constraint_claim(hominin_evolutionary_bottleneck, rope).
 narrative_ontology:human_readable(hominin_evolutionary_bottleneck, "The Hominin Evolutionary Bottleneck & Replacement Event").
+narrative_ontology:topic_domain(hominin_evolutionary_bottleneck, "scientific/biological").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(hominin_evolutionary_bottleneck, homo_sapiens).

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(portugal_ad_stability_2026, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(portugal_ad_stability_2026, scaffold).
+narrative_ontology:topic_domain(portugal_ad_stability_2026, "political").
 narrative_ontology:human_readable(portugal_ad_stability_2026, "The AD Minority Government Stability (The \"Presidential\" Scaffold)").
 
 % Binary flags

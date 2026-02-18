@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -114,6 +115,7 @@ narrative_ontology:constraint_metric(continuum_hypothesis_undecidability, resist
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(continuum_hypothesis_undecidability, mountain).
 narrative_ontology:human_readable(continuum_hypothesis_undecidability, "Undecidability of the Continuum Hypothesis in ZFC").
+narrative_ontology:topic_domain(continuum_hypothesis_undecidability, "mathematical/logical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The undecidability is a direct, un-designed consequence of the ZFC axioms.

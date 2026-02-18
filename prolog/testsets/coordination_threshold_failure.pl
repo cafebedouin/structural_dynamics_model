@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(coordination_threshold_failure, theater_rat
 % The foundation claims it's a coordination mechanism.
 narrative_ontology:constraint_claim(coordination_threshold_failure, tangled_rope).
 narrative_ontology:human_readable(coordination_threshold_failure, "The Critical Mass Chasm").
+narrative_ontology:topic_domain(coordination_threshold_failure, "social/technological").
 
 % Binary flags
 % The protocol claims it is temporary until the threshold is cleared.

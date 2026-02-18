@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(suslin_hypothesis_proof_limits, resistance,
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(suslin_hypothesis_proof_limits, mountain).
 narrative_ontology:human_readable(suslin_hypothesis_proof_limits, "Limits of Proof in the Suslin Hypothesis").
+narrative_ontology:topic_domain(suslin_hypothesis_proof_limits, "mathematical").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(suslin_hypothesis_proof_limits).      % Mandatory if Scaffold

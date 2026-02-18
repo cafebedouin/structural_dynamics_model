@@ -24,7 +24,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -48,6 +49,7 @@
 
 narrative_ontology:constraint_claim(mom_z14_2026, rope).
 narrative_ontology:human_readable(mom_z14_2026, "Galaxy MoM-z14 (JWST Record)").
+narrative_ontology:topic_domain(mom_z14_2026, "astrophysical/cosmological").
 
 domain_priors:base_extractiveness(mom_z14_2026, 0.05). % Low (Discovery of law).
 domain_priors:suppression_score(mom_z14_2026, 0.45).   % Suppresses old formation models.

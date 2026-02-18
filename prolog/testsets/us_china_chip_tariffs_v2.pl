@@ -40,7 +40,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(us_china_chip_tariffs_v2, theater_ratio, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_china_chip_tariffs_v2, tangled_rope).
 narrative_ontology:human_readable(us_china_chip_tariffs_v2, "US Tariffs on Chinese High-Tech Goods (2024)").
+narrative_ontology:topic_domain(us_china_chip_tariffs_v2, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_china_chip_tariffs_v2). % Required for Tangled Rope

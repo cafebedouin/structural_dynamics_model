@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(finnish_debt_adjustment, theater_ratio, 0.1
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(finnish_debt_adjustment, tangled_rope).
 narrative_ontology:human_readable(finnish_debt_adjustment, "Finnish Private Debt Adjustment System").
+narrative_ontology:topic_domain(finnish_debt_adjustment, "economic/political").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(finnish_debt_adjustment). % Required for Tangled Rope

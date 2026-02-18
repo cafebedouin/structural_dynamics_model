@@ -22,7 +22,8 @@
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,6 +54,7 @@
 narrative_ontology:interval(ai_driven_surveillance_sensor_layer, 2020, 2026).
 narrative_ontology:constraint_claim(ai_driven_surveillance_sensor_layer, tangled_rope).
 narrative_ontology:human_readable(ai_driven_surveillance_sensor_layer, "AI-Driven Real-Time Surveillance").
+narrative_ontology:topic_domain(ai_driven_surveillance_sensor_layer, "technological/security/political").
 
 % Base Properties
 domain_priors:base_extractiveness(ai_driven_surveillance_sensor_layer, 0.75).

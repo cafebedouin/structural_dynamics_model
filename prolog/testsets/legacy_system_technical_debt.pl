@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(legacy_system_technical_debt, theater_ratio
 % Constraint self-claim
 narrative_ontology:constraint_claim(legacy_system_technical_debt, piton).
 narrative_ontology:human_readable(legacy_system_technical_debt, "Cumulative Technical Debt in Legacy Monoliths").
+narrative_ontology:topic_domain(legacy_system_technical_debt, "technological/economic").
 
 % Coordination Type: Technical debt is a failed resource allocation strategy.
 narrative_ontology:coordination_type(legacy_system_technical_debt, resource_allocation).

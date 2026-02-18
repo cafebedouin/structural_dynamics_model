@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(hollow_state_syndrome, theater_ratio, 0.94)
 % Constraint self-claim: It claims to be a more efficient coordination mechanism.
 narrative_ontology:constraint_claim(hollow_state_syndrome, piton).
 narrative_ontology:human_readable(hollow_state_syndrome, "The Shell Governance Mirage").
+narrative_ontology:topic_domain(hollow_state_syndrome, "political/organizational").
 
 % Binary flags and structural properties for Tangled Rope / Piton detection.
 % The contractual obligations require active enforcement to maintain.

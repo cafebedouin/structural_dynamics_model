@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(extraordinary_narrative_shift, theater_rati
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(extraordinary_narrative_shift, tangled_rope).
+narrative_ontology:topic_domain(extraordinary_narrative_shift, "social/psychological").
 narrative_ontology:human_readable(extraordinary_narrative_shift, "The Narrative Framing of \"Extraordinary\" Experience").
 
 % --- Binary flags ---

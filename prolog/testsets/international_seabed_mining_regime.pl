@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -96,6 +97,7 @@ narrative_ontology:constraint_metric(international_seabed_mining_regime, theater
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(international_seabed_mining_regime, tangled_rope).
 narrative_ontology:human_readable(international_seabed_mining_regime, "International Seabed Mining Regime").
+narrative_ontology:topic_domain(international_seabed_mining_regime, "geopolitical").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(international_seabed_mining_regime).      % Mandatory if Scaffold

@@ -28,7 +28,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(college_admissions_market, theater_ratio, 0
 % The system claims to be a fair coordination mechanism.
 narrative_ontology:constraint_claim(college_admissions_market, tangled_rope).
 narrative_ontology:human_readable(college_admissions_market, "The US Elite College Admissions Market").
+narrative_ontology:topic_domain(college_admissions_market, "social/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(college_admissions_market). % Deadlines, standardized testing, etc.

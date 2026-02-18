@@ -45,7 +45,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(google_universal_commerce_protocol, theater
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(google_universal_commerce_protocol, tangled_rope).
 narrative_ontology:human_readable(google_universal_commerce_protocol, "Google Universal Commerce Protocol (UCP)").
+narrative_ontology:topic_domain(google_universal_commerce_protocol, "technological").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(google_universal_commerce_protocol).      % Mandatory if Scaffold

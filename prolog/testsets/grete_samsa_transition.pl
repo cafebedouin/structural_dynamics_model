@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(grete_samsa_transition, theater_ratio, 0.1)
 % However, the analytical view reveals it is a Tangled Rope.
 narrative_ontology:constraint_claim(grete_samsa_transition, tangled_rope).
 narrative_ontology:human_readable(grete_samsa_transition, "Grete's Burden and Ascendance in The Metamorphosis").
+narrative_ontology:topic_domain(grete_samsa_transition, "social/economic").
 
 % Binary flags
 domain_priors:requires_active_enforcement(grete_samsa_transition). % Required for Tangled Rope

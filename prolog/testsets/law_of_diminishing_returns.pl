@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(law_of_diminishing_returns, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(law_of_diminishing_returns, tangled_rope).
 narrative_ontology:human_readable(law_of_diminishing_returns, "The Law of Diminishing Returns").
+narrative_ontology:topic_domain(law_of_diminishing_returns, "economic").
 
 % --- Binary flags ---
 % Rationale: The "enforcement" is not legal but economic. A firm that ignores

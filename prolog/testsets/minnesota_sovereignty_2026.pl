@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(minnesota_sovereignty_2026, theater_ratio, 
 % Constraint classification claim
 narrative_ontology:constraint_claim(minnesota_sovereignty_2026, piton).
 narrative_ontology:human_readable(minnesota_sovereignty_2026, "Operation Metro Surge (Minnesota Crisis)").
+narrative_ontology:topic_domain(minnesota_sovereignty_2026, "political/social").
 
 % Primary keys for the classification engine
 % Active enforcement is the core of this constraint.

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(non_compete_agreements, theater_ratio, 0.10
 % It claims to be a coordination tool to protect intellectual property.
 narrative_ontology:constraint_claim(non_compete_agreements, tangled_rope).
 narrative_ontology:human_readable(non_compete_agreements, "Non-Compete Agreements (Post-Employment Restraint)").
+narrative_ontology:topic_domain(non_compete_agreements, "economic/political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(non_compete_agreements). % Required for Tangled Rope

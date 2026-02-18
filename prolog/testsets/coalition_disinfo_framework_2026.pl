@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(coalition_disinfo_framework_2026, theater_r
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(coalition_disinfo_framework_2026, tangled_rope).
+narrative_ontology:topic_domain(coalition_disinfo_framework_2026, "technological/political").
 narrative_ontology:human_readable(coalition_disinfo_framework_2026, "\"Coalition of the Willing\" Framework for AI Disinformation").
 
 % --- Binary flags ---

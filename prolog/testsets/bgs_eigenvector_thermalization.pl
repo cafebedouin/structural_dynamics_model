@@ -28,7 +28,8 @@
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -110,6 +111,7 @@ narrative_ontology:constraint_metric(bgs_eigenvector_thermalization, theater_rat
 % --- Constraint claim (Analytical perspective type) ---
 narrative_ontology:constraint_claim(bgs_eigenvector_thermalization, tangled_rope).
 narrative_ontology:human_readable(bgs_eigenvector_thermalization, "Eigenvector Thermalization Hypothesis — ETH as").
+narrative_ontology:topic_domain(bgs_eigenvector_thermalization, "scientific (mathematical physics / quantum chaos)").
 
 % --- Binary flags ---
 % Requires active enforcement: peer review norms gate publication on ETH compliance.

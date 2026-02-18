@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(constraint_borsuk_ulam, resistance, 0.05).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(constraint_borsuk_ulam, mountain).
 narrative_ontology:human_readable(constraint_borsuk_ulam, "Borsuk-Ulam Theorem").
+narrative_ontology:topic_domain(constraint_borsuk_ulam, "mathematical").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(constraint_borsuk_ulam).      % Mandatory if Scaffold

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(eu_irgc_terrorist_designation, theater_rati
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(eu_irgc_terrorist_designation, tangled_rope).
 narrative_ontology:human_readable(eu_irgc_terrorist_designation, "EU Terrorist Designation of Iran's IRGC").
+narrative_ontology:topic_domain(eu_irgc_terrorist_designation, "geopolitical").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(eu_irgc_terrorist_designation). % Required for Tangled Rope

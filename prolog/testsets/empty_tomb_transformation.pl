@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -96,6 +97,7 @@ narrative_ontology:constraint_metric(empty_tomb_transformation, theater_ratio, 0
 % This combination of coordination, extraction, and enforcement is characteristic of a Tangled Rope.
 narrative_ontology:constraint_claim(empty_tomb_transformation, tangled_rope).
 narrative_ontology:human_readable(empty_tomb_transformation, "The Resurrection Cycle (Empty Tombs)").
+narrative_ontology:topic_domain(empty_tomb_transformation, "religious/social/psychological").
 
 % --- Binary flags ---
 % Rationale: The institutional framing of the cycle as a core religious doctrine

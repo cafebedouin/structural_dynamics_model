@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -96,6 +97,7 @@ narrative_ontology:constraint_metric(sat_csp_complexity, theater_ratio, 0.03).
 % as a coordination tool and an extractive mechanism, fit the Tangled Rope signature.
 narrative_ontology:constraint_claim(sat_csp_complexity, tangled_rope).
 narrative_ontology:human_readable(sat_csp_complexity, "SAT/CSP Computational Complexity").
+narrative_ontology:topic_domain(sat_csp_complexity, "technological").
 
 % --- Binary flags ---
 % The "enforcement" is the computational work required to traverse the search

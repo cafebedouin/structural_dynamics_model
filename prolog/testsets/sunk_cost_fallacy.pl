@@ -28,7 +28,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(sunk_cost_fallacy, theater_ratio, 0.1).
 % The fallacy presents itself as a trap of prior commitment.
 narrative_ontology:constraint_claim(sunk_cost_fallacy, snare).
 narrative_ontology:human_readable(sunk_cost_fallacy, "The Sunk Cost Fallacy").
+narrative_ontology:topic_domain(sunk_cost_fallacy, "economic/social/cognitive").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(sunk_cost_fallacy, casinos).

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(us_suburban_zoning_2025, theater_ratio, 0.1
 % Constraint self-claim: Zoning laws claim to be a coordination mechanism for orderly development.
 narrative_ontology:constraint_claim(us_suburban_zoning_2025, tangled_rope).
 narrative_ontology:human_readable(us_suburban_zoning_2025, "Single-Family Suburban Zoning Codes").
+narrative_ontology:topic_domain(us_suburban_zoning_2025, "political/legal/economic").
 
 % Binary flags: Requires active enforcement via municipal planning boards, permits, and inspections.
 domain_priors:requires_active_enforcement(us_suburban_zoning_2025).

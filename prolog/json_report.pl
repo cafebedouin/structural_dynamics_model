@@ -247,13 +247,22 @@ write_per_constraint_entry(S, C, Comma) :-
     write_classification_array(S, Classifications),
     format(S, ',~n', []),
 
-    % domain
+    % domain (classification type from category_of/2 — NOT the topic domain)
     (   catch(domain_priors:category_of(C, Domain), _, fail)
     ->  true
     ;   Domain = null
     ),
     format(S, '      "domain": ', []),
     write_json_string(S, Domain),
+    format(S, ',~n', []),
+
+    % topic_domain (subject area from testset metadata)
+    (   narrative_ontology:topic_domain(C, TopicDomain)
+    ->  true
+    ;   TopicDomain = null
+    ),
+    format(S, '      "topic_domain": ', []),
+    write_json_string(S, TopicDomain),
     format(S, ',~n', []),
 
     % resolution_strategy — deferred

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(tragedy_of_the_commons, theater_ratio, 0.10
 % Hardin's original framing presents it as an inevitable, mathematical outcome.
 narrative_ontology:constraint_claim(tragedy_of_the_commons, tangled_rope).
 narrative_ontology:human_readable(tragedy_of_the_commons, "The Tragedy of the Commons").
+narrative_ontology:topic_domain(tragedy_of_the_commons, "economic/social").
 
 % Binary flags
 % To solve the tragedy, "mutual coercion, mutually agreed upon" is required.

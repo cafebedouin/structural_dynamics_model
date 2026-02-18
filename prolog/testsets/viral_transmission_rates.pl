@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(viral_transmission_rates, theater_ratio, 0.
 % coordination function but also massive, asymmetric extraction. This is a Tangled Rope.
 narrative_ontology:constraint_claim(viral_transmission_rates, tangled_rope).
 narrative_ontology:human_readable(viral_transmission_rates, "Socio-Political Response to Viral Transmission").
+narrative_ontology:topic_domain(viral_transmission_rates, "political/technological").
 
 % --- Binary flags ---
 % The policy mandates require constant state enforcement (e.g., fines, closures).

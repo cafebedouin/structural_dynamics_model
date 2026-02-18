@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(russells_paradox_self_reference, theater_ra
 % The paradox doesn't "claim" anything, but its discovery reveals a fundamental, unchangeable feature of logic.
 narrative_ontology:constraint_claim(russells_paradox_self_reference, snare).
 narrative_ontology:human_readable(russells_paradox_self_reference, "Russell's Paradox (Naive Set Theory Collapse)").
+narrative_ontology:topic_domain(russells_paradox_self_reference, "mathematical/logical").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(russells_paradox_self_reference, axiomatic_set_theorists).

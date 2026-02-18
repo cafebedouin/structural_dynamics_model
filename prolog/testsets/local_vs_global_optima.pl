@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -100,6 +101,7 @@ narrative_ontology:constraint_metric(local_vs_global_optima, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(local_vs_global_optima, mountain).
 narrative_ontology:human_readable(local_vs_global_optima, "The Existence of Local Optima in Non-Convex Spaces").
+narrative_ontology:topic_domain(local_vs_global_optima, "mathematical/computational").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This is a fundamental property of mathematics, not a human construction.

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(silent_dependency_activation, theater_ratio
 % The IP holder claims the dependency is for coordination and quality control.
 narrative_ontology:constraint_claim(silent_dependency_activation, tangled_rope).
 narrative_ontology:human_readable(silent_dependency_activation, "The Invisible Supply Chain Trap").
+narrative_ontology:topic_domain(silent_dependency_activation, "technological/economic").
 
 % Binary flags
 % This is a Tangled Rope, requiring active enforcement (e.g., patent law).

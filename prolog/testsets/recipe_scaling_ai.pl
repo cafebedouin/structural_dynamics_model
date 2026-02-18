@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(recipe_scaling_ai, theater_ratio, 0.10).
 % It presents itself as a helpful tool, a pure coordination mechanism.
 narrative_ontology:constraint_claim(recipe_scaling_ai, tangled_rope).
 narrative_ontology:human_readable(recipe_scaling_ai, "The NYT Cooking Generative Scaling Constraint").
+narrative_ontology:topic_domain(recipe_scaling_ai, "technological").
 
 % Binary flags
 narrative_ontology:has_sunset_clause(recipe_scaling_ai).      % Implied by 'beta' status and 'constantly improving' language.

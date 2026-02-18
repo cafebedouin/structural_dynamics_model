@@ -25,7 +25,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -126,6 +127,7 @@ narrative_ontology:constraint_metric(ehrenfest_barrier, resistance, 0.0).
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(ehrenfest_barrier, mountain).
 narrative_ontology:human_readable(ehrenfest_barrier, "The Ehrenfest Barrier — Logarithmic Collapse of").
+narrative_ontology:topic_domain(ehrenfest_barrier, "scientific (mathematical physics / quantum mechanics)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint is a physical law and emerges naturally without human design.

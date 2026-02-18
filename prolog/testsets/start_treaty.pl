@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(start_treaty, theater_ratio, 0.2).
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(start_treaty, tangled_rope).
 narrative_ontology:human_readable(start_treaty, "START Treaty Expiration").
+narrative_ontology:topic_domain(start_treaty, "political").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(start_treaty).      % Mandatory if Scaffold

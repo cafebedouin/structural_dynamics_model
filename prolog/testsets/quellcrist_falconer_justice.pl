@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(quellcrist_falconer_justice, theater_ratio,
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(quellcrist_falconer_justice, tangled_rope).
 narrative_ontology:human_readable(quellcrist_falconer_justice, "The Machinery of Justice (Quellist)").
+narrative_ontology:topic_domain(quellcrist_falconer_justice, "political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(quellcrist_falconer_justice). % Required for Tangled Rope

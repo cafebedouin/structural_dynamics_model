@@ -23,7 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(algorithmic_epistemic_capture, theater_rati
 % Constraint classification claim
 narrative_ontology:constraint_claim(algorithmic_epistemic_capture, piton).
 narrative_ontology:human_readable(algorithmic_epistemic_capture, "The Feedback Loop Blindfold").
+narrative_ontology:topic_domain(algorithmic_epistemic_capture, "technological/social/cognitive").
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(algorithmic_epistemic_capture).

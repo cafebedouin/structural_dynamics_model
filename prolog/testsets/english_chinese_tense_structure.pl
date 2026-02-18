@@ -44,7 +44,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -111,6 +112,7 @@ narrative_ontology:constraint_metric(english_chinese_tense_structure, resistance
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(english_chinese_tense_structure, mountain).
 narrative_ontology:human_readable(english_chinese_tense_structure, "Obligatory Tense Marking vs. Aspect-Context Encoding").
+narrative_ontology:topic_domain(english_chinese_tense_structure, "linguistic/cognitive").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Required for the mountain metric gate: without this, the

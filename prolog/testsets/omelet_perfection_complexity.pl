@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -97,6 +98,7 @@ narrative_ontology:constraint_metric(omelet_perfection_complexity, theater_ratio
 % suppression, but a coordination device (Rope).
 narrative_ontology:constraint_claim(omelet_perfection_complexity, rope).
 narrative_ontology:human_readable(omelet_perfection_complexity, "The French Omelet Paradox (Chasing Perfection)").
+narrative_ontology:topic_domain(omelet_perfection_complexity, "social/psychological").
 
 % --- Binary flags ---
 % Mastery of the curds and roll "requires active enforcement" of technique.

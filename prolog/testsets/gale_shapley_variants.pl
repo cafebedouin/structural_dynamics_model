@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ narrative_ontology:constraint_metric(gs_market_clearing, theater_ratio, 0.15).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(gs_market_clearing, tangled_rope).
 narrative_ontology:human_readable(gs_market_clearing, "Gale-Shapley Algorithm for Market Clearing").
+narrative_ontology:topic_domain(gs_market_clearing, "economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(gs_market_clearing). % Required for Tangled Rope. The clearinghouse must enforce the matches.

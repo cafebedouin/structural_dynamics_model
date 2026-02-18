@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(fed_shutdown_2026, theater_ratio, 0.85).
 % Constraint classification claim
 narrative_ontology:constraint_claim(fed_shutdown_2026, tangled_rope).
 narrative_ontology:human_readable(fed_shutdown_2026, "The 2026 DHS/ICE Funding Standoff").
+narrative_ontology:topic_domain(fed_shutdown_2026, "political/economic").
 
 % Tangled Rope Structural Property Declarations
 % Required by the linter and the canonical classifier to derive 

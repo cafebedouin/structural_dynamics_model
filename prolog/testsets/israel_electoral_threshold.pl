@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:constraint_metric(israel_electoral_threshold, theater_ratio, 
 % The stated purpose is to stabilize governance.
 narrative_ontology:constraint_claim(israel_electoral_threshold, tangled_rope).
 narrative_ontology:human_readable(israel_electoral_threshold, "The 3.25% Knesset Electoral Threshold").
+narrative_ontology:topic_domain(israel_electoral_threshold, "political").
 
 % Binary flags
 domain_priors:requires_active_enforcement(israel_electoral_threshold). % Required for Tangled Rope

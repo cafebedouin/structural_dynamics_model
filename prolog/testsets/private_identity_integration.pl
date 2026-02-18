@@ -21,7 +21,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:interval(private_identity_integration, 0, 10).
 % Updated to valid v3.1 ontology pillar: [rope]
 narrative_ontology:constraint_claim(private_identity_integration, rope).
 narrative_ontology:human_readable(private_identity_integration, "The Closed-Door Identity Protocol").
+narrative_ontology:topic_domain(private_identity_integration, "social/psychological").
 
 % Base extractiveness: Moderate (0.4)
 % Rationale: Premature public sharing extracts attention and emotional 

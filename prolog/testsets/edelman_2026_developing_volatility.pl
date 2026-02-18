@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(edelman_2026_developing_volatility, theater
 % national interests and stability against foreign interference.
 narrative_ontology:constraint_claim(edelman_2026_developing_volatility, tangled_rope).
 narrative_ontology:human_readable(edelman_2026_developing_volatility, "The Developing Market Trust Surge").
+narrative_ontology:topic_domain(edelman_2026_developing_volatility, "economic/technological").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(edelman_2026_developing_volatility).

@@ -29,7 +29,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(future_dsm_integration, theater_ratio, 0.40
 % The APA frames this as a coordination effort to standardize diagnostic criteria.
 narrative_ontology:constraint_claim(future_dsm_integration, tangled_rope).
 narrative_ontology:human_readable(future_dsm_integration, "Future DSM Strategic Vision (SCE-DoH & Intersectionality)").
+narrative_ontology:topic_domain(future_dsm_integration, "technological/political").
 
 % Binary flags
 % Required for Tangled Rope classification. The diagnostic framework requires

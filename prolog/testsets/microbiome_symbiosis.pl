@@ -40,7 +40,8 @@
     constraint_indexing:constraint_classification/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -101,6 +102,7 @@ narrative_ontology:constraint_metric(microbiome_symbiosis, resistance, 0.05).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(microbiome_symbiosis, tangled_rope).
 narrative_ontology:human_readable(microbiome_symbiosis, "The Microbial-Immune Symbiosis").
+narrative_ontology:topic_domain(microbiome_symbiosis, "biological/healthcare").
 
 % --- Binary flags ---
 % Rationale: In a state of dysbiosis, the biological feedback loops become

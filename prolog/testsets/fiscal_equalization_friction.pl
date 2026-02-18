@@ -32,7 +32,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(fiscal_equalization_friction, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(fiscal_equalization_friction, rope).
 narrative_ontology:human_readable(fiscal_equalization_friction, "The Equalization Conflict (Net Transfer Friction)").
+narrative_ontology:topic_domain(fiscal_equalization_friction, "economic/political").
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % Who benefits from this constraint existing?

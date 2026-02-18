@@ -43,7 +43,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -107,6 +108,7 @@ narrative_ontology:constraint_metric(goedels_incompleteness_theorems, resistance
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(goedels_incompleteness_theorems, mountain).
 narrative_ontology:human_readable(goedels_incompleteness_theorems, "Gödel's Incompleteness Theorems").
+narrative_ontology:topic_domain(goedels_incompleteness_theorems, "mathematical/logical").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The theorem emerges naturally from the properties of formal systems and

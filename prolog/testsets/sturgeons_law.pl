@@ -44,7 +44,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -105,6 +106,7 @@ narrative_ontology:constraint_metric(sturgeons_law, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(sturgeons_law, mountain).
+narrative_ontology:topic_domain(sturgeons_law, "sociological/artistic").
 narrative_ontology:human_readable(sturgeons_law, "Sturgeon's Law (\"90% of everything is crap\")").
 
 % --- Binary flags ---

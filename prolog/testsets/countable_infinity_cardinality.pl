@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -105,6 +106,7 @@ narrative_ontology:constraint_metric(countable_infinity_cardinality, resistance,
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(countable_infinity_cardinality, mountain).
 narrative_ontology:human_readable(countable_infinity_cardinality, "Cardinality of Countably Infinite Sets (Aleph-0)").
+narrative_ontology:topic_domain(countable_infinity_cardinality, "mathematical/logical").
 
 % --- Binary flags ---
 % (none apply)

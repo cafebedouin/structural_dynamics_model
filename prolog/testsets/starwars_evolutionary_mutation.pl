@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(starwars_evolutionary_mutation, theater_rat
 % potential for the sake of conformity.
 narrative_ontology:constraint_claim(starwars_evolutionary_mutation, snare).
 narrative_ontology:human_readable(starwars_evolutionary_mutation, "Jedi as Systemic Evolutionary Outliers").
+narrative_ontology:topic_domain(starwars_evolutionary_mutation, "social/political/biological").
 
 % Binary flags
 % The Jedi Code, Senate oversight, and the rigid master-apprentice training

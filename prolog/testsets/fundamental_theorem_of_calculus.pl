@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(constraint_ftc, resistance, 0.01).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(constraint_ftc, mountain).
 narrative_ontology:human_readable(constraint_ftc, "Fundamental Theorem of Calculus").
+narrative_ontology:topic_domain(constraint_ftc, "technological").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(constraint_ftc).      % Mandatory if Scaffold

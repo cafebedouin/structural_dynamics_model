@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(meta_nuclear_power_agreement, theater_ratio
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(meta_nuclear_power_agreement, tangled_rope).
 narrative_ontology:human_readable(meta_nuclear_power_agreement, "Meta's direct investment and offtake agreements for advanced nuclear power").
+narrative_ontology:topic_domain(meta_nuclear_power_agreement, "technological/economic").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(meta_nuclear_power_agreement). % Required for Tangled Rope

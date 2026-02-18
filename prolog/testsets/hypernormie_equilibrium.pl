@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(hypernormie_equilibrium, theater_ratio, 0.8
 % It claims to be a coordination tool for "discovery" and "personalization".
 narrative_ontology:constraint_claim(hypernormie_equilibrium, tangled_rope).
 narrative_ontology:human_readable(hypernormie_equilibrium, "The Algorithmic Mean Trap").
+narrative_ontology:topic_domain(hypernormie_equilibrium, "social/technological").
 
 % Binary flags
 domain_priors:requires_active_enforcement(hypernormie_equilibrium). % Enforcement is algorithmic (de-ranking, shadow-banning).

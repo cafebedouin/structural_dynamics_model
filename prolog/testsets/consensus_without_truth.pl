@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(consensus_without_truth, theater_ratio, 0.6
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(consensus_without_truth, tangled_rope).
 narrative_ontology:human_readable(consensus_without_truth, "The Social Cohesion Mirage").
+narrative_ontology:topic_domain(consensus_without_truth, "social/political/informational").
 
 % Binary flags and structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(consensus_without_truth).

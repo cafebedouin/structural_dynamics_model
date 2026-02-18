@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(paxsilica_framework, theater_ratio, 0.20).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(paxsilica_framework, tangled_rope).
 narrative_ontology:human_readable(paxsilica_framework, "PaxSilica AI and Silicon Governance Framework").
+narrative_ontology:topic_domain(paxsilica_framework, "geopolitical/technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(paxsilica_framework). % Required for Tangled Rope

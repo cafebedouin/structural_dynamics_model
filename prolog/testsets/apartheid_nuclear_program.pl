@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(apartheid_nuclear_program, theater_ratio, 0
 % Constraint classification claim
 narrative_ontology:constraint_claim(apartheid_nuclear_program, tangled_rope).
 narrative_ontology:human_readable(apartheid_nuclear_program, "Apartheid South Africa's Clandestine Nuclear Program").
+narrative_ontology:topic_domain(apartheid_nuclear_program, "political/military/technological").
 
 % Constraint metric facts used by the classification engine
 domain_priors:requires_active_enforcement(apartheid_nuclear_program).

@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:constraint_metric(moltbook_agent_theater, theater_ratio, 0.90
 % The system's ostensible purpose is to facilitate agent interaction.
 narrative_ontology:constraint_claim(moltbook_agent_theater, piton).
 narrative_ontology:human_readable(moltbook_agent_theater, "The Rorschach Network").
+narrative_ontology:topic_domain(moltbook_agent_theater, "technological/social").
 
 % The system requires constant monitoring to ensure the agents don't break containment.
 domain_priors:requires_active_enforcement(moltbook_agent_theater).

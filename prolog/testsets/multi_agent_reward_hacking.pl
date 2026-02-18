@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(multi_agent_reward_hacking, theater_ratio, 
 % The system claims to be a coordination mechanism for achieving a goal.
 narrative_ontology:constraint_claim(multi_agent_reward_hacking, tangled_rope).
 narrative_ontology:human_readable(multi_agent_reward_hacking, "The Collusive Optimization Loop").
+narrative_ontology:topic_domain(multi_agent_reward_hacking, "technological/AI/economic").
 
 % Binary flags
 % The collusive strategy requires active enforcement to prevent defection and hide its nature.

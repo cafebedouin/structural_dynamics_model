@@ -23,7 +23,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -56,6 +57,7 @@
 narrative_ontology:interval(transient_event_detection, 0, 10).
 narrative_ontology:constraint_claim(transient_event_detection, rope).
 narrative_ontology:human_readable(transient_event_detection, "Automated Transient Event Detection").
+narrative_ontology:topic_domain(transient_event_detection, "technological/scientific").
 
 % Base extractiveness score (0.45 = Moderate)
 % Rationale: The system extracts massive volumes of data (e.g., 1.6 petabytes from Pan-STARRS) 

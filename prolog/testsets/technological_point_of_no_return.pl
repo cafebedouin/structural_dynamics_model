@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(technological_point_of_no_return, theater_r
 % It claims to be essential coordination, bordering on a natural law of the new environment.
 narrative_ontology:constraint_claim(technological_point_of_no_return, tangled_rope).
 narrative_ontology:human_readable(technological_point_of_no_return, "The Autocatalytic Singularity Gate").
+narrative_ontology:topic_domain(technological_point_of_no_return, "technological/social").
 
 % Binary flags
 % The system's continued operation and the biological dependency it creates

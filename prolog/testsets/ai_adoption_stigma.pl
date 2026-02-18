@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(ai_adoption_stigma, theater_ratio, 0.15).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ai_adoption_stigma, tangled_rope).
 narrative_ontology:human_readable(ai_adoption_stigma, "Workplace Stigma Against Using Generative AI").
+narrative_ontology:topic_domain(ai_adoption_stigma, "technological").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ai_adoption_stigma). % Required for Tangled Rope. The stigma is enforced by fear of job loss/demotion.

@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(scurvy_maritime_extraction, theater_ratio, 
 % It was presented as a natural, unavoidable hazard of sea life (natural_law), but was in fact a constructed policy choice.
 narrative_ontology:constraint_claim(scurvy_maritime_extraction, tangled_rope).
 narrative_ontology:human_readable(scurvy_maritime_extraction, "The Scurvy/Empire Trade-off").
+narrative_ontology:topic_domain(scurvy_maritime_extraction, "biological/political/economic").
 
 % Binary flags
 % The naval diet was a strictly enforced policy.

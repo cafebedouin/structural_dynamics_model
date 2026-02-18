@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(asean_ceasefire_2011, theater_ratio, 0.20).
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(asean_ceasefire_2011, scaffold).
 narrative_ontology:human_readable(asean_ceasefire_2011, "2011 ASEAN-mediated Thai-Cambodian Ceasefire Agreement").
+narrative_ontology:topic_domain(asean_ceasefire_2011, "geopolitical").
 
 % --- Binary flags ---
 narrative_ontology:has_sunset_clause(asean_ceasefire_2011).      % Mandatory if Scaffold

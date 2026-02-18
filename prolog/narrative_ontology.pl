@@ -7,6 +7,7 @@
     % CE v2.0 constraint layer
     constraint_claim/2,
     human_readable/2,
+    topic_domain/2,
     recommendation/2,
     affects_constraint/2,
     veto_actor/1,
@@ -53,7 +54,7 @@
 
 :- multifile
     entity/2, interval/3, event/4,
-    constraint_claim/2, human_readable/2, recommendation/2, affects_constraint/2,
+    constraint_claim/2, human_readable/2, topic_domain/2, recommendation/2, affects_constraint/2,
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
     measurement/5, intent_viable_alternative/3, intent_alternative_rejected/3,
     intent_beneficiary_class/2, intent_power_change/3,
@@ -65,7 +66,7 @@
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
     entity/2, interval/3, event/4,
-    constraint_claim/2, human_readable/2, recommendation/2, affects_constraint/2,
+    constraint_claim/2, human_readable/2, topic_domain/2, recommendation/2, affects_constraint/2,
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
     measurement/5, has_sunset_clause/1,
     intent_viable_alternative/3, intent_alternative_rejected/3,

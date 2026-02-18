@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(capital_misallocation_spiral, theater_ratio
 % The constraint claims to be a coordination mechanism for market stability.
 narrative_ontology:constraint_claim(capital_misallocation_spiral, tangled_rope).
 narrative_ontology:human_readable(capital_misallocation_spiral, "The Zombie Asset Loop").
+narrative_ontology:topic_domain(capital_misallocation_spiral, "economic/technological").
 
 % Binary flags & Structural properties
 domain_priors:requires_active_enforcement(capital_misallocation_spiral). % Required for Tangled Rope. Capital is forced via mandates.

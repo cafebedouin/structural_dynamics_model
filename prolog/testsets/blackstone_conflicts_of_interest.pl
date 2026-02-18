@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(blackstone_conflicts_of_interest, theater_r
 % It claims to be a necessary enforcement mechanism to resolve inherent conflicts.
 narrative_ontology:constraint_claim(blackstone_conflicts_of_interest, tangled_rope).
 narrative_ontology:human_readable(blackstone_conflicts_of_interest, "Fiduciary Conflict Allocation in Blackstone S-1").
+narrative_ontology:topic_domain(blackstone_conflicts_of_interest, "corporate_governance").
 
 % Binary flags
 domain_priors:requires_active_enforcement(blackstone_conflicts_of_interest). % Required for Tangled Rope

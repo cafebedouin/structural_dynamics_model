@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(elite_capture_2026, theater_ratio, 0.94).
 % coordination that ensures stability.
 narrative_ontology:constraint_claim(elite_capture_2026, piton).
 narrative_ontology:human_readable(elite_capture_2026, "Staley-Epstein Narrative Neutralization").
+narrative_ontology:topic_domain(elite_capture_2026, "social/political").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(elite_capture_2026, institutional_finance_capital).

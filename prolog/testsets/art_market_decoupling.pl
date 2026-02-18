@@ -26,7 +26,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:human_readable/2.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(art_market_decoupling, theater_ratio, 0.92)
 % Constraint classification claim
 narrative_ontology:constraint_claim(art_market_decoupling, piton).
 narrative_ontology:human_readable(art_market_decoupling, "The Obscene Decoupling").
+narrative_ontology:topic_domain(art_market_decoupling, "economic/social").
 
 % Binary flags
 domain_priors:requires_active_enforcement(art_market_decoupling).
