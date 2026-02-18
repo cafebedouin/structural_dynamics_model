@@ -66,6 +66,7 @@
 :- use_module(config).
 :- use_module(structural_signatures).
 :- use_module(constraint_indexing).
+:- use_module(constraint_data).
 :- use_module(constraint_instances).
 :- use_module(domain_priors).
 
@@ -80,12 +81,8 @@
 % Multifile declarations above allow testsets to contribute directly,
 % but v3.4 testsets assert into domain_priors: namespace, so we bridge here.
 % Delegate to narrative_ontology for dynamic metric retrieval
-base_extractiveness(C, V) :- 
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(C, ExtMetricName, V).
-suppression_score(C, V) :- 
-    config:param(suppression_metric_name, SuppMetricName),
-    narrative_ontology:constraint_metric(C, SuppMetricName, V).
+base_extractiveness(C, V) :- constraint_data:base_extractiveness(C, V).
+suppression_score(C, V) :- constraint_data:suppression_score(C, V).
 requires_active_enforcement(C) :- domain_priors:requires_active_enforcement(C).
 emerges_naturally(C) :- domain_priors:emerges_naturally(C).
 

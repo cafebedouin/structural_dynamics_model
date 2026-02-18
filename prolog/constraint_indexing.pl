@@ -48,7 +48,7 @@
 :- dynamic directionality_override/3.
 
 % Required modules
-:- use_module(drl_core, [base_extractiveness/2, suppression_score/2]).
+:- use_module(constraint_data, [base_extractiveness/2, suppression_score/2]).
 :- use_module(config).
 :- use_module(narrative_ontology).
 
