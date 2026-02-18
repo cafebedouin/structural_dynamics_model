@@ -53,6 +53,7 @@ OUTPUT_TXT := $(OUTPUT_DIR)/output.txt
 
 # JSON report
 PIPELINE_JSON := $(OUTPUT_DIR)/pipeline_output.json
+ENRICHED_PIPELINE_JSON := $(OUTPUT_DIR)/enriched_pipeline.json
 
 # Linter
 LINT_ERRORS := $(OUTPUT_DIR)/lint_errors.txt
@@ -105,10 +106,10 @@ OMEGA_ENRICH_STAMP := $(STAMP_DIR)/omega_enrich
 # Pipeline enrichment stamp
 ENRICH_STAMP := $(STAMP_DIR)/enrich_pipeline
 
-# Tangled rope decomposition (report only, data lives in pipeline_output.json)
+# Tangled rope decomposition (report only, data lives in enriched_pipeline.json)
 TANGLED_DECOMP_REPORT := $(OUTPUT_DIR)/tangled_rope_decomposition_report.md
 
-# Classification confidence analysis (report only, data lives in pipeline_output.json)
+# Classification confidence analysis (report only, data lives in enriched_pipeline.json)
 CONFIDENCE_REPORT := $(OUTPUT_DIR)/classification_confidence_report.md
 
 # Boundary normality analysis
@@ -433,14 +434,14 @@ $(SUFFICIENCY_REPORT): $(CORPUS_DATA) $(PIPELINE_JSON)
 	echo "[ANALYSIS] Done -> index_sufficiency.md + index_sufficiency.json"
 
 # ==============================================================================
-# PIPELINE ENRICHMENT — adds derived fields to pipeline_output.json in-place
+# PIPELINE ENRICHMENT — produces enriched_pipeline.json from pipeline_output.json
 # ==============================================================================
 
 $(ENRICH_STAMP): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP) | $(STAMP_DIR)
-	echo "[ENRICH] Enriching pipeline_output.json..."
+	echo "[ENRICH] Producing enriched_pipeline.json..."
 	python3 $(PYTHON_DIR)/enrich_pipeline_json.py 2>&1 || true
 	touch $@
-	echo "[ENRICH] Done."
+	echo "[ENRICH] Done -> enriched_pipeline.json"
 
 # ==============================================================================
 # TANGLED ROPE DECOMPOSITION — depends on enriched pipeline + corpus_data
@@ -517,6 +518,7 @@ $(META_REPORT): $(PIPELINE_JSON) $(OUTPUT_TXT) $(ORBIT_NORM_STAMP)
 clean:
 	echo "Cleaning outputs and stamps..."
 	rm -f $(OUTPUT_DIR)/output.txt $(OUTPUT_DIR)/pipeline_output.json
+	rm -f $(OUTPUT_DIR)/enriched_pipeline.json
 	rm -f $(OUTPUT_DIR)/lint_errors.txt
 	rm -f $(OUTPUT_DIR)/fingerprint_report.md $(OUTPUT_DIR)/orbit_report.md
 	rm -f $(OUTPUT_DIR)/orbit_data.json $(OUTPUT_DIR)/fpn_report.md

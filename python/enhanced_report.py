@@ -16,7 +16,7 @@ Stream 2: Python-built sections from batch JSON/markdown data
 
 Inputs:
   prolog/testsets/{ID}.pl          — constraint testset (must exist)
-  outputs/pipeline_output.json     — batch pipeline results + diagnostic
+  outputs/enriched_pipeline.json   — enriched pipeline results + diagnostic
   outputs/orbit_data.json          — orbit signatures per constraint
   outputs/enriched_omega_data.json — triaged omega violations
   outputs/corpus_data.json         — corpus metrics and analysis
@@ -127,7 +127,7 @@ def _compact_types(perspectives):
 
 
 def find_constraint_entry(pipeline_data, constraint_id):
-    """Find a constraint in pipeline_output.json per_constraint array."""
+    """Find a constraint in enriched_pipeline.json per_constraint array."""
     if pipeline_data is None:
         return None
     key = constraint_id.lower()
@@ -219,11 +219,11 @@ def extract_live_perspectives(prolog_output):
 # --- Section A: CORPUS POSITIONING ---
 
 def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
-    """Section A: CORPUS POSITIONING from pipeline_output.json + live Prolog output."""
+    """Section A: CORPUS POSITIONING from enriched_pipeline.json + live Prolog output."""
     lines = ["", "--- CORPUS POSITIONING ---", ""]
 
     if pipeline_data is None:
-        lines.append("  [pipeline_output.json not available]")
+        lines.append("  [enriched_pipeline.json not available]")
         return "\n".join(lines)
 
     diag = pipeline_data.get("diagnostic", {})
@@ -451,11 +451,11 @@ def build_orbit_section(constraint_id, orbit_data, omega_data):
 # --- Section C: MAXENT SHADOW CLASSIFICATION ---
 
 def build_maxent_section(constraint_id, pipeline_data):
-    """Section C: MAXENT SHADOW CLASSIFICATION from pipeline_output.json."""
+    """Section C: MAXENT SHADOW CLASSIFICATION from enriched_pipeline.json."""
     lines = ["", "--- MAXENT SHADOW CLASSIFICATION ---", ""]
 
     if pipeline_data is None:
-        lines.append("  [pipeline_output.json not available]")
+        lines.append("  [enriched_pipeline.json not available]")
         return "\n".join(lines)
 
     entry = find_constraint_entry(pipeline_data, constraint_id)
@@ -755,7 +755,7 @@ def main():
 
     # Load all data sources once
     data = {
-        "pipeline": load_json(OUTPUTS_DIR / "pipeline_output.json", "pipeline_output.json"),
+        "pipeline": load_json(OUTPUTS_DIR / "enriched_pipeline.json", "enriched_pipeline.json"),
         "orbit":    load_json(OUTPUTS_DIR / "orbit_data.json", "orbit_data.json"),
         "omega":    load_json(OUTPUTS_DIR / "enriched_omega_data.json", "enriched_omega_data.json"),
         "corpus":   load_json(OUTPUTS_DIR / "corpus_data.json", "corpus_data.json"),

@@ -22,7 +22,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from shared.loader import load_json, load_all_data, PIPELINE_JSON
+from shared.loader import load_json, load_all_data, ENRICHED_PIPELINE_JSON
 from shared.constants import MAXENT_TYPES
 from tangled_decomposition import maxent_classify
 
@@ -391,8 +391,8 @@ def override_subpopulation_analysis(members):
 # ---------------------------------------------------------------------------
 
 def load_coalition_map():
-    """Load coalition_type from pipeline_output.json per_constraint entries."""
-    data = load_json(PIPELINE_JSON, "pipeline_output")
+    """Load coalition_type from enriched_pipeline.json per_constraint entries."""
+    data = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
     if not data:
         return {}
     cmap = {}
@@ -897,9 +897,9 @@ def main():
     constraints = load_all_data()
     print(f"[BOUNDARY] Loaded {len(constraints)} constraints.", file=sys.stderr)
 
-    # --- Read raw distributions from pipeline_output.json ---
-    print("[BOUNDARY] Reading raw distributions from pipeline_output.json...", file=sys.stderr)
-    pipeline_raw = load_json(PIPELINE_JSON, "pipeline_output")
+    # --- Read raw distributions from enriched_pipeline.json ---
+    print("[BOUNDARY] Reading raw distributions from enriched_pipeline.json...", file=sys.stderr)
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
     per_constraint = pipeline_raw.get("per_constraint", [])
 
     dists_raw = {}

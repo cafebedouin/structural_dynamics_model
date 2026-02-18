@@ -25,7 +25,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from shared.loader import load_json, read_config, load_all_data, PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import load_json, read_config, load_all_data, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 from shared.constants import (
     MAXENT_TYPES, N_TYPES, BOOLEAN_SPECS, PSI_ROPE_LEANING, PSI_SNARE_LEANING,
     compute_psi, classify_band, classify_coalition,
@@ -565,7 +565,7 @@ def main():
     print(f"[TANGLED] Computed {len(distributions)} distributions.", file=sys.stderr)
 
     # Auto-detect maxent_probs from pipeline_output.json and cross-validate
-    pipeline_raw = load_json(PIPELINE_JSON, "pipeline_output")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
     per_constraint = pipeline_raw.get("per_constraint", [])
     json_dists = {}
     for entry in per_constraint:

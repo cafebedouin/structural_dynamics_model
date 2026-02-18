@@ -20,6 +20,7 @@ PROLOG_DIR = ROOT_DIR / "prolog"
 PIPELINE_JSON = OUTPUT_DIR / "pipeline_output.json"
 CORPUS_JSON = OUTPUT_DIR / "corpus_data.json"
 ORBIT_JSON = OUTPUT_DIR / "orbit_data.json"
+ENRICHED_PIPELINE_JSON = OUTPUT_DIR / "enriched_pipeline.json"
 
 # ---------------------------------------------------------------------------
 # JSON loader

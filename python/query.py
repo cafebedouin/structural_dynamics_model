@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """CLI query engine for the structural dynamics corpus.
 
-Loads corpus_data.json, pipeline_output.json, and enriched_omega_data.json
+Loads corpus_data.json, enriched_pipeline.json, and enriched_omega_data.json
 into a single DataFrame and supports filtering, aggregation, and detail views.
 
  python3 python/query.py --count                                                                 # ~1034
@@ -48,8 +48,8 @@ def build_dataframe():
     corpus_raw = load_json(OUTPUT_DIR / "corpus_data.json", "corpus_data")
     constraints = corpus_raw.get("constraints", {})
 
-    # --- Step B: pipeline_output.json ---
-    pipeline_raw = load_json(OUTPUT_DIR / "pipeline_output.json", "pipeline_output")
+    # --- Step B: enriched_pipeline.json ---
+    pipeline_raw = load_json(OUTPUT_DIR / "enriched_pipeline.json", "enriched_pipeline")
     type_hierarchy = pipeline_raw.get("type_hierarchy", {})
     severity_dict = {name: entry["severity"] for name, entry in type_hierarchy.items()}
     valid_types = sorted(type_hierarchy.keys())

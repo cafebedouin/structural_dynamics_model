@@ -20,7 +20,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from shared.loader import load_json, load_all_data, PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import load_json, load_all_data, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 from shared.constants import MAXENT_TYPES, N_TYPES, shannon_entropy
 from tangled_decomposition import maxent_classify, apply_signature_override
 
@@ -480,7 +480,7 @@ def main():
     print(f"[CONFIDENCE] Loaded {len(constraints)} constraints.", file=sys.stderr)
 
     # --- Read distributions from pipeline_output.json ---
-    pipeline_raw = load_json(PIPELINE_JSON, "pipeline_output")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
     per_constraint = pipeline_raw.get("per_constraint", [])
 
     dists_override = {}

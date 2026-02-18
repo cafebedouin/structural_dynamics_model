@@ -84,9 +84,9 @@ for cid, c in data['constraints'].items():
     ct = c.get('claimed_type')
     if ct:
         types[ct] += 1
-# Try to load confidence cross-tab from pipeline_output.json
+# Try to load confidence cross-tab from enriched_pipeline.json
 type_bands = {}
-pipe_path = '$OUTPUT_DIR/pipeline_output.json'
+pipe_path = '$OUTPUT_DIR/enriched_pipeline.json'
 if os.path.exists(pipe_path):
     try:
         with open(pipe_path) as f2:
@@ -190,13 +190,13 @@ fi
 echo ""
 
 # --------------------------------------------------------------------------
-# Classification confidence (from pipeline_output.json enrichment)
+# Classification confidence (from enriched_pipeline.json)
 # --------------------------------------------------------------------------
 echo -e "${BOLD}  CLASSIFICATION CONFIDENCE${NC}"
-if [ -f "$OUTPUT_DIR/pipeline_output.json" ]; then
+if [ -f "$OUTPUT_DIR/enriched_pipeline.json" ]; then
     python3 -c "
 import json, sys
-with open('$OUTPUT_DIR/pipeline_output.json') as f:
+with open('$OUTPUT_DIR/enriched_pipeline.json') as f:
     data = json.load(f)
 pcs = data.get('per_constraint', [])
 bands = {}
@@ -221,9 +221,9 @@ for label in ['deep', 'moderate', 'borderline']:
     print(f'  {label + \":\":16s} {n:>4d} ({pct:.1f}%)')
 if conf_count:
     print(f'  {\"Mean Confidence:\":16s} {total_conf / conf_count:.4f}')
-" 2>/dev/null || echo "  (error reading pipeline_output.json)"
+" 2>/dev/null || echo "  (error reading enriched_pipeline.json)"
 else
-    echo "  (pipeline_output.json not available)"
+    echo "  (enriched_pipeline.json not available)"
 fi
 echo ""
 
@@ -281,6 +281,7 @@ for report in \
     "enriched_omega_data.json" \
     "corpus_data.json" \
     "pipeline_output.json" \
+    "enriched_pipeline.json" \
     "fingerprint_report.md" \
     "orbit_report.md" \
     "orbit_data.json" \

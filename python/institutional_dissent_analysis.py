@@ -10,7 +10,7 @@ This analysis tests whether the low-snare group has genuine informational
 advantage (A) or reflects metric bias (B) by comparing structural, orbital,
 and domain properties between the two groups.
 
-Reads from enriched pipeline_output.json, corpus_data.json, orbit_data.json.
+Reads from enriched_pipeline.json, corpus_data.json, orbit_data.json.
 No recomputation.
 
 Outputs:
@@ -46,7 +46,7 @@ except ImportError:
 ROOT_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT_DIR / "outputs"
 
-from shared.loader import load_json, PIPELINE_JSON, CORPUS_JSON, ORBIT_JSON
+from shared.loader import load_json, ENRICHED_PIPELINE_JSON, CORPUS_JSON, ORBIT_JSON
 
 REPORT_PATH = OUTPUT_DIR / "institutional_dissent_report.md"
 DATA_PATH = OUTPUT_DIR / "institutional_dissent_data.json"
@@ -125,7 +125,7 @@ def load_institutional_dissent():
     Returns (low_snare_list, high_snare_list, all_list) where each item is a dict
     with merged pipeline + orbit data.
     """
-    pipeline_raw = load_json(PIPELINE_JSON, "pipeline_output")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
     corpus_raw = load_json(CORPUS_JSON, "corpus_data")
     orbit_raw = load_json(ORBIT_JSON, "orbit_data")
 

@@ -11,7 +11,7 @@ in the type. If it varies significantly within a type and correlates with differ
 orbit structures or confidence levels, it represents an independent dimension the
 current type space doesn't capture.
 
-Reads from enriched pipeline_output.json + corpus_data.json. No recomputation.
+Reads from enriched_pipeline.json + corpus_data.json. No recomputation.
 
 Outputs:
   outputs/boolean_independence_data.json   - aggregate statistical data
@@ -46,7 +46,7 @@ except ImportError:
 ROOT_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT_DIR / "outputs"
 
-from shared.loader import load_json, PIPELINE_JSON, CORPUS_JSON
+from shared.loader import load_json, ENRICHED_PIPELINE_JSON, CORPUS_JSON
 from shared.constants import MAXENT_TYPES
 
 REPORT_PATH = OUTPUT_DIR / "boolean_independence_report.md"
@@ -63,7 +63,7 @@ class _SafeEncoder(json.JSONEncoder):
 
 def load_constraints():
     """Load and merge pipeline + corpus data into unified per-constraint dicts."""
-    pipeline_raw = load_json(PIPELINE_JSON, "pipeline_output")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
     corpus_raw = load_json(CORPUS_JSON, "corpus_data")
 
     per_constraint = pipeline_raw.get("per_constraint", [])

@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Enrich pipeline_output.json with derived per-constraint fields (v1.0)
+"""Produce enriched_pipeline.json from pipeline_output.json (v1.1)
 
-Reads pipeline_output.json (which already contains maxent_probs and raw_maxent_probs
-from Prolog) plus orbit_data.json, and computes all derived per-constraint fields
-in-place. No MaxEnt replication needed — everything derives from the two distribution
-vectors already exported by Prolog.
+Reads pipeline_output.json (immutable after Prolog) plus orbit_data.json, computes
+all derived per-constraint fields, and writes the superset to enriched_pipeline.json.
+pipeline_output.json is never modified.
 
 Enriched fields per constraint:
   confidence, rival_type, rival_prob, confidence_margin, confidence_entropy,
@@ -18,7 +17,7 @@ import json
 import sys
 from pathlib import Path
 
-from shared.loader import PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import PIPELINE_JSON, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 from shared.constants import (
     shannon_entropy, compute_psi, classify_band, classify_coalition,
 )
@@ -139,9 +138,9 @@ def main():
     for entry in per_constraint:
         enrich_entry(entry, orbit_data)
 
-    # Write back in-place
-    print(f"[ENRICH] Writing enriched pipeline_output.json...", file=sys.stderr)
-    with open(PIPELINE_JSON, "w", encoding="utf-8") as f:
+    # Write to separate enriched file (pipeline_output.json stays immutable)
+    print(f"[ENRICH] Writing enriched_pipeline.json...", file=sys.stderr)
+    with open(ENRICHED_PIPELINE_JSON, "w", encoding="utf-8") as f:
         json.dump(pipeline, f, indent=2)
 
     # Summary
