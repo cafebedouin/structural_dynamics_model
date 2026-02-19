@@ -17,14 +17,14 @@
 :- use_module(boltzmann_compliance, []).
 :- use_module(signature_detection, []).
 :- use_module(purity_scoring, []).
-:- use_module(structural_signatures).   % facade — reexports from above
+:- use_module(structural_signatures).   % facade kept for backward-compat qualified calls
 :- use_module(drl_core).
 :- use_module(drl_composition, []).
 :- use_module(drl_counterfactual, []).
 :- use_module(drl_boltzmann_analysis, []).
 :- use_module(drl_purity_network, []).
 :- use_module(drl_fpn, []).
-:- use_module(drl_modal_logic, []).    % facade — reexports from above
+:- use_module(drl_modal_logic, []).    % facade kept for backward-compat qualified calls
 :- use_module(drl_audit_core, []).
 
 % 4. Load Management & Control (NEW)

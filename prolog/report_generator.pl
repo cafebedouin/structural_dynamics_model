@@ -24,7 +24,7 @@
 :- use_module(constraint_bridge).
 :- use_module(drl_core).
 :- use_module(uke_dr_bridge).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [signature_confidence/3, explain_signature/3, get_constraint_profile/2]).
 :- use_module(constraint_indexing).
 :- use_module(isomorphism_engine). % Required for isomorphism audit
 :- use_module(domain_priors).      % Required for forensic audit
@@ -100,26 +100,6 @@ generate_full_report(IntervalID) :-
     format('Structural Pattern: ~w~n', [Pattern]),
     format('Confidence:     ~w~n', [Conf]),
     
-    % --- SECTION 1: DRL INDEXICAL AUDIT ---
-    format('~n[CONSTRAINT INVENTORY: INDEXICAL AUDIT]~n'),
-    forall(
-        narrative_ontology:constraint_claim(C, Claimed),
-        (
-            format('~n~nConstraint: ~w~n', [C]),
-            format('  Claimed Type: ~w~n', [Claimed]),
-            format('  Perspectives:~n'),
-            forall(
-                constraint_indexing:constraint_classification(C, Type, Context),
-                (
-                    format('    - [~w]: ~w', [Context, Type]),
-                    ( Type == Claimed -> format(' (Matches Claim)~n')
-                    ; format(' (Mismatch)~n')
-                    )
-                )
-            )
-        )
-    ),
-
     % --- SECTION 2: COMPREHENSIVE CROSS-DOMAIN AUDIT ---
     cross_domain_audit,
 
@@ -145,17 +125,20 @@ generate_full_report(IntervalID) :-
     ),
 
     % --- SECTION 5: UKE_DR FEASIBILITY BRIDGE ---
-    format('~n[UKE_DR FEASIBILITY BRIDGE]~n'),
-    format('  ~40s | ~12s~n', ['Recommendation', 'UKE Status']),
-    format('  ----------------------------------------------------------------------~n'),
-    (   forall(narrative_ontology:recommendation(RID, Summary),
-               ( ( uke_dr_bridge:uke_status(RID, UKEStatus, Reasons) 
-                 -> format('  - ~40w | ~12w~n', [Summary, UKEStatus]),
-                    forall(member(R, Reasons), format('    > ~w~n', [R]))
-                 ;  format('  - ~40w | ~12s~n', [Summary, 'DATA_MISSING'])
-                 )
-               ))
-    ;   true
+    (   narrative_ontology:recommendation(_, _)
+    ->  format('~n[UKE_DR FEASIBILITY BRIDGE]~n'),
+        format('  ~40s | ~12s~n', ['Recommendation', 'UKE Status']),
+        format('  ----------------------------------------------------------------------~n'),
+        (   forall(narrative_ontology:recommendation(RID, Summary),
+                   ( ( uke_dr_bridge:uke_status(RID, UKEStatus, Reasons)
+                     -> format('  - ~40w | ~12w~n', [Summary, UKEStatus]),
+                        forall(member(R, Reasons), format('    > ~w~n', [R]))
+                     ;  format('  - ~40w | ~12s~n', [Summary, 'DATA_MISSING'])
+                     )
+                   ))
+        ;   true
+        )
+    ;   true  % No recommendations — suppress entirely
     ),
     
     % --- SECTION 6: KINETIC MAGNITUDE ---
@@ -288,32 +271,46 @@ assert_omega_if_new(OmegaID, Type, Question) :-
    ============================================================================ */
 
 perspectival_gap_audit(C) :-
-    format('~n  Analysis for Constraint: ~w~n', [C]),
+    narrative_ontology:constraint_claim(C, Claimed),
+    format('~n  Constraint: ~w~n', [C]),
+    format('    Claimed Type: ~w~n', [Claimed]),
+    % Get powerless and institutional types for gap alerts
     (constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)) -> true ; TypeP = none),
     (constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)) -> true ; TypeI = none),
+    % Gap alerts
     (TypeP == mountain, TypeI == rope -> format('    ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.~n') ; true),
     (TypeP == snare, TypeI == rope -> format('    ! ALERT: Extractive "Snare" is masked as functional "Rope".~n') ; true),
-    % Display with chi power-scaling annotations
-    format_perspective_line(C, powerless, 'Individual (Powerless)', TypeP),
-    format_perspective_line(C, institutional, 'Institutional (Manager)', TypeI),
-    % Display Mandatrophy gap if perspectives differ
+    % All 4 perspectives: type + match/mismatch + chi metrics
+    forall(
+        member(Power-Label, [
+            powerless-'Powerless', moderate-'Moderate',
+            institutional-'Institutional', analytical-'Analytical'
+        ]),
+        format_perspective_line(C, Power, Label, Claimed)
+    ),
+    % Mandatrophy gap if perspectives differ
     (   TypeP \= none, TypeI \= none, TypeP \= TypeI
     ->  format_mandatrophy_gap(C, powerless, institutional)
     ;   true
     ).
 
-%% format_perspective_line(+C, +ContextPower, +Label, +Type)
-%  Prints a perspective line with chi annotation if data available.
-%  v6.0: Shows d-value and f(d) from structural derivation chain.
-format_perspective_line(C, ContextPower, Label, Type) :-
-    (   compute_chi_v6(C, ContextPower, _BaseE, D, FD, Chi)
-    ->  (   Chi < 0
-        ->  format(atom(Ann), ' [d=~3f f(d)=~2f χ=~2f → net benefit]', [D, FD, Chi])
-        ;   format(atom(Ann), ' [d=~3f f(d)=~2f χ=~2f]', [D, FD, Chi])
-        )
-    ;   Ann = ''
-    ),
-    format('    - ~w: ~w~w~n', [Label, Type, Ann]).
+%% format_perspective_line(+C, +ContextPower, +Label, +Claimed)
+%  Looks up the classification for this context (partial match on power level),
+%  shows match/mismatch against claimed type, and appends chi metrics if available.
+format_perspective_line(C, ContextPower, Label, Claimed) :-
+    (   constraint_indexing:constraint_classification(C, Type,
+            context(agent_power(ContextPower), _, _, _))
+    ->  (Type == Claimed -> MatchStr = ' (Matches Claim)' ; MatchStr = ' (Mismatch)'),
+        (   compute_chi_v6(C, ContextPower, _, D, FD, Chi)
+        ->  (   Chi < 0
+            ->  format(atom(ChiStr), ' [d=~3f f(d)=~2f χ=~2f → net benefit]', [D, FD, Chi])
+            ;   format(atom(ChiStr), ' [d=~3f f(d)=~2f χ=~2f]', [D, FD, Chi])
+            )
+        ;   ChiStr = ''
+        ),
+        format('    - ~w: ~w~w~w~n', [Label, Type, MatchStr, ChiStr])
+    ;   format('    - ~w: (no classification)~n', [Label])
+    ).
 
 %% compute_chi_v6(+C, +ContextPower, -BaseE, -D, -FD, -Chi)
 %  Computes chi via v6.0 structural directionality chain.
@@ -372,8 +369,8 @@ format_mandatrophy_gap(C, PowerA, PowerB) :-
 
 report_constraint_signature(C) :-
     drl_core:dr_signature(C, Signature),
-    structural_signatures:signature_confidence(C, Signature, Confidence),
-    structural_signatures:explain_signature(C, Signature, Explanation),
+    signature_detection:signature_confidence(C, Signature, Confidence),
+    signature_detection:explain_signature(C, Signature, Explanation),
     format('  ~20w: ~20w (confidence: ~w)~n', [C, Signature, Confidence]),
     (Signature \= ambiguous -> format('    → ~w~n', [Explanation]) ; true),
     % v6.0: For false_ci_rope, surface directionality context
@@ -457,24 +454,6 @@ classify_interval(IntervalID, Pattern, Confidence) :-
 completeness_to_confidence(Score, high) :- Score >= 0.75, !.
 completeness_to_confidence(Score, moderate) :- Score >= 0.40, !.
 completeness_to_confidence(_, low).
-
-% Ensure these are at the BOTTOM of report_generator.pl, NOT inside generate_full_report
-generate_isomorphism_audit(IntervalID) :-
-    format('~n[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ~w]~n', [IntervalID]),
-    (   setof(iso(C, Twin, Score, Type),
-              (narrative_ontology:constraint_claim(C, _),  % Changed: use all constraints in current KB
-               isomorphism_engine:find_high_risk_isomorphism(C, Twin, Score),
-               drl_core:dr_type(C, Type)),
-              Isos)
-    ->  display_isomorphisms(Isos)
-    ;   format('  No high-risk isomorphisms detected for current constraints.~n')
-    ).
-
-display_isomorphisms([]).
-display_isomorphisms([iso(C, T, S, Ty)|Rest]) :-
-    format('  ! ALERT: ~w (~w) is a Structural Twin to ~w (Score: ~2f)~n', [C, Ty, T, S]),
-    format('    > Strategy: Search for ~w resolutions in KB.~n', [T]),
-    display_isomorphisms(Rest).
 
 /* ============================================================================
    4. ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS
@@ -835,8 +814,8 @@ cross_domain_audit :-
 %% display_twin_rationale(+C1, +C2)
 %  Explains why two constraints are considered structural twins.
 display_twin_rationale(C1, C2) :-
-    (structural_signatures:get_constraint_profile(C1, Profile1),
-     structural_signatures:get_constraint_profile(C2, Profile2)
+    (signature_detection:get_constraint_profile(C1, Profile1),
+     signature_detection:get_constraint_profile(C2, Profile2)
     -> (Profile1 = profile(A1, S1, R1, B1, Alt1, _, _),
         Profile2 = profile(A2, S2, R2, B2, Alt2, _, _),
         format('    Metrics: ', []),

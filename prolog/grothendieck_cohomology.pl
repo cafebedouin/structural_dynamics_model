@@ -59,7 +59,7 @@
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
 :- use_module(dirac_classification).
-:- use_module(structural_signatures).
+:- use_module(purity_scoring, [purity_score/2]).
 :- use_module(covering_analysis).
 :- use_module(library(lists)).
 
@@ -361,7 +361,7 @@ cohomology_selftest :-
         member(V, [0, 1, 2, 3, 4, 5, 6]),
         (   findall(P,
                 (cached_obstruction(C, _, V),
-                 structural_signatures:purity_score(C, P),
+                 purity_scoring:purity_score(C, P),
                  P >= 0.0),  % Exclude -1.0 sentinel
                 Purities),
             (   Purities \= []

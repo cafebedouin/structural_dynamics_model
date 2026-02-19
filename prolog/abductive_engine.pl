@@ -39,7 +39,9 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2, false_natural_law/2]).
+:- use_module(boltzmann_compliance, [cross_index_coupling/2]).
+:- use_module(purity_scoring, [purity_score/2]).
 :- use_module(drl_lifecycle).
 :- use_module(grothendieck_cohomology).
 :- use_module(logical_fingerprint).
@@ -165,14 +167,14 @@ trigger_signature_override_artifact(C, Context, Hypothesis) :-
     catch(maxent_classifier:maxent_disagreement(C, Context, Disagreement), _, fail),
     Disagreement = hard(ShadowType, DetType),
     % Must have a known override signature
-    catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+    catch(signature_detection:constraint_signature(C, Sig), _, fail),
     known_override_signature(Sig),
     override_target(Sig, ExpectedTarget),
     % The deterministic type must match the override target
     ExpectedTarget = DetType,
     % Collect evidence
     catch(maxent_classifier:maxent_entropy(C, Context, HNorm), _, (HNorm = 0.0)),
-    catch(structural_signatures:purity_score(C, Purity), _, (Purity = -1.0)),
+    catch(purity_scoring:purity_score(C, Purity), _, (Purity = -1.0)),
     EvidenceLines = [
         evidence_line(maxent, disagreement, hard(ShadowType, DetType)),
         evidence_line(signature, override, Sig),
@@ -213,7 +215,7 @@ trigger_signature_override_artifact(C, Context, Hypothesis) :-
 trigger_deep_deception(C, Context, Hypothesis) :-
     subsystem_available(maxent),
     % Must have FNL signature
-    catch(structural_signatures:false_natural_law(C, FNLEvidence), _, fail),
+    catch(signature_detection:false_natural_law(C, FNLEvidence), _, fail),
     % MaxEnt must assign high P(mountain)
     catch(maxent_classifier:maxent_distribution(C, Context, Dist), _, fail),
     member(mountain-PMountain, Dist),
@@ -429,7 +431,7 @@ trigger_coverage_gap(C, Context, Hypothesis) :-
 trigger_maxent_shadow_divergence(C, Context, Hypothesis) :-
     subsystem_available(maxent),
     % Must have a known override signature with a target
-    catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+    catch(signature_detection:constraint_signature(C, Sig), _, fail),
     known_override_signature(Sig),
     override_target(Sig, OverrideTarget),
     % MaxEnt top type must differ from override target
@@ -492,11 +494,11 @@ trigger_maxent_shadow_divergence(C, Context, Hypothesis) :-
 %% stress_indicator(+C, +Context, -Indicator)
 %  Individual stress signal checks. Each succeeding clause is independent.
 stress_indicator(C, _Context, has_false_signature) :-
-    catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+    catch(signature_detection:constraint_signature(C, Sig), _, fail),
     member(Sig, [false_ci_rope, false_natural_law]).
 
 stress_indicator(C, _Context, low_purity) :-
-    catch(structural_signatures:purity_score(C, P), _, fail),
+    catch(purity_scoring:purity_score(C, P), _, fail),
     P >= 0.0,
     config:param(abductive_stress_purity_threshold, PT),
     P < PT.
@@ -507,7 +509,7 @@ stress_indicator(C, _Context, has_drift) :-
     stress_drift_satisfied(DM, DriftEvents).
 
 stress_indicator(C, _Context, high_coupling) :-
-    catch(structural_signatures:cross_index_coupling(C, Coupling), _, fail),
+    catch(boltzmann_compliance:cross_index_coupling(C, Coupling), _, fail),
     config:param(abductive_stress_coupling_threshold, CT),
     Coupling > CT.
 
@@ -552,8 +554,8 @@ trigger_convergent_structural_stress(C, Context, Hypothesis) :-
     % Rare gate: at least one anomalous signal
     rare_stress_gate(C, Context, RareSignal),
     % Collect evidence
-    catch(structural_signatures:purity_score(C, Purity), _, (Purity = -1.0)),
-    catch(structural_signatures:cross_index_coupling(C, Coupling), _, (Coupling = -1.0)),
+    catch(purity_scoring:purity_score(C, Purity), _, (Purity = -1.0)),
+    catch(boltzmann_compliance:cross_index_coupling(C, Coupling), _, (Coupling = -1.0)),
     (   catch(drl_lifecycle:scan_constraint_drift(C, DriftEvs), _, fail)
     ->  length(DriftEvs, NDrift)
     ;   NDrift = 0
@@ -616,7 +618,7 @@ trigger_accelerating_pathology(C, Context, Hypothesis) :-
     % Purity drift event detected
     catch(drl_lifecycle:drift_event(C, purity_drift, PurityEvidence), _, fail),
     % Collect evidence
-    catch(structural_signatures:purity_score(C, Purity), _, (Purity = -1.0)),
+    catch(purity_scoring:purity_score(C, Purity), _, (Purity = -1.0)),
     EvidenceLines = [
         evidence_line(fpn, fpn_ep, FPNEP),
         evidence_line(fpn, fpn_zone, FPNZone),
@@ -725,7 +727,7 @@ trigger_dormant_extraction(C, Context, Hypothesis) :-
     include(is_extractive_void, Voids, ExtractiveVoids),
     ExtractiveVoids \= [],
     % Coupling above a meaningful threshold
-    catch(structural_signatures:cross_index_coupling(C, Coupling), _, fail),
+    catch(boltzmann_compliance:cross_index_coupling(C, Coupling), _, fail),
     Coupling > 0.10,
     % Collect evidence
     EvidenceLines = [
@@ -778,7 +780,7 @@ is_extractive_void(V) :- extractive_void(V).
 trigger_snare_leaning_tangled(C, Context, Hypothesis) :-
     subsystem_available(maxent),
     % Override target must be tangled_rope (via signature or dr_type)
-    (   catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+    (   catch(signature_detection:constraint_signature(C, Sig), _, fail),
         override_target(Sig, tangled_rope)
     ->  true
     ;   catch(drl_core:dr_type(C, Context, tangled_rope), _, fail)

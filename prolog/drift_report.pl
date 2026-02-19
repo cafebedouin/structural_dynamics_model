@@ -17,7 +17,7 @@
 :- use_module(drift_events).
 :- use_module(transition_paths).
 :- use_module(network_dynamics).
-:- use_module(drl_modal_logic).
+:- use_module(drl_composition, [non_monotonic_trajectory/2]).
 
 /* ================================================================
    7. UNIFIED SCAN
@@ -160,7 +160,7 @@ generate_drift_report(C) :-
     ;   true
     ),
     % Non-monotonic trajectory flag
-    (   drl_modal_logic:non_monotonic_trajectory(C, base_extractiveness)
+    (   drl_composition:non_monotonic_trajectory(C, base_extractiveness)
     ->  format('  [!] Non-monotonic extraction trajectory (V-shaped or irregular)~n')
     ;   true
     ),

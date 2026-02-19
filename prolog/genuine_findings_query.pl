@@ -12,7 +12,9 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2, structural_purity/2]).
+:- use_module(boltzmann_compliance, [boltzmann_compliant/2, cross_index_coupling/2]).
+:- use_module(purity_scoring, [purity_score/2, factorization_subscore/2, scope_invariance_subscore/2, coupling_cleanliness_subscore/2, excess_extraction_subscore/2]).
 :- use_module(dirac_classification).
 :- use_module(maxent_classifier).
 :- use_module(drl_lifecycle).
@@ -94,22 +96,22 @@ profile_hypothesis(hypothesis(C, Class, Anomaly, EvidenceLines, Explanations, Co
 
     % --- Structural signatures ---
     format('~n--- STRUCTURAL SIGNATURES ---~n'),
-    (structural_signatures:constraint_signature(C, Sig) -> true ; Sig = unknown),
+    (signature_detection:constraint_signature(C, Sig) -> true ; Sig = unknown),
     format('SIGNATURE: ~w~n', [Sig]),
-    (structural_signatures:purity_score(C, Purity) -> true ; Purity = unknown),
+    (purity_scoring:purity_score(C, Purity) -> true ; Purity = unknown),
     format('PURITY_SCORE: ~w~n', [Purity]),
-    (structural_signatures:boltzmann_compliant(C, BoltzResult) -> true ; BoltzResult = unknown),
+    (boltzmann_compliance:boltzmann_compliant(C, BoltzResult) -> true ; BoltzResult = unknown),
     format('BOLTZMANN: ~w~n', [BoltzResult]),
-    (structural_signatures:cross_index_coupling(C, CouplingScore) -> true ; CouplingScore = unknown),
+    (boltzmann_compliance:cross_index_coupling(C, CouplingScore) -> true ; CouplingScore = unknown),
     format('COUPLING: ~w~n', [CouplingScore]),
-    (structural_signatures:structural_purity(C, SPurity) -> true ; SPurity = unknown),
+    (signature_detection:structural_purity(C, SPurity) -> true ; SPurity = unknown),
     format('STRUCTURAL_PURITY: ~w~n', [SPurity]),
 
     % Purity subscores
-    (structural_signatures:factorization_subscore(C, FS) -> true ; FS = unknown),
-    (structural_signatures:scope_invariance_subscore(C, SIS) -> true ; SIS = unknown),
-    (structural_signatures:coupling_cleanliness_subscore(C, CCS) -> true ; CCS = unknown),
-    (structural_signatures:excess_extraction_subscore(C, EES) -> true ; EES = unknown),
+    (purity_scoring:factorization_subscore(C, FS) -> true ; FS = unknown),
+    (purity_scoring:scope_invariance_subscore(C, SIS) -> true ; SIS = unknown),
+    (purity_scoring:coupling_cleanliness_subscore(C, CCS) -> true ; CCS = unknown),
+    (purity_scoring:excess_extraction_subscore(C, EES) -> true ; EES = unknown),
     format('PURITY_SUBSCORES: factorization=~w scope_inv=~w coupling=~w excess=~w~n',
            [FS, SIS, CCS, EES]),
 

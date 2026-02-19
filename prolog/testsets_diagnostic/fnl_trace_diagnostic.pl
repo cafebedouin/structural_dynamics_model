@@ -11,7 +11,8 @@
 % ============================================================================
 
 :- use_module(scenario_manager).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2, resolve_modal_signature_conflict/3]).
+:- use_module(boltzmann_compliance, [boltzmann_compliant/2, cross_index_coupling/2]).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
@@ -42,7 +43,7 @@ run_fnl_trace :-
 
     % Step 3: Capture structural signature
     format('~n[STEP 3] Structural signature:~n'),
-    (   structural_signatures:constraint_signature(fnl_shadow_probe, Sig)
+    (   signature_detection:constraint_signature(fnl_shadow_probe, Sig)
     ->  format('  constraint_signature = ~w~n', [Sig])
     ;   format('  constraint_signature = FAILED~n'),
         Sig = none
@@ -50,14 +51,14 @@ run_fnl_trace :-
 
     % Step 4: Capture Boltzmann compliance
     format('~n[STEP 4] Boltzmann compliance:~n'),
-    (   structural_signatures:boltzmann_compliant(fnl_shadow_probe, BResult)
+    (   boltzmann_compliance:boltzmann_compliant(fnl_shadow_probe, BResult)
     ->  format('  boltzmann_compliant = ~w~n', [BResult])
     ;   format('  boltzmann_compliant = FAILED~n')
     ),
 
     % Step 5: Capture cross-index coupling
     format('~n[STEP 5] Cross-index coupling:~n'),
-    (   structural_signatures:cross_index_coupling(fnl_shadow_probe, CScore)
+    (   boltzmann_compliance:cross_index_coupling(fnl_shadow_probe, CScore)
     ->  format('  cross_index_coupling = ~w~n', [CScore])
     ;   format('  cross_index_coupling = FAILED~n')
     ),
@@ -113,7 +114,7 @@ run_fnl_trace :-
 %  Verifies that resolve_modal_signature_conflict actually maps
 %  the given signature to the expected override type.
 check_rule_live(Signature, Expected) :-
-    (   structural_signatures:resolve_modal_signature_conflict(unknown, Signature, Result)
+    (   signature_detection:resolve_modal_signature_conflict(unknown, Signature, Result)
     ->  (   Result == Expected
         ->  format('ACTIVE (maps to ~w)~n', [Result])
         ;   format('UNEXPECTED (maps to ~w, expected ~w)~n', [Result, Expected])

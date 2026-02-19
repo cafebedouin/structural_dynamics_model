@@ -31,9 +31,10 @@
 :- use_module(config).
 :- use_module(narrative_ontology).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(purity_scoring, [purity_score/2]).
+:- use_module(boltzmann_compliance, [coupling_test_context/3]).
 :- use_module(drl_core).
-:- use_module(drl_modal_logic).
+:- use_module(drl_purity_network, [constraint_neighbors/3, effective_purity/4, type_contamination_strength/2, type_immunity/2]).
 :- use_module(drl_counterfactual).
 :- use_module(corpus_loader).
 :- use_module(library(lists)).
@@ -104,7 +105,7 @@ precompute_all_edges(Constraints, Context) :-
 precompute_edges_loop([], _, _, _).
 precompute_edges_loop([C|Cs], Context, Done, Total) :-
     (   catch(
-            drl_modal_logic:constraint_neighbors(C, Context, Neighbors),
+            drl_purity_network:constraint_neighbors(C, Context, Neighbors),
             _Err, Neighbors = [])
     ->  true
     ;   Neighbors = []
@@ -339,11 +340,11 @@ precompute_props_loop([C|Cs], Context, Done, Total) :-
     ),
     assertz(gc_node_type(C, Context, Type)),
     % Purity
-    (   catch(structural_signatures:purity_score(C, IntrinsicP), _, IntrinsicP = -1.0)
+    (   catch(purity_scoring:purity_score(C, IntrinsicP), _, IntrinsicP = -1.0)
     ->  true
     ;   IntrinsicP = -1.0
     ),
-    (   catch(drl_modal_logic:effective_purity(C, Context, EffP, _), _, EffP = -1.0)
+    (   catch(drl_purity_network:effective_purity(C, Context, EffP, _), _, EffP = -1.0)
     ->  true
     ;   EffP = -1.0
     ),
@@ -586,7 +587,7 @@ report_super_spreaders(Cs, Ctx) :-
         scored(C, Potential, Type, Deg, CS, EP),
         (   member(C, Cs),
             gc_node_type(C, Ctx, Type),
-            drl_modal_logic:type_contamination_strength(Type, CS),
+            drl_purity_network:type_contamination_strength(Type, CS),
             CS > 0.0,
             aggregate_all(count, adj(C, _), Deg),
             Deg > 0,
@@ -887,7 +888,7 @@ report_contamination_sources(Members, Ctx) :-
         scored(C, Potential, Type, Deg, CS, EP),
         (   member(C, Members),
             gc_node_type(C, Ctx, Type),
-            drl_modal_logic:type_contamination_strength(Type, CS),
+            drl_purity_network:type_contamination_strength(Type, CS),
             CS > 0.0,
             aggregate_all(count, (adj(C, N), member(N, Members)), Deg),
             Deg > 0,
@@ -912,7 +913,7 @@ report_multihop_contamination(Members, Ctx) :-
     findall(C,
         (   member(C, Members),
             gc_node_type(C, Ctx, Type),
-            drl_modal_logic:type_contamination_strength(Type, CS),
+            drl_purity_network:type_contamination_strength(Type, CS),
             CS >= 0.5,
             gc_node_purity(C, IP, _),
             IP >= 0.0, IP < 0.50
@@ -1000,7 +1001,7 @@ report_sound_constraint_exposure(Members, Ctx) :-
     findall(Src,
         (   member(Src, Members),
             gc_node_type(Src, Ctx, Type),
-            drl_modal_logic:type_contamination_strength(Type, CS),
+            drl_purity_network:type_contamination_strength(Type, CS),
             CS >= 0.3,
             gc_node_purity(Src, IP, _),
             IP >= 0.0, IP < 0.50
@@ -1081,10 +1082,10 @@ would_cross_threshold(Target, Source, Dist, Ctx, Result) :-
     gc_node_purity(Target, _, TargetEP),
     gc_node_purity(Source, SrcIP, _),
     gc_node_type(Source, Ctx, SrcType),
-    drl_modal_logic:type_contamination_strength(SrcType, CS),
-    drl_modal_logic:type_immunity(Ctx, _),  % just checking module is loaded
+    drl_purity_network:type_contamination_strength(SrcType, CS),
+    drl_purity_network:type_immunity(Ctx, _),  % just checking module is loaded
     gc_node_type(Target, Ctx, TgtType),
-    drl_modal_logic:type_immunity(TgtType, Immunity),
+    drl_purity_network:type_immunity(TgtType, Immunity),
     % Attenuation = 0.50^Dist (multi-hop decay)
     Attenuation is 0.50 ** Dist,
     % Delta = target purity - source purity
@@ -1141,7 +1142,7 @@ count_by_purity_zone(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND) :-
     config:param(purity_action_escalation_floor, EscFloor),
     findall(EP,
         (   member(C, Members),
-            catch(drl_modal_logic:effective_purity(C, Ctx, EP, _), _, fail),
+            catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
             EP >= 0.0
         ),
         EPs),
@@ -1195,7 +1196,7 @@ run_phase4 :-
     forall(member(T, TypeOrder), (
         format('| ~w |', [T]),
         forall(member(ctx(Power, Scope, _), Contexts), (
-            structural_signatures:coupling_test_context(Power, Scope, Ctx),
+            boltzmann_compliance:coupling_test_context(Power, Scope, Ctx),
             findall(C,
                 (   member(C, Cs),
                     catch(drl_core:dr_type(C, Ctx, ActualType), _, ActualType = error),
@@ -1215,7 +1216,7 @@ run_phase4 :-
     format('| Context | Snare | Piton | Tangled Rope | Scaffold | Total Sources |~n'),
     format('|---------|-------|-------|-------------|----------|---------------|~n'),
     forall(member(ctx(Power, Scope, Label), Contexts), (
-        structural_signatures:coupling_test_context(Power, Scope, Ctx),
+        boltzmann_compliance:coupling_test_context(Power, Scope, Ctx),
         count_type_in_context(Cs, Ctx, snare, NSnare),
         count_type_in_context(Cs, Ctx, piton, NPiton),
         count_type_in_context(Cs, Ctx, tangled_rope, NTR),

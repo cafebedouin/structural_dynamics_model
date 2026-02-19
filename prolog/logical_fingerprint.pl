@@ -61,7 +61,8 @@
 :- use_module(constraint_indexing).
 :- use_module(config).
 :- use_module(domain_priors).
-:- use_module(structural_signatures).
+:- use_module(boltzmann_compliance, [epistemic_access_check/2, cross_index_coupling/2, complexity_adjusted_threshold/2, detect_nonsensical_coupling/3, boltzmann_compliant/2]).
+:- use_module(purity_scoring, [purity_score/2]).
 
 :- use_module(library(lists)).
 
@@ -412,23 +413,23 @@ suppression_zone(_, extreme).
 %  if insufficient data).
 
 fingerprint_coupling(C, coupling(Category, Score, CoupledPairs, Compliance, Purity)) :-
-    structural_signatures:epistemic_access_check(C, EpistemicOk),
+    boltzmann_compliance:epistemic_access_check(C, EpistemicOk),
     (   EpistemicOk == false
     ->  Category = inconclusive,
         Score = unknown,
         CoupledPairs = [],
         Compliance = inconclusive(insufficient_classifications),
         Purity = -1.0
-    ;   structural_signatures:cross_index_coupling(C, Score),
-        structural_signatures:complexity_adjusted_threshold(C, Threshold),
+    ;   boltzmann_compliance:cross_index_coupling(C, Score),
+        boltzmann_compliance:complexity_adjusted_threshold(C, Threshold),
         config:param(boltzmann_coupling_strong_threshold, StrongThreshold),
         categorize_coupling(Score, Threshold, StrongThreshold, C, Category),
-        (   structural_signatures:detect_nonsensical_coupling(C, CoupledPairs, _)
+        (   boltzmann_compliance:detect_nonsensical_coupling(C, CoupledPairs, _)
         ->  true
         ;   CoupledPairs = []
         ),
-        structural_signatures:boltzmann_compliant(C, Compliance),
-        structural_signatures:purity_score(C, Purity)
+        boltzmann_compliance:boltzmann_compliant(C, Compliance),
+        purity_scoring:purity_score(C, Purity)
     ).
 
 %% categorize_coupling(+Score, +Threshold, +StrongThreshold, +C, -Category)

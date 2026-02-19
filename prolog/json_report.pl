@@ -17,7 +17,8 @@
 :- use_module(config).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(purity_scoring, [purity_score/2]).
+:- use_module(signature_detection, [false_natural_law/2]).
 :- use_module(logical_fingerprint).
 :- use_module(report_generator).
 :- use_module(drl_lifecycle).
@@ -190,7 +191,7 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     format(S, ',~n', []),
 
     % purity_score + purity_band
-    (   catch(structural_signatures:purity_score(C, PScore), _, fail),
+    (   catch(purity_scoring:purity_score(C, PScore), _, fail),
         PScore \= -1.0
     ->  logical_fingerprint:purity_zone(PScore, PBand)
     ;   PScore = null, PBand = null
@@ -440,14 +441,14 @@ collect_omegas(C, Omegas) :-
     findall(omega(OID, OType, Question, Sev),
             (   report_generator:detect_gap_pattern(C, Gap),
                 report_generator:omega_from_gap(C, Gap, OID, OType, Question),
-                report_generator:omega_severity(OID, Sev)
+                once(report_generator:omega_severity(OID, Sev))
             ),
             GapOmegas),
     % Testset-declared omegas (omega_variable/3 facts)
     findall(omega(OID, OType, Desc, Sev),
             (   narrative_ontology:omega_variable(OID, OType, Desc),
                 omega_for_constraint(OID, C),
-                report_generator:omega_severity(OID, Sev)
+                once(report_generator:omega_severity(OID, Sev))
             ),
             DeclaredOmegas),
     append(GapOmegas, DeclaredOmegas, AllOmegas),
@@ -546,7 +547,7 @@ write_validation_object(S, Constraints) :-
 
     % false_mountain_count
     findall(C, (member(C, Constraints),
-                catch(structural_signatures:false_natural_law(C, _), _, fail)),
+                catch(signature_detection:false_natural_law(C, _), _, fail)),
             FalseMs),
     length(FalseMs, FalseMountainCount),
     format(S, '    "false_mountain_count": ~w,~n', [FalseMountainCount]),
@@ -643,7 +644,7 @@ tally_claimed_types(Constraints, Pairs) :-
 tally_purity_bands(Constraints, Pairs) :-
     findall(Zone,
             (   member(C, Constraints),
-                catch(structural_signatures:purity_score(C, PS), _, fail),
+                catch(purity_scoring:purity_score(C, PS), _, fail),
                 PS \= -1.0,
                 logical_fingerprint:purity_zone(PS, Zone)),
             Zones),
@@ -685,7 +686,7 @@ tally_drift_severities(Constraints, Pairs) :-
 tally_omega_severities(OmegaIDs, Pairs) :-
     findall(Sev,
             (   member(OID, OmegaIDs),
-                report_generator:omega_severity(OID, Sev)),
+                once(report_generator:omega_severity(OID, Sev))),
             Sevs),
     msort(Sevs, Sorted),
     run_length_encode(Sorted, Pairs).

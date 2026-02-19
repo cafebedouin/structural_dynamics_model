@@ -51,7 +51,9 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(boltzmann_compliance, [cross_index_coupling/2, boltzmann_compliant/2]).
+:- use_module(signature_detection, [constraint_signature/2]).
+:- use_module(purity_scoring, [purity_score/2]).
 :- use_module(dirac_classification).
 :- use_module(logical_fingerprint).
 :- use_module(drl_lifecycle).
@@ -175,17 +177,17 @@ build_trajectory_summary(C, Summary) :-
     ;   Preservation = unknown
     ),
     % Coupling
-    (   catch(structural_signatures:cross_index_coupling(C, Coupling), _, fail)
+    (   catch(boltzmann_compliance:cross_index_coupling(C, Coupling), _, fail)
     ->  true
     ;   Coupling = 0.0
     ),
     % Purity
-    (   catch(structural_signatures:purity_score(C, Purity), _, fail)
+    (   catch(purity_scoring:purity_score(C, Purity), _, fail)
     ->  true
     ;   Purity = -1.0
     ),
     % Signature
-    (   catch(structural_signatures:constraint_signature(C, Sig), _, fail)
+    (   catch(signature_detection:constraint_signature(C, Sig), _, fail)
     ->  true
     ;   Sig = unknown
     ),
@@ -207,7 +209,7 @@ build_trajectory_summary(C, Summary) :-
     ;   Zone = zone(unknown, unknown)
     ),
     % Boltzmann compliance
-    (   catch(structural_signatures:boltzmann_compliant(C, Boltzmann), _, fail)
+    (   catch(boltzmann_compliance:boltzmann_compliant(C, Boltzmann), _, fail)
     ->  true
     ;   Boltzmann = inconclusive(no_data)
     ),
@@ -762,8 +764,8 @@ compute_isomorphism_evidence(C1, C2, Evidence) :-
     ),
     % Coupling band match
     config:param(trajectory_coupling_band_width, BandWidth),
-    (   catch(structural_signatures:cross_index_coupling(C1, Coup1), _, fail),
-        catch(structural_signatures:cross_index_coupling(C2, Coup2), _, fail)
+    (   catch(boltzmann_compliance:cross_index_coupling(C1, Coup1), _, fail),
+        catch(boltzmann_compliance:cross_index_coupling(C2, Coup2), _, fail)
     ->  (abs(Coup1 - Coup2) =< BandWidth -> CouplingMatch = true ; CouplingMatch = false)
     ;   CouplingMatch = unknown
     ),

@@ -57,7 +57,7 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2]).
 :- use_module(covering_analysis).
 
 :- use_module(library(lists)).
@@ -311,7 +311,7 @@ set_uniform(U, Type-_, Type-U).
    ================================================================ */
 
 apply_signature_override(C, DistIn, DistOut) :-
-    (   catch(structural_signatures:constraint_signature(C, Sig), _, fail)
+    (   catch(signature_detection:constraint_signature(C, Sig), _, fail)
     ->  apply_override_for_sig(Sig, DistIn, DistOut)
     ;   DistOut = DistIn
     ).

@@ -5,7 +5,8 @@
 :- use_module(config).
 :- use_module(narrative_ontology).
 :- use_module(constraint_indexing).
-:- use_module(drl_modal_logic).
+:- use_module(drl_counterfactual, [count_sign_matches/4]).
+:- use_module(drl_purity_network, [shared_agent_link/4]).
 :- use_module(drl_core).
 :- use_module(covering_analysis).
 :- use_module(library(lists)).
@@ -133,7 +134,7 @@ compute_coupling(C1, C2, Strength) :-
     constraint_gradients(C1, Gs1),
     constraint_gradients(C2, Gs2),
     length(Gs1, L), L > 1, length(Gs2, L),
-    drl_modal_logic:count_sign_matches(Gs1, Gs2, Matches, L),
+    drl_counterfactual:count_sign_matches(Gs1, Gs2, Matches, L),
     Strength is Matches / L.
 
 /* ================================================================
@@ -216,7 +217,7 @@ compute_baseline_edges(AllCs, Edges) :-
     % Shared agent edges
     findall(C1-C2,
         (   member(C1, AllCs),
-            drl_modal_logic:shared_agent_link(C1, C2, _, _),
+            drl_purity_network:shared_agent_link(C1, C2, _, _),
             C2 \= C1
         ),
         SharedRaw),

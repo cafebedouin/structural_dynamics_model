@@ -5,7 +5,7 @@
     find_high_risk_isomorphism/3
 ]).
 
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [get_constraint_profile/2, constraint_signature/2]).
 :- use_module(narrative_ontology).
 :- use_module(domain_priors).
 :- use_module(config).
@@ -15,8 +15,8 @@
 %  their 7-point signature profile.
 find_isomorphism(C1, C2, Score) :-
     C1 \= C2,
-    structural_signatures:get_constraint_profile(C1, Profile1),
-    structural_signatures:get_constraint_profile(C2, Profile2),
+    signature_detection:get_constraint_profile(C1, Profile1),
+    signature_detection:get_constraint_profile(C2, Profile2),
     calculate_profile_distance(Profile1, Profile2, Distance),
     Score is 1.0 - Distance,
     config:param(isomorphism_threshold, T),
@@ -42,7 +42,7 @@ calculate_profile_distance(
 %% cluster_by_signature(+Signature, -Cluster)
 %  Finds all constraints sharing a specific structural signature.
 cluster_by_signature(Sig, Cluster) :-
-    findall(C, structural_signatures:constraint_signature(C, Sig), Cluster).
+    findall(C, signature_detection:constraint_signature(C, Sig), Cluster).
 
 %% generate_cross_domain_index(-Index)
 %  The "Pattern Search" entry point.

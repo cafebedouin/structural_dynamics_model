@@ -5,7 +5,8 @@
 :- use_module(config).
 :- use_module(narrative_ontology).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2]).
+:- use_module(boltzmann_compliance, [coupling_test_context/3]).
 :- use_module(drl_core).
 :- use_module(covering_analysis).
 :- use_module(library(lists)).
@@ -114,7 +115,7 @@ compute_one_profile(C, Ctx) :-
     ;   Theater = 0.0
     ),
     % Structural signature
-    (   catch(structural_signatures:constraint_signature(C, Sig0), _, Sig0 = error)
+    (   catch(signature_detection:constraint_signature(C, Sig0), _, Sig0 = error)
     ->  Sig = Sig0
     ;   Sig = no_signature
     ),
@@ -374,11 +375,11 @@ compute_all_cross_context(Unknowns) :-
 
 compute_cross_context(C) :-
     % Institutional/Local
-    structural_signatures:coupling_test_context(institutional, local, CtxInst),
+    boltzmann_compliance:coupling_test_context(institutional, local, CtxInst),
     classify_safe(C, CtxInst, TypeInst),
     assertz(omega1_cross_context(C, 'Institutional/Local', CtxInst, TypeInst)),
     % Moderate/National
-    structural_signatures:coupling_test_context(moderate, national, CtxMod),
+    boltzmann_compliance:coupling_test_context(moderate, national, CtxMod),
     classify_safe(C, CtxMod, TypeMod),
     assertz(omega1_cross_context(C, 'Moderate/National', CtxMod, TypeMod)),
     % Analytical/Global (should be unknown by definition)

@@ -27,7 +27,8 @@
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
 :- use_module(config).
-:- use_module(structural_signatures).
+:- use_module(boltzmann_compliance, [cross_index_coupling/2, excess_extraction/2, boltzmann_invariant_mountain/2]).
+:- use_module(purity_scoring, [purity_score/2, factorization_subscore/2, scope_invariance_subscore/2, coupling_cleanliness_subscore/2, excess_extraction_subscore/2]).
 :- use_module(drl_counterfactual).
 
 /* ================================================================
@@ -128,7 +129,7 @@ separability_factor(_, 0.5).  % Unknown structure
 %  Independent = easy to reform (high factor).
 %  Strongly coupled = hard to reform (low factor).
 coupling_factor(C, Factor) :-
-    (   structural_signatures:cross_index_coupling(C, CouplingScore)
+    (   boltzmann_compliance:cross_index_coupling(C, CouplingScore)
     ->  % Invert: low coupling → high reformability
         Factor is max(0.0, 1.0 - CouplingScore)
     ;   Factor = 0.5  % Unknown coupling → moderate assumption
@@ -144,7 +145,7 @@ coupling_factor(C, Factor) :-
 %  Calibration: approximates old step values within ~0.1 at all boundary points
 %  (e.g. Excess=0.20→1.0, Excess=0.50→0.49 vs old 0.6, Excess=0.60→0.35 vs old 0.3).
 excess_extraction_factor(C, Factor) :-
-    (   structural_signatures:excess_extraction(C, Excess)
+    (   boltzmann_compliance:excess_extraction(C, Excess)
     ->  config:param(excess_factor_center, Center),
         config:param(excess_factor_sigma, Sigma),
         config:param(excess_factor_peak, Peak),
@@ -156,7 +157,7 @@ excess_extraction_factor(C, Factor) :-
 /* ----------------------------------------------------------------
    BOLTZMANN-INVARIANT MOUNTAIN CHECK
    ----------------------------------------------------------------
-   Delegates to structural_signatures:boltzmann_invariant_mountain/2
+   Delegates to boltzmann_compliance:boltzmann_invariant_mountain/2
    but adds modal context: checks if the Mountain classification
    is also consistent across counterfactual worlds.
    ---------------------------------------------------------------- */
@@ -168,7 +169,7 @@ excess_extraction_factor(C, Factor) :-
 %  Result = boltzmann_check(InvarianceResult, ModalConsistency)
 boltzmann_invariant_check(C, boltzmann_check(InvResult, ModalConsistency)) :-
     % Structural invariance from signatures module
-    structural_signatures:boltzmann_invariant_mountain(C, InvResult),
+    boltzmann_compliance:boltzmann_invariant_mountain(C, InvResult),
 
     % Modal consistency: is it a Mountain from ALL standard contexts?
     findall(
@@ -214,7 +215,7 @@ coupling_aware_scaffold_need(C, Context, Assessment) :-
         drl_counterfactual:assess_scaffold_need(C, Context, BaseAssessment),
 
         % Get coupling topology
-        (   structural_signatures:cross_index_coupling(C, CouplingScore)
+        (   boltzmann_compliance:cross_index_coupling(C, CouplingScore)
         ->  true
         ;   CouplingScore = 0.0
         ),
@@ -265,7 +266,7 @@ coupling_aware_scaffold_need(C, Context, Assessment) :-
 %  Target is always at least 0.85 ("sound" zone), or higher if the
 %  constraint's current purity already exceeds 0.85.
 purity_reform_target(C, Target) :-
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     Purity >= 0.0, !,
     Target is max(Purity, 0.85).
 purity_reform_target(_, 0.85).  % Fallback if purity inconclusive
@@ -288,7 +289,7 @@ purity_reform_recommendation(C, reform_recommendation(
         CurrentPurity, TargetPurity, PurityGap,
         Reformability, Pressure, Deficits, Urgency)) :-
     % Get current purity
-    structural_signatures:purity_score(C, CurrentPurity),
+    purity_scoring:purity_score(C, CurrentPurity),
     CurrentPurity >= 0.0,
 
     % Compute target and gap
@@ -321,22 +322,22 @@ identify_purity_deficits(C, Deficits) :-
 
 % Factorization deficit: coupling across index dimensions
 purity_deficit(C, factorization_deficit(Score)) :-
-    structural_signatures:factorization_subscore(C, Score),
+    purity_scoring:factorization_subscore(C, Score),
     Score < 0.85.
 
 % Scope invariance deficit: classification changes with scope
 purity_deficit(C, scope_invariance_deficit(Score)) :-
-    structural_signatures:scope_invariance_subscore(C, Score),
+    purity_scoring:scope_invariance_subscore(C, Score),
     Score < 0.85.
 
 % Coupling cleanliness deficit: nonsensical coupling present
 purity_deficit(C, coupling_cleanliness_deficit(Score)) :-
-    structural_signatures:coupling_cleanliness_subscore(C, Score),
+    purity_scoring:coupling_cleanliness_subscore(C, Score),
     Score < 0.85.
 
 % Excess extraction deficit: extraction above Boltzmann floor
 purity_deficit(C, excess_extraction_deficit(Score)) :-
-    structural_signatures:excess_extraction_subscore(C, Score),
+    purity_scoring:excess_extraction_subscore(C, Score),
     Score < 0.85.
 
 %% compute_reform_urgency(+Gap, +Pressure, +Reformability, -Urgency)
@@ -421,7 +422,7 @@ downgrade_urgency(moderate, low).
 purity_qualified_action(C, Context, QAction, Rationale) :-
     constraint_indexing:valid_context(Context),
     drl_core:dr_action(C, Context, BaseAction),
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     qualify_action(BaseAction, Purity, C, QAction, Rationale).
 
 %% purity_qualified_action(+C, -QAction, -Rationale)
@@ -540,7 +541,7 @@ purity_to_cut_priority(_, critical).
 purity_adjusted_energy(C, Context, BaseAction, energy_cost(BaseCost, Mult, Adjusted)) :-
     constraint_indexing:valid_context(Context),
     base_action_complexity(BaseAction, BaseCost),
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     config:param(purity_energy_max_multiplier, MaxMult),
     energy_multiplier(BaseAction, Purity, MaxMult, Mult),
     Adjusted is BaseCost * Mult.
@@ -597,7 +598,7 @@ energy_multiplier(_, _, _, 1.0).
 %  Checks purity prerequisites for composite actions.
 
 action_composition_gate(C, surgical_reform, gate(Pass, Reason)) :-
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     (   Purity < 0.0
     ->  Pass = pass, Reason = no_gate_defined
     ;   config:param(purity_surgical_reform_gate, MinPurity),
@@ -612,7 +613,7 @@ action_composition_gate(C, surgical_reform, gate(Pass, Reason)) :-
     ), !.
 
 action_composition_gate(C, safe_transition, gate(Pass, Reason)) :-
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     (   Purity < 0.0
     ->  Pass = pass, Reason = no_gate_defined
     ;   config:param(purity_scaffold_health_gate, MinPurity),
@@ -623,7 +624,7 @@ action_composition_gate(C, safe_transition, gate(Pass, Reason)) :-
     ), !.
 
 action_composition_gate(C, efficient_coordination, gate(Pass, Reason)) :-
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     (   Purity < 0.0
     ->  Pass = pass, Reason = no_gate_defined
     ;   config:param(purity_action_escalation_floor, MinPurity),
@@ -657,7 +658,7 @@ purity_scaffold_urgency(C, Context, Urgency, Factors) :-
     ->  true
     ;   BaseAssessment = no_scaffold_needed
     ),
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     has_purity_drift(C, DriftDetected),
     compute_scaffold_urgency(BaseAssessment, Purity, DriftDetected, Urgency, Factors).
 

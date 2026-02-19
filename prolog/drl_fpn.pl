@@ -22,7 +22,7 @@
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
 :- use_module(config).
-:- use_module(structural_signatures).
+:- use_module(purity_scoring, [purity_score/2]).
 :- use_module(drl_purity_network).
 
 % Dynamic state for fixed-point iteration
@@ -73,7 +73,7 @@ fpn_cleanup(Context) :-
 
 %% fpn_precompute(+Constraints, +Context)
 %  Pre-computes and caches all iteration-invariant data:
-%  - Intrinsic purity (from structural_signatures:purity_score/2)
+%  - Intrinsic purity (from purity_scoring:purity_score/2)
 %  - Classification type (from drl_core:dr_type/3)
 %  - Neighbor graph (from constraint_neighbors/3)
 %  - Initial effective purity = intrinsic purity (iteration 0)
@@ -83,7 +83,7 @@ fpn_precompute(Constraints, Context) :-
 fpn_precompute_constraints([], _).
 fpn_precompute_constraints([C|Cs], Context) :-
     % Cache intrinsic purity
-    (   structural_signatures:purity_score(C, IP)
+    (   purity_scoring:purity_score(C, IP)
     ->  true
     ;   IP = -1.0
     ),
@@ -202,7 +202,7 @@ fpn_total_contamination(C, MyPurity, [neighbor(Other, EdgeStrength, _Src)|Rest],
 %% fpn_edge_contamination(+MyPurity, +Other, +EdgeStrength, +Context, -Contam)
 %  Computes contamination from one neighbor.
 %  THE ONLY SEMANTIC CHANGE FROM STAGE 8: reads fpn_ep(Other, Context, OtherEP)
-%  instead of structural_signatures:purity_score(Other, OtherPurity).
+%  instead of purity_scoring:purity_score(Other, OtherPurity).
 %  Everything else in Stage 8b exists to make this single substitution iterative.
 fpn_edge_contamination(MyPurity, Other, EdgeStrength, Context, Contam) :-
     % === THE CORE CHANGE: read from iteration state, not intrinsic purity ===
@@ -229,7 +229,7 @@ fpn_edge_contamination(MyPurity, Other, EdgeStrength, Context, Contam) :-
 % constants (their EP never changes across iterations), which is correct since
 % they aren't being iterated.
 fpn_edge_contamination(MyPurity, Other, EdgeStrength, Context, Contam) :-
-    structural_signatures:purity_score(Other, OtherPurity),
+    purity_scoring:purity_score(Other, OtherPurity),
     OtherPurity >= 0.0,
     !,
     Delta is max(0.0, MyPurity - OtherPurity),

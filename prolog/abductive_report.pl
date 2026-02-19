@@ -18,7 +18,6 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
 :- use_module(dirac_classification).
 :- use_module(maxent_classifier).
 :- use_module(drl_lifecycle).

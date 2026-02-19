@@ -24,7 +24,6 @@
 :- use_module(dirac_classification).
 :- use_module(grothendieck_cohomology).
 :- use_module(maxent_classifier).
-:- use_module(structural_signatures).
 :- use_module(corpus_loader).
 
 :- use_module(library(lists)).

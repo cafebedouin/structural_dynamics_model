@@ -22,7 +22,6 @@
 :- use_module(config).
 :- use_module(narrative_ontology).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
 :- use_module(covering_analysis).
 :- use_module(library(lists)).
 

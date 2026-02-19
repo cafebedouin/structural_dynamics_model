@@ -16,8 +16,8 @@
 :- use_module(config).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
-:- use_module(drl_modal_logic).
+:- use_module(purity_scoring, [purity_score/2]).
+:- use_module(drl_purity_network, [effective_purity/4, constraint_neighbors/3, type_contamination_strength/2, type_immunity/2]).
 :- use_module(drift_events).
 
 /* ================================================================
@@ -63,8 +63,8 @@
 %  and showing purity decline signals.
 detect_network_drift(C, Context, evidence(drifting_neighbors, ContagionList, effective_purity, EP, intrinsic_purity, IP)) :-
     constraint_indexing:valid_context(Context),
-    drl_modal_logic:effective_purity(C, Context, EP, _Components),
-    structural_signatures:purity_score(C, IP),
+    drl_purity_network:effective_purity(C, Context, EP, _Components),
+    purity_scoring:purity_score(C, IP),
     IP >= 0.0,
     network_drift_contagion(C, Context, ContagionList),
     ContagionList \= [].
@@ -79,10 +79,10 @@ detect_network_drift(C, Context, evidence(drifting_neighbors, ContagionList, eff
 %  Returns [contagion(Neighbor, EdgeContam, DriftSignals), ...]
 network_drift_contagion(C, Context, ContagionList) :-
     constraint_indexing:valid_context(Context),
-    structural_signatures:purity_score(C, MyPurity),
+    purity_scoring:purity_score(C, MyPurity),
     (   MyPurity < 0.0
     ->  ContagionList = []
-    ;   drl_modal_logic:constraint_neighbors(C, Context, Neighbors),
+    ;   drl_purity_network:constraint_neighbors(C, Context, Neighbors),
         findall(
             contagion(Other, EdgeContam, DriftSignals),
             (   member(neighbor(Other, EdgeStrength, _Src), Neighbors),
@@ -97,14 +97,14 @@ network_drift_contagion(C, Context, ContagionList) :-
 %% compute_neighbor_contamination(+MyPurity, +Other, +EdgeStrength, +Context, -EdgeContam)
 %  Inline edge contamination using same formula as compute_edge_contamination/7.
 compute_neighbor_contamination(MyPurity, Other, EdgeStrength, Context, EdgeContam) :-
-    structural_signatures:purity_score(Other, OtherPurity),
+    purity_scoring:purity_score(Other, OtherPurity),
     OtherPurity >= 0.0,
     Delta is max(0.0, MyPurity - OtherPurity),
     (   Delta > 0.0
     ->  config:param(purity_attenuation_factor, AttFactor),
         config:param(purity_contamination_cap, Cap),
         (   drl_core:dr_type(Other, Context, OtherType)
-        ->  drl_modal_logic:type_contamination_strength(OtherType, TypeFactor)
+        ->  drl_purity_network:type_contamination_strength(OtherType, TypeFactor)
         ;   TypeFactor = 0.0
         ),
         RawContam is Delta * EdgeStrength * AttFactor * TypeFactor,
@@ -125,12 +125,12 @@ compute_neighbor_contamination(_, _, _, _, 0.0).
 %  Contributors = [contributor(Neighbor, Rate, Sensitivity, Contribution), ...]
 network_drift_velocity(C, Context, Velocity, Contributors) :-
     constraint_indexing:valid_context(Context),
-    drl_modal_logic:constraint_neighbors(C, Context, Neighbors),
-    structural_signatures:purity_score(C, MyPurity),
+    drl_purity_network:constraint_neighbors(C, Context, Neighbors),
+    purity_scoring:purity_score(C, MyPurity),
     (   MyPurity < 0.0
     ->  Velocity = 0.0, Contributors = []
     ;   drl_core:dr_type(C, Context, MyType),
-        drl_modal_logic:type_immunity(MyType, Immunity),
+        drl_purity_network:type_immunity(MyType, Immunity),
         findall(
             contributor(Other, Rate, Sensitivity, Contribution),
             (   member(neighbor(Other, EdgeStrength, _Src), Neighbors),
@@ -138,7 +138,7 @@ network_drift_velocity(C, Context, Velocity, Contributors) :-
                 Rate > 0,
                 config:param(purity_attenuation_factor, AttFactor),
                 (   drl_core:dr_type(Other, Context, OtherType)
-                ->  drl_modal_logic:type_contamination_strength(OtherType, TypeFactor)
+                ->  drl_purity_network:type_contamination_strength(OtherType, TypeFactor)
                 ;   TypeFactor = 0.0
                 ),
                 Sensitivity is EdgeStrength * AttFactor * TypeFactor * Immunity,
@@ -165,7 +165,7 @@ sum_contributions([contributor(_, _, _, C)|Rest], Total) :-
 %  Only succeeds if velocity >= network_drift_velocity_threshold.
 cascade_prediction(C, Context, Crossings) :-
     constraint_indexing:valid_context(Context),
-    drl_modal_logic:effective_purity(C, Context, EP, _),
+    drl_purity_network:effective_purity(C, Context, EP, _),
     EP >= 0.0,
     network_drift_velocity(C, Context, Velocity, _),
     config:param(network_drift_velocity_threshold, VelThresh),
@@ -229,10 +229,10 @@ network_stability_assessment(Context, Assessment) :-
 %  Severity ∈ {critical, warning, watch}
 network_drift_severity(C, Context, Severity) :-
     constraint_indexing:valid_context(Context),
-    drl_modal_logic:effective_purity(C, Context, EP, _),
+    drl_purity_network:effective_purity(C, Context, EP, _),
     ep_base_severity(EP, BaseSeverity),
     % Hub escalation: C has >= hub_degree_threshold neighbors AND is drifting
-    drl_modal_logic:constraint_neighbors(C, Context, Neighbors),
+    drl_purity_network:constraint_neighbors(C, Context, Neighbors),
     length(Neighbors, Degree),
     config:param(network_hub_degree_threshold, HubThresh),
     config:param(network_drift_hub_escalation, HubEnabled),

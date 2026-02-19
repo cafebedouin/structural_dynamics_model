@@ -31,7 +31,7 @@
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
 :- use_module(config).
-:- use_module(structural_signatures).
+:- use_module(purity_scoring, [purity_score/2]).
 :- use_module(drl_counterfactual).
 :- use_module(drl_boltzmann_analysis).
 
@@ -163,7 +163,7 @@ type_immunity(_,             0.5).
 %  where Detail = no_neighbors | contamination_detail(NeighborList)
 effective_purity(C, Context, EffPurity, purity_components(Intrinsic, TotalContam, Detail)) :-
     constraint_indexing:valid_context(Context),
-    structural_signatures:purity_score(C, Intrinsic),
+    purity_scoring:purity_score(C, Intrinsic),
     constraint_neighbors(C, Context, Neighbors),
     (   Neighbors = []
     ->  TotalContam = 0.0,
@@ -204,7 +204,7 @@ compute_total_contamination(C, MyPurity, [neighbor(Other, EdgeStrength, _Src)|Re
 %  Computes contamination from one neighbor.
 %  Contamination flows downward only (from lower purity to higher purity).
 compute_edge_contamination(_C, MyPurity, Other, EdgeStrength, Context, Contam, edge(Other, Delta, Contam)) :-
-    structural_signatures:purity_score(Other, OtherPurity),
+    purity_scoring:purity_score(Other, OtherPurity),
     OtherPurity >= 0.0,
     !,
     Delta is max(0.0, MyPurity - OtherPurity),
@@ -227,8 +227,8 @@ compute_edge_contamination(_C, _MyPurity, Other, _EdgeStrength, _Context, 0.0, e
 %  Returns pressure(Delta, Attenuation, TypeFactor).
 purity_contamination_pressure(Src, Tgt, Context, pressure(Delta, Attenuation, TypeFactor)) :-
     constraint_indexing:valid_context(Context),
-    structural_signatures:purity_score(Src, SrcPurity),
-    structural_signatures:purity_score(Tgt, TgtPurity),
+    purity_scoring:purity_score(Src, SrcPurity),
+    purity_scoring:purity_score(Tgt, TgtPurity),
     SrcPurity >= 0.0,
     TgtPurity >= 0.0,
     Delta is max(0.0, TgtPurity - SrcPurity),
@@ -325,7 +325,7 @@ weighted_sum_acc(EP-W, AccEP-AccW, NewAccEP-NewAccW) :-
 %  Returns path of [step(C, Purity, Delta), ...] and cumulative loss.
 contamination_path(Src, Tgt, Context, Path, Loss) :-
     constraint_indexing:valid_context(Context),
-    structural_signatures:purity_score(Src, SrcP),
+    purity_scoring:purity_score(Src, SrcP),
     bfs_path(Src, Tgt, Context, [Src], RevPath),
     reverse(RevPath, FwdPath),
     build_path_steps(FwdPath, Context, Path, 0.0, Loss, SrcP).
@@ -366,7 +366,7 @@ weakest_link_purity(Context, Constraint, Purity) :-
 network_qualified_action(C, Context, QAction, Rationale) :-
     constraint_indexing:valid_context(Context),
     effective_purity(C, Context, EffPurity, _Components),
-    structural_signatures:purity_score(C, Intrinsic),
+    purity_scoring:purity_score(C, Intrinsic),
     (   Intrinsic >= 0.0,
         EffPurity >= 0.0,
         Drop is Intrinsic - EffPurity,

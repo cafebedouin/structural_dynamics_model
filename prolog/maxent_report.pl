@@ -17,7 +17,8 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2]).
+:- use_module(purity_scoring, [purity_score/2]).
 :- use_module(dirac_classification).
 :- use_module(maxent_classifier).
 
@@ -274,7 +275,7 @@ report_override_rope_analysis(Constraints, Context) :-
     findall(C-Sig,
         (   member(C, Constraints),
             drl_core:dr_type(C, Context, rope),
-            catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+            catch(signature_detection:constraint_signature(C, Sig), _, fail),
             override_rope_signature(Sig)
         ),
         OverrideRopes),
@@ -371,7 +372,7 @@ report_cross_diagnostic_correlation(Constraints, Context) :-
     findall(C-HN-Purity,
         (   member(C, Constraints),
             maxent_classifier:maxent_entropy(C, Context, HN),
-            catch(structural_signatures:purity_score(C, Purity), _, fail),
+            catch(purity_scoring:purity_score(C, Purity), _, fail),
             Purity >= 0.0  % Exclude sentinel -1.0
         ),
         EPRows),

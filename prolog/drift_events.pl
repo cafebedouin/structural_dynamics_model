@@ -44,7 +44,8 @@
 :- use_module(config).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(boltzmann_compliance, [cross_index_coupling/2, excess_extraction/2, boltzmann_floor_for/2]).
+:- use_module(purity_scoring, [purity_score/2]).
 
 :- discontiguous drift_event/3.
 :- discontiguous drift_event/4.
@@ -259,7 +260,7 @@ drift_event(C, Context, load_bearing_degradation, evidence(type, Type, extractio
 
 %% detect_coupling_drift(+ConstraintID)
 detect_coupling_drift(C) :-
-    structural_signatures:cross_index_coupling(C, CurrentCoupling),
+    boltzmann_compliance:cross_index_coupling(C, CurrentCoupling),
     config:param(boltzmann_coupling_threshold, Threshold),
     CurrentCoupling > Threshold,
     metric_trend(C, base_extractiveness, increasing),
@@ -269,8 +270,8 @@ detect_coupling_drift(C) :-
 
 %% detect_boltzmann_floor_drift(+ConstraintID)
 detect_boltzmann_floor_drift(C) :-
-    structural_signatures:excess_extraction(C, Excess),
-    structural_signatures:boltzmann_floor_for(C, Floor),
+    boltzmann_compliance:excess_extraction(C, Excess),
+    boltzmann_compliance:boltzmann_floor_for(C, Floor),
     safe_metric(C, extractiveness, CurrentEps),
     metric_trend(C, base_extractiveness, increasing),
     Excess < Floor * 0.5,
@@ -281,7 +282,7 @@ detect_boltzmann_floor_drift(C) :-
 %% drift_event/3 clauses for Boltzmann types
 drift_event(C, coupling_drift,
             evidence(coupling_score, Score, threshold, Threshold, extraction_trend, Trend)) :-
-    structural_signatures:cross_index_coupling(C, Score),
+    boltzmann_compliance:cross_index_coupling(C, Score),
     config:param(boltzmann_coupling_threshold, Threshold),
     Score > Threshold,
     metric_trend(C, base_extractiveness, Trend),
@@ -289,8 +290,8 @@ drift_event(C, coupling_drift,
 
 drift_event(C, boltzmann_floor_drift,
             evidence(current_eps, Eps, floor, Floor, excess, Excess, trend, Trend)) :-
-    structural_signatures:excess_extraction(C, Excess),
-    structural_signatures:boltzmann_floor_for(C, Floor),
+    boltzmann_compliance:excess_extraction(C, Excess),
+    boltzmann_compliance:boltzmann_floor_for(C, Floor),
     safe_metric(C, extractiveness, Eps),
     metric_trend(C, base_extractiveness, Trend),
     Trend = increasing,
@@ -300,7 +301,7 @@ drift_event(C, boltzmann_floor_drift,
 drift_event(C, Context, coupling_drift_indexed,
             evidence(coupling_score, Score, chi, Chi, trend, Trend)) :-
     constraint_indexing:valid_context(Context),
-    structural_signatures:cross_index_coupling(C, Score),
+    boltzmann_compliance:cross_index_coupling(C, Score),
     config:param(boltzmann_coupling_threshold, Threshold),
     Score > Threshold,
     constraint_indexing:extractiveness_for_agent(C, Context, Chi),
@@ -310,8 +311,8 @@ drift_event(C, Context, coupling_drift_indexed,
 drift_event(C, Context, reform_pressure_detected,
             evidence(excess, Excess, floor, Floor, chi, Chi)) :-
     constraint_indexing:valid_context(Context),
-    structural_signatures:excess_extraction(C, Excess),
-    structural_signatures:boltzmann_floor_for(C, Floor),
+    boltzmann_compliance:excess_extraction(C, Excess),
+    boltzmann_compliance:boltzmann_floor_for(C, Floor),
     Excess > Floor,
     constraint_indexing:extractiveness_for_agent(C, Context, Chi),
     config:param(tangled_rope_chi_floor, TRFloor),
@@ -319,8 +320,8 @@ drift_event(C, Context, reform_pressure_detected,
 
 %% reform_pressure(+Constraint, -Pressure)
 reform_pressure(C, Pressure) :-
-    structural_signatures:excess_extraction(C, Excess),
-    structural_signatures:boltzmann_floor_for(C, Floor),
+    boltzmann_compliance:excess_extraction(C, Excess),
+    boltzmann_compliance:boltzmann_floor_for(C, Floor),
     (   Floor > 0.001
     ->  Pressure is Excess / Floor
     ;   (   Excess > 0.001
@@ -335,7 +336,7 @@ reform_pressure(C, Pressure) :-
 
 %% detect_purity_drift(+ConstraintID)
 detect_purity_drift(C) :-
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     Purity >= 0.0,
     collect_purity_decline_signals(C, Signals),
     Signals \= [],
@@ -347,7 +348,7 @@ detect_purity_drift(C) :-
 %% drift_event/3 clause for purity drift
 drift_event(C, purity_drift,
             evidence(current_purity, Purity, decline_signals, Signals)) :-
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     Purity >= 0.0,
     collect_purity_decline_signals(C, Signals),
     Signals \= [].
@@ -356,7 +357,7 @@ drift_event(C, purity_drift,
 drift_event(C, Context, purity_drift_indexed,
             evidence(current_purity, Purity, chi, Chi, signals, Signals)) :-
     constraint_indexing:valid_context(Context),
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     Purity >= 0.0,
     constraint_indexing:extractiveness_for_agent(C, Context, Chi),
     collect_purity_decline_signals(C, Signals),
@@ -370,7 +371,7 @@ purity_decline_signal(C, extraction_rising) :-
     metric_trend(C, base_extractiveness, increasing).
 
 purity_decline_signal(C, coupling_above_threshold(Score)) :-
-    structural_signatures:cross_index_coupling(C, Score),
+    boltzmann_compliance:cross_index_coupling(C, Score),
     config:param(boltzmann_coupling_threshold, Threshold),
     Score > Threshold.
 
@@ -379,7 +380,7 @@ purity_decline_signal(C, theater_rising) :-
     metric_trend(C, TM, increasing).
 
 purity_decline_signal(C, excess_above_floor(Excess)) :-
-    structural_signatures:excess_extraction(C, Excess),
+    boltzmann_compliance:excess_extraction(C, Excess),
     Excess > 0.02.
 
 /* ================================================================
@@ -437,13 +438,13 @@ compute_acceleration(Sorted, Acceleration) :-
 % --- Purity drift severity (v5.1) ---
 
 drift_severity(C, purity_drift, critical) :-
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     Purity < 0.30,
     collect_purity_decline_signals(C, Signals),
     length(Signals, N), N >= 3, !.
 
 drift_severity(C, purity_drift, warning) :-
-    structural_signatures:purity_score(C, Purity),
+    purity_scoring:purity_score(C, Purity),
     Purity < 0.50, !.
 drift_severity(C, purity_drift, warning) :-
     collect_purity_decline_signals(C, Signals),
@@ -489,14 +490,14 @@ drift_severity(_, function_obsolescence, watch) :- !.
 % --- Boltzmann drift severity (v5.0) ---
 
 drift_severity(C, coupling_drift, critical) :-
-    structural_signatures:cross_index_coupling(C, Score),
+    boltzmann_compliance:cross_index_coupling(C, Score),
     config:param(boltzmann_coupling_strong_threshold, StrongT),
     Score > StrongT,
     safe_metric(C, extractiveness, E),
     config:param(snare_epsilon_floor, SnareFloor),
     E >= SnareFloor, !.
 drift_severity(C, coupling_drift, warning) :-
-    structural_signatures:cross_index_coupling(C, Score),
+    boltzmann_compliance:cross_index_coupling(C, Score),
     config:param(boltzmann_coupling_strong_threshold, StrongT),
     Score > StrongT, !.
 drift_severity(_, coupling_drift, watch) :- !.

@@ -3,7 +3,7 @@
 ]).
 
 :- use_module(narrative_ontology).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2]).
 :- use_module(config).
 
 %% map_custom_pillar(+Constraint, +CustomType, -StandardType)
@@ -15,7 +15,7 @@ map_custom_pillar(_C, CustomType, StandardType) :-
 
 map_custom_pillar(C, _CustomType, StandardType) :-
     % Analyze structural signature based on current metrics
-    structural_signatures:constraint_signature(C, Signature),
+    signature_detection:constraint_signature(C, Signature),
     resolve_mapping(Signature, StandardType).
 
 % Natural Laws and high-stability invariants are Mountains

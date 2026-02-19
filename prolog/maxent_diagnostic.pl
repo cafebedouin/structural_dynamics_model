@@ -12,7 +12,9 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2]).
+:- use_module(boltzmann_compliance, [boltzmann_compliant/2]).
+:- use_module(purity_scoring, [purity_score/2]).
 :- use_module(dirac_classification).
 :- use_module(maxent_classifier).
 
@@ -266,7 +268,7 @@ task3_hard_disagreements(Context) :-
             (drl_core:get_raw_suppression(C, Supp) -> true ; Supp = na),
             config:param(theater_metric_name, TN),
             (narrative_ontology:constraint_metric(C, TN, Theater) -> true ; Theater = na),
-            (catch(structural_signatures:constraint_signature(C, Sig), _, Sig = na) -> true ; Sig = na),
+            (catch(signature_detection:constraint_signature(C, Sig), _, Sig = na) -> true ; Sig = na),
             (maxent_classifier:maxent_distribution(C, Context, Dist2)
              -> format_dist_compact(Dist2, DS2)
              ;  DS2 = na),
@@ -441,7 +443,7 @@ task5_gaussian_profiles(Context) :-
     findall(C-Sig-Eps-HN, (
         maxent_classifier:maxent_dist(C, Context, _),
         drl_core:dr_type(C, Context, rope),
-        catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+        catch(signature_detection:constraint_signature(C, Sig), _, fail),
         is_override_sig(Sig),
         drl_core:base_extractiveness(C, Eps),
         maxent_classifier:maxent_entropy(C, Context, HN)
@@ -456,7 +458,7 @@ task5_gaussian_profiles(Context) :-
         maxent_classifier:maxent_dist(C, Context, _),
         drl_core:dr_type(C, Context, rope),
         maxent_classifier:maxent_entropy(C, Context, HN),
-        \+ (catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+        \+ (catch(signature_detection:constraint_signature(C, Sig), _, fail),
             is_override_sig(Sig))
     ), NonOverrideEntropies),
     (   NonOverrideEntropies \= []
@@ -593,7 +595,7 @@ count_with_omega(Cs, N) :-
 count_boltzmann_non_compliant(Cs, N) :-
     findall(C, (
         member(C, Cs),
-        catch(structural_signatures:boltzmann_compliant(C, non_compliant(_, _)), _, fail)
+        catch(boltzmann_compliance:boltzmann_compliant(C, non_compliant(_, _)), _, fail)
     ), Found),
     sort(Found, Unique),
     length(Unique, N).
@@ -601,7 +603,7 @@ count_boltzmann_non_compliant(Cs, N) :-
 count_low_purity(Cs, N) :-
     findall(C, (
         member(C, Cs),
-        catch(structural_signatures:purity_score(C, P), _, fail),
+        catch(purity_scoring:purity_score(C, P), _, fail),
         P >= 0.0,  % Exclude -1.0 sentinel
         P < 0.50
     ), Found),
@@ -611,7 +613,7 @@ count_low_purity(Cs, N) :-
 count_purity_available(Cs, N) :-
     findall(C, (
         member(C, Cs),
-        catch(structural_signatures:purity_score(C, P), _, fail),
+        catch(purity_scoring:purity_score(C, P), _, fail),
         P >= 0.0
     ), Found),
     sort(Found, Unique),
@@ -620,7 +622,7 @@ count_purity_available(Cs, N) :-
 avg_purity_for(Cs, Avg) :-
     findall(P, (
         member(C, Cs),
-        catch(structural_signatures:purity_score(C, P), _, fail),
+        catch(purity_scoring:purity_score(C, P), _, fail),
         P >= 0.0
     ), Ps),
     (   Ps \= []

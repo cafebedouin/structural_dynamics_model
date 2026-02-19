@@ -15,8 +15,8 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
-:- use_module(drl_modal_logic).
+:- use_module(drl_fpn, [fpn_run/3, fpn_intrinsic/2, fpn_ep/3]).
+:- use_module(drl_purity_network, [effective_purity/4]).
 
 :- use_module(library(lists)).
 
@@ -38,7 +38,7 @@ run_fpn_report :-
 
     % Run FPN iterator
     format(user_error, '[fpn] Running fixed-point iteration...~n', []),
-    drl_modal_logic:fpn_run(Constraints, Context, Result),
+    drl_fpn:fpn_run(Constraints, Context, Result),
     Result = fpn_result(Iterations, MaxDelta, Converged, _NConstraints),
     format(user_error, '[fpn] Converged=~w after ~w iterations (maxDelta=~6f).~n',
            [Converged, Iterations, MaxDelta]),
@@ -71,7 +71,7 @@ run_fpn_report :-
     % Write markdown report to stdout
     format('<!-- FPN_REPORT_START -->~n'),
     format('# Fixed-Point Network Iteration Report~n~n'),
-    format('*Generated: corpus-wide multi-hop purity propagation analysis via drl_modal_logic:fpn_run/3*~n~n'),
+    format('*Generated: corpus-wide multi-hop purity propagation analysis via drl_fpn:fpn_run/3*~n~n'),
 
     report_convergence(Iterations, MaxDelta, Converged, NTotal, NCompared),
     report_summary_stats(Rows, NSignificant, NMigrations),
@@ -88,16 +88,16 @@ run_fpn_report :-
    ================================================================ */
 
 fpn_intrinsic_safe(C, IP) :-
-    (   drl_modal_logic:fpn_intrinsic(C, IP) -> true ; IP = -1.0 ).
+    (   drl_fpn:fpn_intrinsic(C, IP) -> true ; IP = -1.0 ).
 
 one_hop_ep_safe(C, Context, EP) :-
-    (   catch(drl_modal_logic:effective_purity(C, Context, EP, _), _, fail)
+    (   catch(drl_purity_network:effective_purity(C, Context, EP, _), _, fail)
     ->  true
     ;   EP = -1.0
     ).
 
 fpn_ep_safe(C, Context, EP) :-
-    (   drl_modal_logic:fpn_ep(C, Context, EP) -> true ; EP = -1.0 ).
+    (   drl_fpn:fpn_ep(C, Context, EP) -> true ; EP = -1.0 ).
 
 type_safe(C, Context, Type) :-
     (   drl_core:dr_type(C, Context, Type) -> true ; Type = unknown ).

@@ -18,7 +18,7 @@
 :- use_module(narrative_ontology).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(structural_signatures).
+:- use_module(boltzmann_compliance, [cross_index_coupling/2]).
 :- use_module(dirac_classification).
 :- use_module(maxent_classifier).
 :- use_module(drl_lifecycle).
@@ -139,7 +139,7 @@ get_family_feature(Members, Feature) :-
     % Determine the most notable feature of this family
     findall(Coup, (
         member(C, Members),
-        catch(structural_signatures:cross_index_coupling(C, Coup), _, fail)
+        catch(boltzmann_compliance:cross_index_coupling(C, Coup), _, fail)
     ), Coups),
     (   Coups \= []
     ->  sum_list(Coups, SumC), length(Coups, NC),
@@ -245,7 +245,7 @@ report_constraint_family_row(C, _Context) :-
         sort(Ts, Orbit)
     ;   Orbit = unknown
     ),
-    (   catch(structural_signatures:cross_index_coupling(C, Coup), _, fail)
+    (   catch(boltzmann_compliance:cross_index_coupling(C, Coup), _, fail)
     ->  true
     ;   Coup = '?'
     ),

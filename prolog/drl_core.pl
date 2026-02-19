@@ -64,7 +64,7 @@
 
 :- use_module(narrative_ontology).
 :- use_module(config).
-:- use_module(structural_signatures).
+:- use_module(signature_detection, [constraint_signature/2, integrate_signature_with_modal/3]).
 :- use_module(constraint_indexing).
 :- use_module(constraint_data).
 :- use_module(constraint_instances).
@@ -377,7 +377,7 @@ dr_type(C, Context, Type) :-
     % from leaking into resolve_modal_signature_conflict head unification,
     % which would bypass override clauses and fall through to the identity
     % fallback. Unify with caller's Type AFTER computation completes.
-    structural_signatures:integrate_signature_with_modal(C, MetricType, FinalType),
+    signature_detection:integrate_signature_with_modal(C, MetricType, FinalType),
     !,
     Type = FinalType.
 
@@ -546,7 +546,7 @@ dr_mismatch(C, perspectival_incoherence, informational) :-
 %        fundamental structure, not perspectival appearance
 
 dr_signature(C, Signature) :-
-    structural_signatures:constraint_signature(C, Signature).
+    signature_detection:constraint_signature(C, Signature).
 
 % ============================================================================
 % PERSPECTIVAL GAP DETECTION (NEW)

@@ -9,7 +9,6 @@
 :- use_module(narrative_ontology).
 :- use_module(config).
 :- use_module(coercion_projection).
-:- use_module(data_repair).
 :- use_module(data_verification).
 :- use_module(pattern_analysis).
 :- use_module(intent_engine).
