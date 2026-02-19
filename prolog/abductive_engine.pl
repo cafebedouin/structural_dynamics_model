@@ -41,6 +41,7 @@
 :- use_module(constraint_indexing).
 :- use_module(structural_signatures).
 :- use_module(drl_lifecycle).
+:- use_module(grothendieck_cohomology).
 :- use_module(logical_fingerprint).
 
 :- use_module(library(lists)).
@@ -136,12 +137,14 @@ subsystem_available(signature) :- !. % Always available (part of core pipeline)
 subsystem_available(mismatch) :- !.  % Always available (part of core pipeline)
 subsystem_available(fingerprint) :-  % Always available (computed on demand)
     !.
+subsystem_available(cohomology) :-
+    predicate_property(grothendieck_cohomology:cohomological_obstruction(_,_,_), defined), !.
 
 %% available_subsystems(-List)
 %  Returns list of subsystem atoms that are currently available.
 available_subsystems(Subs) :-
     findall(S, (
-        member(S, [maxent, fpn, dirac, drift, signature, mismatch, fingerprint]),
+        member(S, [maxent, fpn, dirac, drift, signature, mismatch, fingerprint, cohomology]),
         subsystem_available(S)
     ), Subs).
 
@@ -530,11 +533,24 @@ stress_indicator_count(C, Context, Count, Indicators) :-
     findall(Ind, stress_indicator(C, Context, Ind), Indicators),
     length(Indicators, Count).
 
+%% rare_stress_gate(+C, +Context, -Signal)
+%  Succeeds if C has at least one rare anomaly signal.
+%  Returns the first matching signal for evidence recording.
+rare_stress_gate(C, Context, maxent_hard_disagreement) :-
+    subsystem_available(maxent),
+    maxent_classifier:maxent_disagreement(C, Context, hard(_, _)), !.
+rare_stress_gate(C, _, h1_hub_conflict(H1)) :-
+    subsystem_available(cohomology),
+    grothendieck_cohomology:cohomological_obstruction(C, _, H1),
+    H1 >= 4, !.
+
 trigger_convergent_structural_stress(C, Context, Hypothesis) :-
-    % Count stress signals
+    % Common core: N signals above minimum
     stress_indicator_count(C, Context, NSignals, Indicators),
     config:param(abductive_stress_convergence_min, MinSignals),
     NSignals >= MinSignals,
+    % Rare gate: at least one anomalous signal
+    rare_stress_gate(C, Context, RareSignal),
     % Collect evidence
     catch(structural_signatures:purity_score(C, Purity), _, (Purity = -1.0)),
     catch(structural_signatures:cross_index_coupling(C, Coupling), _, (Coupling = -1.0)),
@@ -546,6 +562,7 @@ trigger_convergent_structural_stress(C, Context, Hypothesis) :-
     EvidenceLines = [
         evidence_line(multi, stress_signals, Indicators),
         evidence_line(multi, n_signals, NSignals),
+        evidence_line(rare_gate, signal, RareSignal),
         evidence_line(signature, purity_score, Purity),
         evidence_line(signature, coupling, Coupling),
         evidence_line(drift, n_events, NDrift),
@@ -555,7 +572,7 @@ trigger_convergent_structural_stress(C, Context, Hypothesis) :-
         explanation(
             multi_signal_convergence,
             high,
-            'Multiple independent stress indicators converge on this constraint. Each signal alone might be within normal bounds, but their convergence suggests genuine structural stress that no single-subsystem trigger would detect.'
+            'Multiple independent stress indicators converge AND at least one rare anomaly signal is present. The common core confirms broadly stressed membership; the rare gate establishes genuine structural anomaly.'
         ),
         explanation(
             coincidental_convergence,
@@ -563,8 +580,9 @@ trigger_convergent_structural_stress(C, Context, Hypothesis) :-
             'The stress signals may be correlated rather than independent, inflating the apparent convergence count.'
         )
     ],
-    % Confidence scales with signal count: 0.45 + NSignals * 0.06
-    BaseConf is 0.45 + NSignals * 0.06,
+    % Confidence: base + rare gate bonus
+    RareBonus = 0.05,
+    BaseConf is 0.45 + NSignals * 0.06 + RareBonus,
     compute_confidence(EvidenceLines, BaseConf, Confidence),
     config:param(abductive_confidence_floor, Floor),
     Confidence >= Floor,

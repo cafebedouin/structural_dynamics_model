@@ -437,7 +437,7 @@ param(abductive_fpn_divergence_threshold,  0.02).    % FPN EP divergence thresho
 param(abductive_maxent_mountain_deception, 0.50).    % P(mountain) threshold for deep_deception
 param(abductive_dormant_entropy_ceiling,   0.15).    % Max H_norm for dormant_extraction trigger
 param(abductive_shadow_divergence_threshold, 0.85).   % T9: min P(MaxEntTop) for shadow divergence
-param(abductive_stress_convergence_min,      4).      % T10: min signals for convergent stress
+param(abductive_stress_convergence_min,      4).      % T10: min signals for common core (rare gate provides selectivity)
 param(abductive_snare_lean_psi_threshold,    0.90).   % T11: min psi for snare-leaning tangled
 param(abductive_snare_lean_psnare_floor,     0.85).   % T11: min P(snare) for snare-leaning tangled
 param(abductive_stress_purity_threshold,     0.60).   % T10 indicator: purity below this = stressed

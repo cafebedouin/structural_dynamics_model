@@ -233,7 +233,7 @@ class_description(dormant_extraction,
 class_description(maxent_shadow_divergence,
     'MaxEnt strongly favors a type different from the signature override target. FCR gate deferred, leaving metric type dominant.').
 class_description(convergent_structural_stress,
-    'Multiple independent stress indicators (signature, purity, drift, coupling, entropy) converge on the same constraint.').
+    'Multiple stress indicators converge (common core) AND at least one rare anomaly signal — MaxEnt hard disagreement or H1 hub-conflict band (>=4).').
 class_description(snare_leaning_tangled,
     'Classified as tangled_rope but MaxEnt psi (snare-lean ratio) is extremely high — behaves overwhelmingly like a snare.').
 
