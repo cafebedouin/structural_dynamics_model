@@ -1,97 +1,36 @@
-:- module(config_validation, [validate_config/0]).
+:- module(config_validation, [
+    validate_config/0,
+    validate_config_postcorpus/0
+]).
+
 :- use_module(config).
+:- use_module(config_schema).
 :- discontiguous config_violation/1.
 
 /* ================================================================
-   CONFIG VALIDATION — param/2 constraint checking on load
+   CONFIG VALIDATION — Schema-driven param/2 constraint checking
 
-   Validated params by constraint type:
+   All validation is driven by config_schema.pl:
+     param_spec(Name, Type, Constraint, Description)
+     param_relationship(Name, ViolationGoal, Description)
 
-   [0.0, 1.0] RANGE-BOUNDED (ratios, scores, thresholds, weights):
-     Thresholds:
-       system_gradient_threshold, system_gradient_strong_threshold,
-       boltzmann_coupling_threshold, boltzmann_coupling_strong_threshold,
-       boltzmann_factorization_tolerance,
-       dependency_coupling_threshold,
-       boltzmann_floor_drift_threshold,
-       reformability_high_threshold, reformability_low_threshold,
-       isomorphism_threshold,
-       data_high_threshold, data_medium_threshold,
-       network_coupling_threshold, network_drift_velocity_threshold,
-       snare_load_bearing_threshold
-     Ceilings:
-       mountain_suppression_ceiling,
-       rope_suppression_ceiling, rope_chi_ceiling, rope_epsilon_ceiling,
-       tangled_rope_chi_ceil, tangled_rope_suppression_ceil,
-       scaffold_extraction_ceil, snare_extraction_ceil,
-       piton_extraction_ceiling
-     Extraction boundaries:
-       mountain_extractiveness_min, mountain_extractiveness_max,
-       rope_extractiveness_min, rope_extraction_ceiling,
-       false_mountain_extraction_threshold,
-       tangled_rope_extraction_floor, tangled_rope_extraction_ceil
-     Floors:
-       tangled_rope_suppression_floor, tangled_rope_chi_floor,
-       tangled_rope_epsilon_floor,
-       snare_suppression_floor, snare_chi_floor, snare_epsilon_floor,
-       piton_theater_floor, piton_epsilon_floor,
-       purity_action_sound_floor, purity_action_escalation_floor,
-       purity_action_degraded_floor,
-       purity_surgical_reform_gate, purity_scaffold_health_gate,
-       purity_contamination_source_floor,
-       purity_contamination_cap, purity_attenuation_factor,
-       network_cluster_degraded_floor,
-       reform_urgency_reformability_floor,
-       excess_factor_floor, excess_factor_peak, excess_factor_center
-     Contamination strengths:
-       contamination_strength_snare, contamination_strength_piton,
-       contamination_strength_tangled_rope, contamination_strength_scaffold,
-       contamination_strength_rope, contamination_strength_mountain
-     Defaults:
-       default_extractiveness, default_suppression, default_theater
-     Intent:
-       beneficiary_gain_min, loser_loss_max_gain,
-       structural_suppression_min, structural_resistance_min
-     Structural signatures:
-       natural_law_collapse_min, natural_law_suppression_max,
-       natural_law_resistance_max,
-       coordination_collapse_min, coordination_suppression_max,
-       coordination_resistance_max,
-       constructed_suppression_min, constructed_resistance_min
-     Boltzmann floors:
-       boltzmann_floor_information_standard, boltzmann_floor_resource_allocation,
-       boltzmann_floor_enforcement_mechanism, boltzmann_floor_global_infrastructure,
-       boltzmann_floor_default
-     Complexity offsets:
-       complexity_offset_information_standard, complexity_offset_resource_allocation,
-       complexity_offset_enforcement_mechanism, complexity_offset_global_infrastructure,
-       complexity_offset_default
-     Canonical directionality:
-       canonical_d_powerless, canonical_d_moderate, canonical_d_powerful,
-       canonical_d_organized, canonical_d_institutional, canonical_d_analytical
+   Checks performed:
+     1. Missing params  — declared in schema but absent from config
+     2. Unknown params  — present in config but absent from schema
+     3. Type mismatches — value doesn't match declared type
+     4. Constraint violations — value outside declared range/set
+     5. Relationship violations — cross-param invariants broken
 
-   STRICTLY POSITIVE (divisors):
-     excess_factor_sigma
+   On failure: prints all violations and halts with exit code 1.
 
-   ORDERED THRESHOLD SETS:
-     purity_action_sound_floor > purity_action_escalation_floor
-       > purity_action_degraded_floor
-     reform_urgency_gap_critical > reform_urgency_gap_high
-       > reform_urgency_gap_moderate > reform_urgency_gap_low
-     reform_urgency_pressure_critical > reform_urgency_pressure_high
-
-   GAUSSIAN CONSISTENCY:
-     excess_factor_floor =< excess_factor_peak
-
-   CLASSIFICATION THRESHOLD CONSISTENCY:
-     mountain_extractiveness_max < rope_epsilon_ceiling < snare_epsilon_floor
-   REGISTRY CLASSIFICATION CONSISTENCY:
-     tangled_rope_extraction_floor < tangled_rope_extraction_ceil
-     rope_extraction_ceiling < snare_epsilon_floor
+   Adding a new config parameter:
+     1. Add param(Name, Default) to config.pl
+     2. Add param_spec(Name, Type, Constraint, Desc) to config_schema.pl
+     Validation is automatic — no changes needed here.
    ================================================================ */
 
 %% validate_config/0
-%  Checks all param/2 facts against known constraints.
+%  Checks all param/2 facts against the schema.
 %  Collects ALL violations, reports them, and halts on failure.
 validate_config :-
     findall(Msg, config_violation(Msg), Violations),
@@ -104,314 +43,98 @@ validate_config :-
         halt(1)
     ).
 
+%% validate_config_postcorpus/0
+%  Post-testset-load safety net. Same checks, with file logging.
+%  The Makefile pipeline redirects stderr to /dev/null (2>/dev/null),
+%  so violations are written to config_violations.log for visibility.
+%  Halts on failure so Make sees the nonzero exit code.
+validate_config_postcorpus :-
+    findall(Msg, config_violation(Msg), Violations),
+    (   Violations == []
+    ->  true
+    ;   length(Violations, N),
+        %% Write to file — survives 2>/dev/null
+        open('config_violations.log', write, S),
+        format(S, "CONFIG VIOLATIONS DETECTED AFTER CORPUS LOAD (~w):~n", [N]),
+        forall(member(V, Violations), format(S, "  ~w~n", [V])),
+        close(S),
+        %% Also write to stderr (visible in interactive use)
+        forall(member(V, Violations),
+               print_message(error, format("~w", [V]))),
+        format(user_error,
+               "~n~w config violation(s) after corpus load. See config_violations.log. Halting.~n",
+               [N]),
+        halt(1)
+    ).
+
 % ============================================================
-% 1. Range-bounded params [0.0, 1.0]
+% 1. Missing param — declared in schema but absent from config
 % ============================================================
 
 config_violation(Msg) :-
-    range_bounded_param(Name),
+    config_schema:param_spec(Name, _, _, _),
+    \+ config:param(Name, _),
+    format(atom(Msg),
+           'CONFIG ERROR: required param ~w is missing',
+           [Name]).
+
+% ============================================================
+% 2. Unknown param — present in config but absent from schema
+% ============================================================
+
+config_violation(Msg) :-
+    config:param(Name, _),
+    \+ config_schema:param_spec(Name, _, _, _),
+    format(atom(Msg),
+           'CONFIG ERROR: param ~w exists in config but has no schema spec',
+           [Name]).
+
+% ============================================================
+% 3. Type mismatch
+% ============================================================
+
+config_violation(Msg) :-
+    config_schema:param_spec(Name, Type, _, _),
     config:param(Name, Value),
-    number(Value),
-    (Value < 0.0 ; Value > 1.0),
+    \+ type_ok(Type, Value),
     format(atom(Msg),
-           'CONFIG ERROR: param(~w, ~w) out of range [0.0, 1.0]',
-           [Name, Value]).
+           'CONFIG ERROR: param(~w, ~w) has wrong type (expected ~w)',
+           [Name, Value, Type]).
 
-range_bounded_param(P) :-
-    member(P, [
-        % --- Thresholds (ratio/score type) ---
-        system_gradient_threshold,
-        system_gradient_strong_threshold,
-        boltzmann_coupling_threshold,
-        boltzmann_coupling_strong_threshold,
-        boltzmann_factorization_tolerance,
-        dependency_coupling_threshold,
-        boltzmann_floor_drift_threshold,
-        reformability_high_threshold,
-        reformability_low_threshold,
-        isomorphism_threshold,
-        data_high_threshold,
-        data_medium_threshold,
-        network_coupling_threshold,
-        network_drift_velocity_threshold,
-        snare_load_bearing_threshold,
-        % --- Ceilings ---
-        mountain_suppression_ceiling,
-        rope_suppression_ceiling,
-        rope_chi_ceiling,
-        rope_epsilon_ceiling,
-        tangled_rope_chi_ceil,
-        tangled_rope_suppression_ceil,
-        scaffold_extraction_ceil,
-        snare_extraction_ceil,
-        piton_extraction_ceiling,
-        % --- Extraction boundaries ---
-        mountain_extractiveness_min,
-        mountain_extractiveness_max,
-        rope_extractiveness_min,
-        rope_extraction_ceiling,
-        false_mountain_extraction_threshold,
-        tangled_rope_extraction_floor,
-        tangled_rope_extraction_ceil,
-        % --- Floors ---
-        tangled_rope_suppression_floor,
-        tangled_rope_chi_floor,
-        tangled_rope_epsilon_floor,
-        snare_suppression_floor,
-        snare_chi_floor,
-        snare_epsilon_floor,
-        piton_theater_floor,
-        piton_epsilon_floor,
-        purity_action_sound_floor,
-        purity_action_escalation_floor,
-        purity_action_degraded_floor,
-        purity_surgical_reform_gate,
-        purity_scaffold_health_gate,
-        purity_contamination_source_floor,
-        purity_contamination_cap,
-        purity_attenuation_factor,
-        network_cluster_degraded_floor,
-        reform_urgency_reformability_floor,
-        excess_factor_floor,
-        excess_factor_peak,
-        excess_factor_center,
-        % --- Contamination strengths ---
-        contamination_strength_snare,
-        contamination_strength_piton,
-        contamination_strength_tangled_rope,
-        contamination_strength_scaffold,
-        contamination_strength_rope,
-        contamination_strength_mountain,
-        contamination_strength_indexically_opaque,
-        % --- Defaults ---
-        default_extractiveness,
-        default_suppression,
-        default_theater,
-        % --- Intent thresholds ---
-        beneficiary_gain_min,
-        loser_loss_max_gain,
-        structural_suppression_min,
-        structural_resistance_min,
-        % --- Structural signature thresholds ---
-        natural_law_collapse_min,
-        natural_law_suppression_max,
-        natural_law_resistance_max,
-        coordination_collapse_min,
-        coordination_suppression_max,
-        coordination_resistance_max,
-        constructed_suppression_min,
-        constructed_resistance_min,
-        % --- Boltzmann floors ---
-        boltzmann_floor_information_standard,
-        boltzmann_floor_resource_allocation,
-        boltzmann_floor_enforcement_mechanism,
-        boltzmann_floor_global_infrastructure,
-        boltzmann_floor_default,
-        % --- Complexity offsets ---
-        complexity_offset_information_standard,
-        complexity_offset_resource_allocation,
-        complexity_offset_enforcement_mechanism,
-        complexity_offset_global_infrastructure,
-        complexity_offset_default,
-        % --- Canonical directionality ---
-        canonical_d_powerless,
-        canonical_d_moderate,
-        canonical_d_powerful,
-        canonical_d_organized,
-        canonical_d_institutional,
-        canonical_d_analytical,
-        % --- MaxEnt shadow classifier ---
-        maxent_uncertainty_threshold,
-        maxent_disagreement_prob_threshold,
-        maxent_signature_override_strength,
-        maxent_boolean_bonus,
-        % --- Abductive engine ---
-        abductive_shadow_divergence_threshold,
-        abductive_snare_lean_psi_threshold,
-        abductive_snare_lean_psnare_floor,
-        abductive_stress_purity_threshold,
-        abductive_stress_coupling_threshold,
-        abductive_stress_entropy_threshold,
-        abductive_confidence_floor,
-        % --- Trajectory mining ---
-        trajectory_distance_shift_weight,
-        trajectory_distance_metric_weight,
-        trajectory_distance_stability_weight,
-        trajectory_distance_pathology_weight,
-        trajectory_family_cut_level,
-        trajectory_isomorphism_threshold,
-        trajectory_coupling_band_width
-    ]).
+type_ok(number, V)  :- number(V).
+type_ok(integer, V) :- integer(V).
+type_ok(atom, V)    :- atom(V).
 
 % ============================================================
-% 2. Strictly positive params (divisors)
+% 4. Constraint violation
 % ============================================================
 
 config_violation(Msg) :-
-    positive_divisor_param(Name),
+    config_schema:param_spec(Name, Type, Constraint, _),
+    Constraint \= any,
     config:param(Name, Value),
-    number(Value),
-    Value =< 0,
+    type_ok(Type, Value),
+    \+ constraint_ok(Constraint, Value),
     format(atom(Msg),
-           'CONFIG ERROR: param(~w, ~w) must be > 0 (used as divisor)',
-           [Name, Value]).
+           'CONFIG ERROR: param(~w, ~w) violates constraint ~w',
+           [Name, Value, Constraint]).
 
-positive_divisor_param(excess_factor_sigma).
-positive_divisor_param(fpn_epsilon).
+constraint_ok(any, _).
+constraint_ok(range(Lo, Hi), V) :- V >= Lo, V =< Hi.
+constraint_ok(positive, V)      :- V > 0.
+constraint_ok(non_positive, V)  :- V =< 0.
+constraint_ok(oneof(List), V)   :- member(V, List).
 
 % ============================================================
-% 2b. Strictly positive integer params
+% 5. Relationship violation
 % ============================================================
 
 config_violation(Msg) :-
-    positive_integer_param(Name),
-    config:param(Name, Value),
-    (   \+ integer(Value)
-    ;   Value =< 0
-    ),
+    config_schema:param_relationship(_, Goal, Description),
+    catch(call(Goal), _, fail),
     format(atom(Msg),
-           'CONFIG ERROR: param(~w, ~w) must be a positive integer',
-           [Name, Value]).
-
-positive_integer_param(fpn_max_iterations).
-positive_integer_param(abductive_stress_convergence_min).
-
-% ============================================================
-% 2c. Binary flag params (0 or 1)
-% ============================================================
-
-config_violation(Msg) :-
-    binary_flag_param(Name),
-    config:param(Name, Value),
-    Value \= 0,
-    Value \= 1,
-    format(atom(Msg),
-           'CONFIG ERROR: param(~w, ~w) must be 0 or 1',
-           [Name, Value]).
-
-binary_flag_param(fpn_enabled).
-binary_flag_param(maxent_enabled).
-binary_flag_param(abductive_enabled).
-binary_flag_param(trajectory_enabled).
-
-% ============================================================
-% 2e. Negative-allowed maxent params (penalty is negative)
-% ============================================================
-
-config_violation(Msg) :-
-    config:param(maxent_boolean_penalty, Value),
-    number(Value),
-    Value > 0,
-    format(atom(Msg),
-           'CONFIG ERROR: param(maxent_boolean_penalty, ~w) must be <= 0 (log-likelihood penalty)',
-           [Value]).
-
-% ============================================================
-% 2f. Atom-valued maxent params
-% ============================================================
-
-config_violation(Msg) :-
-    config:param(maxent_prior_mode, Value),
-    Value \= corpus,
-    Value \= uniform,
-    format(atom(Msg),
-           'CONFIG ERROR: param(maxent_prior_mode, ~w) must be corpus or uniform',
-           [Value]).
-
-config_violation(Msg) :-
-    config:param(abductive_stress_drift_mode, Value),
-    Value \= any,
-    Value \= critical,
-    Value \= count_2plus,
-    format(atom(Msg),
-           'CONFIG ERROR: param(abductive_stress_drift_mode, ~w) must be any, critical, or count_2plus',
-           [Value]).
-
-% ============================================================
-% 3. Ordered threshold sets
-% ============================================================
-
-config_violation(Msg) :-
-    ordered_pair(Name1, Name2),
-    config:param(Name1, V1),
-    config:param(Name2, V2),
-    number(V1), number(V2),
-    V1 =< V2,
-    format(atom(Msg),
-           'CONFIG ERROR: threshold ordering violated: ~w (~w) must be > ~w (~w)',
-           [Name1, V1, Name2, V2]).
-
-% Purity action tiers
-ordered_pair(purity_action_sound_floor, purity_action_escalation_floor).
-ordered_pair(purity_action_escalation_floor, purity_action_degraded_floor).
-
-% Reform urgency gap thresholds
-ordered_pair(reform_urgency_gap_critical, reform_urgency_gap_high).
-ordered_pair(reform_urgency_gap_high, reform_urgency_gap_moderate).
-ordered_pair(reform_urgency_gap_moderate, reform_urgency_gap_low).
-
-% Reform urgency pressure thresholds
-ordered_pair(reform_urgency_pressure_critical, reform_urgency_pressure_high).
-
-% ============================================================
-% 4. Gaussian consistency
-% ============================================================
-
-config_violation(Msg) :-
-    config:param(excess_factor_floor, Floor),
-    config:param(excess_factor_peak, Peak),
-    number(Floor), number(Peak),
-    Floor > Peak,
-    format(atom(Msg),
-           'CONFIG ERROR: excess_factor_floor (~w) exceeds excess_factor_peak (~w)',
-           [Floor, Peak]).
-
-% ============================================================
-% 5. Classification threshold consistency
-% ============================================================
-% mountain_extractiveness_max < rope_epsilon_ceiling < snare_epsilon_floor
-% Ensures no overlap that would make multiple classification gates
-% simultaneously satisfiable in ways clause ordering doesn't handle.
-
-config_violation(Msg) :-
-    config:param(mountain_extractiveness_max, MtnMax),
-    config:param(rope_epsilon_ceiling, RopeCeil),
-    number(MtnMax), number(RopeCeil),
-    MtnMax >= RopeCeil,
-    format(atom(Msg),
-           'CONFIG ERROR: classification overlap: mountain_extractiveness_max (~w) must be < rope_epsilon_ceiling (~w)',
-           [MtnMax, RopeCeil]).
-
-config_violation(Msg) :-
-    config:param(rope_epsilon_ceiling, RopeCeil),
-    config:param(snare_epsilon_floor, SnareFloor),
-    number(RopeCeil), number(SnareFloor),
-    RopeCeil >= SnareFloor,
-    format(atom(Msg),
-           'CONFIG ERROR: classification overlap: rope_epsilon_ceiling (~w) must be < snare_epsilon_floor (~w)',
-           [RopeCeil, SnareFloor]).
-
-% --- Registry classification consistency ---
-% tangled_rope_extraction_floor < tangled_rope_extraction_ceil
-% rope_extraction_ceiling < snare_epsilon_floor
-
-config_violation(Msg) :-
-    config:param(tangled_rope_extraction_floor, TRFloor),
-    config:param(tangled_rope_extraction_ceil, TRCeil),
-    number(TRFloor), number(TRCeil),
-    TRFloor >= TRCeil,
-    format(atom(Msg),
-           'CONFIG ERROR: registry range invalid: tangled_rope_extraction_floor (~w) must be < tangled_rope_extraction_ceil (~w)',
-           [TRFloor, TRCeil]).
-
-config_violation(Msg) :-
-    config:param(rope_extraction_ceiling, RopeCeil),
-    config:param(snare_epsilon_floor, SnareFloor),
-    number(RopeCeil), number(SnareFloor),
-    RopeCeil >= SnareFloor,
-    format(atom(Msg),
-           'CONFIG ERROR: registry overlap: rope_extraction_ceiling (~w) must be < snare_epsilon_floor (~w)',
-           [RopeCeil, SnareFloor]).
+           'CONFIG ERROR: relationship violated: ~w',
+           [Description]).
 
 % ============================================================
 % Fire on module load
@@ -425,6 +148,7 @@ config_violation(Msg) :-
 
 :- begin_tests(config_validation_tests).
 
+%% TEST 1: Range violation — numeric value outside [0.0, 1.0]
 test(catches_range_violation) :-
     config:param(boltzmann_coupling_threshold, Original),
     retractall(config:param(boltzmann_coupling_threshold, _)),
@@ -432,8 +156,9 @@ test(catches_range_violation) :-
     findall(Msg, config_violation(Msg), Violations),
     retractall(config:param(boltzmann_coupling_threshold, _)),
     assertz(config:param(boltzmann_coupling_threshold, Original)),
-    once((member(V, Violations), sub_atom(V, _, _, _, 'out of range'))).
+    once((member(V, Violations), sub_atom(V, _, _, _, 'violates constraint'))).
 
+%% TEST 2: Negative range violation
 test(catches_negative_range_violation) :-
     config:param(dependency_coupling_threshold, Original),
     retractall(config:param(dependency_coupling_threshold, _)),
@@ -441,17 +166,19 @@ test(catches_negative_range_violation) :-
     findall(Msg, config_violation(Msg), Violations),
     retractall(config:param(dependency_coupling_threshold, _)),
     assertz(config:param(dependency_coupling_threshold, Original)),
-    once((member(V, Violations), sub_atom(V, _, _, _, 'out of range'))).
+    once((member(V, Violations), sub_atom(V, _, _, _, 'violates constraint'))).
 
-test(catches_divisor_violation) :-
+%% TEST 3: Positive divisor violation
+test(catches_positive_violation) :-
     config:param(excess_factor_sigma, Original),
     retractall(config:param(excess_factor_sigma, _)),
     assertz(config:param(excess_factor_sigma, 0.0)),
     findall(Msg, config_violation(Msg), Violations),
     retractall(config:param(excess_factor_sigma, _)),
     assertz(config:param(excess_factor_sigma, Original)),
-    once((member(V, Violations), sub_atom(V, _, _, _, 'must be > 0'))).
+    once((member(V, Violations), sub_atom(V, _, _, _, 'violates constraint'))).
 
+%% TEST 4: Ordering/relationship violation — purity tiers
 test(catches_ordering_violation) :-
     config:param(purity_action_sound_floor, Original),
     retractall(config:param(purity_action_sound_floor, _)),
@@ -459,8 +186,9 @@ test(catches_ordering_violation) :-
     findall(Msg, config_violation(Msg), Violations),
     retractall(config:param(purity_action_sound_floor, _)),
     assertz(config:param(purity_action_sound_floor, Original)),
-    once((member(V, Violations), sub_atom(V, _, _, _, 'threshold ordering violated'))).
+    once((member(V, Violations), sub_atom(V, _, _, _, 'relationship violated'))).
 
+%% TEST 5: Gaussian consistency violation — floor > peak
 test(catches_gaussian_violation) :-
     config:param(excess_factor_floor, OrigFloor),
     config:param(excess_factor_peak, OrigPeak),
@@ -473,10 +201,54 @@ test(catches_gaussian_violation) :-
     retractall(config:param(excess_factor_peak, _)),
     assertz(config:param(excess_factor_floor, OrigFloor)),
     assertz(config:param(excess_factor_peak, OrigPeak)),
-    once((member(V, Violations), sub_atom(V, _, _, _, 'excess_factor_floor'))).
+    once((member(V, Violations), sub_atom(V, _, _, _, 'relationship violated'))).
 
+%% TEST 6: Valid config passes — no violations
 test(valid_config_passes) :-
     findall(_, config_violation(_), Violations),
     length(Violations, 0).
+
+%% TEST 7: Type violation — atom where number expected
+test(catches_type_violation) :-
+    config:param(sigmoid_steepness, Original),
+    retractall(config:param(sigmoid_steepness, _)),
+    assertz(config:param(sigmoid_steepness, fast)),
+    findall(Msg, config_violation(Msg), Violations),
+    retractall(config:param(sigmoid_steepness, _)),
+    assertz(config:param(sigmoid_steepness, Original)),
+    once((member(V, Violations), sub_atom(V, _, _, _, 'wrong type'))).
+
+%% TEST 8: Missing param detection
+test(catches_missing_param) :-
+    config:param(fpn_epsilon, Original),
+    retractall(config:param(fpn_epsilon, _)),
+    findall(Msg, config_violation(Msg), Violations),
+    assertz(config:param(fpn_epsilon, Original)),
+    once((member(V, Violations), sub_atom(V, _, _, _, 'missing'))).
+
+%% TEST 9: Relationship violation — sigmoid ordering
+test(catches_sigmoid_ordering_violation) :-
+    config:param(sigmoid_lower, OrigL),
+    config:param(sigmoid_upper, OrigU),
+    retractall(config:param(sigmoid_lower, _)),
+    retractall(config:param(sigmoid_upper, _)),
+    assertz(config:param(sigmoid_lower, 2.0)),
+    assertz(config:param(sigmoid_upper, 0.5)),
+    findall(Msg, config_violation(Msg), Violations),
+    retractall(config:param(sigmoid_lower, _)),
+    retractall(config:param(sigmoid_upper, _)),
+    assertz(config:param(sigmoid_lower, OrigL)),
+    assertz(config:param(sigmoid_upper, OrigU)),
+    once((member(V, Violations), sub_atom(V, _, _, _, 'sigmoid'))).
+
+%% TEST 10: Binary flag violation — integer not 0 or 1
+test(catches_binary_flag_violation) :-
+    config:param(cohomology_enabled, Original),
+    retractall(config:param(cohomology_enabled, _)),
+    assertz(config:param(cohomology_enabled, 3)),
+    findall(Msg, config_violation(Msg), Violations),
+    retractall(config:param(cohomology_enabled, _)),
+    assertz(config:param(cohomology_enabled, Original)),
+    once((member(V, Violations), sub_atom(V, _, _, _, 'violates constraint'))).
 
 :- end_tests(config_validation_tests).

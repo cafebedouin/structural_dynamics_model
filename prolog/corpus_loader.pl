@@ -20,6 +20,8 @@
     ensure_corpus_loaded/0
 ]).
 
+:- use_module(config_validation).
+
 :- dynamic corpus_loaded/0.
 
 %% ensure_corpus_loaded
@@ -38,7 +40,8 @@ load_all_testsets :-
         format(user_error, '[corpus] Loading ~w testset files...~n', [N]),
         load_testset_list(Files, 0, Loaded),
         format(user_error, '[corpus] Loaded ~w testsets successfully.~n', [Loaded]),
-        assertz(corpus_loaded)
+        assertz(corpus_loaded),
+        config_validation:validate_config_postcorpus
     ).
 
 %% load_testset_list(+Files, +Acc, -Total)

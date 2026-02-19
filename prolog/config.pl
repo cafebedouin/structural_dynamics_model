@@ -474,4 +474,5 @@ param(cohomology_enabled,                  0).       % 0=disabled, 1=enabled
    CONFIG VALIDATION (loaded last so all param/2 facts are available)
    ================================================================ */
 
+:- use_module(config_schema).
 :- use_module(config_validation).
