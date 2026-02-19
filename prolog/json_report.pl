@@ -26,6 +26,7 @@
 :- use_module(data_repair).
 :- use_module(covering_analysis).
 :- use_module(maxent_classifier).
+:- use_module(grothendieck_cohomology).
 
 :- use_module(library(lists)).
 
@@ -49,6 +50,10 @@ run_json_report :-
     constraint_indexing:default_context(MaxEntCtx),
     maxent_classifier:maxent_precompute(Constraints, MaxEntCtx),
     format(user_error, '[json] MaxEnt precompute done.~n', []),
+
+    % Precompute cohomology for all constraints
+    catch(grothendieck_cohomology:corpus_cohomology(_), _, true),
+    format(user_error, '[json] Cohomology precompute done.~n', []),
 
     % Write JSON
     setup_call_cleanup(
@@ -288,6 +293,21 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     % maxent_top_type (shadow classifier's top pick)
     write_maxent_top_type_field(S, C, MaxEntCtx),
 
+    % h1_band (cohomological obstruction — perspectival fracture measure)
+    (   catch(grothendieck_cohomology:cohomological_obstruction(C, _H0, H1), _, fail)
+    ->  format(S, '      "h1_band": ~w,~n', [H1])
+    ;   format(S, '      "h1_band": null,~n', [])
+    ),
+
+    % drift_events (per-constraint structural drift indicators)
+    findall(drift(DType, DSeverity), (
+        catch(drl_lifecycle:scan_constraint_drift(C, DriftEvents), _, (DriftEvents = [])),
+        member(drift(DType, _Evidence, DSeverity), DriftEvents)
+    ), Drifts),
+    format(S, '      "drift_events": [', []),
+    write_drift_array(S, Drifts),
+    format(S, '],~n', []),
+
     % resolution_strategy — deferred
     format(S, '      "resolution_strategy": null~n', []),
 
@@ -339,6 +359,20 @@ write_maxent_top_type_field(S, C, Ctx) :-
         format(S, ',~n', [])
     ;   format(S, '      "maxent_top_type": null,~n', [])
     ).
+
+/* ================================================================
+   DRIFT EVENTS ARRAY
+   ================================================================ */
+
+%% write_drift_array(+Stream, +Drifts)
+%  Writes drift event objects: [{"type": ..., "severity": ...}, ...].
+write_drift_array(_, []).
+write_drift_array(S, [drift(DType, DSev)]) :-
+    !,
+    format(S, '{"type": "~w", "severity": "~w"}', [DType, DSev]).
+write_drift_array(S, [drift(DType, DSev)|Rest]) :-
+    format(S, '{"type": "~w", "severity": "~w"}, ', [DType, DSev]),
+    write_drift_array(S, Rest).
 
 /* ================================================================
    PERSPECTIVES

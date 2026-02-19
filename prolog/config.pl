@@ -436,6 +436,14 @@ param(abductive_confidence_floor,          0.30).    % Hypotheses below this con
 param(abductive_fpn_divergence_threshold,  0.02).    % FPN EP divergence threshold for triggers
 param(abductive_maxent_mountain_deception, 0.50).    % P(mountain) threshold for deep_deception
 param(abductive_dormant_entropy_ceiling,   0.15).    % Max H_norm for dormant_extraction trigger
+param(abductive_shadow_divergence_threshold, 0.85).   % T9: min P(MaxEntTop) for shadow divergence
+param(abductive_stress_convergence_min,      4).      % T10: min signals for convergent stress
+param(abductive_snare_lean_psi_threshold,    0.90).   % T11: min psi for snare-leaning tangled
+param(abductive_snare_lean_psnare_floor,     0.85).   % T11: min P(snare) for snare-leaning tangled
+param(abductive_stress_purity_threshold,     0.60).   % T10 indicator: purity below this = stressed
+param(abductive_stress_coupling_threshold,   0.75).   % T10 indicator: coupling above this = stressed
+param(abductive_stress_entropy_threshold,    0.15).   % T10 indicator: entropy above this = stressed
+param(abductive_stress_drift_mode,           any).    % T10 indicator: any | critical | count_2plus
 
 /* ================================================================
    13. TRAJECTORY MINING (v6.4)

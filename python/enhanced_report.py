@@ -299,6 +299,21 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
             if boundary:
                 lines.append(f"    Boundary:         {boundary}")
 
+        # H^1 band (cohomological obstruction)
+        h1 = entry.get("h1_band")
+        if h1 is not None:
+            h1_desc = {0: "gauge-invariant (all observers agree)",
+                       1: "minimal fracture", 2: "moderate fracture",
+                       3: "power-scaling driven", 4: "hub-conflict driven",
+                       5: "high fracture", 6: "maximally fractured"}
+            lines.append(f"    H^1 band:         {h1} — {h1_desc.get(h1, 'unknown')}")
+
+        # Drift events
+        drift = entry.get("drift_events", [])
+        if drift:
+            drift_types = ", ".join(d.get("type", "?") for d in drift)
+            lines.append(f"    Drift events:     {len(drift)} — {drift_types}")
+
         # Tangled rope fields
         t_psi = entry.get("tangled_psi")
         if t_psi is not None:
@@ -641,6 +656,40 @@ def build_structural_section(constraint_id, corpus_data, pattern_text, covering_
     return "\n".join(lines)
 
 
+# --- Section F: ABDUCTIVE FLAGS ---
+
+def build_abductive_section(constraint_id, pipeline_data):
+    """Section F: ABDUCTIVE FLAGS — cross-subsystem anomaly synthesis."""
+    lines = ["", "--- ABDUCTIVE FLAGS ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        lines.append("  Not yet in batch — run full pipeline to include.")
+        return "\n".join(lines)
+
+    triggers = entry.get("abductive_triggers", [])
+    if not triggers:
+        lines.append("  No abductive triggers fired. All diagnostic paths agree.")
+        return "\n".join(lines)
+
+    lines.append(f"  **{len(triggers)} trigger(s) fired:**")
+    lines.append("")
+    lines.append("  | Trigger Class | Confidence | Anomaly | Category |")
+    lines.append("  |---|---|---|---|")
+    for t in sorted(triggers, key=lambda x: x.get("confidence", 0), reverse=True):
+        tc = t.get("trigger_class", "—")
+        conf = t.get("confidence", 0)
+        anom = t.get("anomaly_type", "—")
+        cat = t.get("category", "—")
+        lines.append(f"  | {tc} | {conf:.2f} | {anom} | {cat} |")
+
+    return "\n".join(lines)
+
+
 # --- Report Assembly ---
 
 def assemble_report(header, prolog_output, sections):
@@ -718,10 +767,11 @@ def generate_report(constraint_id, data):
     sec_structural = build_structural_section(
         constraint_id, data["corpus"], data["pattern"], data["covering"]
     )
+    sec_abductive = build_abductive_section(constraint_id, data["pipeline"])
 
     full_report = assemble_report(
         header, prolog_output,
-        [sec_positioning, sec_orbit, sec_maxent, sec_omega, sec_structural]
+        [sec_positioning, sec_orbit, sec_maxent, sec_omega, sec_structural, sec_abductive]
     )
 
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)

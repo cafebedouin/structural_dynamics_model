@@ -27,13 +27,14 @@ from shared.constants import (
 # ---------------------------------------------------------------------------
 
 ORBIT_JSON = OUTPUT_DIR / "orbit_data.json"
+ABDUCTIVE_JSON = OUTPUT_DIR / "abductive_data.json"
 
 
 # ---------------------------------------------------------------------------
 # Enrichment
 # ---------------------------------------------------------------------------
 
-def enrich_entry(entry, orbit_data):
+def enrich_entry(entry, orbit_data, abd_data=None):
     """Add all derived fields to a single per_constraint entry."""
     dist = entry.get("maxent_probs")
     raw_dist = entry.get("raw_maxent_probs")
@@ -107,6 +108,11 @@ def enrich_entry(entry, orbit_data):
         entry["tangled_psi"] = None
         entry["tangled_band"] = None
 
+    # --- Abductive triggers (from abductive_data.json) ---
+    if abd_data is None:
+        abd_data = {}
+    entry["abductive_triggers"] = abd_data.get(cid, [])
+
 
 # ---------------------------------------------------------------------------
 # Main
@@ -131,12 +137,21 @@ def main():
         print(f"[ENRICH] Warning: Could not load {ORBIT_JSON}: {e}", file=sys.stderr)
         orbit_data = {}
 
+    # Load abductive_data.json
+    print("[ENRICH] Loading abductive_data.json...", file=sys.stderr)
+    abd_data = {}
+    try:
+        with open(ABDUCTIVE_JSON, "r", encoding="utf-8") as f:
+            abd_data = json.load(f).get("per_constraint", {})
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[ENRICH] Warning: Could not load {ABDUCTIVE_JSON}: {e}", file=sys.stderr)
+
     # Enrich each per_constraint entry
     per_constraint = pipeline.get("per_constraint", [])
     print(f"[ENRICH] Enriching {len(per_constraint)} constraints...", file=sys.stderr)
 
     for entry in per_constraint:
-        enrich_entry(entry, orbit_data)
+        enrich_entry(entry, orbit_data, abd_data)
 
     # Write to separate enriched file (pipeline_output.json stays immutable)
     print(f"[ENRICH] Writing enriched_pipeline.json...", file=sys.stderr)

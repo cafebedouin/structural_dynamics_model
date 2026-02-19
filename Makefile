@@ -437,7 +437,7 @@ $(SUFFICIENCY_REPORT): $(CORPUS_DATA) $(PIPELINE_JSON)
 # PIPELINE ENRICHMENT — produces enriched_pipeline.json from pipeline_output.json
 # ==============================================================================
 
-$(ENRICH_STAMP): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP) | $(STAMP_DIR)
+$(ENRICH_STAMP): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP) $(ABDUCTIVE_REPORT) | $(STAMP_DIR)
 	echo "[ENRICH] Producing enriched_pipeline.json..."
 	python3 $(PYTHON_DIR)/enrich_pipeline_json.py 2>&1
 	touch $@
@@ -522,7 +522,7 @@ clean:
 	rm -f $(OUTPUT_DIR)/lint_errors.txt
 	rm -f $(OUTPUT_DIR)/fingerprint_report.md $(OUTPUT_DIR)/orbit_report.md
 	rm -f $(OUTPUT_DIR)/orbit_data.json $(OUTPUT_DIR)/fpn_report.md
-	rm -f $(OUTPUT_DIR)/maxent_report.md $(OUTPUT_DIR)/abductive_report.md
+	rm -f $(OUTPUT_DIR)/maxent_report.md $(OUTPUT_DIR)/abductive_report.md $(OUTPUT_DIR)/abductive_data.json
 	rm -f $(OUTPUT_DIR)/trajectory_report.md $(OUTPUT_DIR)/covering_analysis.md
 	rm -f $(OUTPUT_DIR)/giant_component_analysis.md $(OUTPUT_DIR)/coupling_protocol.md
 	rm -f $(OUTPUT_DIR)/maxent_diagnostic_report.md

@@ -413,6 +413,172 @@ trigger_coverage_gap(C, Context, Hypothesis) :-
     ).
 
 /* ================================================================
+   TRIGGER 9: MAXENT SHADOW DIVERGENCE
+   ================================================================
+   MaxEnt strongly favors a type different from the constraint's
+   signature override target. Catches FCR-gated constraints where
+   both dr_type and MaxEnt agree (so T1 doesn't fire) but MaxEnt
+   diverges from the intended override target.
+
+   Requires: maxent + signature
+   ================================================================ */
+
+trigger_maxent_shadow_divergence(C, Context, Hypothesis) :-
+    subsystem_available(maxent),
+    % Must have a known override signature with a target
+    catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+    known_override_signature(Sig),
+    override_target(Sig, OverrideTarget),
+    % MaxEnt top type must differ from override target
+    catch(maxent_classifier:maxent_top_type(C, Context, MaxEntTop), _, fail),
+    MaxEntTop \== OverrideTarget,
+    % MaxEnt must be confident in its top type
+    catch(maxent_classifier:maxent_distribution(C, Context, Dist), _, fail),
+    member(MaxEntTop-PTop, Dist),
+    config:param(abductive_shadow_divergence_threshold, ShadowThresh),
+    PTop > ShadowThresh,
+    % Must NOT already be explained by T1 artifact
+    \+ abd_hypothesis(C, Context, hypothesis(_, signature_override_artifact, _, _, _, _, _)),
+    % Collect evidence
+    catch(maxent_classifier:maxent_entropy(C, Context, HNorm), _, (HNorm = 0.0)),
+    catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+    EvidenceLines = [
+        evidence_line(maxent, top_type, MaxEntTop),
+        evidence_line(maxent, top_prob, PTop),
+        evidence_line(signature, override, Sig),
+        evidence_line(signature, override_target, OverrideTarget),
+        evidence_line(maxent, entropy, HNorm),
+        evidence_line(signature, det_type, DetType)
+    ],
+    Explanations = [
+        explanation(
+            shadow_override_tension,
+            high,
+            'MaxEnt strongly favors a type that differs from the signature override target. The override intent (based on structural signature) is contradicted by the metric-based probability distribution. This suggests the FCR gate deferred the override, leaving the metric type dominant.'
+        ),
+        explanation(
+            signature_miscalibration,
+            medium,
+            'The override target may be incorrect for this constraint, or the FCR perspectival gate is correctly deferring because the constraint is genuinely the metric type.'
+        )
+    ],
+    compute_confidence(EvidenceLines, 0.75, Confidence),
+    config:param(abductive_confidence_floor, Floor),
+    Confidence >= Floor,
+    Hypothesis = hypothesis(
+        C,
+        maxent_shadow_divergence,
+        anomaly(shadow_override_tension, MaxEntTop-OverrideTarget),
+        EvidenceLines,
+        Explanations,
+        Confidence,
+        investigation(inspect_classification, C)
+    ).
+
+/* ================================================================
+   TRIGGER 10: CONVERGENT STRUCTURAL STRESS
+   ================================================================
+   3+ independent stress indicators converge on the same constraint.
+   Catches FCR-gated constraints that are invisible to entropy-based
+   triggers (T3, T4) because their entropy is low (metrically confident
+   but structurally stressed).
+
+   Requires: signature (+ optional maxent, drift)
+   ================================================================ */
+
+%% stress_indicator(+C, +Context, -Indicator)
+%  Individual stress signal checks. Each succeeding clause is independent.
+stress_indicator(C, _Context, has_false_signature) :-
+    catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+    member(Sig, [false_ci_rope, false_natural_law]).
+
+stress_indicator(C, _Context, low_purity) :-
+    catch(structural_signatures:purity_score(C, P), _, fail),
+    P >= 0.0,
+    config:param(abductive_stress_purity_threshold, PT),
+    P < PT.
+
+stress_indicator(C, _Context, has_drift) :-
+    catch(drl_lifecycle:scan_constraint_drift(C, DriftEvents), _, fail),
+    config:param(abductive_stress_drift_mode, DM),
+    stress_drift_satisfied(DM, DriftEvents).
+
+stress_indicator(C, _Context, high_coupling) :-
+    catch(structural_signatures:cross_index_coupling(C, Coupling), _, fail),
+    config:param(abductive_stress_coupling_threshold, CT),
+    Coupling > CT.
+
+stress_indicator(C, Context, elevated_entropy) :-
+    subsystem_available(maxent),
+    catch(maxent_classifier:maxent_entropy(C, Context, H), _, fail),
+    config:param(abductive_stress_entropy_threshold, ET),
+    H > ET.
+
+%% stress_drift_satisfied(+DriftMode, +DriftEvents)
+%  Dispatches drift check based on config param abductive_stress_drift_mode.
+stress_drift_satisfied(any, Events) :-
+    Events = [_|_].
+stress_drift_satisfied(critical, Events) :-
+    member(drift(_, _, critical), Events), !.
+stress_drift_satisfied(count_2plus, Events) :-
+    length(Events, N),
+    N >= 2.
+
+%% stress_indicator_count(+C, +Context, -Count, -Indicators)
+%  Counts how many independent stress indicators fire for constraint C.
+stress_indicator_count(C, Context, Count, Indicators) :-
+    findall(Ind, stress_indicator(C, Context, Ind), Indicators),
+    length(Indicators, Count).
+
+trigger_convergent_structural_stress(C, Context, Hypothesis) :-
+    % Count stress signals
+    stress_indicator_count(C, Context, NSignals, Indicators),
+    config:param(abductive_stress_convergence_min, MinSignals),
+    NSignals >= MinSignals,
+    % Collect evidence
+    catch(structural_signatures:purity_score(C, Purity), _, (Purity = -1.0)),
+    catch(structural_signatures:cross_index_coupling(C, Coupling), _, (Coupling = -1.0)),
+    (   catch(drl_lifecycle:scan_constraint_drift(C, DriftEvs), _, fail)
+    ->  length(DriftEvs, NDrift)
+    ;   NDrift = 0
+    ),
+    catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+    EvidenceLines = [
+        evidence_line(multi, stress_signals, Indicators),
+        evidence_line(multi, n_signals, NSignals),
+        evidence_line(signature, purity_score, Purity),
+        evidence_line(signature, coupling, Coupling),
+        evidence_line(drift, n_events, NDrift),
+        evidence_line(signature, det_type, DetType)
+    ],
+    Explanations = [
+        explanation(
+            multi_signal_convergence,
+            high,
+            'Multiple independent stress indicators converge on this constraint. Each signal alone might be within normal bounds, but their convergence suggests genuine structural stress that no single-subsystem trigger would detect.'
+        ),
+        explanation(
+            coincidental_convergence,
+            low,
+            'The stress signals may be correlated rather than independent, inflating the apparent convergence count.'
+        )
+    ],
+    % Confidence scales with signal count: 0.45 + NSignals * 0.06
+    BaseConf is 0.45 + NSignals * 0.06,
+    compute_confidence(EvidenceLines, BaseConf, Confidence),
+    config:param(abductive_confidence_floor, Floor),
+    Confidence >= Floor,
+    Hypothesis = hypothesis(
+        C,
+        convergent_structural_stress,
+        anomaly(multi_signal_convergence, NSignals),
+        EvidenceLines,
+        Explanations,
+        Confidence,
+        investigation(review_claim, C)
+    ).
+
+/* ================================================================
    TRIGGER 6: ACCELERATING PATHOLOGY
    ================================================================
    FPN zone migration + purity_drift event detected.
@@ -581,6 +747,72 @@ trigger_dormant_extraction(C, Context, Hypothesis) :-
 is_extractive_void(V) :- extractive_void(V).
 
 /* ================================================================
+   TRIGGER 11: SNARE-LEANING TANGLED
+   ================================================================
+   Override target is tangled_rope but MaxEnt psi (snare-lean ratio)
+   exceeds threshold. Psi = P(snare) / (P(rope) + P(snare) + 0.001).
+   High psi means MaxEnt sees this as overwhelmingly snare-like despite
+   the tangled_rope override.
+
+   Requires: maxent + signature
+   ================================================================ */
+
+trigger_snare_leaning_tangled(C, Context, Hypothesis) :-
+    subsystem_available(maxent),
+    % Override target must be tangled_rope (via signature or dr_type)
+    (   catch(structural_signatures:constraint_signature(C, Sig), _, fail),
+        override_target(Sig, tangled_rope)
+    ->  true
+    ;   catch(drl_core:dr_type(C, Context, tangled_rope), _, fail)
+    ),
+    % Compute psi from MaxEnt distribution
+    catch(maxent_classifier:maxent_distribution(C, Context, Dist), _, fail),
+    member(snare-PSnare, Dist),
+    member(rope-PRope, Dist),
+    % P(snare) must exceed floor (primary discriminator when P(rope)~0)
+    config:param(abductive_snare_lean_psnare_floor, PSnareFloor),
+    PSnare > PSnareFloor,
+    % Psi ratio must also exceed threshold
+    Psi is PSnare / (PRope + PSnare + 0.001),
+    config:param(abductive_snare_lean_psi_threshold, PsiThresh),
+    Psi > PsiThresh,
+    % Collect evidence
+    catch(maxent_classifier:maxent_entropy(C, Context, HNorm), _, (HNorm = 0.0)),
+    catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+    EvidenceLines = [
+        evidence_line(maxent, snare_psi, Psi),
+        evidence_line(maxent, p_snare, PSnare),
+        evidence_line(maxent, p_rope, PRope),
+        evidence_line(maxent, psnare_floor, PSnareFloor),
+        evidence_line(maxent, entropy, HNorm),
+        evidence_line(signature, det_type, DetType)
+    ],
+    Explanations = [
+        explanation(
+            snare_dominant_tangled,
+            high,
+            'Despite tangled_rope classification, P(snare) exceeds the snare-lean floor and the psi ratio is extremely high. The constraint behaves overwhelmingly like a snare from a probability standpoint, with almost no rope-like characteristics in the metric distribution.'
+        ),
+        explanation(
+            tangled_with_snare_metrics,
+            medium,
+            'The constraint may genuinely be tangled_rope with snare-dominant metrics due to its position in the tangled zone. The high psi reflects metric dominance, not misclassification.'
+        )
+    ],
+    compute_confidence(EvidenceLines, 0.65, Confidence),
+    config:param(abductive_confidence_floor, Floor),
+    Confidence >= Floor,
+    Hypothesis = hypothesis(
+        C,
+        snare_leaning_tangled,
+        anomaly(high_snare_psi, Psi),
+        EvidenceLines,
+        Explanations,
+        Confidence,
+        investigation(inspect_decomposition, C)
+    ).
+
+/* ================================================================
    ABDUCTIVE RUN — Main Entry Point
    ================================================================
    Cleans up prior state, probes subsystem availability, iterates
@@ -588,14 +820,17 @@ is_extractive_void(V) :- extractive_void(V).
    and stores hypotheses as dynamic facts.
 
    Trigger ordering:
-     1. signature_override_artifact — first, to establish artifact filter
-     2. deep_deception              — signature + maxent
-     3. metric_structural_divergence — maxent + dirac (skips artifacts)
-     4. confirmed_liminal           — maxent + dirac + drift (skips artifacts)
-     5. coverage_gap                — dirac + mismatch
-     6. accelerating_pathology      — fpn + drift
-     7. contamination_cascade       — fpn + drift
-     8. dormant_extraction          — maxent + fingerprint + signature
+     1. signature_override_artifact     — first, to establish artifact filter
+     2. deep_deception                  — signature + maxent
+     3. metric_structural_divergence    — maxent + dirac (skips artifacts)
+     4. confirmed_liminal              — maxent + dirac + drift (skips artifacts)
+     5. coverage_gap                    — dirac + mismatch
+     9. maxent_shadow_divergence        — maxent + signature (FCR shadow)
+    10. convergent_structural_stress    — multi-signal convergence
+     6. accelerating_pathology          — fpn + drift
+     7. contamination_cascade           — fpn + drift
+     8. dormant_extraction              — maxent + fingerprint + signature
+    11. snare_leaning_tangled           — maxent psi + signature
    ================================================================ */
 
 abductive_run(Context, Summary) :-
@@ -610,18 +845,21 @@ abductive_run(Context, Summary) :-
     sort(RawConstraints, Constraints),
 
     % Phase 1: Artifact filter + signature triggers (requires maxent + signature)
-    run_trigger_over_constraints(trigger_signature_override_artifact, Constraints, Context),
-    run_trigger_over_constraints(trigger_deep_deception, Constraints, Context),
+    run_trigger_over_constraints(trigger_signature_override_artifact, Constraints, Context),  % T1
+    run_trigger_over_constraints(trigger_deep_deception, Constraints, Context),               % T2
 
     % Phase 2: MaxEnt + Dirac conjunction triggers
-    run_trigger_over_constraints(trigger_metric_structural_divergence, Constraints, Context),
-    run_trigger_over_constraints(trigger_confirmed_liminal, Constraints, Context),
-    run_trigger_over_constraints(trigger_coverage_gap, Constraints, Context),
+    run_trigger_over_constraints(trigger_metric_structural_divergence, Constraints, Context), % T3
+    run_trigger_over_constraints(trigger_confirmed_liminal, Constraints, Context),            % T4
+    run_trigger_over_constraints(trigger_coverage_gap, Constraints, Context),                 % T5
+    run_trigger_over_constraints(trigger_maxent_shadow_divergence, Constraints, Context),     % T9
 
-    % Phase 3: FPN + network drift + dormant extraction
-    run_trigger_over_constraints(trigger_accelerating_pathology, Constraints, Context),
-    run_trigger_over_constraints(trigger_contamination_cascade, Constraints, Context),
-    run_trigger_over_constraints(trigger_dormant_extraction, Constraints, Context),
+    % Phase 3: Multi-subsystem synthesis + FPN + dormant
+    run_trigger_over_constraints(trigger_convergent_structural_stress, Constraints, Context), % T10
+    run_trigger_over_constraints(trigger_accelerating_pathology, Constraints, Context),       % T6
+    run_trigger_over_constraints(trigger_contamination_cascade, Constraints, Context),        % T7
+    run_trigger_over_constraints(trigger_dormant_extraction, Constraints, Context),           % T8
+    run_trigger_over_constraints(trigger_snare_leaning_tangled, Constraints, Context),        % T11
 
     % Compute summary
     findall(H, abd_hypothesis(_, Context, H), AllHypotheses),
@@ -766,8 +1004,10 @@ abductive_selftest :-
     forall(
         member(Class, [signature_override_artifact, deep_deception,
                        metric_structural_divergence, confirmed_liminal,
-                       coverage_gap, accelerating_pathology,
-                       contamination_cascade, dormant_extraction]),
+                       coverage_gap, maxent_shadow_divergence,
+                       convergent_structural_stress, accelerating_pathology,
+                       contamination_cascade, dormant_extraction,
+                       snare_leaning_tangled]),
         (   abductive_by_class(Class, Context, ClassH),
             length(ClassH, NClass),
             format('  ~w: ~w~n', [Class, NClass])

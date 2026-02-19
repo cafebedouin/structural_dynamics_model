@@ -225,6 +225,14 @@ range_bounded_param(P) :-
         maxent_disagreement_prob_threshold,
         maxent_signature_override_strength,
         maxent_boolean_bonus,
+        % --- Abductive engine ---
+        abductive_shadow_divergence_threshold,
+        abductive_snare_lean_psi_threshold,
+        abductive_snare_lean_psnare_floor,
+        abductive_stress_purity_threshold,
+        abductive_stress_coupling_threshold,
+        abductive_stress_entropy_threshold,
+        abductive_confidence_floor,
         % --- Trajectory mining ---
         trajectory_distance_shift_weight,
         trajectory_distance_metric_weight,
@@ -266,6 +274,7 @@ config_violation(Msg) :-
            [Name, Value]).
 
 positive_integer_param(fpn_max_iterations).
+positive_integer_param(abductive_stress_convergence_min).
 
 % ============================================================
 % 2c. Binary flag params (0 or 1)
@@ -307,6 +316,15 @@ config_violation(Msg) :-
     Value \= uniform,
     format(atom(Msg),
            'CONFIG ERROR: param(maxent_prior_mode, ~w) must be corpus or uniform',
+           [Value]).
+
+config_violation(Msg) :-
+    config:param(abductive_stress_drift_mode, Value),
+    Value \= any,
+    Value \= critical,
+    Value \= count_2plus,
+    format(atom(Msg),
+           'CONFIG ERROR: param(abductive_stress_drift_mode, ~w) must be any, critical, or count_2plus',
            [Value]).
 
 % ============================================================

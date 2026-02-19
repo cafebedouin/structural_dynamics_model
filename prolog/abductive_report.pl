@@ -71,6 +71,10 @@ run_abductive_report :-
 
     format('---~n'),
     format('*End of abductive report*~n'),
+
+    % Write structured JSON for pipeline integration
+    write_abductive_json(Context, Summary),
+
     format(user_error, '[abductive_report] Done.~n', []).
 
 /* ================================================================
@@ -97,9 +101,12 @@ report_summary(NTotal, NGenuine, NArtifacts, SubsAvail, Context) :-
             metric_structural_divergence-genuine,
             confirmed_liminal-genuine,
             coverage_gap-genuine,
+            maxent_shadow_divergence-genuine,
+            convergent_structural_stress-genuine,
             accelerating_pathology-genuine,
             contamination_cascade-genuine,
-            dormant_extraction-genuine
+            dormant_extraction-genuine,
+            snare_leaning_tangled-genuine
         ]),
         (   abductive_engine:abductive_by_class(Class, Context, ClassH),
             length(ClassH, NClass),
@@ -188,8 +195,9 @@ report_genuine_findings(Context) :-
     ;   forall(
             member(Class, [deep_deception, metric_structural_divergence,
                            confirmed_liminal, coverage_gap,
+                           maxent_shadow_divergence, convergent_structural_stress,
                            accelerating_pathology, contamination_cascade,
-                           dormant_extraction]),
+                           dormant_extraction, snare_leaning_tangled]),
             report_class_findings(Class, Context)
         )
     ).
@@ -222,6 +230,12 @@ class_description(contamination_cascade,
     'FPN EP divergence + network drift. Active contamination propagation.').
 class_description(dormant_extraction,
     'Clean metric appearance but extractive structural voids and non-trivial coupling.').
+class_description(maxent_shadow_divergence,
+    'MaxEnt strongly favors a type different from the signature override target. FCR gate deferred, leaving metric type dominant.').
+class_description(convergent_structural_stress,
+    'Multiple independent stress indicators (signature, purity, drift, coupling, entropy) converge on the same constraint.').
+class_description(snare_leaning_tangled,
+    'Classified as tangled_rope but MaxEnt psi (snare-lean ratio) is extremely high — behaves overwhelmingly like a snare.').
 
 format_hypothesis_row(hypothesis(C, _Class, anomaly(AType, _Details), EL, _, Conf, _)) :-
     format_key_evidence(EL, KeyEv),
@@ -242,6 +256,14 @@ format_key_evidence(EvidenceLines, KeyEv) :-
     ->  format(atom(Part2), ' div=~4f', [Div])
     ;   member(evidence_line(fingerprint, extractive_voids, Voids), EvidenceLines)
     ->  format(atom(Part2), ' voids=~w', [Voids])
+    ;   member(evidence_line(multi, stress_signals, Signals), EvidenceLines)
+    ->  format(atom(Part2), ' signals=~w', [Signals])
+    ;   member(evidence_line(maxent, snare_psi, Psi), EvidenceLines),
+        number(Psi)
+    ->  format(atom(Part2), ' psi=~3f', [Psi])
+    ;   member(evidence_line(maxent, top_prob, PTop), EvidenceLines),
+        number(PTop)
+    ->  format(atom(Part2), ' P(top)=~3f', [PTop])
     ;   Part2 = ''
     ),
     atomic_list_concat([Part1, Part2], KeyEv).
@@ -291,7 +313,8 @@ report_investigation_queue(Context, _Constraints) :-
     ->  format('No investigations to suggest.~n~n')
     ;   forall(
             member(Action, [inspect_coupling, monitor_drift, inspect_orbit,
-                            review_claim, cross_reference, inspect_metrics]),
+                            review_claim, cross_reference, inspect_metrics,
+                            inspect_classification, inspect_decomposition]),
             report_investigation_action(Action, AllGenuine)
         )
     ).
@@ -338,3 +361,86 @@ action_description(cross_reference,
     'Cross-reference FPN network topology with drift dynamics for these constraints.').
 action_description(inspect_metrics,
     'Examine raw metric values and threshold proximity for these constraints.').
+action_description(inspect_classification,
+    'Review classification pipeline for these constraints — compare signature override target, FCR gate decision, and MaxEnt top type.').
+action_description(inspect_decomposition,
+    'Examine tangled_rope decomposition for these constraints — compare snare vs rope probability mass and psi ratio.').
+
+/* ================================================================
+   JSON EXPORT — writes outputs/abductive_data.json for pipeline
+   ================================================================ */
+
+%% write_abductive_json(+Context, +Summary)
+%  Writes abductive_data.json alongside the markdown report.
+%  Called at the end of run_abductive_report/0.
+write_abductive_json(Context, Summary) :-
+    (   catch(
+            write_abductive_json_impl(Context, Summary),
+            E,
+            (   format(user_error, '[abductive_report] JSON export failed: ~w~n', [E]),
+                true
+            )
+        )
+    ->  true
+    ;   format(user_error, '[abductive_report] JSON export failed (no exception).~n', [])
+    ).
+
+write_abductive_json_impl(Context, Summary) :-
+    setup_call_cleanup(
+        open('../outputs/abductive_data.json', write, S),
+        write_abductive_json_stream(S, Context, Summary),
+        close(S)
+    ),
+    format(user_error, '[abductive_report] Wrote abductive_data.json~n', []).
+
+write_abductive_json_stream(S, Context, Summary) :-
+    format(S, '{~n  "per_constraint": {~n', []),
+    findall(C, (
+        abductive_engine:abd_hypothesis(C, Context, _),
+        atom(C)
+    ), RawCs),
+    sort(RawCs, Constraints),
+    write_abductive_per_constraint(S, Constraints, Context),
+    format(S, '  },~n', []),
+    % Summary
+    Summary = abductive_summary(NTotal, NGenuine, NArtifacts, SubsAvail),
+    format(S, '  "summary": {"total": ~w, "genuine": ~w, "artifacts": ~w, "subsystems": "~w"}~n',
+           [NTotal, NGenuine, NArtifacts, SubsAvail]),
+    format(S, '}~n', []).
+
+%% write_abductive_per_constraint(+Stream, +Constraints, +Context)
+write_abductive_per_constraint(_, [], _).
+write_abductive_per_constraint(S, [C], Context) :-
+    !,
+    write_abductive_constraint_entry(S, C, Context, false).
+write_abductive_per_constraint(S, [C|Rest], Context) :-
+    write_abductive_constraint_entry(S, C, Context, true),
+    write_abductive_per_constraint(S, Rest, Context).
+
+%% write_abductive_constraint_entry(+Stream, +Constraint, +Context, +Comma)
+write_abductive_constraint_entry(S, C, Context, Comma) :-
+    findall(H, abductive_engine:abd_hypothesis(C, Context, H), Hypotheses),
+    format(S, '    "~w": [~n', [C]),
+    write_hypothesis_array(S, Hypotheses),
+    format(S, '    ]', []),
+    (Comma == true -> format(S, ',~n', []) ; format(S, '~n', [])).
+
+%% write_hypothesis_array(+Stream, +Hypotheses)
+write_hypothesis_array(_, []).
+write_hypothesis_array(S, [H]) :-
+    !,
+    write_single_hypothesis(S, H).
+write_hypothesis_array(S, [H|Rest]) :-
+    write_single_hypothesis(S, H),
+    format(S, ',~n', []),
+    write_hypothesis_array(S, Rest).
+
+%% write_single_hypothesis(+Stream, +Hypothesis)
+write_single_hypothesis(S, hypothesis(_C, Class, anomaly(AType, _Details), _EL, _Expl, Conf, _Inv)) :-
+    % Determine category
+    (Class == signature_override_artifact -> Cat = artifact ; Cat = genuine),
+    format(S, '      {"trigger_class": "~w", "confidence": ~4f, "anomaly_type": "~w", "category": "~w"}',
+           [Class, Conf, AType, Cat]).
+write_single_hypothesis(S, _) :-
+    % Fallback for unexpected hypothesis shapes
+    format(S, '      {"trigger_class": "unknown", "confidence": 0.0, "anomaly_type": "unknown", "category": "unknown"}', []).
