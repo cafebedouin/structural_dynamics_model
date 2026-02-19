@@ -47,6 +47,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT_DIR / "outputs"
 
 from shared.loader import load_json, ENRICHED_PIPELINE_JSON, CORPUS_JSON, ORBIT_JSON
+from shared.schemas import validate_enriched_pipeline
 
 REPORT_PATH = OUTPUT_DIR / "institutional_dissent_report.md"
 DATA_PATH = OUTPUT_DIR / "institutional_dissent_data.json"
@@ -125,7 +126,8 @@ def load_institutional_dissent():
     Returns (low_snare_list, high_snare_list, all_list) where each item is a dict
     with merged pipeline + orbit data.
     """
-    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline",
+                             schema=validate_enriched_pipeline)
     corpus_raw = load_json(CORPUS_JSON, "corpus_data")
     orbit_raw = load_json(ORBIT_JSON, "orbit_data")
 

@@ -21,6 +21,7 @@ from shared.loader import PIPELINE_JSON, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 from shared.constants import (
     shannon_entropy, compute_psi, classify_band, classify_coalition,
 )
+from shared.schemas import validate_pipeline_output, validate_enriched_pipeline
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -128,6 +129,16 @@ def main():
         print(f"[ENRICH] ERROR: Could not load {PIPELINE_JSON}: {e}", file=sys.stderr)
         sys.exit(1)
 
+    # Validate input schema
+    errors = validate_pipeline_output(pipeline)
+    if errors:
+        print("[ENRICH] Schema validation failed for pipeline_output.json:", file=sys.stderr)
+        for err in errors[:50]:
+            print(f"  {err}", file=sys.stderr)
+        if len(errors) > 50:
+            print(f"  ... and {len(errors) - 50} more errors", file=sys.stderr)
+        sys.exit(1)
+
     # Load orbit_data.json
     print("[ENRICH] Loading orbit_data.json...", file=sys.stderr)
     try:
@@ -152,6 +163,16 @@ def main():
 
     for entry in per_constraint:
         enrich_entry(entry, orbit_data, abd_data)
+
+    # Validate enriched output schema
+    errors = validate_enriched_pipeline(pipeline)
+    if errors:
+        print("[ENRICH] Schema validation failed for enriched output:", file=sys.stderr)
+        for err in errors[:50]:
+            print(f"  {err}", file=sys.stderr)
+        if len(errors) > 50:
+            print(f"  ... and {len(errors) - 50} more errors", file=sys.stderr)
+        sys.exit(1)
 
     # Write to separate enriched file (pipeline_output.json stays immutable)
     print(f"[ENRICH] Writing enriched_pipeline.json...", file=sys.stderr)

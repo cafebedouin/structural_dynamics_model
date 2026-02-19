@@ -26,17 +26,38 @@ ENRICHED_PIPELINE_JSON = OUTPUT_DIR / "enriched_pipeline.json"
 # JSON loader
 # ---------------------------------------------------------------------------
 
-def load_json(path, label=None):
-    """Load a JSON file, returning {} on failure."""
+def load_json(path, label=None, schema=None):
+    """Load a JSON file, returning {} on failure.
+
+    If *schema* is provided it must be a callable ``(dict) -> list[str]``
+    that returns validation errors (empty list = valid).  When a schema is
+    given, a load failure or validation error calls ``sys.exit(1)`` -- the
+    file is considered required.
+    """
     try:
         with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError) as e:
         if label:
             print(f"Warning: Could not load {label} ({path}): {e}", file=sys.stderr)
         else:
             print(f"Warning: Could not load {path}: {e}", file=sys.stderr)
+        if schema is not None:
+            sys.exit(1)
         return {}
+
+    if schema is not None:
+        errors = schema(data)
+        if errors:
+            tag = label or str(path)
+            print(f"Schema validation failed for {tag}:", file=sys.stderr)
+            for err in errors[:50]:
+                print(f"  {err}", file=sys.stderr)
+            if len(errors) > 50:
+                print(f"  ... and {len(errors) - 50} more errors", file=sys.stderr)
+            sys.exit(1)
+
+    return data
 
 # ---------------------------------------------------------------------------
 # Config reader

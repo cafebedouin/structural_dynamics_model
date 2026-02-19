@@ -48,6 +48,7 @@ OUTPUT_DIR = ROOT_DIR / "outputs"
 
 from shared.loader import load_json, ENRICHED_PIPELINE_JSON, CORPUS_JSON
 from shared.constants import MAXENT_TYPES
+from shared.schemas import validate_enriched_pipeline
 
 REPORT_PATH = OUTPUT_DIR / "boolean_independence_report.md"
 DATA_PATH = OUTPUT_DIR / "boolean_independence_data.json"
@@ -63,7 +64,8 @@ class _SafeEncoder(json.JSONEncoder):
 
 def load_constraints():
     """Load and merge pipeline + corpus data into unified per-constraint dicts."""
-    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline",
+                             schema=validate_enriched_pipeline)
     corpus_raw = load_json(CORPUS_JSON, "corpus_data")
 
     per_constraint = pipeline_raw.get("per_constraint", [])

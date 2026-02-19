@@ -30,6 +30,7 @@ from shared.constants import (
     MAXENT_TYPES, N_TYPES, BOOLEAN_SPECS, PSI_ROPE_LEANING, PSI_SNARE_LEANING,
     compute_psi, classify_band, classify_coalition,
 )
+from shared.schemas import validate_enriched_pipeline
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -565,7 +566,8 @@ def main():
     print(f"[TANGLED] Computed {len(distributions)} distributions.", file=sys.stderr)
 
     # Auto-detect maxent_probs from pipeline_output.json and cross-validate
-    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline",
+                             schema=validate_enriched_pipeline)
     per_constraint = pipeline_raw.get("per_constraint", [])
     json_dists = {}
     for entry in per_constraint:

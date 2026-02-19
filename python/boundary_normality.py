@@ -24,6 +24,7 @@ from pathlib import Path
 
 from shared.loader import load_json, load_all_data, ENRICHED_PIPELINE_JSON
 from shared.constants import MAXENT_TYPES
+from shared.schemas import validate_enriched_pipeline
 from tangled_decomposition import maxent_classify
 
 # ---------------------------------------------------------------------------
@@ -899,7 +900,8 @@ def main():
 
     # --- Read raw distributions from enriched_pipeline.json ---
     print("[BOUNDARY] Reading raw distributions from enriched_pipeline.json...", file=sys.stderr)
-    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline",
+                             schema=validate_enriched_pipeline)
     per_constraint = pipeline_raw.get("per_constraint", [])
 
     dists_raw = {}

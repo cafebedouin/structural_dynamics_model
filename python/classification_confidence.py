@@ -22,6 +22,7 @@ from pathlib import Path
 
 from shared.loader import load_json, load_all_data, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 from shared.constants import MAXENT_TYPES, N_TYPES, shannon_entropy
+from shared.schemas import validate_enriched_pipeline
 from tangled_decomposition import maxent_classify, apply_signature_override
 
 # ---------------------------------------------------------------------------
@@ -480,7 +481,8 @@ def main():
     print(f"[CONFIDENCE] Loaded {len(constraints)} constraints.", file=sys.stderr)
 
     # --- Read distributions from pipeline_output.json ---
-    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline")
+    pipeline_raw = load_json(ENRICHED_PIPELINE_JSON, "enriched_pipeline",
+                             schema=validate_enriched_pipeline)
     per_constraint = pipeline_raw.get("per_constraint", [])
 
     dists_override = {}
