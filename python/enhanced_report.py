@@ -690,6 +690,99 @@ def build_abductive_section(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
+# --- Section G: DIAGNOSTIC VERDICT ---
+
+def build_diagnostic_verdict_section(constraint_id, pipeline_data):
+    """Section G: DIAGNOSTIC VERDICT — cross-subsystem traffic-light synthesis."""
+    lines = ["", "--- DIAGNOSTIC VERDICT ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        lines.append("  Not yet in batch — run full pipeline to include.")
+        return "\n".join(lines)
+
+    dv = entry.get("diagnostic_verdict")
+    if dv is None:
+        lines.append("  [diagnostic_verdict not computed for this constraint]")
+        return "\n".join(lines)
+
+    verdict = dv.get("verdict", "unknown")
+    agreements = dv.get("agreements", [])
+    expected_conflicts = dv.get("expected_conflicts", [])
+    convergent_rejections = dv.get("convergent_rejections", [])
+    tensions = dv.get("tensions", [])
+    n_avail = dv.get("subsystems_available", 0)
+    unavail = dv.get("subsystems_unavailable", [])
+
+    # Verdict line with traffic light
+    verdict_upper = verdict.upper() if isinstance(verdict, str) else "UNKNOWN"
+    total_subsystems = n_avail + len(unavail)
+    lines.append(f"  Verdict: {verdict_upper}")
+
+    # Subsystems checked
+    if unavail:
+        unavail_str = ", ".join(str(u) for u in unavail)
+        lines.append(
+            f"  Subsystems Checked: {n_avail}/{total_subsystems} "
+            f"({unavail_str} unavailable)"
+        )
+    else:
+        lines.append(f"  Subsystems Checked: {n_avail}/{total_subsystems}")
+
+    # Agreements
+    lines.append("")
+    if agreements:
+        lines.append(f"  Agreements ({len(agreements)} subsystems):")
+        lines.append(f"    {', '.join(str(a) for a in agreements)}")
+    else:
+        lines.append("  Agreements: none")
+
+    # Expected Conflicts
+    lines.append("")
+    if expected_conflicts:
+        lines.append(f"  Expected Conflicts ({len(expected_conflicts)}):")
+        for ec in expected_conflicts:
+            sub = ec.get("subsystem", "?")
+            pat = ec.get("pattern", "?")
+            expl = ec.get("explanation", "")
+            lines.append(f"    {sub}: {pat}")
+            if expl:
+                lines.append(f"      {expl}")
+    else:
+        lines.append("  Expected Conflicts: none")
+
+    # Convergent Rejections
+    lines.append("")
+    if convergent_rejections:
+        lines.append(f"  Convergent Rejections ({len(convergent_rejections)}):")
+        for cr in convergent_rejections:
+            subs = cr.get("subsystems", [])
+            alt = cr.get("alternative_type", "?")
+            evidence = cr.get("evidence", "")
+            lines.append(f"    -> {alt} (suggested by: {', '.join(str(s) for s in subs)})")
+            if evidence:
+                lines.append(f"       {evidence}")
+    else:
+        lines.append("  Convergent Rejections: none")
+
+    # Tensions
+    lines.append("")
+    if tensions:
+        lines.append(f"  Tensions ({len(tensions)}):")
+        for t in tensions:
+            sub = t.get("subsystem", "?")
+            signal = t.get("signal", "?")
+            lines.append(f"    {sub}: {signal}")
+    else:
+        lines.append("  Tensions: none")
+
+    return "\n".join(lines)
+
+
 # --- Report Assembly ---
 
 def assemble_report(header, prolog_output, sections):
@@ -768,10 +861,12 @@ def generate_report(constraint_id, data):
         constraint_id, data["corpus"], data["pattern"], data["covering"]
     )
     sec_abductive = build_abductive_section(constraint_id, data["pipeline"])
+    sec_diagnostic = build_diagnostic_verdict_section(constraint_id, data["pipeline"])
 
     full_report = assemble_report(
         header, prolog_output,
-        [sec_positioning, sec_orbit, sec_maxent, sec_omega, sec_structural, sec_abductive]
+        [sec_positioning, sec_orbit, sec_maxent, sec_omega, sec_structural,
+         sec_abductive, sec_diagnostic]
     )
 
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)

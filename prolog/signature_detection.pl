@@ -9,7 +9,8 @@
     structural_purity/2,
     resolve_modal_signature_conflict/3,
     get_constraint_profile/2,
-    has_viable_alternatives/2
+    has_viable_alternatives/2,
+    has_metric_perspectival_variance/1
 ]).
 
 :- use_module(library(lists)).

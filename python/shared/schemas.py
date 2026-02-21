@@ -86,6 +86,9 @@ class PipelineConstraint:
     victims: list = field(default_factory=list)     # [str]
     drift_events: list = field(default_factory=list)  # [{type, severity}]
 
+    # --- Diagnostic verdict (per-constraint subsystem synthesis) ---
+    diagnostic_verdict: dict | None = None        # {verdict, agreements, expected_conflicts, ...}
+
     # --- Always nullable ---
     resistance: float | None = None               # null for all current constraints
     resolution_strategy: str | None = None        # deferred feature, always null
@@ -168,6 +171,8 @@ PIPELINE_FIELDS = [
     ("topic_domain",                str,          True),   # 6/1034 null
     ("resistance",                  (int, float), True),   # always null
     ("resolution_strategy",         str,          True),   # always null (deferred)
+    # --- Diagnostic verdict (per-constraint subsystem synthesis) ---
+    ("diagnostic_verdict",          dict,         True),   # null if diagnostic_summary fails
 ]
 
 ENRICHED_EXTRA_FIELDS = [
@@ -299,6 +304,66 @@ def _check_structure(entry, cid):
     h1 = entry.get("h1_band")
     if isinstance(h1, int) and not (0 <= h1 <= 6):
         errors.append(f"[{cid}] h1_band={h1}, expected [0..6]")
+
+    # diagnostic_verdict structure
+    dv = entry.get("diagnostic_verdict")
+    if isinstance(dv, dict):
+        _VERDICT_VALUES = {"green", "yellow", "red"}
+        v = dv.get("verdict")
+        if v is not None and isinstance(v, str) and v not in _VERDICT_VALUES:
+            errors.append(
+                f"[{cid}] diagnostic_verdict.verdict '{v}' "
+                f"not in {sorted(_VERDICT_VALUES)}"
+            )
+        for dv_key in ("verdict", "agreements", "expected_conflicts",
+                        "tensions", "subsystems_available",
+                        "subsystems_unavailable"):
+            if dv_key not in dv:
+                errors.append(
+                    f"[{cid}] diagnostic_verdict missing key: {dv_key}"
+                )
+        if "agreements" in dv and not isinstance(dv["agreements"], list):
+            errors.append(
+                f"[{cid}] diagnostic_verdict.agreements should be list"
+            )
+        if "expected_conflicts" in dv and not isinstance(dv["expected_conflicts"], list):
+            errors.append(
+                f"[{cid}] diagnostic_verdict.expected_conflicts should be list"
+            )
+        for i, ec in enumerate(dv.get("expected_conflicts", [])):
+            if isinstance(ec, dict):
+                for k in ("subsystem", "pattern", "explanation"):
+                    if k not in ec:
+                        errors.append(
+                            f"[{cid}] diagnostic_verdict.expected_conflicts"
+                            f"[{i}] missing '{k}'"
+                        )
+        if "tensions" in dv and not isinstance(dv["tensions"], list):
+            errors.append(
+                f"[{cid}] diagnostic_verdict.tensions should be list"
+            )
+        for i, t in enumerate(dv.get("tensions", [])):
+            if isinstance(t, dict):
+                for k in ("subsystem", "signal", "detail"):
+                    if k not in t:
+                        errors.append(
+                            f"[{cid}] diagnostic_verdict.tensions"
+                            f"[{i}] missing '{k}'"
+                        )
+        if "subsystems_available" in dv:
+            sa = dv["subsystems_available"]
+            if not isinstance(sa, (int, float)):
+                errors.append(
+                    f"[{cid}] diagnostic_verdict.subsystems_available "
+                    f"should be numeric"
+                )
+        if "subsystems_unavailable" in dv:
+            su = dv["subsystems_unavailable"]
+            if not isinstance(su, list):
+                errors.append(
+                    f"[{cid}] diagnostic_verdict.subsystems_unavailable "
+                    f"should be list"
+                )
 
     return errors
 

@@ -28,8 +28,12 @@
 :- use_module(covering_analysis).
 :- use_module(maxent_classifier).
 :- use_module(grothendieck_cohomology).
+:- use_module(diagnostic_summary).
 
 :- use_module(library(lists)).
+:- use_module(library(http/json)).
+
+:- dynamic abd_triggers/2.  % abd_triggers(ConstraintID, TriggerList)
 
 /* ================================================================
    ENTRY POINT
@@ -56,6 +60,9 @@ run_json_report :-
     catch(grothendieck_cohomology:corpus_cohomology(_), _, true),
     format(user_error, '[json] Cohomology precompute done.~n', []),
 
+    % Load abductive data from abductive_data.json (produced by abductive_report)
+    load_abductive_data,
+
     % Write JSON
     setup_call_cleanup(
         open('../outputs/pipeline_output.json', write, S),
@@ -63,6 +70,47 @@ run_json_report :-
         close(S)
     ),
     format(user_error, '[json] Wrote pipeline_output.json (~w constraints)~n', [CorpusSize]).
+
+/* ================================================================
+   ABDUCTIVE DATA LOADER
+   ================================================================
+   Reads outputs/abductive_data.json and asserts abd_triggers/2 facts.
+   Called before JSON generation so diagnostic_summary can query triggers.
+   ================================================================ */
+
+load_abductive_data :-
+    AbdFile = '../outputs/abductive_data.json',
+    (   catch(load_abductive_file(AbdFile, N), E,
+              (format(user_error, '[json] Abductive data load failed: ~w~n', [E]),
+               N = 0))
+    ->  format(user_error, '[json] Loaded abductive triggers for ~w constraints.~n', [N])
+    ;   format(user_error, '[json] No abductive data loaded.~n', [])
+    ).
+
+load_abductive_file(File, N) :-
+    setup_call_cleanup(
+        open(File, read, S),
+        json_read_dict(S, Dict),
+        close(S)
+    ),
+    PerConstraint = Dict.get(per_constraint),
+    dict_pairs(PerConstraint, _, Pairs),
+    retractall(abd_triggers(_, _)),
+    assert_abd_pairs(Pairs, 0, N).
+
+assert_abd_pairs([], N, N).
+assert_abd_pairs([CAtom-TriggerList|Rest], Acc, N) :-
+    atom_string(CID, CAtom),
+    maplist(json_trigger_to_term, TriggerList, Triggers),
+    assert(abd_triggers(CID, Triggers)),
+    Acc1 is Acc + 1,
+    assert_abd_pairs(Rest, Acc1, N).
+
+json_trigger_to_term(Dict, trigger(Class, Conf, Anomaly, Cat)) :-
+    atom_string(Class, Dict.get(trigger_class)),
+    Conf = Dict.get(confidence),
+    atom_string(Anomaly, Dict.get(anomaly_type)),
+    atom_string(Cat, Dict.get(category)).
 
 /* ================================================================
    TIER 2 — SECTION BUILDERS
@@ -309,6 +357,11 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_drift_array(S, Drifts),
     format(S, '],~n', []),
 
+    % diagnostic_verdict
+    format(S, '      "diagnostic_verdict": ', []),
+    write_diagnostic_verdict(S, C),
+    format(S, ',~n', []),
+
     % resolution_strategy — deferred
     format(S, '      "resolution_strategy": null~n', []),
 
@@ -459,6 +512,140 @@ collect_omegas(C, Omegas) :-
 omega_for_constraint(OID, C) :-
     atom(OID), atom(C),
     sub_atom(OID, _, _, _, C).
+
+/* ================================================================
+   DIAGNOSTIC VERDICT (per-constraint)
+   ================================================================ */
+
+%% write_diagnostic_verdict(+Stream, +Constraint)
+%  Serialize the diagnostic_summary/2 result as a JSON object.
+write_diagnostic_verdict(S, C) :-
+    (   catch(diagnostic_summary:diagnostic_summary(C, Summary), _, fail)
+    ->  Summary = diagnostic_summary(
+            Verdict, Agreements, ExpConflicts, Rejections,
+            Tensions, NAvail, UnavailList
+        ),
+        format(S, '{~n', []),
+
+        % verdict
+        format(S, '        "verdict": ', []),
+        write_json_string(S, Verdict),
+        format(S, ',~n', []),
+
+        % agreements
+        format(S, '        "agreements": ', []),
+        write_json_string_array(S, Agreements),
+        format(S, ',~n', []),
+
+        % expected_conflicts
+        format(S, '        "expected_conflicts": ', []),
+        write_expected_conflicts_array(S, ExpConflicts),
+        format(S, ',~n', []),
+
+        % convergent_rejections
+        format(S, '        "convergent_rejections": ', []),
+        write_convergent_rejections_array(S, Rejections),
+        format(S, ',~n', []),
+
+        % tensions
+        format(S, '        "tensions": ', []),
+        write_tensions_array(S, Tensions),
+        format(S, ',~n', []),
+
+        % subsystems_available
+        format(S, '        "subsystems_available": ~w,~n', [NAvail]),
+
+        % subsystems_unavailable
+        format(S, '        "subsystems_unavailable": ', []),
+        write_json_string_array(S, UnavailList),
+        format(S, '~n', []),
+
+        format(S, '      }', [])
+    ;   format(S, 'null', [])
+    ).
+
+%% write_expected_conflicts_array(+Stream, +ExpConflicts)
+write_expected_conflicts_array(S, []) :- !, format(S, '[]', []).
+write_expected_conflicts_array(S, Items) :-
+    format(S, '[', []),
+    write_ec_items(S, Items),
+    format(S, ']', []).
+
+write_ec_items(_, []).
+write_ec_items(S, [expected_conflict(Sub, Pattern, Explanation)]) :-
+    !,
+    format(S, '{"subsystem": ', []),
+    write_json_string(S, Sub),
+    format(S, ', "pattern": ', []),
+    write_json_string(S, Pattern),
+    format(S, ', "explanation": ', []),
+    write_json_string(S, Explanation),
+    format(S, '}', []).
+write_ec_items(S, [expected_conflict(Sub, Pattern, Explanation)|Rest]) :-
+    format(S, '{"subsystem": ', []),
+    write_json_string(S, Sub),
+    format(S, ', "pattern": ', []),
+    write_json_string(S, Pattern),
+    format(S, ', "explanation": ', []),
+    write_json_string(S, Explanation),
+    format(S, '}, ', []),
+    write_ec_items(S, Rest).
+
+%% write_convergent_rejections_array(+Stream, +Rejections)
+write_convergent_rejections_array(S, []) :- !, format(S, '[]', []).
+write_convergent_rejections_array(S, Items) :-
+    format(S, '[', []),
+    write_cr_items(S, Items),
+    format(S, ']', []).
+
+write_cr_items(_, []).
+write_cr_items(S, [convergent_rejection(AltType, _Count, Subs)]) :-
+    !,
+    length(Subs, NSubs),
+    format(S, '{"subsystems": ', []),
+    write_json_string_array(S, Subs),
+    format(S, ', "alternative_type": ', []),
+    write_json_string(S, AltType),
+    format(S, ', "evidence": "~w subsystems suggest ~w"', [NSubs, AltType]),
+    format(S, '}', []).
+write_cr_items(S, [convergent_rejection(AltType, _Count, Subs)|Rest]) :-
+    length(Subs, NSubs),
+    format(S, '{"subsystems": ', []),
+    write_json_string_array(S, Subs),
+    format(S, ', "alternative_type": ', []),
+    write_json_string(S, AltType),
+    format(S, ', "evidence": "~w subsystems suggest ~w"', [NSubs, AltType]),
+    format(S, '}, ', []),
+    write_cr_items(S, Rest).
+
+%% write_tensions_array(+Stream, +Tensions)
+write_tensions_array(S, []) :- !, format(S, '[]', []).
+write_tensions_array(S, Items) :-
+    format(S, '[', []),
+    write_tension_items(S, Items),
+    format(S, ']', []).
+
+write_tension_items(_, []).
+write_tension_items(S, [tension(Sub, Detail)]) :-
+    !,
+    term_to_atom(Detail, DetailAtom),
+    format(S, '{"subsystem": ', []),
+    write_json_string(S, Sub),
+    format(S, ', "signal": ', []),
+    write_json_string(S, DetailAtom),
+    format(S, ', "detail": ', []),
+    write_json_string(S, DetailAtom),
+    format(S, '}', []).
+write_tension_items(S, [tension(Sub, Detail)|Rest]) :-
+    term_to_atom(Detail, DetailAtom),
+    format(S, '{"subsystem": ', []),
+    write_json_string(S, Sub),
+    format(S, ', "signal": ', []),
+    write_json_string(S, DetailAtom),
+    format(S, ', "detail": ', []),
+    write_json_string(S, DetailAtom),
+    format(S, '}, ', []),
+    write_tension_items(S, Rest).
 
 /* ================================================================
    DIAGNOSTIC OBJECT
