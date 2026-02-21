@@ -34,7 +34,7 @@ STAMP_DIR  := $(ROOT_DIR)/.stamps
 # ==============================================================================
 # Phony targets
 # ==============================================================================
-.PHONY: all dashboard quick check lint-fix reports prolog-analysis clean
+.PHONY: all dashboard quick check lint-fix reports prolog-analysis clean golden-check schema-check
 
 all: dashboard
 
@@ -127,6 +127,9 @@ INST_DISSENT_REPORT := $(OUTPUT_DIR)/institutional_dissent_report.md
 # Meta report
 META_REPORT := $(OUTPUT_DIR)/meta_report.txt
 
+# Golden-file classification baseline
+GOLDEN_FILE := $(OUTPUT_DIR)/golden_classifications.json
+
 # ==============================================================================
 # Aggregate targets
 # ==============================================================================
@@ -157,6 +160,18 @@ check: $(LINT_ERRORS)
 	echo "[CHECK] Running duplicate checker..."
 	python3 $(PYTHON_DIR)/duplicate_checker.py --dir $(TESTSETS) 2>&1 || echo "[WARN] duplicate_checker failed (non-critical, continuing)"
 	echo "[CHECK] Done."
+
+# Golden-file classification regression check (requires pipeline_output.json)
+golden-check: $(PIPELINE_JSON)
+	echo "[GOLDEN] Checking classifications against baseline..."
+	python3 $(PYTHON_DIR)/golden_file_check.py
+	echo "[GOLDEN] Done."
+
+# Schema validation for pipeline_output.json
+schema-check: $(PIPELINE_JSON)
+	echo "[SCHEMA] Validating pipeline_output.json schema..."
+	python3 -c "import json, sys; sys.path.insert(0, '$(PYTHON_DIR)'); from shared.schemas import validate_pipeline_output; data = json.load(open('$(PIPELINE_JSON)')); errors = validate_pipeline_output(data); [print(e, file=sys.stderr) for e in errors]; sys.exit(1 if errors else 0)"
+	echo "[SCHEMA] Done."
 
 # Auto-fix AI-generated Prolog artifacts (writes to testset files)
 lint-fix:

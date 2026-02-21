@@ -75,32 +75,32 @@
 
 % --- Numerical metrics ---
 % Forces a choice between 750 hours of specific labor or the extraction of tax revenue through disallowed losses.
-domain_priors:base_extractiveness(26usc469_real_estate_exemption, 0.75).
+domain_priors:base_extractiveness('26usc469_real_estate_exemption', 0.75).
 % Explicitly suppresses alternative qualification paths, narrowing the path to the hours-based test.
-domain_priors:suppression_score(26usc469_real_estate_exemption, 0.80).
+domain_priors:suppression_score('26usc469_real_estate_exemption', 0.80).
 % The rule is functional and not performative; its effects are direct.
-domain_priors:theater_ratio(26usc469_real_estate_exemption, 0.10).
+domain_priors:theater_ratio('26usc469_real_estate_exemption', 0.10).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(26usc469_real_estate_exemption, extractiveness, 0.75).
-narrative_ontology:constraint_metric(26usc469_real_estate_exemption, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(26usc469_real_estate_exemption, theater_ratio, 0.10).
+narrative_ontology:constraint_metric('26usc469_real_estate_exemption', extractiveness, 0.75).
+narrative_ontology:constraint_metric('26usc469_real_estate_exemption', suppression_requirement, 0.80).
+narrative_ontology:constraint_metric('26usc469_real_estate_exemption', theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(26usc469_real_estate_exemption, tangled_rope).
-narrative_ontology:human_readable(26usc469_real_estate_exemption, "The Real Estate Professional Exemption (Passive Activity Loss Rules)").
-narrative_ontology:topic_domain(26usc469_real_estate_exemption, "economic/legal").
+narrative_ontology:constraint_claim('26usc469_real_estate_exemption', tangled_rope).
+narrative_ontology:human_readable('26usc469_real_estate_exemption', "The Real Estate Professional Exemption (Passive Activity Loss Rules)").
+narrative_ontology:topic_domain('26usc469_real_estate_exemption', "economic/legal").
 
 % --- Binary flags ---
 % Requires active enforcement by the IRS during audits.
-domain_priors:requires_active_enforcement(26usc469_real_estate_exemption).
+domain_priors:requires_active_enforcement('26usc469_real_estate_exemption').
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % These feed the directionality derivation chain.
 % Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(26usc469_real_estate_exemption, full_time_real_estate_professionals).
+narrative_ontology:constraint_beneficiary('26usc469_real_estate_exemption', full_time_real_estate_professionals).
 % Who bears disproportionate cost?
-narrative_ontology:constraint_victim(26usc469_real_estate_exemption, hybrid_w2_investors).
+narrative_ontology:constraint_victim('26usc469_real_estate_exemption', hybrid_w2_investors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(26usc469_real_estate_exemption, hybrid_w2_i
 % The "more than half of personal services" test is mathematically impossible to meet,
 % so their legitimate real estate losses are disallowed. The rule strangles their
 % ability to benefit from tax advantages available to full-time professionals.
-constraint_indexing:constraint_classification(26usc469_real_estate_exemption, snare,
+constraint_indexing:constraint_classification('26usc469_real_estate_exemption', snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(26usc469_real_estate_exemption, sn
 % For the full-time professional, the rule is a Rope. It is a clear, functional
 % pathway to classifying themselves as "active" and unlocking significant tax
 % benefits by deducting paper losses against their income.
-constraint_indexing:constraint_classification(26usc469_real_estate_exemption, rope,
+constraint_indexing:constraint_classification('26usc469_real_estate_exemption', rope,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(mobile),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(26usc469_real_estate_exemption, ro
 % For the IRS, the rule is a Rope. It creates a clear, objective, and enforceable
 % bright-line test to distinguish between active professionals and passive hobbyists,
 % simplifying administration and preventing perceived abuse of the tax code.
-constraint_indexing:constraint_classification(26usc469_real_estate_exemption, rope,
+constraint_indexing:constraint_classification('26usc469_real_estate_exemption', rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(26usc469_real_estate_exemption, ro
 % The analyst sees both the coordination function (a clear rule for the IRS and
 % full-time professionals) and the asymmetric extraction (disallowing losses for
 % a specific, trapped group). This dual nature is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(26usc469_real_estate_exemption, tangled_rope,
+constraint_indexing:constraint_classification('26usc469_real_estate_exemption', tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -152,23 +152,23 @@ constraint_indexing:constraint_classification(26usc469_real_estate_exemption, ta
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(26usc469_real_estate_exemption_tests).
+:- begin_tests('26usc469_real_estate_exemption_tests').
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(26usc469_real_estate_exemption, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(26usc469_real_estate_exemption, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification('26usc469_real_estate_exemption, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification('26usc469_real_estate_exemption', TypeBeneficiary, context(agent_power(institutional), _, _, _)),
     TypeTarget \= TypeBeneficiary,
     TypeTarget == snare,
     TypeBeneficiary == rope.
 
 test(tangled_rope_structural_properties) :-
     % Verify the three required properties for a Tangled Rope are declared.
-    narrative_ontology:constraint_beneficiary(26usc469_real_estate_exemption, _), % -> has_coordination_function
-    narrative_ontology:constraint_victim(26usc469_real_estate_exemption, _),     % -> has_asymmetric_extraction
-    domain_priors:requires_active_enforcement(26usc469_real_estate_exemption).
+    narrative_ontology:constraint_beneficiary('26usc469_real_estate_exemption', _), % -> has_coordination_function
+    narrative_ontology:constraint_victim('26usc469_real_estate_exemption', _),     % -> has_asymmetric_extraction
+    domain_priors:requires_active_enforcement('26usc469_real_estate_exemption').
 
-:- end_tests(26usc469_real_estate_exemption_tests).
+:- end_tests('26usc469_real_estate_exemption_tests').
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -212,9 +212,9 @@ test(tangled_rope_structural_properties) :-
 % /5 form: narrative detail for story context
 omega_variable(
     omega_26usc469,
-    "Is the 750-hour threshold an objective proxy for 'material participation', or was it a deliberately constructed regulatory moat to protect full-time real estate incumbents from competition by high-income professionals?",
+    "Is the 750-hour threshold an objective proxy for \'material participation\', or was it a deliberately constructed regulatory moat to protect full-time real estate incumbents from competition by high-income professionals?",
     "Audit of legislative history and lobbyist influence (e.g., National Association of Realtors) in the 1993 Revenue Reconciliation Act.",
-    "If proxy: It's a clumsy but functional Rope. If a moat: It's a predatory Snare.",
+    "If proxy: It is a clumsy but functional Rope. If a moat: It is a predatory Snare.",
     confidence_without_resolution(medium)
 ).
 
@@ -226,7 +226,7 @@ narrative_ontology:omega_variable(omega_26usc469, empirical, "Distinguishing leg
    ========================================================================== */
 
 % Required for external script parsing
-narrative_ontology:interval(26usc469_real_estate_exemption, 0, 10).
+narrative_ontology:interval('26usc469_real_estate_exemption', 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)

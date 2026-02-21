@@ -471,6 +471,32 @@ param(trajectory_coupling_band_width,      0.15).    % Coupling match tolerance 
 param(cohomology_enabled,                  0).       % 0=disabled, 1=enabled
 
 /* ================================================================
+   ENABLE-FLAG SEMANTICS
+   ================================================================
+   Enable flags fall into two categories:
+
+   REPORTING GATES (computation runs regardless, flag controls display):
+     - maxent_enabled    (Section 11): MaxEnt classifier always computes
+                         probability distributions; flag controls whether
+                         reports display them. Graduation = flip flag.
+     - abductive_enabled (Section 12): All triggers fire during analysis;
+                         flag controls whether results appear in reports.
+                         Graduation = flip flag.
+
+   COMPUTATION GATES (flag prevents computation entirely):
+     - fpn_enabled       (Section 9): FPN never runs when disabled.
+                         Graduation = actual new computation executes.
+                         Enables abductive triggers T6 + T7.
+     - trajectory_enabled (Section 13): Checked at Makefile shell level.
+                         Entire trajectory mining step is skipped.
+     - cohomology_enabled (Section 14): Gated inside
+                         grothendieck_cohomology.pl module.
+
+   A developer modifying the pipeline should be aware that _enabled=0
+   does NOT uniformly mean "subsystem doesn't run."
+   ================================================================ */
+
+/* ================================================================
    CONFIG VALIDATION (loaded last so all param/2 facts are available)
    ================================================================ */
 

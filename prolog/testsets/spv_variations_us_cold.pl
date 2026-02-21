@@ -44,8 +44,7 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,12 +86,17 @@ narrative_ontology:constraint_metric(spv_variations_us_cold, extractiveness, 0.0
 narrative_ontology:constraint_metric(spv_variations_us_cold, suppression_requirement, 0.05).
 narrative_ontology:constraint_metric(spv_variations_us_cold, theater_ratio, 0.05).
 
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain.
+% Accessibility collapse is 1.0 as physical laws offer no alternatives.
+% Resistance is 0.0 as one cannot meaningfully resist atmospheric physics.
+narrative_ontology:constraint_metric(spv_variations_us_cold, accessibility_collapse, 1.0).
+narrative_ontology:constraint_metric(spv_variations_us_cold, resistance, 0.0).
+
 % --- Constraint claim (must match analytical perspective type) ---
 % The claim is 'rope', reflecting that the primary human-interaction layer is the
 % coordination model built on top of the physical law.
 narrative_ontology:constraint_claim(spv_variations_us_cold, rope).
-narrative_ontology:human_readable(spv_variations_us_cold, "Stratospheric Polar Vortex Variations (US Cold Outbreaks)").
-narrative_ontology:topic_domain(spv_variations_us_cold, "atmospheric_science").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The stratospheric polar vortex is a natural atmospheric phenomenon
@@ -211,6 +215,9 @@ test(threshold_validation) :-
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_spv_enso_link,
@@ -219,6 +226,10 @@ omega_variable(
     'Direct Link = Higher predictability of NWUS cold; Complex Response = Lower confidence in ratio shifts.',
     confidence_without_resolution(medium)
 ).
+
+% /3 form: typed classification for reporting engine (REQUIRED)
+% The reporting engine reads this fact. This is an empirical question resolvable by more data.
+narrative_ontology:omega_variable(omega_spv_enso_link, empirical, 'Uncertainty about the direct causal link between La Niña and P2 variability.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS

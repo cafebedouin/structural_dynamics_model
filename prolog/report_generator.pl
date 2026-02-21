@@ -1,10 +1,7 @@
 :- module(report_generator, [
     generate_full_report/1,
-    generate_indexed_report/3,
     generate_omegas_from_gaps/1,
     omega_from_gap/5,
-    cross_domain_audit/0,
-    forensic_audit_false_mountains/0,
     generate_omega_resolution_scenarios/0,
     generate_omega_triage/0,
     omega_severity/2,

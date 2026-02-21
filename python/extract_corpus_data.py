@@ -38,6 +38,7 @@ class ConstraintData:
         self.structural_signature = None
         self.is_constructed = None
         self.omegas = []
+        self.maxent_probs = None
 
         # Orbit data (from orbit_data.json)
         self.orbit_signature = None
@@ -71,6 +72,7 @@ class ConstraintData:
                 'structural_signature': self.structural_signature,
                 'is_constructed': self.is_constructed,
                 'omegas': self.omegas,
+                'maxent_probs': self.maxent_probs,
                 'variance_ratio': self.variance_ratio,
                 'index_configs': self.index_configs_count,
                 'types_produced': self.types_produced_count,
@@ -130,6 +132,11 @@ class CorpusExtractor:
             constraint.domain = entry.get('topic_domain') or entry.get('domain')
             constraint.emerges_naturally = entry.get('emerges_naturally')
             constraint.requires_enforcement = entry.get('requires_active_enforcement')
+
+            # MaxEnt probability distributions
+            maxent = entry.get('maxent_probs')
+            if maxent and isinstance(maxent, dict):
+                constraint.maxent_probs = maxent
 
             # Signature → is_constructed + structural_signature
             sig = entry.get('signature')

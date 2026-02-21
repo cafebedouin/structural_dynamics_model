@@ -45,11 +45,18 @@ load_all_testsets :-
     ).
 
 %% load_testset_list(+Files, +Acc, -Total)
-%  Tail-recursive loader with error tolerance.
+%  Tail-recursive loader with error tolerance and diagnostics.
 load_testset_list([], N, N).
 load_testset_list([F|Fs], Acc, N) :-
-    (   catch(user:consult(F), _, true)
+    (   catch(
+            user:consult(F),
+            Error,
+            (   format(user_error, '[corpus] WARNING: Failed to load ~w: ~w~n', [F, Error]),
+                fail
+            )
+        )
     ->  Acc1 is Acc + 1
-    ;   Acc1 = Acc
+    ;   format(user_error, '[corpus] SKIPPED: ~w~n', [F]),
+        Acc1 = Acc
     ),
     load_testset_list(Fs, Acc1, N).
