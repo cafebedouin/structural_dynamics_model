@@ -44,26 +44,9 @@
 :- use_module(maxent_classifier).
 :- use_module(dirac_classification).
 
+:- use_module(abductive_helpers, [known_override_signature/1, override_target/2]).
+
 :- use_module(library(lists)).
-
-% Local copies of override tables (not exported by abductive_engine).
-known_override_signature(false_natural_law).
-known_override_signature(false_ci_rope).
-known_override_signature(coupling_invariant_rope).
-known_override_signature(natural_law).
-known_override_signature(coordination_scaffold).
-known_override_signature(constructed_low_extraction).
-known_override_signature(constructed_high_extraction).
-known_override_signature(constructed_constraint).
-
-override_target(false_natural_law,           tangled_rope).
-override_target(false_ci_rope,               tangled_rope).
-override_target(coupling_invariant_rope,     rope).
-override_target(natural_law,                 mountain).
-override_target(coordination_scaffold,       rope).
-override_target(constructed_low_extraction,  rope).
-override_target(constructed_high_extraction, tangled_rope).
-override_target(constructed_constraint,      tangled_rope).
 
 constructed_type(scaffold).
 constructed_type(snare).

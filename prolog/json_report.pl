@@ -56,6 +56,13 @@ run_json_report :-
     maxent_classifier:maxent_precompute(Constraints, MaxEntCtx),
     format(user_error, '[json] MaxEnt precompute done.~n', []),
 
+    % Run FPN if enabled (provides fpn_ep/3 state for diagnostic_summary probes)
+    (   config:param(fpn_enabled, 1)
+    ->  catch(drl_fpn:fpn_run(MaxEntCtx, _FPNSummary), _, true),
+        format(user_error, '[json] FPN iteration done.~n', [])
+    ;   true
+    ),
+
     % Precompute cohomology for all constraints
     catch(grothendieck_cohomology:corpus_cohomology(_), _, true),
     format(user_error, '[json] Cohomology precompute done.~n', []),

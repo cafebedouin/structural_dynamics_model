@@ -380,7 +380,7 @@ param(network_cluster_degraded_floor,          0.40).  % Below → cluster degra
 % --- Fixed-Point Network Iteration (v5.3) ---
 param(fpn_epsilon,                             0.001). % Convergence threshold (< min zone gap 0.20)
 param(fpn_max_iterations,                      20).    % Hard cap (2x theoretical worst case)
-param(fpn_enabled,                             0).     % 0=disabled (one-hop), 1=enabled
+param(fpn_enabled,                             1).     % Graduated Phase 7-T2: FPN iteration enabled
 
 /* ================================================================
    10. NETWORK DRIFT DYNAMICS PARAMETERS (v5.2)
@@ -407,7 +407,7 @@ param(network_drift_hub_escalation,          1).     % 1=enable hub-based severi
    ================================================================ */
 
 % --- MaxEnt Enable/Disable ---
-param(maxent_enabled,                        0).    % 0=disabled, 1=enabled
+param(maxent_enabled,                        1).    % Graduated Phase 7-T1: computation runs unconditionally
 
 % --- Uncertainty Thresholds ---
 param(maxent_uncertainty_threshold,          0.40).  % H_norm above this = flagged
@@ -431,7 +431,7 @@ param(maxent_signature_override_strength,    0.95).  % P assigned to uncondition
    and logical fingerprints to produce structured diagnostic hypotheses.
    ================================================================ */
 
-param(abductive_enabled,                    0).      % 0=disabled, 1=enabled
+param(abductive_enabled,                    1).      % Graduated Phase 7-T1: computation runs unconditionally
 param(abductive_confidence_floor,          0.30).    % Hypotheses below this confidence not stored
 param(abductive_fpn_divergence_threshold,  0.02).    % FPN EP divergence threshold for triggers
 param(abductive_maxent_mountain_deception, 0.50).    % P(mountain) threshold for deep_deception
@@ -468,32 +468,31 @@ param(trajectory_coupling_band_width,      0.15).    % Coupling match tolerance 
    GROTHENDIECK COHOMOLOGY (v7.0)
    ================================================================ */
 
-param(cohomology_enabled,                  0).       % 0=disabled, 1=enabled
+param(cohomology_enabled,                  1).       % Graduated Phase 7-T1: computation runs unconditionally
 
 /* ================================================================
    ENABLE-FLAG SEMANTICS
    ================================================================
    Enable flags fall into two categories:
 
-   REPORTING GATES (computation runs regardless, flag controls display):
-     - maxent_enabled    (Section 11): MaxEnt classifier always computes
-                         probability distributions; flag controls whether
-                         reports display them. Graduation = flip flag.
-     - abductive_enabled (Section 12): All triggers fire during analysis;
-                         flag controls whether results appear in reports.
-                         Graduation = flip flag.
+   GRADUATED (Phase 7 — computation runs unconditionally, flag=1):
+     - maxent_enabled    (Section 11): MaxEnt classifier computes
+                         probability distributions unconditionally.
+                         Graduated Phase 7-T1.
+     - abductive_enabled (Section 12): All triggers fire during analysis.
+                         Graduated Phase 7-T1.
+     - cohomology_enabled (Section 14): Cohomology runs unconditionally
+                         in json_report.pl. Flag was vestigial.
+                         Graduated Phase 7-T1.
+     - fpn_enabled       (Section 9): FPN fixed-point iteration runs
+                         in both abductive_report and json_report.
+                         Enables abductive triggers T6 + T7.
+                         Graduated Phase 7-T2.
 
    COMPUTATION GATES (flag prevents computation entirely):
-     - fpn_enabled       (Section 9): FPN never runs when disabled.
-                         Graduation = actual new computation executes.
-                         Enables abductive triggers T6 + T7.
      - trajectory_enabled (Section 13): Checked at Makefile shell level.
                          Entire trajectory mining step is skipped.
-     - cohomology_enabled (Section 14): Gated inside
-                         grothendieck_cohomology.pl module.
-
-   A developer modifying the pipeline should be aware that _enabled=0
-   does NOT uniformly mean "subsystem doesn't run."
+                         Deferred — requires runtime benchmarking.
    ================================================================ */
 
 /* ================================================================
