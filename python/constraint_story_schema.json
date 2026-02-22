@@ -1,0 +1,490 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "constraint_story_schema.json",
+  "title": "Constraint Story",
+  "description": "JSON authoring format for Deferential Realism constraint stories. Compiled to .pl by generate_constraint_pl.py.",
+  "type": "object",
+  "required": ["header", "base_properties", "perspectives", "interval"],
+
+  "$defs": {
+    "ConstraintType": {
+      "type": "string",
+      "enum": ["mountain", "rope", "tangled_rope", "snare", "scaffold", "piton"]
+    },
+    "AgentPower": {
+      "description": "Power atoms for classification contexts. Includes individual_moderate (corpus artifact from antifragility.pl).",
+      "type": "string",
+      "enum": ["powerless", "moderate", "powerful", "organized", "institutional", "analytical", "individual_moderate"]
+    },
+    "DirectionalityPowerAtom": {
+      "description": "Strict 6-set for directionality overrides. Linter Rule 18 validates against this set.",
+      "type": "string",
+      "enum": ["powerless", "moderate", "powerful", "organized", "institutional", "analytical"]
+    },
+    "TimeHorizon": {
+      "type": "string",
+      "enum": ["immediate", "biographical", "generational", "civilizational"]
+    },
+    "ExitOptions": {
+      "type": "string",
+      "enum": ["trapped", "constrained", "mobile", "arbitrage", "analytical"]
+    },
+    "SpatialScope": {
+      "type": "string",
+      "enum": ["local", "regional", "national", "continental", "global", "universal"]
+    },
+    "CoordinationType": {
+      "type": "string",
+      "enum": ["information_standard", "resource_allocation", "enforcement_mechanism", "global_infrastructure"]
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "OmegaTypeClass": {
+      "type": "string",
+      "enum": ["empirical", "conceptual", "preference"]
+    },
+    "MeasurementMetric": {
+      "type": "string",
+      "enum": ["theater_ratio", "base_extractiveness"]
+    },
+
+    "Perspective": {
+      "type": "object",
+      "required": ["classification_type", "agent_power", "time_horizon", "exit_options", "spatial_scope"],
+      "properties": {
+        "classification_type": { "$ref": "#/$defs/ConstraintType" },
+        "agent_power": { "$ref": "#/$defs/AgentPower" },
+        "time_horizon": { "$ref": "#/$defs/TimeHorizon" },
+        "exit_options": { "$ref": "#/$defs/ExitOptions" },
+        "spatial_scope": { "$ref": "#/$defs/SpatialScope" },
+        "label": {
+          "type": "string",
+          "description": "Human-readable label for this perspective (e.g. 'The Optimized Serf')"
+        },
+        "comment": {
+          "type": "string",
+          "description": "Explanatory comment emitted above this classification in the .pl file"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "Omega": {
+      "type": "object",
+      "required": ["id", "question", "resolution_mechanism", "impact", "confidence", "type_class", "description"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "question": { "type": "string" },
+        "resolution_mechanism": { "type": "string" },
+        "impact": { "type": "string" },
+        "confidence": { "$ref": "#/$defs/ConfidenceLevel" },
+        "type_class": { "$ref": "#/$defs/OmegaTypeClass" },
+        "description": {
+          "type": "string",
+          "description": "Brief description for the /3 form (narrative_ontology:omega_variable/3)"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "Measurement": {
+      "type": "object",
+      "required": ["metric", "time_point", "value"],
+      "properties": {
+        "metric": { "$ref": "#/$defs/MeasurementMetric" },
+        "time_point": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "id_override": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Override the auto-generated measurement ID"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "DirectionalityOverride": {
+      "type": "object",
+      "required": ["power_atom", "d_value"],
+      "properties": {
+        "power_atom": { "$ref": "#/$defs/DirectionalityPowerAtom" },
+        "d_value": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "properties": {
+    "header": {
+      "type": "object",
+      "required": ["constraint_id", "version", "generated_date", "status"],
+      "properties": {
+        "constraint_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Snake_case unique identifier for this constraint"
+        },
+        "version": {
+          "type": "string",
+          "description": "Metadata version (recorded in header comment; does not change output structure)"
+        },
+        "generated_date": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO 8601 date (YYYY-MM-DD)"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status string (e.g. 'ACTIVE', 'RESOLVED MANDATROPHY')"
+        },
+        "module_name_override": {
+          "type": "string",
+          "pattern": "^constraint_[a-z][a-z0-9_]*$",
+          "description": "Override auto-generated module name (default: constraint_{constraint_id})"
+        },
+        "measurement_id_prefix": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Prefix for auto-generated measurement IDs (default: derived from constraint_id)"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "base_properties": {
+      "type": "object",
+      "required": [
+        "extractiveness", "suppression", "theater_ratio",
+        "claimed_type", "human_readable", "topic_domain"
+      ],
+      "properties": {
+        "extractiveness": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "suppression": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "theater_ratio": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "claimed_type": { "$ref": "#/$defs/ConstraintType" },
+        "human_readable": {
+          "type": "string",
+          "description": "Descriptive display name"
+        },
+        "topic_domain": {
+          "type": "string",
+          "description": "Domain classification (e.g. 'economic/political/social')"
+        },
+        "requires_active_enforcement": {
+          "type": "boolean",
+          "default": false
+        },
+        "emerges_naturally": {
+          "type": "boolean",
+          "default": false
+        },
+        "has_sunset_clause": {
+          "type": "boolean",
+          "default": false
+        },
+        "accessibility_collapse": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "NL profile metric (required for mountain constraints)"
+        },
+        "resistance": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "NL profile metric (required for mountain constraints)"
+        },
+        "beneficiaries": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+          "description": "Domain-specific beneficiary group names"
+        },
+        "victims": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+          "description": "Domain-specific victim group names"
+        },
+        "mandatrophy_resolved": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether mandatrophy has been resolved (required when extractiveness > 0.70)"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "perspectives": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/Perspective" }
+    },
+
+    "omegas": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Omega" }
+    },
+
+    "measurements": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Measurement" }
+    },
+
+    "interval": {
+      "type": "object",
+      "required": ["start", "end"],
+      "properties": {
+        "start": { "type": "integer", "minimum": 0 },
+        "end": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+
+    "commentary": {
+      "type": "object",
+      "properties": {
+        "narrative_context": {
+          "type": "string",
+          "description": "Summary paragraph for Section 1 narrative context"
+        },
+        "key_agents": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of key agent descriptions"
+        },
+        "logic_rationale": { "type": "string" },
+        "perspectival_gap": { "type": "string" },
+        "directionality_logic": { "type": "string" },
+        "mandatrophy_analysis": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "boltzmann": {
+      "type": "object",
+      "properties": {
+        "coordination_type": { "$ref": "#/$defs/CoordinationType" },
+        "boltzmann_floor_override": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "network": {
+      "type": "object",
+      "properties": {
+        "affects_constraints": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" }
+        },
+        "dual_formulation_note": {
+          "type": "string",
+          "description": "Note about constraint family decomposition"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "directionality_overrides": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/DirectionalityOverride" }
+    },
+
+    "uke_scope": {
+      "type": "object",
+      "description": "UKE_SCOPE manifest seed fields",
+      "properties": {
+        "epsilon_bin": { "type": "string" },
+        "hypothesis": { "type": "string" },
+        "downstream_of": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": { "claimed_type": { "const": "mountain" } },
+            "required": ["claimed_type"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "emerges_naturally": { "const": true },
+              "accessibility_collapse": { "minimum": 0.85 },
+              "resistance": { "maximum": 0.15 },
+              "extractiveness": { "maximum": 0.25 },
+              "suppression": { "maximum": 0.05 }
+            },
+            "required": ["emerges_naturally", "accessibility_collapse", "resistance"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": { "claimed_type": { "const": "tangled_rope" } },
+            "required": ["claimed_type"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "requires_active_enforcement": { "const": true },
+              "beneficiaries": { "minItems": 1 },
+              "victims": { "minItems": 1 }
+            },
+            "required": ["requires_active_enforcement", "beneficiaries", "victims"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": { "claimed_type": { "const": "snare" } },
+            "required": ["claimed_type"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "victims": { "minItems": 1 }
+            },
+            "required": ["victims"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "claimed_type": { "const": "scaffold" },
+              "requires_active_enforcement": { "const": true }
+            },
+            "required": ["claimed_type", "requires_active_enforcement"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "has_sunset_clause": { "const": true }
+            },
+            "required": ["has_sunset_clause"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": { "claimed_type": { "const": "piton" } },
+            "required": ["claimed_type"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "theater_ratio": { "minimum": 0.70 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "extractiveness": { "exclusiveMinimum": 0.46 }
+            },
+            "required": ["extractiveness"]
+          }
+        }
+      },
+      "then": {
+        "required": ["header", "base_properties", "perspectives", "interval", "measurements", "omegas"],
+        "properties": {
+          "measurements": { "minItems": 6 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "extractiveness": { "exclusiveMinimum": 0.70 }
+            },
+            "required": ["extractiveness"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "mandatrophy_resolved": { "const": true }
+            },
+            "required": ["mandatrophy_resolved"]
+          }
+        }
+      }
+    }
+  ]
+}
