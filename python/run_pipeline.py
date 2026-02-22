@@ -127,10 +127,13 @@ def _run_step(name: str, fn, progress) -> StepResult:
         fn()
         return StepResult(name=name, status="ok", duration_s=time.time() - t0)
     except Exception as e:
-        msg = f"{name}: {e}"
+        import traceback
+        tb = traceback.format_exc()
+        msg = f"{name}: {type(e).__name__}: {e}"
         if progress:
             progress("pipeline", f"[WARN] {msg} (non-critical, continuing)")
-        return StepResult(name=name, status="error", duration_s=time.time() - t0, error=str(e))
+            progress("pipeline", tb[:500])
+        return StepResult(name=name, status="error", duration_s=time.time() - t0, error=f"{msg}\n{tb[:500]}")
 
 
 def _run_parallel(tasks: list[tuple[str, callable]], progress, parallel: int) -> list[StepResult]:
@@ -335,6 +338,14 @@ def _prolog_maxent_diag():
 
 def _phase_prolog(progress, parallel):
     """Phase 2: run all Prolog analyses in parallel."""
+    # Diagnostic — remove after debugging
+    if progress:
+        import shutil
+        progress("pipeline", f"PROLOG_DIR = {PROLOG_DIR}")
+        progress("pipeline", f"PROLOG_DIR exists = {PROLOG_DIR.exists()}")
+        progress("pipeline", f"swipl path = {shutil.which('swipl')}")
+        progress("pipeline", f"testsets count = {len(list(TESTSETS_DIR.glob('*.pl')))}")
+
     if progress:
         progress("pipeline", "[PROLOG] Running analyses...")
 

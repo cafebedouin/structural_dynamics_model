@@ -1,0 +1,130 @@
+{
+  "header": {
+    "constraint_id": "policy_implementation_gap",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Policy Implementation Gap",
+    "topic_domain": "public_health/policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "status_quo_healthcare_systems",
+      "pharmaceutical_industry_treatment_focus"
+    ],
+    "victims": [
+      "populations_lacking_access_to_prevention",
+      "underfunded_public_health_agencies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Preventable Case",
+      "comment": "From the perspective of an individual in a high-risk, low-access population, the gap between known prevention and available care is a Snare. They bear the full cost of systemic failure with no exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Provider",
+      "comment": "For established healthcare and pharmaceutical systems focused on treatment, the implementation gap is a Rope. It coordinates market behavior around profitable, high-margin treatments for preventable diseases, preserving revenue streams."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Health Agency",
+      "comment": "For the public health body, the gap is a Tangled Rope. They participate in the coordination (setting guidelines) but are victims of the extraction (underfunding, political suppression) that prevents effective implementation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Epidemiological Analyst",
+      "comment": "The analytical view sees the full structure: a coordination system (maintaining a stable healthcare market) that relies on asymmetric extraction (externalizing costs of preventable disease onto vulnerable populations)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intent_vs_inertia",
+      "question": "Is the implementation gap primarily driven by deliberate lobbying to protect incumbent profits, or is it an emergent property of bureaucratic inertia and political complexity?",
+      "resolution_mechanism": "Comparative analysis of lobbying expenditures by treatment-focused industries versus public health advocacy budgets, correlated with the defeat of specific preventative policies.",
+      "impact": "Resolution towards deliberate action would shift the analytical classification closer to a pure Snare. Resolution towards inertia reinforces the Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between deliberate profit-seeking and emergent bureaucratic failure as the primary driver of the policy gap."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the persistent gap between established, evidence-based public health interventions (e.g., HPV vaccination, tobacco control, lead abatement) and their comprehensive and equitable implementation. The primary observable is the discrepancy between scientific consensus or WHO recommendations and the actual adoption, funding, and enforcement of these policies at national and sub-national levels, leading to preventable morbidity and mortality.",
+    "key_agents": [
+      "Populations lacking access to prevention: Primary victims (powerless/trapped)",
+      "Status-quo healthcare systems: Primary beneficiaries (institutional/arbitrage)",
+      "Pharmaceutical industry (treatment focus): Secondary beneficiaries (institutional/arbitrage)",
+      "Underfunded public health agencies: Institutional victims (institutional/constrained)"
+    ],
+    "logic_rationale": "The base extractiveness (\u03b5=0.48) quantifies the societal cost (excess deaths, disability-adjusted life years, economic loss) imposed on victims by the failure to implement known solutions. The suppression score (0.62) reflects the high political and economic barriers, including lobbying by incumbent industries and targeted misinformation, that actively prevent the adoption of more effective preventative strategies.",
+    "perspectival_gap": "The gap is stark: for a citizen who contracts a preventable disease, the system is a coercive Snare. For an incumbent healthcare provider whose business model relies on treating that same disease, the system is a coordinating Rope that stabilizes their market. This difference is driven entirely by their structural position and directionality relative to the flow of costs and benefits.",
+    "directionality_logic": "Beneficiaries (status_quo_healthcare_systems) profit from a market skewed towards expensive treatments over low-cost prevention. Their institutional power and arbitrage options give them a low directionality (d), resulting in a low or negative effective extraction (\u03c7). Victims (populations_lacking_access) bear the direct health costs and have no exit, giving them a high directionality (d\u22481.0) and thus experience a high \u03c7.",
+    "mandatrophy_analysis": "A naive analysis might label this gap a pure Snare (malicious extraction) or a Piton (bureaucratic incompetence). The Tangled Rope classification is more accurate because it acknowledges the genuine, albeit perverse, coordination function: the current system effectively coordinates a massive, stable economic sector around disease treatment. This coordination is inextricably tangled with the extraction of health and wealth from the most vulnerable, a reality captured by the model."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is structurally downstream of 'uneven_risk_distribution' (a Mountain of epidemiology) and 'individual_vs_systemic_causation' (a Tangled Rope of political ideology). Those constraints create the preconditions for this implementation gap to form and persist."
+  }
+}

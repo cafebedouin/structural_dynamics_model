@@ -1,0 +1,77 @@
+{
+  "header": {
+    "constraint_id": "uneven_risk_distribution",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.02,
+    "theater_ratio": 0.1,
+    "claimed_type": "mountain",
+    "human_readable": "Uneven Distribution of Modifiable Health Risk Factors",
+    "topic_domain": "public_health/epidemiology",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Epidemiological Observer",
+      "comment": "This perspective sees the statistical reality as a fundamental feature of population health dynamics, observable across cultures and time."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The National Health Strategist",
+      "comment": "For policymakers, this is a baseline reality that all interventions must account for. It is a fixed feature of the landscape they operate in."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The At-Risk Individual",
+      "comment": "From an individual's perspective, their baseline risk profile based on geography and demography is an unchangeable fact of their birth and environment."
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the observed, persistent statistical fact that primary modifiable health risk factors (e.g., smoking, HPV, H. pylori, alcohol consumption) are not uniformly distributed across human populations. They cluster predictably by geography, gender, and socioeconomic status. This is a foundational, non-extractive reality that public health policy must contend with, analogous to a feature of the physical landscape.",
+    "key_agents": [
+      "Epidemiologists/Researchers (analytical): Observers who measure and model this distribution.",
+      "Public Health Institutions (institutional): Actors who must design policies around this unchangeable statistical landscape.",
+      "Individuals in high-risk groups (powerless): Subjects whose life outcomes are shaped by their position within this statistical reality."
+    ],
+    "logic_rationale": "The constraint is classified as a Mountain because it is an emergent, observable pattern of human populations, not a designed system. Base extractiveness (\u03b5=0.05) and suppression (0.02) are near zero, as the pattern itself does not extract value or coerce behavior. The high accessibility_collapse (0.95) reflects that diverse, independent studies consistently converge on the same conclusion about risk clustering. Resistance (0.05) is low because the epidemiological data is overwhelming and not seriously contested.",
+    "perspectival_gap": "There is no significant perspectival gap. All rational actors, regardless of their power or position, must acknowledge this statistical reality. It is a Mountain for the analyst who studies it, the policymaker who plans around it, and the individual who lives within it. The *implications* of the constraint differ dramatically for each agent, but the classification of the constraint itself is invariant.",
+    "directionality_logic": "As a Mountain, this constraint has no direct beneficiaries or victims. The constraint is the map of risk, not the risk itself. The 'victims' are those who suffer from the risk factors (e.g., lung cancer from smoking), but the constraint is merely the observation that these factors are unevenly distributed. No agent directly benefits from the *pattern* of distribution in a way that would imply a coordination or extraction function.",
+    "mandatrophy_analysis": "Classifying this as a Mountain is crucial to prevent misattributing a baseline statistical reality to a specific, malicious policy (which would be a Snare). It forces analysts to distinguish between the landscape of risk (Mountain) and the specific policies or economic systems that may exacerbate or mitigate the harms within that landscape. This prevents the category error of blaming the map for the territory."
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_resource_allocation",
+      "public_health_messaging_effectiveness"
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "v_low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  }
+}

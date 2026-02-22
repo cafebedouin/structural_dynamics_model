@@ -1,0 +1,128 @@
+{
+  "header": {
+    "constraint_id": "individual_vs_systemic_causation",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ivsc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Individual vs. Systemic Causation in Public Health",
+    "topic_domain": "public_health/policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industries_promoting_risk_factors"
+    ],
+    "victims": [
+      "individuals_blamed_for_systemic_exposures"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Blamed Individual",
+      "comment": "From the perspective of an individual with limited resources and exposed to systemic risks, the narrative of 'personal responsibility' is a trap that assigns blame while ignoring the constraints on their choices."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Risk-Externalizing Industry",
+      "comment": "For industries whose products create health externalities, framing risk as individual choice is a highly effective coordination strategy to maintain market access and prevent costly regulation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Captured Public Health Agency",
+      "comment": "Public health institutions are caught between the genuine goal of improving health (coordination) and the political/economic reality of industry influence that shifts costs onto the public (extraction)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Epidemiologist",
+      "comment": "The analytical view recognizes a dual function: a minor coordination role in promoting individual health, and a major extractive role in deflecting regulatory responsibility from systemic sources of harm."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causal_attribution_ambiguity",
+      "question": "To what extent are chronic disease outcomes attributable to individual agency versus unavoidable systemic exposures?",
+      "resolution_mechanism": "Large-scale longitudinal studies that control for environmental/economic factors and quantify the causal impact of industrial products (e.g., ultra-processed foods, pollutants).",
+      "impact": "If individual agency is dominant (<20% systemic), the constraint is closer to a Rope. If systemic factors are dominant (>80%), it's a pure Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The irreducible ambiguity in attributing chronic disease causation between individual choice and systemic factors."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 37,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 74,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 37,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 74,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the framing of public health risks as 'lifestyle choices' versus industrially-driven, systemic, or environmental exposures. This narrative shifts the locus of responsibility, and therefore cost, from producers of risk (e.g., fossil fuel, ultra-processed food, tobacco industries) to the individuals exposed to those risks. The primary observable is the allocation of public health funding and messaging, which overwhelmingly favors individual education campaigns over systemic regulation.",
+    "key_agents": [
+      "Industries Promoting Risk Factors: Primary beneficiary (institutional/arbitrage) - Avoids regulation, liability, and costs of externalities.",
+      "Individuals Blamed for Systemic Exposures: Primary victim (powerless/trapped) - Bears direct health costs, lost productivity, and social stigma for conditions largely outside their control.",
+      "Public Health Agencies: Enforcer/Victim (institutional/constrained) - Tasked with improving health outcomes but politically and financially constrained from addressing powerful systemic drivers.",
+      "Epidemiologists and Researchers: Analytical Observer (analytical/analytical) - Documents the statistical evidence for systemic causation, often in conflict with the dominant public narrative."
+    ],
+    "logic_rationale": "The base extractiveness (\u03b5=0.68) represents the immense health and financial costs externalized onto individuals and public healthcare systems, which would otherwise be borne by industries as a cost of doing business. The high suppression (0.75) reflects the effectiveness of corporate lobbying, public relations campaigns, and funding of research to maintain the 'individual responsibility' narrative and actively suppress or discredit evidence supporting regulatory alternatives.",
+    "perspectival_gap": "A significant gap exists. For the risk-producing industry, the narrative is a pure Rope, a coordination mechanism to manage public perception and regulatory threats. For the individual living in a food desert or polluted area, it is a Snare, trapping them in a cycle of exposure and blame. For the constrained public health agency and the analytical observer, it is a Tangled Rope, acknowledging the (minor) legitimate coordination function of health education while recognizing the overwhelmingly extractive effect of deflecting corporate responsibility.",
+    "directionality_logic": "Directionality is derived from the clear structural relationship. 'Industries_promoting_risk_factors' are declared beneficiaries; their business models profit directly from the externalization of costs this constraint enables. 'Individuals_blamed_for_systemic_exposures' are the victims who bear these costs. This maps to a low directionality (d) for beneficiaries, yielding a low or negative effective extraction (\u03c7), and a high d for victims, yielding a high \u03c7.",
+    "mandatrophy_analysis": "This constraint is a canonical example of mandatrophy. A legitimate, socially-desirable coordination goal ('encouraging healthy habits') serves as a theatrical pretext for a large-scale extractive process ('protecting industrial polluters and food manufacturers from regulation'). The Tangled Rope classification is crucial for resolving this, as it correctly identifies the dual nature of the constraint, preventing a misclassification as a pure Snare (which would ignore the coordination pretext) or a Rope (which would ignore the vast, asymmetric extraction)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "dual_formulation_note": "This constraint is a downstream consequence of the 'uneven_risk_distribution' mountain, which establishes that risks are not borne equally. This constraint describes the specific social mechanism used to justify and maintain that unequal distribution in the domain of public health."
+  }
+}
