@@ -1,18 +1,31 @@
 #!/usr/bin/env python3
 """
-Enhanced Constraint Report — Two-Stream Architecture
+Enhanced Constraint Report — Three-Level Feedback Model
 
 Runs the Prolog per-constraint report (Stream 1: Live Diagnosis), then
-inserts five Python-built corpus context sections (Stream 2) between
-the LOGICAL FINGERPRINT and DR EXECUTIVE SUMMARY sections.
+inserts Python-built analysis sections (Stream 2) between the LOGICAL
+FINGERPRINT and DR EXECUTIVE SUMMARY sections, organized into three
+analytical levels:
 
-Stream 1: Live Prolog subprocess stdout
-Stream 2: Python-built sections from batch JSON/markdown data
-  A. CORPUS POSITIONING
-  B. ORBIT CONTEXT
-  C. MAXENT SHADOW CLASSIFICATION
-  D. ENRICHED OMEGA CONTEXT
-  E. STRUCTURAL CONTEXT
+  Verdict Banner — traffic-light summary (GREEN/YELLOW/RED)
+
+  Level 1: SELF-CONSISTENCY
+    - Constraint Identity (type, signature, purity, coupling, Boltzmann, drift, tangled)
+    - Orbit Context (signature, span, gauge status)
+    - Enriched Omega Context (severity, gap class/pattern, family)
+
+  Level 2: DIAGNOSTIC CONVERGENCE
+    - Classification Convergence (batch agreement, confidence, rival, margin, boundary, H^1)
+    - MaxEnt Shadow Classification (entropy, probability distribution)
+    - Abductive Flags (cross-subsystem anomaly triggers)
+    - Diagnostic Verdict (subsystems, agreements, conflicts, tensions)
+
+  Level 3: CORPUS POSITIONING
+    - Corpus Distribution (type, purity, coupling, signature, confidence distributions)
+    - Constraint Positioning (percentiles, boundary zone, orbit family)
+    - Structural Context (variance, twins, covering analysis)
+
+  Post-Synthesis (T12 divergence flags, only if present)
 
 Inputs:
   prolog/testsets/{ID}.pl          — constraint testset (must exist)
@@ -216,33 +229,67 @@ def extract_live_perspectives(prolog_output):
     return claimed, perspectives
 
 
-# --- Section A: CORPUS POSITIONING ---
+# --- Level Header ---
 
-def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
-    """Section A: CORPUS POSITIONING from enriched_pipeline.json + live Prolog output."""
-    lines = ["", "--- CORPUS POSITIONING ---", ""]
+def build_level_header(level_num, title):
+    """Return a level separator: ═══ LEVEL N: TITLE ═══"""
+    return f"\n═══ LEVEL {level_num}: {title} ═══\n"
+
+
+# --- Verdict Banner ---
+
+def build_verdict_banner(constraint_id, pipeline_data):
+    """Top-of-report traffic-light banner extracted from diagnostic_verdict."""
+    if pipeline_data is None:
+        return "\n  [Verdict unavailable — run full pipeline to include]\n"
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        return "\n  [Verdict unavailable — constraint not yet in batch]\n"
+
+    dv = entry.get("diagnostic_verdict")
+    if dv is None:
+        return "\n  [Verdict unavailable — run full pipeline to include]\n"
+
+    verdict = dv.get("verdict", "unknown")
+    verdict_upper = verdict.upper() if isinstance(verdict, str) else "UNKNOWN"
+    n_avail = dv.get("subsystems_available", 0)
+    unavail = dv.get("subsystems_unavailable", [])
+    total = n_avail + len(unavail)
+    tensions = dv.get("tensions", [])
+
+    if tensions:
+        tension_parts = [t.get("subsystem", "?") for t in tensions]
+        detail = f"{n_avail}/{total} subsystems — {len(tensions)} tension(s) ({', '.join(tension_parts)})"
+    else:
+        detail = f"{n_avail}/{total} subsystems checked — no tensions"
+
+    return (
+        "\n"
+        "╔═══════════════════════════════════════════════════╗\n"
+        f"║  VERDICT: {verdict_upper:<41}║\n"
+        f"║  {detail:<49}║\n"
+        "╚═══════════════════════════════════════════════════╝\n"
+    )
+
+
+# --- Level 1: CONSTRAINT IDENTITY (from old Section A "This Constraint" L1 fields) ---
+
+def build_level1_identity(constraint_id, pipeline_data, prolog_output):
+    """L1: Self-consistency identity — claimed/live type, signature, purity,
+    coupling, Boltzmann, drift events, tangled fields."""
+    lines = ["", "--- CONSTRAINT IDENTITY ---", ""]
 
     if pipeline_data is None:
         lines.append("  [enriched_pipeline.json not available]")
         return "\n".join(lines)
 
-    diag = pipeline_data.get("diagnostic", {})
-    val = pipeline_data.get("validation", {})
-    per_constraint = pipeline_data.get("per_constraint", [])
-
-    # Find this constraint in per_constraint array
     entry = find_constraint_entry(pipeline_data, constraint_id)
-
-    # Extract live perspectives from Prolog output
     live_claimed, live_perspectives = extract_live_perspectives(prolog_output)
     in_batch = entry is not None
 
-    # --- This Constraint block ---
-    lines.append("  This Constraint:")
-
     if in_batch:
         claimed = entry.get("claimed_type", "N/A")
-        batch_persp = entry.get("perspectives", {})
         signature = entry.get("signature", "N/A")
         purity = entry.get("purity_score")
         purity_band = entry.get("purity_band", "N/A")
@@ -253,21 +300,10 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
 
         lines.append(f"    Claimed Type:     {claimed}")
 
-        # Live types from Prolog
         if live_perspectives:
             live_str = _compact_types(live_perspectives)
             if live_str:
                 lines.append(f"    Live Type:        {live_str}")
-
-        # Batch types + agreement check
-        batch_str = _compact_types(batch_persp)
-        if batch_str:
-            if live_perspectives and batch_persp == live_perspectives:
-                lines.append(f"    Batch Type:       {batch_str}   [AGREES WITH LIVE]")
-            elif live_perspectives:
-                lines.append(f"    Batch Type:       {batch_str}")
-            else:
-                lines.append(f"    Batch Type:       {batch_str}")
 
         lines.append(f"    Signature:        {signature}")
 
@@ -282,31 +318,6 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
             lines.append(f"    Coupling:         {coupling_cat}")
 
         lines.append(f"    Boltzmann:        {boltzmann}")
-
-        # Confidence fields
-        conf = entry.get("confidence")
-        conf_band = entry.get("confidence_band")
-        if conf is not None:
-            lines.append(f"    Confidence:       {conf:.4f} ({conf_band})")
-            rival = entry.get("rival_type")
-            rival_p = entry.get("rival_prob")
-            if rival and rival_p is not None:
-                lines.append(f"    Rival Type:       {rival} (P={rival_p:.4f})")
-            margin = entry.get("confidence_margin")
-            if margin is not None:
-                lines.append(f"    Margin:           {margin:+.4f}")
-            boundary = entry.get("boundary")
-            if boundary:
-                lines.append(f"    Boundary:         {boundary}")
-
-        # H^1 band (cohomological obstruction)
-        h1 = entry.get("h1_band")
-        if h1 is not None:
-            h1_desc = {0: "gauge-invariant (all observers agree)",
-                       1: "minimal fracture", 2: "moderate fracture",
-                       3: "power-scaling driven", 4: "hub-conflict driven",
-                       5: "high fracture", 6: "maximally fractured"}
-            lines.append(f"    H^1 band:         {h1} — {h1_desc.get(h1, 'unknown')}")
 
         # Drift events
         drift = entry.get("drift_events", [])
@@ -323,22 +334,84 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
             lines.append(f"    Coalition:        {coalition}")
 
     else:
-        # New constraint — not in batch
         if live_claimed:
             lines.append(f"    Claimed Type:     {live_claimed}")
         if live_perspectives:
             live_str = _compact_types(live_perspectives)
             if live_str:
                 lines.append(f"    Live Type:        {live_str}")
-        lines.append("    Batch Type:       [not yet in batch — run full pipeline to include]")
         lines.append("    Signature:        [from Prolog output above]")
         lines.append("    Purity:           [not yet in batch]")
         lines.append("    Coupling:         [not yet in batch]")
-        lines.append("    Confidence:       [not yet in batch]")
 
-    # --- Corpus Distribution block ---
-    lines.append("")
-    lines.append("  Corpus Distribution:")
+    return "\n".join(lines)
+
+
+# --- Level 2: CLASSIFICATION CONVERGENCE (from old Section A L2 fields) ---
+
+def build_level2_convergence(constraint_id, pipeline_data):
+    """L2: Diagnostic convergence — batch agreement, confidence, rival,
+    margin, boundary, H^1 band."""
+    lines = ["", "--- CLASSIFICATION CONVERGENCE ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        lines.append("  Not yet in batch — run full pipeline to include.")
+        return "\n".join(lines)
+
+    # Batch type + agreement with live
+    batch_persp = entry.get("perspectives", {})
+    batch_str = _compact_types(batch_persp)
+    if batch_str:
+        lines.append(f"    Batch Type:       {batch_str}")
+
+    # Confidence fields
+    conf = entry.get("confidence")
+    conf_band = entry.get("confidence_band")
+    if conf is not None:
+        lines.append(f"    Confidence:       {conf:.4f} ({conf_band})")
+        rival = entry.get("rival_type")
+        rival_p = entry.get("rival_prob")
+        if rival and rival_p is not None:
+            lines.append(f"    Rival Type:       {rival} (P={rival_p:.4f})")
+        margin = entry.get("confidence_margin")
+        if margin is not None:
+            lines.append(f"    Margin:           {margin:+.4f}")
+        boundary = entry.get("boundary")
+        if boundary:
+            lines.append(f"    Boundary:         {boundary}")
+
+    # H^1 band (cohomological obstruction)
+    h1 = entry.get("h1_band")
+    if h1 is not None:
+        h1_desc = {0: "gauge-invariant (all observers agree)",
+                   1: "minimal fracture", 2: "moderate fracture",
+                   3: "power-scaling driven", 4: "hub-conflict driven",
+                   5: "high fracture", 6: "maximally fractured"}
+        lines.append(f"    H^1 band:         {h1} — {h1_desc.get(h1, 'unknown')}")
+
+    return "\n".join(lines)
+
+
+# --- Level 3: CORPUS DISTRIBUTION + POSITIONING (from old Section A) ---
+
+def build_level3_distribution(constraint_id, pipeline_data, orbit_data, omega_data):
+    """L3: Corpus distributions, constraint positioning, and orbit family."""
+    lines = ["", "--- CORPUS DISTRIBUTION ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    diag = pipeline_data.get("diagnostic", {})
+    val = pipeline_data.get("validation", {})
+    per_constraint = pipeline_data.get("per_constraint", [])
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    in_batch = entry is not None
 
     type_dist = diag.get("type_distribution", {})
     purity_dist = diag.get("purity_summary", {})
@@ -391,7 +464,7 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
     # --- Positioning block (batch constraints only) ---
     if in_batch:
         lines.append("")
-        lines.append("  Positioning:")
+        lines.append("  --- CONSTRAINT POSITIONING ---")
         signature = entry.get("signature", "unknown")
         if sig_dist and signature in sig_dist:
             sig_count = sig_dist[signature]
@@ -414,17 +487,27 @@ def build_corpus_positioning(constraint_id, pipeline_data, prolog_output):
             lines.append(f"    Confidence band: {conf_band} ({cb_pct:.1f}% of corpus in this band)")
         boundary = entry.get("boundary")
         if boundary:
-            # Count how many constraints share this boundary
             boundary_count = sum(1 for pc in per_constraint if pc.get("boundary") == boundary)
             lines.append(f"    Boundary zone: {boundary} ({boundary_count} constraints share this boundary)")
+
+    # Orbit Family ID (from orbit/omega data, positioned at L3)
+    key = constraint_id.lower()
+    family = None
+    if omega_data and "omegas" in omega_data:
+        for omega in omega_data["omegas"]:
+            if omega.get("associated_constraint", "").lower() == key:
+                family = omega.get("family")
+                break
+    if family:
+        lines.append(f"    Orbit Family ID:  {family}")
 
     return "\n".join(lines)
 
 
-# --- Section B: ORBIT CONTEXT ---
+# --- Level 1: ORBIT CONTEXT (signature, span, gauge — no family) ---
 
-def build_orbit_section(constraint_id, orbit_data, omega_data):
-    """Section B: ORBIT CONTEXT from orbit_data.json + omega family lookup."""
+def build_level1_orbit(constraint_id, orbit_data):
+    """L1: Orbit self-consistency — signature, span, gauge status."""
     lines = ["", "--- ORBIT CONTEXT ---", ""]
 
     if orbit_data is None:
@@ -442,23 +525,12 @@ def build_orbit_section(constraint_id, orbit_data, omega_data):
     sig = entry.get("orbit_signature", [])
     contexts = entry.get("contexts", {})
 
-    # Gauge status: invariant if all context values are identical
     context_vals = list(contexts.values())
     gauge = "Gauge-Invariant" if len(set(context_vals)) <= 1 else "Gauge-Variant"
 
     lines.append(f"  Orbit Signature:    [{', '.join(sig)}]")
     lines.append(f"  Orbit Span:         {len(sig)}")
     lines.append(f"  Gauge Status:       {gauge}")
-
-    # Family ID from enriched omega data
-    family = None
-    if omega_data and "omegas" in omega_data:
-        for omega in omega_data["omegas"]:
-            if omega.get("associated_constraint", "").lower() == key:
-                family = omega.get("family")
-                break
-    if family:
-        lines.append(f"  Orbit Family ID:    {family}")
 
     return "\n".join(lines)
 
@@ -690,10 +762,10 @@ def build_abductive_section(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
-# --- Section G: DIAGNOSTIC VERDICT ---
+# --- Level 2: DIAGNOSTIC VERDICT body (without verdict line and T12) ---
 
-def build_diagnostic_verdict_section(constraint_id, pipeline_data):
-    """Section G: DIAGNOSTIC VERDICT — cross-subsystem traffic-light synthesis."""
+def build_level2_verdict_body(constraint_id, pipeline_data):
+    """L2: Diagnostic convergence — subsystems, agreements, conflicts, tensions."""
     lines = ["", "--- DIAGNOSTIC VERDICT ---", ""]
 
     if pipeline_data is None:
@@ -710,7 +782,6 @@ def build_diagnostic_verdict_section(constraint_id, pipeline_data):
         lines.append("  [diagnostic_verdict not computed for this constraint]")
         return "\n".join(lines)
 
-    verdict = dv.get("verdict", "unknown")
     agreements = dv.get("agreements", [])
     expected_conflicts = dv.get("expected_conflicts", [])
     convergent_rejections = dv.get("convergent_rejections", [])
@@ -718,10 +789,7 @@ def build_diagnostic_verdict_section(constraint_id, pipeline_data):
     n_avail = dv.get("subsystems_available", 0)
     unavail = dv.get("subsystems_unavailable", [])
 
-    # Verdict line with traffic light
-    verdict_upper = verdict.upper() if isinstance(verdict, str) else "UNKNOWN"
     total_subsystems = n_avail + len(unavail)
-    lines.append(f"  Verdict: {verdict_upper}")
 
     # Subsystems checked
     if unavail:
@@ -780,17 +848,32 @@ def build_diagnostic_verdict_section(constraint_id, pipeline_data):
     else:
         lines.append("  Tensions: none")
 
-    # Post-synthesis divergence flags (T12)
+    return "\n".join(lines)
+
+
+# --- Post-Synthesis (T12 flags, from old Section G tail) ---
+
+def build_post_synthesis(constraint_id, pipeline_data):
+    """Post-synthesis divergence flags (T12). Returns empty string if none."""
+    if pipeline_data is None:
+        return ""
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        return ""
+
     ps_flags = entry.get("post_synthesis_flags", [])
-    if ps_flags:
-        lines.append("")
-        lines.append(f"  Post-Synthesis Divergence ({len(ps_flags)} flag(s)):")
-        for f in ps_flags:
-            ft = f.get("flag_type", "?")
-            lines.append(f"    Flag: {ft}")
-            details = f.get("details", {})
-            for k, v in sorted(details.items()):
-                lines.append(f"      {k}: {v}")
+    if not ps_flags:
+        return ""
+
+    lines = ["", "--- POST-SYNTHESIS DIVERGENCE ---", ""]
+    lines.append(f"  {len(ps_flags)} flag(s):")
+    for flag in ps_flags:
+        ft = flag.get("flag_type", "?")
+        lines.append(f"    Flag: {ft}")
+        details = flag.get("details", {})
+        for k, v in sorted(details.items()):
+            lines.append(f"      {k}: {v}")
 
     return "\n".join(lines)
 
@@ -865,21 +948,45 @@ def generate_report(constraint_id, data):
     prolog_output = run_prolog_report(constraint_id)
 
     header = build_header(data["pipeline"])
-    sec_positioning = build_corpus_positioning(constraint_id, data["pipeline"], prolog_output)
-    sec_orbit = build_orbit_section(constraint_id, data["orbit"], data["omega"])
-    sec_maxent = build_maxent_section(constraint_id, data["pipeline"])
-    sec_omega = build_omega_section(constraint_id, data["omega"])
-    sec_structural = build_structural_section(
+
+    # Verdict banner — first thing the analyst sees
+    banner = build_verdict_banner(constraint_id, data["pipeline"])
+
+    # Level 1: Self-Consistency
+    l1_identity = build_level1_identity(constraint_id, data["pipeline"], prolog_output)
+    l1_orbit = build_level1_orbit(constraint_id, data["orbit"])
+    l1_omega = build_omega_section(constraint_id, data["omega"])
+
+    # Level 2: Diagnostic Convergence
+    l2_convergence = build_level2_convergence(constraint_id, data["pipeline"])
+    l2_maxent = build_maxent_section(constraint_id, data["pipeline"])
+    l2_abductive = build_abductive_section(constraint_id, data["pipeline"])
+    l2_verdict = build_level2_verdict_body(constraint_id, data["pipeline"])
+
+    # Level 3: Corpus Positioning
+    l3_distribution = build_level3_distribution(
+        constraint_id, data["pipeline"], data["orbit"], data["omega"]
+    )
+    l3_structural = build_structural_section(
         constraint_id, data["corpus"], data["pattern"], data["covering"]
     )
-    sec_abductive = build_abductive_section(constraint_id, data["pipeline"])
-    sec_diagnostic = build_diagnostic_verdict_section(constraint_id, data["pipeline"])
 
-    full_report = assemble_report(
-        header, prolog_output,
-        [sec_positioning, sec_orbit, sec_maxent, sec_omega, sec_structural,
-         sec_abductive, sec_diagnostic]
-    )
+    # Post-synthesis (only if T12 flags exist)
+    post = build_post_synthesis(constraint_id, data["pipeline"])
+
+    sections = [
+        banner,
+        build_level_header(1, "SELF-CONSISTENCY"),
+        l1_identity, l1_orbit, l1_omega,
+        build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
+        l2_convergence, l2_maxent, l2_abductive, l2_verdict,
+        build_level_header(3, "CORPUS POSITIONING"),
+        l3_distribution, l3_structural,
+    ]
+    if post.strip():
+        sections.extend(["\n═══ POST-SYNTHESIS ═══", post])
+
+    full_report = assemble_report(header, prolog_output, sections)
 
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     out_path = REPORTS_DIR / f"{constraint_id}_report.md"
