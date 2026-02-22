@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 """Batch regeneration of constraint stories via Gemini 2.5 Pro.
 
-Reads failing origset files, sends them to Gemini with the generation prompt,
-template, and linter source as context, validates output with the structural
-linter, retries up to 3 times, and routes results to testsets/ (pass) or
-probsets/ (fail).
+Reads failing source files, sends them to Gemini with the generation prompt,
+JSON schema, and example as context, validates JSON output against the schema,
+compiles to .pl via generate_constraint_pl.py, and routes results to
+testsets/ (pass) or probsets/ (fail).
 
 Usage:
     python python/regenerate_stories.py --dry-run
     python python/regenerate_stories.py --files child_marriage --resume
     python python/regenerate_stories.py --group A --limit 5
     python python/regenerate_stories.py --source lint --limit 10
+    python python/regenerate_stories.py --source json-validate --dry-run
 """
 
 import argparse
+import json
 import logging
 import os
 import re
@@ -31,19 +33,21 @@ ROOT_DIR = SCRIPT_DIR.parent
 ORIGSETS_DIR = ROOT_DIR / "prolog" / "origsets"
 TESTSETS_DIR = ROOT_DIR / "prolog" / "testsets"
 PROBSETS_DIR = ROOT_DIR / "prolog" / "probsets"
+JSON_TESTSETS_DIR = ROOT_DIR / "testsets"
 PROMPT_PATH = ROOT_DIR / "prompts" / "constraint_story_generation_prompt.md"
-TEMPLATE_PATH = ROOT_DIR / "prompts" / "constraint_story_template.pl"
-LINTER_PATH = SCRIPT_DIR / "linter.py"
+SCHEMA_PATH = SCRIPT_DIR / "constraint_story_schema.json"
+EXAMPLE_JSON_PATH = ROOT_DIR / "testsets" / "antifragility.json"
 REGEN_LIST_PATH = ROOT_DIR / "outputs" / "regeneration_list.md"
 LINT_ERRORS_PATH = ROOT_DIR / "outputs" / "lint_errors.txt"
 OUTPUTS_DIR = ROOT_DIR / "outputs"
 
 # ---------------------------------------------------------------------------
-# Linter import
+# Imports from sibling modules
 # ---------------------------------------------------------------------------
 sys.path.insert(0, str(SCRIPT_DIR))
 from linter import lint_file
 from duplicate_checker import check_incoming_file
+from generate_constraint_pl import validate_json, generate_pl
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -171,6 +175,28 @@ def parse_lint_errors():
     return results
 
 
+def parse_json_validate():
+    """Scan testsets for .json files and validate against schema.
+
+    Returns list of (basename, source_dir_name, [errors]) for invalid files.
+    """
+    results = []
+    for directory in [TESTSETS_DIR, JSON_TESTSETS_DIR]:
+        if not directory.exists():
+            continue
+        dir_name = directory.name
+        for json_file in sorted(directory.glob("*.json")):
+            try:
+                data = json.loads(json_file.read_text(encoding="utf-8"))
+            except json.JSONDecodeError as e:
+                results.append((json_file.stem, dir_name, [f"JSON_PARSE_ERROR: {e}"]))
+                continue
+            errors = validate_json(data)
+            if errors:
+                results.append((json_file.stem, dir_name, errors))
+    return results
+
+
 # =========================================================================
 # Gemini client wrapper
 # =========================================================================
@@ -192,15 +218,14 @@ class GeminiRegenClient:
 
         # Pre-load context files
         self.prompt_text = PROMPT_PATH.read_text(encoding="utf-8")
-        self.template_text = TEMPLATE_PATH.read_text(encoding="utf-8")
-        self.linter_text = LINTER_PATH.read_text(encoding="utf-8")
+        self.schema_text = SCHEMA_PATH.read_text(encoding="utf-8")
+        self.example_json_text = EXAMPLE_JSON_PATH.read_text(encoding="utf-8")
 
         self._system_instruction = (
             "You are a constraint story generator for the Deferential Realism "
-            "indexical classification system. You will regenerate a constraint "
-            "story .pl file so that it passes the structural linter. Output ONLY "
-            "the complete .pl file contents — no markdown fences, no commentary "
-            "outside the file."
+            "indexical classification system. You will produce a JSON representation "
+            "of a constraint story conforming to the provided schema. Output ONLY "
+            "valid JSON — no markdown fences, no commentary outside the JSON."
         )
 
     # ----- context caching -----
@@ -224,10 +249,10 @@ class GeminiRegenClient:
                                 self.types.Part(text=(
                                     "=== GENERATION PROMPT ===\n"
                                     + self.prompt_text
-                                    + "\n\n=== TEMPLATE ===\n"
-                                    + self.template_text
-                                    + "\n\n=== STRUCTURAL LINTER SOURCE ===\n"
-                                    + self.linter_text
+                                    + "\n\n=== JSON SCHEMA ===\n"
+                                    + self.schema_text
+                                    + "\n\n=== EXAMPLE JSON ===\n"
+                                    + self.example_json_text
                                 )),
                             ],
                         ),
@@ -268,10 +293,10 @@ class GeminiRegenClient:
             contents = (
                 "=== GENERATION PROMPT ===\n"
                 + self.prompt_text
-                + "\n\n=== TEMPLATE ===\n"
-                + self.template_text
-                + "\n\n=== STRUCTURAL LINTER SOURCE ===\n"
-                + self.linter_text
+                + "\n\n=== JSON SCHEMA ===\n"
+                + self.schema_text
+                + "\n\n=== EXAMPLE JSON ===\n"
+                + self.example_json_text
                 + "\n\n=== USER REQUEST ===\n"
                 + user_prompt
             )
@@ -329,6 +354,18 @@ def strip_markdown_fences(text):
     return text.strip()
 
 
+def strip_json_fences(text):
+    """Remove ```json ... ``` wrapping if present."""
+    text = text.strip()
+    if text.startswith("```json"):
+        text = text[len("```json"):].strip()
+    elif text.startswith("```"):
+        text = text[3:].strip()
+    if text.endswith("```"):
+        text = text[:-3].strip()
+    return text
+
+
 def lint_temp(basename, content):
     """Write content to a temp file in testsets/ and run linter.
 
@@ -349,48 +386,53 @@ def lint_temp(basename, content):
 def build_user_prompt(basename, original_content, known_errors, retry_errors=None):
     """Build the prompt sent to Gemini for (re)generation."""
     parts = [
-        f"Regenerate the following constraint story file: {basename}.pl\n",
-        "The file must pass the structural linter (rules shown in context).\n",
+        f"Produce the JSON representation of this constraint story: {basename}\n",
+        "Follow the schema exactly. Output ONLY valid JSON — no markdown fences, no commentary.\n",
     ]
     if known_errors:
-        parts.append("Known lint errors in the original:\n")
+        parts.append("Known errors in the original:\n")
         for e in known_errors:
             parts.append(f"  - {e}\n")
     if retry_errors:
-        parts.append("\nYour previous attempt still had these lint errors:\n")
+        parts.append("\nYour previous attempt had these validation errors:\n")
         for e in retry_errors:
             parts.append(f"  - {e}\n")
         parts.append("\nFix these specific errors while keeping the rest correct.\n")
-    parts.append("\n=== ORIGINAL FILE ===\n")
+    parts.append("\n=== ORIGINAL CONTENT ===\n")
     parts.append(original_content)
     return "".join(parts)
 
 
 def find_source_file(basename, source_dir=None):
-    """Locate the source .pl file.
+    """Locate the source file (.json preferred over .pl).
 
     If *source_dir* is given (``"testsets"`` or ``"origsets"``), look there
     first.  Otherwise fall back to testsets/ then origsets/.
+    Prefers .json over .pl when both exist.
     """
-    dirs = {
+    dirs_map = {
         "testsets": TESTSETS_DIR,
         "origsets": ORIGSETS_DIR,
     }
-    # Preferred directory first
-    if source_dir and source_dir in dirs:
-        preferred = dirs[source_dir] / f"{basename}.pl"
-        if preferred.exists():
-            return preferred
-    # Fall back to default search order
-    for d in [TESTSETS_DIR, ORIGSETS_DIR]:
-        path = d / f"{basename}.pl"
-        if path.exists():
-            return path
+    # Build ordered list of directories to search (no duplicates)
+    search_dirs = []
+    if source_dir and source_dir in dirs_map:
+        search_dirs.append(dirs_map[source_dir])
+    for d in [TESTSETS_DIR, JSON_TESTSETS_DIR, ORIGSETS_DIR]:
+        if d not in search_dirs:
+            search_dirs.append(d)
+
+    # Check .json first across all dirs, then .pl
+    for ext in [".json", ".pl"]:
+        for d in search_dirs:
+            path = d / f"{basename}{ext}"
+            if path.exists():
+                return path
     return None
 
 
 def process_file(client, basename, source_dir, known_errors, stats):
-    """Regenerate a single file. Returns True if it passed lint."""
+    """Regenerate a single file as JSON, validate, compile to .pl."""
     source_path = find_source_file(basename, source_dir)
     if source_path is None:
         logging.warning("[SKIP] %s — not found in testsets/ or origsets/", basename)
@@ -399,7 +441,7 @@ def process_file(client, basename, source_dir, known_errors, stats):
 
     original_content = source_path.read_text(encoding="utf-8")
     retry_errors = None
-    content = None  # last successful response (may still have lint errors)
+    story_dict = None  # last successfully parsed JSON
 
     for attempt in range(1, MAX_RETRIES + 1):
         label = f"(attempt {attempt}/{MAX_RETRIES})"
@@ -414,38 +456,68 @@ def process_file(client, basename, source_dir, known_errors, stats):
             retry_errors = [f"EMPTY_RESPONSE: {e}"]
             continue
 
-        content = strip_markdown_fences(raw)
-        errors, tmp_path = lint_temp(basename, content)
+        json_text = strip_json_fences(raw)
 
-        if not errors:
-            # Check for duplicate constraint IDs before writing
-            dupes = check_incoming_file(str(TESTSETS_DIR), str(tmp_path))
-            if dupes:
-                logging.warning("  DUPLICATE %s — %s", basename, "; ".join(dupes))
-                tmp_path.unlink(missing_ok=True)
-                stats["failed"] += 1
-                return False
-            # Pass — write back to source directory
-            dest = source_path.parent / f"{basename}.pl"
-            dest.write_text(content, encoding="utf-8")
-            tmp_path.unlink(missing_ok=True)
-            logging.info("  PASS %s on attempt %d", basename, attempt)
-            stats["passed"] += 1
-            return True
-        else:
-            logging.info("  FAIL %s %s — %d error(s): %s",
-                         basename, label, len(errors), "; ".join(errors[:3]))
-            retry_errors = errors
-            tmp_path.unlink(missing_ok=True)
+        # Step 1: Parse JSON
+        try:
+            story_dict = json.loads(json_text)
+        except json.JSONDecodeError as e:
+            logging.info("  JSON_PARSE_ERROR %s %s — %s", basename, label, e)
+            retry_errors = [f"JSON_PARSE_ERROR: {e}"]
+            story_dict = None
+            continue
+
+        # Step 2: Validate against schema
+        validation_errors = validate_json(story_dict)
+        if validation_errors:
+            logging.info("  SCHEMA_ERROR %s %s — %d error(s): %s",
+                         basename, label, len(validation_errors),
+                         "; ".join(validation_errors[:3]))
+            retry_errors = validation_errors
+            continue
+
+        # Step 3: Compile to .pl
+        pl_content = generate_pl(story_dict)
+
+        # Step 4: Safety-net lint on compiled .pl
+        lint_errors, tmp_path = lint_temp(basename, pl_content)
+        if lint_errors:
+            logging.warning("  LINT_WARNING %s — generator bug: %s",
+                            basename, "; ".join(lint_errors[:3]))
+
+        # Step 5: Duplicate check
+        dupes = check_incoming_file(str(TESTSETS_DIR), str(tmp_path))
+        tmp_path.unlink(missing_ok=True)
+        if dupes:
+            logging.warning("  DUPLICATE %s — %s", basename, "; ".join(dupes))
+            stats["failed"] += 1
+            return False
+
+        # Step 6: Pass — write both .json and .pl to source directory
+        dest_dir = source_path.parent
+        json_dest = dest_dir / f"{basename}.json"
+        pl_dest = dest_dir / f"{basename}.pl"
+        json_dest.write_text(json.dumps(story_dict, indent=2) + "\n", encoding="utf-8")
+        pl_dest.write_text(pl_content, encoding="utf-8")
+        logging.info("  PASS %s on attempt %d → %s", basename, attempt, dest_dir.name)
+        stats["passed"] += 1
+        return True
 
     # All retries exhausted
-    if content is not None:
+    if story_dict is not None:
+        # JSON parsed but had validation errors — write to probsets
         PROBSETS_DIR.mkdir(parents=True, exist_ok=True)
-        dest = PROBSETS_DIR / f"{basename}.pl"
-        dest.write_text(content, encoding="utf-8")
+        json_dest = PROBSETS_DIR / f"{basename}.json"
+        json_dest.write_text(json.dumps(story_dict, indent=2) + "\n", encoding="utf-8")
+        try:
+            pl_content = generate_pl(story_dict)
+            pl_dest = PROBSETS_DIR / f"{basename}.pl"
+            pl_dest.write_text(pl_content, encoding="utf-8")
+        except Exception:
+            pass
         logging.info("  PROBSET %s — wrote to probsets/ after %d attempts", basename, MAX_RETRIES)
     else:
-        logging.error("  FAILED %s — no usable response after %d attempts", basename, MAX_RETRIES)
+        logging.error("  FAILED %s — no parseable JSON after %d attempts", basename, MAX_RETRIES)
     stats["failed"] += 1
     return False
 
@@ -458,8 +530,8 @@ def main():
         description="Batch regeneration of constraint stories via Gemini 2.5 Pro."
     )
     parser.add_argument(
-        "--source", choices=["regen", "lint"], default="regen",
-        help="Work list source: 'regen' (regeneration_list.md) or 'lint' (lint_errors.txt)."
+        "--source", choices=["regen", "lint", "json-validate"], default="regen",
+        help="Work list source: 'regen' (regeneration_list.md), 'lint' (lint_errors.txt), or 'json-validate' (schema validation)."
     )
     parser.add_argument(
         "--files", nargs="+", metavar="BASENAME",
@@ -471,7 +543,7 @@ def main():
     )
     parser.add_argument(
         "--no-resume", action="store_true",
-        help="Force reprocessing of files that already pass lint."
+        help="Force reprocessing of files that already pass validation."
     )
     parser.add_argument(
         "--limit", type=int, default=0,
@@ -489,6 +561,9 @@ def main():
     if args.files:
         work_list = [(f, None, []) for f in args.files]
         logging.info("Source: explicit --files (%d)", len(work_list))
+    elif args.source == "json-validate":
+        work_list = parse_json_validate()
+        logging.info("Source: json-validate (%d files with errors)", len(work_list))
     elif args.source == "lint":
         run_linter()
         work_list = parse_lint_errors()
@@ -498,7 +573,7 @@ def main():
         label = f"group {args.group}" if args.group else "all groups"
         logging.info("Source: regeneration_list.md %s (%d files)", label, len(work_list))
 
-    # --- Resume: filter out files that already pass lint ---
+    # --- Resume: filter out files that already pass validation ---
     # On by default — no point re-processing files that already pass.
     # Use --no-resume to force reprocessing.
     if not args.no_resume:
@@ -507,11 +582,24 @@ def main():
         for basename, source_dir, errors in work_list:
             src = find_source_file(basename, source_dir)
             if src is not None:
-                existing_errors = lint_file(str(src))
-                if not existing_errors:
-                    logging.info("  [skip] %s — already passes lint in %s",
-                                 basename, src.parent.name)
-                    continue
+                if src.suffix == ".json":
+                    # JSON source — check schema validation
+                    try:
+                        data = json.loads(src.read_text(encoding="utf-8"))
+                        validation_errors = validate_json(data)
+                        if not validation_errors:
+                            logging.info("  [skip] %s — .json passes validation in %s",
+                                         basename, src.parent.name)
+                            continue
+                    except (json.JSONDecodeError, Exception):
+                        pass  # needs regeneration
+                else:
+                    # .pl source — check lint
+                    existing_errors = lint_file(str(src))
+                    if not existing_errors:
+                        logging.info("  [skip] %s — already passes lint in %s",
+                                     basename, src.parent.name)
+                        continue
             filtered.append((basename, source_dir, errors))
         work_list = filtered
         logging.info("Resume filter: %d → %d files", before, len(work_list))
