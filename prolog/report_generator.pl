@@ -43,15 +43,12 @@ generate_full_report(IntervalID) :-
     classify_interval(IntervalID, Pattern, Conf),
     
     format('~n~n====================================================~n'),
-    format('   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY      ~n'),
+    format('   DR DETAILED ANALYSIS                             ~n'),
     format('====================================================~n'),
     format('Timeline:       ~w to ~w~n', [T_start, Tn]),
     format('Structural Pattern: ~w~n', [Pattern]),
     format('Confidence:     ~w~n', [Conf]),
     
-    % --- SECTION 2: COMPREHENSIVE CROSS-DOMAIN AUDIT ---
-    cross_domain_audit,
-
     % --- SECTION 3: META-LOGICAL AUDIT ---
     format('~n[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]~n'),
     (   setof((C, Err, Sev), drl_core:dr_mismatch(C, Err, Sev), Errors)
@@ -98,18 +95,19 @@ generate_full_report(IntervalID) :-
     ;   format('~nAggregate Magnitude (Kappa): DATA_INSUFFICIENT~n')
     ),
     
-    % --- SECTION 7: PERSPECTIVAL GAP ANALYSIS ---
-    format('~n[PERSPECTIVAL GAP ANALYSIS]~n'),
+    % --- SECTION 7: MANDATROPHY GAP ANALYSIS ---
+    %  Full perspectival breakdown (claimed type, 4 perspectives, chi)
+    %  is covered by Python Levels 1-2. Only unique mandatrophy delta_chi
+    %  gaps are reported here.
+    format('~n[MANDATROPHY GAP ANALYSIS]~n'),
+    format('  (Full perspectival detail in Levels 1-2 above)~n'),
     (   forall(narrative_ontology:constraint_claim(CGap, _),
-               perspectival_gap_audit(CGap))
+               mandatrophy_only_report(CGap))
     ;   true
     ),
     
-    % --- SECTION 8: OMEGA GENERATION ---
-    generate_omegas_from_gaps(IntervalID),
-
-    % --- SECTION 8A: OMEGA TRIAGE ---
-    generate_omega_triage,
+    % --- OMEGA ASSERTION (silent — reporting handled by Python L1) ---
+    assert_omegas_from_gaps(IntervalID),
 
     % --- SECTION 8B: OMEGA RESOLUTION SCENARIOS ---
     generate_omega_resolution_scenarios,
@@ -145,6 +143,21 @@ process_omega_entries(OmegaEntries) :-
                (OGap = gap(GapPattern, _, _) -> true ; GapPattern = unknown),
                assert_omega_if_new(OID, OType, OQuestion, Constraint, GapPattern)
            )).
+
+%% assert_omegas_from_gaps(+IntervalID)
+%  Generates and asserts omega variables from perspectival gaps
+%  without report output. Ensures omega_variable/3 and omega_source/3
+%  facts are in the KB for downstream use (e.g., resolution scenarios).
+%  Report-level omega listing is handled by the Python pipeline (L1).
+assert_omegas_from_gaps(_IntervalID) :-
+    forall(
+        (narrative_ontology:constraint_claim(Constraint, _),
+         detect_gap_pattern(Constraint, Gap),
+         omega_from_gap(Constraint, Gap, OmegaID, Type, Question)),
+        (   (Gap = gap(GapPattern, _, _) -> true ; GapPattern = unknown),
+            assert_omega_if_new(OmegaID, Type, Question, Constraint, GapPattern)
+        )
+    ).
 
 % detect_gap_pattern and omega_from_gap logic remains unchanged...
 % [Included below for completeness in your file]
@@ -218,6 +231,20 @@ assert_omega_if_new(OmegaID, Type, Question) :-
 /* ============================================================================
    3. INDEXED REPORTING & AUDITS
    ============================================================================ */
+
+%% mandatrophy_only_report(+C)
+%  Reports only the mandatrophy delta_chi gap for a constraint,
+%  suppressing the full perspectival breakdown (covered by Python L1/L2).
+%  Only produces output when powerless and institutional perspectives
+%  disagree on constraint type.
+mandatrophy_only_report(C) :-
+    (constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)) -> true ; TypeP = none),
+    (constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)) -> true ; TypeI = none),
+    (   TypeP \= none, TypeI \= none, TypeP \= TypeI
+    ->  format('  ~w (~w vs ~w):~n', [C, TypeP, TypeI]),
+        format_mandatrophy_gap(C, powerless, institutional)
+    ;   true
+    ).
 
 perspectival_gap_audit(C) :-
     narrative_ontology:constraint_claim(C, Claimed),
