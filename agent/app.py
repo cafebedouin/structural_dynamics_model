@@ -124,6 +124,29 @@ if st.button("Run DR Audit", type="primary"):
                 st.markdown(text)
 
     # -------------------------------------------------------------------
+    # Iteration Summary
+    # -------------------------------------------------------------------
+    iterate_step = next((s for s in result.steps if s.step == "iterate"), None)
+    if iterate_step and iterate_step.data:
+        stats = iterate_step.data.get("iteration_stats", {})
+        iterated = {cid: v for cid, v in stats.items() if v["iterations"] > 0}
+        if iterated:
+            st.divider()
+            st.subheader("Verdict Iteration")
+            for cid, info in iterated.items():
+                verdict = info["final_verdict"]
+                iters = info["iterations"]
+                tokens = info["tokens_in"] + info["tokens_out"]
+                if verdict == "GREEN":
+                    st.success(f"{cid}: {verdict} after {iters} iteration(s) ({tokens:,} tokens)")
+                elif verdict == "YELLOW":
+                    st.warning(f"{cid}: {verdict} after {iters} iteration(s) ({tokens:,} tokens)")
+                else:
+                    st.error(f"{cid}: {verdict} after {iters} iteration(s) ({tokens:,} tokens)")
+            total_iter_tokens = iterate_step.tokens_in + iterate_step.tokens_out
+            st.caption(f"Total iteration cost: {total_iter_tokens:,} tokens in {iterate_step.duration_s:.1f}s")
+
+    # -------------------------------------------------------------------
     # Essay
     # -------------------------------------------------------------------
     if result.essay:
