@@ -16,7 +16,7 @@ if "GEMINI_API_KEY" in st.secrets:
 elif "GOOGLE_API_KEY" in st.secrets:
     os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
-from agent.orchestrator import DRAuditOrchestrator, PipelineResult  # noqa: E402
+from orchestrator import DRAuditOrchestrator, PipelineResult  # noqa: E402
 
 st.set_page_config(page_title="DR-Audit Studio", layout="wide")
 st.title("DR-Audit Studio")
