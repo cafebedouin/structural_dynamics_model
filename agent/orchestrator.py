@@ -426,38 +426,27 @@ class DRAuditOrchestrator:
         if self.skip_corpus_update:
             return StepResult(step="corpus_update", status="skipped")
 
-        self._progress("corpus_update", "Running make quick...")
+        self._progress("corpus_update", "Running pipeline...")
         t0 = time.time()
 
         try:
-            proc = subprocess.run(
-                ["make", "-j4", "quick"],
-                cwd=str(REPO_ROOT),
-                capture_output=True,
-                text=True,
-                timeout=600,
-            )
-            if proc.returncode != 0:
-                self._progress("corpus_update", f"make quick returned {proc.returncode}")
-                return StepResult(
-                    step="corpus_update", status="error",
-                    error=proc.stderr[:500],
-                    duration_s=time.time() - t0,
-                )
+            sys.path.insert(0, str(REPO_ROOT / "python"))
+            from run_pipeline import run_pipeline
+
+            result = run_pipeline(progress=self._progress, parallel=4)
+
+            if result.errors:
+                for e in result.errors:
+                    self._progress("corpus_update", f"warning: {e}")
+
             self._progress("corpus_update", "Corpus update complete")
             return StepResult(
                 step="corpus_update", status="success",
-                duration_s=time.time() - t0,
-            )
-        except subprocess.TimeoutExpired:
-            self._progress("corpus_update", "make quick timed out (600s)")
-            return StepResult(
-                step="corpus_update", status="error",
-                error="Timeout after 600s",
+                data=result,
                 duration_s=time.time() - t0,
             )
         except Exception as e:
-            self._progress("corpus_update", f"Corpus update failed: {e}")
+            self._progress("corpus_update", f"Pipeline failed: {e}")
             return StepResult(
                 step="corpus_update", status="error", error=str(e),
                 duration_s=time.time() - t0,
