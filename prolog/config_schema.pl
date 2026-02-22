@@ -339,6 +339,9 @@ param_spec(abductive_stress_purity_threshold,     number,  range(0.0, 1.0),     
 param_spec(abductive_stress_coupling_threshold,   number,  range(0.0, 1.0),                    "Coupling above this = stressed indicator").
 param_spec(abductive_stress_entropy_threshold,    number,  range(0.0, 1.0),                    "Entropy above this = stressed indicator").
 param_spec(abductive_stress_drift_mode,           atom,    oneof([any, critical, count_2plus]), "Stress convergence drift mode selector").
+param_spec(abductive_maxent_divergence_threshold,  number,  range(0.0, 1.0),                    "T13: min MaxEnt indexing divergence").
+param_spec(abductive_hub_conflict_h1_threshold,    integer, range(0, 6),                        "T14: H¹ band for hub-conflict").
+param_spec(abductive_oracle_entropy_ceiling,       number,  range(0.0, 1.0),                    "T16: max entropy for oracle failure").
 
 % ============================================================
 % 31b. POST-SYNTHESIS DIVERGENCE TRIGGER (T12)

@@ -38,6 +38,10 @@ run_abductive_report :-
     format(user_error, '[abductive_report] Running MaxEnt classifier...~n', []),
     maxent_classifier:maxent_run(Context, _MaxEntSummary),
 
+    % Run indexed MaxEnt classifier (prerequisite for T13 maxent_divergence trigger)
+    format(user_error, '[abductive_report] Running indexed MaxEnt classifier...~n', []),
+    catch(maxent_classifier:maxent_indexed_run(Context, _IndexedSummary), _, true),
+
     % Run FPN if enabled (prerequisite for Phase 3 triggers)
     (   config:param(fpn_enabled, 1)
     ->  format(user_error, '[abductive_report] Running FPN iterator...~n', []),

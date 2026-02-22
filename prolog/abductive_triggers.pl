@@ -3,7 +3,7 @@
 % ============================================================================
 % Extracted from abductive_engine.pl (Phase 6B decomposition).
 %
-% Contains all 11 trigger predicates (T1-T11) and their helpers.
+% Contains all 15 trigger predicates (T1-T11, T13-T16) and their helpers.
 % Each trigger produces a hypothesis term when its conditions are met.
 %
 % Trigger execution order (preserved exactly from abductive_engine):
@@ -18,6 +18,10 @@
 %   T7:  contamination_cascade           — fpn + drift
 %   T8:  dormant_extraction              — maxent + fingerprint + signature
 %   T11: snare_leaning_tangled           — maxent psi + signature
+%   T13: maxent_divergence               — indexed maxent + cohomology
+%   T14: hub_conflict                    — cohomology (H¹=4 standalone)
+%   T15: epistemic_trap                  — constraint_indexing (restricted view)
+%   T16: classical_oracle_failure        — maxent + cohomology (confident + H¹>0)
 %
 % Imports helpers and dynamic facts from abductive_helpers.pl only.
 % Does NOT import abductive_engine.pl — avoids circular dependency.
@@ -34,7 +38,11 @@
     trigger_accelerating_pathology/3,
     trigger_contamination_cascade/3,
     trigger_dormant_extraction/3,
-    trigger_snare_leaning_tangled/3
+    trigger_snare_leaning_tangled/3,
+    trigger_maxent_divergence/3,
+    trigger_hub_conflict/3,
+    trigger_epistemic_trap/3,
+    trigger_classical_oracle_failure/3
 ]).
 
 :- use_module(abductive_helpers).
@@ -48,6 +56,7 @@
 :- use_module(maxent_classifier).
 :- use_module(dirac_classification).
 :- use_module(drl_core).
+:- use_module(constraint_indexing).
 
 :- use_module(library(lists)).
 
@@ -731,4 +740,250 @@ trigger_snare_leaning_tangled(C, Context, Hypothesis) :-
         Explanations,
         Confidence,
         investigation(inspect_decomposition, C)
+    ).
+
+/* ================================================================
+   TRIGGER 13: MAXENT DIVERGENCE (Indexed vs Classical)
+   ================================================================
+   Indexed MaxEnt (power-scaled chi) diverges from classical MaxEnt
+   AND cohomological obstruction is non-zero. The divergence measures
+   the gap between what a power-aware observer sees and what a
+   classical oracle computes. Combined with H¹ > 0, this identifies
+   constraints where observer-dependence has measurable probabilistic
+   consequences.
+
+   Requires: maxent + indexed_maxent + cohomology
+   ================================================================ */
+
+trigger_maxent_divergence(C, Context, Hypothesis) :-
+    subsystem_available(maxent),
+    subsystem_available(cohomology),
+    subsystem_available(indexed_maxent),
+    % Indexing divergence exceeds threshold
+    catch(maxent_classifier:maxent_indexing_divergence(C, Context, Div), _, fail),
+    config:param(abductive_maxent_divergence_threshold, DivThresh),
+    Div > DivThresh,
+    % Cohomological obstruction confirms structural disagreement
+    catch(grothendieck_cohomology:cohomological_obstruction(C, _, H1), _, fail),
+    H1 > 0,
+    % Collect evidence
+    catch(maxent_classifier:maxent_entropy(C, Context, HNorm), _, (HNorm = 0.0)),
+    catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+    EvidenceLines = [
+        evidence_line(maxent, indexing_divergence, Div),
+        evidence_line(cohomology, h1_obstruction, H1),
+        evidence_line(maxent, entropy, HNorm),
+        evidence_line(signature, det_type, DetType)
+    ],
+    Explanations = [
+        explanation(
+            power_scaling_effect,
+            high,
+            'Indexed MaxEnt (using power-scaled chi) diverges from classical MaxEnt, and cohomological obstruction confirms the constraint reclassifies across observer contexts. The divergence is a measurable consequence of observer-dependence in the probability distribution.'
+        ),
+        explanation(
+            indexing_artifact,
+            low,
+            'The divergence may be an artifact of the power-scaling transformation rather than genuine observer-dependence. The chi-to-epsilon mapping introduces non-linearities that can inflate apparent divergence for constraints near classification boundaries.'
+        )
+    ],
+    compute_confidence(EvidenceLines, 0.80, Confidence),
+    config:param(abductive_confidence_floor, Floor),
+    Confidence >= Floor,
+    Hypothesis = hypothesis(
+        C,
+        maxent_divergence,
+        anomaly(indexing_divergence_with_obstruction, Div-H1),
+        EvidenceLines,
+        Explanations,
+        Confidence,
+        investigation(inspect_metrics, C)
+    ).
+
+/* ================================================================
+   TRIGGER 14: HUB CONFLICT
+   ================================================================
+   Standalone cohomological hub-conflict trigger. T10 uses H¹ >= 4
+   as a *gate* for convergent stress — this trigger fires on the
+   H¹ band itself as a first-class anomaly. A constraint with
+   H¹ = 4 (configurable) has maximum disagreement among observer
+   contexts, making it a structural hub where classification is
+   most contested.
+
+   Requires: cohomology
+   ================================================================ */
+
+trigger_hub_conflict(C, Context, Hypothesis) :-
+    subsystem_available(cohomology),
+    % H¹ must match the hub-conflict band exactly
+    catch(grothendieck_cohomology:cohomological_obstruction(C, _, H1), _, fail),
+    config:param(abductive_hub_conflict_h1_threshold, H1Band),
+    H1 =:= H1Band,
+    % Collect evidence
+    catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+    catch(purity_scoring:purity_score(C, Purity), _, (Purity = -1.0)),
+    % Mountain orbit check: does any context map to mountain?
+    (   catch(dirac_classification:gauge_orbit(C, Orbit), _, fail),
+        member(orbit_point(mountain, _), Orbit)
+    ->  HasMountainOrbit = true
+    ;   HasMountainOrbit = false
+    ),
+    EvidenceLines = [
+        evidence_line(cohomology, h1_obstruction, H1),
+        evidence_line(signature, det_type, DetType),
+        evidence_line(signature, purity_score, Purity),
+        evidence_line(dirac, mountain_orbit, HasMountainOrbit)
+    ],
+    Explanations = [
+        explanation(
+            maximum_context_disagreement,
+            high,
+            'The constraint sits at the hub-conflict band where observer contexts produce maximum disagreement about classification. This is the structural apex of observer-dependence — no single context captures the constraint truthfully.'
+        ),
+        explanation(
+            boundary_artifact,
+            medium,
+            'The high H¹ may reflect proximity to a classification boundary rather than genuine structural ambiguity. Constraints near the tangled-rope/snare boundary can produce high H¹ without deep observer-dependence.'
+        )
+    ],
+    compute_confidence(EvidenceLines, 0.75, Confidence),
+    config:param(abductive_confidence_floor, Floor),
+    Confidence >= Floor,
+    Hypothesis = hypothesis(
+        C,
+        hub_conflict,
+        anomaly(hub_conflict_band, H1),
+        EvidenceLines,
+        Explanations,
+        Confidence,
+        investigation(review_claim, C)
+    ).
+
+/* ================================================================
+   TRIGGER 15: EPISTEMIC TRAP
+   ================================================================
+   A powerless observer's restricted view produces a different
+   classification than the full-data classification. The gap between
+   classify_from_restricted/3 and dr_type/3 measures the epistemic
+   cost of the observer's position. When they differ, the observer
+   is trapped in a gauge-fixed frame that systematically distorts
+   their perception of the constraint.
+
+   Requires: constraint_indexing (always available)
+   ================================================================ */
+
+trigger_epistemic_trap(C, Context, Hypothesis) :-
+    % Build canonical powerless context
+    PowerlessCtx = context(agent_power(powerless),
+                           time_horizon(biographical),
+                           exit_options(trapped),
+                           spatial_scope(local)),
+    % Full classification under powerless context
+    catch(drl_core:dr_type(C, PowerlessCtx, DrType), _, fail),
+    % Restricted classification (observer-accessible features only)
+    catch(constraint_indexing:classify_from_restricted(C, PowerlessCtx, RestrictedType), _, fail),
+    % Types must differ (the epistemic trap)
+    RestrictedType \= DrType,
+    RestrictedType \= indeterminate,
+    % Also get analytical context type for comparison
+    catch(drl_core:dr_type(C, Context, AnalyticalType), _, (AnalyticalType = unknown)),
+    % Check for cohomological obstruction if available
+    (   subsystem_available(cohomology),
+        catch(grothendieck_cohomology:cohomological_obstruction(C, _, H1), _, fail)
+    ->  true
+    ;   H1 = -1
+    ),
+    EvidenceLines = [
+        evidence_line(constraint_indexing, restricted_type, RestrictedType),
+        evidence_line(constraint_indexing, dr_type_powerless, DrType),
+        evidence_line(constraint_indexing, dr_type_analytical, AnalyticalType),
+        evidence_line(cohomology, h1_obstruction, H1)
+    ],
+    Explanations = [
+        explanation(
+            gauge_fixed_distortion,
+            high,
+            'A powerless observer with restricted access to structural features classifies this constraint differently than the full-data classification. The observer is trapped in an epistemic frame where the true nature of the constraint is systematically hidden by their limited access to metrics.'
+        ),
+        explanation(
+            conservative_default,
+            medium,
+            'The restricted classification uses conservative defaults for inaccessible features, which may systematically bias toward certain types. The divergence reflects default-substitution mechanics rather than genuine epistemic trapping.'
+        )
+    ],
+    compute_confidence(EvidenceLines, 0.70, Confidence),
+    config:param(abductive_confidence_floor, Floor),
+    Confidence >= Floor,
+    Hypothesis = hypothesis(
+        C,
+        epistemic_trap,
+        anomaly(restricted_view_divergence, DrType-RestrictedType),
+        EvidenceLines,
+        Explanations,
+        Confidence,
+        investigation(inspect_classification, C)
+    ).
+
+/* ================================================================
+   TRIGGER 16: CLASSICAL ORACLE FAILURE
+   ================================================================
+   MaxEnt is confident (low entropy) yet cohomological obstruction
+   is non-zero. A classical oracle with access to all metric data
+   produces a confident answer, but the structural analysis reveals
+   that the answer changes across observer contexts. The oracle is
+   confidently wrong from at least one frame.
+
+   Exclusion gate: does not fire if T13 (maxent_divergence) already
+   fired for this constraint, since T13 provides a stronger signal
+   (indexed divergence subsumes confident-oracle failure).
+
+   Requires: maxent + cohomology
+   ================================================================ */
+
+trigger_classical_oracle_failure(C, Context, Hypothesis) :-
+    subsystem_available(maxent),
+    subsystem_available(cohomology),
+    % Cohomological obstruction confirms reclassification
+    catch(grothendieck_cohomology:cohomological_obstruction(C, _, H1), _, fail),
+    H1 > 0,
+    % MaxEnt entropy is low (oracle is confident)
+    catch(maxent_classifier:maxent_entropy(C, Context, HNorm), _, fail),
+    config:param(abductive_oracle_entropy_ceiling, EntropyCeiling),
+    HNorm =< EntropyCeiling,
+    % Exclusion gate: skip if T13 already fired (stronger signal)
+    \+ abd_hypothesis(C, Context, hypothesis(_, maxent_divergence, _, _, _, _, _)),
+    % Collect evidence
+    catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+    catch(purity_scoring:purity_score(C, Purity), _, (Purity = -1.0)),
+    EvidenceLines = [
+        evidence_line(cohomology, h1_obstruction, H1),
+        evidence_line(maxent, entropy, HNorm),
+        evidence_line(signature, det_type, DetType),
+        evidence_line(signature, purity_score, Purity)
+    ],
+    Explanations = [
+        explanation(
+            confident_but_context_dependent,
+            high,
+            'MaxEnt assigns low entropy (high confidence) to this constraint, but cohomological obstruction reveals it reclassifies across observer contexts. The classical oracle is confidently wrong from at least one frame — it cannot detect its own observer-dependence.'
+        ),
+        explanation(
+            obstruction_without_consequence,
+            low,
+            'The cohomological obstruction may be technically non-zero but practically insignificant. If H¹ is low and the reclassification involves closely related types, the oracle failure may not have meaningful consequences.'
+        )
+    ],
+    % Confidence scales with H¹ severity
+    BaseConf is 0.55 + min(0.15, H1 * 0.03),
+    compute_confidence(EvidenceLines, BaseConf, Confidence),
+    config:param(abductive_confidence_floor, Floor),
+    Confidence >= Floor,
+    Hypothesis = hypothesis(
+        C,
+        classical_oracle_failure,
+        anomaly(confident_oracle_with_obstruction, HNorm-H1),
+        EvidenceLines,
+        Explanations,
+        Confidence,
+        investigation(inspect_metrics, C)
     ).

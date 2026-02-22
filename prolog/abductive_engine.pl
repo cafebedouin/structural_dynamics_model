@@ -12,7 +12,7 @@
 %
 % Architecture (Phase 6B decomposition):
 %   abductive_helpers.pl  — shared dynamic facts, override tables, helpers
-%   abductive_triggers.pl — T1-T11 trigger definitions
+%   abductive_triggers.pl — T1-T11, T13-T16 trigger definitions
 %   abductive_engine.pl   — runner, query API, cleanup, selftest (this file)
 %
 % Standalone run:
@@ -78,6 +78,10 @@ abductive_cleanup :-
      7. contamination_cascade           — fpn + drift
      8. dormant_extraction              — maxent + fingerprint + signature
     11. snare_leaning_tangled           — maxent psi + signature
+    13. maxent_divergence               — indexed maxent + cohomology
+    14. hub_conflict                    — cohomology (H¹ band)
+    15. epistemic_trap                  — constraint_indexing (restricted view)
+    16. classical_oracle_failure        — maxent + cohomology (confident + H¹>0)
    ================================================================ */
 
 abductive_run(Context, Summary) :-
@@ -107,6 +111,12 @@ abductive_run(Context, Summary) :-
     run_trigger_over_constraints(abductive_triggers:trigger_contamination_cascade, Constraints, Context),        % T7
     run_trigger_over_constraints(abductive_triggers:trigger_dormant_extraction, Constraints, Context),           % T8
     run_trigger_over_constraints(abductive_triggers:trigger_snare_leaning_tangled, Constraints, Context),        % T11
+
+    % Phase 4: Cohomological & epistemic triggers (require cohomology + optional indexed MaxEnt)
+    run_trigger_over_constraints(abductive_triggers:trigger_maxent_divergence, Constraints, Context),           % T13
+    run_trigger_over_constraints(abductive_triggers:trigger_hub_conflict, Constraints, Context),                % T14
+    run_trigger_over_constraints(abductive_triggers:trigger_epistemic_trap, Constraints, Context),              % T15
+    run_trigger_over_constraints(abductive_triggers:trigger_classical_oracle_failure, Constraints, Context),    % T16
 
     % Compute summary
     findall(H, abd_hypothesis(_, Context, H), AllHypotheses),
@@ -254,7 +264,9 @@ abductive_selftest :-
                        coverage_gap, maxent_shadow_divergence,
                        convergent_structural_stress, accelerating_pathology,
                        contamination_cascade, dormant_extraction,
-                       snare_leaning_tangled]),
+                       snare_leaning_tangled, maxent_divergence,
+                       hub_conflict, epistemic_trap,
+                       classical_oracle_failure]),
         (   abductive_by_class(Class, Context, ClassH),
             length(ClassH, NClass),
             format('  ~w: ~w~n', [Class, NClass])

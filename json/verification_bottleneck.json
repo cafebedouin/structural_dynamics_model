@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "verification_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "verif"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Verification Bottleneck in Quantum Materials Discovery",
+    "topic_domain": "condensed_matter_physics/experimental_verification",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "original_research_group"
+    ],
+    "victims": [
+      "field_epistemic_reliability",
+      "replication_groups",
+      "funding_agencies"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Field's Epistemic Reliability",
+      "comment": "PERSPECTIVE 1: FIELD EPISTEMIC RELIABILITY (SNARE) \u2014 Cannot exit the verification crisis; bears full cost of premature claims"
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Replication Group",
+      "comment": "PERSPECTIVE 2: REPLICATION GROUP (SNARE) \u2014 Constrained by resource requirements and career risk of negative results"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Original Research Group",
+      "comment": "PERSPECTIVE 3: ORIGINAL RESEARCH GROUP (ROPE) \u2014 Benefits from first-mover advantage in publications and funding"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Funding Agency",
+      "comment": "PERSPECTIVE 4: FUNDING AGENCY (TANGLED ROPE) \u2014 Needs breakthrough claims for political support but bears cost of false positives"
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (SNARE) \u2014 Sees structural extraction from epistemic commons"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "replication_timeline_threshold",
+      "question": "What timeline threshold distinguishes legitimate discovery lag from extractive claim-staking?",
+      "resolution_mechanism": "Historical analysis of confirmed vs retracted discoveries; correlation between replication timeline and ultimate validity",
+      "impact": "If threshold < 2 years: many legitimate discoveries misclassified as extraction. If threshold > 5 years: extractive claims persist unchallenged.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline threshold for distinguishing discovery lag from extraction"
+    },
+    {
+      "id": "alternative_probe_sufficiency",
+      "question": "Do alternative experimental probes (muon spin rotation, NMR, neutron scattering) constitute independent verification or merely correlated measurements?",
+      "resolution_mechanism": "Cross-technique correlation analysis; identification of shared systematic errors or sample preparation dependencies",
+      "impact": "If truly independent: verification bottleneck is coordination problem (Rope). If correlated: bottleneck is extraction mechanism (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative probes provide independent verification"
+    },
+    {
+      "id": "career_incentive_magnitude",
+      "question": "What is the quantitative career benefit of premature claim vs cost of failed replication?",
+      "resolution_mechanism": "Bibliometric analysis of citation advantage for first claims; career trajectory analysis for authors of retracted vs confirmed discoveries",
+      "impact": "If benefit >> cost: Snare classification confirmed. If benefit \u2248 cost: reclassify as Tangled Rope with symmetric risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Asymmetry between career benefit of claim and cost of failure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The verification bottleneck in quantum materials discovery creates a structural tension between the career and funding incentives for claiming novel phenomena and the epistemic requirement for independent replication. Original research groups benefit from first-mover advantage in publications, citations, and grant funding during the 2-5 year window before independent verification is complete. The field's epistemic reliability bears the cost of premature claims that may not replicate, while replication groups face resource constraints and career disincentives for publishing negative results. The constraint has intensified as experimental complexity has increased (requiring specialized equipment, sample preparation protocols, and measurement expertise that few groups possess) and as funding agencies increasingly reward breakthrough claims over incremental verification work.",
+    "key_agents": [
+      "Original Research Group: Primary beneficiary (institutional/arbitrage) \u2014 captures citation advantage and funding priority during verification window",
+      "Field Epistemic Reliability: Primary victim (powerless/trapped) \u2014 abstract collective good that cannot exit or organize; bears full cost of false positives",
+      "Replication Groups: Secondary victim (moderate/constrained) \u2014 face resource barriers and career risk of negative results; constrained by equipment access and expertise requirements",
+      "Funding Agencies: Institutional actor (institutional/constrained) \u2014 benefit from breakthrough narratives for political support but bear long-term cost of credibility damage from retractions",
+      "Analytical Observer: Sees full extraction structure (analytical/analytical) \u2014 recognizes asymmetric incentives and epistemic commons depletion"
+    ],
+    "logic_rationale": "Extractiveness (0.72): The original research group captures substantial career and funding benefits during the verification window (typically 2-5 years for complex quantum materials claims), while the epistemic cost of premature claims is externalized to the field. The extraction is structural rather than intentional \u2014 the incentive gradient favors early publication even when internal confidence is moderate. The increased value reflects the magnitude of career advantage captured during the verification window relative to the externalized epistemic cost. Suppression (0.78): High barriers to independent verification include: (1) specialized equipment requirements (dilution refrigerators, high-field magnets, synchrotron beamtime), (2) tacit knowledge in sample preparation, (3) publication bias against negative results, (4) career risk for junior researchers challenging established groups, (5) funding concentration in groups with track records of breakthrough claims. The suppression is higher than extractiveness because the barriers are primarily structural (equipment access, expertise requirements) rather than purely incentive-driven. The increased value reflects the severity of resource barriers and the strength of institutional mechanisms that prevent challenge. Theater ratio (0.38): Moderate theatrical component includes: performative confidence in press releases, selective emphasis on supporting data while downplaying anomalies, citation networks that amplify preliminary claims, conference presentations that project certainty beyond data quality. However, substantial functional activity remains: genuine experimental work, peer review (albeit imperfect), eventual replication attempts. The reduced value reflects that most activity is still functional research rather than pure performance.",
+    "perspectival_gap": "The original research group experiences the constraint as a coordination mechanism (Rope) \u2014 they are solving the legitimate problem of communicating preliminary findings to enable follow-up work, and the career benefits are viewed as fair compensation for high-risk research. The field's epistemic reliability experiences it as pure extraction (Snare) \u2014 premature claims contaminate the literature, misdirect research effort, and erode public trust, with no mechanism for self-correction until years later. Replication groups experience it as a Snare with constrained exit \u2014 they can choose not to attempt replication, but this choice means abandoning their research area or accepting subordinate status. Funding agencies experience it as Tangled Rope \u2014 they need breakthrough narratives to justify budgets to political overseers, but also bear reputational cost when high-profile claims fail to replicate. The analytical observer sees the structural extraction: the verification bottleneck is not a natural coordination problem but an artifact of misaligned incentives that systematically transfers epistemic risk from claimants to the commons.",
+    "directionality_logic": "Original research group: Declared as beneficiary with institutional power and arbitrage exit options. The derivation chain produces low d (\u22480.05) \u2192 negative f(d) (\u2248-0.12) \u2192 negative effective extraction. This correctly captures their structural position: they benefit from the constraint and can exit to other research areas or institutions if challenged. Field epistemic reliability: Declared as victim with powerless status and trapped exit options. Derivation produces high d (\u22480.95) \u2192 high f(d) (\u22481.42) \u2192 amplified extraction. Correctly captures that the field as an abstract collective cannot organize or exit, and bears the full cost of contaminated literature. Replication groups: Declared as victim with moderate power and constrained exit. Derivation produces d \u22480.75 \u2192 f(d) \u22481.10. Captures their intermediate position: they have some agency (can choose not to replicate) but face significant barriers (resource requirements, career risk). Funding agencies: Declared as both beneficiary (political support from breakthrough narratives) and victim (reputational cost of retractions) with institutional power and constrained exit. The dual declaration produces d \u22480.50 \u2192 f(d) \u22480.65, reflecting their ambiguous structural position. No override needed \u2014 the symmetric declaration correctly models their Tangled Rope experience.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED via multi-perspective classification and structural relationship declarations. The constraint is NOT pure extraction masquerading as coordination \u2014 it is genuine extraction enabled by asymmetric information and misaligned incentives. The original research group's Rope classification is their subjective experience (they see themselves as coordinators), but the analytical perspective reveals the Snare structure: high extraction (0.72), high suppression (0.78), and systematic transfer of epistemic risk to victims with no exit options. The Tangled Rope classification for funding agencies shows how institutional actors can simultaneously benefit from and be victimized by the same constraint. The resolution mechanism is structural decomposition: the constraint has both a coordination function (communicating preliminary findings) and an extraction function (capturing career benefits while externalizing epistemic risk). The extraction dominates because: (1) the verification window (2-5 years) is long relative to career timescales, (2) replication groups face asymmetric costs (resource requirements, publication bias against negative results), (3) the field's epistemic reliability cannot organize to demand higher standards. The omega variables identify the empirical tests that would confirm or refute the Snare classification: if alternative probes are truly independent and replication timelines are short, the constraint would reclassify as Rope; if career benefits greatly exceed costs of failed replication, Snare is confirmed."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "inverse_spin_valve_signature",
+      "noncentrosymmetric_asoc_coupling"
+    ],
+    "dual_formulation_note": "The verification bottleneck is downstream of specific materials claims (inverse spin valve signature, noncentrosymmetric ASOC coupling) but represents a distinct structural constraint. The upstream constraints have their own \u03b5 values reflecting the empirical status of the specific physical claims; the verification bottleneck has \u03b5=0.72 reflecting the career incentive asymmetry and resource barriers to replication. The bottleneck affects all quantum materials claims but is particularly severe for claims requiring specialized equipment or tacit experimental knowledge. Linked via network.affects_constraints to show that the epistemic status of upstream claims is contaminated by the verification bottleneck structure."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "inverse_spin_valve_signature",
+      "noncentrosymmetric_asoc_coupling"
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification",
+    "version": "1.0",
+    "generated_date": "2024-05-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_community",
+      "general_public"
+    ],
+    "victims": [
+      "researchers_with_unreplicable_findings",
+      "individual_labs_funding_replication"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Epistemologist",
+      "comment": "From a high level, the process is a hybrid coordination/extraction mechanism. The costs (extraction) are a necessary, non-trivial, and asymmetrically applied component for the system to generate reliable knowledge."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Scientific Establishment",
+      "comment": "For the community as a whole, this process is the bedrock of its credibility. It is a foundational coordination mechanism (Rope) whose extractive costs are perceived as minimal relative to the benefit of a shared standard."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Researcher with a Spurious Result",
+      "comment": "For a lab with an incorrect, fraudulent, or unreplicable finding, the verification process is a Tangled Rope. It is not pure extraction (a Snare), but a costly filtering mechanism they are trapped within."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Pioneering Lab with a Valid Claim",
+      "comment": "For the lab with a correct but novel finding, the process is a Rope. It is a necessary coordination path to acceptance, and while it imposes costs, these are seen as part of the functional overhead of scientific progress, not as asymmetric extraction."
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the standard scientific method of requiring independent replication and corroboration before a novel claim is accepted as fact. In fields like condensed matter physics, a groundbreaking claim (e.g., a new superconductivity mechanism or a spintronic effect like the inverse spin-valve in NbRe systems) is not canonized until other labs, often using different experimental setups, can reproduce the result. This process coordinates the entire scientific community towards a shared, reliable understanding of reality.",
+    "key_agents": [
+      "The Scientific Community (institutional/beneficiary): Gains a reliable, self-correcting body of knowledge.",
+      "Researchers with Unreplicable Findings (powerless/victim): Their claims are invalidated, and their reputation is harmed.",
+      "Labs Performing Replication (organized/victim): Bear the direct financial and temporal costs of verification.",
+      "The Analytical Observer (analytical): Views the system as a whole, recognizing its function as a hybrid coordination/extraction mechanism."
+    ],
+    "logic_rationale": "The base extractiveness (\u03b5=0.35) is significant, representing the real cost in time, funding, and labor required to perform replications. This cost is borne by the community but is particularly acute for the labs involved. Suppression (0.40) reflects the system's explicit function: to suppress the propagation of unverified claims. It is not a bug but a feature. The theater ratio is low because the process is overwhelmingly functional.",
+    "perspectival_gap": "The primary gap is between the high-level analytical view and the powerless agent (both see a Tangled Rope) versus the institutional and organized actors who experience it as a functional Rope. For those whose claims are invalidated, it is a costly filtering mechanism (Tangled Rope). For the community and successful labs, it's a necessary coordination hurdle with manageable costs (Rope). The classification depends on whether an agent is primarily paying the cost of the filter or benefiting from the coordination it enables.",
+    "directionality_logic": "The directionality is determined by who benefits from the shared standard of truth versus who pays the cost of upholding it. The 'scientific_community' is the clear beneficiary, gaining credibility and progress. The 'researchers_with_unreplicable_findings' are the primary victims, as the system is designed to extract and nullify their claims. Labs funding replication are secondary victims, paying the operational cost for the community's benefit.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by correctly identifying the costs of coordination. Classifying it as a Tangled Rope acknowledges that even a beneficial system of coordination has coercive and extractive properties that cannot be ignored. A simple 'Rope' classification would obscure the real costs imposed on participants."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "claim_inverse_spin_valve_nb_re"
+    ]
+  }
+}

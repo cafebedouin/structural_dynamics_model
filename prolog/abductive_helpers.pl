@@ -138,11 +138,13 @@ subsystem_available(fingerprint) :-  % Always available (computed on demand)
     !.
 subsystem_available(cohomology) :-
     predicate_property(grothendieck_cohomology:cohomological_obstruction(_,_,_), defined), !.
+subsystem_available(indexed_maxent) :-
+    catch(maxent_classifier:maxent_indexed_dist(_, _, _), _, fail), !.
 
 %% available_subsystems(-List)
 %  Returns list of subsystem atoms that are currently available.
 available_subsystems(Subs) :-
     findall(S, (
-        member(S, [maxent, fpn, dirac, drift, signature, mismatch, fingerprint, cohomology]),
+        member(S, [maxent, indexed_maxent, fpn, dirac, drift, signature, mismatch, fingerprint, cohomology]),
         subsystem_available(S)
     ), Subs).

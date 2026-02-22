@@ -444,6 +444,9 @@ param(abductive_stress_purity_threshold,     0.60).   % T10 indicator: purity be
 param(abductive_stress_coupling_threshold,   0.75).   % T10 indicator: coupling above this = stressed
 param(abductive_stress_entropy_threshold,    0.15).   % T10 indicator: entropy above this = stressed
 param(abductive_stress_drift_mode,           any).    % T10 indicator: any | critical | count_2plus
+param(abductive_maxent_divergence_threshold,  0.05).   % T13: min indexing divergence to fire
+param(abductive_hub_conflict_h1_threshold,    4).      % T14: exact H¹ band for hub conflict
+param(abductive_oracle_entropy_ceiling,       0.40).   % T16: max H_norm for "confident oracle"
 
 % Post-synthesis divergence trigger (T12)
 param(post_synthesis_enabled,                 1).     % T12 master switch
