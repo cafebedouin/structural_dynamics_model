@@ -699,4 +699,21 @@ def lint_file(filepath):
                 f"has no constraint_metric declarations — metrics will be imputed from config defaults"
             )
 
+    # 31. IDENTICAL_EXIT_OPTIONS WARNING (same-level actor guidance)
+    # When a non-uniform-type file declares multiple classification types but
+    # uses the same exit_options across all perspectives, the perspectival gap
+    # may be collapsed. This is the common authoring error for same-level actor
+    # constraints where both peers get identical context tuples.
+    if not uniform_type:
+        exit_atoms = set(re.findall(
+            r'constraint_classification\(.*?exit_options\((\w+)\)',
+            content, re.DOTALL))
+        if len(exit_atoms) == 1 and len(found_types) > 1:
+            errors.append(
+                f"IDENTICAL_EXIT_OPTIONS: All perspectives use exit_options({list(exit_atoms)[0]}). "
+                "If the constraint involves actors at different structural positions, "
+                "differentiate exit_options to capture the asymmetry. "
+                "See: docs/observer_position_same_level_actors.md"
+            )
+
     return errors

@@ -190,6 +190,36 @@ constraint_indexing:constraint_classification([id], [computed_type],
 %             exit_options(arbitrage),
 %             spatial_scope(national))).
 
+% --- SAME-LEVEL ACTOR PERSPECTIVES (declare when applicable) ---
+% When a constraint involves extraction between actors at the same nominal
+% power level (peers, equal-rank colleagues, similarly-sized firms, states),
+% differentiate them through exit_options and beneficiary/victim declarations.
+% The key: agent_power is CONSTRAINT-RELATIVE, not actor-absolute.
+%
+% Common error: giving both peers identical exit_options. Ask what each
+% actor's actual exit capacity is RELATIVE TO THIS SPECIFIC CONSTRAINT.
+%
+% Example — Communal narcissism (individual-individual):
+%
+% % Perspective: The narcissist (moderate power, mobile exit — can leave at will)
+% constraint_indexing:constraint_classification([id], rope,
+%     context(agent_power(moderate),
+%             time_horizon(biographical),
+%             exit_options(mobile),
+%             spatial_scope(local))).
+%
+% % Perspective: The target (powerless relative to constraint, trapped exit)
+% constraint_indexing:constraint_classification([id], snare,
+%     context(agent_power(powerless),
+%             time_horizon(biographical),
+%             exit_options(trapped),
+%             spatial_scope(local))).
+%
+% Expected perspectival gap: extractor sees rope; target sees snare;
+% analytical sees tangled_rope. If all positions produce the same type,
+% the exit_options were not sufficiently differentiated.
+% See: docs/observer_position_same_level_actors.md
+
 % PERSPECTIVE 5: THE ARCHITECT (SCAFFOLD)
 % Temporary coordination that expires over time.
 % Requires: has_sunset_clause declared, χ ≤ 0.30, theater ≤ 0.70.
@@ -246,6 +276,11 @@ test(threshold_validation) :-
  * INTER-INSTITUTIONAL DYNAMICS (if applicable):
  *   [How do different institutional actors experience this constraint
  *    differently? Why do they have different exit options?]
+ *
+ * SAME-LEVEL ACTOR DYNAMICS (if applicable):
+ *   [How do actors at the same nominal power level experience this
+ *    constraint differently? What constraint-specific factors differentiate
+ *    their exit options? Why does agent_power differ despite equal global standing?]
  *
  * MANDATROPHY ANALYSIS:
  *   [How does the classification prevent mislabeling coordination as

@@ -224,6 +224,16 @@ The engine differentiates these through the derivation chain: constrained exit +
 
 **Declare inter-institutional perspectives when:** regulator vs regulated industry, state vs church, sanctioning vs sanctioned nation, exporting vs importing sector, parent company vs subsidiary, union vs management.
 
+**Same-Level Actor Perspectives:**
+
+When a constraint involves extraction between actors at the same nominal power level — peers, equal-rank colleagues, similarly-sized firms, states — the existing tuple handles lateral differentiation through `exit_options` and beneficiary/victim declarations. No new axis is needed. The critical principle: `agent_power` is **constraint-relative**, not actor-absolute. Two peers may hold equal global standing yet occupy different structural positions relative to THIS specific constraint.
+
+Differentiate `exit_options` independently for each actor based on their actual exit capacity within the constraint. The common authoring error is defaulting both actors to identical context tuples, which collapses the perspectival gap. For each actor, ask: "Can this agent walk away from this specific constraint without significant cost?" If one can and the other cannot, their `exit_options` must differ (e.g., `mobile` vs `trapped`, or `arbitrage` vs `constrained`).
+
+Declare beneficiaries and victims from the constraint's structure, not from the actors' global status. The extractor is the beneficiary; the target is the victim. Expect a perspectival gap: the extractor typically sees rope or scaffold; the target sees snare or tangled_rope; the analytical observer sees tangled_rope. If all perspectives produce the same type, the exit_options were not sufficiently differentiated.
+
+**Declare same-level actor perspectives when:** peer manipulation (communal narcissism, workplace bullying), inter-firm extraction (gatekeeping, norm-setting among competitors), interstate dynamics (regulatory arbitrage, sanctions between similar-sized states), intra-community dynamics (HOA enforcement, professional guild gatekeeping). See: `docs/observer_position_same_level_actors.md`.
+
 **Exception — Uniform-Type Constraints:**
 
 Some constraints classify identically from ALL perspectives. In these cases, the perspectival minimum is relaxed — you do not need powerless/institutional if they would produce the same type:
@@ -245,6 +255,7 @@ Explain your reasoning for specific scores. Explicitly address:
 * **Perspectival Gaps**: Why the target and beneficiary disagree on classification.
 * **Directionality Logic**: Who benefits, who bears costs, and why. How do the beneficiary/victim declarations map to real structural relationships?
 * **Inter-institutional dynamics** (if applicable): How different institutional actors experience the same constraint differently. Why they have different exit options.
+* **Same-level actor dynamics** (if applicable): How actors at the same nominal power level experience this constraint differently. What constraint-specific factors differentiate their exit options. Why agent_power differs despite equal global standing.
 * **Mandatrophy Analysis**: How does the classification prevent mislabeling coordination as pure extraction (or vice versa)?
 
 ### Section 6: Alternative Analysis (Mandatrophy Resolution)
@@ -370,6 +381,7 @@ Before outputting your .pl file, verify:
 * [ ] **Scope Awareness**: Spatial scope now affects χ via σ(S). Local (σ=0.8) dampens extraction; global (σ=1.2) amplifies it. Do your perspectives use appropriate scopes?
 * [ ] **Perspective Minimum**: At least one `powerless` and one `institutional` perspective included — UNLESS the constraint is a uniform-type (mountain-only or rope-only), in which case any 2+ perspectives suffice.
 * [ ] **Inter-Institutional Check**: If the constraint operates between institutional actors with different structural relationships, are separate perspectives declared for each? Do they have different exit_options?
+* [ ] **Same-Level Actor Check**: If the constraint involves extraction between actors at the same nominal power level, are `exit_options` differentiated for each actor? Do the perspectives produce a perspectival gap (not all the same type)?
 * [ ] **Temporal Data**: If base extraction > 0.46, include `measurement/5` facts at 3+ time points for `theater_ratio` and `base_extractiveness`.
 * [ ] **Constraint Metrics**: Include `narrative_ontology:constraint_metric/3` facts for `extractiveness`, `suppression_requirement`, and `theater_ratio` matching your domain priors values.
 * [ ] **Constraint Claim**: Does the file declare `narrative_ontology:constraint_claim/2`? This is required for Boltzmann compliance analysis and false natural law detection.
@@ -392,6 +404,7 @@ The corpus needs balanced representation across all six types. When choosing sce
 | **Scaffold** (most needed) | Transitional policies, emergency measures, development programs, sunset legislation | χ ≤ 0.30, theater ≤ 0.70 | beneficiary + sunset clause |
 | **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 | victim required |
 | **Inter-institutional** (NEW, needed) | Regulatory capture, trade agreements, sanctions, church/state, union/management | Varies by institutional perspective | Multiple institutional perspectives + overrides |
+| **Same-level lateral** (NEW, needed) | Peer manipulation, communal narcissism, workplace gatekeeping, interstate regulatory arbitrage, norm-setting | Varies by actor perspective | Differentiated exit_options + beneficiary/victim per actor |
 | **Mountain** (well-covered, needs NL metrics) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.25, suppression ≤ 0.05, accessibility_collapse ≥ 0.85, resistance ≤ 0.15, emerges_naturally | No beneficiary/victim needed |
 | **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.45, χ ≤ 0.35 | beneficiary; victim usually absent |
 | **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.25, theater ≥ 0.70 | victim possible; beneficiary unlikely |
