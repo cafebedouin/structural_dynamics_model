@@ -7,8 +7,9 @@ Usage:
 import json
 import os
 import re
-
 import streamlit as st
+import sys
+from pathlib import Path
 
 # Bridge API key from Streamlit secrets to env before orchestrator import
 if "GEMINI_API_KEY" in st.secrets:
@@ -16,7 +17,12 @@ if "GEMINI_API_KEY" in st.secrets:
 elif "GOOGLE_API_KEY" in st.secrets:
     os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
-from orchestrator import DRAuditOrchestrator, PipelineResult  # noqa: E402
+# This adds "/mount/src/structural_dynamics_model" to your path
+root_path = Path(__file__).resolve().parent.parent
+if str(root_path) not in sys.path:
+    sys.path.insert(0, str(root_path))
+
+from agent.orchestrator import DRAuditOrchestrator, PipelineResult  # noqa: E402
 
 st.set_page_config(page_title="DR-Audit Studio", layout="wide")
 st.title("DR-Audit Studio")
