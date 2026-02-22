@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UKE_SCOPE Manifest",
+  "description": "JSON Schema for UKE_SCOPE v2.0-json manifest output. Validates the structured decomposition produced by the SCOPE protocol.",
+  "type": "object",
+  "required": ["protocol", "version", "domain", "family_id", "axes",
+               "generation_sequence", "extraction_summary"],
+  "properties": {
+    "protocol": { "const": "UKE_SCOPE" },
+    "version": { "type": "string" },
+    "domain": { "type": "string" },
+    "family_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "Snake_case label for the constraint family"
+    },
+    "topic_summary": {
+      "type": "string",
+      "description": "2-3 sentence summary of the raw input"
+    },
+    "extraction_summary": {
+      "type": "object",
+      "required": ["entity_count", "claim_count", "tension_count",
+                    "mechanism_count", "absence_count"],
+      "properties": {
+        "entity_count": { "type": "integer", "minimum": 0 },
+        "claim_count": { "type": "integer", "minimum": 0 },
+        "tension_count": { "type": "integer", "minimum": 0 },
+        "mechanism_count": { "type": "integer", "minimum": 0 },
+        "absence_count": { "type": "integer", "minimum": 0 },
+        "key_entities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Entity names with roles"
+        },
+        "key_tensions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "One sentence per tension"
+        }
+      }
+    },
+    "axes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "structural_delta", "primary_observable",
+                      "epsilon_bin", "hypothesis", "selected"],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "human_readable": {
+            "type": "string",
+            "description": "Display-friendly axis title"
+          },
+          "structural_delta": { "type": "string" },
+          "primary_observable": { "type": "string" },
+          "epsilon_bin": {
+            "enum": ["v_low", "low", "mod", "high"]
+          },
+          "hypothesis": {
+            "enum": ["mountain", "rope", "tangled_rope",
+                      "snare", "scaffold", "piton"]
+          },
+          "beneficiary": { "type": ["string", "null"] },
+          "victim": { "type": ["string", "null"] },
+          "downstream_of": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "feeds_into": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "centrality_score": { "type": "integer", "minimum": 0 },
+          "selected": { "type": "boolean" },
+          "generation_order": { "type": ["integer", "null"] },
+          "selection_reason": { "type": "string" }
+        }
+      }
+    },
+    "generation_sequence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "deferred_axes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "structural_delta", "hypothesis", "deferral_reason"],
+        "properties": {
+          "claim_id": { "type": "string" },
+          "structural_delta": { "type": "string" },
+          "hypothesis": { "type": "string" },
+          "deferral_reason": { "type": "string" }
+        }
+      }
+    },
+    "omegas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description", "source"],
+        "properties": {
+          "id": { "type": "string" },
+          "description": { "type": "string" },
+          "source": { "type": "string" }
+        }
+      }
+    },
+    "fracture_scan": {
+      "type": "object",
+      "properties": {
+        "f14_tunnel_vision": { "type": "boolean" },
+        "f15_premature_closure": { "type": "boolean" },
+        "f03_hasty_generalization": { "type": "boolean" },
+        "f34_epistemic_trespass": { "type": "boolean" },
+        "f01_premise_drift": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
