@@ -35,8 +35,8 @@ with st.sidebar:
     axes_count = st.number_input("Axes to select", min_value=1, max_value=6, value=3)
     skip_search = st.checkbox("Skip search grounding")
     skip_corpus = True  # Corpus pipeline runs locally only
-    st.info("Corpus pipeline runs via CLI (`make quick` or `python run_pipeline.py`). "
-            "Per-constraint reports still run here.")
+#    st.info("Corpus pipeline runs via CLI (`make quick` or `python run_pipeline.py`). "
+#            "Per-constraint reports still run here.")
     skip_essay = st.checkbox("Skip essay synthesis")
     dry_run = st.checkbox("Dry run (SCOPE only)")
 
