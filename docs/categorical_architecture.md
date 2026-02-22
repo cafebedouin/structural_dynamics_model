@@ -170,7 +170,7 @@ where contamination flows from lower-purity neighbors to higher-purity ones (the
 
 The convergence proof relies on monotonicity: contamination is non-decreasing across iterations (using intrinsic purity, not iterating EP, as the reference for Delta ensures this), and purity is bounded below by 0.0. By Knaster-Tarski, this converges to the greatest fixed point of the contamination endofunctor.
 
-In coalgebraic terms, the FPN equilibrium is the **terminal coalgebra** of the contamination endofunctor on the purity lattice [0, 1]^n. The Jacobi iteration from the top (intrinsic purities) converges to this terminal coalgebra.
+In coalgebraic terms, the FPN equilibrium is the **terminal coalgebra** of the contamination endofunctor on the purity lattice [0, 1]^n. The endofunctor is Scott-continuous (it is a composition of max, min, multiplication by non-negative constants, and addition — all Scott-continuous operations on [0,1]^n), so the greatest fixed point is the terminal coalgebra by standard results (Barr 1993; Adamek-Milius-Moss). The Jacobi iteration from the top (intrinsic purities) converges to this terminal coalgebra.
 
 ---
 
@@ -210,11 +210,13 @@ The categorical framing is most productive in three areas:
 
 1. **The Boltzmann engine IS naturality testing.** This is not an analogy — the factorization test is a naturality square by construction. The FNL/CI_Rope/FCR signatures are naturality failure witnesses and certificates. This is the strongest mapping in the system and would survive formal verification.
 
-2. **The FPN IS a greatest fixed point.** The Jacobi iteration from intrinsic purities converges to the terminal coalgebra of the contamination endofunctor. The monotonicity proof is sound and the convergence guarantee is real.
+2. **The FPN IS a greatest fixed point.** The Jacobi iteration from intrinsic purities converges to the greatest fixed point of the contamination endofunctor. The endofunctor is Scott-continuous (piecewise-linear and monotone on the compact lattice [0,1]^n), so the greatest fixed point is the terminal coalgebra by standard results (Barr 1993). The monotonicity proof is sound and the convergence guarantee is real. **Rigor: STRUCTURAL** — the proof is straightforward but has not been formally written; documenting the Scott-continuity argument in `drl_fpn.pl` would move this to STRICT.
 
 3. **The abductive engine IS a cross-functor consistency checker.** The artifact/genuine distinction maps cleanly onto expected vs. unexpected naturality failures. The 8 triggers test commutativity of diagrams formed by independent subsystems.
 
 4. **Gauge orbits ARE orbits.** The Dirac classification module implements genuine orbit computation under the group of context automorphisms. The gauge-fixed/gauge-free distinction is mathematically precise.
+
+5. **The three-way equivalence is two-out-of-three.** The Lawvere ↔ Grothendieck equivalence (naturality ↔ descent on the specific site) is STRICT — these are genuinely the same mathematical condition. The Noether column uses "conservation" as shorthand for invariance under a discrete group action, which is the *precondition* of Noether's theorem, not the theorem itself (which requires continuous Lie symmetry and a Lagrangian). The table's rigor is STRUCTURAL, not STRICT: the same predicates implement all three columns, but the Noether mapping is a productive structural parallel, not a formal isomorphism. See `noether_implementation.md` §5 for the corrected table.
 
 ### Where it misleads
 
@@ -225,6 +227,8 @@ Three of Gemini's claims are substantively wrong:
 2. **Power scaling is NOT an adjunction.** The sigmoid scaling creates a parametric family of type assignments, but the triangle identities have not been verified. The existential/universal quantifier structure is suggestive but insufficient. Calling this an adjunction would invite incorrect use of adjunction theorems.
 
 3. **Signature resolution is NOT a meet.** `resolve_modal_signature_conflict/3` is a priority dispatch table. It lacks commutativity and associativity. Calling it a meet would imply lattice-theoretic properties the operation does not have.
+
+4. **H¹ is not formal Čech cohomology.** The `count_disagreeing_pairs/2` computation in `grothendieck_cohomology.pl` is a combinatorial descent-failure count on the poset site — it measures how many restriction morphisms fail to preserve the type. This is a well-motivated invariant with genuine diagnostic value, but it is not the standard Čech H¹ (which would require a quotient ker(δ¹)/im(δ⁰) and is trivially 0 on a discrete site). The STRUCTURAL label is correct; earlier documentation claiming coincidence with Čech H¹ on discrete sites has been corrected.
 
 ### The fundamental insight
 

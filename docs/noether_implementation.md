@@ -215,11 +215,11 @@ The Lawvere, Grothendieck, and Noether documents each identified the same predic
 | Condition | Lawvere Name | Grothendieck Name | Noether Name |
 |---|---|---|---|
 | Classification constant across contexts | Naturality of the presheaf | Descent (H¹ = 0) | Noether symmetry conservation |
-| Classification factorizes across P × S | Naturality square commutes | Čech cocycle condition | Separability of the Lagrangian |
+| Classification factorizes across P × S | Naturality square commutes | Product-site factorizability | Separability of the Lagrangian |
 | FNL detected | Naturality failure witness | Descent obstruction | Broken Noether symmetry with false conservation claim |
 | CI Rope certified | Naturality certificate | Partial descent | Residual symmetry after partial breaking |
 
-**Rigor: STRICT.** These are three names for the same mathematical condition, verified against the same predicates. The equivalence holds because naturality (Lawvere), descent (Grothendieck), and symmetry conservation (Noether) are all consequences of the same underlying structure: invariance of a functor under a group action on its domain.
+**Rigor: STRUCTURAL.** The Lawvere ↔ Grothendieck equivalence (naturality ↔ descent on this specific site) is **STRICT** — these are genuinely the same mathematical condition. The Noether column uses "conservation" as shorthand for invariance under a discrete finite group action (the 4-element context automorphism group), which is the *precondition* of Noether's theorem, not the theorem itself (which requires continuous Lie symmetry and a Lagrangian). The same predicates implement all three columns, but the Noether mapping is a productive structural parallel, not a formal isomorphism. The table's rigor is therefore two-out-of-three: STRICT for Lawvere ↔ Grothendieck, STRUCTURAL for the Noether column.
 
 This three-way equivalence is the formal spine of the project. Every other diagnostic layer (MaxEnt, abductive engine, trajectory mining, drift detection, cohomology) is a different way of measuring *proximity to or deviation from* this invariance condition.
 

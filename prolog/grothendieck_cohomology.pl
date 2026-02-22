@@ -20,10 +20,12 @@
 % Rigor:
 %   H^0 computation: STRICT — literal global sections of a presheaf on a
 %     finite cover. This IS the definition of Cech H^0.
-%   H^1 proxy: STRUCTURAL — the disagreeing-pairs count is a well-motivated
-%     proxy for the Cech obstruction but is not formally identical to the
-%     quotient ker(delta^1)/im(delta^0) on a general site. On a discrete
-%     4-point site with the trivial topology, it coincides.
+%   H^1 proxy: STRUCTURAL — the disagreeing-pairs count is a combinatorial
+%     descent-failure count on the poset site. It measures how many
+%     restriction morphisms fail to preserve the type. This is NOT formal
+%     Cech H^1 (which requires ker(delta^1)/im(delta^0) and is trivially 0
+%     on a discrete site). On the linear poset with Alexandrov topology,
+%     it is a well-motivated obstruction measure with genuine diagnostic value.
 %   Descent condition: STRICT — descent holds iff H^1 = 0, which is exactly
 %     the condition that local sections glue to a global section.
 %

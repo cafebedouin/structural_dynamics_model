@@ -127,10 +127,10 @@ This is genuine naturality by construction. It is the formal spine of the framew
 | Condition | Lawvere name | Grothendieck name | Noether name |
 |-----------|-------------|-------------------|--------------|
 | Classification constant across contexts | Naturality of the presheaf | Descent (H¹ = 0) | Symmetry conservation |
-| Classification factorizes across P × S | Naturality square commutes | Čech cocycle condition | Separability of the Lagrangian |
+| Classification factorizes across P × S | Naturality square commutes | Product-site factorizability | Separability of the Lagrangian |
 | Failure detected | Naturality failure witness | Descent obstruction | Broken symmetry |
 
-These are three names for the same mathematical condition [STRICT]. The equivalence holds because naturality (Lawvere), descent (Grothendieck), and symmetry conservation (Noether) are all consequences of invariance of a functor under a group action on its domain. Every other diagnostic layer in the framework — MaxEnt entropy, abductive analysis, trajectory mining, drift detection, cohomological computation — is a different way of measuring proximity to or deviation from this invariance condition.
+The Lawvere ↔ Grothendieck equivalence (naturality ↔ descent on this site) is STRICT — these are genuinely the same mathematical condition. The Noether column uses "conservation" as shorthand for invariance under a discrete group action, which is the precondition of Noether's theorem rather than the theorem itself. The overall equivalence is therefore STRUCTURAL (two-out-of-three: Lawvere ↔ Grothendieck is STRICT; Noether is a productive structural parallel). Every other diagnostic layer in the framework — MaxEnt entropy, abductive analysis, trajectory mining, drift detection, cohomological computation, diagnostic integration — is a different way of measuring proximity to or deviation from this invariance condition.
 
 **Naturality certificates and failure witnesses.** Three derived signatures operationalize the naturality test:
 
@@ -450,7 +450,11 @@ The mechanism is structural, not accidental. Hub 1's sigmoid amplifies extractio
 
 ### 4.2 H¹: Perspectival Fracture
 
-For each constraint, the H¹ proxy counts the number of disagreeing context-pairs among the $\binom{4}{2} = 6$ unordered pairs of standard contexts. A pair $(U_i, U_j)$ disagrees when $F_C(U_i) \neq F_C(U_j)$. The distribution across the corpus:
+For each constraint, the H¹ proxy counts the number of disagreeing context-pairs among the $\binom{4}{2} = 6$ unordered pairs of standard contexts. A pair $(U_i, U_j)$ disagrees when $F_C(U_i) \neq F_C(U_j)$.
+
+**Why disagreeing-pairs is a meaningful cohomological measure.** The site is a linear poset (powerless < moderate < institutional < analytical), not a discrete set. Equipped with the Alexandrov topology (upper sets are open), $U_i \cap U_j = U_{\max(i,j)}$ is non-empty for every pair — all elements are comparable in a linear order. The disagreeing-pairs count therefore measures the number of restriction morphisms along which the presheaf's type assignment fails to be compatible. This is a combinatorial descent-failure count on the poset site: it records how many morphisms in the site category witness a failure of the presheaf to satisfy the descent condition. It is not formal Čech H¹ (which would require the quotient $\ker(\delta^1)/\operatorname{im}(\delta^0)$ and is trivially 0 on a discrete site where intersections are empty), but it is a well-motivated obstruction measure that captures genuine cohomological content on the Alexandrov site.
+
+The distribution across the corpus:
 
 | H¹ | Count | % of corpus |
 |----|-------|-------------|
@@ -548,7 +552,7 @@ The following correspondences hold formally:
 - **Naturality witnesses.** FNL (false natural law) is a genuine naturality failure witness; CI Rope is a genuine naturality certificate. Both test well-defined conditions on the naturality square.
 - **H⁰ and descent.** Global sections (H⁰) are precisely the constraints satisfying the descent condition. Descent $\leftrightarrow$ H¹ = 0 is tautological on discrete covers.
 - **Gauge orbits.** The Dirac orbit computation is standard orbit decomposition under the group of context automorphisms.
-- **The three-way equivalence.** Boltzmann compliance = Lawvere naturality = Grothendieck descent = Noether symmetry conservation. These are three names for invariance of a functor under a group action.
+- **The three-way equivalence (two-out-of-three).** The Lawvere ↔ Grothendieck equivalence (naturality ↔ descent) is STRICT. The Noether column (symmetry conservation) is a productive STRUCTURAL parallel — same predicates, but mapping to a weaker mathematical condition than Noether's theorem proper (discrete group invariance, not continuous Lie symmetry with Lagrangian).
 - **The Galois connection.** The coalition–consensus duality is a standard antitone Galois connection between two finite posets.
 - **Hub 1 as restriction map.** The power-scaling function `derive_directionality/3` → `sigmoid_f/2` → χ implements a genuine restriction map: it transforms classification along morphisms in the site.
 - **Hub 2 as classification gate.** The `effective_immutability_for_context/2` table implements a genuine classification gate: it partitions contexts into mountain-eligible and non-mountain-eligible subsets.
@@ -567,7 +571,7 @@ The following correspondences guide analysis productively but lack formal verifi
 - **Abductive engine as naturality auditor.** The 15 trigger classes test cross-functor consistency — whether independent diagnostic views agree. The artifact/genuine distinction maps cleanly onto expected versus unexpected naturality failures. But the triggers are hand-crafted, not derived from formal categorical constructions.
 - **Trajectories as natural transformation families.** Constraints with identical trajectories exhibit the same transformation behavior under context shifts, functioning as representatives of the same natural transformation. But the formal functor-category construction is absent.
 - **Contamination as contravariant flow.** Contamination flows against the purity gradient, which is structurally analogous to contravariance. But the gradient reversal is of a scalar, not of categorical morphisms.
-- **H¹ proxy.** The disagreeing-pairs count coincides with formal Čech H¹ on discrete sites but is not the full quotient ker($\delta^1$)/im($\delta^0$) in general.
+- **H¹ proxy.** The disagreeing-pairs count is a combinatorial descent-failure count on the poset site (see §4.2). It is not formal Čech H¹ — which requires the quotient ker($\delta^1$)/im($\delta^0$) and is trivially 0 on a discrete site — but measures genuine obstruction to descent on the Alexandrov site.
 - **H¹ band structure.** H¹ = 3 → Hub 1, H¹ = 4 → Hub 2 is an empirical correspondence verified against the corpus. It is not derived from formal categorical structure.
 - **T9–T11 triggers.** Category A disagreement detection triggers test cross-subsystem consistency. The patterns are empirically validated but hand-crafted.
 - **T14–T16 triggers.** Category B agreement verification triggers test for systematic blindness in classical tools. The patterns match specific architectural findings but are not derived from formal axioms.

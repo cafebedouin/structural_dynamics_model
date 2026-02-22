@@ -45,6 +45,18 @@
    non-increasing and bounded below by 0.0, so it converges by the
    monotone convergence theorem. No damping factor is needed.
 
+   Scott-continuity of the contamination endofunctor F:
+   F(EP)_i = max(0, IP_i - Immunity_i × Σ_j Contamination(i,j,EP))
+   where Contamination(i,j,EP) = min(Cap, max(0, IP_i - EP_j) × Att_j × TypeFactor_j).
+   Each constituent operation — max, min, multiplication by non-negative
+   constants, addition — is Scott-continuous on [0,1]. The composition
+   of Scott-continuous functions is Scott-continuous. Therefore F is
+   Scott-continuous and monotone on the compact lattice [0,1]^n. By
+   standard results (Barr 1993; Adamek-Milius-Moss), the greatest
+   fixed point of a Scott-continuous monotone endofunctor on a complete
+   lattice IS the terminal coalgebra. The Jacobi iteration from the
+   top element (intrinsic purities) converges to this terminal coalgebra.
+
    State vector: fpn_ep(C, Context, EP) — only effective purities vary.
    All other quantities (type, immunity, neighbors, intrinsic purity)
    are invariant across iterations and pre-cached.
