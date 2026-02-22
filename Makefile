@@ -216,7 +216,7 @@ $(OUTPUT_TXT): $(PREP_STAMP)
 
 $(PIPELINE_JSON): $(PREP_STAMP) $(ABDUCTIVE_REPORT)
 	echo "[JSON] Generating structured JSON report..."
-	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l maxent_classifier.pl -l dirac_classification.pl -l diagnostic_summary.pl -l json_report.pl -g "run_json_report, halt.") 2>/dev/null
+	(cd $(PROLOG_DIR) && swipl -l stack.pl -l covering_analysis.pl -l maxent_classifier.pl -l dirac_classification.pl -l diagnostic_summary.pl -l post_synthesis.pl -l json_report.pl -g "run_json_report, halt.") 2>/dev/null
 	echo "[JSON] Done -> pipeline_output.json"
 
 # ==============================================================================

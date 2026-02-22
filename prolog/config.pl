@@ -445,6 +445,10 @@ param(abductive_stress_coupling_threshold,   0.75).   % T10 indicator: coupling 
 param(abductive_stress_entropy_threshold,    0.15).   % T10 indicator: entropy above this = stressed
 param(abductive_stress_drift_mode,           any).    % T10 indicator: any | critical | count_2plus
 
+% Post-synthesis divergence trigger (T12)
+param(post_synthesis_enabled,                 1).     % T12 master switch
+param(post_synthesis_green_trigger_threshold, 2).     % Case 2: min genuine triggers for green divergence
+
 /* ================================================================
    13. TRAJECTORY MINING (v6.4)
    ================================================================

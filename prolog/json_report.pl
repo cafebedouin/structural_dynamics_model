@@ -29,6 +29,7 @@
 :- use_module(maxent_classifier).
 :- use_module(grothendieck_cohomology).
 :- use_module(diagnostic_summary).
+:- use_module(post_synthesis).
 
 :- use_module(library(lists)).
 :- use_module(library(http/json)).
@@ -364,9 +365,24 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_drift_array(S, Drifts),
     format(S, '],~n', []),
 
+    % --- Compute diagnostic summary once (hoisted for T12 access) ---
+    (   catch(diagnostic_summary:diagnostic_summary(C, Summary), _, fail)
+    ->  true
+    ;   Summary = none
+    ),
+
     % diagnostic_verdict
     format(S, '      "diagnostic_verdict": ', []),
-    write_diagnostic_verdict(S, C),
+    write_diagnostic_verdict_from_summary(S, Summary),
+    format(S, ',~n', []),
+
+    % post_synthesis_flags (T12)
+    (   Summary \= none, config:param(post_synthesis_enabled, 1)
+    ->  post_synthesis:post_synthesis_check(C, Summary, PSFlags)
+    ;   PSFlags = []
+    ),
+    format(S, '      "post_synthesis_flags": ', []),
+    write_post_synthesis_flags(S, PSFlags),
     format(S, ',~n', []),
 
     % resolution_strategy — deferred
@@ -525,51 +541,104 @@ omega_for_constraint(OID, C) :-
    ================================================================ */
 
 %% write_diagnostic_verdict(+Stream, +Constraint)
-%  Serialize the diagnostic_summary/2 result as a JSON object.
+%  Compatibility wrapper — computes summary then serializes.
+%  Used by diagnostic_selftest and other callers outside json_report.
 write_diagnostic_verdict(S, C) :-
     (   catch(diagnostic_summary:diagnostic_summary(C, Summary), _, fail)
-    ->  Summary = diagnostic_summary(
-            Verdict, Agreements, ExpConflicts, Rejections,
-            Tensions, NAvail, UnavailList
-        ),
-        format(S, '{~n', []),
+    ->  true
+    ;   Summary = none
+    ),
+    write_diagnostic_verdict_from_summary(S, Summary).
 
-        % verdict
-        format(S, '        "verdict": ', []),
-        write_json_string(S, Verdict),
-        format(S, ',~n', []),
+%% write_diagnostic_verdict_from_summary(+Stream, +Summary)
+%  Serialize a pre-computed diagnostic_summary term as a JSON object.
+write_diagnostic_verdict_from_summary(S, none) :-
+    !, format(S, 'null', []).
+write_diagnostic_verdict_from_summary(S, Summary) :-
+    Summary = diagnostic_summary(
+        Verdict, Agreements, ExpConflicts, Rejections,
+        Tensions, NAvail, UnavailList
+    ),
+    format(S, '{~n', []),
 
-        % agreements
-        format(S, '        "agreements": ', []),
-        write_json_string_array(S, Agreements),
-        format(S, ',~n', []),
+    % verdict
+    format(S, '        "verdict": ', []),
+    write_json_string(S, Verdict),
+    format(S, ',~n', []),
 
-        % expected_conflicts
-        format(S, '        "expected_conflicts": ', []),
-        write_expected_conflicts_array(S, ExpConflicts),
-        format(S, ',~n', []),
+    % agreements
+    format(S, '        "agreements": ', []),
+    write_json_string_array(S, Agreements),
+    format(S, ',~n', []),
 
-        % convergent_rejections
-        format(S, '        "convergent_rejections": ', []),
-        write_convergent_rejections_array(S, Rejections),
-        format(S, ',~n', []),
+    % expected_conflicts
+    format(S, '        "expected_conflicts": ', []),
+    write_expected_conflicts_array(S, ExpConflicts),
+    format(S, ',~n', []),
 
-        % tensions
-        format(S, '        "tensions": ', []),
-        write_tensions_array(S, Tensions),
-        format(S, ',~n', []),
+    % convergent_rejections
+    format(S, '        "convergent_rejections": ', []),
+    write_convergent_rejections_array(S, Rejections),
+    format(S, ',~n', []),
 
-        % subsystems_available
-        format(S, '        "subsystems_available": ~w,~n', [NAvail]),
+    % tensions
+    format(S, '        "tensions": ', []),
+    write_tensions_array(S, Tensions),
+    format(S, ',~n', []),
 
-        % subsystems_unavailable
-        format(S, '        "subsystems_unavailable": ', []),
-        write_json_string_array(S, UnavailList),
-        format(S, '~n', []),
+    % subsystems_available
+    format(S, '        "subsystems_available": ~w,~n', [NAvail]),
 
-        format(S, '      }', [])
-    ;   format(S, 'null', [])
-    ).
+    % subsystems_unavailable
+    format(S, '        "subsystems_unavailable": ', []),
+    write_json_string_array(S, UnavailList),
+    format(S, '~n', []),
+
+    format(S, '      }', []).
+
+%% write_post_synthesis_flags(+Stream, +Flags)
+%  Serialize T12 post-synthesis flags as a JSON array.
+%  Each flag is flag(FlagType, DetailPairs) where DetailPairs is Key-Value list.
+write_post_synthesis_flags(S, []) :- !, format(S, '[]', []).
+write_post_synthesis_flags(S, Flags) :-
+    format(S, '[~n', []),
+    write_ps_flag_items(S, Flags),
+    format(S, '~n      ]', []).
+
+write_ps_flag_items(_, []).
+write_ps_flag_items(S, [flag(FlagType, Details)]) :-
+    !,
+    format(S, '        {"flag_type": ', []),
+    write_json_string(S, FlagType),
+    format(S, ', "details": {', []),
+    write_ps_detail_pairs(S, Details),
+    format(S, '}}', []).
+write_ps_flag_items(S, [flag(FlagType, Details)|Rest]) :-
+    format(S, '        {"flag_type": ', []),
+    write_json_string(S, FlagType),
+    format(S, ', "details": {', []),
+    write_ps_detail_pairs(S, Details),
+    format(S, '}},~n', []),
+    write_ps_flag_items(S, Rest).
+
+write_ps_detail_pairs(_, []).
+write_ps_detail_pairs(S, [K-V]) :-
+    !,
+    format(S, '"~w": ', [K]),
+    write_ps_detail_value(S, V).
+write_ps_detail_pairs(S, [K-V|Rest]) :-
+    format(S, '"~w": ', [K]),
+    write_ps_detail_value(S, V),
+    format(S, ', ', []),
+    write_ps_detail_pairs(S, Rest).
+
+%% write_ps_detail_value(+Stream, +Value)
+%  Serialize a detail value: numbers, atoms as strings, lists as JSON arrays.
+write_ps_detail_value(S, V) :- number(V), !, format(S, '~w', [V]).
+write_ps_detail_value(S, V) :- is_list(V), !,
+    write_json_string_array(S, V).
+write_ps_detail_value(S, V) :- atom(V), !,
+    write_json_string(S, V).
 
 %% write_expected_conflicts_array(+Stream, +ExpConflicts)
 write_expected_conflicts_array(S, []) :- !, format(S, '[]', []).

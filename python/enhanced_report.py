@@ -780,6 +780,18 @@ def build_diagnostic_verdict_section(constraint_id, pipeline_data):
     else:
         lines.append("  Tensions: none")
 
+    # Post-synthesis divergence flags (T12)
+    ps_flags = entry.get("post_synthesis_flags", [])
+    if ps_flags:
+        lines.append("")
+        lines.append(f"  Post-Synthesis Divergence ({len(ps_flags)} flag(s)):")
+        for f in ps_flags:
+            ft = f.get("flag_type", "?")
+            lines.append(f"    Flag: {ft}")
+            details = f.get("details", {})
+            for k, v in sorted(details.items()):
+                lines.append(f"      {k}: {v}")
+
     return "\n".join(lines)
 
 

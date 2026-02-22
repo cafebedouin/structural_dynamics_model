@@ -89,6 +89,9 @@ class PipelineConstraint:
     # --- Diagnostic verdict (per-constraint subsystem synthesis) ---
     diagnostic_verdict: dict | None = None        # {verdict, agreements, expected_conflicts, ...}
 
+    # --- Post-synthesis divergence flags (T12) ---
+    post_synthesis_flags: list = field(default_factory=list)  # [{flag_type, details}]
+
     # --- Always nullable ---
     resistance: float | None = None               # null for all current constraints
     resolution_strategy: str | None = None        # deferred feature, always null
@@ -173,6 +176,8 @@ PIPELINE_FIELDS = [
     ("resolution_strategy",         str,          True),   # always null (deferred)
     # --- Diagnostic verdict (per-constraint subsystem synthesis) ---
     ("diagnostic_verdict",          dict,         True),   # null if diagnostic_summary fails
+    # --- Post-synthesis divergence flags (T12) ---
+    ("post_synthesis_flags",        list,         False),  # [] when no divergence
 ]
 
 ENRICHED_EXTRA_FIELDS = [
@@ -364,6 +369,17 @@ def _check_structure(entry, cid):
                     f"[{cid}] diagnostic_verdict.subsystems_unavailable "
                     f"should be list"
                 )
+
+    # post_synthesis_flags entries must have {flag_type, details}
+    ps_flags = entry.get("post_synthesis_flags")
+    if isinstance(ps_flags, list):
+        for i, psf in enumerate(ps_flags):
+            if isinstance(psf, dict):
+                for k in ("flag_type", "details"):
+                    if k not in psf:
+                        errors.append(
+                            f"[{cid}] post_synthesis_flags[{i}] missing '{k}'"
+                        )
 
     return errors
 

@@ -341,6 +341,13 @@ param_spec(abductive_stress_entropy_threshold,    number,  range(0.0, 1.0),     
 param_spec(abductive_stress_drift_mode,           atom,    oneof([any, critical, count_2plus]), "Stress convergence drift mode selector").
 
 % ============================================================
+% 31b. POST-SYNTHESIS DIVERGENCE TRIGGER (T12)
+% ============================================================
+
+param_spec(post_synthesis_enabled,                 integer, oneof([0, 1]),  "Enable post-synthesis divergence trigger T12").
+param_spec(post_synthesis_green_trigger_threshold, integer, positive,       "Case 2 min genuine triggers for green-with-triggers flag").
+
+% ============================================================
 % 32. TRAJECTORY MINING
 % ============================================================
 
