@@ -1,0 +1,128 @@
+# Index Variance Analysis
+
+## Summary Statistics
+
+- **Total constraints analyzed:** {{ summary.total_constraints }}
+- **Constraints with multiple index configs:** {{ summary.with_multiple_configs }} ({{ "%.1f" | format(summary.with_multiple_configs_pct) }}%)
+- **High variance (>0.5):** {{ summary.high_variance_count }} ({{ "%.1f" | format(summary.high_variance_pct) }}%)
+- **Stable (ratio=1.0):** {{ summary.stable_count }} ({{ "%.1f" | format(summary.stable_pct) }}%)
+
+## Variance Distribution
+
+| Ratio Range | Count | % of Corpus | Examples |
+|-------------|-------|-------------|----------|
+{%- for bucket in variance_distribution %}
+{%- set examples_str = bucket.examples | join(', ') if bucket.examples else '-' %}
+{%- if examples_str | length > 50 %}
+{%- set examples_str = examples_str[:47] + '...' %}
+{%- endif %}
+| {{ "%-15s" | format(bucket.range) }} | {{ "%5d" | format(bucket.count) }} | {{ "%6.1f" | format(bucket.percentage) }}% | {{ examples_str }} |
+{%- endfor %}
+
+## Domain Breakdown
+
+| Domain | N | Avg Variance | High Variance % |
+|--------|---|--------------|----------------|
+{%- for ds in domain_breakdown %}
+| {{ "%-20s" | format(ds.domain) }} | {{ "%3d" | format(ds.n) }} | {{ "%12.2f" | format(ds.avg_variance) }} | {{ "%14.1f" | format(ds.high_variance_pct) }}% |
+{%- endfor %}
+
+## Key Findings
+
+{%- if domain_breakdown %}
+
+1. **Domain variance spread:** {{ domain_breakdown[0].domain }} shows highest variance ({{ "%.2f" | format(domain_breakdown[0].avg_variance) }}), while {{ domain_breakdown[-1].domain }} shows lowest ({{ "%.2f" | format(domain_breakdown[-1].avg_variance) }})
+
+{%- endif %}
+{%- if summary.stable_pct > 50 %}
+
+2. **High stability:** {{ "%.1f" | format(summary.stable_pct) }}% of constraints are completely stable across index configs
+
+{%- elif summary.high_variance_pct > 30 %}
+
+2. **High volatility:** {{ "%.1f" | format(summary.high_variance_pct) }}% of constraints show high variance (>0.5)
+
+{%- endif %}
+{%- if high_variance_examples %}
+
+3. **Perspective-dependent constraints:** {{ high_variance_examples | length }} constraints show strong perspective-dependence
+
+{%- endif %}
+
+## High Variance Examples
+
+Constraints that change type frequently based on index configuration:
+
+| Constraint ID | Variance | Configs | Types | Domain | Claimed Type |
+|---------------|----------|---------|-------|--------|-------------|
+{%- for example in high_variance_examples %}
+{%- set claimed = example.claimed_type or 'N/A' %}
+{%- set domain = example.domain or 'unknown' %}
+| {{ "%-30s" | format(example.constraint_id) }} | {{ "%.2f" | format(example.variance_ratio) }} | {{ "%7d" | format(example.index_configs) }} | {{ "%5d" | format(example.types_produced) }} | {{ "%-10s" | format(domain) }} | {{ "%-12s" | format(claimed) }} |
+{%- endfor %}
+
+{%- if high_variance_examples %}
+
+### Detailed Examples
+
+{%- for example in high_variance_examples[:3] %}
+
+**{{ loop.index }}. {{ example.constraint_id }}**
+- Domain: {{ example.domain }}
+- Variance: {{ "%.2f" | format(example.variance_ratio) }}
+- Produces {{ example.types_produced }} different types across {{ example.index_configs }} index configurations
+{%- if example.classifications %}
+{%- set ns = namespace(type_counts={}) %}
+{%- for c in example.classifications %}
+{%- if c.type in ns.type_counts %}
+{%- set _ = ns.type_counts.update({c.type: ns.type_counts[c.type] + 1}) %}
+{%- else %}
+{%- set _ = ns.type_counts.update({c.type: 1}) %}
+{%- endif %}
+{%- endfor %}
+- Type distribution: {{ ns.type_counts }}
+{%- endif %}
+{%- endfor %}
+{%- endif %}
+
+{%- if suspicious_stability %}
+
+## Suspicious Stability
+
+Constraints with many index configs but low variance (possible modeling issues):
+
+| Constraint ID | Configs | Types | Variance | Domain |
+|---------------|---------|-------|----------|--------|
+{%- for item in suspicious_stability[:10] %}
+| {{ "%-30s" | format(item.constraint_id) }} | {{ "%7d" | format(item.index_configs) }} | {{ "%5d" | format(item.types_produced) }} | {{ "%8.2f" | format(item.variance_ratio) }} | {{ "%-15s" | format(item.domain) }} |
+{%- endfor %}
+
+**Note:** These constraints have many perspective configurations but produce the same type. This might indicate:
+- The constraint is genuinely invariant (e.g., physical laws)
+- Index dimensions are not affecting classification
+- Potential data quality issue
+
+{%- endif %}
+
+## Data Completeness
+
+| Field | % Complete | Impact |
+|-------|-----------|--------|
+{%- set total = summary.total_constraints %}
+{%- set with_class = [] %}
+{%- set with_variance = [] %}
+{%- set with_domain = [] %}
+{%- for cid, c in constraints.items() %}
+{%- if c.get('classifications') %}
+{%- set _ = with_class.append(1) %}
+{%- endif %}
+{%- if c.analysis.variance_ratio is not none %}
+{%- set _ = with_variance.append(1) %}
+{%- endif %}
+{%- if c.get('domain') %}
+{%- set _ = with_domain.append(1) %}
+{%- endif %}
+{%- endfor %}
+| classifications | {{ "%.1f" | format(with_class | length / total * 100) }}% | Core data for variance analysis |
+| variance_ratio | {{ "%.1f" | format(with_variance | length / total * 100) }}% | Calculated from classifications |
+| domain | {{ "%.1f" | format(with_domain | length / total * 100) }}% | Affects domain breakdown analysis |

@@ -1,0 +1,217 @@
+# Index Sufficiency Test
+
+## Executive Summary
+
+**Verdict:** {{ evidence_summary.verdict }}
+
+### Collision Breakdown
+
+| Category | Count | Rate |
+|----------|------:|-----:|
+| Classification failures (unknown/naturalized) | {{ evidence_summary.classification_failures }} | {{ "%.1f" | format(evidence_summary.classification_failure_rate) }}% of collisions |
+| Expected perspectival variance | {{ evidence_summary.perspectival_variance }} | {{ "%.1f" | format(evidence_summary.expected_variance_rate) }}% of collisions |
+| Genuine collisions | {{ evidence_summary.genuine_collisions }} | {{ "%.1f" | format(evidence_summary.genuine_collision_rate) }}% of constraints |
+| **Total collisions** | **{{ evidence_summary.total_collisions }}** | across {{ evidence_summary.total_constraints }} constraints |
+
+- **Non-mountain anomaly rate:** {{ "%.1f" | format(evidence_summary.non_mountain_anomaly_rate) }}% ({{ evidence_summary.stability_anomalies }} of {{ evidence_summary.non_mountain_total }} non-mountain constraints)
+
+{%- if evidence_summary.domain_consolidation %}
+
+### Data Quality: Domain Label Consolidation
+
+The following domain labels were normalized at load time:
+
+{%- for mapping, count in evidence_summary.domain_consolidation | dictsort %}
+- {{ mapping }} ({{ count }} constraints)
+{%- endfor %}
+{%- endif %}
+
+{%- if classification_failures %}
+
+## Classification Failures
+
+**{{ classification_failures | length }} collisions** involve `unknown` or `naturalized` types — these represent real classification insufficiency.
+
+| Constraint ID | Types | Domain | Signature |
+|---------------|-------|--------|-----------|
+{%- for c in classification_failures[:20] %}
+{%- set types_str = c.types_produced | join(', ') %}
+{%- set sig = c.signature or '-' %}
+{%- set domain = c.domain or 'unknown' %}
+| {{ c.constraint_id }} | {{ types_str }} | {{ domain }} | {{ sig }} |
+{%- endfor %}
+{%- if classification_failures | length > 20 %}
+
+*...and {{ classification_failures | length - 20 }} more*
+{%- endif %}
+{%- endif %}
+
+{%- if perspectival_variance %}
+
+## Expected Perspectival Variance
+
+**{{ perspectival_variance | length }} collisions** are explained by agent_power perspective shifts — the framework working as designed.
+
+{%- set ns = namespace(persp_transitions={}) %}
+{%- for c in perspectival_variance %}
+{%- set types = c.types_produced | sort %}
+{%- if types | length == 2 %}
+{%- set transition = types[0] ~ " ↔ " ~ types[1] %}
+{%- if transition in ns.persp_transitions %}
+{%- set _ = ns.persp_transitions.update({transition: ns.persp_transitions[transition] + 1}) %}
+{%- else %}
+{%- set _ = ns.persp_transitions.update({transition: 1}) %}
+{%- endif %}
+{%- endif %}
+{%- endfor %}
+{%- if ns.persp_transitions %}
+
+| Transition | Count |
+|------------|------:|
+{%- for transition, count in ns.persp_transitions | dictsort(by='value', reverse=true) %}
+| {{ transition }} | {{ count }} |
+{%- endfor %}
+{%- endif %}
+{%- endif %}
+
+{%- if genuine_collisions %}
+
+## Genuine Collisions
+
+**{{ genuine_collisions | length }} collisions** remain unexplained — same index config produces different types without perspectival justification.
+
+| Constraint ID | Index Config | Types | Domain | Purity |
+|---------------|--------------|-------|--------|--------|
+{%- for c in genuine_collisions[:20] %}
+{%- set types_str = c.types_produced | join(', ') %}
+{%- set index_str = (c.index_config | string)[:35] %}
+{%- set domain = c.domain or 'unknown' %}
+{%- set purity = c.purity_band or '-' %}
+| {{ c.constraint_id }} | {{ index_str }} | {{ types_str }} | {{ domain }} | {{ purity }} |
+{%- endfor %}
+{%- if genuine_collisions | length > 20 %}
+
+*...and {{ genuine_collisions | length - 20 }} more*
+{%- endif %}
+{%- endif %}
+
+{%- if collision_patterns.common_transitions %}
+
+## All Collision Patterns
+
+**Total collisions:** {{ collision_patterns.total_collisions }} across {{ collision_patterns.constraints_affected }} constraints
+
+### Most Common Type Transitions
+
+| Transition | Frequency |
+|------------|----------:|
+{%- for transition, count in collision_patterns.common_transitions %}
+| {{ transition }} | {{ count }} |
+{%- endfor %}
+{%- endif %}
+
+{%- if collision_patterns.domain_breakdown %}
+
+### Collisions by Domain
+
+| Domain | Collisions | Constraints Affected |
+|--------|----------:|--------------------:|
+{%- for ds in collision_patterns.domain_breakdown %}
+{%- set domain = ds.domain or 'unknown' %}
+| {{ domain }} | {{ ds.collision_count }} | {{ ds.constraints_affected }} |
+{%- endfor %}
+{%- endif %}
+
+## Domain Sufficiency Analysis
+
+How well do indices explain variance in each domain?
+
+| Domain | Constraints | Avg Variance | Sufficiency |
+|--------|----------:|-------------:|:-----------:|
+{%- for ds in domain_sufficiency %}
+{%- set score = ds.sufficiency_score %}
+{%- if score > 0.7 %}
+{%- set rating = "High" %}
+{%- elif score > 0.4 %}
+{%- set rating = "Medium" %}
+{%- else %}
+{%- set rating = "Low" %}
+{%- endif %}
+{%- set domain = ds.domain or 'unknown' %}
+| {{ domain }} | {{ ds.total_constraints }} | {{ "%.2f" | format(ds.avg_variance) }} | {{ rating }} |
+{%- endfor %}
+
+**Note:** Higher variance = indices capture more differences (good)
+
+## Stability Anomalies (Mountains Excluded)
+
+Non-mountain constraints tested across 6+ index configs that always produce the same type.
+These may indicate misclassification (mountains are excluded since they SHOULD be invariant).
+
+{%- if stability_anomalies %}
+
+| Constraint ID | Configs | Type | Domain | Notes |
+|---------------|--------:|------|--------|-------|
+{%- for anomaly in stability_anomalies[:25] %}
+{%- set notes = [] %}
+{%- if anomaly.emerges_naturally %}
+{%- set _ = notes.append("natural") %}
+{%- endif %}
+{%- if anomaly.requires_enforcement %}
+{%- set _ = notes.append("enforced") %}
+{%- endif %}
+{%- set notes_str = notes | join(', ') if notes else '-' %}
+{%- set consistent_type = anomaly.consistent_type or 'N/A' %}
+{%- set domain = anomaly.domain or 'unknown' %}
+| {{ anomaly.constraint_id }} | {{ anomaly.index_configs }} | {{ consistent_type }} | {{ domain }} | {{ notes_str }} |
+{%- endfor %}
+{%- if stability_anomalies | length > 25 %}
+
+*...and {{ stability_anomalies | length - 25 }} more*
+{%- endif %}
+
+{%- else %}
+
+*No non-mountain stability anomalies found.*
+
+{%- endif %}
+
+## Recommendations
+
+{%- set ns = namespace(rec_num=1) %}
+{%- if evidence_summary.classification_failure_rate > 5 %}
+
+{{ ns.rec_num }}. **Classification failures ({{ "%.1f" | format(evidence_summary.classification_failure_rate) }}%):** Investigate specific index configurations producing `unknown` types. These represent real gaps in the classification engine.
+
+{%- set ns.rec_num = ns.rec_num + 1 %}
+{%- endif %}
+{%- if evidence_summary.genuine_collision_rate > 5 %}
+
+{{ ns.rec_num }}. **Genuine collision rate ({{ "%.1f" | format(evidence_summary.genuine_collision_rate) }}%):** Examine whether a 5th index dimension would resolve remaining collisions, or whether refinement of existing index boundaries is sufficient.
+
+{%- set ns.rec_num = ns.rec_num + 1 %}
+{%- endif %}
+{%- if evidence_summary.non_mountain_anomaly_rate > 10 %}
+
+{{ ns.rec_num }}. **Non-mountain anomaly rate ({{ "%.1f" | format(evidence_summary.non_mountain_anomaly_rate) }}%):** Review index-invariant non-mountains for possible misclassification. These constraints behave like natural laws but aren't classified as mountains.
+
+{%- set ns.rec_num = ns.rec_num + 1 %}
+{%- endif %}
+{%- if evidence_summary.domain_consolidation %}
+{%- set total_consolidated = evidence_summary.domain_consolidation.values() | sum %}
+
+{{ ns.rec_num }}. **Data quality:** Domain label normalization consolidated {{ total_consolidated }} constraints across {{ evidence_summary.domain_consolidation | length }} variant labels. Consider standardizing domain labels upstream in the test corpus.
+
+{%- set ns.rec_num = ns.rec_num + 1 %}
+{%- endif %}
+{%- if evidence_summary.expected_variance_rate > 50 %}
+
+{{ ns.rec_num }}. **Perspectival health:** {{ "%.1f" | format(evidence_summary.expected_variance_rate) }}% of collisions are expected perspectival variance (agent_power driving type shifts). This confirms the index system is capturing real structural dynamics.
+
+{%- set ns.rec_num = ns.rec_num + 1 %}
+{%- endif %}
+{%- if ns.rec_num == 1 %}
+
+No significant issues detected. The 4-index system appears adequate.
+
+{%- endif %}

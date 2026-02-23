@@ -1,0 +1,30 @@
+{{ "=" * 72 }}
+RED CONSTRAINT SPOT-CHECK — Post-Calibration
+{{ "=" * 72 }}
+
+Corpus: {{ total }} constraints
+Verdict distribution: {{ verdict_str }}
+Red constraints: {{ red_count }}
+
+{%- if red_count == 0 %}
+
+No red constraints found.
+{%- else %}
+
+{{ "-" * 72 }}
+{%- for r in reds %}
+  {{ r.id }}
+    claimed: {{ r.claimed_type }}  →  resolved: {{ r.det_type }}  (signature: {{ r.signature }})
+    tensions ({{ r.tension_count }}): {{ r.tension_subsystems | join(', ') }}
+{%- for t in r.tensions %}
+      - {{ t.subsystem }}: {{ t.signal }}
+{%- endfor %}
+{%- if r.rejection_count %}
+    convergent rejections: {% for a in r.alternative_types %}{{ a }} ({{ r.rejecting_subsystems | join(', ') }}){% if not loop.last %}, {% endif %}{% endfor %}
+{%- endif %}
+{%- if r.expected_conflicts %}
+    absorbed patterns: {{ r.expected_conflicts | map(attribute='pattern') | join(', ') }}
+{%- endif %}
+{% endfor %}
+{{ "-" * 72 }}
+{%- endif %}

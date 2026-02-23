@@ -1,0 +1,25 @@
+# Omega Epistemological Gap Report
+
+**Total Unique Omegas Found:** {{ total }}
+
+{%- if total > 0 %}
+
+This report lists all unique Omega variables generated during the analysis. Each Omega represents a critical question, a perspectival gap, or a contradiction that requires further investigation.
+
+---
+{%- for o in sorted_omegas %}
+
+### {{ loop.index }}. Omega: `{{ o.name }}`
+
+*   **Severity:** `{{ o.severity }}`
+*   **Associated Constraint:** `{{ o.associated_constraint }}`
+*   **Source Gap:** `{{ o.source_gap }}`
+*   **Question:** {{ o.question }}
+*   **Suggested Resolution Strategy:**
+    ```
+{{ o.resolution_strategy }}
+    ```
+
+---
+{%- endfor %}
+{% endif -%}
