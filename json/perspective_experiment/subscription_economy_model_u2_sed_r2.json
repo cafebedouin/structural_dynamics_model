@@ -1,0 +1,142 @@
+{
+  "header": {
+    "constraint_id": "subscription_economy_model_u2_sed_r2",
+    "version": "2.1",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_subscription_economy_model_u2_sed_r2"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Subscription Economy Model",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "subscription_based_corporations",
+      "investors_in_saas"
+    ],
+    "victims": [
+      "individual_consumers",
+      "small_businesses_reliant_on_tools"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "THE CAPTIVE CONSUMER",
+      "comment": "For a consumer reliant on essential software (e.g., for their profession), the recurring cost and lack of perpetual alternatives constitute a trap."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "THE SAAS PROVIDER",
+      "comment": "From the corporation's view, this is a superior coordination model for delivering continuous value and securing predictable revenue streams."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "THE SAVVY BUT FATIGUED USER",
+      "comment": "A user with some resources can switch between services, but the cumulative cognitive and financial load of managing many subscriptions still feels extractive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "THE ECONOMIC ANALYST",
+      "comment": "The analyst sees both the genuine coordination function (service delivery) and the asymmetric extraction enabled by suppressing ownership models."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consumer_value_vs_inertia",
+      "question": "Is the recurring revenue primarily justified by continuous value delivery or by exploiting consumer inertia and cancellation friction?",
+      "resolution_mechanism": "Analysis of user engagement data versus churn rates following price hikes or feature removal, controlling for the difficulty of cancellation.",
+      "impact": "If primarily value-driven, the constraint is closer to a Rope. If primarily inertia-driven, it is a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between value delivery and inertia exploitation in the subscription model."
+    },
+    {
+      "id": "ownership_paradigm_shift",
+      "question": "Is the decline of digital ownership an inevitable consequence of networked technology or a constructed preference enforced by suppliers?",
+      "resolution_mechanism": "Comparative analysis of markets with and without strong consumer protection laws regarding digital ownership.",
+      "impact": "If inevitable, it has Mountain-like properties. If constructed, it is a classic Tangled Rope or Snare.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the loss of digital ownership is a natural or an artificial outcome."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 2010,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the widespread business model shift from one-time product sales (perpetual licenses) to recurring subscription fees. While offering a coordination benefit (continuous updates, service access), it asymmetrically extracts value by creating consumer inertia, making cancellation difficult (a 'hassle tax'), and revoking ownership rights. The model is actively enforced by Digital Rights Management (DRM) and the suppression of non-subscription alternatives.",
+    "key_agents": [
+      "Individual Consumers: Primary target (powerless/trapped) \u2014 bear the costs of subscription fatigue, loss of ownership, and cancellation friction.",
+      "Subscription-based Corporations: Primary beneficiary (institutional/arbitrage) \u2014 benefit from predictable recurring revenue and increased customer lifetime value.",
+      "Investors: Secondary beneficiary (institutional/arbitrage) \u2014 favor the predictable, high-margin revenue streams of SaaS models.",
+      "Regulators: Analytical/Institutional actor \u2014 observes the structure but is often constrained in its ability to intervene."
+    ],
+    "logic_rationale": "The base extractiveness (0.60) reflects the conversion of a one-time capital expense into a perpetual operational expense for the consumer, effectively capturing all future value. The high suppression score (0.72) is due to the active phasing out of perpetual licenses for major software and the use of DRM to prevent offline use or ownership transfer, leaving consumers with no viable alternatives.",
+    "perspectival_gap": "A significant gap exists between the corporation, which views the model as a Rope for efficient, continuous service delivery, and the consumer, who experiences it as a Snare that erodes their wealth and autonomy. The corporation focuses on the service provided, while the consumer focuses on the rights and capital lost.",
+    "directionality_logic": "The flow of value is unidirectional. Corporations (beneficiaries) gain predictable, compounding revenue and a captive customer base. Consumers (victims) lose ownership of their tools, face endlessly recurring costs for the same functionality, and are subject to price increases at the provider's discretion.",
+    "mandatrophy_analysis": "The Tangled Rope classification is crucial here. Labeling this model a pure Snare would ignore the genuine coordination function it serves (providing updates, cloud services). Labeling it a Rope would ignore the coercive, extractive nature of eliminating ownership. The Tangled Rope correctly identifies it as a hybrid system where a valid service is used to justify an extractive and suppressive revenue model."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_ownership_rights",
+      "right_to_repair"
+    ]
+  }
+}

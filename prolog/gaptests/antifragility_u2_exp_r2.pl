@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 7.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2024-07-29
 % Status: [RESOLVED MANDATROPHY]
 % ============================================================================
 
@@ -39,6 +39,7 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -55,18 +56,17 @@
  *   domain: technological/economic/biological
  *
  * SUMMARY:
- *   Antifragility describes systems that increase in capability, resilience,
- *   or robustness as a result of stressors, shocks, volatility, and disorder.
- *   While it can be seen as a fundamental property of all complex adaptive
- *   systems (a Mountain), its application in social and economic contexts
- *   creates a dynamic of asymmetric extraction. Agents who can adopt
- *   'barbell' strategies benefit from upside volatility, while the costs and
- *   downsides are borne by 'fragile' agents optimized for stability.
+ *   Antifragility describes systems that increase in capability or resilience
+ *   in response to stressors and volatility. While this may be a fundamental
+ *   property of evolutionary systems (a Mountain), its application in human
+ *   social and economic systems creates a dynamic where specific agents
+ *   ('practitioners') benefit from volatility, while costs are externalized
+ *   onto others (the 'fragile' or 'optimized serfs').
  *
  * KEY AGENTS:
- *   - Optimized Workers (Victim): Powerless individuals in highly specialized, efficient roles that are brittle to systemic shocks.
- *   - Barbell Practitioners (Beneficiary): Moderate-power individuals or firms who can structure their affairs to have convex responses to volatility.
- *   - Fragilista Bureaucrats (Enforcer/Victim): Institutional actors who seek to eliminate all volatility, thereby creating hidden and catastrophic risks.
+ *   - Optimized Serfs: Primary targets (powerless/trapped) - bear the costs of systemic shocks.
+ *   - Antifragile Practitioners: Primary beneficiaries (moderate/arbitrage) - harvest upside from volatility.
+ *   - Fragilista / Bureaucrats: Institutional enforcers (institutional/constrained) - manage the system but are themselves vulnerable to its fragility.
  */
 
 /* ==========================================================================
@@ -91,41 +91,49 @@ narrative_ontology:topic_domain(antifragility_u2_exp_r2, "technological/economic
 domain_priors:requires_active_enforcement(antifragility_u2_exp_r2).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(antifragility_u2_exp_r2, barbell_practitioners).
+narrative_ontology:constraint_beneficiary(antifragility_u2_exp_r2, antifragile_practitioner).
+narrative_ontology:constraint_beneficiary(antifragility_u2_exp_r2, the_system_as_a_whole).
 narrative_ontology:constraint_victim(antifragility_u2_exp_r2, fragile_institutions).
-narrative_ontology:constraint_victim(antifragility_u2_exp_r2, optimized_workers).
+narrative_ontology:constraint_victim(antifragility_u2_exp_r2, optimized_serfs).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% For the worker whose job is optimized for efficiency, making them fragile to shocks, the system is a Snare. Their fragility is the source of others' antifragility.
+% PERSPECTIVE 1: The victim who bears the cost of systemic shocks and volatility.
 constraint_indexing:constraint_classification(antifragility_u2_exp_r2, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% For the individual who understands the principle and can structure their life to gain from volatility, it is a Rope—a tool for navigating reality.
+% PERSPECTIVE 2: The beneficiary who structures their affairs to gain from disorder.
 constraint_indexing:constraint_classification(antifragility_u2_exp_r2, rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% For the institution attempting to suppress volatility, the system is a Tangled Rope. Their actions coordinate short-term stability but generate hidden, systemic fragility and extraction.
+% PERSPECTIVE 3: The institutional actor who enforces the system but is also vulnerable to it.
 constraint_indexing:constraint_classification(antifragility_u2_exp_r2, tangled_rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(constrained),
             spatial_scope(national))).
 
-% From a long-term, evolutionary perspective, the principle that systems gain from disorder is an unchangeable feature of reality—a Mountain.
+% PERSPECTIVE 4: The primary analytical view, seeing the implemented human system as a hybrid of coordination and extraction.
+constraint_indexing:constraint_classification(antifragility_u2_exp_r2, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: The deep analytical view, seeing the underlying evolutionary mechanism as a natural law.
 constraint_indexing:constraint_classification(antifragility_u2_exp_r2, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -150,16 +158,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The high extractiveness (ε=0.75) represents the 'convexity transfer' where one party gains from volatility and uncertainty while another party is harmed by it. The suppression score (0.65) reflects how modern economic and social systems incentivize efficiency and optimization, which systematically creates fragility and suppresses the redundant, 'inefficient' systems that would provide resilience.
+ *   The high extractiveness (0.75) represents the transfer of downside risk from victims to beneficiaries. The system 'learns' by sacrificing its most fragile components. Suppression (0.65) is high because mechanisms that would protect the fragile (e.g., bailouts, robust social safety nets) are actively dismantled to ensure 'skin in the game' and allow for creative destruction.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme, spanning Mountain, Rope, and Snare. It is determined by an agent's ability to choose their exposure to volatility and benefit from it. Those who can structure their exposure see a Rope (a tool). Those whose fragility is exploited see a Snare (a trap). Those observing the dynamic over evolutionary time see a Mountain (a law of nature).
+ *   The gap is extreme. For the beneficiary with arbitrage, it's a Rope for generating wealth. For the trapped victim, it's a Snare that extracts their livelihood and security. For the long-term evolutionary observer, it's a Mountain, a law of nature. The system analyst sees the Tangled Rope, recognizing both the coordination function (systemic adaptation) and the brutal, asymmetric extraction required to achieve it.
  *
  * DIRECTIONALITY LOGIC:
- *   The beneficiaries are those with the knowledge and capital to create convex payoff structures (e.g., venture capitalists, traders). The victims are those locked into concave structures (e.g., salaried employees with no upside, over-leveraged homeowners), where they bear downside risk without access to the corresponding upside. The system extracts resilience and optionality from the victims to subsidize the beneficiaries.
+ *   Beneficiaries are practitioners who have structured their affairs (e.g., via a 'barbell' strategy) to have convex responses to volatility. Victims are those in linear, fragile roles who are optimized for stability and are destroyed by shocks. The system extracts resilience from the victims and transfers it to the beneficiaries and the system as a whole.
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy is resolved by the Tangled Rope classification, which correctly identifies the dual nature of the system. It has a legitimate coordination function (organizing society for efficiency and stability) but this function is inextricably linked to a predatory, extractive dynamic. This prevents misclassifying it as a pure Snare (which would ignore the coordination benefits) or a pure Rope (which would ignore the vast population of victims).
+ *   Mandatrophy is resolved by classifying the implemented system as a Tangled Rope, not a pure Mountain or Snare. This avoids two errors: 1) Mistaking a predatory social arrangement for a 'law of nature' (false Mountain). 2) Ignoring the genuine adaptive/coordination benefits that the system provides at a macro level (false Snare). The Tangled Rope classification correctly identifies the presence of both.
  */
 
 /* ==========================================================================
@@ -167,41 +175,42 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    extraction_intent_vs_emergence,
-    'Is the high extraction from fragile components an intentionally engineered feature for predatory gain, or an unavoidable emergent property of complex adaptive systems?',
-    'Audit of 'skin-in-the-game' distributions across the system. If beneficiaries consistently lack downside exposure, it points towards engineered, predatory extraction.',
-    'If predatory: Snare. If emergent necessity: Mountain.',
+    antifragility_extraction_intent,
+    'Is the high extraction a functional necessity for systemic evolution or a predatory mechanism benefiting a select few?',
+    'Longitudinal study comparing outcomes in systems with and without 'skin in the game' enforcement for beneficiaries.',
+    'If necessity: Mountain. If predatory: Snare. The current classification of Tangled Rope reflects this ambiguity.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(extraction_intent_vs_emergence, empirical, 'Distinguishing between engineered predation and emergent necessity in the system's extractive properties.').
+narrative_ontology:omega_variable(antifragility_extraction_intent, empirical, 'Whether the high extraction is a functional necessity or predatory.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(antifragility_u2_exp_r2, 0, 20).
+narrative_ontology:interval(antifragility_u2_exp_r2, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(antifragility_tr_t0, antifragility_u2_exp_r2, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(antifragility_tr_t10, antifragility_u2_exp_r2, theater_ratio, 10, 0.35).
-narrative_ontology:measurement(antifragility_tr_t20, antifragility_u2_exp_r2, theater_ratio, 20, 0.55).
+narrative_ontology:measurement(anti_tr_t0, antifragility_u2_exp_r2, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(anti_tr_t5, antifragility_u2_exp_r2, theater_ratio, 5, 0.35).
+narrative_ontology:measurement(anti_tr_t10, antifragility_u2_exp_r2, theater_ratio, 10, 0.55).
 
 % Extraction over time
-narrative_ontology:measurement(antifragility_be_t0, antifragility_u2_exp_r2, base_extractiveness, 0, 0.3).
-narrative_ontology:measurement(antifragility_be_t10, antifragility_u2_exp_r2, base_extractiveness, 10, 0.6).
-narrative_ontology:measurement(antifragility_be_t20, antifragility_u2_exp_r2, base_extractiveness, 20, 0.75).
+narrative_ontology:measurement(anti_be_t0, antifragility_u2_exp_r2, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(anti_be_t5, antifragility_u2_exp_r2, base_extractiveness, 5, 0.5).
+narrative_ontology:measurement(anti_be_t10, antifragility_u2_exp_r2, base_extractiveness, 10, 0.75).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+narrative_ontology:coordination_type(antifragility_u2_exp_r2, resource_allocation).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u2_sed_r3",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u2_sed_r3"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_scientific_community",
+      "funding_agencies",
+      "journal_publishers",
+      "general_public"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "proponents_of_novel_claims",
+      "underfunded_labs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "THE PARADIGM CHALLENGER",
+      "comment": "For a researcher with a novel but difficult-to-replicate claim, the process is a coercive, high-cost barrier that can end a career. They are trapped within the system if they wish to be recognized."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "THE FIELD'S GATEKEEPER",
+      "comment": "For the established community (e.g., journal editors, tenured faculty), the process is a necessary coordination tool to maintain standards, filter noise, and build a reliable body of knowledge. They benefit from and enforce the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "THE WORKING SCIENTIST",
+      "comment": "A mid-career scientist experiences both the benefits of a stable knowledge base and the extractive costs of getting their own work verified. They can navigate the system but feel its friction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "THE HISTORIAN OF SCIENCE",
+      "comment": "The analytical view recognizes the essential coordination function (preventing epistemic chaos) is inextricably linked with an extractive process that slows progress and disadvantages challengers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_friction_optimality",
+      "question": "Is the current level of skepticism and demand for replication an optimal filter for truth, or has it become an excessively conservative barrier that primarily serves to protect existing paradigms?",
+      "resolution_mechanism": "Comparative analysis of innovation rates, retraction rates, and time-to-acceptance for paradigm-shifting claims across fields with different verification standards.",
+      "impact": "If the friction is proven to be optimally calibrated for truth-finding, the constraint is closer to a Rope. If it's excessively conservative, it's closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the verification process is an optimal filter or an overly conservative barrier to innovation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 1970,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "The process of scientific verification, centered on independent replication, is a foundational coordination mechanism. It aligns the global scientific community on a shared body of reliable knowledge. However, this process is not frictionless. It imposes significant costs in time, funding, and career risk, which are disproportionately borne by researchers proposing novel or paradigm-shifting claims. This creates an inherent tension between ensuring reliability (coordination) and enabling innovation (minimizing extraction).",
+    "key_agents": [
+      "Proponents of Novel Claims: Primary targets (powerless/trapped) who bear the burden of proof.",
+      "Established Scientific Community: Primary beneficiaries (institutional/arbitrage) who define and enforce the standards.",
+      "Funding Agencies & Publishers: Institutional beneficiaries who allocate resources based on the verification standard.",
+      "Working Scientists: General participants (moderate/mobile) who both benefit from and pay into the system."
+    ],
+    "logic_rationale": "The extractiveness score of 0.55 reflects the high, non-recoverable costs (years of work, grant funding) required to push a novel claim through the verification gauntlet. The suppression score of 0.70 reflects the near-impossibility of having a claim accepted into the scientific canon without passing through this process; alternative paths to legitimacy are strongly suppressed.",
+    "perspectival_gap": "A stark gap exists between the 'Paradigm Challenger' who sees a career-threatening Snare and the 'Field's Gatekeeper' who sees a quality-control Rope. The former experiences the full extractive force of the system, while the latter primarily experiences its coordinating benefits and wields its power.",
+    "directionality_logic": "The constraint extracts resources (time, funding, intellectual energy) from individual claimants and converts it into a collective good: certainty and reliability for the entire field. The beneficiaries are the established community and society, who receive a vetted knowledge product. The victims are the innovators at the frontier, who must pay the high entry cost.",
+    "mandatrophy_analysis": "Classifying this as a Tangled Rope correctly captures its dual nature. A pure Rope classification would ignore the immense, often career-ending costs imposed on innovators. A pure Snare classification would wrongly dismiss the absolutely essential coordination function that prevents science from descending into an epistemic free-for-all. The Tangled Rope acknowledges that the mechanism for creating order is simultaneously a mechanism of extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_trust_in_science"
+    ]
+  }
+}

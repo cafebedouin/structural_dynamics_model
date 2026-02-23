@@ -1,0 +1,121 @@
+{
+  "header": {
+    "constraint_id": "subscription_economy_model_u2_exp_r4",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_subscription_economy_model_u2_exp_r4"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Subscription Economy Model",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "subscription_based_corporations"
+    ],
+    "victims": [
+      "individual_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subscribed Consumer",
+      "comment": "From the consumer's view, the model is a trap. Ownership is revoked, costs are perpetual, and cancellation is often intentionally difficult, creating a high-friction exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The SaaS Provider",
+      "comment": "From the corporation's perspective, this is a superior coordination mechanism for delivering continuous value and securing predictable, recurring revenue streams, reducing market volatility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Economic Analyst",
+      "comment": "The analytical view recognizes both the genuine coordination function (continuous updates) and the asymmetric extraction (loss of ownership, consumer inertia, high TCO)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subscription_value_vs_rent",
+      "question": "Is the recurring fee a fair price for continuous service and updates, or is it primarily rent-seeking on a captured customer base?",
+      "resolution_mechanism": "Comparative analysis of total cost of ownership (TCO) for subscription vs. perpetual models, adjusted for the actual utility of updates and services provided.",
+      "impact": "If the value exchange is equitable, the constraint leans towards Rope. If it's primarily rent-seeking, it solidifies as a Snare from most non-beneficiary perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing fair value exchange from rent-seeking in recurring revenue models."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 2005,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the widespread business model shift from one-time product sales (perpetual licenses) to recurring subscription fees. While offering a coordination benefit (continuous updates, service access), it asymmetrically extracts value by creating consumer inertia, making cancellation difficult (a 'hassle tax'), and revoking ownership rights. The model is actively enforced by DRM and the suppression of non-subscription alternatives.",
+    "key_agents": [
+      "Individual Consumers: Primary target (powerless/trapped) \u2014 bear the costs of subscription fatigue, loss of ownership, and cancellation friction.",
+      "Subscription-based Corporations: Primary beneficiary (institutional/arbitrage) \u2014 benefit from predictable recurring revenue and increased customer lifetime value.",
+      "Regulators: Secondary actor (institutional/constrained) \u2014 struggle to adapt consumer protection laws to the new model."
+    ],
+    "logic_rationale": "The high extractiveness (0.68) reflects the conversion of a finite purchase into a potentially infinite payment stream, coupled with the loss of asset ownership. The high suppression (0.72) stems from the active phasing out of perpetual license alternatives and the use of DRM to enforce compliance, leaving consumers with few choices.",
+    "perspectival_gap": "The gap is stark. Corporations view the model as a Rope, a pure coordination solution for service delivery and revenue stabilization. Consumers experience it as a Snare, where they are trapped into perpetual payments for tools they once could own outright. The analytical perspective must classify it as a Tangled Rope to capture this duality of function and extraction.",
+    "directionality_logic": "The directionality is unambiguous. Value flows from a broad base of individual consumers to a concentrated group of corporations. Consumers are the victims, paying more over time and losing autonomy. Corporations are the beneficiaries, gaining financial stability and market control. This structure ensures a high directionality (d) for consumers and a low d for corporations.",
+    "mandatrophy_analysis": "Classifying this as a Tangled Rope is crucial for avoiding mandatrophy. A simple Snare classification would ignore the genuine coordination benefits (e.g., security patches, feature updates) that providers cite as justification. A Rope classification would ignore the immense, asymmetric extraction and the coercive suppression of alternatives. The Tangled Rope correctly identifies that a valid coordination function is being used as a vehicle for a highly extractive and coercive arrangement."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_rights_management",
+      "platform_lock_in"
+    ]
+  }
+}

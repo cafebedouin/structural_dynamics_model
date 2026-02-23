@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2023-10-27
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -57,17 +57,18 @@
  *
  * SUMMARY:
  *   The process of scientific verification requires independent replication
- *   before a claim is accepted. This serves a vital coordination function,
- *   creating a shared, reliable body of knowledge. However, it also imposes
- *   significant costs (time, funding, reputation) on the proposers of novel
- *   claims, creating an extractive dynamic where innovators bear high risk
- *   for the collective benefit of the field's stability.
+ *   of claims before they are accepted. This serves a vital coordination
+ *   function, creating a shared and reliable body of knowledge. However, this
+ *   process imposes significant, asymmetric costs in terms of time, funding,
+ *   and career risk, primarily on early-career researchers and those
+ *   proposing highly novel or difficult-to-replicate findings.
  *
  * KEY AGENTS:
- *   - Junior/Heterodox Researchers: Primary targets of extraction (powerless/trapped)
- *   - Established Scientific Community (Journals, Universities, Senior Faculty): Primary beneficiaries and enforcers (institutional/arbitrage)
- *   - Funding Agencies: Beneficiaries seeking to de-risk investment (institutional/arbitrage)
- *   - The Public: Indirect beneficiary of reliable science
+ *   - Early-Career Researchers: Primary targets of extraction (powerless/trapped)
+ *   - Proposers of Novel Claims: Secondary targets of extraction (moderate/constrained)
+ *   - Established Scientific Institutions (Universities, Journals, Funding Bodies): Primary beneficiaries and enforcers (institutional/arbitrage)
+ *   - Scientific Community at Large: Beneficiary of coordination (organized/mobile)
+ *   - General Public: Indirect beneficiary (moderate/constrained)
  */
 
 /* ==========================================================================
@@ -76,13 +77,13 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(epistemic_process_of_verification_u2_exp_r4, 0.55).
-domain_priors:suppression_score(epistemic_process_of_verification_u2_exp_r4, 0.75).
-domain_priors:theater_ratio(epistemic_process_of_verification_u2_exp_r4, 0.3).
+domain_priors:suppression_score(epistemic_process_of_verification_u2_exp_r4, 0.6).
+domain_priors:theater_ratio(epistemic_process_of_verification_u2_exp_r4, 0.25).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(epistemic_process_of_verification_u2_exp_r4, extractiveness, 0.55).
-narrative_ontology:constraint_metric(epistemic_process_of_verification_u2_exp_r4, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(epistemic_process_of_verification_u2_exp_r4, theater_ratio, 0.3).
+narrative_ontology:constraint_metric(epistemic_process_of_verification_u2_exp_r4, suppression_requirement, 0.6).
+narrative_ontology:constraint_metric(epistemic_process_of_verification_u2_exp_r4, theater_ratio, 0.25).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(epistemic_process_of_verification_u2_exp_r4, tangled_rope).
@@ -92,44 +93,43 @@ narrative_ontology:topic_domain(epistemic_process_of_verification_u2_exp_r4, "sc
 domain_priors:requires_active_enforcement(epistemic_process_of_verification_u2_exp_r4).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(epistemic_process_of_verification_u2_exp_r4, established_scientific_community).
-narrative_ontology:constraint_beneficiary(epistemic_process_of_verification_u2_exp_r4, funding_agencies).
+narrative_ontology:constraint_beneficiary(epistemic_process_of_verification_u2_exp_r4, established_scientific_institutions).
+narrative_ontology:constraint_beneficiary(epistemic_process_of_verification_u2_exp_r4, scientific_community_at_large).
 narrative_ontology:constraint_beneficiary(epistemic_process_of_verification_u2_exp_r4, general_public).
-narrative_ontology:constraint_victim(epistemic_process_of_verification_u2_exp_r4, junior_researchers).
+narrative_ontology:constraint_victim(epistemic_process_of_verification_u2_exp_r4, early_career_researchers).
 narrative_ontology:constraint_victim(epistemic_process_of_verification_u2_exp_r4, proposers_of_novel_claims).
-narrative_ontology:constraint_victim(epistemic_process_of_verification_u2_exp_r4, heterodox_theorists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% For a junior researcher, the burden of proof and risk of being wrong or ignored can be career-ending. The process feels purely extractive and coercive.
+% For a researcher needing novel results for tenure, the high cost and long delay of verification acts as a Snare, extracting time and career capital with a high risk of failure.
 constraint_indexing:constraint_classification(epistemic_process_of_verification_u2_exp_r4, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% For the institution, this process is a pure coordination mechanism to ensure quality, stability, and efficient allocation of trust and resources. The extraction is seen as a necessary cost of doing business.
+% For a well-funded lab or journal, the process is a Rope that coordinates the community, maintains quality standards, and reinforces their own position as arbiters of fact.
 constraint_indexing:constraint_classification(epistemic_process_of_verification_u2_exp_r4, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% A tenured academic both benefits from the system's stability and bears the costs of verification for their own new ideas. They are aware of both the coordination and extraction.
-constraint_indexing:constraint_classification(epistemic_process_of_verification_u2_exp_r4, tangled_rope,
-    context(agent_power(powerful),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national))).
-
-% The analytical view recognizes the essential coordination function in building reliable knowledge while also seeing the clear, asymmetric extraction from innovators that can slow progress.
+% The analytical view sees both the essential coordination function (Rope) and the asymmetric costs imposed on new entrants (Snare), classifying it as a Tangled Rope.
 constraint_indexing:constraint_classification(epistemic_process_of_verification_u2_exp_r4, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% The public experiences the reliable outputs of the process (technology, medicine) and perceives it as a pure coordination good (Rope), largely unaware of the internal extraction.
+constraint_indexing:constraint_classification(epistemic_process_of_verification_u2_exp_r4, rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -154,16 +154,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (ε=0.55) reflects the career-level stakes and significant resource investment required for a novel claim to be validated. Suppression (0.75) is high because alternative epistemic systems (e.g., authority-based claims) are actively and systematically excluded from mainstream science. The process is highly functional, hence the low theater ratio (0.30).
+ *   The extractiveness score of 0.55 reflects the immense cost of experimental replication, the years of researcher time invested, and the career-altering consequences of failed verification. The suppression score of 0.60 represents the high bar for acceptance and the active filtering of claims that cannot (yet) be independently corroborated, effectively suppressing them from canon.
  *
  * PERSPECTIVAL GAP:
- *   The primary gap exists between the junior researcher, who experiences the process as a high-stakes, coercive Snare, and the institutional actor (e.g., a journal), which views it as a necessary, low-cost Rope for maintaining quality. The former feels the extraction personally, while the latter abstracts it as a system-level feature.
+ *   A stark gap exists between the early-career researcher, who experiences the system as a high-risk Snare that could end their career, and the established institution, which sees a necessary Rope for maintaining quality and order. The analytical perspective reconciles these by identifying the structure as a Tangled Rope, acknowledging both the valid coordination and the harsh, asymmetric extraction.
  *
  * DIRECTIONALITY LOGIC:
- *   Value is extracted from the individual innovator, who must expend immense resources to meet the burden of proof. This value is transferred to the collective scientific field in the form of increased reliability and stability. The beneficiaries are those who depend on this stability—established labs, funding bodies, and downstream technology—while the costs are concentrated on those pushing the frontier.
+ *   The constraint extracts career potential, time, and resources from individual researchers (the victims) and transforms them into epistemic certainty and prestige for the community and its established institutions (the beneficiaries). The flow is from the precarious and novel to the stable and canonical.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this process as a pure Rope would be a common error, ignoring the severe, asymmetric costs imposed on innovators. Conversely, calling it a pure Snare would ignore its undeniably critical function in coordinating the scientific enterprise. The Tangled Rope classification correctly identifies that it has both a genuine coordination function and a significant, non-trivial extractive component.
+ *   Classifying this process as a pure Rope would be a failure of Mandatrophy, as it would ignore the severe costs borne by a specific class of participants. Conversely, calling it a pure Snare would ignore its undeniably critical function in creating reliable knowledge. The Tangled Rope classification is essential to capture this duality of beneficial coordination built upon costly extraction.
  */
 
 /* ==========================================================================
@@ -171,35 +171,35 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    verification_as_gatekeeping,
-    'Is the high cost of verification a necessary feature for epistemic rigor, or a form of inertial gatekeeping that suppresses genuinely novel but disruptive ideas?',
-    'Comparative analysis of time-to-acceptance for paradigm-shifting papers versus incremental ones, and funding outcomes for high-risk proposals.',
-    'If primarily gatekeeping, the constraint's base extractiveness is higher and it functions more like a Snare. If primarily for rigor, it is a necessary Tangled Rope.',
+    verification_cost_necessity,
+    'Is the high cost of verification an irreducible requirement for scientific rigor, or has it become an excessive form of gatekeeping by established players?',
+    'Comparative analysis of scientific progress rates vs. funding concentration and replication costs over time. Analysis of retracted papers vs. the career status of their authors.',
+    'If the cost is proven to be an irreducible feature of rigor, the constraint leans more towards Rope. If it's primarily gatekeeping, it's a more extractive Tangled Rope, bordering on Snare.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(verification_as_gatekeeping, empirical, 'Whether verification costs are for rigor or inertial gatekeeping.').
+narrative_ontology:omega_variable(verification_cost_necessity, empirical, 'Whether the high cost of verification is necessary for rigor or a form of gatekeeping.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(epistemic_process_of_verification_u2_exp_r4, 1950, 2024).
+narrative_ontology:interval(epistemic_process_of_verification_u2_exp_r4, 1950, 2025).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(epis_tr_t1950, epistemic_process_of_verification_u2_exp_r4, theater_ratio, 1950, 0.15).
-narrative_ontology:measurement(epis_tr_t1990, epistemic_process_of_verification_u2_exp_r4, theater_ratio, 1990, 0.25).
-narrative_ontology:measurement(epis_tr_t2024, epistemic_process_of_verification_u2_exp_r4, theater_ratio, 2024, 0.3).
+narrative_ontology:measurement(epis_tr_t1950, epistemic_process_of_verification_u2_exp_r4, theater_ratio, 1950, 0.1).
+narrative_ontology:measurement(epis_tr_t1985, epistemic_process_of_verification_u2_exp_r4, theater_ratio, 1985, 0.18).
+narrative_ontology:measurement(epis_tr_t2025, epistemic_process_of_verification_u2_exp_r4, theater_ratio, 2025, 0.25).
 
 % Extraction over time
-narrative_ontology:measurement(epis_be_t1950, epistemic_process_of_verification_u2_exp_r4, base_extractiveness, 1950, 0.35).
-narrative_ontology:measurement(epis_be_t1990, epistemic_process_of_verification_u2_exp_r4, base_extractiveness, 1990, 0.48).
-narrative_ontology:measurement(epis_be_t2024, epistemic_process_of_verification_u2_exp_r4, base_extractiveness, 2024, 0.55).
+narrative_ontology:measurement(epis_be_t1950, epistemic_process_of_verification_u2_exp_r4, base_extractiveness, 1950, 0.3).
+narrative_ontology:measurement(epis_be_t1985, epistemic_process_of_verification_u2_exp_r4, base_extractiveness, 1985, 0.45).
+narrative_ontology:measurement(epis_be_t2025, epistemic_process_of_verification_u2_exp_r4, base_extractiveness, 2025, 0.55).
 
 
 /* ==========================================================================

@@ -1,0 +1,132 @@
+{
+  "header": {
+    "constraint_id": "subscription_economy_model_u2_sed_r4",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_subscription_economy_model_u2_sed_r4"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Subscription Economy Model",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "subscription_based_corporations",
+      "venture_capital_investors"
+    ],
+    "victims": [
+      "individual_consumers",
+      "second_hand_market_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "THE CAPTIVE CONSUMER",
+      "comment": "For the individual consumer, the model is a snare due to high switching costs, cancellation friction, and the elimination of ownership alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "THE REVENUE-SMOOTHING CORPORATION",
+      "comment": "For the corporation, this is a pure coordination rope that smooths revenue streams and deepens customer relationships."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "THE STRUCTURAL ANALYST",
+      "comment": "The analytical view recognizes both the coordination function (service delivery) and the asymmetric extraction (loss of ownership, inertia exploitation)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "THE PROSUMER",
+      "comment": "A professional or small business owner who can choose some non-subscription tools but is still constrained by industry standards sees a tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "service_vs_ownership_value",
+      "question": "Does the value of continuous updates and services provided by subscriptions outweigh the value lost from the elimination of perpetual ownership and the friction of recurring costs?",
+      "resolution_mechanism": "Comparative total cost of ownership (TCO) analysis between subscription and hypothetical perpetual models, adjusted for feature velocity, support longevity, and consumer surplus.",
+      "impact": "If service value is high and TCO is favorable, the constraint shifts towards Rope. If extraction dominates, it reinforces the Snare classification for victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the service value justifies the loss of ownership and recurring fees."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 2010,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the widespread business model shift from one-time product sales (perpetual licenses) to recurring subscription fees. This model presents a genuine coordination function by funding continuous development and providing ongoing service access. However, it simultaneously functions as a highly extractive mechanism by revoking ownership rights, creating consumer inertia, making cancellation difficult (a 'hassle tax'), and locking users into ecosystems. The model is actively enforced by Digital Rights Management (DRM) and the strategic suppression of non-subscription alternatives.",
+    "key_agents": [
+      "Individual Consumers: Primary target (powerless/trapped) \u2014 bear the costs of subscription fatigue, loss of ownership, and cancellation friction.",
+      "Subscription-based Corporations: Primary beneficiary (institutional/arbitrage) \u2014 benefit from predictable recurring revenue and increased customer lifetime value.",
+      "Second-hand Market Participants: Secondary victim (powerless/trapped) \u2014 eliminated by the non-transferability of subscription licenses."
+    ],
+    "logic_rationale": "The high extractiveness (0.68) reflects the conversion of a capital good (software, media) into a rental service, capturing all future value for the provider. The high suppression (0.72) comes from the active phasing out of perpetual licenses and the use of DRM to prevent offline use or resale, effectively removing alternatives. The model requires active enforcement via terms of service and technological locks, fulfilling a key requirement for a Tangled Rope.",
+    "perspectival_gap": "A significant gap exists between the corporation and the consumer. The corporation sees a Rope: a rational system for funding ongoing development and smoothing revenue. The consumer experiences a Snare: a system that exploits behavioral biases (inertia, forgetfulness) to create a recurring charge that is difficult to escape and which strips them of the asset equity they once had in a purchased product.",
+    "directionality_logic": "The directionality is clear: value flows from a broad base of individual consumers (victims) to a concentrated group of corporations and their investors (beneficiaries). Consumers pay continuously for access without building equity, while corporations secure a predictable, long-term revenue stream that is highly valued by financial markets.",
+    "mandatrophy_analysis": "Classifying this as a Tangled Rope correctly avoids two errors. It is not a pure Rope, because that would ignore the significant, non-consensual extraction from consumers via lock-in and friction. It is not a pure Snare, because that would ignore the genuine coordination benefit of funding continuous updates and cloud services. The Tangled Rope classification captures this duality of function and extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "right_to_repair_movement",
+      "digital_asset_ownership"
+    ]
+  }
+}

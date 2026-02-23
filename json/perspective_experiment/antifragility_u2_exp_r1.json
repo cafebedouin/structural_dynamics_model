@@ -2,7 +2,7 @@
   "header": {
     "constraint_id": "antifragility_u2_exp_r1",
     "version": "7.0",
-    "generated_date": "2024-07-29",
+    "generated_date": "2024-07-16",
     "status": "RESOLVED MANDATROPHY",
     "measurement_id_prefix": "anti",
     "module_name_override": "constraint_antifragility_u2_exp_r1"
@@ -32,7 +32,7 @@
       "exit_options": "trapped",
       "spatial_scope": "national",
       "label": "The Optimized Serf",
-      "comment": "For the agent whose stability is sacrificed for system volatility, the constraint is a pure Snare. They bear the costs of disorder without reaping the benefits."
+      "comment": "Experiences the downside of volatility without access to the upside. The system extracts resilience and resources from them under stress."
     },
     {
       "classification_type": "rope",
@@ -41,7 +41,7 @@
       "exit_options": "arbitrage",
       "spatial_scope": "global",
       "label": "The Barbell Practitioner",
-      "comment": "For the agent who can structure their affairs to gain from volatility (the 'barbell strategy'), the constraint is a pure coordination mechanism (Rope) for harvesting upside."
+      "comment": "Actively uses volatility for gain, coordinating personal resources to benefit from disorder. For this agent, it's a tool with negative effective extraction."
     },
     {
       "classification_type": "tangled_rope",
@@ -50,7 +50,7 @@
       "exit_options": "constrained",
       "spatial_scope": "national",
       "label": "The Fragilista Bureaucrat",
-      "comment": "For the institution attempting to manage the system, it is a Tangled Rope: a necessary coordination function (maintaining order) that is inextricably linked with asymmetric extraction (creating fragility)."
+      "comment": "Enforces policies that create short-term stability (coordination) but generate hidden, systemic fragility, leading to asymmetric extraction during crises."
     },
     {
       "classification_type": "mountain",
@@ -59,18 +59,18 @@
       "exit_options": "analytical",
       "spatial_scope": "universal",
       "label": "The Evolutionary Observer",
-      "comment": "From a civilizational or biological perspective, the principle that systems gain from disorder is an unchangeable feature of reality, a Mountain."
+      "comment": "Views antifragility as a fundamental, unchangeable property of complex adaptive systems, akin to natural selection. From this scope, the extraction is a feature of reality, not a policy."
     }
   ],
   "omegas": [
     {
       "id": "antifragility_extraction_intent",
-      "question": "Is the high extraction (0.75) a functional necessity for evolutionary adaptation, or a predatory feature of a socially constructed system?",
-      "resolution_mechanism": "A cross-system audit of 'Skin in the Game' metrics to determine if downside risk is systematically transferred to specific groups or is a shared property of the system.",
-      "impact": "If it is a functional necessity, the analytical classification trends towards Mountain. If it is predatory and constructed, it trends towards Snare.",
+      "question": "Is the high extraction a functional necessity for system evolution or a predatory feature engineered by specific agents?",
+      "resolution_mechanism": "Audit of 'skin in the game' metrics. If beneficiaries bear proportional downside risk, it's functional. If downside is fully externalized to victims, it's predatory.",
+      "impact": "If functional necessity: the analytical perspective shifts from Tangled Rope to Mountain. If predatory: it solidifies the Snare classification for victims and reveals the practitioner's Rope to be a deception.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the high extraction is a functional necessity or a predatory construct."
+      "description": "Whether the high extraction is a functional necessity or predatory."
     }
   ],
   "measurements": [
@@ -110,18 +110,15 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "Antifragility describes systems that increase in capability, resilience, or robustness as a result of stressors, shocks, volatility, and randomness. While this appears to be a desirable property, its implementation often involves a transfer of fragility. Some parts of the system gain from disorder by making other parts more vulnerable to it. This creates a significant perspectival gap between those who benefit and those who pay the price.",
+    "narrative_context": "Antifragility describes systems that gain from disorder, stressors, and volatility. This property manifests differently depending on an agent's position within the system. While it can be seen as a fundamental law of nature for complex systems (a Mountain), its application in social and economic contexts creates a stark divide between those who can harness it and those who are consumed by it.",
     "key_agents": [
-      "Optimized Serfs (Victim): Powerless agents trapped in fragile positions, bearing the downside of volatility.",
-      "Antifragile Practitioner (Beneficiary): Moderate-power agents with arbitrage options who can structure their exposure to harvest upside from volatility.",
-      "Fragilista Bureaucrat (Enforcer/Victim): Institutional agents who attempt to suppress all volatility, inadvertently creating systemic fragility and concentrating risk."
+      "Optimized Serfs (Victim): Powerless individuals in rigid, optimized systems who bear the costs of volatility.",
+      "Antifragile Practitioner (Beneficiary): Agents with agency and resources (the 'barbell strategy') who can harvest upside from volatility while limiting downside.",
+      "Fragile Institutions (Victim/Enforcer): Bureaucracies and corporations that enforce stability, suppress volatility, and become catastrophically fragile as a result."
     ],
-    "logic_rationale": "The high extractiveness (0.75) represents the 'convexity' of the payoff structure: the antifragile agent captures unbounded upside from positive 'black swan' events, while their downside is capped. This capped downside is externalized and becomes the unbounded risk borne by the fragile victims. Suppression (0.65) is high because the system actively eliminates safe, low-volatility options, forcing agents into fragile dependencies.",
-    "perspectival_gap": "The gap is profound. The practitioner with arbitrage exit sees a Rope for building wealth. The trapped serf sees a Snare that drains their resources and stability. The institutional actor sees a Tangled Rope, wrestling with the dual need for stability and adaptation. The long-term analytical observer sees a Mountain, an inescapable evolutionary dynamic. The system's true nature is this superposition of all four perspectives.",
-    "directionality_logic": "Directionality is determined by exposure to volatility and the ability to exit. Beneficiaries ('antifragile_practitioner') are defined by their ability to choose their exposure and exit losing positions (arbitrage), giving them a low 'd' value. Victims ('optimized_serfs', 'fragile_institutions') are defined by their inability to avoid exposure and their trapped status, giving them a high 'd' value. The constraint extracts vitality and resources from the latter to subsidize the former.",
-    "mandatrophy_analysis": "Mandatrophy is resolved by classifying the constraint as a Tangled Rope from the institutional perspective. This avoids mislabeling it as a pure Rope (ignoring the victims) or a pure Snare (ignoring the genuine adaptive function it serves at a system level). The Tangled Rope classification correctly identifies that the coordination function (system adaptation) is achieved via an inseparable mechanism of asymmetric extraction."
-  },
-  "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "logic_rationale": "The high extractiveness (\u03b5=0.75) represents the 'convexity bias' where beneficiaries capture unbounded upside from positive 'black swan' events, while the costs of negative events are socialized and borne by the victims. Suppression (0.65) is high because the fragile system is presented as the only rational choice, discouraging the adoption of more resilient, less 'optimal' strategies.",
+    "perspectival_gap": "The gap is profound. For the practitioner with arbitrage, it's a Rope for navigating reality. For the trapped serf, it's a Snare that punishes them for the system's instability. For the long-term analytical observer, it's a Mountain\u2014an inescapable feature of evolution. The institutional agent sees a Tangled Rope because they are trying to coordinate for stability while inadvertently enabling the extraction.",
+    "directionality_logic": "Beneficiaries are the practitioners who have the knowledge and capital to structure their affairs to gain from shocks. Victims are the individuals and institutions optimized for a narrow, predictable future, from whom resilience and resources are extracted when that future fails to materialize. The system actively transfers wealth and power from the fragile to the antifragile during crises.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that 'antifragility' is not a pure coordination good (Rope) or a pure natural law (Mountain) in human systems. The Tangled Rope classification correctly identifies that the coordination function (maintaining a stable, predictable economy) is coupled with a severe, asymmetric extraction mechanism that activates under stress. This prevents mislabeling a predatory system as a simple tool or a law of nature."
   }
 }

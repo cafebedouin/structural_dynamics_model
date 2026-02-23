@@ -56,19 +56,20 @@
  *   domain: economic/legal
  *
  * SUMMARY:
- *   Section 469 of the US tax code generally prevents taxpayers from
- *   deducting passive activity losses against active income. The (c)(7)
- *   exemption carves out a special exception for 'real estate professionals,'
- *   but defines this status with a strict, two-part test (750 hours of
- *   activity AND more than half of all personal services). This creates a
- *   significant, often insurmountable, barrier for individuals with
+ *   Section 469 of the US tax code generally prevents deducting passive
+ *   activity losses against active income. The (c)(7) exemption creates a
+ *   special exception for 'real estate professionals' who meet a strict
+ *   two-part test: performing over 750 hours in real property trades and
+ *   spending more than half their total personal services time on them. This
+ *   creates an almost insurmountable barrier for individuals with demanding,
  *   high-income W-2 jobs, effectively bifurcating taxpayers into those who
- *   can and cannot access these powerful deductions.
+ *   can and cannot access these powerful deductions based on their primary
+ *   career.
  *
  * KEY AGENTS:
  *   - Hybrid W-2 Investors: Primary target (powerless/trapped) — bears extraction via disallowed losses.
- *   - Full-Time Real Estate Professionals: Primary beneficiary (moderate/mobile) — benefits from the clear qualification path and reduced competition for tax-advantaged investments.
- *   - The IRS: Enforcing institution (institutional/constrained) — must administer the complex and contentious rule.
+ *   - Full-Time Real Estate Professionals: Primary beneficiary (moderate/mobile) — benefits from the clear qualification path and tax advantages.
+ *   - The IRS: Enforcing institution (institutional/constrained) — administers the rule as written.
  */
 
 /* ==========================================================================
@@ -76,13 +77,13 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(26usc469_real_estate_exemption_u2_exp_r3, 0.62).
-domain_priors:suppression_score(26usc469_real_estate_exemption_u2_exp_r3, 0.75).
+domain_priors:base_extractiveness(26usc469_real_estate_exemption_u2_exp_r3, 0.68).
+domain_priors:suppression_score(26usc469_real_estate_exemption_u2_exp_r3, 0.72).
 domain_priors:theater_ratio(26usc469_real_estate_exemption_u2_exp_r3, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(26usc469_real_estate_exemption_u2_exp_r3, extractiveness, 0.62).
-narrative_ontology:constraint_metric(26usc469_real_estate_exemption_u2_exp_r3, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(26usc469_real_estate_exemption_u2_exp_r3, extractiveness, 0.68).
+narrative_ontology:constraint_metric(26usc469_real_estate_exemption_u2_exp_r3, suppression_requirement, 0.72).
 narrative_ontology:constraint_metric(26usc469_real_estate_exemption_u2_exp_r3, theater_ratio, 0.15).
 
 % --- Constraint claim ---
@@ -94,34 +95,35 @@ domain_priors:requires_active_enforcement(26usc469_real_estate_exemption_u2_exp_
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(26usc469_real_estate_exemption_u2_exp_r3, full_time_real_estate_professionals).
+narrative_ontology:constraint_beneficiary(26usc469_real_estate_exemption_u2_exp_r3, us_treasury).
 narrative_ontology:constraint_victim(26usc469_real_estate_exemption_u2_exp_r3, hybrid_w2_investors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% For an individual with a high-income primary career, the tests are nearly impossible to meet, trapping their passive losses and creating a significant financial drag. The only exit is to abandon their primary career, which is often not a viable choice.
+% For the high-income professional investing in real estate on the side, the rule is a pure Snare. It disallows legitimate economic losses against their primary income, creating a significant tax burden with no corresponding benefit. The 'exit' option of quitting their job to qualify is prohibitively costly.
 constraint_indexing:constraint_classification(26usc469_real_estate_exemption_u2_exp_r3, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% For those whose primary business is real estate, the rule is a clear coordination mechanism. It defines their professional status, provides substantial tax benefits, and creates a protective moat against casual investors, increasing the value of their specialization.
+% For those whose primary business is real estate, the rule is a clear Rope. It provides a well-defined (if strict) pathway to deduct losses, coordinating their professional status with favorable tax treatment and creating a competitive moat against casual investors.
 constraint_indexing:constraint_classification(26usc469_real_estate_exemption_u2_exp_r3, rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
             spatial_scope(national))).
 
-% The IRS is constrained to enforce the law as written. It sees the rule's coordination function (defining a specific class of taxpayer) but also expends resources on enforcement and litigation related to its asymmetric extractive effects.
+% The enforcing institution sees a Tangled Rope. The rule serves a legitimate coordination function: defining a professional class to prevent widespread tax sheltering. However, its enforcement results in asymmetric extraction from a specific group of taxpayers, making it more than a simple coordination mechanism.
 constraint_indexing:constraint_classification(26usc469_real_estate_exemption_u2_exp_r3, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
-% The analyst sees the full structure: a rule with a stated coordination purpose (distinguishing active professionals from passive investors) that simultaneously functions as a highly effective extractive mechanism against a specific class of taxpayer.
+% The analytical view confirms the Tangled Rope classification. The constraint possesses both a genuine coordination function (distinguishing active vs. passive participation) and a highly extractive component that asymmetrically burdens one class of economic actor.
 constraint_indexing:constraint_classification(26usc469_real_estate_exemption_u2_exp_r3, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -151,16 +153,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (0.62) reflects the direct financial value transferred from the victim class (in the form of higher taxes) to the general treasury, which indirectly benefits all recipients of government spending but directly benefits the professional class by creating a tax shelter they can uniquely access. The high suppression (0.75) comes from the rigidity of the two-part test, which offers no alternative pathways for a W-2 employee to qualify, regardless of the scale or sophistication of their real estate activities.
+ *   The high extractiveness (0.68) reflects the direct financial cost of disallowed losses, which can amount to tens of thousands of dollars annually for an investor. The high suppression (0.72) comes from the rigidity of the legal test; there is no alternative path or partial compliance. It is a binary, coercive rule enforced by a state actor.
  *
  * PERSPECTIVAL GAP:
- *   A significant gap exists between the Hybrid W-2 Investor (who sees a Snare blocking them from benefits available to others in the same asset class) and the Full-Time Real Estate Professional (who sees a Rope that legitimizes their profession and provides a clear, if demanding, set of rules for securing tax advantages). The former experiences it as an arbitrary barrier, the latter as a professional standard.
+ *   A significant gap exists between the Hybrid Investor (Snare) and the Full-Time Professional (Rope). The investor experiences a purely extractive rule that increases their tax liability without providing any service. The professional experiences a beneficial coordination rule that defines their status and provides a clear economic advantage, effectively protecting their tax strategy from competition by high-earning outsiders.
  *
  * DIRECTIONALITY LOGIC:
- *   The constraint's structure is explicitly directional. It benefits the 'full_time_real_estate_professionals' by granting them exclusive access to deduct unlimited passive losses against other income. It extracts from 'hybrid_w2_investors' by disallowing the same deductions, forcing them to pay higher taxes than they otherwise would. The IRS acts as the enforcement channel for this transfer.
+ *   The constraint directs value away from Hybrid W-2 Investors, whose tax bills are higher due to disallowed losses. This value is captured by the US Treasury (an indirect beneficiary) and indirectly benefits Full-Time Real Estate Professionals, who face less competition from tax-advantaged capital from other high-income sectors.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this as a Tangled Rope correctly captures its dual nature. It is not a pure Snare, as it has a legitimate coordinating function: to distinguish between active business participants and passive investors. However, it is not a pure Rope, because the method of coordination (the strict two-part test) creates a severe and asymmetric extractive outcome. This classification avoids the error of seeing it as only a technical rule (Rope) or only a malicious trap (Snare).
+ *   Classifying this as a pure Snare would miss its genuine (though narrow) coordination function of defining a professional class for tax purposes. Classifying it as a Rope would ignore the severe, asymmetric extraction imposed on a clearly defined victim group. The Tangled Rope classification correctly identifies that a legitimate policy goal is achieved through a mechanism with highly extractive and coercive side effects.
  */
 
 /* ==========================================================================
@@ -168,35 +170,35 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    rep_status_intent,
-    'Is the strict two-part test for 'Real Estate Professional' status a necessary guardrail against tax abuse, or is it an intentionally constructed barrier to protect a specific professional class?',
-    'Analysis of legislative history and lobbying records during the law's creation, compared with empirical data on tax avoidance before and after its implementation.',
-    'If a necessary guardrail, it's a Tangled Rope with a strong coordination function. If a protective barrier, it leans more towards a Snare.',
+    rep_exemption_intent,
+    'Was the strictness of the 'Real Estate Professional' test primarily intended to create a professional carve-out (coordination) or to prevent high-income W-2 earners from sheltering income (extraction)?',
+    'Analysis of the 1993 legislative history and subsequent economic impact studies on tax revenue from disallowed passive losses.',
+    'If primarily for coordination, it leans more towards Rope. If primarily for revenue generation via extraction, it's a clear Snare from a systemic view.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(rep_status_intent, empirical, 'Whether the strict REP test is a necessary anti-abuse rule or a form of protectionism.').
+narrative_ontology:omega_variable(rep_exemption_intent, conceptual, 'The core ambiguity in the rule's purpose: defining a professional standard versus implementing an anti-abuse provision targeting a specific taxpayer profile.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(26usc469_real_estate_exemption_u2_exp_r3, 1986, 2024).
+narrative_ontology:interval(26usc469_real_estate_exemption_u2_exp_r3, 1993, 2043).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(26us_tr_t1986, 26usc469_real_estate_exemption_u2_exp_r3, theater_ratio, 1986, 0.1).
-narrative_ontology:measurement(26us_tr_t2005, 26usc469_real_estate_exemption_u2_exp_r3, theater_ratio, 2005, 0.12).
+narrative_ontology:measurement(26us_tr_t1993, 26usc469_real_estate_exemption_u2_exp_r3, theater_ratio, 1993, 0.1).
+narrative_ontology:measurement(26us_tr_t2010, 26usc469_real_estate_exemption_u2_exp_r3, theater_ratio, 2010, 0.12).
 narrative_ontology:measurement(26us_tr_t2024, 26usc469_real_estate_exemption_u2_exp_r3, theater_ratio, 2024, 0.15).
 
 % Extraction over time
-narrative_ontology:measurement(26us_be_t1986, 26usc469_real_estate_exemption_u2_exp_r3, base_extractiveness, 1986, 0.4).
-narrative_ontology:measurement(26us_be_t2005, 26usc469_real_estate_exemption_u2_exp_r3, base_extractiveness, 2005, 0.55).
-narrative_ontology:measurement(26us_be_t2024, 26usc469_real_estate_exemption_u2_exp_r3, base_extractiveness, 2024, 0.62).
+narrative_ontology:measurement(26us_be_t1993, 26usc469_real_estate_exemption_u2_exp_r3, base_extractiveness, 1993, 0.6).
+narrative_ontology:measurement(26us_be_t2010, 26usc469_real_estate_exemption_u2_exp_r3, base_extractiveness, 2010, 0.65).
+narrative_ontology:measurement(26us_be_t2024, 26usc469_real_estate_exemption_u2_exp_r3, base_extractiveness, 2024, 0.68).
 
 
 /* ==========================================================================

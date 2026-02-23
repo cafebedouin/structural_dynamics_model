@@ -37,7 +37,7 @@ DEFAULT_LOG = RESULTS_DIR / "experiment_log.json"
 ALL_PERSPECTIVES = ["u1", "u2", "u3", "u4"]
 
 # Regex to decompose mangled IDs: {original_id}_{perspective}_{framing}_r{run}
-_RE_MANGLED = re.compile(r"^(.+)_(u[1-4])_(exp|str)_r(\d+)$")
+_RE_MANGLED = re.compile(r"^(.+)_(u[1-4])_(exp|str|sed|sdx)_r(\d+)$")
 
 # DR type extraction from enhanced reports
 _RE_DR_TYPE = re.compile(r"Claimed Type:\s+(\w+)")
@@ -117,7 +117,9 @@ def scan_json_dir() -> dict:
         generations.append({
             "constraint_id": parsed["original_id"],
             "perspective": parsed["perspective"],
-            "framing": "experiential" if parsed["framing"] == "exp" else "structural",
+            "framing": {"exp": "experiential", "str": "structural",
+                        "sed": "seeded", "sdx": "cross_domain"}.get(
+                            parsed["framing"], parsed["framing"]),
             "run": parsed["run"],
             "mangled_id": mangled_id,
             "success": True,
@@ -1068,6 +1070,321 @@ def generate_analysis_report(
 
 
 # ---------------------------------------------------------------------------
+# Seeding experiment analysis
+# ---------------------------------------------------------------------------
+
+# Mapping from mangled-ID suffix to condition label
+_CONDITION_LABELS = {
+    "exp": "A_experiential",
+    "sed": "B_seeded_cross_domain",
+    "sdx": "C_cross_domain",  # retained for backwards compatibility
+}
+
+
+def compute_seeding_analysis(log_data: dict) -> dict:
+    """Analyze moderate atom presence rates across seeding conditions.
+
+    Groups generations by condition (exp/sed/sdx) and computes:
+    - Primary: moderate atom presence rate per condition
+    - Secondary: classification stability at U2 for stories with moderate
+    - Tertiary: epsilon invariance across conditions
+    """
+    from collections import Counter
+
+    conditions: dict[str, list[dict]] = defaultdict(list)
+
+    for gen in log_data.get("generations", []):
+        if not gen.get("success"):
+            continue
+        parsed = parse_mangled_id(gen["mangled_id"])
+        if not parsed:
+            continue
+
+        suffix = parsed["framing"]  # exp, sed, sdx
+        if suffix not in _CONDITION_LABELS:
+            continue
+
+        story = load_story_json(gen["mangled_id"])
+        if not story:
+            continue
+
+        perspectives = story.get("perspectives", [])
+        powers = [p.get("agent_power", "MISSING") for p in perspectives]
+        has_moderate = "moderate" in powers
+
+        # Get moderate perspective's classification type if present
+        moderate_types = [
+            p.get("classification_type", "unknown")
+            for p in perspectives
+            if p.get("agent_power") == "moderate"
+        ]
+
+        conditions[suffix].append({
+            "mangled_id": gen["mangled_id"],
+            "constraint_id": parsed["original_id"],
+            "run": parsed["run"],
+            "has_moderate": has_moderate,
+            "moderate_types": moderate_types,
+            "epsilon": gen.get("epsilon"),
+            "claimed_type": gen.get("claimed_type", ""),
+            "powers": powers,
+        })
+
+    # Compute per-condition stats
+    condition_stats = {}
+    for suffix, label in _CONDITION_LABELS.items():
+        entries = conditions.get(suffix, [])
+        if not entries:
+            continue
+
+        n = len(entries)
+        moderate_count = sum(1 for e in entries if e["has_moderate"])
+        rate = moderate_count / n if n > 0 else 0.0
+
+        # Epsilon stats
+        epsilons = [e["epsilon"] for e in entries if e["epsilon"] is not None]
+        eps_mean = sum(epsilons) / len(epsilons) if epsilons else None
+        eps_min = min(epsilons) if epsilons else None
+        eps_max = max(epsilons) if epsilons else None
+
+        # Per-constraint breakdown
+        by_constraint: dict[str, dict] = {}
+        constraint_groups: dict[str, list] = defaultdict(list)
+        for e in entries:
+            constraint_groups[e["constraint_id"]].append(e)
+
+        for cid, group in constraint_groups.items():
+            cn = len(group)
+            cm = sum(1 for g in group if g["has_moderate"])
+            by_constraint[cid] = {
+                "n": cn,
+                "moderate_count": cm,
+                "rate": cm / cn if cn > 0 else 0.0,
+            }
+
+        # Classification types at moderate position
+        all_mod_types = Counter()
+        for e in entries:
+            for t in e["moderate_types"]:
+                all_mod_types[t] += 1
+
+        condition_stats[label] = {
+            "suffix": suffix,
+            "n": n,
+            "moderate_count": moderate_count,
+            "moderate_rate": rate,
+            "epsilon_mean": eps_mean,
+            "epsilon_min": eps_min,
+            "epsilon_max": eps_max,
+            "epsilon_delta": (eps_max - eps_min) if eps_min is not None and eps_max is not None else None,
+            "by_constraint": by_constraint,
+            "moderate_type_distribution": dict(all_mod_types.most_common()),
+        }
+
+    # Fisher's exact test for rate comparison (A vs B, A vs C, B vs C)
+    comparisons = {}
+    try:
+        from scipy.stats import fisher_exact
+        labels = list(condition_stats.keys())
+        for i in range(len(labels)):
+            for j in range(i + 1, len(labels)):
+                a = condition_stats[labels[i]]
+                b = condition_stats[labels[j]]
+                table = [
+                    [a["moderate_count"], a["n"] - a["moderate_count"]],
+                    [b["moderate_count"], b["n"] - b["moderate_count"]],
+                ]
+                odds_ratio, p_value = fisher_exact(table)
+                comparisons[f"{labels[i]}_vs_{labels[j]}"] = {
+                    "odds_ratio": odds_ratio,
+                    "p_value": p_value,
+                    "rates": (a["moderate_rate"], b["moderate_rate"]),
+                }
+    except ImportError:
+        comparisons["note"] = "scipy not available; Fisher's exact test skipped"
+
+    return {
+        "conditions": condition_stats,
+        "comparisons": comparisons,
+    }
+
+
+def generate_seeding_report(seeding_analysis: dict, log_data: dict) -> str:
+    """Generate the seeding experiment analysis markdown report."""
+    lines = []
+
+    def emit(s=""):
+        lines.append(s)
+
+    emit("# U2 Seeding Experiment — Analysis Report")
+    emit()
+    emit(f"**Generated:** {log_data.get('timestamp', 'unknown')}")
+    config = log_data.get("config", {})
+    emit(f"**Constraints:** {config.get('constraints', [])}")
+    emit(f"**Model:** {config.get('model', 'unknown')}")
+    emit()
+
+    conditions = seeding_analysis.get("conditions", {})
+    comparisons = seeding_analysis.get("comparisons", {})
+
+    # --- Primary metric: moderate atom presence rate ---
+    emit("## 1. Primary Metric: Moderate Atom Presence Rate")
+    emit()
+    emit("| Condition | N | Moderate Present | Rate | 95% CI |")
+    emit("|-----------|---|-----------------|------|--------|")
+
+    for label, stats in sorted(conditions.items()):
+        n = stats["n"]
+        m = stats["moderate_count"]
+        rate = stats["moderate_rate"]
+
+        # Wilson score interval
+        if n > 0:
+            z = 1.96
+            denom = 1 + z**2 / n
+            center = (rate + z**2 / (2 * n)) / denom
+            spread = z * ((rate * (1 - rate) / n + z**2 / (4 * n**2)) ** 0.5) / denom
+            ci_lo = max(0, center - spread)
+            ci_hi = min(1, center + spread)
+            ci_str = f"[{ci_lo:.1%}, {ci_hi:.1%}]"
+        else:
+            ci_str = "N/A"
+
+        emit(f"| {label} | {n} | {m} | {rate:.1%} | {ci_str} |")
+
+    emit()
+
+    # --- Statistical comparisons ---
+    emit("## 2. Statistical Comparisons (Fisher's Exact Test)")
+    emit()
+
+    if "note" in comparisons:
+        emit(f"*{comparisons['note']}*")
+    else:
+        emit("| Comparison | Rate A | Rate B | Odds Ratio | p-value | Significant? |")
+        emit("|------------|--------|--------|------------|---------|--------------|")
+        for key, comp in comparisons.items():
+            if key == "note":
+                continue
+            ra, rb = comp["rates"]
+            sig = "YES" if comp["p_value"] < 0.05 else "no"
+            emit(f"| {key} | {ra:.1%} | {rb:.1%} | "
+                 f"{comp['odds_ratio']:.2f} | {comp['p_value']:.4f} | {sig} |")
+
+    emit()
+
+    # --- Per-constraint breakdown ---
+    emit("## 3. Per-Constraint Breakdown")
+    emit()
+
+    # Collect all constraints
+    all_constraints = set()
+    for stats in conditions.values():
+        all_constraints.update(stats.get("by_constraint", {}).keys())
+
+    # Header
+    cond_labels = sorted(conditions.keys())
+    header = "| Constraint | " + " | ".join(f"{l} rate" for l in cond_labels) + " |"
+    sep = "|------------|" + "|".join("------" for _ in cond_labels) + "|"
+    emit(header)
+    emit(sep)
+
+    for cid in sorted(all_constraints):
+        row = f"| {cid} |"
+        for label in cond_labels:
+            bc = conditions[label].get("by_constraint", {}).get(cid)
+            if bc:
+                row += f" {bc['moderate_count']}/{bc['n']} ({bc['rate']:.0%}) |"
+            else:
+                row += " — |"
+        emit(row)
+
+    emit()
+
+    # --- Epsilon invariance ---
+    emit("## 4. Epsilon Invariance Check")
+    emit()
+    emit("| Condition | ε mean | ε min | ε max | ε delta |")
+    emit("|-----------|--------|-------|-------|---------|")
+
+    for label, stats in sorted(conditions.items()):
+        em = f"{stats['epsilon_mean']:.3f}" if stats['epsilon_mean'] is not None else "—"
+        lo = f"{stats['epsilon_min']:.3f}" if stats['epsilon_min'] is not None else "—"
+        hi = f"{stats['epsilon_max']:.3f}" if stats['epsilon_max'] is not None else "—"
+        d = f"{stats['epsilon_delta']:.3f}" if stats['epsilon_delta'] is not None else "—"
+        emit(f"| {label} | {em} | {lo} | {hi} | {d} |")
+
+    emit()
+
+    # --- Moderate type distribution ---
+    emit("## 5. Classification Type Distribution at Moderate Position")
+    emit()
+    emit("Shows which constraint types the model assigns when it *does* instantiate "
+         "moderate. Empty if moderate never appears in a condition.")
+    emit()
+
+    for label, stats in sorted(conditions.items()):
+        dist = stats.get("moderate_type_distribution", {})
+        if dist:
+            emit(f"**{label}:** {dist}")
+        else:
+            emit(f"**{label}:** (no moderate atoms generated)")
+    emit()
+
+    # --- Decision criteria ---
+    emit("## 6. Decision Criteria")
+    emit()
+    emit("| Outcome | Interpretation | Implication |")
+    emit("|---------|---------------|-------------|")
+    emit("| B ≈ A (both ~40%) | Seeding doesn't help | Missing middle requires structural scaffolding (schema + validation), not distributional context |")
+    emit("| B >> A (> 60%) | Cross-domain pattern learning works | Missing middle is a distributional context problem; the model learns 'moderate agency' from unrelated-domain examples |")
+    emit("| B >> A (> 80%) | Seeding largely solves it | Few-shot exemplars provide sufficient context for reliable U2 instantiation |")
+    emit()
+    emit("*Note: All seed exemplars are from domains unrelated to the target constraints,*")
+    emit("*so a positive result on B directly demonstrates cross-domain pattern learning.*")
+    emit()
+
+    # --- Interpretation ---
+    a_rate = conditions.get("A_experiential", {}).get("moderate_rate")
+    b_rate = (conditions.get("B_seeded_cross_domain", {}).get("moderate_rate")
+              or conditions.get("B_seeded", {}).get("moderate_rate"))
+    c_rate = conditions.get("C_cross_domain", {}).get("moderate_rate")
+
+    if a_rate is not None and b_rate is not None:
+        emit("## 7. Preliminary Interpretation")
+        emit()
+        delta_ab = b_rate - a_rate
+        if delta_ab > 0.40:
+            emit(f"**Seeding largely solves the missing middle.** "
+                 f"B ({b_rate:.0%}) vs A ({a_rate:.0%}), delta = {delta_ab:+.0%}. "
+                 f"Since all seed exemplars are cross-domain, this demonstrates "
+                 f"pattern learning from distributional context.")
+        elif delta_ab > 0.20:
+            emit(f"**Seeding shows strong positive effect.** "
+                 f"B ({b_rate:.0%}) vs A ({a_rate:.0%}), delta = {delta_ab:+.0%}. "
+                 f"Cross-domain exemplars rescue the moderate atom, suggesting "
+                 f"the missing middle is a distributional context problem.")
+        elif delta_ab > 0.05:
+            emit(f"**Seeding shows modest effect.** "
+                 f"B ({b_rate:.0%}) vs A ({a_rate:.0%}), delta = {delta_ab:+.0%}. "
+                 f"Partial rescue — few-shot helps but doesn't fully compensate "
+                 f"for the missing distributional context.")
+        else:
+            emit(f"**Seeding shows no meaningful effect.** "
+                 f"B ({b_rate:.0%}) vs A ({a_rate:.0%}), delta = {delta_ab:+.0%}. "
+                 f"The missing middle requires structural scaffolding "
+                 f"(schema + validation), not distributional context.")
+        emit()
+
+    emit("---")
+    emit()
+    emit("*Analysis generated by `python/perspective_analysis.py --seeding`*")
+    emit()
+
+    return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -1091,6 +1408,10 @@ def main():
         "--scan-json", action="store_true",
         help="Bypass experiment_log.json and reconstruct data from json/perspective_experiment/ files"
     )
+    parser.add_argument(
+        "--seeding", action="store_true",
+        help="Run seeding experiment analysis (moderate atom presence by condition)"
+    )
     args = parser.parse_args()
 
     # Load experiment data
@@ -1103,6 +1424,22 @@ def main():
     else:
         print(f"Loading experiment log from {args.log}...")
         log_data = load_experiment_log(args.log)
+
+    # Seeding analysis mode
+    if args.seeding:
+        print("Computing seeding analysis...")
+        seeding = compute_seeding_analysis(log_data)
+
+        print("Generating seeding report...")
+        report = generate_seeding_report(seeding, log_data)
+
+        output_path = args.output
+        if output_path == RESULTS_DIR / "analysis.md":
+            output_path = RESULTS_DIR / "seeding_analysis.md"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(report, encoding="utf-8")
+        print(f"Seeding analysis report written to {output_path}")
+        return
 
     # Compute analyses
     print("Computing epsilon drift...")

@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2023-10-27
+% Generated: 2024-05-21
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -59,16 +59,17 @@
  * SUMMARY:
  *   This constraint describes the widespread business model shift from
  *   one-time product sales (perpetual licenses) to recurring subscription
- *   fees. While offering a coordination benefit (continuous updates, service
- *   access), it asymmetrically extracts value by creating consumer inertia,
- *   making cancellation difficult (a 'hassle tax'), and revoking ownership
- *   rights. The model is actively enforced by DRM and the suppression of
- *   non-subscription alternatives.
+ *   fees. This model presents a genuine coordination benefit for producers by
+ *   creating predictable revenue streams to fund ongoing development and
+ *   service. However, it simultaneously functions as a highly extractive
+ *   mechanism by revoking consumer ownership, exploiting inertia, creating
+ *   high friction for cancellation (a 'hassle tax'), and using technical
+ *   (DRM) and market power to suppress non-subscription alternatives.
  *
  * KEY AGENTS:
  *   - Individual Consumers: Primary target (powerless/trapped) — bear the costs of subscription fatigue, loss of ownership, and cancellation friction.
  *   - Subscription-based Corporations: Primary beneficiary (institutional/arbitrage) — benefit from predictable recurring revenue and increased customer lifetime value.
- *   - Market Regulators: Secondary actor (institutional/constrained) — attempt to mitigate the most extractive aspects (e.g., mandating easy cancellation) but operate within the dominant paradigm.
+ *   - Software Developers: Internal agents (moderate/mobile) — execute the strategy, often caught between user value and business metrics.
  */
 
 /* ==========================================================================
@@ -78,12 +79,12 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(subscription_economy_model_u2_exp_r1, 0.68).
 domain_priors:suppression_score(subscription_economy_model_u2_exp_r1, 0.72).
-domain_priors:theater_ratio(subscription_economy_model_u2_exp_r1, 0.3).
+domain_priors:theater_ratio(subscription_economy_model_u2_exp_r1, 0.45).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(subscription_economy_model_u2_exp_r1, extractiveness, 0.68).
 narrative_ontology:constraint_metric(subscription_economy_model_u2_exp_r1, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(subscription_economy_model_u2_exp_r1, theater_ratio, 0.3).
+narrative_ontology:constraint_metric(subscription_economy_model_u2_exp_r1, theater_ratio, 0.45).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(subscription_economy_model_u2_exp_r1, tangled_rope).
@@ -100,26 +101,33 @@ narrative_ontology:constraint_victim(subscription_economy_model_u2_exp_r1, indiv
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% From the consumer's perspective, the model is a trap. Ownership is revoked, costs are perpetual, and cancellation is often intentionally difficult, locking them into a system where alternatives are scarce.
+% From the consumer's view, the loss of ownership, recurring costs for previously-owned goods, and high friction for cancellation constitute a Snare. Alternatives (perpetual licenses) are actively suppressed.
 constraint_indexing:constraint_classification(subscription_economy_model_u2_exp_r1, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% From the corporation's view, this is a superior coordination mechanism for aligning revenue with ongoing development and service costs, creating predictable cash flow and deeper customer relationships.
+% For the corporation, this model is a pure coordination solution (Rope) that smooths revenue streams, enables continuous development funding, and increases shareholder value. The extractive component is framed as payment for ongoing service.
 constraint_indexing:constraint_classification(subscription_economy_model_u2_exp_r1, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% The analytical view recognizes both the genuine coordination function (continuous service) and the asymmetric extraction (consumer inertia, lock-in, suppressed alternatives), classifying it as a Tangled Rope.
+% The analytical view recognizes both the genuine coordination function (stable revenue for continuous service) and the highly asymmetric extraction (consumer inertia, loss of ownership, cancellation friction). This duality is the hallmark of a Tangled Rope.
 constraint_indexing:constraint_classification(subscription_economy_model_u2_exp_r1, tangled_rope,
     context(agent_power(analytical),
             time_horizon(generational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% For developers within these corporations, the model can feel like a Piton. The original goal of funding continuous improvement is often replaced by metrics-chasing (subscriber count, churn reduction) that becomes theatrical and disconnected from creating user value.
+constraint_indexing:constraint_classification(subscription_economy_model_u2_exp_r1, piton,
+    context(agent_power(moderate),
+            time_horizon(immediate),
+            exit_options(mobile),
+            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -136,6 +144,10 @@ test(extraction_signature) :-
     domain_priors:base_extractiveness(subscription_economy_model_u2_exp_r1, E),
     E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
+test(piton_threshold) :-
+    domain_priors:theater_ratio(subscription_economy_model_u2_exp_r1, TR),
+    TR >= 0.70.
+
 :- end_tests(subscription_economy_model_u2_exp_r1_tests).
 
 /* ==========================================================================
@@ -144,16 +156,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The high extractiveness (0.68) reflects the shift from a single capital outlay to a potentially infinite stream of payments, coupled with the loss of asset ownership. The high suppression (0.72) reflects the active phasing out of perpetual license models by major software, media, and hardware companies, leaving consumers with few alternatives. Active enforcement via DRM is critical to the model's function.
+ *   The high extractiveness (0.68) reflects the conversion of a one-time capital expense for an owned asset into a perpetual rental liability for the consumer. The high suppression (0.72) is justified by the active phasing out of perpetual license options in major software markets (e.g., Adobe, Microsoft Office) and the use of DRM to enforce the terms of the subscription, preventing offline use or ownership.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. Corporations see a Rope, a model for sustainable service delivery and predictable revenue. Consumers experience a Snare, where they are trapped in a cycle of payments for services they may not fully use, with high friction to exit. The analytical view must account for both realities, hence Tangled Rope.
+ *   The gap is stark. Corporations view the model as a pure Rope, a superior coordination mechanism for aligning revenue with ongoing costs. Consumers, stripped of ownership and facing a growing burden of recurring payments for tools they once owned outright, experience it as a Snare. The analytical classification of Tangled Rope is necessary to hold both truths at once.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is clear: value flows from a broad base of individual consumers (victims) to a concentrated set of corporations (beneficiaries). Consumers lose ownership and are subject to price increases and feature changes, while corporations gain a stable, predictable, and highly valuable revenue stream.
+ *   Directionality is unambiguous. Value flows from the 'individual_consumers' (victims) to the 'subscription_corporations' (beneficiaries). The consumers' trapped exit options and powerless status maximize their derived directionality (d≈1.0), leading to high effective extraction (χ). The corporations' arbitrage options (they can acquire firms, pivot models) and beneficiary status give them a low directionality (d≈0.0), making the constraint a net subsidy for them.
  *
  * MANDATROPHY ANALYSIS:
- *   The Tangled Rope classification is crucial for avoiding mandatrophy. A simple Snare classification would ignore the genuine coordination benefits (e.g., cloud services, security updates) that make the model attractive in the first place. A Rope classification would ignore the coercive and extractive elements that are fundamental to its profitability. The Tangled Rope correctly identifies that a coordination function is being used as a vehicle for asymmetric extraction.
+ *   Classifying this as a Tangled Rope correctly avoids two errors. It is not a pure Rope, because the extraction is asymmetric and coercive, not just a fee for service. It is not a pure Snare, because there is a non-trivial coordination function being served (funding for continuous updates and cloud services). The Tangled Rope classification captures the essential conflict: a coordination mechanism has been weaponized for extraction.
  */
 
 /* ==========================================================================
@@ -161,35 +173,35 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    consumer_value_vs_inertia,
-    'Is the recurring revenue primarily justified by continuous value delivery, or is it extracted from consumer inertia and cancellation friction?',
-    'Comparative analysis of user engagement data vs. churn rates, correlated with the measured difficulty of cancellation processes across major platforms.',
-    'If primarily value-driven, the classification leans towards Tangled Rope. If primarily inertia-driven, it approaches a pure Snare.',
+    inertia_vs_coercion,
+    'Is the high customer retention rate primarily due to genuine product value or is it an artifact of coercive design (e.g., cancellation friction, bundling, data lock-in)?',
+    'Comparative analysis of churn rates between services with easy vs. difficult cancellation processes, controlling for product category.',
+    'If primarily value-driven, the constraint leans more towards Rope. If primarily coercive, it is a clear Snare.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(consumer_value_vs_inertia, empirical, 'Whether recurring revenue stems from delivered value or from exploiting consumer inertia.').
+narrative_ontology:omega_variable(inertia_vs_coercion, empirical, 'Distinguishing between value-driven retention and coercive retention via 'hassle tax'.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(subscription_economy_model_u2_exp_r1, 2005, 2025).
+narrative_ontology:interval(subscription_economy_model_u2_exp_r1, 2010, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(subs_tr_t0, subscription_economy_model_u2_exp_r1, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(subs_tr_t10, subscription_economy_model_u2_exp_r1, theater_ratio, 10, 0.2).
-narrative_ontology:measurement(subs_tr_t20, subscription_economy_model_u2_exp_r1, theater_ratio, 20, 0.3).
+narrative_ontology:measurement(subs_tr_t2010, subscription_economy_model_u2_exp_r1, theater_ratio, 2010, 0.2).
+narrative_ontology:measurement(subs_tr_t2017, subscription_economy_model_u2_exp_r1, theater_ratio, 2017, 0.35).
+narrative_ontology:measurement(subs_tr_t2024, subscription_economy_model_u2_exp_r1, theater_ratio, 2024, 0.45).
 
 % Extraction over time
-narrative_ontology:measurement(subs_be_t0, subscription_economy_model_u2_exp_r1, base_extractiveness, 0, 0.2).
-narrative_ontology:measurement(subs_be_t10, subscription_economy_model_u2_exp_r1, base_extractiveness, 10, 0.55).
-narrative_ontology:measurement(subs_be_t20, subscription_economy_model_u2_exp_r1, base_extractiveness, 20, 0.68).
+narrative_ontology:measurement(subs_be_t2010, subscription_economy_model_u2_exp_r1, base_extractiveness, 2010, 0.3).
+narrative_ontology:measurement(subs_be_t2017, subscription_economy_model_u2_exp_r1, base_extractiveness, 2017, 0.55).
+narrative_ontology:measurement(subs_be_t2024, subscription_economy_model_u2_exp_r1, base_extractiveness, 2024, 0.68).
 
 
 /* ==========================================================================
@@ -198,7 +210,8 @@ narrative_ontology:measurement(subs_be_t20, subscription_economy_model_u2_exp_r1
 
 narrative_ontology:coordination_type(subscription_economy_model_u2_exp_r1, resource_allocation).
 narrative_ontology:affects_constraint(subscription_economy_model_u2_exp_r1, right_to_repair).
-narrative_ontology:affects_constraint(subscription_economy_model_u2_exp_r1, digital_ownership_rights).
+narrative_ontology:affects_constraint(subscription_economy_model_u2_exp_r1, consumer_debt_burden).
+narrative_ontology:affects_constraint(subscription_economy_model_u2_exp_r1, digital_asset_ownership).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

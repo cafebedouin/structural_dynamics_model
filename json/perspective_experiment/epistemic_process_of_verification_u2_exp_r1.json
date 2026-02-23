@@ -2,26 +2,27 @@
   "header": {
     "constraint_id": "epistemic_process_of_verification_u2_exp_r1",
     "version": "1.0",
-    "generated_date": "2024-05-21",
+    "generated_date": "2024-07-15",
     "status": "ACTIVE",
     "module_name_override": "constraint_epistemic_process_of_verification_u2_exp_r1"
   },
   "base_properties": {
     "extractiveness": 0.48,
     "suppression": 0.75,
-    "theater_ratio": 0.2,
+    "theater_ratio": 0.3,
     "claimed_type": "tangled_rope",
     "human_readable": "Epistemic Process of Scientific Verification",
     "topic_domain": "scientific/epistemology",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "established_scientific_community",
-      "funding_agencies",
-      "the_public"
+      "established_scientific_institutions",
+      "senior_researchers",
+      "society_at_large"
     ],
     "victims": [
-      "novel_claimants",
-      "researchers_at_low_prestige_institutions"
+      "early_career_researchers",
+      "proponents_of_novel_paradigms",
+      "underfunded_labs"
     ]
   },
   "perspectives": [
@@ -30,9 +31,9 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Novel Claimant",
-      "comment": "For the individual researcher with a groundbreaking but unverified claim, the system is a high-cost, high-suppression gauntlet. Their career, funding, and reputation are at risk. The coordination benefit is an externality to their immediate struggle."
+      "spatial_scope": "national",
+      "label": "The Heterodox Innovator",
+      "comment": "For a researcher with a novel but difficult-to-replicate finding, the process is a high-cost, coercive barrier where failure means career death. They cannot opt out."
     },
     {
       "classification_type": "rope",
@@ -40,8 +41,8 @@
       "time_horizon": "generational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Journal Editor / Established Lab",
-      "comment": "From the perspective of those who uphold the standards, this is a pure coordination mechanism to filter signal from noise and maintain the integrity of the scientific record. The costs imposed on claimants are seen as a necessary price for rigor."
+      "label": "The Journal Editor / Funding Body",
+      "comment": "From the perspective of a gatekeeper, this is a pure coordination mechanism to ensure quality control and maintain the integrity of the scientific record. The costs are seen as a necessary price for rigor."
     },
     {
       "classification_type": "tangled_rope",
@@ -49,31 +50,46 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Philosopher of Science",
-      "comment": "The analytical view recognizes both the essential coordination function (creating reliable knowledge) and the asymmetric extraction (the heavy burden placed on innovators, which can sometimes stifle progress)."
+      "label": "The Historian of Science",
+      "comment": "The analytical view sees both the essential coordination function and the asymmetric extraction. It is a system that produces reliable knowledge by imposing heavy costs on newcomers and challengers."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
       "spatial_scope": "national",
-      "label": "The Public / Funding Body",
-      "comment": "Society and its funding bodies see the process as a temporary structure to produce a specific outcome: reliable facts. They tolerate the internal costs and inefficiencies in expectation of a technological or social payoff. The 'sunset' is the eventual validation or rejection of a given claim."
+      "label": "The Tenured Professor",
+      "comment": "A mid-career researcher both benefits from the system's stability and is constrained by it. They enforce it on junior members while still facing its verification demands for their own work."
     }
   ],
   "omegas": [
     {
-      "id": "verification_paradigm_lock_in",
-      "question": "Does the verification process ossify into a defense of the existing paradigm, actively preventing revolutionary discoveries, or is it a reasonably neutral filter for truth?",
-      "resolution_mechanism": "Historical analysis of Kuhnian paradigm shifts, comparing the time-to-acceptance for paradigm-confirming vs. paradigm-challenging results.",
-      "impact": "If it primarily functions as a defense mechanism, its classification shifts towards Snare. If it is a neutral filter, it is closer to a Rope.",
+      "id": "verification_as_gatekeeping",
+      "question": "To what extent are the high costs of verification a necessary filter for quality versus an emergent or intentional tool for gatekeeping by established paradigms?",
+      "resolution_mechanism": "Analysis of rejection rates for novel vs. incremental claims at top journals, correlated with the prestige of the submitting institution and funding sources.",
+      "impact": "If primarily a quality filter, the constraint leans more towards Rope. If primarily a gatekeeping tool, it is functionally closer to a Snare.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the process is a neutral filter or a paradigm defense mechanism."
+      "description": "Whether verification costs are a necessary quality filter or a paradigm-preserving gatekeeping tool."
     }
   ],
   "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.48
+    },
     {
       "metric": "theater_ratio",
       "time_point": 1950,
@@ -81,45 +97,31 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
+      "time_point": 1985,
       "value": 0.2
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 1950,
+      "metric": "theater_ratio",
+      "time_point": 2025,
       "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.48
     }
   ],
   "interval": {
     "start": 1950,
-    "end": 2024
+    "end": 2025
   },
   "commentary": {
-    "narrative_context": "The requirement for independent verification of scientific claims is a foundational constraint of the modern scientific method. It serves a critical coordination function, aligning the global research community on a shared body of reliable knowledge. However, this process is not frictionless. It imposes significant costs in time, resources, and reputational risk, which are disproportionately borne by the individuals and teams proposing novel, paradigm-challenging claims.",
+    "narrative_context": "The process of scientific verification requires independent replication before a claim is accepted. This serves a vital coordination function, creating a shared, reliable body of knowledge. However, it also imposes significant costs in time, funding, and career risk, which are disproportionately borne by early-career researchers and those proposing ideas that challenge the existing paradigm. This creates a system with both a genuine coordination function and a powerful, asymmetric extractive component.",
     "key_agents": [
-      "Novel Claimants: Researchers proposing new findings (powerless/trapped).",
-      "Established Scientific Community: Journal editors, peer reviewers, senior academics who act as gatekeepers (institutional/arbitrage).",
-      "Funding Agencies & The Public: The ultimate sponsors and beneficiaries of reliable knowledge (organized/constrained)."
+      "Early-Career Researchers: Primary targets who bear the highest verification costs (powerless/trapped).",
+      "Established Institutions (Journals, Universities, Funding Bodies): Primary beneficiaries and enforcers who control the process (institutional/arbitrage).",
+      "Senior Researchers: Secondary beneficiaries who act as gatekeepers.",
+      "Society at Large: Diffuse beneficiary of reliable scientific knowledge."
     ],
-    "logic_rationale": "The base extractiveness (\u03b5=0.48) reflects the high cost of novel research and the risk of being 'scooped' or dismissed during the lengthy verification period. The suppression score (0.75) is high because the system is explicitly designed to suppress unverified claims from entering the canon; operating outside this system is nearly impossible for a practicing scientist.",
-    "perspectival_gap": "A significant gap exists between the Novel Claimant, who experiences the process as a potentially career-ending Snare, and the Established Institution, which views it as a necessary Rope for maintaining quality control. The analytical perspective of Tangled Rope reconciles these by acknowledging both functions are simultaneously present.",
-    "directionality_logic": "The direction of extraction is from the innovator towards the established paradigm. Novel Claimants and researchers at less-prestigious institutions (the victims) pay the costs of verification. The Established Community and the Public (the beneficiaries) receive the benefit of a stable, reliable knowledge base. This structural asymmetry is the core of the Tangled Rope classification.",
-    "mandatrophy_analysis": "Classifying this process as a pure Rope would be a form of mandatrophy, ignoring the real and substantial costs extracted from innovators. Conversely, classifying it as a pure Snare would ignore its undeniably critical and successful coordination function. The Tangled Rope classification correctly identifies that the system has both a genuine coordination purpose and an asymmetric extractive cost structure."
+    "logic_rationale": "The extractiveness score of 0.48 reflects the immense, non-recoverable investment of time, resources, and career capital required from researchers to get a novel claim verified. The suppression score of 0.75 reflects the near-total lack of alternative, accepted pathways to canonize scientific knowledge; one cannot simply opt-out of peer review and replication.",
+    "perspectival_gap": "The gap is stark. For institutional gatekeepers, the process is a Rope\u2014a necessary tool for quality control. For the innovator whose career hinges on getting a difficult result replicated, it feels like a Snare\u2014a coercive, high-stakes filter. The analytical perspective of Tangled Rope acknowledges that both are true simultaneously; the system's function is inseparable from its extractive nature.",
+    "directionality_logic": "Extraction flows from individual researchers, who must expend resources to prove their claims, towards the established institutions that gain prestige and stability from the slow, rigorous process. The system filters for claims that are not only true but also replicable with available technology and palatable to the existing community, reinforcing the status of those who control the resources for replication.",
+    "mandatrophy_analysis": "Classifying this process as a pure Rope would be a failure of mandatrophy, ignoring the severe extractive costs and gatekeeping effects that can stifle innovation. Classifying it as a pure Snare would also fail, ignoring its undeniably critical role in coordinating the scientific community to prevent epistemic chaos. The Tangled Rope classification correctly identifies the inherent tension between its coordination and extraction functions."
   },
   "boltzmann": {
     "coordination_type": "information_standard"

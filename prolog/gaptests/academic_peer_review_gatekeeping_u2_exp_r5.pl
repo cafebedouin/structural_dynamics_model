@@ -57,19 +57,18 @@
  *   domain: economic/social/technological
  *
  * SUMMARY:
- *   The academic publishing system relies on researchers, funded largely by
- *   public money, to provide free labor in the form of writing, peer review,
- *   and editing for for-profit publishers. These publishers then sell access
- *   to the finished research back to the researchers' own institutions (via
- *   university libraries) at extremely high markups. The system is maintained
- *   by the academic career structure, where publication in high-prestige
- *   journals is essential for tenure and promotion.
+ *   The academic publishing system relies on researchers providing free labor
+ *   (writing, peer review, editing) to for-profit publishers. These
+ *   publishers then sell access to the resulting research, often funded by
+ *   public money, back to the researchers' own institutions at extremely high
+ *   profit margins. The system is maintained by the 'publish or perish'
+ *   culture of academia, where career advancement is tied to publication in
+ *   high-prestige, high-cost journals.
  *
  * KEY AGENTS:
- *   - Junior Professors: Primary victims (powerless/trapped) - must publish to secure tenure.
- *   - For-Profit Journal Publishers: Primary beneficiaries (institutional/arbitrage) - capture value from free labor and control prestige.
- *   - University Libraries/Consortia: Victims and auditors (institutional/constrained) - bear the financial costs while analyzing the system's inefficiencies.
- *   - Tenured Senior Faculty: Secondary beneficiaries and enforcers (powerful/constrained) - uphold the system through their role on tenure committees.
+ *   - Junior Professors: Primary victims (powerless/trapped) - Must publish to secure tenure, providing free labor.
+ *   - For-Profit Journal Publishers: Primary beneficiaries (institutional/arbitrage) - Capture immense value from free labor and subscription fees.
+ *   - Research Institutions / Library Consortia: Secondary victims and enforcers (institutional/constrained) - Pay the high costs while also using the system's prestige signals for internal evaluation.
  */
 
 /* ==========================================================================
@@ -78,12 +77,12 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(academic_peer_review_gatekeeping_u2_exp_r5, 0.68).
-domain_priors:suppression_score(academic_peer_review_gatekeeping_u2_exp_r5, 0.72).
+domain_priors:suppression_score(academic_peer_review_gatekeeping_u2_exp_r5, 0.75).
 domain_priors:theater_ratio(academic_peer_review_gatekeeping_u2_exp_r5, 0.45).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(academic_peer_review_gatekeeping_u2_exp_r5, extractiveness, 0.68).
-narrative_ontology:constraint_metric(academic_peer_review_gatekeeping_u2_exp_r5, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(academic_peer_review_gatekeeping_u2_exp_r5, suppression_requirement, 0.75).
 narrative_ontology:constraint_metric(academic_peer_review_gatekeeping_u2_exp_r5, theater_ratio, 0.45).
 
 % --- Constraint claim ---
@@ -95,40 +94,39 @@ domain_priors:requires_active_enforcement(academic_peer_review_gatekeeping_u2_ex
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(academic_peer_review_gatekeeping_u2_exp_r5, for_profit_journal_publishers).
-narrative_ontology:constraint_beneficiary(academic_peer_review_gatekeeping_u2_exp_r5, tenured_senior_faculty).
 narrative_ontology:constraint_victim(academic_peer_review_gatekeeping_u2_exp_r5, junior_professors).
-narrative_ontology:constraint_victim(academic_peer_review_gatekeeping_u2_exp_r5, university_libraries).
+narrative_ontology:constraint_victim(academic_peer_review_gatekeeping_u2_exp_r5, research_institutions).
 narrative_ontology:constraint_victim(academic_peer_review_gatekeeping_u2_exp_r5, general_public).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% For a junior academic, publishing in prestigious journals is non-negotiable for career survival (tenure). They provide free labor (writing, reviewing) and their institution pays to access the final product. The lack of viable alternatives for career progression makes this a coercive trap.
+% For a junior academic, publishing in prestigious journals is non-negotiable for career survival ('publish or perish'). They provide free labor (writing, reviewing, editing) to a system that holds their future captive.
 constraint_indexing:constraint_classification(academic_peer_review_gatekeeping_u2_exp_r5, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% From the publisher's perspective, they are providing a valuable coordination service: managing peer review, ensuring quality, and conferring prestige. The fees are for the value added in curation and distribution. The extraction is viewed as a legitimate business model.
+% From the publisher's view, they are providing an essential coordination service: managing peer review, curating content, and bestowing a valuable signal of quality and prestige. The high margins are the price for this service.
 constraint_indexing:constraint_classification(academic_peer_review_gatekeeping_u2_exp_r5, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% This observer sees both sides. Peer review is a necessary coordination function for science (the Rope). However, this function has been captured by a small number of publishers who extract enormous rents by leveraging the free labor of the academic community against itself (the Snare). The result is a Tangled Rope.
+% Librarians and consortia see both sides: the system does coordinate scholarly communication, but at an extractive cost that is unsustainable. They are tasked with analyzing this trade-off and negotiating within its constraints.
 constraint_indexing:constraint_classification(academic_peer_review_gatekeeping_u2_exp_r5, tangled_rope,
     context(agent_power(analytical),
-            time_horizon(civilizational),
+            time_horizon(generational),
             exit_options(analytical),
             spatial_scope(global))).
 
-% University administrators are caught. They must fund libraries to pay exorbitant subscription fees to support their researchers, who in turn must publish in those same journals to advance. They are both victims of the extraction and enforcers of the system through tenure committees.
+% Universities are both victims (paying exorbitant subscription fees) and enforcers (using journal prestige in tenure decisions). They cannot easily exit without damaging their own standing and their faculty's careers.
 constraint_indexing:constraint_classification(academic_peer_review_gatekeeping_u2_exp_r5, tangled_rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
+    context(agent_power(institutional),
+            time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
@@ -155,16 +153,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.68) is high due to the model of free labor input and high-cost subscription output. Suppression (0.72) is high because the 'publish or perish' culture and the prestige economy tied to tenure make alternatives like pre-print servers or new open-access journals risky for career-conscious academics.
+ *   Extractiveness (0.68) is high due to the business model of monetizing free academic labor and publicly funded research. Suppression (0.75) is very high because the prestige of top-tier journals creates a powerful lock-in effect, making alternative publishing venues appear less viable for career-conscious academics.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. Publishers see a Rope, a service that coordinates and validates science for a fee. Junior academics experience a Snare, a coercive system they cannot escape without abandoning their careers. Analytical observers like library consortia see the full picture: a legitimate coordination function (the rope) that has been captured and weaponized for asymmetric extraction (the snare), making it a textbook Tangled Rope.
+ *   The gap is stark. For the publisher, it's a Rope that coordinates and validates knowledge. For the junior academic, it's a Snare that coerces free labor under threat of career failure. For the university, it's a Tangled Rope—a necessary, functional system for evaluation that is simultaneously draining its own budget.
  *
  * DIRECTIONALITY LOGIC:
- *   Value flows from taxpayers (funding research) and universities (paying salaries and subscriptions) to for-profit publishers. The labor of academics is captured at zero cost. Publishers are the clear beneficiaries. Junior academics, university libraries, and the public who cannot access the research they funded are the victims.
+ *   The direction of extraction is unambiguously from the academic community (both individuals and institutions) to the shareholders of large publishing houses. Publishers are the beneficiaries of the free labor and the subscription revenue. Researchers and their institutions are the victims who provide the labor and pay the fees.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is often defended as a pure Rope for 'quality control.' The Tangled Rope classification is crucial because it acknowledges the existence of a coordination function while correctly identifying the severe, asymmetric extraction layered on top. It prevents the system from being mislabeled as a purely beneficial coordination mechanism and highlights the coercive dynamics that trap its participants.
+ *   Classifying this as a pure Snare would ignore the genuine (though arguably overpriced) coordination function of managing peer review and signaling quality. Classifying it as a Rope would ignore the massive, non-consensual extraction. Tangled Rope correctly identifies the dual nature: a system with a coordination function that has been captured and leveraged for asymmetric extraction.
  */
 
 /* ==========================================================================
@@ -172,14 +170,14 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    prestige_vs_value,
-    'Is the prestige conferred by high-impact journals a genuine signal of quality (coordination), or an artificial scarcity created by publishers to justify extraction (snare)?',
-    'Large-scale analysis comparing long-term citation impact and reproducibility of papers from high-prestige journals versus well-regarded open-access platforms.',
-    'If prestige is a robust proxy for quality, the system is a high-cost but functional Tangled Rope. If it is primarily artificial scarcity, the system is functionally a Snare masquerading as a Rope.',
+    prestige_vs_extraction,
+    'Is the high cost imposed by publishers a necessary price for the prestige and quality-signaling function they provide, or is it pure rent-seeking on a captured market?',
+    'Comparative analysis of article quality and impact between high-cost journals and high-quality, low-cost open-access alternatives over a multi-decade period.',
+    'If the prestige function is proven to be inseparable from the cost structure, it remains a Tangled Rope. If it's primarily rent-seeking, the system is a Snare at the institutional level.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(prestige_vs_value, empirical, 'Whether journal prestige is a real quality signal or an artificial scarcity.').
+narrative_ontology:omega_variable(prestige_vs_extraction, empirical, 'Whether publisher costs are for quality-signaling or rent-seeking.').
 
 
 /* ==========================================================================
@@ -198,8 +196,8 @@ narrative_ontology:measurement(acad_tr_t2000, academic_peer_review_gatekeeping_u
 narrative_ontology:measurement(acad_tr_t2020, academic_peer_review_gatekeeping_u2_exp_r5, theater_ratio, 2020, 0.45).
 
 % Extraction over time
-narrative_ontology:measurement(acad_be_t1980, academic_peer_review_gatekeeping_u2_exp_r5, base_extractiveness, 1980, 0.25).
-narrative_ontology:measurement(acad_be_t2000, academic_peer_review_gatekeeping_u2_exp_r5, base_extractiveness, 2000, 0.5).
+narrative_ontology:measurement(acad_be_t1980, academic_peer_review_gatekeeping_u2_exp_r5, base_extractiveness, 1980, 0.3).
+narrative_ontology:measurement(acad_be_t2000, academic_peer_review_gatekeeping_u2_exp_r5, base_extractiveness, 2000, 0.55).
 narrative_ontology:measurement(acad_be_t2020, academic_peer_review_gatekeeping_u2_exp_r5, base_extractiveness, 2020, 0.68).
 
 
@@ -208,9 +206,8 @@ narrative_ontology:measurement(acad_be_t2020, academic_peer_review_gatekeeping_u
    ========================================================================== */
 
 narrative_ontology:coordination_type(academic_peer_review_gatekeeping_u2_exp_r5, information_standard).
-narrative_ontology:affects_constraint(academic_peer_review_gatekeeping_u2_exp_r5, university_funding_models).
-narrative_ontology:affects_constraint(academic_peer_review_gatekeeping_u2_exp_r5, scientific_reproducibility_crisis).
-narrative_ontology:affects_constraint(academic_peer_review_gatekeeping_u2_exp_r5, intellectual_property_regimes).
+narrative_ontology:affects_constraint(academic_peer_review_gatekeeping_u2_exp_r5, university_tenure_system).
+narrative_ontology:affects_constraint(academic_peer_review_gatekeeping_u2_exp_r5, public_access_to_research).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

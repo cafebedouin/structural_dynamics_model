@@ -228,6 +228,8 @@ class PerspectiveExperiment:
         temperature: float = 0.2,
         start_run: int = 1,
         append_log: bool = False,
+        preamble_override: str | None = None,
+        id_suffix: str | None = None,
     ):
         self.constraints = constraints
         self.perspectives = perspectives or ALL_PERSPECTIVES
@@ -237,6 +239,8 @@ class PerspectiveExperiment:
         self.temperature = temperature
         self.start_run = start_run
         self.append_log = append_log
+        self.preamble_override = preamble_override
+        self.id_suffix = id_suffix
 
     # ------------------------------------------------------------------
     # ID mangling
@@ -315,7 +319,8 @@ class PerspectiveExperiment:
         run: int,
     ) -> GenerationResult:
         """Generate one perspective-prompted constraint story."""
-        mangled_id = self._mangle_id(constraint_id, perspective, framing, run)
+        mangled_id = self._mangle_id(constraint_id, perspective,
+                                      self.id_suffix or framing, run)
         t0 = time.time()
 
         result = GenerationResult(
@@ -329,7 +334,10 @@ class PerspectiveExperiment:
 
         try:
             # Load components
-            preamble = self._load_preamble(perspective, framing)
+            if self.preamble_override:
+                preamble = Path(self.preamble_override).read_text(encoding="utf-8").strip()
+            else:
+                preamble = self._load_preamble(perspective, framing)
             source_desc = self._load_constraint_source(constraint_id)
 
             # Compose system instruction with perspective preamble
@@ -635,6 +643,8 @@ class PerspectiveExperiment:
                 "runs": self.runs,
                 "model": self.model,
                 "temperature": self.temperature,
+                "preamble_override": self.preamble_override,
+                "id_suffix": self.id_suffix,
             }
         )
 
@@ -761,6 +771,14 @@ def main():
         "--append-log", action="store_true",
         help="Merge new results into existing experiment_log.json instead of overwriting"
     )
+    parser.add_argument(
+        "--preamble-override",
+        help="Path to preamble file to use instead of standard perspective preamble lookup"
+    )
+    parser.add_argument(
+        "--id-suffix",
+        help="Override framing abbreviation in mangled IDs (e.g., 'sed' for seeded, 'sdx' for cross-domain)"
+    )
     args = parser.parse_args()
 
     if args.mvp:
@@ -783,6 +801,8 @@ def main():
         temperature=args.temperature,
         start_run=args.start_run,
         append_log=args.append_log,
+        preamble_override=args.preamble_override,
+        id_suffix=args.id_suffix,
     )
     experiment.run()
 
