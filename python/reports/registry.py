@@ -8,7 +8,7 @@ from typing import Any, Callable
 import jinja2
 
 from shared.loader import (
-    load_json, PIPELINE_JSON, CORPUS_JSON, ORBIT_JSON,
+    load_json, read_config, PIPELINE_JSON, CORPUS_JSON, ORBIT_JSON,
     ENRICHED_PIPELINE_JSON, OUTPUT_DIR,
 )
 
@@ -33,6 +33,9 @@ DATA_SOURCES = {
     "corpus": lambda: load_json(CORPUS_JSON, label="corpus"),
     "orbit": lambda: load_json(ORBIT_JSON, label="orbit"),
     "enriched": lambda: load_json(ENRICHED_PIPELINE_JSON, label="enriched"),
+    "fingerprint": lambda: load_json(OUTPUT_DIR / "fingerprint_data.json", label="fingerprint"),
+    "false_mountain": lambda: load_json(OUTPUT_DIR / "false_mountain_data.json", label="false_mountain"),
+    "config": lambda: read_config(),
 }
 
 # ---------------------------------------------------------------------------
@@ -146,6 +149,10 @@ def _build_reports() -> dict[str, ReportDefinition]:
     from reports.queries.variance_analysis import query as va_query
     from reports.queries.pattern_mining import query as pm_query
     from reports.queries.sufficiency_test import query as st_query, json_fn as st_json
+    from reports.queries.conflict_map import query as cm_query
+    from reports.queries.reform_threshold_report import query as rtr_query
+    from reports.queries.powerless_blind_diagnostic import query as pbd_query
+    from reports.queries.classification_audit import query as ca_query
 
     defs = [
         ReportDefinition(
@@ -195,6 +202,35 @@ def _build_reports() -> dict[str, ReportDefinition]:
             json_output_path=OUTPUT_DIR / "index_sufficiency.json",
             json_fn=st_json,
             data_sources=["corpus", "pipeline"],
+        ),
+        # Group 4 reports (fingerprint/false_mountain JSON sidecars)
+        ReportDefinition(
+            name="conflict_map",
+            query_fn=cm_query,
+            template="conflict_map.md.j2",
+            output_path=OUTPUT_DIR / "conflict_map.md",
+            data_sources=["fingerprint", "corpus"],
+        ),
+        ReportDefinition(
+            name="reform_threshold_report",
+            query_fn=rtr_query,
+            template="reform_threshold_report.md.j2",
+            output_path=None,  # stdout
+            data_sources=["fingerprint", "corpus", "config"],
+        ),
+        ReportDefinition(
+            name="powerless_blind_diagnostic",
+            query_fn=pbd_query,
+            template="powerless_blind_diagnostic.md.j2",
+            output_path=None,  # stdout
+            data_sources=["fingerprint", "corpus", "config"],
+        ),
+        ReportDefinition(
+            name="classification_audit",
+            query_fn=ca_query,
+            template="classification_audit.md.j2",
+            output_path=OUTPUT_DIR / "classification_audit_report.md",
+            data_sources=["false_mountain", "corpus", "config"],
         ),
     ]
     return {d.name: d for d in defs}

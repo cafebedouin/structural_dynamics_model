@@ -1,0 +1,207 @@
+# Classification Audit Report
+Generated: {{ now }}  |  Corpus: {{ n_constraints }} constraints  |  .pl files: {{ pl_count }}
+
+## Executive Summary
+
+| Category | Description | Count | Severity |
+|----------|-------------|------:|----------|
+{%- for row in cat_rows %}
+| {{ row.cat }} | {{ row.desc }} | {{ row.count }} | {{ row.severity }} |
+{%- endfor %}
+
+## The 252-to-Triage Story
+
+The classification engine found {{ fm_count }} False Mountains.
+This audit partitions them: **{{ fm_in_a }}** are parser errors (A/A+), **{{ fm_in_c }}** legitimate (C), **{{ fm_in_other }}** uncategorized (need manual review).
+
+## Category A+: Severe Naturalization ({{ a_plus | length }} findings)
+{% if a_plus -%}
+Mountain classification with high extraction, active enforcement, AND high theater ratio.
+These are the strongest candidates for automated regeneration.
+{% for f in a_plus %}
+{%- set ac = constraints.get(f.constraint_id) %}
+### `{{ f.constraint_id }}`
+- **Category:** {{ f.category }} | **Severity:** {{ f.severity }}
+- **Summary:** {{ f.summary }}
+{%- if ac %}
+- **Domain:** {{ ac.domain or "unknown" }}
+- **Claimed Type:** {{ ac.claimed_type or "unknown" }}
+{%- if ac.perspectival_types %}
+- **Perspectival Types:** {{ ac.perspectival_types | dictsort | map('join', '→') | join(', ') }}
+{%- endif %}
+{%- if ac.beneficiaries %}
+- **Beneficiaries:** {{ ac.beneficiaries | join(", ") }}
+{%- endif %}
+{%- if ac.victims %}
+- **Victims:** {{ ac.victims | join(", ") }}
+{%- endif %}
+{%- if ac.is_false_mountain %}
+- **False Mountain:** Yes (gap: {{ ac.gap_pattern }})
+{%- endif %}
+{%- endif %}
+{% endfor %}
+{%- else -%}
+No A+ findings.
+{% endif %}
+## Category A: Naturalization Errors ({{ a_list | length }} findings)
+{% if a_list -%}
+Mountain classification with high extraction and active enforcement.
+Queue for classification regeneration.
+{% for f in a_list %}
+{%- set ac = constraints.get(f.constraint_id) %}
+### `{{ f.constraint_id }}`
+- **Category:** {{ f.category }} | **Severity:** {{ f.severity }}
+- **Summary:** {{ f.summary }}
+{%- if ac %}
+- **Domain:** {{ ac.domain or "unknown" }}
+- **Claimed Type:** {{ ac.claimed_type or "unknown" }}
+{%- if ac.perspectival_types %}
+- **Perspectival Types:** {{ ac.perspectival_types | dictsort | map('join', '→') | join(', ') }}
+{%- endif %}
+{%- if ac.beneficiaries %}
+- **Beneficiaries:** {{ ac.beneficiaries | join(", ") }}
+{%- endif %}
+{%- if ac.victims %}
+- **Victims:** {{ ac.victims | join(", ") }}
+{%- endif %}
+{%- if ac.is_false_mountain %}
+- **False Mountain:** Yes (gap: {{ ac.gap_pattern }})
+{%- endif %}
+{%- endif %}
+{% endfor %}
+{%- else -%}
+No Category A findings.
+{% endif %}
+## Category B: Theater-Mountain Conflicts ({{ b_list | length }} findings)
+{% if b_list -%}
+Mountain classification with high theater ratio but not meeting full Category A criteria.
+Flag for manual review.
+{% for f in b_list %}
+{%- set ac = constraints.get(f.constraint_id) %}
+### `{{ f.constraint_id }}`
+- **Category:** {{ f.category }} | **Severity:** {{ f.severity }}
+- **Summary:** {{ f.summary }}
+{%- if ac %}
+- **Domain:** {{ ac.domain or "unknown" }}
+- **Claimed Type:** {{ ac.claimed_type or "unknown" }}
+{%- if ac.perspectival_types %}
+- **Perspectival Types:** {{ ac.perspectival_types | dictsort | map('join', '→') | join(', ') }}
+{%- endif %}
+{%- if ac.beneficiaries %}
+- **Beneficiaries:** {{ ac.beneficiaries | join(", ") }}
+{%- endif %}
+{%- if ac.victims %}
+- **Victims:** {{ ac.victims | join(", ") }}
+{%- endif %}
+{%- if ac.is_false_mountain %}
+- **False Mountain:** Yes (gap: {{ ac.gap_pattern }})
+{%- endif %}
+{%- endif %}
+{% endfor %}
+{%- else -%}
+No Category B findings.
+{% endif %}
+## Category C: Legitimate Gaps — Exoneration ({{ c_list | length }} findings)
+{% if c_list -%}
+False mountains where Mountain classification is defensible:
+low extraction, no enforcement. These are correctly-identified perspectival gaps.
+{% for f in c_list -%}
+- `{{ f.constraint_id }}` — {{ f.summary }}
+{% endfor %}
+{%- else -%}
+No Category C findings (no false mountains met exoneration criteria).
+{% endif %}
+## Category D: WHO Suspects ({{ d_list | length }} findings)
+{% if d_list -%}
+High extraction with declared beneficiary/victim asymmetry but missing
+key perspectival coverage. Needs human review to determine if extraction is hidden.
+{% for f in d_list %}
+{%- set ac = constraints.get(f.constraint_id) %}
+### `{{ f.constraint_id }}`
+- **Category:** {{ f.category }} | **Severity:** {{ f.severity }}
+- **Summary:** {{ f.summary }}
+{%- if ac %}
+- **Domain:** {{ ac.domain or "unknown" }}
+- **Claimed Type:** {{ ac.claimed_type or "unknown" }}
+{%- if ac.perspectival_types %}
+- **Perspectival Types:** {{ ac.perspectival_types | dictsort | map('join', '→') | join(', ') }}
+{%- endif %}
+{%- if ac.beneficiaries %}
+- **Beneficiaries:** {{ ac.beneficiaries | join(", ") }}
+{%- endif %}
+{%- if ac.victims %}
+- **Victims:** {{ ac.victims | join(", ") }}
+{%- endif %}
+{%- if ac.is_false_mountain %}
+- **False Mountain:** Yes (gap: {{ ac.gap_pattern }})
+{%- endif %}
+{%- endif %}
+{% endfor %}
+{%- else -%}
+No Category D findings.
+{% endif %}
+{%- set e_total = e1_list | length + e2_list | length + e3_list | length + e4_list | length %}
+## Category E: Structural Defects ({{ e_total }} findings)
+
+### E1: Invalid Claim Values ({{ e1_list | length }} findings)
+{% if e1_list -%}
+{%- for f in e1_list -%}
+- `{{ f.constraint_id }}` — {{ f.summary }}
+{% endfor %}
+{%- else -%}
+No E1 findings.
+{% endif %}
+### E2: Missing Theater Ratio ({{ e2_list | length }} findings)
+{% if e2_list -%}
+{%- for f in e2_list -%}
+- `{{ f.constraint_id }}` — {{ f.summary }}
+{% endfor %}
+{%- else -%}
+No E2 findings.
+{% endif %}
+### E3: Missing Core Metrics ({{ e3_list | length }} findings)
+{% if e3_list -%}
+{%- for f in e3_list -%}
+- `{{ f.constraint_id }}` — {{ f.summary }}
+{% endfor %}
+{%- else -%}
+No E3 findings.
+{% endif %}
+### E4: Classification-Metric Inconsistency ({{ e4_list | length }} findings)
+{% if e4_list -%}
+{%- for f in e4_list -%}
+- `{{ f.constraint_id }}` — {{ f.summary }}
+{% endfor %}
+{%- else -%}
+No E4 findings.
+{% endif %}
+## Category F: Corpus Bias Analysis
+{% if f1 %}
+### F1: Naturalization Rate by Domain
+
+| Domain | Total | Mountain Count | Naturalization Rate |
+|--------|------:|--------------:|-------------------:|
+{%- for d, stats in f1[0].details | dictsort %}
+| {{ d }} | {{ stats.total }} | {{ stats.mountain_count }} | {{ "%.1f%%"|format(stats.naturalization_rate * 100) }} |
+{%- endfor %}
+{% endif %}
+{%- if f2 %}
+### F2: Theater Coverage Rate by Domain
+
+| Domain | Total | Theater Covered | Coverage Rate |
+|--------|------:|---------------:|-------------:|
+{%- for d, stats in f2[0].details | dictsort %}
+| {{ d }} | {{ stats.total }} | {{ stats.theater_covered }} | {{ "%.1f%%"|format(stats.coverage_rate * 100) }} |
+{%- endfor %}
+{% endif %}
+{%- if f3 %}
+### F3: Claim Distribution for High-Extraction Constraints (ε > 0.46)
+
+| Claimed Type | Count |
+|-------------|------:|
+{%- for claim, count in f3[0].details | dictsort(by='value', reverse=true) %}
+| {{ claim }} | {{ count }} |
+{%- endfor %}
+{% endif %}
+---
+*Report generated by classification_audit.py on {{ now }}*

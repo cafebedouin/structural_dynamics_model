@@ -1,0 +1,84 @@
+{{ "=" * 80 }}
+REFORM THRESHOLD REPORT
+Structural Dynamics Model — Energy Triage for Snare-Classified Constraints
+{{ "=" * 80 }}
+
+[1] Parsing fingerprint report...
+    {{ families_count }} shift families, {{ total_constraints }} total constraints
+
+[2] Identifying snare-from-powerless constraints...
+    Found {{ snare_count }} constraints classified as snare from powerless
+{% if not has_snare %}
+  No snare-from-powerless constraints found.
+  This means the snare gate is not firing from powerless for any constraint.
+  Check if coalition modeling is reducing chi below snare threshold for all.
+
+[2b] Checking analytical=snare constraints for comparison...
+     Found {{ anal_snare_count }} constraints classified as snare from analytical
+{%- if anal_snare_count > 0 %}
+
+     Powerless-type distribution for analytical=snare:
+{%- for pt, count in anal_snare_ptype_counts %}
+       {{ pt }}: {{ count }}
+{%- endfor %}
+{%- endif %}
+{% endif %}
+[3] Loading corpus data...
+    {{ corpus_count }} constraints in corpus_data.json
+
+[4] Computing reform thresholds...
+
+  Reform threshold from powerless: {{ threshold }}
+  Meaning: {{ threshold_meaning }}
+
+{{ "=" * 80 }}
+SNARE-FROM-POWERLESS CONSTRAINTS BY REFORM THRESHOLD
+{{ "=" * 80 }}
+{% for sec in threshold_sections %}
+  Reform Threshold: {{ sec.thresh | upper }}
+  Action: {{ sec.action }}
+  Count: {{ sec.count }}
+
+    Domain distribution: {{ sec.domain_dist }}
+
+{{ sec.hdr }}
+{{ sec.rule }}
+{%- for row in sec.rows %}
+{{ row }}
+{%- endfor %}
+{% endfor %}
+{%- if has_records -%}
+{{ "=" * 80 }}
+CROSS-PERSPECTIVE ANALYSIS
+{{ "=" * 80 }}
+
+  How do these snare-from-powerless constraints appear at other power levels?
+{% for cp in cross_perspective %}
+  {{ "%15s"|format(cp.name) }}: {{ cp.dist }}
+{%- endfor %}
+
+  Perspectival divergence patterns:
+{%- for pat, count in pattern_counts %}
+    {{ "%3d"|format(count) }}  {{ pat }}
+{%- endfor %}
+{%- endif %}
+
+{{ "=" * 80 }}
+SUMMARY
+{{ "=" * 80 }}
+
+  Total snare-from-powerless: {{ records_count }}
+{%- if has_records %}
+  Reform threshold:          {{ threshold }} (all constraints)
+  With coalition upgrade:    {{ summary_coalition }}
+
+  Top domains:
+{%- for d, c in summary_domains %}
+    {{ d }}: {{ c }}
+{%- endfor %}
+{%- else %}
+  NOTE: No constraints classified as snare from powerless.
+  The snare gate's metric requirements (chi >= 0.66, eps >= 0.46,
+  supp >= 0.60) combined with coalition modeling (which reduces
+  chi for high-extraction constraints) may be filtering all candidates.
+{%- endif %}

@@ -389,6 +389,15 @@ def _phase_post_prolog(progress):
         progress("pipeline", "[NORM] Normalizing orbit data IDs...")
     results.append(_run_step("orbit_norm", _orbit_norm, progress))
 
+    # Fingerprint JSON sidecar (fingerprint_report.md produced in Phase 2)
+    def _fingerprint_json():
+        import parse_fingerprint_json
+        parse_fingerprint_json.main()
+
+    if progress:
+        progress("pipeline", "[NORM] Generating fingerprint_data.json...")
+    results.append(_run_step("fingerprint_json", _fingerprint_json, progress))
+
     # JSON report (depends on abductive_data.json existing)
     def _json_report():
         run_prolog(
@@ -660,6 +669,13 @@ def run_pipeline(
 
     # Phase 4: PYTHON TIER 1 (parallel)
     collect(_phase_python_tier1(progress, parallel))
+
+    # False mountain JSON sidecar (false_mountain_report.md produced in Tier 1)
+    def _false_mountain_json():
+        import parse_false_mountain_json
+        parse_false_mountain_json.main()
+
+    collect(_run_step("false_mountain_json", _false_mountain_json, progress))
 
     # Phase 5: PYTHON TIER 2 (parallel) — depends on corpus_data.json
     if (OUTPUTS_DIR / "corpus_data.json").exists():

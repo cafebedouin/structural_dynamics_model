@@ -1,0 +1,162 @@
+# Conflict Map: Perspectival Gap Analysis by Domain
+
+*Where do analytical and powerless perspectives diverge most?*
+
+## Global Summary
+
+- **Total constraints**: {{ results | length }}
+- **Consensus** (same type both perspectives): {{ class_counts["consensus"] }}
+- **Coordination-washing** (analyst sees benign, powerless sees extractive): {{ class_counts["coordination_washing"] }}
+- **Severity amplification** (both see extraction, powerless sees worse): {{ class_counts["severity_amplification"] }}
+- **Protective framing** (analyst sees worse than powerless): {{ class_counts["protective_framing"] }}
+- **Analytical blind** (analyst can't classify, powerless can): {{ class_counts["analytical_blind"] }}
+- **Powerless blind** (powerless can't classify, analyst can): {{ class_counts["powerless_blind"] }}
+- **Both unknown**: {{ class_counts["both_unknown"] }}
+
+## Data Source Summary
+
+- **Fingerprint (engine-computed)**: {{ source_counts.get("fingerprint", 0) }} constraints — from shift patterns in fingerprint report, respects all metric gates
+- **Corpus static (testset annotations)**: {{ source_counts.get("corpus_static", 0) }} constraints — from hardcoded `constraint_classification/3` facts in testset `.pl` files
+
+> **Note:** Corpus static entries are hand-authored narrative annotations encoding how a constraint
+> is *experienced* from a given perspective. They do not pass through the metric engine's gate logic
+> (e.g., snare requires epsilon >= 0.46). Low-epsilon snare classifications from this source reflect
+> authorial perspectival analysis, not engine-computed measurement.
+
+## Most Common Shift Pairs (excluding consensus)
+
+| Shift | Count | Class |
+|-------|-------|-------|
+{%- for row in pair_table %}
+| {{ row.pair }} | {{ row.count }} | {{ row.shift_class }} |
+{%- endfor %}
+
+## Domain Rankings by Perspectival Gap
+
+Domains ranked by mean severity delta (higher = more divergent perspectives).
+
+| Rank | Domain | Constraints | Mean Gap | Coord-Wash | Sev-Amp | Consensus |
+|------|--------|-------------|----------|------------|---------|-----------|
+{%- for domain, stats in ranked %}
+{%- set n = stats.count %}
+{%- set mean_gap = stats.total_delta / n if n > 0 else 0 %}
+| {{ loop.index }} | {{ domain }} | {{ n }} | {{ "%.2f"|format(mean_gap) }} | {{ stats.shift_classes["coordination_washing"] }} | {{ stats.shift_classes["severity_amplification"] }} | {{ stats.shift_classes["consensus"] }} |
+{%- endfor %}
+
+## Domain Profiles (Top 10 by Gap)
+{% for domain, stats in ranked[:10] %}
+{%- set n = stats.count -%}
+{%- set mean_gap = stats.total_delta / n if n > 0 else 0 %}
+### {{ domain }} (n={{ n }}, mean gap={{ "%.2f"|format(mean_gap) }})
+
+**Shift classes:**
+{%- for sc, cnt in stats.shift_classes.most_common() %}
+- {{ sc }}: {{ cnt }} ({{ "%.0f"|format(cnt / n * 100) }}%)
+{%- endfor %}
+{% if stats.shift_pairs %}
+**Characteristic shifts:**
+{%- for pair, cnt in stats.shift_pairs.most_common(5) %}
+- {{ pair }}: {{ cnt }}
+{%- endfor %}
+{% endif %}
+{%- set gapped = stats.constraints | sort(attribute='delta', reverse=True) -%}
+{%- if gapped %}
+**Most divergent constraints:**
+{%- for c in gapped[:5] %}
+{%- set src_tag = ' *' if c.source == 'corpus_static' else '' %}
+- `{{ c.id }}`: {{ c.shift_pair }} (delta={{ c.delta }}, eps={{ "%.2f"|format(c.epsilon) }}){{ src_tag }}
+{%- endfor %}
+{%- if gapped[:5] | selectattr('source', 'equalto', 'corpus_static') | list %}
+
+*\* = corpus_static source (testset annotation, not engine-computed)*
+{%- endif %}
+{% endif %}
+{% endfor %}
+## Coordination-Washing Hotlist
+
+Constraints where analytical perspective sees rope/scaffold but powerless sees tangled_rope/snare.
+These are the strongest candidates for "extraction narrated as coordination."
+{% if cw_constraints %}
+| Constraint | Domain | Analytical | Powerless | Delta | Epsilon | Source |
+|------------|--------|------------|-----------|-------|---------|--------|
+{%- for c in cw_constraints[:30] %}
+| {{ c.id }} | {{ c.domain }} | {{ c.type_analytical }} | {{ c.type_powerless }} | {{ c.delta }} | {{ "%.2f"|format(c.epsilon) }} | {{ c.source }} |
+{%- endfor %}
+{%- set n_static = cw_constraints[:30] | selectattr('source', 'equalto', 'corpus_static') | list | length %}
+{%- if n_static > 0 %}
+
+> **Caveat:** {{ n_static }} of the above entries are from `corpus_static` (testset annotations).
+> These encode the author's perspectival analysis of how a constraint is *experienced*,
+> not engine-computed gaps. Low-epsilon snare classifications from this source bypass metric gate logic.
+{%- endif %}
+{%- else %}
+*None detected.*
+{%- endif %}
+
+## Severity Amplification Hotlist
+
+Constraints where both perspectives see extraction but powerless sees it as worse.
+These are domains where enforcement asymmetry is highest.
+{% if sa_constraints %}
+| Constraint | Domain | Analytical | Powerless | Delta | Epsilon | Source |
+|------------|--------|------------|-----------|-------|---------|--------|
+{%- for c in sa_constraints[:30] %}
+| {{ c.id }} | {{ c.domain }} | {{ c.type_analytical }} | {{ c.type_powerless }} | {{ c.delta }} | {{ "%.2f"|format(c.epsilon) }} | {{ c.source }} |
+{%- endfor %}
+{%- set n_static = sa_constraints[:30] | selectattr('source', 'equalto', 'corpus_static') | list | length %}
+{%- if n_static > 0 %}
+
+> **Caveat:** {{ n_static }} of the above entries are from `corpus_static` (testset annotations).
+{%- endif %}
+{%- else %}
+*None detected.*
+{%- endif %}
+
+## Engine-Computed Gaps Only
+
+This section filters to fingerprint-sourced data only (engine-computed shift patterns
+that respect all metric gates). Compare with the global summary above to see what
+testset annotations add.
+
+### Engine-Only Shift Class Counts
+
+- **Total constraints**: {{ engine_results | length }}
+- **Consensus**: {{ engine_class_counts["consensus"] }}
+- **Coordination-washing**: {{ engine_class_counts["coordination_washing"] }}
+- **Severity amplification**: {{ engine_class_counts["severity_amplification"] }}
+- **Protective framing**: {{ engine_class_counts["protective_framing"] }}
+- **Analytical blind**: {{ engine_class_counts["analytical_blind"] }}
+- **Powerless blind**: {{ engine_class_counts["powerless_blind"] }}
+- **Both unknown**: {{ engine_class_counts["both_unknown"] }}
+
+### Engine-Only Domain Rankings
+
+| Rank | Domain | Constraints | Mean Gap | Coord-Wash | Sev-Amp | Consensus |
+|------|--------|-------------|----------|------------|---------|-----------|
+{%- for domain, stats in engine_ranked %}
+{%- set n = stats.count %}
+{%- set mean_gap = stats.total_delta / n if n > 0 else 0 %}
+| {{ loop.index }} | {{ domain }} | {{ n }} | {{ "%.2f"|format(mean_gap) }} | {{ stats.shift_classes["coordination_washing"] }} | {{ stats.shift_classes["severity_amplification"] }} | {{ stats.shift_classes["consensus"] }} |
+{%- endfor %}
+
+### Engine-Only Coordination-Washing Hotlist
+{% if engine_cw %}
+| Constraint | Domain | Analytical | Powerless | Delta | Epsilon |
+|------------|--------|------------|-----------|-------|---------|
+{%- for c in engine_cw[:30] %}
+| {{ c.id }} | {{ c.domain }} | {{ c.type_analytical }} | {{ c.type_powerless }} | {{ c.delta }} | {{ "%.2f"|format(c.epsilon) }} |
+{%- endfor %}
+{%- else %}
+*None detected.*
+{%- endif %}
+
+### Engine-Only Severity Amplification Hotlist
+{% if engine_sa %}
+| Constraint | Domain | Analytical | Powerless | Delta | Epsilon |
+|------------|--------|------------|-----------|-------|---------|
+{%- for c in engine_sa[:30] %}
+| {{ c.id }} | {{ c.domain }} | {{ c.type_analytical }} | {{ c.type_powerless }} | {{ c.delta }} | {{ "%.2f"|format(c.epsilon) }} |
+{%- endfor %}
+{%- else %}
+*None detected.*
+{%- endif %}

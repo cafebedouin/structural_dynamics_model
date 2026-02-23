@@ -1,0 +1,176 @@
+{{ "=" * 80 }}
+POWERLESS BLIND DIAGNOSTIC
+Structural Dynamics Model -- February 2026 Gates
+{{ "=" * 80 }}
+
+[1] Parsing fingerprint report...
+    {{ families_count }} shift families, {{ total_constraints }} total constraints
+
+[2] Identifying powerless_blind constraints...
+    Found {{ pb_count }} powerless_blind constraints
+
+    Analytical type distribution:
+{%- for atype, count in analytical_counts %}
+      {{ atype }}: {{ count }}
+{%- endfor %}
+
+    Shift pattern distribution:
+{%- for pat, count in pattern_counts %}
+      {{ pat }}  ({{ count }})
+{%- endfor %}
+
+[3] Loading corpus data...
+    {{ corpus_count }} constraints in corpus_data.json
+
+[4] Extracting theater_ratio and structural predicates from .pl files...
+    theater_ratio:              {{ pl_stats.theater_count }} constraints
+    requires_active_enforcement: {{ pl_stats.enforcement_count }} constraints
+    has_coordination (beneficiary): {{ pl_stats.coordination_count }} constraints
+    has_asymmetric (victim):     {{ pl_stats.asymmetric_count }} constraints
+    has_sunset_clause:           {{ pl_stats.sunset_count }} constraints
+    coalition-eligible (victims >= {{ pl_stats.coalition_threshold }}): {{ pl_stats.coalition_eligible }} constraints
+
+[5] Computing chi and testing gates for each constraint...
+{% if missing_corpus > 0 %}
+    WARNING: {{ missing_corpus }} constraints not found in corpus_data.json
+{% endif %}
+{{ "=" * 80 }}
+ROOT CAUSE ANALYSIS (POST-IMMUTABILITY-WALL FIX)
+{{ "=" * 80 }}
+
+  The powerless context is:
+    context(agent_power(powerless), time_horizon(biographical),
+            exit_options(trapped), spatial_scope(local))
+
+  In constraint_indexing.pl:
+    effective_immutability(biographical, trapped, mountain).
+
+  FIXED: snare_immutability_check/1 in drl_core.pl now checks whether ANY
+  standard higher-power perspective sees changeability (rope). Since the
+  moderate context (biographical/mobile) gives rope, the snare gate is
+  NO LONGER structurally blocked at powerless. It is purely metric-gated.
+
+  STILL BLOCKED: The rope gate still uses effective_immutability_for_context
+  directly, so rope classification remains blocked from powerless.
+
+  COALITION MODELING: When eps >= 0.46 AND supp >= 0.60 AND victims >= 3,
+  powerless is upgraded to organized (pi=0.4 instead of 1.5). This reduces
+  chi significantly, often below snare/tangled_rope thresholds.
+
+  Of {{ with_data_count }} constraints with metrics:
+    {{ snare_pass }} pass snare gate (metric-gated, immutability resolved)
+    {{ coalition_count }} have coalition upgrade (powerless -> organized, chi reduced)
+    {{ rope_metric_pass }} would pass rope metrics (but rope gate still immutability-blocked)
+
+{{ "=" * 80 }}
+GATE FAILURE ANALYSIS AT POWERLESS CONTEXT
+{{ "=" * 80 }}
+{% for ga in gate_analysis %}
+  {{ ga.name | upper }} gate: {{ ga.n_pass }}/{{ records_count }} pass {{ ga.blocked }}
+{%- for reason, count in ga.reasons %}
+    {{ reason }}  ({{ count }}x)
+{%- endfor %}
+{% endfor %}
+{{ "=" * 80 }}
+SUBPOPULATION ANALYSIS
+{{ "=" * 80 }}
+
+  SUMMARY COUNTS:
+  {{ "-" * 72 }}
+{%- for sp in sp_summary %}
+    {{ "%4d"|format(sp.count) }}  ({{ "%5.1f"|format(sp.pct) }}%)  {{ sp.label }}
+{%- endfor %}
+    {{ "~" * 50 }}
+    {{ "%4d"|format(records_count) }}          TOTAL
+
+{{ "=" * 80 }}
+TOP EXAMPLES BY SUBPOPULATION
+{{ "=" * 80 }}
+{% for sec in sp_sections %}
+  --- {{ sec.label }} ---
+  --- {{ sec.count }} constraints ---
+
+    Domain distribution: {{ sec.domain_dist }}
+    Analytical types:    {{ sec.at_dist }}
+
+{{ sec.hdr }}
+{{ sec.rule }}
+{%- for row in sec.rows %}
+{{ row }}
+{%- endfor %}
+
+    Gate failure details (first 3):
+{%- for gd in sec.gate_details %}
+      {{ gd.cid }}:
+{%- for line in gd.gates %}
+{{ line }}
+{%- endfor %}
+{%- endfor %}
+{% endfor %}
+{{ "=" * 80 }}
+DEAD ZONE CHI_POWERLESS HISTOGRAM
+{{ "=" * 80 }}
+{% if has_dead_zone and dz_histogram_lines %}
+{%- for line in dz_histogram_lines %}
+{{ line }}
+{%- endfor %}
+{% if dz_stats %}
+  Dead zone chi stats:
+    n:      {{ dz_stats.n }}
+    min:    {{ dz_stats.min }}
+    max:    {{ dz_stats.max }}
+    mean:   {{ dz_stats.mean }}
+    median: {{ dz_stats.median }}
+
+  Dead zone band analysis:
+    0.30 < chi < 0.40 (scaffold-tangled gap): {{ dz_stats.band_scaffold_tangled }}
+    chi > 0.90 (above tangled_rope ceiling):  {{ dz_stats.band_above_tangled }}
+{%- endif %}
+{%- else %}
+  No dead zone constraints found.
+{%- endif %}
+
+{{ "=" * 80 }}
+EPSILON DISTRIBUTION ACROSS ALL POWERLESS_BLIND
+{{ "=" * 80 }}
+{% if eps_histogram_lines %}
+{%- for line in eps_histogram_lines %}
+{{ line }}
+{%- endfor %}
+{%- endif %}
+{% if has_ms %}
+{{ "=" * 80 }}
+MISSING STRUCTURAL DETAIL: WHAT FAILS FOR TANGLED_ROPE?
+{{ "=" * 80 }}
+
+  What blocks tangled_rope for these {{ ms_count }} constraints:
+{%- for item in ms_detail %}
+    {{ "%4d"|format(item.count) }}  ({{ "%5.1f"|format(item.pct) }}%)  {{ item.reason }}
+{%- endfor %}
+{% endif %}
+{{ "=" * 80 }}
+DIAGNOSTIC SUMMARY
+{{ "=" * 80 }}
+
+  Total powerless_blind constraints:  {{ records_count }}
+  With corpus metrics:                {{ with_corpus }}
+  With theater_ratio:                 {{ with_theater }}
+
+  Subpopulation breakdown:
+{%- for sp in sp_summary %}
+    {{ "%4d"|format(sp.count) }}  {{ sp.label }}
+{%- endfor %}
+
+  REMAINING ROOT CAUSES:
+  ----------------------
+  The immutability wall for snare is RESOLVED (snare_immutability_check).
+  The rope gate remains blocked (effective_immutability = mountain).
+
+  Remaining powerless_blind constraints fall into these categories:
+    - Coalition chi reduction: powerless upgraded to organized (pi=0.4),
+      chi drops below snare threshold despite high base extraction.
+    - Low-eps ropes: analytical=rope but eps too low for snare,
+      and rope gate blocked by immutability.
+    - Dead zone: chi falls between scaffold ceiling (0.30) and
+      tangled_rope floor (0.40).
+    - No metrics: constraint not in corpus_data.json.
