@@ -1,0 +1,130 @@
+{
+  "header": {
+    "constraint_id": "subscription_economy_model_u1_exp_r1",
+    "version": "2.1",
+    "generated_date": "2023-10-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_subscription_economy_model_u1_exp_r1"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Subscription Economy Model",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "subscription_corporations"
+    ],
+    "victims": [
+      "individual_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-in Consumer",
+      "comment": "From the consumer's view, the model is a trap. Ownership is revoked, costs are perpetual, and high friction cancellation plus a lack of alternatives makes exit nearly impossible."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Recurring Revenue Platform",
+      "comment": "For the corporation, this is a pure coordination mechanism to smooth revenue, fund continuous development, and maintain a direct service relationship with customers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Ownership-as-a-Service Analyst",
+      "comment": "The analytical view recognizes both the coordination function (service delivery) and the asymmetric extraction (consumer lock-in, loss of ownership), classifying it as a Tangled Rope."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Pro-Consumer Regulator",
+      "comment": "A regulator might view the model as a temporary scaffold for industry growth, intending to later impose rules (e.g., 'one-click cancel') that reduce its extractive potential."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subscription_value_vs_rent",
+      "question": "Is the recurring fee a fair price for continuous service and updates, or is it rent-seeking on a captured user base with suppressed alternatives?",
+      "resolution_mechanism": "Comparative analysis of perpetual license TCO vs. subscription TCO, coupled with data on cancellation friction and user churn rates when friction is removed.",
+      "impact": "If deemed fair value for service, it leans towards Rope. If deemed rent-seeking, it solidifies as a Snare from most non-beneficiary perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between fair service pricing and rent-seeking on a captured user base."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 2008,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the widespread business model shift from one-time product sales (perpetual licenses) to recurring subscription fees. While offering a coordination benefit (continuous updates, service access), it asymmetrically extracts value by creating consumer inertia, making cancellation difficult (a 'hassle tax'), and revoking ownership rights. The model is actively enforced by DRM and the suppression of non-subscription alternatives.",
+    "key_agents": [
+      "Individual Consumers: Primary target (powerless/trapped) \u2014 bear the costs of subscription fatigue, loss of ownership, and cancellation friction.",
+      "Subscription-based Corporations: Primary beneficiary (institutional/arbitrage) \u2014 benefit from predictable recurring revenue and increased customer lifetime value.",
+      "Regulatory Bodies: Potential moderator (organized/constrained) \u2014 can influence the constraint through consumer protection laws."
+    ],
+    "logic_rationale": "The high extractiveness (0.68) reflects the transfer of value from consumers (who lose asset ownership and pay in perpetuity) to corporations (who gain predictable revenue streams). The high suppression (0.72) is due to the active phasing out of perpetual license alternatives by market leaders and the use of DRM to enforce the terms of the subscription, locking users into the ecosystem.",
+    "perspectival_gap": "The gap is stark: corporations see an efficient Rope for delivering value and managing revenue, while consumers experience a Snare of endless payments for products they can never own, with high barriers to exit. The analytical Tangled Rope classification captures this duality.",
+    "directionality_logic": "Directionality is clear. Corporations are the beneficiaries, designing and enforcing the system for their financial benefit (d -> 0). Consumers are the victims, bearing the financial burden and loss of autonomy (d -> 1). Their trapped exit options and powerless status maximize the effective extraction they experience.",
+    "mandatrophy_analysis": "The Tangled Rope classification is crucial for avoiding mandatrophy. A Snare classification would ignore the genuine coordination function of providing continuous updates and services. A Rope classification would ignore the coercive extraction, loss of ownership, and high suppression. Tangled Rope correctly identifies that a legitimate service is being used as a vehicle for asymmetric, non-consensual value extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_right_to_repair",
+      "consumer_data_portability"
+    ]
+  }
+}

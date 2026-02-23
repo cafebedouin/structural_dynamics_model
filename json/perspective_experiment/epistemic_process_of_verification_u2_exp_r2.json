@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u2_exp_r2",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u2_exp_r2"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.15,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_community_at_large",
+      "established_paradigms",
+      "funding_agencies"
+    ],
+    "victims": [
+      "novel_claim_proposers",
+      "underfunded_labs",
+      "researchers_in_fringe_fields"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Novel Claim Proposer",
+      "comment": "For the researcher with a groundbreaking but difficult-to-replicate finding, the process is a high-stakes gauntlet with significant career risk. The costs of verification are borne almost entirely by them, making it feel like a Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Paradigm",
+      "comment": "From the perspective of a field's established institutions, the process is a pure coordination mechanism (Rope) that filters noise, ensures stability, and maintains the integrity of the shared knowledge base. They benefit from the high bar for entry."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Underfunded Lab",
+      "comment": "A lab without the resources to perform costly replication experiments is effectively excluded from the verification process. For them, it is a Snare that enforces their marginalization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Epistemological Observer",
+      "comment": "The analytical view recognizes both the essential coordination function and the asymmetric extraction. It is a Tangled Rope, a necessary process for building reliable knowledge that simultaneously imposes heavy, unevenly distributed costs."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "replication_cost_function",
+      "question": "Is the high cost of replication a necessary filter for quality (a feature) or a tool for incumbent gatekeeping (a bug)?",
+      "resolution_mechanism": "Analysis of rejected-then-vindicated claims versus accepted-then-retracted claims, correlated with the initial cost and difficulty of replication.",
+      "impact": "If primarily a necessary filter, the constraint's Rope-like properties are dominant. If primarily a gatekeeping tool, its Snare-like properties are dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the high cost of replication is a functional filter or an incumbency-protection mechanism."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the scientific method's requirement for independent replication before a claim is accepted. While essential for coordinating the community towards reliable knowledge, this process imposes significant, asymmetric costs in terms of time, resources, and career risk. It functions as a filter but can also act as a gatekeeping mechanism that suppresses novel or disruptive findings.",
+    "key_agents": [
+      "Novel Claim Proposers: Primary targets who bear the costs of verification (moderate/constrained).",
+      "Established Paradigms/Institutions: Primary beneficiaries who gain from a stable knowledge base (institutional/arbitrage).",
+      "Underfunded Labs: Victims excluded by the high resource costs of participation (powerless/trapped).",
+      "Scientific Community at Large: Secondary beneficiary of reliable knowledge."
+    ],
+    "logic_rationale": "The base extractiveness (0.48) reflects the immense cost (funding, personnel, time) required to replicate a significant finding, a cost borne by the community but most acutely by the proposer. The suppression score (0.62) represents the powerful effect of peer review and the 'failure to replicate' in preventing claims from entering the canon. The process is actively enforced through funding and publication decisions.",
+    "perspectival_gap": "The gap is stark: for the established institution, it's a Rope that ensures quality control. For the researcher trying to break new ground, it's a Snare that can end a career. The former experiences the system's stability, the latter its coercive filtering power.",
+    "directionality_logic": "Benefits (reliable knowledge, paradigm stability) flow to the community and its established institutions. Costs (career risk, resource expenditure, risk of being unfairly dismissed) are concentrated on the individuals and labs proposing novel claims. This asymmetric distribution of costs and benefits is the core of the Tangled Rope classification.",
+    "mandatrophy_analysis": "Classifying this process as a pure Rope would ignore the immense coercive power and career-destroying potential it holds. Classifying it as a pure Snare would deny its indispensable function in creating the reliable scientific knowledge on which society depends. The Tangled Rope classification correctly identifies it as a system with a genuine, vital coordination function that is structurally intertwined with high, asymmetric extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_trust_in_science"
+    ]
+  }
+}

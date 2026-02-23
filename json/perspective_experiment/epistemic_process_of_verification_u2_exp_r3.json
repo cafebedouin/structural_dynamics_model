@@ -1,0 +1,129 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u2_exp_r3",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u2_exp_r3"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_community_at_large",
+      "established_paradigm_holders",
+      "journal_publishers"
+    ],
+    "victims": [
+      "novel_claim_proposers",
+      "replicating_labs",
+      "early_career_researchers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Graduate Student on a Replication Project",
+      "comment": "For the student whose career depends on replicating a difficult result, the process is a high-stakes, high-cost trap with little personal upside in terms of prestige."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Novel Claimant",
+      "comment": "From the perspective of a lab proposing a groundbreaking but difficult-to-replicate finding, the process feels like a snare due to the immense resource cost, career risk, and potential for gatekeeping by established rivals."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Paradigm Holder",
+      "comment": "For a tenured professor, journal editor, or funding body, the process is a pure coordination mechanism (Rope) that maintains high standards, ensures stability, and filters out noise, protecting the integrity of their field."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Historian of Science",
+      "comment": "The analytical view recognizes both the essential coordination function and the asymmetric extraction. It is a Tangled Rope, a necessary filter that nonetheless imposes heavy costs and can be captured by incumbent paradigms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gatekeeping_vs_quality_control",
+      "question": "Is the high cost and difficulty of verification a necessary feature for ensuring quality, or has it been inflated by established paradigms to serve as a gatekeeping mechanism against disruptive ideas?",
+      "resolution_mechanism": "Comparative analysis of replication success rates and funding outcomes for paradigm-challenging vs. paradigm-confirming research, controlling for methodological rigor.",
+      "impact": "If primarily gatekeeping, the Snare characteristics are stronger (higher \u03b5). If a necessary cost of quality, the Rope characteristics are stronger (lower \u03b5).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between necessary quality control and inertial paradigm gatekeeping."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The process of scientific verification requires independent replication before a claim is accepted. This serves a vital coordination function, aligning the scientific community on a shared body of reliable knowledge. However, it also imposes immense costs in time, funding, and career risk, which are asymmetrically borne by those proposing novel or disruptive findings. This dual nature makes it a classic Tangled Rope.",
+    "key_agents": [
+      "Novel Claim Proposers: Primary targets who bear the burden of proof (organized/constrained).",
+      "Established Paradigm Holders: Primary beneficiaries who act as gatekeepers and benefit from stability (institutional/arbitrage).",
+      "Replicating Labs / Early Career Researchers: Bear the opportunity and direct costs of verification work (powerless/trapped).",
+      "The Scientific Community: A secondary beneficiary that receives a reliable knowledge base."
+    ],
+    "logic_rationale": "The base extractiveness (\u03b5=0.48) reflects the significant resource and career costs required to pass through the verification filter. Suppression (0.65) is high because the process's explicit function is to filter out and reject uncorroborated claims, leaving no alternative path to canonization. The process requires active enforcement through peer review, editorial decisions, and funding allocation.",
+    "perspectival_gap": "A stark gap exists between the Established Paradigm Holder, who sees a pure Rope for maintaining quality, and the Novel Claimant, who experiences a Snare of high costs, career risk, and potential gatekeeping. The analytical perspective reconciles these by identifying the system as a Tangled Rope, acknowledging both its essential coordination role and its extractive, suppressive properties.",
+    "directionality_logic": "The constraint extracts resources (funding, lab time, opportunity cost) and career-potential from challengers and replicators. It delivers benefits in the form of epistemic stability and reliability to the community as a whole, and disproportionately to incumbent leaders of a field who control the verification infrastructure (journals, funding panels).",
+    "mandatrophy_analysis": "Classifying this process as a Tangled Rope correctly avoids two major errors. It is not a pure Rope, which would ignore the immense, asymmetrically distributed costs. It is also not a pure Snare, which would deny its indispensable function in producing reliable knowledge. The classification captures the reality of a system that is both functional and extractive."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  }
+}

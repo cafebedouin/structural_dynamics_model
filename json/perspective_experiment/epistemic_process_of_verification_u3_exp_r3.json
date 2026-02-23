@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u3_exp_r3",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u3_exp_r3"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_research_institutions",
+      "funding_agencies",
+      "journal_publishers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "underfunded_labs",
+      "proponents_of_paradigm_shifts"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unfunded Innovator",
+      "comment": "For a researcher with a novel but difficult-to-replicate finding, the process acts as a career-ending filter, suppressing their work due to lack of resources or institutional backing. It is a Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established National Laboratory",
+      "comment": "For a well-funded institution that acts as a verifier, the process is a pure coordination mechanism (Rope) that maintains the integrity of the field, reinforces its own prestige, and directs research priorities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Funding Agency Program Manager",
+      "comment": "For a funding body, the process is a necessary tool for risk management and quality control, but they are also aware of its extractive costs and its potential to stifle high-risk, high-reward research. They experience the tension directly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The System-Level Observer",
+      "comment": "The analytical view recognizes both the essential coordination function in building reliable knowledge and the simultaneous, structural extraction from challengers and the under-resourced. It is a canonical Tangled Rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_vs_suppression",
+      "question": "Is the high cost and difficulty of verification a necessary filter for quality, or a structural barrier used by incumbents to suppress paradigm-shifting innovation?",
+      "resolution_mechanism": "Longitudinal analysis of the institutional affiliation and funding status of authors of initially-rejected-but-later-vindicated research versus authors of high-profile retractions.",
+      "impact": "If primarily a quality filter, the constraint's extractiveness is overstated and it functions more like a Rope. If primarily a suppression mechanism, it functions more like a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing necessary epistemic rigor from incumbent-driven suppression of novel claims."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The requirement for independent verification and replication is the central coordination mechanism of modern science. It ensures that the body of accepted knowledge is robust and reliable. However, this process is not frictionless. It imposes significant costs in time, resources, and career risk, creating a system of gatekeeping that benefits established institutions while extracting from and suppressing novel claims from less-resourced or paradigm-challenging actors.",
+    "key_agents": [
+      "Early-career researchers / Underfunded labs: Primary targets (powerless/trapped) - bear the costs of verification.",
+      "Established research institutions / National labs: Primary beneficiaries (institutional/arbitrage) - act as gatekeepers, reinforcing their prestige.",
+      "Funding agencies / Journal publishers: Enforcers (institutional/constrained) - manage the system of verification and resource allocation."
+    ],
+    "logic_rationale": "The base extractiveness of 0.55 reflects the immense material and career costs required to satisfy verification demands, especially in capital-intensive fields. The high suppression score of 0.75 reflects the near-total delegitimization of non-replicated claims within the formal scientific enterprise; there are few viable alternative paths to epistemic authority.",
+    "perspectival_gap": "The gap is stark: for those with the resources to verify others' work, the system is a Rope that maintains high standards. For those seeking verification for a novel claim, it is a Snare that can strangle their career. This gap is a direct function of an agent's access to capital and institutional power.",
+    "directionality_logic": "The constraint directs value and authority towards established, well-funded institutions that can afford the high cost of verification, making them arbiters of truth. It extracts resources and potential discoveries from individuals and smaller labs who cannot meet this high bar, regardless of the intrinsic merit of their claims. The beneficiaries are the gatekeepers; the victims are the challengers.",
+    "mandatrophy_analysis": "Classifying this process as a pure Rope would be a common error, ignoring the significant coercive and extractive elements that suppress innovation from the periphery. A Snare classification would be equally wrong, as it would deny the genuine and critical coordination function the process provides. The Tangled Rope classification correctly identifies the dual nature of the constraint: an essential coordination mechanism that has been captured to serve an extractive, gatekeeping function."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_trust_in_science",
+      "pharmaceutical_approval_process",
+      "academic_tenure_system"
+    ]
+  }
+}

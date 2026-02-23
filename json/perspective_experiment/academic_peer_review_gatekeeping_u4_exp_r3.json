@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "academic_peer_review_gatekeeping_u4_exp_r3",
+    "version": "7.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_academic_peer_review_gatekeeping_u4_exp_r3"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Academic Peer Review and Journal Gatekeeping",
+    "topic_domain": "economic/social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "for_profit_journal_publishers",
+      "senior_academic_gatekeepers"
+    ],
+    "victims": [
+      "junior_professors",
+      "research_institutions",
+      "general_public"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Junior Professor",
+      "comment": "PERSPECTIVE 1: The untenured academic who must publish in high-impact, costly journals to secure a career, providing free labor (research, writing, reviewing) into a system that extracts from their institution."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journal Publisher",
+      "comment": "PERSPECTIVE 2: The publisher who views the system as an efficient coordination mechanism to vet, brand, and disseminate research, generating revenue that supports this ecosystem."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Research Institution",
+      "comment": "PERSPECTIVE 3: The university or library consortium that must pay exorbitant subscription fees ('The Big Deal') to access research produced by its own faculty, trapped by the need to provide resources for its community."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The System Analyst",
+      "comment": "PERSPECTIVE 4: The outside observer who recognizes both the genuine coordination function (quality signaling, community organization) and the severe, asymmetric extraction of value from publicly-funded labor."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quality_control_necessity",
+      "question": "Is the publisher-centric model with high barriers and costs a necessary structure for maintaining scientific rigor, or is it a rent-seeking artifact that could be replaced by more efficient, open models without a loss of quality?",
+      "resolution_mechanism": "Large-scale comparative study of research quality, retraction rates, and scientific impact between top-tier subscription journals and high-quality, peer-governed open access platforms over a decade.",
+      "impact": "If the model is proven necessary for quality, the constraint leans towards a high-cost Rope. If it is primarily rent-seeking, it is a pure Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity between the system's claimed quality control function and its observed rent-seeking behavior."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2002,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2002,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The academic peer review system is a mechanism where researchers provide free labor (writing, reviewing, editing) to for-profit publishers. These publishers then erect paywalls and sell access to the research\u2014often funded by public grants\u2014back to the researchers' own institutions at extremely high costs. The system is maintained by a prestige economy where career advancement (i.e., tenure) is tied to publishing in high-impact, exclusive journals.",
+    "key_agents": [
+      "Junior Professors: Primary victims (powerless/trapped) - must provide free labor and publish in prestige journals to secure their careers.",
+      "For-Profit Journal Publishers: Primary beneficiaries (institutional/arbitrage) - capture immense value from free labor and institutional subscriptions.",
+      "Research Institutions / Library Consortia: Secondary victims (institutional/constrained) - forced to pay escalating fees to access research their own faculty produced.",
+      "General Public: Tertiary victims (powerless/trapped) - fund the research through taxes but are denied access."
+    ],
+    "logic_rationale": "Extractiveness (0.68) is high due to the direct conversion of free, skilled labor and public funds into private profit. Suppression (0.75) is severe because the 'publish or perish' mandate and the journal prestige hierarchy create powerful lock-in, making alternative platforms (pre-print servers, open-access journals) appear career-limiting for junior academics, despite their functional superiority in dissemination.",
+    "perspectival_gap": "A significant gap exists. The Junior Professor, trapped by career incentives, experiences the system as a Snare. The Publisher, benefiting from the arrangement, frames it as a necessary Rope for coordinating scientific validation. The Analyst, observing both the coordination function and the extreme value extraction, classifies it as a Tangled Rope.",
+    "directionality_logic": "Value flows from researchers (labor) and their institutions (subscription fees, which are often from public funds) to the shareholders of publishing companies. The beneficiaries are the publishers who own the journals. The victims are the researchers who perform the labor for free and the institutions and public who pay for the final product.",
+    "mandatrophy_analysis": "The system is often defended as a pure coordination mechanism (Rope) for ensuring quality control. This mislabels the constraint. The Tangled Rope classification is critical as it correctly identifies that a genuine coordination function (organizing peer review) has been tightly coupled with a highly extractive business model. It prevents the system's beneficiaries from hiding the asymmetric extraction behind the veil of 'maintaining standards'."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "university_tenure_system",
+      "public_research_funding_allocation"
+    ]
+  }
+}

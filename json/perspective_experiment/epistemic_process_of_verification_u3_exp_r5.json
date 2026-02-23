@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u3_exp_r5",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u3_exp_r5"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.8,
+    "theater_ratio": 0.25,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_research_institutions",
+      "scientific_publishers",
+      "society_at_large"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "labs_with_heterodox_claims"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Pre-Tenure Researcher",
+      "comment": "For a researcher whose career depends on novel publications, the slow, expensive, and skeptical verification process acts as a coercive filter that can terminate their career. The costs are immediate and personal, while the collective benefit is abstract."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Research Institute",
+      "comment": "For a well-funded institution, the verification process is a quality control mechanism that maintains the integrity of the field and its own reputation. It coordinates the community towards reliable knowledge, reinforcing the value of its own rigorous (and well-resourced) approach."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Historian of Science",
+      "comment": "The analytical view recognizes both the indispensable coordination function (preventing an epistemic free-for-all) and the inherent, asymmetric extraction imposed on the most vulnerable and innovative actors in the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Funding Body",
+      "comment": "From the perspective of a national funding agency, the process is a necessary evil. It ensures public money is spent on generating reliable knowledge (coordination), but it also consumes significant resources in 'redundant' replication and can stifle rapid innovation (extraction)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "replication_cost_origin",
+      "question": "Is the high cost of replication an irreducible feature of complex natural systems, or is it an artifact of the current institutional and funding structures of science?",
+      "resolution_mechanism": "Comparative analysis of verification costs in fields with different funding models (e.g., public vs. private) or the development of AI-driven verification tools that lower the marginal cost of replication.",
+      "impact": "If the cost is irreducible (a Mountain floor), the constraint is a fundamental Tangled Rope. If it is institutional, the system could be reformed into a more efficient Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the high cost of scientific replication is a natural limit or an institutional artifact."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2050
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the scientific method's requirement for independent verification and replication. While this process is fundamental to coordinating the scientific community towards a shared, reliable body of knowledge, it imposes significant, asymmetric costs on early-career researchers and those with novel or heterodox findings, whose careers and funding are put at risk by the slow, expensive, and inherently conservative nature of verification.",
+    "key_agents": [
+      "Early-Career Researchers: Primary targets (powerless/trapped) who bear the costs of delay and skepticism.",
+      "Established Research Institutions: Primary beneficiaries (institutional/arbitrage) who act as gatekeepers and benefit from the stability and prestige the system provides.",
+      "Scientific Publishers: Institutional beneficiaries who leverage the peer review and verification process as a core part of their value proposition.",
+      "Labs with Heterodox Claims: Secondary targets (moderate/constrained) who face high barriers to acceptance."
+    ],
+    "logic_rationale": "The base extractiveness (\u03b5=0.55) reflects the high stakes for individual researchers, where failure to be replicated can be a career-ending event. The suppression score (0.80) is high because, within mainstream science, there is no viable alternative to this process; bypassing it results in being ostracized from the community. The active enforcement is carried out by peer reviewers, journal editors, and funding committees.",
+    "perspectival_gap": "A significant gap exists between the pre-tenure researcher, who experiences the process as a high-stakes, coercive Snare, and the established institution, which views it as a necessary Rope for maintaining quality and order. The former is trapped by the 'publish or perish' imperative, while the latter uses the system to solidify its own authority and epistemic standards.",
+    "directionality_logic": "The direction of extraction flows from the new, precarious, and innovative to the established, stable, and conservative. Early-career researchers and proponents of novel theories provide the 'risk capital' of new ideas, but the verification process ensures that the 'dividends' of accepted knowledge primarily accrue to the established institutions and paradigms that control the means of replication.",
+    "mandatrophy_analysis": "Classifying this process as a Tangled Rope is crucial. A simple Rope classification would ignore the severe extraction imposed on junior scientists. A simple Snare classification would deny the process's absolutely essential function in coordinating scientific activity and producing reliable knowledge. The Tangled Rope correctly identifies that the mechanism for coordination is simultaneously the mechanism for extraction and gatekeeping."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_trust_in_science",
+      "technological_development_cycles"
+    ]
+  }
+}

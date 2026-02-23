@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u4_exp_r2",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u4_exp_r2"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_establishment",
+      "funding_agencies",
+      "journal_publishers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "underfunded_labs",
+      "paradigm_challengers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Paradigm Challenger",
+      "comment": "For a researcher with a novel but difficult-to-replicate finding, the process is a high-stakes filter that can end a career. The costs are immediate and personal, and there is no alternative path to acceptance within the scientific community."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Gatekeeper",
+      "comment": "For funding agencies and established journals, the process is a crucial coordination mechanism to ensure quality and prevent the pollution of the scientific record with erroneous claims. The extractive costs are viewed as a necessary price for epistemic stability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Tenured Incumbent",
+      "comment": "An established, well-funded researcher benefits from the stability the system provides and has the resources to navigate its verification demands. While aware of the costs, their position is secured by it, making it function as a coordination system that protects their status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Historian of Science",
+      "comment": "The analytical view recognizes both the indispensable coordination function in creating reliable knowledge and the asymmetric extraction imposed on those with fewer resources or more radical ideas. The process both enables progress and filters it through an institutional bias."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_cost_origin",
+      "question": "Is the high cost and slow pace of verification a necessary feature for reliable knowledge acquisition, or an artificially inflated barrier protecting the scientific establishment?",
+      "resolution_mechanism": "Comparative analysis of scientific progress and career outcomes under alternative, lower-cost verification models (e.g., registered reports, open data platforms).",
+      "impact": "If the cost is a necessary, irreducible property of epistemology, the constraint is closer to a Rope. If it is an artificially inflated institutional barrier, it is closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the high cost of verification is a necessary epistemic feature or an artificial institutional barrier."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1660,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1660,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 1660,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The process of scientific verification requires independent replication of claims before they are accepted as fact. This coordinates the scientific community towards a shared, reliable understanding of reality but imposes significant costs on researchers, especially those challenging existing paradigms or operating with limited resources. It functions as a powerful gatekeeping mechanism, enforced through peer review and funding decisions.",
+    "key_agents": [
+      "Paradigm Challengers / Early-Career Researchers: Primary targets (powerless/trapped)",
+      "Scientific Establishment (Journals, Universities, Funding Agencies): Primary beneficiaries and enforcers (institutional/arbitrage)",
+      "Tenured Incumbent Researchers: Secondary beneficiaries (powerful/mobile)",
+      "Analytical Observers (Historians/Philosophers of Science): Observers (analytical/analytical)"
+    ],
+    "logic_rationale": "The base extractiveness of 0.55 reflects the high cost in time, funding, and potential career-ending failure for those subjected to the verification process. The suppression score of 0.65 represents the near-impossibility of gaining acceptance for claims that bypass this process, effectively suppressing alternative epistemic routes. The theater ratio is low as the core activity is functional, though it has increased over time with 'publish or perish' pressures.",
+    "perspectival_gap": "The gap is stark: for the institutional beneficiary, it is a Rope that ensures quality control and epistemic order. For the powerless researcher with a novel claim, it is a Snare that threatens their career and extracts immense effort with no guarantee of success. This difference arises from their structural position relative to the costs and benefits of the system.",
+    "directionality_logic": "The beneficiaries are the institutions that govern science; they gain stability, control, and prestige from the process. The victims are the individual researchers, particularly those who are resource-poor or challenging orthodoxy, who bear the direct costs of replication and the risk of professional failure. The system extracts resources and potential innovations from the latter to subsidize the epistemic security of the former.",
+    "mandatrophy_analysis": "Classifying this process as a Tangled Rope is crucial. A Rope classification would ignore the severe, asymmetric costs borne by a generation of researchers. A Snare classification would deny its absolutely essential function in creating reliable, cumulative knowledge. The Tangled Rope designation correctly captures this duality: it is a system of coordination that is structurally coupled with a powerful mechanism of extraction and exclusion."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_publishing_model",
+      "university_tenure_system"
+    ]
+  }
+}

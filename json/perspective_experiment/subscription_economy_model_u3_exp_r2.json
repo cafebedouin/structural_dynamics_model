@@ -1,0 +1,121 @@
+{
+  "header": {
+    "constraint_id": "subscription_economy_model_u3_exp_r2",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_subscription_economy_model_u3_exp_r2"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Subscription Economy Model",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "subscription_based_corporations"
+    ],
+    "victims": [
+      "individual_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-in User",
+      "comment": "From the consumer's perspective, the inability to own software and the friction of cancellation creates a trap where they perpetually pay for access, with high effective extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Recurring Revenue Platform",
+      "comment": "From the corporation's view, this is a superior coordination mechanism for managing revenue, development cycles, and customer relationships, with extraction being a feature, not a bug."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Platform Economy Analyst",
+      "comment": "The analytical view recognizes both the genuine coordination function (continuous updates, service delivery) and the highly asymmetric extraction enabled by suppressing ownership models."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consumer_value_vs_inertia",
+      "question": "Is the recurring revenue primarily justified by continuous value delivery (updates, services) or is it a capture of consumer inertia and cancellation friction?",
+      "resolution_mechanism": "Comparative analysis of user engagement with new features vs. churn rates when cancellation processes are simplified ('one-click cancel' laws).",
+      "impact": "If primarily value-driven, the extractiveness score would decrease, potentially shifting the classification toward Rope. If inertia-driven, it confirms the high suppression and Snare-like nature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between value delivery and inertia capture in subscription models."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 2010,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the widespread business model shift from one-time product sales (perpetual licenses) to recurring subscription fees. While offering a coordination benefit (continuous updates, service access), it asymmetrically extracts value by creating consumer inertia, making cancellation difficult (a 'hassle tax'), and revoking ownership rights. The model is actively enforced by DRM and the suppression of non-subscription alternatives.",
+    "key_agents": [
+      "Individual Consumers: Primary target (powerless/trapped) \u2014 bear the costs of subscription fatigue, loss of ownership, and cancellation friction.",
+      "Subscription-based Corporations: Primary beneficiary (institutional/arbitrage) \u2014 benefit from predictable recurring revenue and increased customer lifetime value.",
+      "Regulators: Secondary actor (institutional/constrained) \u2014 attempt to mitigate the most extractive elements (e.g., cancellation laws) but operate within the established paradigm."
+    ],
+    "logic_rationale": "The high extractiveness (0.68) reflects the conversion of a one-time capital expense into a perpetual operational expense for the consumer, capturing far more value over the product lifecycle. The high suppression (0.72) reflects the deliberate phasing out of perpetual license models in major markets (e.g., creative software, office suites), leaving consumers with no viable alternative.",
+    "perspectival_gap": "The gap is stark: corporations see a Rope that smooths revenue and aligns developer incentives with ongoing service. Consumers experience a Snare where they are trapped in a cycle of payments for tools they once could own, with the total cost of 'access' far exceeding the old cost of ownership.",
+    "directionality_logic": "The directionality is unambiguous. Value flows from a broad base of individual consumers (victims) to a concentrated set of corporate platform owners (beneficiaries). The structure is designed to maximize this flow through recurring billing and high exit costs (both financial and in terms of workflow disruption).",
+    "mandatrophy_analysis": "Classifying this as a pure Snare would miss the genuine coordination function it provides (e.g., cloud services, security updates). Classifying it as a Rope would ignore the coercive and highly extractive nature of eliminating ownership. The Tangled Rope classification is therefore essential, as it correctly identifies the hybrid nature of a system that provides a service while simultaneously locking in and extracting from its user base."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "right_to_repair",
+      "consumer_debt_burden"
+    ]
+  }
+}

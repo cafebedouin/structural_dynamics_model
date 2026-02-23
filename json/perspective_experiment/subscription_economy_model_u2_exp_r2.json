@@ -1,0 +1,121 @@
+{
+  "header": {
+    "constraint_id": "subscription_economy_model_u2_exp_r2",
+    "version": "1.0",
+    "generated_date": "2023-10-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_subscription_economy_model_u2_exp_r2"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Subscription Economy Model",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "subscription_corporations"
+    ],
+    "victims": [
+      "individual_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Locked-in Consumer",
+      "comment": "From the consumer's view, the loss of ownership, subscription fatigue, and high friction for cancellation make this a coercive, extractive system with no viable alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The SaaS Provider",
+      "comment": "From the corporation's perspective, this is a superior coordination model for aligning revenue with ongoing development and service costs, creating predictable cash flow."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Systems Analyst",
+      "comment": "The analytical view recognizes both the genuine coordination function (continuous service) and the highly asymmetric extraction enabled by suppressing ownership and creating inertia."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "value_vs_inertia",
+      "question": "Is the recurring revenue primarily justified by continuous value delivery (updates, service) or by exploiting consumer inertia and cancellation friction?",
+      "resolution_mechanism": "Analysis of churn rates correlated with cancellation process complexity and the availability of perpetual alternatives.",
+      "impact": "If primarily value-driven, the classification leans towards Rope. If primarily inertia-driven, it solidifies as a Snare from most non-beneficiary perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether revenue stems from continuous value or from exploiting consumer inertia."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 2005,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the widespread business model shift from one-time product sales (perpetual licenses) to recurring subscription fees. While offering a coordination benefit (continuous updates, service access), it asymmetrically extracts value by creating consumer inertia, making cancellation difficult (a 'hassle tax'), and revoking ownership rights. The model is actively enforced by Digital Rights Management (DRM) and the strategic suppression of non-subscription alternatives.",
+    "key_agents": [
+      "Individual Consumers: Primary target (powerless/trapped) \u2014 bear the costs of subscription fatigue, loss of ownership, and cancellation friction.",
+      "Subscription-based Corporations: Primary beneficiary (institutional/arbitrage) \u2014 benefit from predictable recurring revenue and increased customer lifetime value.",
+      "Regulators: Secondary actor (institutional/constrained) \u2014 struggle to apply ownership and consumer protection laws to a service-based model."
+    ],
+    "logic_rationale": "The high extractiveness (0.68) reflects the conversion of a finite capital expense into a potentially infinite operational expense for the consumer, coupled with the loss of the asset itself. The high suppression (0.72) is due to the active removal of perpetual license options from the market, the use of DRM to prevent offline use, and the deliberate design of high-friction cancellation processes.",
+    "perspectival_gap": "The gap is stark: corporations view the model as a Rope, a fair exchange of recurring payment for recurring service. Consumers experience it as a Snare, where they are trapped in endless payments for tools they used to own, with exit made costly and difficult. The analytical view must be Tangled Rope to capture both realities.",
+    "directionality_logic": "The directionality is clear. Value flows from a broad base of individual consumers (victims) to a concentrated set of corporations (beneficiaries). The structure is designed to maximize this flow by increasing the cost and difficulty of opting out.",
+    "mandatrophy_analysis": "The Tangled Rope classification is critical here. A simple Snare classification would miss the genuine coordination function that makes the model attractive in the first place (e.g., cloud software always being up-to-date). A Rope classification would ignore the immense, non-consensual extraction. Tangled Rope correctly identifies the structure as a coordination mechanism that has been weaponized for asymmetric extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "right_to_repair",
+      "digital_ownership_rights"
+    ]
+  }
+}

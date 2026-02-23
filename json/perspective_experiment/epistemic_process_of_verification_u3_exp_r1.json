@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u3_exp_r1",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u3_exp_r1"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_establishment",
+      "funding_agencies",
+      "journal_publishers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "proponents_of_novel_claims",
+      "underfunded_labs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Proponent of a Novel Claim",
+      "comment": "From the perspective of a researcher with a groundbreaking but difficult-to-replicate finding, the process is a high-risk gauntlet that can end a career. The costs of verification are fully borne by them, while the system offers little support, appearing as a Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Funding Agency Director",
+      "comment": "From the institutional view, this process is an essential Rope that coordinates the entire scientific enterprise, ensuring that only reliable, vetted claims become canon. The extraction is viewed as a necessary cost for maintaining epistemic quality and stability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Established Principal Investigator",
+      "comment": "An established lab head experiences the constraint as a Tangled Rope. They benefit from the stability and prestige it confers, but are also subject to its high costs and slow pace, making them both a beneficiary and a constrained participant."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical view recognizes the dual function: an indispensable coordination mechanism for building reliable knowledge, coupled with a significant, asymmetrically-applied extractive process that filters innovators based on resource availability and conformity, not just correctness."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_cost_origin",
+      "question": "Is the high cost and slow pace of verification an irreducible property of probing complex reality, or an artifact of institutional incentives and risk aversion?",
+      "resolution_mechanism": "Comparative analysis of verification velocity and success rates in fields with different funding models and institutional structures (e.g., centralized pharmaceutical research vs. decentralized open-source software development).",
+      "impact": "If the cost is found to be an irreducible feature of nature, the constraint would be re-classified closer to a Mountain. If it is primarily an artifact of institutional structure, its Snare-like properties are confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between irreducible natural difficulty and contingent institutional friction in the scientific verification process."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 1850,
+    "end": 2050
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the standard scientific method of requiring independent replication and corroboration before a novel claim is accepted. While this process is fundamental to coordinating the scientific community towards a shared, reliable understanding of reality, it imposes significant costs in time, resources, and career risk, which are not borne equally by all participants.",
+    "key_agents": [
+      "Proponents of Novel Claims (early-career, underfunded): Primary targets of extraction (powerless/trapped).",
+      "Scientific Establishment (funding agencies, journals, tenured committees): Primary beneficiaries and enforcers (institutional/arbitrage).",
+      "Established Research Labs: Participants who both benefit from and are constrained by the system (powerful/constrained)."
+    ],
+    "logic_rationale": "The base extractiveness of 0.55 reflects the immense cost (in funding, time, and career opportunity) required to push a novel claim through the verification process. The suppression score of 0.65 reflects the powerful filtering function of peer review and funding bodies, which actively reject claims that have not met this standard. The process requires active enforcement through these institutional mechanisms.",
+    "perspectival_gap": "A significant gap exists between the institutional beneficiary, who sees a necessary Rope for quality control, and the individual innovator, who experiences a career-threatening Snare. The former externalizes the cost of verification, while the latter internalizes it completely. This gap is the core tension of the Tangled Rope.",
+    "directionality_logic": "The flow of value is from individual innovators (who provide novel claims and labor) towards the established institutions (which gain stability, prestige, and control over the canon of accepted knowledge). Beneficiaries are those who manage the process, while victims are those who must subject themselves to it with limited resources.",
+    "mandatrophy_analysis": "Classifying this process as a pure Rope would be a form of mandatrophy, ignoring the severe and asymmetric costs it imposes. Conversely, classifying it as a pure Snare would ignore its undeniably critical function in creating robust, collective knowledge. The Tangled Rope classification correctly identifies that the coordination function is real, but it is achieved via a highly extractive and suppressive mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_peer_review",
+      "research_funding_allocation"
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "header": {
+    "constraint_id": "26usc469_real_estate_exemption_u2_exp_r4",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_26usc469_real_estate_exemption_u2_exp_r4"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.8,
+    "theater_ratio": 0.15,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Real Estate Professional Exemption (Passive Activity Loss Rules)",
+    "topic_domain": "economic/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "full_time_real_estate_professionals"
+    ],
+    "victims": [
+      "hybrid_w2_investors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Hybrid W-2 Investor",
+      "comment": "PERSPECTIVE 1: For an individual with a demanding primary career, the 'more than half of personal services' test is an almost insurmountable barrier, trapping their passive losses."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Full-Time Professional",
+      "comment": "PERSPECTIVE 2: For someone whose primary business is real estate, the rule is a clear coordination mechanism that defines their professional status and unlocks significant tax advantages."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Enforcing Institution (IRS)",
+      "comment": "PERSPECTIVE 3: The IRS administers a rule that both coordinates a definition of 'professional' and enforces an extractive barrier against another class of taxpayers. It cannot change the rule, only enforce it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Tax Policy Analyst",
+      "comment": "PERSPECTIVE 4: The analyst sees the dual function: a legitimate policy goal (coordination) to separate active/passive investors, implemented via a mechanism that creates severe asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "policy_intent_vs_outcome",
+      "question": "Was the high barrier for W-2 earners an intended feature to limit the deduction's scope, or an unintended consequence of a bright-line test?",
+      "resolution_mechanism": "Analysis of legislative history and Congressional Budget Office scoring documents from the Tax Reform Act of 1986.",
+      "impact": "If intended to gatekeep, it's a pure Snare by design. If an unintended side effect of a simple rule, it's a Tangled Rope where the coordination function failed for a specific subgroup.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between intended policy targeting and unintended consequences of the 750-hour and 'more-than-half' rules."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 1986,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "Section 469 of the US tax code disallows the deduction of passive activity losses against active income. The (c)(7) exemption for 'real estate professionals' provides a workaround, but only for those who meet a strict two-part test: performing over 750 hours in real property trades AND having this constitute more than half of their total personal services. This second prong creates a nearly impossible barrier for individuals with high-income W-2 jobs, bifurcating taxpayers into a beneficiary class that can deduct losses and a victim class that cannot.",
+    "key_agents": [
+      "Hybrid W-2 Investors: Primary target (powerless/trapped) \u2014 their passive losses are disallowed, creating a higher tax burden.",
+      "Full-Time Real Estate Professionals: Primary beneficiary (moderate/mobile) \u2014 they can easily meet the test and deduct unlimited passive losses.",
+      "The IRS: Enforcing institution (institutional/constrained) \u2014 administers the rule as written by Congress."
+    ],
+    "logic_rationale": "The high extractiveness (0.68) reflects the direct financial cost of disallowed deductions, which can be tens of thousands of dollars annually. The high suppression (0.80) reflects the extreme cost of the primary alternative for a W-2 earner: quitting their primary career to satisfy the 'more than half' services test.",
+    "perspectival_gap": "The gap is stark. For the full-time professional, it's a Rope\u2014a clear, beneficial rule. For the W-2 investor, it's a Snare\u2014a tax trap with no reasonable exit. The analytical view acknowledges both functions, classifying it as a Tangled Rope where a coordination goal is achieved through an extractive mechanism.",
+    "directionality_logic": "The constraint directs tax benefits specifically to the class of 'full-time real estate professionals' while extracting value (in the form of higher taxes via disallowed losses) from 'hybrid W-2 investors'. The structure creates a protected class and a targeted class.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by being correctly classified as a Tangled Rope. A simplistic analysis might label it a Snare, ignoring its stated coordination purpose of preventing passive tax shelters. Conversely, labeling it a Rope would ignore the severe, asymmetric extraction imposed on a specific group. The Tangled Rope classification captures this essential duality."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  }
+}

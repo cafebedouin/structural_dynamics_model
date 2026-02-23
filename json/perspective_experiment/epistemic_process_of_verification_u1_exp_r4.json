@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u1_exp_r4",
+    "version": "1.0",
+    "generated_date": "2024-05-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u1_exp_r4"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.55,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_community",
+      "established_researchers",
+      "funding_agencies_and_publishers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "researchers_with_novel_claims"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Novel Claimant",
+      "comment": "From the perspective of a researcher with a new, unverified claim, the process is a high-stakes gauntlet that extracts immense resources (time, funding, reputation) with no guarantee of success. Exiting the process means abandoning the claim's entry into scientific canon."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journal Editor / Funding Body",
+      "comment": "For the institutions that act as gatekeepers, the process is a pure coordination mechanism. It filters noise, ensures quality, and maintains the integrity of the field. The costs are externalized to the claimants, making the effective extraction for the institution negative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Epistemological Observer",
+      "comment": "The analytical view recognizes the dual function. The process is a Tangled Rope: it provides an essential coordination function for the entire scientific enterprise, but this function is achieved via an asymmetric extraction of resources from a specific class of agents (innovators)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Established Research Community",
+      "comment": "For the community of established scientists, the process is a Rope that maintains the value of their own verified work and ensures a common ground of reliable facts to build upon. They both enforce and benefit from the standard."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_efficiency",
+      "question": "Is the high cost of verification an irreducible feature of discovering truth about a complex reality, or is it an artifact of inefficient and politicized human institutions (journals, universities)?",
+      "resolution_mechanism": "Comparative analysis of verification costs and timescales across different fields and historical periods, and the development of novel, lower-cost verification methods (e.g., AI-driven experiment replication).",
+      "impact": "If the cost is irreducible, the constraint is fundamentally a Rope with a high but necessary cost. If it is largely institutional, the extractive Snare-like component is larger and potentially reformable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the high cost of verification is a necessary epistemic burden or an unnecessary institutional one."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the scientific method's requirement for independent replication before a novel claim is accepted. This process coordinates the scientific community towards a shared, reliable understanding of reality. However, it imposes significant costs (time, funding, career risk) on the researchers proposing novel claims, creating a system with both a vital coordination function and a potent, asymmetric extractive component.",
+    "key_agents": [
+      "Researchers with novel claims: Primary targets of the process (powerless/trapped).",
+      "Early-career researchers: A subset of targets who are particularly vulnerable to the costs of verification.",
+      "Scientific institutions (journals, funding bodies): Beneficiaries and enforcers of the process (institutional/arbitrage).",
+      "The established scientific community: Beneficiaries who rely on the shared standard (organized/mobile)."
+    ],
+    "logic_rationale": "The extractiveness score of 0.48 reflects the significant, non-trivial cost in resources and career risk required to pass a claim through the verification gauntlet. The suppression score of 0.55 reflects the process's core function: to actively filter and reject uncorroborated claims, thus suppressing alternatives to the established body of knowledge until they meet a high burden of proof.",
+    "perspectival_gap": "A significant gap exists between the innovator who experiences the process as a costly, high-risk Snare, and the institution that wields it as a zero-cost (to them) Rope for quality control. The analytical classification of Tangled Rope is necessary to capture this dual-nature, where the coordination for the whole is paid for by a specific part.",
+    "directionality_logic": "The direction of extraction is from the individual innovator towards the collective. The innovator (victim) invests their resources and reputation. The community (beneficiary) receives the benefit of a vetted, reliable new piece of knowledge, increasing the value and stability of the entire field. Institutions benefit by building prestige on the reliability this process creates.",
+    "mandatrophy_analysis": "Classifying this process as a pure Rope would be a form of mandatrophy, ignoring the severe, asymmetric costs borne by innovators. Conversely, classifying it as a pure Snare would ignore its absolutely essential function in creating reliable, cumulative knowledge. The Tangled Rope classification correctly identifies that a socially vital coordination function is being powered by a highly extractive mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_publishing_models",
+      "scientific_funding_allocation"
+    ]
+  }
+}

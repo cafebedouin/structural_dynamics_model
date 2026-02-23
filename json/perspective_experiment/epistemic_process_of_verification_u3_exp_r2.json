@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u3_exp_r2",
+    "version": "1.0",
+    "generated_date": "2024-07-16",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u3_exp_r2"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.65,
+    "theater_ratio": 0.25,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_community",
+      "funding_agencies",
+      "society_at_large"
+    ],
+    "victims": [
+      "novel_claim_proposers",
+      "paradigm_challengers",
+      "underfunded_researchers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Paradigm Challenger",
+      "comment": "From the perspective of a researcher with a novel, hard-to-replicate, or paradigm-shifting claim, the process is a Snare. It extracts immense resources (time, funding, reputation) and is enforced by an incumbent system that is structurally resistant to their claims. Exit is not an option if they wish to remain in the scientific community."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Funding Agency",
+      "comment": "For an institutional body allocating capital, the verification process is a pure Rope. It is a low-overhead coordination mechanism to ensure that resources are directed towards reliable, cumulative knowledge, maximizing long-term return on investment and maintaining the integrity of the scientific enterprise."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Epistemic Observer",
+      "comment": "The analytical view recognizes the dual nature of the constraint. It is a Tangled Rope because its essential coordination function (Rope) is structurally coupled with asymmetric extraction (Snare) from innovators and those outside the established consensus. The system's stability is predicated on this extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Replicating Researcher",
+      "comment": "For a standard researcher working within the paradigm, the process acts as a Scaffold. It provides a structured pathway for career progression and contribution by verifying the work of others. It is a temporary support structure used to build the larger edifice of science, which they are a part of."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_bias_vs_filter",
+      "question": "Is the high burden of proof on paradigm-challengers a necessary filter for quality, or a biased defense mechanism of the incumbent paradigm?",
+      "resolution_mechanism": "Comparative historical analysis of the reception of ultimately successful vs. unsuccessful paradigm-shifting theories, controlling for experimental tractability.",
+      "impact": "If primarily a necessary filter, the constraint is closer to a harsh Rope. If primarily a biased defense, it is closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing necessary epistemic rigor from incumbent paradigm defense."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the scientific method's requirement for independent replication before a claim is accepted. While this process coordinates the community towards a shared, reliable understanding of reality (a coordination function), it also imposes a significant, asymmetric burden of proof on individuals proposing novel, controversial, or difficult-to-replicate findings (an extraction function).",
+    "key_agents": [
+      "Novel Claim Proposers / Paradigm Challengers: Primary targets (powerless/trapped) who bear the cost of verification.",
+      "Scientific Community / Funding Agencies: Primary beneficiaries (institutional/arbitrage) who gain a reliable knowledge base.",
+      "Standard Researchers: Participants (moderate/constrained) who use the process for career progression and validation."
+    ],
+    "logic_rationale": "The extractiveness of 0.48 reflects the immense cost in career capital, time, and resources demanded from innovators to overcome institutional inertia. The suppression of 0.65 is high because the explicit function of the process is to filter and suppress unverified claims from entering the canon, which is necessary for its coordination function to work.",
+    "perspectival_gap": "A significant gap exists between the Funding Agency, which sees a pure coordination Rope for efficient capital allocation, and the Paradigm Challenger, who experiences a career-threatening Snare. The analytical Tangled Rope classification captures the reality that the coordination is achieved *through* this asymmetric extraction.",
+    "directionality_logic": "The constraint directs the benefits of epistemic certainty to the collective (the community, funders, society) while concentrating the costs of generating that certainty onto a small group of innovators and outsiders. The victims are those who must pay the high entry price to have their knowledge accepted, while the beneficiaries are those who consume the resulting validated knowledge.",
+    "mandatrophy_analysis": "Classifying this process as a Tangled Rope is crucial. A pure Rope classification would ignore the clear victims and the coercive power of peer review and funding denial. A pure Snare classification would fail to recognize the indispensable coordination function that produces reliable scientific knowledge. The Tangled Rope correctly identifies that the valuable coordination is structurally inseparable from the asymmetric extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_trust_in_science",
+      "technological_development_cycles",
+      "pharmaceutical_approval_process"
+    ]
+  }
+}

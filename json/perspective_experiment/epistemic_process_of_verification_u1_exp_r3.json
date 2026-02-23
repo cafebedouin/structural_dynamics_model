@@ -1,0 +1,91 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u1_exp_r3",
+    "version": "1.0",
+    "generated_date": "2023-10-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u1_exp_r3"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.75,
+    "theater_ratio": 0.15,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_institutions",
+      "the_scientific_community_at_large",
+      "downstream_technology_users"
+    ],
+    "victims": [
+      "proposers_of_unreplicable_claims",
+      "resource_constrained_innovators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Novel Claimant",
+      "comment": "For a researcher with a novel, hard-to-replicate finding, the process is a high-stakes gauntlet that can end a career. They are trapped, as there is no other path to acceptance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journal Editor / Funding Body",
+      "comment": "For institutions that curate scientific knowledge, this is a pure coordination mechanism to ensure quality control and maintain the integrity of the scientific record. The costs are externalized to the researchers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Competing Laboratory",
+      "comment": "For a peer lab, the process is both a coordinating standard for competition and a potential weapon. The ability to confirm or fail to replicate a competitor's result is a source of power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Historian of Science",
+      "comment": "The analytical view sees both the essential coordination function that builds reliable knowledge and the asymmetric extraction of time, resources, and reputation from individual claimants, filtering out both error and premature discovery."
+    }
+  ],
+  "interval": {
+    "start": 1660,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the scientific method's requirement for independent replication before a novel claim is accepted. While essential for coordinating the scientific community towards a reliable, shared understanding of reality, it also functions as a powerful and costly filter. It imposes significant burdens on the originators of new claims, and its enforcement by established institutions creates an asymmetric power dynamic.",
+    "key_agents": [
+      "Originating Lab/Scientist: The primary target of the constraint, who must bear the costs of verification (powerless/trapped).",
+      "Scientific Institutions (Journals, Funding Bodies): The primary beneficiaries and enforcers, who maintain the integrity of the scientific record (institutional/arbitrage).",
+      "The Scientific Community at Large: A distributed beneficiary that receives a more reliable knowledge base.",
+      "Proposers of Unreplicable Claims: The primary victims, whose work is filtered out by the process."
+    ],
+    "logic_rationale": "The base extractiveness (\u03b5=0.38) reflects the significant, non-reciprocal cost in time, resources, and career risk imposed on the claimant for the benefit of the entire community. Suppression (0.75) is high because, within mainstream science, there is no viable alternative to independent verification; one cannot simply opt out. The low theater ratio (0.15) indicates the process is highly functional, despite occasional performative elements.",
+    "perspectival_gap": "The gap is stark: the institution sees a pure coordination Rope, essential for its function. The individual claimant, facing immense pressure and career risk, experiences it as a Snare. The analytical observer recognizes the dual nature of the system, classifying it as a Tangled Rope where a vital coordination function is intertwined with coercive, extractive elements.",
+    "directionality_logic": "Directionality is derived from the flow of costs and benefits. The scientific community and its institutions are the beneficiaries, gaining a high-integrity knowledge commons. The victims are the individual innovators who bear the direct costs of the verification process, and especially those whose claims are rejected, regardless of the reason (error, fraud, or simply being too far ahead of the curve for contemporary methods to replicate).",
+    "mandatrophy_analysis": "This constraint is a canonical example of a Tangled Rope that is often mis-claimed as a pure Rope. The narrative of 'science's self-correcting nature' obscures the coercive and extractive burden placed on individuals. By identifying the victims and the high suppression, the Tangled Rope classification prevents the mandatrophy of mislabeling a costly, high-stakes filtering mechanism as a purely benign coordination protocol."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_peer_review",
+      "scientific_funding_models"
+    ]
+  }
+}

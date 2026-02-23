@@ -1,0 +1,205 @@
+{
+  "timestamp": "2026-02-22T19:28:41.803413",
+  "config": {
+    "constraints": [
+      "academic_peer_review_gatekeeping",
+      "subscription_economy_model",
+      "26usc469_real_estate_exemption",
+      "antifragility",
+      "epistemic_process_of_verification"
+    ],
+    "perspectives": [
+      "u3"
+    ],
+    "framing": "structural",
+    "runs": 2,
+    "model": "gemini-2.5-pro",
+    "temperature": 0.2
+  },
+  "summary": {
+    "total_generations": 10,
+    "successful": 10,
+    "failed": 0,
+    "lint_failures": 3,
+    "pipeline_status": "success",
+    "reports_generated": 10,
+    "total_tokens_in": 175642,
+    "total_tokens_out": 22113,
+    "total_duration_s": 496.3
+  },
+  "lint_stats": {
+    "u3_str": {
+      "total": 10,
+      "passed": 7,
+      "failed": 3
+    }
+  },
+  "generations": [
+    {
+      "constraint_id": "academic_peer_review_gatekeeping",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 1,
+      "mangled_id": "academic_peer_review_gatekeeping_u3_str_r1",
+      "success": true,
+      "epsilon": 0.68,
+      "claimed_type": "tangled_rope",
+      "lint_passed": false,
+      "lint_errors": [
+        "GENERIC_GROUP: constraint_victim uses generic group 'general_public'. Use a domain-specific group name (e.g., 'payday_lenders' not 'stakeholders')."
+      ],
+      "error": "",
+      "tokens_in": 14604,
+      "tokens_out": 1871,
+      "duration_s": 36.8
+    },
+    {
+      "constraint_id": "academic_peer_review_gatekeeping",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 2,
+      "mangled_id": "academic_peer_review_gatekeeping_u3_str_r2",
+      "success": true,
+      "epsilon": 0.78,
+      "claimed_type": "tangled_rope",
+      "lint_passed": false,
+      "lint_errors": [
+        "UNRESOLVED_MANDATROPHY: Extraction 0.78 requires resolution hook."
+      ],
+      "error": "",
+      "tokens_in": 14604,
+      "tokens_out": 1902,
+      "duration_s": 32.6
+    },
+    {
+      "constraint_id": "subscription_economy_model",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 1,
+      "mangled_id": "subscription_economy_model_u3_str_r1",
+      "success": true,
+      "epsilon": 0.68,
+      "claimed_type": "tangled_rope",
+      "lint_passed": true,
+      "lint_errors": [],
+      "error": "",
+      "tokens_in": 14630,
+      "tokens_out": 1711,
+      "duration_s": 32.1
+    },
+    {
+      "constraint_id": "subscription_economy_model",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 2,
+      "mangled_id": "subscription_economy_model_u3_str_r2",
+      "success": true,
+      "epsilon": 0.68,
+      "claimed_type": "tangled_rope",
+      "lint_passed": true,
+      "lint_errors": [],
+      "error": "",
+      "tokens_in": 14630,
+      "tokens_out": 1713,
+      "duration_s": 33.4
+    },
+    {
+      "constraint_id": "26usc469_real_estate_exemption",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 1,
+      "mangled_id": "26usc469_real_estate_exemption_u3_str_r1",
+      "success": true,
+      "epsilon": 0.68,
+      "claimed_type": "tangled_rope",
+      "lint_passed": true,
+      "lint_errors": [],
+      "error": "",
+      "tokens_in": 29424,
+      "tokens_out": 3734,
+      "duration_s": 74.4
+    },
+    {
+      "constraint_id": "26usc469_real_estate_exemption",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 2,
+      "mangled_id": "26usc469_real_estate_exemption_u3_str_r2",
+      "success": true,
+      "epsilon": 0.68,
+      "claimed_type": "tangled_rope",
+      "lint_passed": true,
+      "lint_errors": [],
+      "error": "",
+      "tokens_in": 29424,
+      "tokens_out": 3807,
+      "duration_s": 74.4
+    },
+    {
+      "constraint_id": "antifragility",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 1,
+      "mangled_id": "antifragility_u3_str_r1",
+      "success": true,
+      "epsilon": 0.75,
+      "claimed_type": "tangled_rope",
+      "lint_passed": true,
+      "lint_errors": [],
+      "error": "",
+      "tokens_in": 14557,
+      "tokens_out": 1872,
+      "duration_s": 38.9
+    },
+    {
+      "constraint_id": "antifragility",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 2,
+      "mangled_id": "antifragility_u3_str_r2",
+      "success": true,
+      "epsilon": 0.75,
+      "claimed_type": "tangled_rope",
+      "lint_passed": true,
+      "lint_errors": [],
+      "error": "",
+      "tokens_in": 14557,
+      "tokens_out": 1762,
+      "duration_s": 37.5
+    },
+    {
+      "constraint_id": "epistemic_process_of_verification",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 1,
+      "mangled_id": "epistemic_process_of_verification_u3_str_r1",
+      "success": true,
+      "epsilon": 0.55,
+      "claimed_type": "tangled_rope",
+      "lint_passed": true,
+      "lint_errors": [],
+      "error": "",
+      "tokens_in": 14606,
+      "tokens_out": 1857,
+      "duration_s": 37.9
+    },
+    {
+      "constraint_id": "epistemic_process_of_verification",
+      "perspective": "u3",
+      "framing": "structural",
+      "run": 2,
+      "mangled_id": "epistemic_process_of_verification_u3_str_r2",
+      "success": true,
+      "epsilon": 0.55,
+      "claimed_type": "tangled_rope",
+      "lint_passed": false,
+      "lint_errors": [
+        "MISSING_SUNSET_CLAUSE: Scaffold with requires_active_enforcement needs narrative_ontology:has_sunset_clause/1."
+      ],
+      "error": "",
+      "tokens_in": 14606,
+      "tokens_out": 1884,
+      "duration_s": 39.4
+    }
+  ]
+}

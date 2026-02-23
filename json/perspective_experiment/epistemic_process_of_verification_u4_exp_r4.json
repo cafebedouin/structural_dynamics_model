@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u4_exp_r4",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u4_exp_r4"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_labs",
+      "scientific_publishers",
+      "scientific_community_long_term"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "labs_with_novel_claims"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early-Career Researcher",
+      "comment": "For a junior scientist whose career depends on publishing novel results quickly, the slow, expensive, and skeptical verification process acts as a high-stakes filter that can end their career. The costs are immediate and personal, while the benefits are diffuse and generational."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Lab Director",
+      "comment": "From the perspective of a well-funded, tenured lab leader, the verification process is a crucial coordination mechanism that maintains the integrity and reliability of their field. They have the resources to act as verifiers, reinforcing their own authority and benefiting from the stability the system provides."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Funding Agency",
+      "comment": "A funding body sees both sides. It relies on the verification process to ensure its investments lead to reliable knowledge (coordination), but is also acutely aware of the high costs, delays, and potential for the system to stifle truly disruptive innovation (extraction)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Historian of Science",
+      "comment": "The analytical view recognizes the essential coordination function of building a shared, reliable map of reality, while also seeing the clear, asymmetric extraction of resources, time, and career potential from new entrants to benefit established players and the system's long-term stability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_cost_necessity",
+      "question": "Are the high career and resource costs of verification an irreducible feature of epistemology, or a contingent artifact of current institutional incentives (e.g., 'publish or perish')?",
+      "resolution_mechanism": "Comparative analysis of alternative discovery/verification models, such as prize-based systems, registered reports, or decentralized science platforms, to measure if reliability can be maintained with lower extraction.",
+      "impact": "If the costs are irreducible, the constraint has Mountain-like features. If they are contingent, the extractive elements constitute a Snare that could be engineered away, leaving a purer Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the high cost of verification is a necessary price for truth or a contingent institutional artifact."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the standard scientific method of requiring independent replication and corroboration before a novel claim is accepted as fact. While this process is fundamental to coordinating the scientific community towards a shared, reliable understanding of reality, it imposes significant costs in terms of time, resources, and career risk, which are not borne equally by all participants.",
+    "key_agents": [
+      "Early-Career Researchers: Primary targets of extraction (powerless/trapped)",
+      "Labs with Novel/Difficult Claims: Secondary targets of extraction (moderate/constrained)",
+      "Established Labs & Tenured Faculty: Primary beneficiaries and enforcers (institutional/arbitrage)",
+      "Scientific Publishers & Funding Agencies: Institutional beneficiaries who also manage the system (institutional/constrained)"
+    ],
+    "logic_rationale": "The base extractiveness (\u03b5=0.55) reflects the substantial cost\u2014in funding, time, and career viability\u2014imposed on researchers attempting to validate novel claims. The high suppression (0.75) represents the lack of viable alternative paths to canonization within mainstream science; bypassing peer verification is institutionally impossible for most claims.",
+    "perspectival_gap": "A significant gap exists between the early-career researcher, who experiences the process as a career-threatening Snare, and the established lab director, who views it as a necessary Rope for maintaining quality control. The former is trapped by the need to publish to survive, while the latter has the security and resources to benefit from the system's stability and gatekeeping function.",
+    "directionality_logic": "The constraint extracts from those with the most novel information but the least institutional power (junior researchers). It benefits those with the most institutional power and resources, who are positioned to act as gatekeepers (verifiers). This creates a flow of value (in the form of validated claims) from the periphery to the core of the scientific establishment.",
+    "mandatrophy_analysis": "Classifying this process as a Tangled Rope correctly identifies its dual nature. It avoids the error of calling it a pure Snare (which would ignore its vital coordination function in producing reliable knowledge) and the error of calling it a pure Rope (which would ignore the severe, asymmetric costs it imposes on its most vulnerable participants). The analysis highlights that the coordination function is bundled with a powerful system of extraction and gatekeeping."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_peer_review",
+      "university_tenure_system"
+    ]
+  }
+}

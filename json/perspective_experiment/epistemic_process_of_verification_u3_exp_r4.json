@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification_u3_exp_r4",
+    "version": "1.0",
+    "generated_date": "2024-05-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_epistemic_process_of_verification_u3_exp_r4"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.15,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scientific_community_as_a_whole",
+      "national_funding_agencies",
+      "downstream_technology_sectors"
+    ],
+    "victims": [
+      "novel_claim_proposers",
+      "replicating_laboratories",
+      "early_career_researchers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early Career Researcher",
+      "comment": "For a researcher whose career depends on validating a novel claim, the process is a high-stakes gauntlet that can feel purely extractive and coercive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The National Funding Agency",
+      "comment": "From the perspective of an institution allocating capital, the verification process is a pure coordination mechanism to ensure resources flow to reliable knowledge, minimizing waste."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Established Principal Investigator",
+      "comment": "An established lab head recognizes the coordination benefit but is also acutely aware of the resource cost and reputational risk (extraction) of both proposing and replicating findings."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Historian of Science",
+      "comment": "The analytical view sees the essential coordination function (building reliable knowledge) and the inherent, asymmetric extraction (costs borne by individuals) as inseparable features of the same system."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_efficiency_vs_gatekeeping",
+      "question": "Is the high cost of verification an irreducible property of discovering truth, or is it inflated by social gatekeeping and risk aversion within the scientific establishment?",
+      "resolution_mechanism": "Comparative analysis of verification costs and timelines across different scientific fields and historical periods, correlated with funding models.",
+      "impact": "If the cost is irreducible, the constraint leans towards a Mountain of epistemology. If it is socially inflated, it is a classic Tangled Rope that could be reformed to be less extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between the necessary epistemic cost and socially constructed gatekeeping costs in scientific verification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 1975,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the scientific method's requirement for independent replication before a claim is accepted. This process coordinates the scientific community towards a shared, reliable understanding of reality, but it does so by extracting significant resources (time, funding, career opportunities) from the individuals and labs tasked with proposing and verifying novel claims. Its function is therefore inherently dual: coordination through extraction.",
+    "key_agents": [
+      "Early Career Researchers: Primary targets of extraction (powerless/trapped)",
+      "National Funding Agencies: Primary beneficiaries of coordination (institutional/arbitrage)",
+      "Established Principal Investigators: Enforcers and participants who experience both coordination and extraction (powerful/mobile)"
+    ],
+    "logic_rationale": "The base extractiveness (\u03b5=0.48) reflects the immense cost in labor, equipment, and career risk required to validate a significant scientific claim. The suppression score (0.62) represents the high bar for acceptance, which actively filters out unverified or erroneous claims, a core feature of the system. The process is actively enforced through peer review and funding allocation, justifying the Tangled Rope classification.",
+    "perspectival_gap": "The gap is stark. For a funding agency, the process is an efficient Rope for managing its portfolio of knowledge-capital. For an early-career researcher, it is a Snare where a single failure to replicate, regardless of cause, can be career-ending. The analytical view of Tangled Rope reconciles these by acknowledging that the Rope's coordination function is paid for by the Snare-like experience of its participants.",
+    "directionality_logic": "The system's directionality is from the individual to the collective. It extracts resources and career-risk from individual researchers (the 'victims') and transforms it into epistemic certainty for the benefit of the entire scientific field and its institutional funders (the 'beneficiaries').",
+    "mandatrophy_analysis": "Classifying this process as a pure Snare would be a mandatrophy error, as it ignores the irreplaceable coordination function of building consensus reality. Conversely, classifying it as a pure Rope ignores the brutal, asymmetric costs borne by junior scientists. The Tangled Rope classification is essential to see both functions simultaneously, allowing for analysis of how to make the process less extractive without compromising its coordinating purpose."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_trust_in_science",
+      "pharmaceutical_drug_approval_process"
+    ]
+  }
+}
