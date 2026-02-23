@@ -15,7 +15,7 @@
 **For canonical threshold values:** See [logic_thresholds.md](logic_thresholds.md)  
 **For Stages 7-9 (Boltzmann, Purity, Network):** See [logic_extensions.md](logic_extensions.md)
 
-**Implementation:** Prolog modules (drl_core.pl, structural_signatures.pl, drl_lifecycle.pl)  
+**Implementation:** Prolog modules (drl_core.pl, signature_detection.pl, drl_lifecycle.pl)  
 **Corpus:** 691 constraints across 35+ domains
 
 ---
@@ -158,9 +158,9 @@ Constraint-space is terrain you navigate with finite energy. From your position,
 - Examples: QWERTY keyboards, legacy systems
 - Action: Bypass
 
-**Naturalized**: Power-scaling ambiguity, investigate
-- High base extraction (Îµ > 0.45) but low power-scaled extraction (Ï‡ < 0.40)
-- Action: Investigate from multiple indices
+**Naturalized**: Power-scaling ambiguity, investigate_naturalization
+- High base extraction (ε > 0.45) but low power-scaled extraction (χ < 0.40)
+- Action: `investigate_naturalization` (distinct from generic fallback `investigate` for unknown type)
 
 Same constraint can be different types from different indices. Carbon credits: Rope (institutional) + Tangled (moderate) + Snare (powerless). All true.
 
@@ -486,18 +486,22 @@ Not all 6Ã—5Ã—5Ã—6 = 900 combinations are coherent. Some constraints:
 
 **Implementation:**
 
-The `valid_context/1` predicate in constraint_indexing.pl checks these constraints:
+The `valid_context/1` predicate in constraint_indexing.pl validates dimension values:
 ```prolog
 % constraint_indexing.pl
-valid_context(context(Power, TimeHorizon, Exit, Scope)) :-
-    member(Power, [powerless, moderate, powerful, organized, institutional, analytical]),
-    member(TimeHorizon, [immediate, biographical, generational, historical, civilizational]),
-    member(Exit, [trapped, constrained, mobile, arbitrage, analytical]),
-    member(Scope, [local, regional, national, continental, global, universal]),
-    % Coherence checks
-    \+ incoherent_power_exit(Power, Exit),
-    \+ incoherent_time_scope(TimeHorizon, Scope).
+valid_context(context(
+    agent_power(P),
+    time_horizon(T),
+    exit_options(E),
+    spatial_scope(S)
+)) :-
+    agent_power(P),
+    time_horizon(T),
+    exit_options(E),
+    spatial_scope(S).
 ```
+
+**Note:** Coherence checks (e.g., `incoherent_power_exit/2`, `incoherent_time_scope/2`) are not currently enforced. Any valid dimension combination is accepted. Context terms use tagged wrappers (`agent_power(P)`, etc.) rather than bare atoms.
 
 In practice, most real indices cluster around:
 - `(powerless/moderate, biographical, constrained, national)` â€” typical citizen
@@ -643,7 +647,7 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 
 **ðŸ“Œ STRUCTURAL GATE â€” Boltzmann Compliance for Natural Law:**
 
-> **Shadow Mode Reminder:** This gate runs AFTER metric-based classification in `classify_from_metrics/6`. It does not modify the core classification logicâ€”it operates in the signature override layer (`structural_signatures.pl`) and can demote a claimed Mountain to Constructed Constraint based on coupling topology.
+> **Shadow Mode Reminder:** This gate runs AFTER metric-based classification in `classify_from_metrics/6`. It does not modify the core classification logicâ€”it operates in the signature override layer (`signature_detection.pl`) and can demote a claimed Mountain to Constructed Constraint based on coupling topology.
 >
 > **Before a constraint is accepted as a Mountain (â–  signature), it must pass the Boltzmann Independence Test.** 
 >
@@ -664,11 +668,11 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 >
 > **Critical: FNL Detection is Signature Override, Not Audit.**
 >
-> When False Natural Law (FNL) is detected, it's not merely flagged for reviewâ€”it **overrides the metric-based classification**. A constraint that passes Mountain thresholds (Îµ â‰¤ 0.25, Supp â‰¤ 0.05) but fails Boltzmann compliance is **demoted** from "Universal Necessity" (Mountain) to "Asymmetric Construction" (Tangled Rope). This happens in structural_signatures.pl, which runs after drl_core.pl's metric classification.
+> When False Natural Law (FNL) is detected, it's not merely flagged for reviewâ€”it **overrides the metric-based classification**. A constraint that passes Mountain thresholds (Îµ â‰¤ 0.25, Supp â‰¤ 0.05) but fails Boltzmann compliance is **demoted** from "Universal Necessity" (Mountain) to "Asymmetric Construction" (Tangled Rope). This happens in signature_detection.pl, which runs after drl_core.pl's metric classification.
 >
 > **Note: Boltzmann compliance is necessary but not sufficient for Natural Law (NL) signature.** A constraint can factorize perfectly and still not be naturalâ€”it could be a well-designed coordination standard (CS). The full NL signature requires: Boltzmann compliance AND no viable alternatives AND zero beneficiaries AND temporal stability. See logic_extensions.md Â§1.2 for complete NL signature requirements.
 >
-> **Shadow Mode Reminder:** These gates do NOT modify `classify_from_metrics/6` (the canonical predicate in drl_core.pl). They operate in the signature override layer (structural_signatures.pl) which runs afterward. The core classification logic remains unchanged; signatures can only enhance or override, not replace.
+> **Shadow Mode Reminder:** These gates do NOT modify `classify_from_metrics/6` (the canonical predicate in drl_core.pl). They operate in the signature override layer (signature_detection.pl) which runs afterward. The core classification logic remains unchanged; signatures can only enhance or override, not replace.
 >
 > **Example of Boltzmann failure:**
 > ```
@@ -696,7 +700,7 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 > - logic_extensions.md Â§1.4: False Natural Law (FNL) Detection
 > - logic_extensions.md Â§1.7: Nonsensical Coupling
 >
-> **Implementation:** structural_signatures.pl, `boltzmann_compliant/2`, `false_natural_law/2`
+> **Implementation:** signature_detection.pl + boltzmann_compliance.pl, `boltzmann_compliant/2`, `false_natural_law/2`
 
 ---
 
@@ -957,7 +961,7 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 
 **ðŸ“Œ STRUCTURAL GATE â€” Coupling-Invariant Rope Certification:**
 
-> **Shadow Mode Reminder:** CI_Rope certification runs AFTER metric-based classification. A constraint classified as Rope by `classify_from_metrics/6` can be promoted to CI_Rope (certified coordination) if it passes all four Boltzmann invariance tests. This certification operates in `structural_signatures.pl`.
+> **Shadow Mode Reminder:** CI_Rope certification runs AFTER metric-based classification. A constraint classified as Rope by `classify_from_metrics/6` can be promoted to CI_Rope (certified coordination) if it passes all four Boltzmann invariance tests. This certification operates in `signature_detection.pl`.
 >
 > **A Rope can be certified as a CI_Rope (Coupling-Invariant Rope) if it maintains high structural purity (â‰¥ 0.7) and shows no nonsensical coupling.**
 >
@@ -1071,7 +1075,7 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 > - logic_extensions.md Â§1.6: False CI_Rope (FCR) Detection
 > - logic_extensions.md Â§2.3: Purity Scoring (structural health measurement)
 >
-> **Implementation:** structural_signatures.pl, `coupling_invariant_rope/2`, `false_ci_rope/2`
+> **Implementation:** signature_detection.pl, `coupling_invariant_rope/2`, `false_ci_rope/2`
 
 ---
 
@@ -1352,7 +1356,7 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 
 **ðŸ“Œ STRUCTURAL GATE â€” Nonsensical Coupling as Extraction Evidence:**
 
-> **Shadow Mode Reminder:** Nonsensical coupling detection runs AFTER metric-based classification. A constraint classified as Snare by `classify_from_metrics/6` can have this classification confirmed (or a Mountain/Rope can be demoted to Tangled Rope) if nonsensical coupling is detected. This operates in `structural_signatures.pl`.
+> **Shadow Mode Reminder:** Nonsensical coupling detection runs AFTER metric-based classification. A constraint classified as Snare by `classify_from_metrics/6` can have this classification confirmed (or a Mountain/Rope can be demoted to Tangled Rope) if nonsensical coupling is detected. This operates in `signature_detection.pl`.
 >
 > **Extraction is often hidden.** If a constraint fails the Boltzmann Factorization test (coupling score > 0.25), it couples independent dimensions in ways that natural laws cannotâ€”this is mathematical evidence of construction, even if it mimics a natural law or claims symmetric benefits.
 >
@@ -1452,7 +1456,7 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 > - logic_extensions.md Â§1.4: False Natural Law (FNL) â€” physics-washed Snares
 > - logic_extensions.md Â§1.6: False CI_Rope (FCR) â€” coordination-washed Snares
 >
-> **Implementation:** structural_signatures.pl, `detect_nonsensical_coupling/3`, `false_natural_law/2`
+> **Implementation:** boltzmann_compliance.pl + signature_detection.pl, `detect_nonsensical_coupling/3`, `false_natural_law/2`
 
 ---
 
@@ -2035,7 +2039,7 @@ Naturalized constraints participate in purity contamination propagation with spe
 
 ##### Action Implication
 
-**Investigate** â†' The power-scaling naturalization itself is the primary finding.
+**`investigate_naturalization`** → The power-scaling naturalization itself is the primary finding.
 
 When facing a Naturalized constraint:
 - Investigate why power scaling is doing so much work
@@ -2109,7 +2113,7 @@ Reclassification: Tangled Rope or Snare (depending on power position)
 
 **Implementation:**
 ```prolog
-% structural_signatures.pl
+% signature_detection.pl
 false_mountain(C) :-
     (claimed_type(C, mountain) ; indexed_as_mountain_somewhere(C)),
     extractiveness(C, Eps),
@@ -2161,7 +2165,7 @@ Catches modern physics-washing. "It's just how things are" rhetoric often hides 
 
 **See:** logic_extensions.md Â§1.4 for full FNL detection algorithm
 
-**Implementation:** `structural_signatures.pl`, `false_natural_law/2`
+**Implementation:** `signature_detection.pl`, `false_natural_law/2`
 
 ---
 
@@ -2203,7 +2207,7 @@ Distinguishes true coordination (UTF-8) from coordination-washing (opt-out priva
 
 **See:** logic_extensions.md Â§1.5 for full CI_Rope certification process
 
-**Implementation:** `structural_signatures.pl`, `coupling_invariant_rope/2`
+**Implementation:** `signature_detection.pl`, `coupling_invariant_rope/2`
 
 ---
 
@@ -2255,7 +2259,7 @@ FCR catches these patterns.
 
 **See:** logic_extensions.md Â§1.6 for full FCR detection
 
-**Implementation:** `structural_signatures.pl`, `false_ci_rope/2`
+**Implementation:** `signature_detection.pl`, `false_ci_rope/2`
 
 ---
 
@@ -2837,12 +2841,13 @@ Degradation is **thermodynamically favored**. Reform fights entropy. This is why
 Independent dimensions start entangling over time.
 
 ```
-CD(C, t_drift) â‰¡ 
-    CouplingTopology(C, t < t_drift) = independent
-    âˆ§ CouplingTopology(C, t â‰¥ t_drift) = coupled
-    âˆ§ coupling_score(C, t_drift) - coupling_score(C, tâ‚€) â‰¥ 0.10
-    âˆ§ Îµ(C, t â‰¥ t_drift) > Îµ(C, t < t_drift)
+CD(C, t_drift) ≡
+    cross_index_coupling(C, CurrentCoupling)
+    ∧ CurrentCoupling > boltzmann_coupling_threshold (0.25)
+    ∧ metric_trend(C, base_extractiveness, increasing)
 ```
+
+> **Note (February 2026):** The implementation uses an absolute coupling threshold (`boltzmann_coupling_threshold` = 0.25), not the delta-based 0.10 threshold from the original spec. See logic_extensions.md §4.1 for details.
 
 **Example:** App starts as messaging tool (Îµ = 0.10), gradually couples: messaging + location + contacts + camera + microphone (Îµ = 0.45). Coupling serves extraction, not coordination.
 
@@ -3038,7 +3043,7 @@ Each type checks its conditions with cut (`!`) at end. First successful check te
 - Fast, deterministic classification
 - Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized
 
-**Regime 2: Signatures (structural_signatures.pl)**
+**Regime 2: Signatures (signature_detection.pl)**
 
 `constraint_signature/2` can override metric classification:
 - Runs Boltzmann compliance tests
@@ -3775,7 +3780,7 @@ Indexed constraint logic asks: "What type is this constraint from this index?"
 Whatever extensions or modifications we make to this system, these invariants MUST hold:
 
 1. **Metrics-first classification** â€” `classify_from_metrics/6` remains canonical predicate in drl_core.pl
-2. **Detection patterns only refine or demote** â€” Signatures in structural_signatures.pl can override but never modify core logic
+2. **Detection patterns only refine or demote** â€” Signatures in signature_detection.pl can override but never modify core logic
 3. **Action flows from final type** â€” Recommendations derive from integrated classification, not raw metrics
 4. **Thresholds are calibration points** â€” Not moral boundaries, not absolute truths, but measurement regime parameters subject to empirical validation
 
@@ -3893,7 +3898,7 @@ The framework admits:
 **Spec â†’ Implementation discipline:**
 - Single canonical predicate: `classify_from_metrics/6`
 - Single threshold registry: logic_thresholds.md
-- Single signature override: structural_signatures.pl
+- Single signature override: signature_detection.pl (via structural_signatures.pl facade)
 - Shadow mode: Extensions don't modify core
 
 **No regressions.** v4.0 adds Stages 7-9 WITHOUT changing v1-6 classification logic.

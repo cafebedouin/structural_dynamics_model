@@ -15,7 +15,7 @@
 **Deferential Realism prevents both errors** through systematic constraint classification.
 
 **The framework provides:**
-- Six constraint categories (Mountains, Ropes, Tangled Ropes, Snares, Scaffolds, Pitons)
+- Seven constraint categories (Mountains, Ropes, Tangled Ropes, Snares, Scaffolds, Pitons, Naturalized)
 - Four indices for specifying perspective (WHO/WHEN/WHERE/HOW_MUCH)
 - Tests distinguishing each category
 - Power-scaling mechanism (same constraint experienced differently by power position)
@@ -99,7 +99,7 @@ The problem isn't disagreement about facts. It's **indexical underspecification*
 
 ## The Constraint Categories (Climbing Terrain & Equipment)
 
-Every constraint falls into one of six fundamental types, distinguished by how they function:
+Every constraint falls into one of seven fundamental types, distinguished by how they function:
 
 ### 1. Mountains (Immovable Terrain)
 
@@ -260,6 +260,22 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 
 ---
 
+### 7. Naturalized (Power-Scaling Ambiguity)
+
+**Definition:** Constraints with high base extraction (ε > 0.45) but low power-scaled extraction (χ < 0.40). Power-scaling is doing enough work to mask the extraction — the constraint "naturalizes" differently depending on who's looking.
+
+**Test:** Does power position dramatically change whether this looks extractive? Is base extraction high but effective extraction low for the classifier's position?
+
+**Examples:**
+- Professional credentialing (high cost to outsiders, invisible to insiders)
+- Cultural norms that powerful agents experience as coordination but powerless agents experience as extraction
+
+**Response:** `investigate_naturalization` — the power-scaling naturalization itself is the primary finding. Re-evaluate from multiple indices (powerless, moderate, institutional). The naturalization often reveals that the constraint is a Tangled Rope or Snare from lower-power indices.
+
+**Key insight:** Naturalized is a diagnostic category, not a stable structural type. It flags constraints where the analyst's power position is doing so much work that the classification itself becomes suspect.
+
+---
+
 ## The Four Indices (WHO/WHEN/WHERE/HOW_MUCH)
 
 **Every classification requires specifying position:**
@@ -272,7 +288,7 @@ Observable power position (not subjective feeling):
 - **Powerful**: High agency, strong position, low exit costs (Ï€ = 0.6)
 - **Collective**: Organized group, shared resources (Ï€ = 0.4)
 - **Institutional**: Organization-level, sets rules (Ï€ = -0.2)
-- **Analytical**: Outside observer (Ï€ = 1.0)
+- **Analytical**: Outside observer (π = 1.15 — breaks moderate-analytical degeneracy)
 
 **Why power matters:** Determines extraction experience. Same base Îµ becomes different effective Ï‡.
 
@@ -444,7 +460,7 @@ Strong network (powerful): 0.40 Ã— 0.6 = 0.24 (Rope - opportunities flow)
 
 ### Degradation (Drift Events)
 
-**Seven drift event types:**
+**Eleven drift event types** (seven core + four structural):
 
 1. **Metric Substitution**: Proxy becomes goal (social media: connection â†’ engagement)
 2. **Extraction Accumulation**: Rent-seeking added (academic publishing capture)
@@ -452,7 +468,14 @@ Strong network (powerful): 0.40 Ã— 0.6 = 0.24 (Rope - opportunities flow)
 4. **Function Obsolescence**: Environment shifts (fax requirements in email era)
 5. **Sunset Violation**: Temporary becomes permanent (Thailand Senate)
 6. **Extraction Dried Up**: Mechanism fails but structure persists (Soviet committees post-1991)
-7. **Algorithm Shutdown â†’ I-Piton**: Extraction mechanism removed but habits remain (creepiest path)
+7. **Algorithm Shutdown → I-Piton**: Extraction mechanism removed but habits remain (creepiest path)
+
+**Stages 7-9 add four structural drift types** (see logic_extensions.md §4):
+
+8. **Coupling Drift**: Independent dimensions start entangling (app adds location + contacts + camera access)
+9. **Boltzmann Floor Drift**: Minimum necessary extraction rises (coordination problem got harder, not more extractive)
+10. **Purity Drift**: Structural health declining even when metrics appear stable
+11. **Network Drift**: Constraint degrades because its neighbors are degrading (induced contamination)
 
 ### Terminal States
 

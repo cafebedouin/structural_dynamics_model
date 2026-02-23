@@ -346,6 +346,9 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
     config:param(piton_theater_floor, TRFloor),
     TR >= TRFloor, !.
 
+% Naturalized: high structural extraction (ε > rope ceiling) compressed below
+% detection threshold (χ < tangled_rope floor) by power scaling.  This is the
+% primary substrate for false_summit rhetoric — see dr_claim_mismatch/4 Type 1.
 classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, naturalized) :-
     config:param(rope_epsilon_ceiling, EpsCeil),
     BaseEps > EpsCeil,
@@ -502,7 +505,10 @@ dr_mismatch(C, perspectival_gap(Type1, Ctx1, Type2, Ctx2),
 % ----------------------------------------------------------------------------
 
 % Type 1: False Mountain (Indexed)
-% Claimed as Mountain but ISN'T from this context
+% Claimed as Mountain but ISN'T from this context.
+% Naturalized constraints are the primary vector: extraction so structurally
+% pervasive it registers as ambient background, letting a false Mountain claim
+% go unchallenged from lower-power positions.  See classify_from_metrics/6.
 dr_claim_mismatch(C, Context, type_1_false_summit, severe) :-
     narrative_ontology:constraint_claim(C, mountain),
     is_mountain(C, Context, fail),

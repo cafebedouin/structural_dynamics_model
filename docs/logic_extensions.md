@@ -30,7 +30,7 @@ Each concept is presented in three layers:
 
 ### Prerequisites
 - Read logic.md (Stages 1-6) first for core concepts
-- Understand indexical relativity, power scaling, six constraint types
+- Understand indexical relativity, power scaling, seven constraint types
 - Familiarity with logic_thresholds.md for canonical parameter values
 
 ### Shadow Mode
@@ -288,18 +288,29 @@ We don't jump straight to Snare because the constraint might have genuine coordi
 **Implementation:**
 ```prolog
 % signature_detection.pl
-false_natural_law(C, fnl_evidence(Claim, BoltzResult, CouplingScore,
+false_natural_law(C, fnl_evidence(Claim, BoltzmannResult, CouplingScore,
                                    CoupledPairs, ExcessExtraction)) :-
     claimed_natural(C, Claim),
-    boltzmann_compliant(C, BoltzResult),
-    BoltzResult = non_compliant(CouplingScore, _),
-    detect_nonsensical_coupling(C, CoupledPairs, _),
-    excess_extraction(C, ExcessExtraction).
+    boltzmann_compliant(C, BoltzmannResult),
+    BoltzmannResult = non_compliant(_, _),
+    cross_index_coupling(C, CouplingScore),
+    (   detect_nonsensical_coupling(C, CoupledPairs, _)
+    ->  true
+    ;   CoupledPairs = []
+    ),
+    (   excess_extraction(C, ExcessExtraction)
+    ->  true
+    ;   ExcessExtraction = unknown
+    ).
 
 % Priority in constraint_signature/2
 constraint_signature(C, false_natural_law) :-
     false_natural_law(C, _), !.
 ```
+
+**Key implementation details:**
+- CouplingScore is obtained via a separate `cross_index_coupling/2` call, not extracted from the BoltzmannResult term
+- `detect_nonsensical_coupling/3` and `excess_extraction/2` use soft fallbacks (`-> true ; default`): if either is unavailable (e.g., insufficient data), FNL still fires with default values (`CoupledPairs = []`, `ExcessExtraction = unknown`) rather than failing
 
 **Real-World Pattern:**
 
@@ -360,7 +371,7 @@ CI_Rope(C) ≡
 ```
 ci_rope_evidence(
     ComplianceResult,    % compliant(Score)
-    ScopeInvariance,     % true | false
+    ScopeInvariance,     % invariant | variant(UniqueTypes)
     ExcessExtraction,    % ε - Floor
     CoordFunction        % true | false
 )
@@ -506,10 +517,21 @@ false_ci_rope(C, fcr_evidence(AppType, FailedTests, CouplingScore,
     FailedTests \= [],  % At least one failure
     % ... collect evidence ...
 
-% Priority in constraint_signature/2 (after FNL, before CI_Rope)
+% Priority in constraint_signature/2 (after FNL, before natural_law v6.1)
 constraint_signature(C, false_ci_rope) :-
     false_ci_rope(C, _), !.
+
+% Natural Law via Emergence (v6.1) — after FCR, before CI_Rope
+% Intercepts natural laws with incidental beneficiaries (e.g., P!=NP)
+% that would otherwise be caught by CI_Rope due to constraint_beneficiary
+% declarations used for perspectival analysis.
+constraint_signature(C, natural_law) :-
+    domain_priors:emerges_naturally(C),
+    get_constraint_profile(C, Profile),
+    natural_law_signature(Profile), !.
 ```
+
+> **v6.1 Addition:** The `natural_law` clause in the priority chain prevents natural laws with incidental beneficiaries from being intercepted by CI_Rope. A constraint that `emerges_naturally` AND passes the full NL profile check is certified as `natural_law` regardless of coordination-function status. Without this, constraints like P!=NP (which have `constraint_beneficiary` declarations for perspectival analysis) would be misclassified as rope.
 
 **Real-World Pattern:**
 
@@ -569,16 +591,42 @@ For each coupled pair `(P, S)` from Boltzmann test:
 **Implementation:**
 ```prolog
 % boltzmann_compliance.pl
-detect_nonsensical_coupling(C, CoupledPairs, AvgStrength) :-
-    cross_index_coupling(C, CouplingScore),
-    CouplingScore > 0.25,  % Has coupling
-    identify_coupled_dimensions(C, CoupledPairs),
-    filter_nonsensical(C, CoupledPairs, Nonsensical),
-    Nonsensical \= [],
-    compute_average_strength(Nonsensical, AvgStrength).
+detect_nonsensical_coupling(C, CoupledPairs, Strength) :-
+    coupling_test_powers(Powers),
+    coupling_test_scopes(Scopes),
+    findall(
+        classified(P, S, Type),
+        (   member(P, Powers), member(S, Scopes),
+            coupling_test_context(P, S, Ctx),
+            classify_at_context(C, Ctx, Type)
+        ),
+        Grid
+    ),
+    findall(
+        coupled(power_scope, P, ScopePair, Score),
+        (   member(P, Powers),
+            member(S1, Scopes), member(S2, Scopes),
+            S1 @< S2,
+            member(classified(P, S1, T1), Grid),
+            member(classified(P, S2, T2), Grid),
+            T1 \= T2,
+            ScopePair = S1-S2,
+            Score = 1.0
+        ),
+        CoupledPairs
+    ),
+    (   CoupledPairs = []
+    ->  Strength = 0.0
+    ;   length(CoupledPairs, N),
+        length(Powers, NP), length(Scopes, NS),
+        MaxPairs is NP * (NS * (NS - 1)) // 2,
+        (MaxPairs > 0 -> Strength is min(1.0, N / MaxPairs) ; Strength = 0.0)
+    ).
 
 % Used in FNL and FCR evidence
 ```
+
+**Note:** The actual implementation builds a Power × Scope classification grid and finds scope-variance pairs — power levels where classification changes across scopes. Strength is computed as the ratio of coupled pairs to maximum possible pairs. There is no separate "nonsensical vs functional" filtering step; all scope-variant pairs are reported.
 
 **Why This Matters:**
 
@@ -618,7 +666,7 @@ Purity is a **continuous health metric**: [0, 1] where:
 
 **Why Continuous?**
 
-The six types (Mountain, Rope, Snare, etc.) are **categorical** — you're either in or out. Purity is **continuous** — you can track degradation over time.
+The seven types (Mountain, Rope, Tangled Rope, Snare, Scaffold, Piton, Naturalized) are **categorical** — you're either in or out. Purity is **continuous** — you can track degradation over time.
 
 This enables:
 - **Early warning**: Detect drift before type flips
@@ -1004,7 +1052,7 @@ network_drift(C) ←
 
 **Implementation:**
 ```prolog
-% drl_lifecycle.pl (Section 3D)
+% network_dynamics.pl (via drl_lifecycle.pl facade)
 detect_network_drift/3
 network_drift_velocity/4
 cascade_prediction/3
@@ -1032,7 +1080,7 @@ cascade_prediction/3
 
 **Implementation:**
 ```prolog
-% drl_lifecycle.pl
+% network_dynamics.pl (via drl_lifecycle.pl facade)
 cascade_prediction(SourceConstraint, Context, Predictions) :-
     % ... find neighbors, compute trajectories, predict crossings ...
 ```
@@ -1051,7 +1099,7 @@ cascade_prediction(SourceConstraint, Context, Predictions) :-
 
 **Implementation:**
 ```prolog
-% drl_lifecycle.pl
+% network_dynamics.pl (via drl_lifecycle.pl facade)
 network_stability_assessment(Context, Classification) :-
     findall(C, has_network_drift(C, Context), Drifting),
     % ... compute percentages, check cascade threshold ...
@@ -1096,10 +1144,12 @@ Not all coupling is extractive (complexity can increase legitimately). We only f
 
 **Implementation:**
 ```prolog
-% drl_lifecycle.pl (Section 3D)
+% drift_events.pl (via drl_lifecycle.pl facade)
 % Uses boltzmann_coupling_threshold (0.25) as the coupling gate
-detect_coupling_drift(C, Context, Result)
+detect_coupling_drift(C)
 ```
+
+**Note:** `detect_coupling_drift/1` takes only a ConstraintID. Context is not a parameter — the predicate checks current coupling against `boltzmann_coupling_threshold` and requires `metric_trend(C, base_extractiveness, increasing)`.
 
 **Parameters:**
 - `boltzmann_coupling_threshold` = 0.25 (actual gate used by detect_coupling_drift)
@@ -1149,14 +1199,14 @@ The grid got more complex (floor rose), but it's not more extractive (excess unc
 
 **Implementation:**
 ```prolog
-% drl_lifecycle.pl
-boltzmann_floor_drift(C, t_drift) :-
-    boltzmann_floor_for(C, t_before, Floor_before),
-    boltzmann_floor_for(C, t_drift, Floor_after),
-    DeltaFloor is Floor_after - Floor_before,
-    config:param(boltzmann_floor_drift_threshold, Threshold),
-    DeltaFloor >= Threshold,
-    extractiveness_tracks_floor(C, t_before, t_drift).
+% drift_events.pl (via drl_lifecycle.pl facade)
+detect_boltzmann_floor_drift(C) :-
+    boltzmann_compliance:excess_extraction(C, Excess),
+    boltzmann_compliance:boltzmann_floor_for(C, Floor),
+    safe_metric(C, extractiveness, CurrentEps),
+    metric_trend(C, base_extractiveness, increasing),
+    Excess < Floor * 0.5,
+    % ... format drift report ...
 ```
 
 **Parameters:**
@@ -1196,7 +1246,7 @@ Any **one** of the four signals triggers the event. Severity based on:
 
 **Implementation:**
 ```prolog
-% drl_lifecycle.pl
+% drift_events.pl (via drl_lifecycle.pl facade)
 detect_purity_drift(C) :-
     purity_score(C, Purity),
     collect_purity_decline_signals(C, Signals),
@@ -1226,7 +1276,7 @@ ND(C, t_drift) ≡
 
 **Implementation:**
 ```prolog
-% drl_lifecycle.pl (Section 3D)
+% network_dynamics.pl (via drl_lifecycle.pl facade)
 detect_network_drift/3
 network_drift_contagion/3
 network_drift_velocity/4
@@ -1258,8 +1308,10 @@ But **purity** adds qualifiers:
 **The Qualifier System:**
 
 ```
-purity_qualified_action(C, Context, BaseAction, Qualifier, Priority)
+purity_qualified_action(C, Context, QAction, Rationale)
 ```
+
+Where `QAction = qualified_action(BaseAction, Qualifier, Priority)` is a compound return term.
 
 Qualifiers:
 - `stable` — purity ≥ 0.70, continue base action
@@ -1268,14 +1320,19 @@ Qualifiers:
 - `escalate_cut` — purity < 0.30 for snare, switch to cut
 - `accelerate_sunset` — purity < 0.30 for scaffold
 - `degraded` — purity < 0.30, base action blocked
+- `inconclusive` — purity = -1.0 (sentinel), insufficient epistemic data for qualification
 
 **Implementation:**
 ```prolog
-% drl_modal_logic.pl (Stage 7)
-purity_qualified_action(C, Context, BaseAction, Qualifier, Priority) :-
-    dr_action(C, Context, BaseAction),
-    purity_score(C, Purity),
-    apply_purity_qualifier(BaseAction, Purity, Qualifier, Priority).
+% drl_boltzmann_analysis.pl (via drl_modal_logic.pl facade)
+purity_qualified_action(C, Context, QAction, Rationale) :-
+    constraint_indexing:valid_context(Context),
+    drl_core:dr_action(C, Context, BaseAction),
+    purity_scoring:purity_score(C, Purity),
+    qualify_action(BaseAction, Purity, C, QAction, Rationale).
+
+% QAction = qualified_action(BaseAction, Qualifier, Priority)
+% Rationale = human-readable atom explaining the qualification
 ```
 
 ---
@@ -1469,7 +1526,7 @@ logical_fingerprint.pl (7D fingerprints + coupling)
 
 `signature_detection.pl` / `constraint_signature/2`:
 - Can override metric classification
-- Priority: FNL > FCR > CI_Rope > NL > CS > CC > Piton > ambiguous
+- Priority: FNL > FCR > natural_law(v6.1) > CI_Rope > NL > CS > CC > Piton > ambiguous
 - Slower (requires Boltzmann test), but catches structural properties
 
 **Resolution:**
@@ -1541,6 +1598,12 @@ Currently, FNL/CI_Rope/FCR are already active (they fire in `constraint_signatur
 | `boltzmann_compliant/2` | boltzmann_compliance.pl | Boltzmann test |
 | `cross_index_coupling/2` | boltzmann_compliance.pl | Coupling score |
 | `excess_extraction/2` | boltzmann_compliance.pl | Excess extraction |
+| `clear_classification_cache/0` | boltzmann_compliance.pl | Retracts all cached classification and coupling data |
+| `ib_adjusted_threshold/2` | boltzmann_compliance.pl | Coupling threshold refined by theater ratio (IB signal loss) |
+| `coupling_test_powers/1` | boltzmann_compliance.pl | Power levels used in Boltzmann grid |
+| `coupling_test_scopes/1` | boltzmann_compliance.pl | Scope levels used in Boltzmann grid |
+| `coupling_test_context/3` | boltzmann_compliance.pl | Builds context term for grid cell |
+| `classify_at_context/3` | boltzmann_compliance.pl | Classifies constraint at specific grid context |
 | `purity_score/2` | purity_scoring.pl | Purity calculation |
 | `structural_purity/2` | signature_detection.pl | Structural purity classification |
 | `effective_purity/4` | drl_purity_network.pl | Network contamination |
@@ -1548,8 +1611,8 @@ Currently, FNL/CI_Rope/FCR are already active (they fire in `constraint_signatur
 | `type_contamination_strength/2` | drl_purity_network.pl | Type contamination potency |
 | `purity_contamination_pressure/4` | drl_purity_network.pl | Per-edge contamination |
 | `network_purity_metrics/2` | drl_purity_network.pl | Network-level metrics |
-| `network_drift_velocity/4` | drl_lifecycle.pl | Induced drift rate |
-| `purity_qualified_action/4` | drl_modal_logic.pl | Action + purity |
+| `network_drift_velocity/4` | network_dynamics.pl | Induced drift rate |
+| `purity_qualified_action/4` | drl_boltzmann_analysis.pl | Action + purity |
 
 **Full Module List (core pipeline):**
 
@@ -1560,8 +1623,12 @@ Currently, FNL/CI_Rope/FCR are already active (they fire in `constraint_signatur
 5. purity_scoring.pl — Purity score, subscores
 6. drl_purity_network.pl — Network contamination, effective_purity
 7. structural_signatures.pl — Wrapper (re-exports from 3-5)
-8. drl_lifecycle.pl — Drift types
-9. drl_modal_logic.pl — Action layer
+8. drl_lifecycle.pl — Facade; re-exports from:
+   - drift_events.pl — Event detection, severity, velocity
+   - transition_paths.pl — Degradation path detection & terminal states
+   - network_dynamics.pl — Network drift, contagion, cascades
+   - drift_report.pl — Unified scan & report generation
+9. drl_modal_logic.pl — Facade; re-exports from drl_composition.pl, drl_counterfactual.pl, drl_boltzmann_analysis.pl, drl_purity_network.pl, drl_fpn.pl
 10. logical_fingerprint.pl — Fingerprints
 11. [+20 more modules for supporting infrastructure]
 
