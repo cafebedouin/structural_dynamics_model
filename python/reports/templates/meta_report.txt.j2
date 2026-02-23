@@ -1,0 +1,127 @@
+
+================================================================================
+                      META-REPORT: Test Suite Analysis
+================================================================================
+
+📊 TEST EXECUTION SUMMARY
+--------------------------------------------------------------------------------
+{%- if total_tests > 0 %}
+  Total Tests Run: {{ total_tests }}
+  Passed:          {{ passed_tests }} ({{ "%.1f"|format(pass_rate) }}%)
+  Failed:          {{ failed_tests }}
+{%- if failed_tests > 0 %}
+  Failure Details:
+{%- for failure in test_failures %}
+    - [{{ failure.type }}] {{ failure.path }}
+      Reason: {{ failure.detail[:100] }}
+{%- endfor %}
+{%- endif %}
+{%- else %}
+  No test results found
+{%- endif %}
+
+📚 CORPUS OVERVIEW
+--------------------------------------------------------------------------------
+  Total Constraints Analyzed: {{ corpus_size }}
+{%- if type_distribution %}
+  Identified Constraint Type Distribution:
+{%- for ctype, count in type_distribution.items() | sort(attribute='1', reverse=true) %}
+    - {{ "%-15s"|format(ctype) }}: {{ "%4d"|format(count) }} ({{ "%.1f"|format(count / corpus_size * 100) if corpus_size else "0.0" }}%)
+{%- endfor %}
+{%- else %}
+  No explicit constraint types identified.
+{%- endif %}
+
+❓ EPISTEMOLOGICAL GAPS (Omegas)
+--------------------------------------------------------------------------------
+{%- if omegas %}
+  Total Unique Omegas Found: {{ omegas | length }}
+{%- for otype, count in omega_types.items() %}
+  - {{ otype | upper }}: {{ count }}
+{%- endfor %}
+{%- else %}
+  ✓ No unresolved omegas detected
+{%- endif %}
+
+🔬 STRUCTURAL PURITY OVERVIEW (v5.1)
+--------------------------------------------------------------------------------
+{%- if purity_scores %}
+  Constraints with Purity Data: {{ purity_scores | length }}
+  Average Purity:               {{ "%.3f"|format(purity_avg) }}
+  Purity Distribution:
+{%- for band in ['pristine', 'sound', 'borderline', 'contaminated', 'degraded', 'inconclusive'] %}
+{%- if purity_summary.get(band, 0) > 0 %}
+    - {{ "%-15s"|format(band) }}: {{ "%4d"|format(purity_summary[band]) }}
+{%- endif %}
+{%- endfor %}
+{%- for band, count in purity_summary.items() | sort %}
+{%- if band not in ['pristine', 'sound', 'borderline', 'contaminated', 'degraded', 'inconclusive'] and count > 0 %}
+    - {{ "%-15s"|format(band) }}: {{ "%4d"|format(count) }}
+{%- endif %}
+{%- endfor %}
+{%- if total_drift > 0 %}
+  Drift Events (all types):     {{ total_drift }}
+{%- for severity in ['critical', 'warning', 'watch'] %}
+{%- if drift_event_counts.get(severity, 0) > 0 %}
+    - {{ "%-15s"|format(severity) }}: {{ "%4d"|format(drift_event_counts[severity]) }}
+{%- endif %}
+{%- endfor %}
+{%- endif %}
+{%- else %}
+  No purity data found.
+{%- endif %}
+
+⚡ BOLTZMANN COMPLIANCE SUMMARY (v5.0)
+--------------------------------------------------------------------------------
+{%- if signature_distribution or coupling_summary %}
+  Boltzmann Structural Signatures Detected: {{ total_sigs }}
+    - False Natural Law (FNL):     {{ fnl }}
+    - Coupling-Invariant Rope:     {{ ci_rope }}
+    - False CI-Rope (FCR):         {{ fcr }}
+{%- if coupling_summary %}
+  Coupling Analysis ({{ total_coupling }} constraints):
+{%- for regime in ['independent', 'weakly_coupled', 'strongly_coupled', 'inconclusive'] %}
+{%- if coupling_summary.get(regime, 0) > 0 %}
+    - {{ "%-20s"|format(regime) }}: {{ "%4d"|format(coupling_summary[regime]) }}
+{%- endif %}
+{%- endfor %}
+{%- for regime, count in coupling_summary.items() | sort %}
+{%- if regime not in ['independent', 'weakly_coupled', 'strongly_coupled', 'inconclusive'] and count > 0 %}
+    - {{ "%-20s"|format(regime) }}: {{ "%4d"|format(count) }}
+{%- endif %}
+{%- endfor %}
+{%- endif %}
+{%- else %}
+  No Boltzmann compliance data found.
+{%- endif %}
+
+🌐 NETWORK DYNAMICS (v5.2)
+--------------------------------------------------------------------------------
+{%- if network_stability %}
+  Network Stability: {{ network_stability }}
+{%- if network_stability == 'cascading' %}
+  ⚠ CASCADE WARNING: network in cascading state
+{%- endif %}
+{%- else %}
+  No network dynamics data found.
+{%- endif %}
+
+GAUGE ORBIT FAMILIES
+--------------------------------------------------------------------------------
+{%- if not orbit_families %}
+  No orbit data found (run orbit analysis step first).
+{%- else %}
+  Constraints with Orbit Data: {{ orbit_total }}
+  Total Orbit Families:        {{ orbit_families | length }}
+  Gauge-Invariant:             {{ singleton_count }}
+  Gauge-Variant:               {{ multi_count }}
+  Top Families:
+{%- for sig, members in sorted_families %}
+    - {{ "%-40s"|format('[' + sig | join(', ') + ']') }}: {{ "%4d"|format(members | length) }}
+{%- endfor %}
+{%- if unknown_families %}
+  Unknown-Containing Orbits:   {{ unknown_families | length }} families ({{ unknown_count }} constraints)
+{%- endif %}
+{%- endif %}
+
+================================================================================

@@ -36,6 +36,7 @@ DATA_SOURCES = {
     "fingerprint": lambda: load_json(OUTPUT_DIR / "fingerprint_data.json", label="fingerprint"),
     "false_mountain": lambda: load_json(OUTPUT_DIR / "false_mountain_data.json", label="false_mountain"),
     "config": lambda: read_config(),
+    "omega": lambda: load_json(OUTPUT_DIR / "omega_data.json", label="omega"),
 }
 
 # ---------------------------------------------------------------------------
@@ -153,6 +154,10 @@ def _build_reports() -> dict[str, ReportDefinition]:
     from reports.queries.reform_threshold_report import query as rtr_query
     from reports.queries.powerless_blind_diagnostic import query as pbd_query
     from reports.queries.classification_audit import query as ca_query
+    from reports.queries.omega_enricher import query as oe_query, json_fn as oe_json
+    from reports.queries.institutional_dissent import query as id_query, json_fn as id_json
+    from reports.queries.meta_reporter import query as mr_query
+    from reports.queries.type_reporter import query as tr_query
 
     defs = [
         ReportDefinition(
@@ -231,6 +236,39 @@ def _build_reports() -> dict[str, ReportDefinition]:
             template="classification_audit.md.j2",
             output_path=OUTPUT_DIR / "classification_audit_report.md",
             data_sources=["false_mountain", "corpus", "config"],
+        ),
+        # Group 6 reports (complex reporters)
+        ReportDefinition(
+            name="omega_enricher",
+            query_fn=oe_query,
+            template="enriched_omega_report.md.j2",
+            output_path=OUTPUT_DIR / "enriched_omega_report.md",
+            json_output_path=OUTPUT_DIR / "enriched_omega_data.json",
+            json_fn=oe_json,
+            data_sources=["omega", "corpus", "orbit"],
+        ),
+        ReportDefinition(
+            name="institutional_dissent",
+            query_fn=id_query,
+            template="institutional_dissent.md.j2",
+            output_path=OUTPUT_DIR / "institutional_dissent_report.md",
+            json_output_path=OUTPUT_DIR / "institutional_dissent_data.json",
+            json_fn=id_json,
+            data_sources=["enriched", "corpus", "orbit"],
+        ),
+        ReportDefinition(
+            name="meta_report",
+            query_fn=mr_query,
+            template="meta_report.txt.j2",
+            output_path=None,  # stdout — run_pipeline.py captures via redirect_stdout
+            data_sources=["pipeline", "orbit"],
+        ),
+        ReportDefinition(
+            name="type_report",
+            query_fn=tr_query,
+            template=None,    # query handles all file writing internally
+            output_path=None,
+            data_sources=["pipeline", "orbit"],
         ),
     ]
     return {d.name: d for d in defs}

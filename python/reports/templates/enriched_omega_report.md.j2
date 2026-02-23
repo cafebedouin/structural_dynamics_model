@@ -1,0 +1,92 @@
+# Enriched Omega Epistemological Gap Report
+
+**Total Omegas:** {{ total }}
+
+## Severity Distribution
+
+| Severity | Count | % |
+|----------|------:|--:|
+{%- for level in ['critical', 'high', 'medium', 'low'] %}
+| {{ level }} | {{ severity_counts.get(level, 0) }} | {{ "%.1f"|format(100 * severity_counts.get(level, 0) / total) }}% |
+{%- endfor %}
+
+## Top 5 Families
+
+| Family | Orbit Signature | Gap Class | Domain | Count |
+|--------|----------------|-----------|--------|------:|
+{%- for fid, finfo in top_families %}
+| {{ fid }} | [{{ finfo.orbit_signature | join(', ') }}] | {{ finfo.gap_class }} | {{ finfo.get('domain', 'unknown') }} | {{ finfo.count }} |
+{%- endfor %}
+
+## Top 5 Domains by Omega Count
+
+| Domain | Count | Mean Score |
+|--------|------:|-----------:|
+{%- for d, info in top_domains %}
+| {{ d }} | {{ info.count }} | {{ "%.3f"|format(info.total_score / info.count) }} |
+{%- endfor %}
+
+---
+
+{%- for level in ['critical', 'high', 'medium', 'low'] %}
+{%- if level in omegas_by_severity %}
+
+## {{ level | upper }} ({{ omegas_by_severity[level] | length }})
+
+{%- for e in omegas_by_severity[level] %}
+
+### `{{ e.name }}` [{{ level | upper }}]
+
+- **Severity:** `{{ e.severity }}` (score: {{ "%.3f"|format(e.severity_score) }})
+- **Constraint:** `{{ e.associated_constraint }}`
+- **Domain:** `{{ e.domain }}`
+- **Orbit Signature:** `[{{ e.orbit_signature | join(', ') if e.orbit_signature else 'N/A' }}]`
+- **Orbit Span:** `{{ e.orbit_span }}`
+- **Gap Class:** `{{ e.gap_class }}`
+- **Gap Pattern:** `{{ e.gap_pattern }}`
+- **Source Gap:** `{{ e.source_gap }}`
+- **Epsilon:** `{{ "%.2f"|format(e.epsilon) if e.epsilon is not none else 'N/A' }}`
+- **Suppression:** `{{ "%.2f"|format(e.suppression) if e.suppression is not none else 'N/A' }}`
+- **Question:** {{ e.question }}
+- **Resolution Strategy:** {{ e.resolution_strategy }}
+- **Family:** `{{ e.family }}` ({{ family_index.get(e.family, {}).get('count', '?') }} members)
+
+---
+
+{%- endfor %}
+{%- endif %}
+{%- endfor %}
+
+## Family Index ({{ large_families | length }} families with {{ family_display_threshold }}+ members)
+
+{%- for fid, finfo in large_families %}
+
+### {{ fid }}: [{{ finfo.orbit_signature | join(', ') }}] / {{ finfo.gap_class }} / {{ finfo.get('domain', 'unknown') }} ({{ finfo.count }} members)
+
+{%- for m in finfo.members | sort %}
+- `{{ m }}`
+{%- endfor %}
+
+{%- endfor %}
+
+{%- if small_families %}
+
+## Appendix: Small Families ({{ small_families | length }} families, {{ small_families | sum(attribute='1.count') }} omegas, <{{ family_display_threshold }} members each)
+
+| Family | Orbit Signature | Gap Class | Domain | Count |
+|--------|----------------|-----------|--------|------:|
+{%- for fid, finfo in small_families %}
+| {{ fid }} | [{{ finfo.orbit_signature | join(', ') }}] | {{ finfo.gap_class }} | {{ finfo.get('domain', 'unknown') }} | {{ finfo.count }} |
+{%- endfor %}
+
+*Full member lists for small families available in `enriched_omega_data.json`.*
+
+{%- endif %}
+
+## Domain Summary
+
+| Domain | Count | Mean Score |
+|--------|------:|-----------:|
+{%- for d, info in domain_summary %}
+| {{ d }} | {{ info.count }} | {{ "%.3f"|format(info.total_score / info.count) if info.count > 0 else "0.000" }} |
+{%- endfor %}
