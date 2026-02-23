@@ -17,7 +17,6 @@ Usage:
 """
 
 import argparse
-import json
 import sys
 from collections import Counter
 from pathlib import Path
@@ -25,12 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from orbit_utils import load_orbit_data, get_orbit_signature, format_orbit_signature
 
-# ---------------------------------------------------------------------------
-# Paths
-# ---------------------------------------------------------------------------
-_SCRIPT_DIR = Path(__file__).parent
-_OUTPUT_DIR = _SCRIPT_DIR / '..' / 'outputs'
-_PIPELINE_JSON = _OUTPUT_DIR / 'pipeline_output.json'
+from shared.loader import load_json, PIPELINE_JSON, OUTPUT_DIR
 
 # ---------------------------------------------------------------------------
 # Type configs
@@ -132,20 +126,6 @@ TYPE_CONFIGS = {
         'sort_key': lambda e: (e['severity'] != 'critical', e['name']),
     },
 }
-
-# ---------------------------------------------------------------------------
-# Data loading
-# ---------------------------------------------------------------------------
-
-def load_pipeline_data():
-    """Read pipeline_output.json once, return the full dict."""
-    try:
-        with open(_PIPELINE_JSON, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        print(f"Error: Pipeline output not found at {_PIPELINE_JSON}", file=sys.stderr)
-        sys.exit(1)
-
 
 # ---------------------------------------------------------------------------
 # Filtering
@@ -533,7 +513,7 @@ def run_type_report(type_key, pipeline_data, orbit_data):
 
     entries = sort_entries(entries, cfg['sort_key'])
 
-    output_path = _OUTPUT_DIR / cfg['output_filename']
+    output_path = OUTPUT_DIR / cfg['output_filename']
 
     if entries:
         if family == 'false_mountain':
@@ -610,7 +590,10 @@ def main():
                        help='Print summary to stdout (no file output)')
 
     args = parser.parse_args()
-    pipeline_data = load_pipeline_data()
+    pipeline_data = load_json(PIPELINE_JSON, label="pipeline")
+    if not pipeline_data:
+        print(f"Error: Pipeline output not found at {PIPELINE_JSON}", file=sys.stderr)
+        sys.exit(1)
 
     if args.summary:
         if args.summary == 'counts':

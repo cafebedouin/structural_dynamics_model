@@ -1,18 +1,7 @@
 import json
 import sys
-from pathlib import Path
 
-_SCRIPT_DIR = Path(__file__).parent
-_PIPELINE_JSON = _SCRIPT_DIR / '..' / 'outputs' / 'pipeline_output.json'
-
-
-def load_pipeline_data():
-    try:
-        with open(_PIPELINE_JSON, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        print(f"Error: Pipeline output not found at {_PIPELINE_JSON}", file=sys.stderr)
-        sys.exit(1)
+from shared.loader import load_json, PIPELINE_JSON, OUTPUT_DIR
 
 
 def _format_source_gap(gap):
@@ -73,13 +62,15 @@ def generate_markdown_report(omega_data, output_path):
 
 
 def main():
-    script_dir = Path(__file__).parent
-    report_file = script_dir / '../outputs/omega_report.md'
-    json_file = script_dir / '../outputs/omega_data.json'
+    report_file = OUTPUT_DIR / 'omega_report.md'
+    json_file = OUTPUT_DIR / 'omega_data.json'
 
     print("Parsing pipeline output to find Omegas...")
 
-    pipeline_data = load_pipeline_data()
+    pipeline_data = load_json(PIPELINE_JSON, label="pipeline")
+    if not pipeline_data:
+        print(f"Error: Pipeline output not found at {PIPELINE_JSON}", file=sys.stderr)
+        sys.exit(1)
     constraints = pipeline_data['per_constraint']
 
     omega_data = extract_omegas(constraints)

@@ -9,17 +9,9 @@ Usage:
     python3 python/red_spot_check.py
 """
 
-import json
 import sys
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-PIPELINE = ROOT / "outputs" / "pipeline_output.json"
-
-
-def load_pipeline():
-    with open(PIPELINE) as f:
-        return json.load(f)
+from shared.loader import load_json, PIPELINE_JSON
 
 
 def extract_reds(data):
@@ -108,11 +100,10 @@ def print_report(reds, data):
 
 
 def main():
-    if not PIPELINE.exists():
-        print(f"ERROR: {PIPELINE} not found. Run 'make' first.", file=sys.stderr)
+    data = load_json(PIPELINE_JSON, label="pipeline")
+    if not data:
+        print(f"ERROR: {PIPELINE_JSON} not found. Run 'make' first.", file=sys.stderr)
         sys.exit(1)
-
-    data = load_pipeline()
     reds = extract_reds(data)
     print_report(reds, data)
 

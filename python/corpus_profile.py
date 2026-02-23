@@ -17,19 +17,10 @@ Usage:
 import json
 import sys
 from collections import Counter
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-PIPELINE = ROOT / "outputs" / "pipeline_output.json"
-ENRICHED = ROOT / "outputs" / "enriched_pipeline.json"
-OUTPUT = ROOT / "outputs" / "corpus_profile.json"
+from shared.loader import load_json, PIPELINE_JSON, OUTPUT_DIR
 
-
-def load_json(path):
-    if not path.exists():
-        return None
-    with open(path) as f:
-        return json.load(f)
+OUTPUT = OUTPUT_DIR / "corpus_profile.json"
 
 
 def modal_type(perspectives):
@@ -134,11 +125,10 @@ def build_profile(data):
 
 
 def main():
-    if not PIPELINE.exists():
-        print(f"ERROR: {PIPELINE} not found. Run 'make' first.", file=sys.stderr)
+    data = load_json(PIPELINE_JSON, label="pipeline")
+    if not data:
+        print(f"ERROR: {PIPELINE_JSON} not found. Run 'make' first.", file=sys.stderr)
         sys.exit(1)
-
-    data = load_json(PIPELINE)
     profile = build_profile(data)
 
     with open(OUTPUT, "w") as f:

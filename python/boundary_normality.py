@@ -25,7 +25,7 @@ from pathlib import Path
 from shared.loader import load_json, load_all_data, ENRICHED_PIPELINE_JSON
 from shared.constants import MAXENT_TYPES
 from shared.schemas import validate_enriched_pipeline
-from tangled_decomposition import maxent_classify
+from shared.maxent import maxent_classify
 
 # ---------------------------------------------------------------------------
 # Optional dependencies

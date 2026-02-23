@@ -7,22 +7,16 @@ Hybrid: still reads outputs/output.txt for Prolog test pass/fail counts
 (not available in the JSON).
 """
 
-import json
-import os
 import re
 import sys
 from collections import Counter
-from pathlib import Path
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(SCRIPT_DIR)
+from shared.loader import load_json, PIPELINE_JSON, ORBIT_JSON, OUTPUT_DIR
 
 
 class MetaReporter:
     def __init__(self):
-        self.pipeline_json = Path(ROOT_DIR) / 'outputs' / 'pipeline_output.json'
-        self.output_txt = Path(ROOT_DIR) / 'outputs' / 'output.txt'
-        self.orbit_json = Path(ROOT_DIR) / 'outputs' / 'orbit_data.json'
+        self.output_txt = OUTPUT_DIR / 'output.txt'
 
         # Test results (from output.txt)
         self.passed_tests = 0
@@ -72,12 +66,9 @@ class MetaReporter:
 
     def _parse_pipeline_json(self):
         """Read pipeline_output.json for all classification/diagnostic data."""
-        if not self.pipeline_json.exists():
-            print(f"Error: {self.pipeline_json} does not exist", file=sys.stderr)
+        data = load_json(PIPELINE_JSON, label="pipeline")
+        if not data:
             return
-
-        with open(self.pipeline_json, 'r', encoding='utf-8') as f:
-            data = json.load(f)
 
         diag = data.get('diagnostic', {})
         val = data.get('validation', {})
@@ -119,19 +110,15 @@ class MetaReporter:
 
     def _load_orbit_data(self):
         """Load orbit data from orbit_data.json."""
-        if not self.orbit_json.exists():
+        orbit_data = load_json(ORBIT_JSON, label="orbit_data")
+        if not orbit_data:
             return
-        try:
-            with open(self.orbit_json, 'r', encoding='utf-8') as f:
-                orbit_data = json.load(f)
-            for cid, entry in orbit_data.items():
-                sig = tuple(entry.get('orbit_signature', []))
-                if sig not in self.orbit_families:
-                    self.orbit_families[sig] = []
-                self.orbit_families[sig].append(cid)
-            self.orbit_total = len(orbit_data)
-        except Exception:
-            pass
+        for cid, entry in orbit_data.items():
+            sig = tuple(entry.get('orbit_signature', []))
+            if sig not in self.orbit_families:
+                self.orbit_families[sig] = []
+            self.orbit_families[sig].append(cid)
+        self.orbit_total = len(orbit_data)
 
     # --- Report sections ---
 
