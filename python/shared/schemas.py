@@ -566,3 +566,140 @@ def validate_enriched_pipeline(data):
             _warn_unexpected_fields(entry, _ALL_ENRICHED_FIELD_NAMES, cid)
 
     return errors
+
+
+# ===================================================================
+# Report sidecar validation
+# ===================================================================
+
+# Field specification for the JSON sidecar emitted alongside markdown reports.
+# Format: (field_name, expected_type, nullable)
+SIDECAR_FIELDS = [
+    ("constraint_id",         str,          False),
+    ("iteration_round",       int,          True),
+    ("verdict",               str,          False),
+    ("subsystems_checked",    list,         False),
+    ("tension_count",         int,          False),
+    ("tensions",              list,         False),
+    ("expected_conflicts",    list,         False),
+    ("convergent_rejections", str,          False),
+    ("classification",        dict,         False),
+    ("drift_events",          list,         False),
+    ("post_synthesis_flags",  list,         False),
+    # Nullable top-level fields
+    ("hard_disagreement",     dict,         True),
+    ("mandatrophy_gap",       dict,         True),
+    ("structural_signature",  str,          True),
+    ("purity",                dict,         True),
+]
+
+_SIDECAR_VERDICTS = {"GREEN", "YELLOW", "RED", "UNKNOWN"}
+
+_SIDECAR_CLASSIFICATION_FIELDS = [
+    ("claimed_type",      str,          True),
+    ("classified_type",   str,          True),
+    ("mismatch",          bool,         True),
+    ("confidence",        (int, float), True),
+    ("confidence_band",   str,          True),
+    ("rival_type",        str,          True),
+    ("rival_p",           (int, float), True),
+    ("boundary",          str,          True),
+    ("psi",               (int, float), True),
+    ("psi_label",         str,          True),
+]
+
+
+def validate_report_sidecar(data):
+    """Validate a report sidecar dict.
+
+    Returns list of error strings (empty = valid).
+    """
+    errors = []
+
+    if not isinstance(data, dict):
+        return [f"Expected dict, got {type(data).__name__}"]
+
+    cid = data.get("constraint_id", "<unknown>")
+
+    # Top-level field presence and type
+    for field_name, expected_type, nullable in SIDECAR_FIELDS:
+        errors.extend(_check_field(data, field_name, expected_type, nullable, cid))
+
+    # Verdict enum
+    verdict = data.get("verdict")
+    if isinstance(verdict, str) and verdict not in _SIDECAR_VERDICTS:
+        errors.append(f"[{cid}] verdict '{verdict}' not in {sorted(_SIDECAR_VERDICTS)}")
+
+    # subsystems_checked must be [int, int]
+    sc = data.get("subsystems_checked")
+    if isinstance(sc, list):
+        if len(sc) != 2:
+            errors.append(f"[{cid}] subsystems_checked length={len(sc)}, expected 2")
+        for i, v in enumerate(sc):
+            if not isinstance(v, int):
+                errors.append(f"[{cid}] subsystems_checked[{i}] is {type(v).__name__}, expected int")
+
+    # tensions entries
+    tensions = data.get("tensions")
+    if isinstance(tensions, list):
+        for i, t in enumerate(tensions):
+            if isinstance(t, dict):
+                for k in ("subsystem", "code", "detail"):
+                    if k not in t:
+                        errors.append(f"[{cid}] tensions[{i}] missing '{k}'")
+
+    # expected_conflicts entries
+    ec_list = data.get("expected_conflicts")
+    if isinstance(ec_list, list):
+        for i, ec in enumerate(ec_list):
+            if isinstance(ec, dict):
+                for k in ("subsystem", "code"):
+                    if k not in ec:
+                        errors.append(f"[{cid}] expected_conflicts[{i}] missing '{k}'")
+
+    # classification sub-fields
+    cls = data.get("classification")
+    if isinstance(cls, dict):
+        for field_name, expected_type, nullable in _SIDECAR_CLASSIFICATION_FIELDS:
+            errors.extend(_check_field(cls, field_name, expected_type, nullable, f"{cid}.classification"))
+
+    # hard_disagreement structure
+    hd = data.get("hard_disagreement")
+    if isinstance(hd, dict):
+        for k in ("pipeline", "maxent"):
+            if k not in hd:
+                errors.append(f"[{cid}] hard_disagreement missing '{k}'")
+
+    # drift_events entries
+    drift = data.get("drift_events")
+    if isinstance(drift, list):
+        for i, de in enumerate(drift):
+            if isinstance(de, dict):
+                for k in ("severity", "type"):
+                    if k not in de:
+                        errors.append(f"[{cid}] drift_events[{i}] missing '{k}'")
+
+    # mandatrophy_gap structure
+    mg = data.get("mandatrophy_gap")
+    if isinstance(mg, dict):
+        for k in ("delta_chi", "severity"):
+            if k not in mg:
+                errors.append(f"[{cid}] mandatrophy_gap missing '{k}'")
+
+    # purity structure
+    pu = data.get("purity")
+    if isinstance(pu, dict):
+        for k in ("value", "band"):
+            if k not in pu:
+                errors.append(f"[{cid}] purity missing '{k}'")
+
+    # post_synthesis_flags entries
+    psf = data.get("post_synthesis_flags")
+    if isinstance(psf, list):
+        for i, flag in enumerate(psf):
+            if isinstance(flag, dict):
+                for k in ("flag_type", "details"):
+                    if k not in flag:
+                        errors.append(f"[{cid}] post_synthesis_flags[{i}] missing '{k}'")
+
+    return errors

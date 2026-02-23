@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "report_sidecar_schema.json",
+  "title": "Enhanced Report Sidecar",
+  "description": "Structured JSON sidecar emitted alongside each constraint markdown report. Captures the same data that _parse_report() extracts via regex, plus additional fields for iteration tracking.",
+  "type": "object",
+  "required": [
+    "constraint_id",
+    "verdict",
+    "subsystems_checked",
+    "tension_count",
+    "tensions",
+    "expected_conflicts",
+    "convergent_rejections",
+    "classification",
+    "drift_events",
+    "post_synthesis_flags"
+  ],
+  "properties": {
+    "constraint_id": {
+      "type": "string",
+      "description": "The constraint being reported (snake_case ID)."
+    },
+    "iteration_round": {
+      "type": ["integer", "null"],
+      "description": "Which iteration produced this report; null if initial generation."
+    },
+    "verdict": {
+      "type": "string",
+      "enum": ["GREEN", "YELLOW", "RED", "UNKNOWN"],
+      "description": "Traffic-light diagnostic verdict."
+    },
+    "subsystems_checked": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "[available, total] subsystem counts."
+    },
+    "tension_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of diagnostic tensions."
+    },
+    "tensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["subsystem", "code", "detail"],
+        "properties": {
+          "subsystem": { "type": "string" },
+          "code": { "type": "string" },
+          "detail": { "type": "string" }
+        }
+      },
+      "description": "List of diagnostic tensions with subsystem, signal code, and detail."
+    },
+    "expected_conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["subsystem", "code"],
+        "properties": {
+          "subsystem": { "type": "string" },
+          "code": { "type": "string" }
+        }
+      },
+      "description": "Expected conflicts from diagnostic verdict."
+    },
+    "convergent_rejections": {
+      "type": "string",
+      "description": "'none' or detail text describing convergent rejections."
+    },
+    "classification": {
+      "type": "object",
+      "properties": {
+        "claimed_type": { "type": ["string", "null"] },
+        "classified_type": { "type": ["string", "null"], "description": "maxent_top_type from pipeline." },
+        "mismatch": { "type": ["boolean", "null"], "description": "True when claimed_type != classified_type." },
+        "confidence": { "type": ["number", "null"] },
+        "confidence_band": { "type": ["string", "null"] },
+        "rival_type": { "type": ["string", "null"] },
+        "rival_p": { "type": ["number", "null"] },
+        "boundary": { "type": ["string", "null"] },
+        "psi": { "type": ["number", "null"], "description": "tangled_psi metric." },
+        "psi_label": { "type": ["string", "null"], "description": "tangled_band label." }
+      },
+      "description": "Classification and confidence metrics."
+    },
+    "hard_disagreement": {
+      "type": ["object", "null"],
+      "properties": {
+        "pipeline": { "type": "string" },
+        "maxent": { "type": "string" }
+      },
+      "description": "Non-null when pipeline claimed_type disagrees with maxent_top_type."
+    },
+    "drift_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "type"],
+        "properties": {
+          "severity": { "type": "string" },
+          "type": { "type": "string" }
+        }
+      },
+      "description": "Drift events from pipeline data."
+    },
+    "mandatrophy_gap": {
+      "type": ["object", "null"],
+      "properties": {
+        "delta_chi": { "type": "number" },
+        "severity": { "type": "string" }
+      },
+      "description": "Mandatrophy gap extracted from Prolog output, if present."
+    },
+    "structural_signature": {
+      "type": ["string", "null"],
+      "description": "Structural signature label."
+    },
+    "purity": {
+      "type": ["object", "null"],
+      "properties": {
+        "value": { "type": "number" },
+        "band": { "type": "string" }
+      },
+      "description": "Purity score and band."
+    },
+    "post_synthesis_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["flag_type", "details"],
+        "properties": {
+          "flag_type": { "type": "string" },
+          "details": { "type": "object" }
+        }
+      },
+      "description": "T12 post-synthesis divergence flags."
+    }
+  }
+}

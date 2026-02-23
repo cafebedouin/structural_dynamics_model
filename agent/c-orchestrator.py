@@ -14,6 +14,7 @@ Usage:
 
 import argparse
 import json
+import logging
 import os
 import re
 import subprocess
@@ -902,11 +903,44 @@ class DRAuditOrchestrator:
         )
         return prompt
 
-    def _rerun_single_report(self, constraint_id: str) -> Path | None:
+    def _load_report_sidecar(self, constraint_id: str) -> dict | None:
+        """Load the JSON sidecar for a constraint report, if fresh and valid.
+
+        Returns the sidecar dict or None if missing, stale, or invalid.
+        Stale = markdown report is newer than JSON sidecar.
+        """
+        reports_dir = REPO_ROOT / "outputs" / "constraint_reports"
+        json_path = reports_dir / f"{constraint_id}_report.json"
+        md_path = reports_dir / f"{constraint_id}_report.md"
+
+        if not json_path.exists():
+            return None
+
+        # Stale sidecar detection: JSON must be at least as new as markdown
+        if md_path.exists():
+            try:
+                if json_path.stat().st_mtime < md_path.stat().st_mtime:
+                    return None
+            except OSError:
+                return None
+
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if not isinstance(data, dict) or "verdict" not in data:
+                return None
+            return data
+        except (json.JSONDecodeError, OSError):
+            return None
+
+    def _rerun_single_report(self, constraint_id: str, iteration_round: int | None = None) -> Path | None:
         """Re-run enhanced_report.py for a single constraint and return the report path."""
+        cmd = ["python3", "python/enhanced_report.py", constraint_id]
+        if iteration_round is not None:
+            cmd.extend(["--iteration-round", str(iteration_round)])
         try:
             proc = subprocess.run(
-                ["python3", "python/enhanced_report.py", constraint_id],
+                cmd,
                 cwd=str(REPO_ROOT),
                 capture_output=True,
                 text=True,
@@ -926,6 +960,7 @@ class DRAuditOrchestrator:
         t0 = time.time()
 
         MAX_ITERATIONS = 3
+        _log = logging.getLogger(__name__)
 
         # Build lookup dicts
         stories_by_cid = {s["header"]["constraint_id"]: s for s in stories}
@@ -939,12 +974,18 @@ class DRAuditOrchestrator:
             if not story:
                 continue
 
-            try:
-                report_text = report_path.read_text(encoding="utf-8")
-            except Exception:
-                continue
-
-            parsed = self._parse_report(report_text)
+            # Try JSON sidecar first, fall back to regex parsing
+            sidecar = self._load_report_sidecar(cid)
+            if sidecar is not None:
+                _log.info("Using JSON sidecar for %s", cid)
+                parsed = sidecar
+            else:
+                _log.info("JSON sidecar not found for %s, falling back to regex parsing", cid)
+                try:
+                    report_text = report_path.read_text(encoding="utf-8")
+                except Exception:
+                    continue
+                parsed = self._parse_report(report_text)
 
             if not self._should_iterate(parsed):
                 self._progress("iterate", f"{cid}: {parsed['verdict']} — no iteration needed")
@@ -997,15 +1038,20 @@ class DRAuditOrchestrator:
                 story = new_story
                 stories_by_cid[cid] = new_story
 
-                # Re-run report
-                new_report_path = self._rerun_single_report(cid)
+                # Re-run report (with iteration round for sidecar)
+                new_report_path = self._rerun_single_report(cid, iteration_round=iteration)
                 if new_report_path:
                     reports_by_cid[cid] = new_report_path
-                    try:
-                        report_text = new_report_path.read_text(encoding="utf-8")
-                        parsed = self._parse_report(report_text)
-                    except Exception:
-                        break
+                    # Prefer sidecar for re-parsed report
+                    sidecar = self._load_report_sidecar(cid)
+                    if sidecar is not None:
+                        parsed = sidecar
+                    else:
+                        try:
+                            report_text = new_report_path.read_text(encoding="utf-8")
+                            parsed = self._parse_report(report_text)
+                        except Exception:
+                            break
                 else:
                     break
 

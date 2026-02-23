@@ -46,7 +46,9 @@ Usage:
   python3 python/enhanced_report.py                           # auto: testsets modified in last hour
 """
 
+import argparse
 import json
+import logging
 import os
 import re
 import subprocess
@@ -227,6 +229,153 @@ def extract_live_perspectives(prolog_output):
             perspectives[power] = ctype
 
     return claimed, perspectives
+
+
+def extract_mandatrophy_gap(prolog_output):
+    """Extract mandatrophy gap from Prolog output, if present.
+
+    Returns dict {delta_chi: float, severity: str} or None.
+    """
+    m = re.search(
+        r'MANDATROPHY GAP: delta_chi = ([\d.]+)\s+\((\w+)\)',
+        prolog_output,
+    )
+    if m:
+        return {"delta_chi": float(m.group(1)), "severity": m.group(2)}
+    return None
+
+
+# --- Sidecar Builder ---
+
+logger = logging.getLogger(__name__)
+
+
+def build_sidecar_data(constraint_id, entry, prolog_output, iteration_round=None):
+    """Build structured sidecar dict from pre-markdown data sources.
+
+    Args:
+        constraint_id: The constraint ID.
+        entry: The enriched pipeline per_constraint dict (or None).
+        prolog_output: Raw Prolog output text.
+        iteration_round: Which iteration produced this (None if initial).
+
+    Returns:
+        dict matching the report sidecar schema.
+    """
+    sidecar = {
+        "constraint_id": constraint_id,
+        "iteration_round": iteration_round,
+    }
+
+    # --- Verdict, subsystems, tensions from diagnostic_verdict ---
+    dv = entry.get("diagnostic_verdict") if entry else None
+    if dv:
+        verdict_raw = dv.get("verdict", "unknown")
+        sidecar["verdict"] = verdict_raw.upper() if isinstance(verdict_raw, str) else "UNKNOWN"
+        n_avail = dv.get("subsystems_available", 0)
+        unavail = dv.get("subsystems_unavailable", [])
+        total = n_avail + len(unavail)
+        sidecar["subsystems_checked"] = [n_avail, total]
+
+        raw_tensions = dv.get("tensions", [])
+        tensions = []
+        for t in raw_tensions:
+            subsystem = t.get("subsystem", "unknown")
+            signal = t.get("signal", "")
+            # Extract functor name (word before first '(') to match _parse_report
+            paren_idx = signal.find("(")
+            code = signal[:paren_idx].strip() if paren_idx > 0 else signal
+            tensions.append({
+                "subsystem": subsystem,
+                "code": code,
+                "detail": signal,
+            })
+        sidecar["tensions"] = tensions
+        sidecar["tension_count"] = len(tensions)
+
+        # Expected conflicts
+        raw_ec = dv.get("expected_conflicts", [])
+        expected_conflicts = []
+        for ec in raw_ec:
+            expected_conflicts.append({
+                "subsystem": ec.get("subsystem", "unknown"),
+                "code": ec.get("pattern", ""),
+            })
+        sidecar["expected_conflicts"] = expected_conflicts
+
+        # Convergent rejections
+        raw_cr = dv.get("convergent_rejections", [])
+        if raw_cr:
+            parts = []
+            for cr in raw_cr:
+                alt = cr.get("alternative_type", "?")
+                subs = cr.get("subsystems", [])
+                parts.append(f"{alt} (suggested by: {', '.join(str(s) for s in subs)})")
+            sidecar["convergent_rejections"] = "; ".join(parts)
+        else:
+            sidecar["convergent_rejections"] = "none"
+    else:
+        sidecar["verdict"] = "UNKNOWN"
+        sidecar["subsystems_checked"] = [0, 0]
+        sidecar["tensions"] = []
+        sidecar["tension_count"] = 0
+        sidecar["expected_conflicts"] = []
+        sidecar["convergent_rejections"] = "none"
+
+    # --- Classification ---
+    claimed_type = entry.get("claimed_type") if entry else None
+    classified_type = entry.get("maxent_top_type") if entry else None
+    mismatch = None
+    if claimed_type is not None and classified_type is not None and classified_type != "":
+        mismatch = (claimed_type != classified_type)
+
+    classification = {
+        "claimed_type": claimed_type,
+        "classified_type": classified_type if classified_type else None,
+        "mismatch": mismatch,
+        "confidence": entry.get("confidence") if entry else None,
+        "confidence_band": entry.get("confidence_band") if entry else None,
+        "rival_type": entry.get("rival_type") if entry else None,
+        "rival_p": entry.get("rival_prob") if entry else None,
+        "boundary": entry.get("boundary") if entry else None,
+        "psi": entry.get("tangled_psi") if entry else None,
+        "psi_label": entry.get("tangled_band") if entry else None,
+    }
+    sidecar["classification"] = classification
+
+    # --- Hard disagreement ---
+    if mismatch:
+        sidecar["hard_disagreement"] = {
+            "pipeline": claimed_type,
+            "maxent": classified_type,
+        }
+    else:
+        sidecar["hard_disagreement"] = None
+
+    # --- Drift events ---
+    sidecar["drift_events"] = [
+        {"severity": d.get("severity", "unknown"), "type": d.get("type", "unknown")}
+        for d in (entry.get("drift_events", []) if entry else [])
+    ]
+
+    # --- Mandatrophy gap (from Prolog output) ---
+    sidecar["mandatrophy_gap"] = extract_mandatrophy_gap(prolog_output)
+
+    # --- Structural signature ---
+    sidecar["structural_signature"] = entry.get("signature") if entry else None
+
+    # --- Purity ---
+    purity_score = entry.get("purity_score") if entry else None
+    purity_band = entry.get("purity_band") if entry else None
+    if purity_score is not None:
+        sidecar["purity"] = {"value": purity_score, "band": purity_band or "unknown"}
+    else:
+        sidecar["purity"] = None
+
+    # --- Post-synthesis flags ---
+    sidecar["post_synthesis_flags"] = list(entry.get("post_synthesis_flags", [])) if entry else []
+
+    return sidecar
 
 
 # --- Level Header ---
@@ -941,7 +1090,7 @@ def find_recent_testsets(hours=1):
 
 # --- Per-Constraint Report Generation ---
 
-def generate_report(constraint_id, data):
+def generate_report(constraint_id, data, iteration_round=None):
     """Generate a single constraint report. `data` is the shared loaded data dict."""
     print(f"\nGenerating enhanced report for: {constraint_id}")
 
@@ -995,14 +1144,48 @@ def generate_report(constraint_id, data):
 
     print(f"Report written to: {out_path}")
 
+    # --- Emit JSON sidecar ---
+    entry = find_constraint_entry(data["pipeline"], constraint_id)
+    sidecar = build_sidecar_data(constraint_id, entry, prolog_output, iteration_round)
+
+    # Validate (warn but don't block)
+    try:
+        from shared.schemas import validate_report_sidecar
+        validation_errors = validate_report_sidecar(sidecar)
+        if validation_errors:
+            for err in validation_errors:
+                logger.warning("Sidecar validation: %s", err)
+    except ImportError:
+        pass
+
+    sidecar_path = REPORTS_DIR / f"{constraint_id}_report.json"
+    try:
+        with open(sidecar_path, "w", encoding="utf-8") as f:
+            json.dump(sidecar, f, indent=2)
+        print(f"Sidecar written to: {sidecar_path}")
+    except OSError as e:
+        logger.warning("Failed to write sidecar: %s", e)
+
 
 # --- Main ---
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Enhanced Constraint Report — Three-Level Feedback Model",
+    )
+    parser.add_argument(
+        "constraint_ids", nargs="*",
+        help="Constraint IDs to generate reports for (auto-detects recent if omitted)",
+    )
+    parser.add_argument(
+        "--iteration-round", type=int, default=None,
+        help="Iteration round number (passed by orchestrators during iteration)",
+    )
+    args = parser.parse_args()
+
     # Determine which constraints to process
-    if len(sys.argv) >= 2:
-        constraint_ids = sys.argv[1:]
-    else:
+    constraint_ids = args.constraint_ids
+    if not constraint_ids:
         # Auto-discover testsets modified in the last hour
         constraint_ids = find_recent_testsets(hours=1)
         if not constraint_ids:
@@ -1030,7 +1213,7 @@ def main():
 
     # Generate reports
     for constraint_id in constraint_ids:
-        generate_report(constraint_id, data)
+        generate_report(constraint_id, data, iteration_round=args.iteration_round)
 
     if len(constraint_ids) > 1:
         print(f"\nDone: {len(constraint_ids)} reports generated.")
