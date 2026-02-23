@@ -66,13 +66,13 @@ Four constraints achieve maximal obstruction — all 6 context-pairs disagree:
 
 | Constraint | Orbit | Types |
 |-----------|-------|-------|
-| ai_performance_watermark | [indexically_opaque, tangled_rope, rope, snare] | 4 distinct |
-| openai_prism_development | [indexically_opaque, tangled_rope, rope, snare] | 4 distinct |
-| semiconductor_fabrication_chokepoint | [indexically_opaque, tangled_rope, rope, snare] | 4 distinct |
-| us_usmca_china_leverage | [indexically_opaque, tangled_rope, rope, snare] | 4 distinct |
+| ai_performance_watermark | [naturalized, tangled_rope, rope, snare] | 4 distinct |
+| openai_prism_development | [naturalized, tangled_rope, rope, snare] | 4 distinct |
+| semiconductor_fabrication_chokepoint | [naturalized, tangled_rope, rope, snare] | 4 distinct |
+| us_usmca_china_leverage | [naturalized, tangled_rope, rope, snare] | 4 distinct |
 
-All four share the same orbit structure: `[indexically_opaque, tangled_rope, rope, snare]`. This is the maximally fractured perspectival profile:
-- **Powerless** sees opacity (cannot determine what the constraint is)
+All four share the same orbit structure: `[naturalized, tangled_rope, rope, snare]`. This is the maximally fractured perspectival profile:
+- **Powerless** sees naturalization (cannot determine what the constraint is)
 - **Moderate** sees tangled coordination/extraction
 - **Institutional** sees legitimate coordination
 - **Analytical** sees extraction
@@ -136,7 +136,7 @@ The 212 descending constraints include:
 
 The 244 constraints with H¹ >= 5 are the most perspectivally fractured:
 - **Geopolitical constraints** with power-dependent classification
-- **Technology governance** constraints where opacity increases with decreasing power
+- **Technology governance** constraints where naturalization increases with decreasing power
 - **Emerging constraints** (2026 dataset) where classification is unsettled
 
 ---

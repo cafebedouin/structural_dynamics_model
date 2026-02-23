@@ -274,13 +274,13 @@ determine_gates_for(C, Ctx) :-
     ;   true
     ),
 
-    % --- Indexically Opaque (line 314) ---
+    % --- Naturalized (line 314) ---
     (   BaseEps =< REpsCeil
-    ->  assertz(omega1_blocking_gate(C, opaque_eps_at_or_below_045))
+    ->  assertz(omega1_blocking_gate(C, naturalized_eps_at_or_below_045))
     ;   true
     ),
     (   Chi >= TRChiFloor
-    ->  assertz(omega1_blocking_gate(C, opaque_chi_at_or_above_040))
+    ->  assertz(omega1_blocking_gate(C, naturalized_chi_at_or_above_040))
     ;   true
     ),
 
@@ -488,7 +488,7 @@ report_full(NC, NU, ConsistencyResult) :-
     report_structural_flags,
 
     % Opaque impossibility proof
-    report_opaque_impossibility,
+    report_naturalized_impossibility,
 
     % Structural signature analysis
     report_signature_analysis,
@@ -640,8 +640,8 @@ report_blocking_gates :-
         piton_chi_above_025 - 'Chi > 0.25',
         piton_eps_at_or_below_010 - 'BaseEps <= 0.10',
         piton_theater_below_070 - 'Theater < 0.70',
-        opaque_eps_at_or_below_045 - 'BaseEps <= 0.45',
-        opaque_chi_at_or_above_040 - 'Chi >= 0.40'
+        naturalized_eps_at_or_below_045 - 'BaseEps <= 0.45',
+        naturalized_chi_at_or_above_040 - 'Chi >= 0.40'
     ],
     forall(member(Gate - Desc, GateDescs), (
         findall(C, omega1_blocking_gate(C, Gate), Cs),
@@ -774,9 +774,9 @@ report_flag_row(Label, Present, Total) :-
 
 /* ---- Opaque Impossibility Proof ---- */
 
-report_opaque_impossibility :-
-    format('## Indexically Opaque Impossibility at Analytical Context~n~n'),
-    format('**Claim**: The `indexically_opaque` clause (drl_core.pl:314-318) can NEVER fire '),
+report_naturalized_impossibility :-
+    format('## Naturalized Impossibility at Analytical Context~n~n'),
+    format('**Claim**: The `naturalized` clause (drl_core.pl:314-318) can NEVER fire '),
     format('at the analytical/global context.~n~n'),
     format('**Proof**:~n'),
     format('- The clause requires: `BaseEps > 0.45 AND Chi < 0.40`~n'),
@@ -802,7 +802,7 @@ report_opaque_impossibility :-
     format('- Constraints satisfying BOTH BaseEps > 0.45 AND Chi < 0.40: **~w** (expected: 0)~n',
            [NExc]),
     (   NExc =:= 0
-    ->  format('- **Confirmed**: The opaque clause is structurally impossible at analytical context.~n~n')
+    ->  format('- **Confirmed**: The naturalized clause is structurally impossible at analytical context.~n~n')
     ;   format('- **UNEXPECTED**: Found ~w exceptions! Investigate: ~w~n~n', [NExc, Exceptions])
     ).
 

@@ -37,7 +37,7 @@ Each entry maps a predicate or concept across three vocabularies:
 
 | Categorical Concept | Code (file:line) | Domain Term | Rigor | Notes |
 |---------------------|-------------------|-------------|-------|-------|
-| Carrier set of Ω | 8 type atoms — throughout | Constraint types | STRICT | {mountain, rope, tangled_rope, snare, scaffold, piton, indexically_opaque, unknown} |
+| Carrier set of Ω | 8 type atoms — throughout | Constraint types | STRICT | {mountain, rope, tangled_rope, snare, scaffold, piton, naturalized, unknown} |
 | Binary operation on Ω | `composition_rule/3` — drl_modal_logic.pl:192 | Type composition | LOOSE | NOT a lattice meet — two absorbing elements |
 | Identity element | `unknown` — drl_modal_logic.pl:219 | Unknown type | LOOSE | composition_rule(X, unknown, X) by fallback |
 | Absorbing element 1 | `mountain` — drl_modal_logic.pl:192 | Natural law absorption | LOOSE | mountain ∘ X = mountain for all X |

@@ -284,7 +284,7 @@ param_spec(contamination_strength_tangled_rope,     number, range(0.0, 1.0), "Co
 param_spec(contamination_strength_scaffold,         number, range(0.0, 1.0), "Contamination strength: scaffold type").
 param_spec(contamination_strength_rope,             number, range(0.0, 1.0), "Contamination strength: rope type").
 param_spec(contamination_strength_mountain,         number, range(0.0, 1.0), "Contamination strength: mountain type (0=none)").
-param_spec(contamination_strength_indexically_opaque, number, range(0.0, 1.0), "Contamination strength: indexically opaque").
+param_spec(contamination_strength_naturalized, number, range(0.0, 1.0), "Contamination strength: naturalized").
 
 % ============================================================
 % 27. NETWORK METRICS

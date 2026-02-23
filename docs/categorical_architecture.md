@@ -53,7 +53,7 @@ The `gauge_orbit/2` predicate collects all local sections of the presheaf for a 
 
 **Rigor: LOOSE (for the Heyting algebra claim); what IS present is a priority monoid**
 
-The type space Omega = {mountain, rope, tangled_rope, snare, scaffold, piton, indexically_opaque, unknown} serves as the codomain of the presheaf. Gemini identified this as a Heyting algebra (the subobject classifier of a topos). This is incorrect.
+The type space Omega = {mountain, rope, tangled_rope, snare, scaffold, piton, naturalized, unknown} serves as the codomain of the presheaf. Gemini identified this as a Heyting algebra (the subobject classifier of a topos). This is incorrect.
 
 The `composition_rule/3` predicate defines a binary operation on Omega:
 
@@ -78,7 +78,7 @@ A Heyting algebra requires a unique top element. This operation has **two absorb
 
 This makes (Omega, composition_rule, unknown) a **monoid** with additional idempotent structure. It is also a **semilattice** if we ignore the piton anomaly (piton was added late, specifically for performative constraints, and its absorption behavior may be a design choice rather than a logical necessity).
 
-The classification cascade itself (`classify_from_metrics/6`) implements a **total preorder** via clause priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > indexically_opaque > unknown. This is consistent and well-defined, but it is not a lattice.
+The classification cascade itself (`classify_from_metrics/6`) implements a **total preorder** via clause priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > naturalized > unknown. This is consistent and well-defined, but it is not a lattice.
 
 ---
 

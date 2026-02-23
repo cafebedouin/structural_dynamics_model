@@ -468,7 +468,7 @@ expected_conflict_pattern(_, dirac, dirac_mismatch(mixed, tangled_rope), tangled
     'Tangled rope is mixed first-class/second-class; Dirac mixed is definitional').
 
 % --- P9: residual_type_artifact ---
-% Residual types (unknown, indexically_opaque) are not in MaxEnt's 6-type model.
+% Residual types (unknown, naturalized) are not in MaxEnt's 6-type model.
 expected_conflict_pattern(_, maxent, residual_override(_, _), _,
     residual_type_artifact,
     'Residual types not in MaxEnt 6-type model; disagreement is mechanistic').

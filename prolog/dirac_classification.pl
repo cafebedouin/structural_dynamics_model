@@ -29,7 +29,7 @@
 %                                        but switching costs make them inaccessible)
 %   tangled_rope       → mixed          (first-class coordination entangled with
 %                                        second-class extraction; reform = factoring)
-%   indexically_opaque  → undetermined   (constraint algebra unknown)
+%   naturalized  → undetermined   (constraint algebra unknown)
 %
 % WHERE THIS ILLUMINATES (vs. merely relabels):
 %   1. gauge_orbit/2 and preserved_under_context_shift/2 formalize what
@@ -314,10 +314,10 @@ type_to_dirac_class(tangled_rope, C, Context, mixed(Separability)) :-
     drl_boltzmann_analysis:reformability_score(C, Context, Score),
     score_to_separability(Score, Separability).
 
-% Indexically opaque constraints have undetermined Dirac class:
+% Naturalized constraints have undetermined Dirac class:
 % the constraint algebra is unknown. Investigation IS the bracket
 % computation.
-type_to_dirac_class(indexically_opaque, _, _, undetermined).
+type_to_dirac_class(naturalized, _, _, undetermined).
 
 % Unknown constraints are undetermined by definition.
 type_to_dirac_class(unknown, _, _, undetermined).

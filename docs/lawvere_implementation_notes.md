@@ -32,7 +32,7 @@ The foundational module uses Deferential Realism's constraint typology:
 | `tangled_rope` | Domain metaphor | Coordination mechanism with hidden extraction |
 | `scaffold` | Domain metaphor | Temporary coordination, has sunset clause |
 | `piton` | Domain metaphor | Performative constraint (high theater) |
-| `indexically_opaque` | Technical | Contradictory metrics — unclassifiable |
+| `naturalized` | Technical | Contradictory metrics — unclassifiable |
 | `unknown` | Technical | Fallback when no threshold fires |
 
 Helper predicates use these names directly: `is_mountain/3`, `is_snare/3`, etc. Context infrastructure uses generic names: `context/4`, `standard_context/1`, `valid_context/1`, `power_order/2`.

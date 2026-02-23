@@ -57,7 +57,7 @@ param(rope_epsilon_ceiling, 0.45).
 
 **Impact:** The Rope gate accepts constraints with base extraction up to 0.45, not 0.15. This is a 3× wider gate. The dual-threshold design (χ AND ε) documented in logic.md is fundamentally undermined — the ε gate is so wide it barely constrains. The paper's formal definition `⊞C[I] ↔ χ ≤ 0.35 ∧ ε(C) ≤ 0.15` does not match the implementation.
 
-**Also affects:** `indexically_opaque` classification at drl_core.pl:318 uses `rope_epsilon_ceiling` for its gate, and `appears_as_rope` in structural_signatures.pl:1661 also uses it. Both would be affected.
+**Also affects:** `naturalized` classification at drl_core.pl:318 uses `rope_epsilon_ceiling` for its gate, and `appears_as_rope` in structural_signatures.pl:1661 also uses it. Both would be affected.
 
 **Resolution needed:** This is the most consequential divergence. At 0.45, the ε check is nearly vacuous for Ropes.
 
@@ -389,7 +389,7 @@ dr_type/3 → metric_based_type_indexed → classify_from_metrics/6
 ```
 
 **Code flow (drl_core.pl):**
-Same priority ordering: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > indexically_opaque > unknown.
+Same priority ordering: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > naturalized > unknown.
 
 **Divergences in gate thresholds** (the actual threshold values differ per C1-C4 above):
 
@@ -400,7 +400,7 @@ Same priority ordering: Mountain > Snare > Scaffold > Rope > Tangled Rope > Pito
 | Tangled Rope | ≥ 0.50 | ≥ **0.30** | 0.40-0.90 | 0.40-0.90 |
 | Piton | N/A | N/A | ≤ 0.10 | ≤ **0.25** |
 
-**Additional code gate:** `indexically_opaque` (drl_core.pl:317-321) — not documented as a formal type in logic.md's gate section but is present as a classification output. It fires when `BaseEps > rope_epsilon_ceiling ∧ Chi < tangled_rope_chi_floor`.
+**Additional code gate:** `naturalized` (drl_core.pl:317-321) — not documented as a formal type in logic.md's gate section but is present as a classification output. It fires when `BaseEps > rope_epsilon_ceiling ∧ Chi < tangled_rope_chi_floor`.
 
 **Post-metric override:** `structural_signatures:integrate_signature_with_modal/3` applies signature overrides. This is correctly documented.
 

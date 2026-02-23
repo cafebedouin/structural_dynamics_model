@@ -481,7 +481,7 @@ report_type_distribution(Cs, Ctx) :-
     format('### Type Distribution~n~n'),
     length(Cs, NC),
     TypeOrder = [mountain, rope, scaffold, tangled_rope, piton, snare,
-                 indexically_opaque, unknown],
+                 naturalized, unknown],
     format('| Type | Count | Fraction |~n'),
     format('|------|-------|----------|~n'),
     forall(member(T, TypeOrder), (
@@ -842,7 +842,7 @@ report_gc_composition(Members, Ctx) :-
     format('### Giant Component Composition~n~n'),
     length(Members, Size),
     TypeOrder = [mountain, rope, scaffold, tangled_rope, piton, snare,
-                 indexically_opaque, unknown],
+                 naturalized, unknown],
     format('| Type | Count | Fraction |~n'),
     format('|------|-------|----------|~n'),
     forall(member(T, TypeOrder), (
@@ -1187,7 +1187,7 @@ run_phase4 :-
     ],
     format('### Type Distribution by Context~n~n'),
     TypeOrder = [mountain, rope, scaffold, tangled_rope, piton, snare,
-                 indexically_opaque, unknown],
+                 naturalized, unknown],
     format('| Type |'),
     forall(member(ctx(_, _, Label), Contexts), format(' ~w |', [Label])),
     format('~n|------|'),

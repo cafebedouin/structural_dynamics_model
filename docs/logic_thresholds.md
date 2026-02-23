@@ -452,7 +452,7 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 | `contamination_strength_snare` | **1.0** | 8 | Maximum contamination (pure extraction) |
 | `contamination_strength_piton` | **0.8** | 8 | High contamination (degraded state) |
 | `contamination_strength_tangled_rope` | **0.5** | 8 | Moderate contamination (hybrid) |
-| `contamination_strength_indexically_opaque` | **0.3** | 8 | Moderate-low contamination (ambiguous structure) |
+| `contamination_strength_naturalized` | **0.3** | 8 | Moderate-low contamination (ambiguous structure) |
 | `contamination_strength_scaffold` | **0.2** | 8 | Low contamination (temporary support) |
 | `contamination_strength_rope` | **0.1** | 8 | Minimal contamination (pure coordination) |
 | `contamination_strength_mountain` | **0.0** | 8 | **Mountains don't contaminate** (natural laws) |
@@ -472,7 +472,7 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 | `mountain` | **0.0** | 8 | **Immune** â€" natural laws unaffected by neighbor contamination |
 | `piton` | **0.3** | 8 | Low susceptibility â€" degraded state already resistant |
 | `snare` | **0.5** | 8 | Moderate susceptibility |
-| `indexically_opaque` | **0.7** | 8 | High susceptibility â€" ambiguous structures easily influenced |
+| `naturalized` | **0.7** | 8 | High susceptibility â€" ambiguous structures easily influenced |
 | `tangled_rope` | **0.8** | 8 | High susceptibility â€" hybrid state easily influenced |
 | `scaffold` | **0.9** | 8 | Very high susceptibility â€" temporary structures fragile |
 | `rope` | **1.0** | 8 | **Fully susceptible** â€" pure coordination most affected |
@@ -565,7 +565,7 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 ### Priority Ordering (classify_from_metrics/6)
 ```
-Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Indexically Opaque > unknown
+Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Naturalized > unknown
 ```
 
 ### Two-Regime Architecture

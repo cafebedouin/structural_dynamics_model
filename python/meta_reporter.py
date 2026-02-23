@@ -296,7 +296,7 @@ class MetaReporter:
 
         unknown_families = [
             (sig, members) for sig, members in self.orbit_families.items()
-            if 'unknown' in sig or 'indexically_opaque' in sig
+            if 'unknown' in sig or 'naturalized' in sig
         ]
         if unknown_families:
             unknown_count = sum(len(m) for _, m in unknown_families)

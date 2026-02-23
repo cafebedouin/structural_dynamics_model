@@ -214,7 +214,7 @@ corpus_cohomology(Summary) :-
     % H0 by type — which types have global sections
     findall(Type-Cnt,
         (   member(Type, [mountain, rope, tangled_rope, snare, scaffold,
-                          piton, indexically_opaque, unknown]),
+                          piton, naturalized, unknown]),
             findall(C, (
                 cached_obstruction(C, 1, 0),
                 orbit_vector(C, [Type|_])
@@ -253,7 +253,7 @@ corpus_cohomology(Summary) :-
     % H1 by analytical-context type
     findall(AnalType-MeanH1,
         (   member(AnalType, [mountain, rope, tangled_rope, snare, scaffold,
-                               piton, indexically_opaque, unknown]),
+                               piton, naturalized, unknown]),
             findall(H1Val,
                 (   cached_obstruction(Cx, _, H1Val),
                     analytical_type(Cx, AnalType)

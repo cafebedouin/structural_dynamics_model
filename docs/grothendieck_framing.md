@@ -30,7 +30,7 @@ F_C : C^op → Set
 F_C(U_i) = dr_type(C, U_i) ∈ Ω
 ```
 
-sends each observer position to a type from the eight-element type space Ω = {mountain, rope, tangled_rope, snare, scaffold, piton, indexically_opaque, unknown}. The presheaf topos **PSh(C)** is the category of all such functors, with natural transformations as morphisms. Each constraint in the corpus defines one object of this topos.
+sends each observer position to a type from the eight-element type space Ω = {mountain, rope, tangled_rope, snare, scaffold, piton, naturalized, unknown}. The presheaf topos **PSh(C)** is the category of all such functors, with natural transformations as morphisms. Each constraint in the corpus defines one object of this topos.
 
 **What this topos IS.** PSh(C) is a genuine topos. It has a subobject classifier (the presheaf of sieves on **C**), exponential objects, and — crucially for our purposes — cohomology. The internal logic of PSh(C) is intuitionistic: a proposition is "true" not absolutely, but *at each object of the site*. A constraint is a mountain not in some absolute sense, but *at a context*. The sentence "constraint X is a mountain" has a truth value that is itself a presheaf — it may be true at U₄ and false at U₁. This is exactly the philosophical claim of Deferential Realism: there is no view from nowhere for constraint classification.
 
@@ -72,7 +72,7 @@ The corpus reveals a striking distribution:
 
 The gap at H¹ = 1 and H¹ = 2 is not accidental. It reflects the structure of the classification cascade: when a constraint changes type, it changes at a power threshold that affects multiple pair comparisons simultaneously. A single-threshold transition (type changes between exactly two adjacent power levels) creates 3 disagreeing pairs, not 1 or 2. The H¹ distribution is shaped by the site geometry.
 
-The four maximal-obstruction constraints (H¹ = 6) share the orbit `[indexically_opaque, tangled_rope, rope, snare]` — four distinct types, one per context. These are constraints where power level completely determines classification. They represent the limiting case of perspectival dependence.
+The four maximal-obstruction constraints (H¹ = 6) share the orbit `[naturalized, tangled_rope, rope, snare]` — four distinct types, one per context. These are constraints where power level completely determines classification. They represent the limiting case of perspectival dependence.
 
 ---
 

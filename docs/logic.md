@@ -158,7 +158,7 @@ Constraint-space is terrain you navigate with finite energy. From your position,
 - Examples: QWERTY keyboards, legacy systems
 - Action: Bypass
 
-**Indexically Opaque**: Power-scaling ambiguity, investigate
+**Naturalized**: Power-scaling ambiguity, investigate
 - High base extraction (Îµ > 0.45) but low power-scaled extraction (Ï‡ < 0.40)
 - Action: Investigate from multiple indices
 
@@ -183,7 +183,7 @@ This document establishes:
 - Eleven drift types (degradation patterns)
 
 **Â§IV Inference Rules:**
-- Priority ordering: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Indexically Opaque
+- Priority ordering: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized
 - Classification algorithm
 - Two-regime architecture (metrics â†’ signature override)
 
@@ -540,7 +540,7 @@ The seven constraint types form the core classification system. Each type has di
 
 **Priority ordering in classify_from_metrics/6:**
 ```
-Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Indexically Opaque > unknown
+Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Naturalized > unknown
 ```
 
 This ordering is implemented as a sequence of guards in drl_core.pl. The first type whose conditions are satisfied becomes the classification.
@@ -1945,7 +1945,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
 - `piton_epsilon_floor` = **0.10**
 - `piton_theater_floor` = **0.70**
 
-**Priority:** Piton > Indexically Opaque > unknown (checked after Tangled Rope, before Indexically Opaque)
+**Priority:** Piton > Naturalized > unknown (checked after Tangled Rope, before Naturalized)
 
 ##### Action Implication
 
@@ -1980,11 +1980,11 @@ Don't waste energy maintaining or fighting Pitons:
 
 ---
 
-#### B.7 Indexically Opaque Operator
+#### B.7 Naturalized Operator
 
 ##### Conceptual Overview
 
-An **Indexically Opaque** constraint is one where power scaling dramatically changes the experienced extraction, making the constraint's "true nature" structurally ambiguous. It has high base extraction (Îµ > 0.45) but low power-scaled extraction (Ï‡ < 0.40), meaning the raw cost is high but the effective experienced cost is low from the evaluating index.
+An **Naturalized** constraint is one where power scaling dramatically changes the experienced extraction, making the constraint's "true nature" structurally ambiguous. It has high base extraction (Îµ > 0.45) but low power-scaled extraction (Ï‡ < 0.40), meaning the raw cost is high but the effective experienced cost is low from the evaluating index.
 
 This catches a specific structural gap: constraints that fall through all other gates because their base extraction is too high for Rope but their power-scaled extraction is too low for Tangled Rope or Snare. The disconnect between raw and effective extraction is itself informative â€" it reveals that power position is doing significant work in mediating the constraint's impact.
 
@@ -1993,14 +1993,14 @@ This catches a specific structural gap: constraints that fall through all other 
 - **Complex tax codes** (from organized perspective): High raw complexity/cost but organized actors reduce effective burden through professional management
 - **International trade regulations** (from institutional perspective): High base extraction but institutional actors extract net benefit through regulatory capture
 
-##### The Distinguishing Feature: Power Scaling Opacity
+##### The Distinguishing Feature: Power Scaling Naturalization
 
-The constraint's classification is "opaque" because the same structural mechanism appears fundamentally different depending on your power index. The base extraction is genuinely high (above Rope ceiling), but power scaling compresses it below the Tangled Rope floor.
+The constraint's classification is "naturalized" because the same structural mechanism appears fundamentally different depending on your power index. The base extraction is genuinely high (above Rope ceiling), but power scaling compresses it below the Tangled Rope floor.
 
 ##### Formal Definition
 
 ```
-IndexicallyOpaque(C) â†" Îµ(C) > 0.45 âˆ§ Ï‡(C, I.P, I.S) < 0.40
+Naturalized(C) â†" Îµ(C) > 0.45 âˆ§ Ï‡(C, I.P, I.S) < 0.40
 ```
 
 **Components:**
@@ -2015,18 +2015,18 @@ IndexicallyOpaque(C) â†" Îµ(C) > 0.45 âˆ§ Ï‡(C, I.P, I.S) < 0.40
 
 ```prolog
 % drl_core.pl, classify_from_metrics/6
-classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, indexically_opaque) :-
+classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, naturalized) :-
     config:param(rope_epsilon_ceiling, EpsCeil),
     BaseEps > EpsCeil,
     config:param(tangled_rope_chi_floor, ChiFloor),
     Chi < ChiFloor, !.
 ```
 
-**Priority:** Indexically Opaque > unknown (checked after Piton, before unknown)
+**Priority:** Naturalized > unknown (checked after Piton, before unknown)
 
 ##### Network Participation
 
-Indexically Opaque constraints participate in purity contamination propagation with specific parameters:
+Naturalized constraints participate in purity contamination propagation with specific parameters:
 
 | Property | Value | Rationale |
 |----------|-------|-----------|
@@ -2035,12 +2035,12 @@ Indexically Opaque constraints participate in purity contamination propagation w
 
 ##### Action Implication
 
-**Investigate** â†' The power-scaling opacity itself is the primary finding.
+**Investigate** â†' The power-scaling naturalization itself is the primary finding.
 
-When facing an Indexically Opaque constraint:
+When facing a Naturalized constraint:
 - Investigate why power scaling is doing so much work
 - Re-evaluate from multiple indices (powerless, moderate, institutional)
-- The opacity often reveals that the constraint is a Tangled Rope or Snare from lower-power indices
+- The naturalization often reveals that the constraint is a Tangled Rope or Snare from lower-power indices
 - Consider whether the base extraction (Îµ > 0.45) represents real structural cost that power is masking
 
 ##### Summary
@@ -2064,7 +2064,7 @@ All seven constraint types now defined with full triple-layer format:
 - âœ… Tangled Rope (âŠžâŠ ): Hybrid coordination-extraction
 - âœ… Scaffold (âŠ¡): Temporary support
 - âœ… Piton (âŠŸ): Degraded theater
-- âœ… Indexically Opaque: Power-scaling ambiguity
+- âœ… Naturalized: Power-scaling ambiguity
 
 **Next:** Â§II.C Detection Pattern Operators (FNL, CI_Rope, FCR)
 
@@ -3005,7 +3005,7 @@ Classification checks types in strict order (first match wins):
 
 **â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”**
 **â”‚ PRIORITY ORDERING (First Match Wins):                  â”‚**
-**â”‚ Mountain > Snare > Scaffold > Rope > Tangled > Piton > Indexically Opaque   â”‚**
+**â”‚ Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized   â”‚**
 **â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜**
 
 **Why this ordering?**
@@ -3036,7 +3036,7 @@ Each type checks its conditions with cut (`!`) at end. First successful check te
 - Compares Îµ, Ï‡, Supp against configured thresholds
 - Checks immutability gates
 - Fast, deterministic classification
-- Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Indexically Opaque
+- Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized
 
 **Regime 2: Signatures (structural_signatures.pl)**
 
@@ -3124,7 +3124,7 @@ Signatures do NOT modify `classify_from_metrics/6`. They operate afterward, prov
 
 Priority ordering and two-regime architecture defined:
 - âœ… Canonical predicate: classify_from_metrics/6
-- âœ… Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Indexically Opaque
+- âœ… Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized
 - âœ… Two-regime: Metrics (fast) â†’ Signatures (structural)
 - âœ… Shadow mode discipline maintained
 - âœ… Override rules specified

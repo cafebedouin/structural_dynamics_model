@@ -428,7 +428,7 @@ gate_priority(scaffold, 3).
 gate_priority(rope, 4).
 gate_priority(tangled_rope, 5).
 gate_priority(piton, 6).
-gate_priority(indexically_opaque, 7).
+gate_priority(naturalized, 7).
 gate_priority(unknown, 8).
 
 %% check_immutability_flip(+SrcCtx, +TgtCtx)

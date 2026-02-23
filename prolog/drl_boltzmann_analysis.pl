@@ -496,8 +496,8 @@ qualify_action(monitor_sunset, _Purity, _C, qualified_action(monitor_sunset, acc
 qualify_action(bypass, _Purity, _C, qualified_action(bypass, degraded, none),
               terminal_state) :- !.
 
-% investigate_opacity — passthrough (indexically opaque: consent dimension unresolvable)
-qualify_action(investigate_opacity, _Purity, _C, qualified_action(investigate_opacity, stable, none),
+% investigate_naturalization — passthrough (naturalized: structurally pervasive extraction)
+qualify_action(investigate_naturalization, _Purity, _C, qualified_action(investigate_naturalization, stable, none),
               passthrough) :- !.
 
 % investigate — passthrough
@@ -553,7 +553,7 @@ base_action_complexity(reform,         4).
 base_action_complexity(cut,            2).
 base_action_complexity(monitor_sunset, 2).
 base_action_complexity(bypass,         1).
-base_action_complexity(investigate_opacity, 1).
+base_action_complexity(investigate_naturalization, 1).
 base_action_complexity(investigate,    1).
 
 %% energy_multiplier(+Action, +Purity, +MaxMult, -Mult)

@@ -84,7 +84,7 @@ maxent_enabled :-
     config:param(maxent_enabled, 1).
 
 %% The six primary types for the shadow classifier.
-%  Excludes unknown and indexically_opaque (residual categories).
+%  Excludes unknown and naturalized (residual categories).
 maxent_type(mountain).
 maxent_type(rope).
 maxent_type(tangled_rope).
@@ -432,9 +432,9 @@ maxent_disagreement(C, Context, Disagreement) :-
                           EntropyThresh, ProbThresh, Disagreement).
 
 residual_type(unknown).
-residual_type(indexically_opaque).
+residual_type(naturalized).
 
-%% Residual types (unknown, indexically_opaque) are not in the shadow model.
+%% Residual types (unknown, naturalized) are not in the shadow model.
 %  The shadow will always disagree — flag as residual_override, not hard.
 classify_disagreement(ShadowType, DetType, _DetProb, _HNorm, _ET, _PT,
                       residual_override(ShadowType, DetType)) :-

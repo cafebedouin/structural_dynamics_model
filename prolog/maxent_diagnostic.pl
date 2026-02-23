@@ -160,11 +160,11 @@ task1_missing_constraints(Context) :-
     forall(member(Type-Count, DTCounts),
         format('  ~w: ~w~n', [Type, Count])),
 
-    % Constraints claimed but with unknown/indexically_opaque det type
+    % Constraints claimed but with unknown/naturalized det type
     findall(C-T, (
         member(C, Visible),
         drl_core:dr_type(C, Context, T),
-        (T = unknown ; T = indexically_opaque)
+        (T = unknown ; T = naturalized)
     ), ResidualCs),
     length(ResidualCs, NResidual),
     format('RESIDUAL_TYPE_COUNT: ~w~n', [NResidual]),

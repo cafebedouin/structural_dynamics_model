@@ -6,7 +6,7 @@ Determines if the 4 indices (agent_power, time_horizon, exit_options, spatial_sc
 are sufficient to explain all constraint type variance, or if new categories are needed.
 
 Classifies collisions into three categories:
-  - Classification failures (unknown/opaque types — real insufficiency signal)
+  - Classification failures (unknown/naturalized types — real insufficiency signal)
   - Expected perspectival variance (type differences explained by agent_power level)
   - Genuine collisions (unexplained type variance — actual index insufficiency)
 """
@@ -164,7 +164,7 @@ class SufficiencyTester:
         perspectival_variance = []
         genuine_collisions = []
 
-        failure_types = {'unknown', 'indexically_opaque'}
+        failure_types = {'unknown', 'naturalized'}
 
         for collision in collisions:
             types = set(collision['types_produced'])
@@ -491,7 +491,7 @@ class SufficiencyTester:
             f.write("| Category | Count | Rate |\n")
             f.write("|----------|------:|-----:|\n")
             f.write(
-                f"| Classification failures (unknown/opaque) "
+                f"| Classification failures (unknown/naturalized) "
                 f"| {summary['classification_failures']} "
                 f"| {summary['classification_failure_rate']:.1f}% "
                 f"of collisions |\n")
@@ -532,7 +532,7 @@ class SufficiencyTester:
             if failures:
                 f.write("## Classification Failures\n\n")
                 f.write(f"**{len(failures)} collisions** involve "
-                        "`unknown` or `indexically_opaque` types — "
+                        "`unknown` or `naturalized` types — "
                         "these represent real classification "
                         "insufficiency.\n\n")
                 f.write("| Constraint ID | Types | Domain "

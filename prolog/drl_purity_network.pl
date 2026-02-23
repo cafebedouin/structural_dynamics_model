@@ -141,7 +141,7 @@ type_contamination_strength(tangled_rope, 0.5) :- !.
 type_contamination_strength(scaffold,     0.2) :- !.
 type_contamination_strength(rope,         0.1) :- !.
 type_contamination_strength(mountain,     0.0) :- !.
-type_contamination_strength(indexically_opaque, 0.3) :- !.
+type_contamination_strength(naturalized, 0.3) :- !.
 type_contamination_strength(_,            0.0).
 
 %% type_immunity(+Type, -Immunity)
@@ -153,7 +153,7 @@ type_immunity(snare,         0.5) :- !.
 type_immunity(tangled_rope,  0.8) :- !.
 type_immunity(scaffold,      0.9) :- !.
 type_immunity(rope,          1.0) :- !.
-type_immunity(indexically_opaque, 0.7) :- !.
+type_immunity(naturalized, 0.7) :- !.
 type_immunity(_,             0.5).
 
 % Categorical: Contravariant purity propagation — effective purity decreases when neighbors have lower purity

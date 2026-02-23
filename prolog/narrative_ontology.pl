@@ -137,7 +137,7 @@ validate_constraint_claims :-
         ( % Skip list-wrapped legacy claims (data artifacts from older testset format)
           (is_list(Name) ; is_list(Type))
         -> true
-        ; member(Type, [mountain, rope, tangled_rope, snare, scaffold, piton, indexically_opaque])
+        ; member(Type, [mountain, rope, tangled_rope, snare, scaffold, piton, naturalized])
         -> true
         ;  format('ERROR: Ontological Violation in ~w: "~w" is not a valid constraint type.~n', [Name, Type]),
            fail
@@ -211,7 +211,7 @@ constraint_type(tangled_rope).  % Validated by corpus analysis (168/467 constrai
 constraint_type(snare).
 constraint_type(scaffold).
 constraint_type(piton).
-constraint_type(indexically_opaque).
+constraint_type(naturalized).
 
 %% constraint_type_name(?Type, ?Name)
 %  Human-readable names for constraint types.
@@ -221,7 +221,7 @@ constraint_type_name(tangled_rope, 'Tangled Rope (Hybrid Coordination/Extraction
 constraint_type_name(snare, 'Snare (Pure Extraction)').
 constraint_type_name(scaffold, 'Scaffold (Temporary Support)').
 constraint_type_name(piton, 'Piton (Degraded Coordination)').
-constraint_type_name(indexically_opaque, 'Indexically Opaque (Consent Dimension Unresolvable)').
+constraint_type_name(naturalized, 'Naturalized (Structurally Pervasive Extraction)').
 
 
 %% is_tangled_rope(+ConstraintID)

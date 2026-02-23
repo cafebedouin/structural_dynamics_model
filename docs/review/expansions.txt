@@ -31,7 +31,7 @@ This is a fascinating and deeply theoretical request. I will begin by conducting
 │     "Read logic.md which provided the formal definitions of the six constraint types, their metrics (ε, χ, Supp),    │
 │ and the explicit priority ordering of the classification logic.",                                                    │
 │     "Read prolog/drl_core.pl to verify the implementation of classify_from_metrics/6 and discovered the              │
-│ indexically_opaque type. This confirmed the classification logic is exactly as specified in the documentation.",     │
+│ naturalized type. This confirmed the classification logic is exactly as specified in the documentation.",     │
 │     "Read logic_extensions.md which was the key to the entire investigation. It formally defined the 'Purity' score, │
 │ 'Purity Zones', and the 'Network Drift' (Stage 9) dynamics, providing the state transition function needed for the   │
 │ fixed-point analysis.",                                                                                              │
@@ -70,12 +70,12 @@ This is a fascinating and deeply theoretical request. I will begin by conducting
 │     {                                                                                                                │
 │       "FilePath": "prolog/drl_core.pl",                                                                              │
 │       "Reasoning": "This file contains the canonical Prolog implementation of the static classification logic. It    │
-│ confirms that the logic described in logic.md is faithfully implemented and reveals the indexically_opaque type,     │
+│ confirms that the logic described in logic.md is faithfully implemented and reveals the naturalized type,     │
 │ which represents a structural paradox—an important element for the lattice model.",                                  │
 │       "KeySymbols": [                                                                                                │
 │         "classify_from_metrics/6",                                                                                   │
 │         "dr_type/3",                                                                                                 │
-│         "indexically_opaque"                                                                                         │
+│         "naturalized"                                                                                         │
 │       ]                                                                                                              │
 │     },                                                                                                               │
 │     {                                                                                                                │
@@ -118,7 +118,7 @@ This is a fascinating and deeply theoretical request. I will begin by conducting
 
 
    * The Set (S): The set of elements in our lattice is the six core constraint types defined in logic.md: Mountain (■),
-     Rope (℘), Snare (⌗), Tangled Rope (℘⌗), Scaffold (⌗), and Piton (⌟), plus the paradoxical indexically_opaque type
+     Rope (℘), Snare (⌗), Tangled Rope (℘⌗), Scaffold (⌗), and Piton (⌟), plus the paradoxical naturalized type
      found in prolog/drl_core.pl.
    * The Partial Order (≤): The purity_score/2 predicate, implemented in prolog/structural_signatures.pl, acts as a
      valuation function. It induces a partial order where for any two constraints A and B, we can say `A ≤ B` if
@@ -179,7 +179,7 @@ This is a fascinating and deeply theoretical request. I will begin by conducting
      of finding a position in the partial order.
    * **purity_score/2:** The weighted, non-linear calculation of purity is what makes the lattice structure non-trivial,
      but it consistently upholds the ordering.
-   * Structural Paradoxes: The indexically_opaque type is a perfect example of a "hole" in the lattice—a state that
+   * Structural Paradoxes: The naturalized type is a perfect example of a "hole" in the lattice—a state that
      violates expected properties. It represents a point where the metrics are contradictory, breaking the smooth
      geometry of the lattice and signaling a paradox in the underlying structure.
 
@@ -870,7 +870,7 @@ Based on the architectural review, here is the feasibility analysis for integrat
    1. The Set of Truth Values (Ω):
       In Lawvere's theory, the subobject classifier Ω generalizes the binary set {True, False} to a richer set of "truth
   values." In the DR system, this role is filled by the set of six primary constraint types and their extensions:
-  {mountain, snare, scaffold, rope, tangled_rope, piton, indexically_opaque, unknown}. This set forms the carrier for
+  {mountain, snare, scaffold, rope, tangled_rope, piton, naturalized, unknown}. This set forms the carrier for
   the system's internal logic.
 
 
@@ -1452,7 +1452,7 @@ Based on the architectural review, here is the feasibility analysis for integrat
    * Firstness (Quality/Possibility): As is typical, Firstness is the most subtle category. It is present as:
        * The set of possible Types (mountain, rope, snare, etc.), which represent the qualitative potential of any
          constraint.
-       * The classification results unknown and indexically_opaque, which represent a state of ambiguity and pure
+       * The classification results unknown and naturalized, which represent a state of ambiguity and pure
          possibility before a definite triadic relation is established.
 
   3. Abductive Capability: The Signature Override Layer

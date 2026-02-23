@@ -288,28 +288,28 @@ type_distance_lookup(mountain, scaffold, 0.7).
 type_distance_lookup(mountain, snare, 1.0).
 type_distance_lookup(mountain, tangled_rope, 0.9).
 type_distance_lookup(mountain, unknown, 0.5).
-type_distance_lookup(mountain, indexically_opaque, 0.5).
+type_distance_lookup(mountain, naturalized, 0.5).
 type_distance_lookup(piton, rope, 0.4).
 type_distance_lookup(piton, scaffold, 0.3).
 type_distance_lookup(piton, snare, 0.6).
 type_distance_lookup(piton, tangled_rope, 0.5).
 type_distance_lookup(piton, unknown, 0.4).
-type_distance_lookup(piton, indexically_opaque, 0.4).
+type_distance_lookup(piton, naturalized, 0.4).
 type_distance_lookup(rope, scaffold, 0.2).
 type_distance_lookup(rope, snare, 0.6).
 type_distance_lookup(rope, tangled_rope, 0.3).
 type_distance_lookup(rope, unknown, 0.4).
-type_distance_lookup(rope, indexically_opaque, 0.4).
+type_distance_lookup(rope, naturalized, 0.4).
 type_distance_lookup(scaffold, snare, 0.5).
 type_distance_lookup(scaffold, tangled_rope, 0.4).
 type_distance_lookup(scaffold, unknown, 0.4).
-type_distance_lookup(scaffold, indexically_opaque, 0.4).
+type_distance_lookup(scaffold, naturalized, 0.4).
 type_distance_lookup(snare, tangled_rope, 0.3).
 type_distance_lookup(snare, unknown, 0.4).
-type_distance_lookup(snare, indexically_opaque, 0.4).
+type_distance_lookup(snare, naturalized, 0.4).
 type_distance_lookup(tangled_rope, unknown, 0.4).
-type_distance_lookup(tangled_rope, indexically_opaque, 0.4).
-type_distance_lookup(indexically_opaque, unknown, 0.3).
+type_distance_lookup(tangled_rope, naturalized, 0.4).
+type_distance_lookup(naturalized, unknown, 0.3).
 
 %% trajectory_distance(+C1, +C2, +Context, -Distance)
 %  Computes the weighted 4-component distance between two trajectories.

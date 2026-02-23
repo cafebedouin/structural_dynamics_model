@@ -87,7 +87,7 @@ where $\pi(P)$ is a power index associated with the observer's power level, $\si
 
 The codomain of the classification presheaf is the eight-element type space:
 
-$$\Omega = \{\text{mountain}, \text{rope}, \text{tangled\_rope}, \text{snare}, \text{scaffold}, \text{piton}, \text{indexically\_opaque}, \text{unknown}\}$$
+$$\Omega = \{\text{mountain}, \text{rope}, \text{tangled\_rope}, \text{snare}, \text{scaffold}, \text{piton}, \text{naturalized}, \text{unknown}\}$$
 
 Each type has a structural interpretation:
 
@@ -97,7 +97,7 @@ Each type has a structural interpretation:
 - **Snare**: extractive trap. The constraint exists primarily to extract from those subject to it.
 - **Scaffold**: temporary coordination mechanism with an explicit sunset clause.
 - **Piton**: performative constraint with high theater ratio (more display than substance).
-- **Indexically opaque**: contradictory metrics — the constraint cannot be classified from this position.
+- **Naturalized**: contradictory metrics — the constraint cannot be classified from this position.
 - **Unknown**: residual category when no classification threshold fires.
 
 The type space carries a binary composition operation defined by priority rules. Importantly, this composition has **two absorbing elements**: both "mountain" and "piton" absorb all other types under composition. A Heyting algebra — the subobject classifier of a topos — requires a unique top element. The presence of two absorbing elements means the type space is a **priority monoid**, not a Heyting algebra (see §5.3). What is present is an associative, idempotent composition with a fallback identity ("unknown") and priority-based conflict resolution — not the implication and complementation structure that a Heyting algebra would provide.
@@ -168,7 +168,7 @@ The parameter count has grown from 118 to approximately 170 with the addition of
 | snare | 392 | 34.3% |
 | mountain | 139 | 12.2% |
 | rope | 54 | 4.7% |
-| indexically_opaque | 5 | 0.4% |
+| naturalized | 5 | 0.4% |
 | scaffold | 1 | 0.1% |
 | unknown | 1 | 0.1% |
 
@@ -483,7 +483,7 @@ The H¹ = 3 band corresponds to Hub 1-driven divergence: the dominant pattern is
 
 **The dominant mode.** H¹ = 3 accounts for [COMPUTE]% of the corpus. The most common pattern is [snare, snare, rope, snare] — three contexts see extraction, but the institutional observer (U₃), with generational time horizon and arbitrage exit options, sees legitimate coordination. The institutional observer is the dominant dissenter.
 
-**Maximal obstruction.** [COMPUTE: count] constraints achieve H¹ = 6 (all pairs disagree). These share the orbit [indexically_opaque, tangled_rope, rope, snare] — four distinct types, one per context. They represent the limiting case of perspectival dependence: power level completely determines what you see.
+**Maximal obstruction.** [COMPUTE: count] constraints achieve H¹ = 6 (all pairs disagree). These share the orbit [naturalized, tangled_rope, rope, snare] — four distinct types, one per context. They represent the limiting case of perspectival dependence: power level completely determines what you see.
 
 **H¹ is constant within orbit families.** Within any given orbit family (constraints sharing the same set of types in their orbit), H¹ is constant. This is a consequence of the site structure — the number of disagreeing pairs is fully determined by the set of distinct types and how they distribute across the four canonical positions. H¹ does not add information *within* orbit families; what it adds is a graduated numerical measure allowing comparison *across* families.
 

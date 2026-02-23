@@ -213,7 +213,7 @@ characterize_family([snare], 'Gauge-invariant: pure extraction from all perspect
 characterize_family([scaffold], 'Gauge-invariant: temporary coordination from all perspectives') :- !.
 characterize_family([piton], 'Gauge-invariant: ossified coordination from all perspectives') :- !.
 characterize_family(Sig, Desc) :-
-    (member(unknown, Sig) ; member(indexically_opaque, Sig)),
+    (member(unknown, Sig) ; member(naturalized, Sig)),
     !,
     format(atom(Desc), 'Contains unresolved types: ~w', [Sig]).
 characterize_family([rope, snare], 'Two-type: coordination/extraction bifurcation along power axis') :- !.
@@ -267,7 +267,7 @@ report_unknown_orbits(Families) :-
     format('## Unknown-Containing Orbits~n~n'),
     findall(family(Sig, Members),
             (member(family(Sig, Members), Families),
-             (member(unknown, Sig) ; member(indexically_opaque, Sig))),
+             (member(unknown, Sig) ; member(naturalized, Sig))),
             UnknownFamilies),
     length(UnknownFamilies, NUnk),
     (   NUnk > 0
@@ -282,7 +282,7 @@ report_unknown_orbits(Families) :-
                 format('~n')
             )
         )
-    ;   format('No orbits contain unknown or indexically_opaque types.~n~n')
+    ;   format('No orbits contain unknown or naturalized types.~n~n')
     ).
 
 %% report_singleton_vs_multi(+Families)

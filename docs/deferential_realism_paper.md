@@ -71,7 +71,7 @@ where $\pi(P)$ is a power index associated with the observer's power level, $\si
 
 The codomain of the classification presheaf is the eight-element type space:
 
-$$\Omega = \{\text{mountain}, \text{rope}, \text{tangled\_rope}, \text{snare}, \text{scaffold}, \text{piton}, \text{indexically\_opaque}, \text{unknown}\}$$
+$$\Omega = \{\text{mountain}, \text{rope}, \text{tangled\_rope}, \text{snare}, \text{scaffold}, \text{piton}, \text{naturalized}, \text{unknown}\}$$
 
 Each type has a structural interpretation:
 
@@ -81,7 +81,7 @@ Each type has a structural interpretation:
 - **Snare**: extractive trap. The constraint exists primarily to extract from those subject to it.
 - **Scaffold**: temporary coordination mechanism with an explicit sunset clause.
 - **Piton**: performative constraint with high theater ratio (more display than substance).
-- **Indexically opaque**: contradictory metrics — the constraint cannot be classified from this position.
+- **Naturalized**: contradictory metrics — the constraint cannot be classified from this position.
 - **Unknown**: residual category when no classification threshold fires.
 
 The type space carries a binary composition operation defined by priority rules. Importantly, this composition has **two absorbing elements**: both "mountain" and "piton" absorb all other types under composition. A Heyting algebra — the subobject classifier of a topos — requires a unique top element. The presence of two absorbing elements means the type space is a **priority monoid**, not a Heyting algebra [LOOSE for the Heyting claim; STRICT for the monoid structure]. This correction matters: calling the type space a Heyting algebra would invite incorrect expectations about implication, complementation, and distributivity. What is present is an associative, idempotent composition with a fallback identity ("unknown") and priority-based conflict resolution.
@@ -247,7 +247,7 @@ This gap is a property of the measurement apparatus (the site geometry), not of 
 
 **The dominant mode.** H¹ = 3 accounts for 50.3% of the corpus. The most common pattern is [snare, snare, rope, snare] — three contexts see extraction, but the institutional observer (U₃), with generational time horizon and arbitrage exit options, sees legitimate coordination. The institutional observer is the dominant dissenter.
 
-**Maximal obstruction.** Four constraints achieve H¹ = 6 (all pairs disagree). All four share the orbit [indexically_opaque, tangled_rope, rope, snare] — four distinct types, one per context. These are constraints where power level completely determines what you see: the powerless observer cannot even classify the constraint (indexically opaque); the moderate observer sees entanglement; the institutional observer sees coordination; the analyst sees extraction. They represent the limiting case of perspectival dependence: `ai_performance_watermark`, `openai_prism_development`, `semiconductor_fabrication_chokepoint`, `us_usmca_china_leverage`.
+**Maximal obstruction.** Four constraints achieve H¹ = 6 (all pairs disagree). All four share the orbit [naturalized, tangled_rope, rope, snare] — four distinct types, one per context. These are constraints where power level completely determines what you see: the powerless observer cannot even classify the constraint (naturalized); the moderate observer sees entanglement; the institutional observer sees coordination; the analyst sees extraction. They represent the limiting case of perspectival dependence: `ai_performance_watermark`, `openai_prism_development`, `semiconductor_fabrication_chokepoint`, `us_usmca_china_leverage`.
 
 **H¹ is constant within orbit families.** A key structural observation: within any given orbit family (constraints sharing the same set of types in their orbit), H¹ is constant. This is a consequence of the site structure — the number of disagreeing pairs is fully determined by the set of distinct types and how they distribute across the four canonical positions. The largest orbit families with their H¹ values:
 

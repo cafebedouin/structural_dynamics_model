@@ -346,7 +346,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
     config:param(piton_theater_floor, TRFloor),
     TR >= TRFloor, !.
 
-classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, indexically_opaque) :-
+classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, naturalized) :-
     config:param(rope_epsilon_ceiling, EpsCeil),
     BaseEps > EpsCeil,
     config:param(tangled_rope_chi_floor, ChiFloor),
@@ -433,8 +433,8 @@ dr_action(C, Context, monitor_sunset) :-
 dr_action(C, Context, bypass) :-
     dr_type(C, Context, piton), !.
 
-dr_action(C, Context, investigate_opacity) :-
-    dr_type(C, Context, indexically_opaque), !.
+dr_action(C, Context, investigate_naturalization) :-
+    dr_type(C, Context, naturalized), !.
 
 dr_action(_C, _Context, investigate).
 

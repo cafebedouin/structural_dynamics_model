@@ -311,14 +311,14 @@ expected_power_divergence(moderate, powerless, _, mountain) :- !.
 expected_power_divergence(powerless, moderate, mountain, _) :- !.
 expected_power_divergence(analytical, institutional, mountain, _) :- !.
 expected_power_divergence(institutional, analytical, _, mountain) :- !.
-% Indexically opaque transitions: legitimate waypoint on rope → {tangled_rope, snare} path
+% Naturalized transitions: legitimate waypoint on rope → {tangled_rope, snare} path
 % As d increases from institutional, extraction becomes visible before consent activates.
-expected_power_divergence(_, _, rope, indexically_opaque) :- !.
-expected_power_divergence(_, _, indexically_opaque, rope) :- !.
-expected_power_divergence(_, _, indexically_opaque, tangled_rope) :- !.
-expected_power_divergence(_, _, tangled_rope, indexically_opaque) :- !.
-expected_power_divergence(_, _, indexically_opaque, snare) :- !.
-expected_power_divergence(_, _, snare, indexically_opaque) :- !.
+expected_power_divergence(_, _, rope, naturalized) :- !.
+expected_power_divergence(_, _, naturalized, rope) :- !.
+expected_power_divergence(_, _, naturalized, tangled_rope) :- !.
+expected_power_divergence(_, _, tangled_rope, naturalized) :- !.
+expected_power_divergence(_, _, naturalized, snare) :- !.
+expected_power_divergence(_, _, snare, naturalized) :- !.
 
 /* ----------------------------------------------------------------
    NONSENSICAL COUPLING DETECTION

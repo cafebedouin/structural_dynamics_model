@@ -889,7 +889,7 @@ Low purity contaminates high purity. High purity does not purify low.
 | Snare | 1.0 (maximum) |
 | Piton | 0.8 (high) |
 | Tangled Rope | 0.5 (moderate) |
-| Indexically Opaque | 0.3 (moderate-low) |
+| Naturalized | 0.3 (moderate-low) |
 | Scaffold | 0.2 (low) |
 | Rope | 0.1 (minimal) |
 | Mountain | 0.0 (none) |
@@ -905,7 +905,7 @@ Different constraint types have different susceptibility to contamination from n
 | Mountain | 0.0 | Immune — natural laws unaffected by neighbor contamination |
 | Piton | 0.3 | Low susceptibility — degraded state already resistant |
 | Snare | 0.5 | Moderate susceptibility |
-| Indexically Opaque | 0.7 | High susceptibility |
+| Naturalized | 0.7 | High susceptibility |
 | Tangled Rope | 0.8 | High susceptibility — hybrid state easily influenced |
 | Scaffold | 0.9 | Very high susceptibility — temporary structures fragile |
 | Rope | 1.0 | Fully susceptible — pure coordination most affected |
@@ -1462,7 +1462,7 @@ logical_fingerprint.pl (7D fingerprints + coupling)
 
 `drl_core.pl` / `classify_from_metrics/6`:
 - Uses ε, χ, Supp thresholds
-- Priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Indexically Opaque > unknown
+- Priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Naturalized > unknown
 - Fast, deterministic
 
 **Regime 2: Signatures**

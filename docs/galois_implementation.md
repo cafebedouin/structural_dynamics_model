@@ -82,7 +82,7 @@ For a constraint with orbit [rope, rope, rope, rope]:
 
 Every coalition has consensus = rope. The only Galois-closed coalition is the full set {U₁, U₂, U₃, U₄}. There is no structural division among observers. This is the Galois expression of descent: the Galois lattice collapses to a single point.
 
-For a constraint with orbit [indexically_opaque, tangled_rope, rope, snare] (H¹ = 6):
+For a constraint with orbit [naturalized, tangled_rope, rope, snare] (H¹ = 6):
 
 Every singleton coalition is Galois-closed (each observer sees a unique type). The Galois lattice has 4 atoms and no non-trivial joins with consensus — the observers are maximally fragmented. No two observers agree on anything.
 
@@ -181,7 +181,7 @@ This depends on the *actual distribution* of shift patterns in the corpus. If 95
 |---|---|---|
 | [rope, rope, rope, rope] | 1 | Any single observer suffices |
 | [snare, snare, rope, snare] | 2 | Need one from the snare-bloc and U₃ |
-| [indexically_opaque, tangled_rope, rope, snare] | 4 | Every observer contributes unique information |
+| [naturalized, tangled_rope, rope, snare] | 4 | Every observer contributes unique information |
 
 The splitting degree is a Galois invariant not captured by H¹, orbit family, or trajectory distance. It measures **observer redundancy** — how much of the perspectival structure is redundant given partial observation.
 
@@ -227,7 +227,7 @@ The orbit size and the agreement partition are complementary: more distinct type
 | 1 | {U₁,U₂,U₃,U₄} (one bloc) | 0 | 212 | [rope, rope, rope, rope] |
 | 2 | 3+1 or 2+2 | 3 or 4 | 567 | [snare, snare, rope, snare] |
 | 3 | 2+1+1 | 5 | 240 | [tangled_rope, snare, rope, tangled_rope] |
-| 4 | 1+1+1+1 (four singletons) | 6 | 4 | [opaque, tangled, rope, snare] |
+| 4 | 1+1+1+1 (four singletons) | 6 | 4 | [naturalized, tangled, rope, snare] |
 
 The orbit size fully determines the *range* of possible agreement partition structures. Orbit size 2 allows either a 3+1 split (one dissenter) or a 2+2 split (symmetric disagreement). The actual partition structure — which is recorded by the shift pattern — determines the Galois lattice. The orbit family records only the type-set; the shift records the full partition structure.
 

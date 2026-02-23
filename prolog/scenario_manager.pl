@@ -52,7 +52,7 @@ clear_kb :-
     retractall(narrative_ontology:intent_resistance_level(_, _, _, _)),
     retractall(narrative_ontology:intent_norm_strength(_, _, _)),
     % Classification memoization cache
-    structural_signatures:clear_classification_cache,
+    boltzmann_compliance:clear_classification_cache,
     format('[OK] Knowledge Base is empty.~n').
 
 % =============================================================================
