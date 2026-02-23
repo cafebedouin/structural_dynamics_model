@@ -130,7 +130,7 @@ The index structure I = (P, T, E, S) captures the **minimal sufficient** dimensi
 
 These four dimensions are **not arbitrary**â€”they're the structural features that empirically determine constraint type. Adding more dimensions (wealth, education, network position) would provide finer resolution but the current four capture 90%+ of classification variance in the 691-constraint corpus.
 
-### 5. The Six Types: Terrain Metaphor
+### 5. The Seven Types: Terrain Metaphor
 
 Constraint-space is terrain you navigate with finite energy. From your position, constraints appear as:
 
@@ -158,6 +158,10 @@ Constraint-space is terrain you navigate with finite energy. From your position,
 - Examples: QWERTY keyboards, legacy systems
 - Action: Bypass
 
+**Indexically Opaque**: Power-scaling ambiguity, investigate
+- High base extraction (Îµ > 0.45) but low power-scaled extraction (Ï‡ < 0.40)
+- Action: Investigate from multiple indices
+
 Same constraint can be different types from different indices. Carbon credits: Rope (institutional) + Tangled (moderate) + Snare (powerless). All true.
 
 ### 6. Scope and Methodology
@@ -168,7 +172,7 @@ This document establishes:
 
 **Â§II Basic Syntax:**
 - Index structure (Power, Time, Exit, Scope)
-- Six constraint operators with formal definitions
+- Seven constraint operators with formal definitions
 - Power-scaling function Ï€(P)
 - Scope modifier Ïƒ(S)
 - Structural signature predicates
@@ -179,7 +183,7 @@ This document establishes:
 - Eleven drift types (degradation patterns)
 
 **Â§IV Inference Rules:**
-- Priority ordering: Mountain > Snare > Scaffold > Rope > Tangled > Piton
+- Priority ordering: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Indexically Opaque
 - Classification algorithm
 - Two-regime architecture (metrics â†’ signature override)
 
@@ -211,7 +215,7 @@ This document establishes:
 
 **Diagnostic, not prescriptive:** We classify constraints, we don't dictate normative responses. Identifying a Snare doesn't automatically justify cutting it (some are load-bearing). Classification informs action, doesn't determine it.
 
-**Incomplete, not comprehensive:** The six types cover most constraint-space but not all of it. Edge cases exist. Unknown classification is valid output.
+**Incomplete, not comprehensive:** The seven types cover most constraint-space but not all of it. Edge cases exist. Unknown classification is valid output.
 
 **Provisional, not eternal:** Thresholds are empirically calibrated but subject to revision. The framework itself is a Scaffoldâ€”built-in expiration, designed to be replaced when better systems emerge.
 
@@ -532,14 +536,14 @@ The four dimensions (P, T, E, S) represent **empirically validated minimum suffi
 
 ### B. Core Modal Operators (Indexed)
 
-The six constraint types form the core classification system. Each type has distinct structural properties and action implications.
+The seven constraint types form the core classification system. Each type has distinct structural properties and action implications.
 
 **Priority ordering in classify_from_metrics/6:**
 ```
-Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > unknown
+Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Indexically Opaque > unknown
 ```
 
-This ordering is implemented as a sequence of guards in drl_core.pl (lines 2936-3000). The first type whose conditions are satisfied becomes the classification.
+This ordering is implemented as a sequence of guards in drl_core.pl. The first type whose conditions are satisfied becomes the classification.
 
 ---
 
@@ -571,7 +575,7 @@ Because calling something a Mountain has massive consequences. It shifts from "r
 ##### Formal Definition
 
 ```
-â– C[I] â†” Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)
+â– C[I] â†” Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ NaturalEmergence(C) âˆ§ Immutable(C, I.T, I.E)
 ```
 
 **Components:**
@@ -585,6 +589,12 @@ Because calling something a Mountain has massive consequences. It shifts from "r
   - Natural laws don't require enforcementâ€”they're inescapable
   - The 0.05 threshold is noise floor (measurement error, edge cases)
   - Reference: logic_thresholds.md Â§3a, `mountain_suppression_ceiling`
+
+- **NaturalEmergence(C)**: Constraint emerges without active human construction
+  - Checked via `emerges_naturally(C)` predicate (delegated to `domain_priors`)
+  - Mountains must arise from natural processes, not deliberate design
+  - Without this gate, well-designed low-extraction immutable institutions could be misclassified as natural laws
+  - This is a silent exclusion gate: a constraint satisfying all metric thresholds *and* immutability will still fail Mountain classification if it was actively constructed
 
 - **Immutable(C, I.T, I.E)**: Unchangeable from time horizon T and exit options E
   - Checked via `effective_immutability_for_context(Context, mountain)` predicate
@@ -610,12 +620,13 @@ Mountains **don't check Ï‡** (power-scaled extraction). They use raw Îµ and
 ##### Implementation
 
 ```prolog
-% drl_core.pl, classify_from_metrics/6, lines 2946-2951
-classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
+% drl_core.pl, classify_from_metrics/6
+classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
     config:param(mountain_suppression_ceiling, SuppCeil),
     Supp =< SuppCeil,
     config:param(mountain_extractiveness_max, MaxX),
     BaseEps =< MaxX,
+    emerges_naturally(C),
     constraint_indexing:effective_immutability_for_context(Context, mountain), !.
 ```
 
@@ -854,7 +865,8 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
 **Formal Definition:**
 
 ```
-âŠžC[I] â†" Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.45 âˆ§ Changeable(C, I.T, I.E)
+âŠžC[I] â†" Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ (Ï‡ â‰¤ 0 â†' â¤ | Îµ(C) â‰¤ 0.45)
+         âˆ§ (Changeable(C, I.T, I.E) âˆ¨ NaturalEmergence(C))
 ```
 
 **Components:**
@@ -864,12 +876,16 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
   - Accounts for how extraction scales with power position and scope
   - Reference: logic_thresholds.md Â§3b, `rope_chi_ceiling`
 
-- **Îµ(C) â‰¤ 0.45**: Base extraction ceiling for coordination
-  - Wider than Mountain threshold to accommodate coordination with moderate overhead
-  - The 0.45 allows for coordination mechanisms with real but bounded costs
+- **Ï‡ â‰¤ 0 â†' â¤ | Îµ(C) â‰¤ 0.45**: Negative-chi epsilon bypass (v6.0)
+  - When Ï‡ â‰¤ 0 (net beneficiary from institutional perspective), the Îµ â‰¤ 0.45 check is skipped
+  - Rationale: negative effective extraction means the constraint is experienced as coordination infrastructure regardless of how high the raw base extraction is
+  - When Ï‡ > 0, the dual-threshold check applies: Îµ(C) â‰¤ 0.45 must also hold
   - Reference: logic_thresholds.md Â§3b, `rope_epsilon_ceiling`
 
-- **Changeable(C, I.T, I.E)**: Not immutableâ€”can be modified or replaced
+- **Changeable(C, I.T, I.E) âˆ¨ NaturalEmergence(C)**: Changeability or natural emergence
+  - Primary path: `effective_immutability_for_context(Context, rope)` checks changeability
+  - Alternative path: `emerges_naturally(C)` â€” domain-invariant bypass for naturally emerging constraints that may not satisfy power-indexed immutability checks
+  - Distinguishes Ropes (voluntary standards or natural coordination) from Mountains (natural laws)
   - Checked via `effective_immutability_for_context(Context, rope)`
   - Distinguishes Ropes (voluntary standards) from Mountains (natural laws)
   - Ropes can be revised, replaced, or transcended; Mountains cannot
@@ -885,13 +901,15 @@ UTF-8 is a Rope (could be replaced by different encoding standard, unlikely but 
 **Implementation:**
 
 ```prolog
-% drl_core.pl, classify_from_metrics/6, lines 2970-2975
-classify_from_metrics(_C, BaseEps, Chi, _Supp, Context, rope) :-
+% drl_core.pl, classify_from_metrics/6
+classify_from_metrics(C, BaseEps, Chi, _Supp, Context, rope) :-
     config:param(rope_chi_ceiling, ChiCeil),
     Chi =< ChiCeil,
-    config:param(rope_epsilon_ceiling, EpsCeil),
-    BaseEps =< EpsCeil,
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+    % v6.0: When Chi =< 0, agent is a net beneficiary — skip base extraction gate.
+    (Chi =< 0 -> true ; config:param(rope_epsilon_ceiling, EpsCeil), BaseEps =< EpsCeil),
+    (   constraint_indexing:effective_immutability_for_context(Context, rope)
+    ;   emerges_naturally(C)  % Domain-invariant: bypass power-indexed immutability
+    ), !.
 ```
 
 **Note:** Unlike Tangled Rope, current implementation doesn't explicitly check `has_coordination_function(C)`. Coordination is a **structural expectation** for Ropes but not a metric prerequisite. This is a known simplificationâ€”in practice, low Îµ + low Ï‡ strongly implies coordination value.
@@ -1214,6 +1232,8 @@ The dual threshold (Ï‡ AND Îµ) ensures: "If it's going to be called a Snare
 âŠ C[I] â†” Ï‡(C, I.P, I.S) â‰¥ 0.66 âˆ§ Îµ(C) â‰¥ 0.46 âˆ§ Supp(C) â‰¥ 0.60 âˆ§ Changeable(C, I.T, I.E)
 ```
 
+**Note:** The implementation additionally requires `Â¬NaturalLawWithoutBeneficiary(C)` â€" natural laws without identifiable human beneficiaries are blocked from Snare classification regardless of metric values (asymmetric impact is not asymmetric extraction). See `natural_law_without_beneficiary/1` in `drl_core.pl`.
+
 **Components:**
 
 - **Ï‡(C, I.P, I.S) â‰¥ 0.66**: Power-scaled extraction high
@@ -1271,18 +1291,19 @@ Example: Company scrip was initially a coordination tool (no external currency a
 **Implementation:**
 
 ```prolog
-% drl_core.pl, classify_from_metrics/6, lines 2953-2960
-classify_from_metrics(_C, BaseEps, Chi, Supp, Context, snare) :-
+% drl_core.pl, classify_from_metrics/6
+classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare) :-
+    \+ natural_law_without_beneficiary(C),    % Block snare for natural laws
     config:param(snare_chi_floor, ChiFloor),
     Chi >= ChiFloor,
     config:param(snare_epsilon_floor, EpsFloor),
     BaseEps >= EpsFloor,
     config:param(snare_suppression_floor, SuppFloor),
     Supp >= SuppFloor,
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+    snare_immutability_check(Context), !.
 ```
 
-**Note:** The `effective_immutability_for_context(Context, rope)` check ensures changeability (Snares are not natural laws).
+**Note:** The `natural_law_without_beneficiary(C)` guard blocks constraints that emerge naturally, require no enforcement, and have no identifiable human beneficiary from being classified as Snares. The `snare_immutability_check(Context)` ensures changeability.
 
 **Canonical Thresholds** (from logic_thresholds.md Â§3c):
 - `snare_chi_floor` = **0.66**
@@ -1554,13 +1575,16 @@ The metaphor: ropes tangled with extraction mechanisms. The rope genuinely helps
 ##### Formal Definition
 
 ```
-âŠžâŠ C[I] â†” 0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90 
+âŠžâŠ C[I] â†” Â¬NaturalLawWithoutBeneficiary(C)
+         âˆ§ 0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90
          âˆ§ Îµ(C) â‰¥ 0.30
          âˆ§ Supp(C) â‰¥ 0.40
-         âˆ§ Enforce(C) 
-         âˆ§ Coord(C) 
+         âˆ§ Enforce(C)
+         âˆ§ Coord(C)
          âˆ§ Asymmetric(C)
 ```
+
+**Note:** The `Â¬NaturalLawWithoutBeneficiary(C)` guard prevents natural laws without identifiable beneficiaries from being classified as Tangled Rope, same as for Snare.
 
 **Components:**
 
@@ -1596,8 +1620,9 @@ The metaphor: ropes tangled with extraction mechanisms. The rope genuinely helps
 ##### Implementation
 
 ```prolog
-% drl_core.pl, classify_from_metrics/6, lines 2977-2985
+% drl_core.pl, classify_from_metrics/6
 classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
+    \+ natural_law_without_beneficiary(C),    % Block tangled_rope for natural laws
     config:param(tangled_rope_chi_floor, ChiFloor),
     config:param(tangled_rope_chi_ceil, ChiCeil),
     Chi >= ChiFloor,
@@ -1789,8 +1814,10 @@ A Scaffold MUST have built-in expirationâ€”either:
 ##### Formal Definition
 
 ```
-âŠ¡C[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.30 âˆ§ Coord(C) âˆ§ Sunset(C) âˆ§ Theater(C) â‰¤ 0.70
+âŠ¡C[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.30 âˆ§ Coord(C) âˆ§ (Sunset(C) âˆ¨ Â¬Enforce(C)) âˆ§ Theater(C) â‰¤ 0.70
 ```
+
+**Note on temporality:** The implementation uses a soft temporality gate: an explicit sunset clause is the strongest signal, but absence of active enforcement also qualifies. Non-enforced coordination is inherently scaffold-like (temporary support that dissolves on its own) rather than tangled-rope-like (enforced extraction). See `scaffold_temporality_check/1` in `drl_core.pl`.
 
 **Components:**
 - **Ï‡ â‰¤ 0.30**: Low extraction (enabling, not extractive)
@@ -1806,7 +1833,7 @@ classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
     config:param(scaffold_extraction_ceil, MaxX),
     Chi =< MaxX,
     narrative_ontology:has_coordination_function(C),
-    narrative_ontology:has_sunset_clause(C),
+    scaffold_temporality_check(C),        % Sunset clause OR no active enforcement
     config:param(theater_metric_name, TheaterMetricName),
     \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !.
 ```
@@ -1918,7 +1945,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
 - `piton_epsilon_floor` = **0.10**
 - `piton_theater_floor` = **0.70**
 
-**Priority:** Piton > unknown (checked last before unknown)
+**Priority:** Piton > Indexically Opaque > unknown (checked after Tangled Rope, before Indexically Opaque)
 
 ##### Action Implication
 
@@ -1953,15 +1980,91 @@ Don't waste energy maintaining or fighting Pitons:
 
 ---
 
-**[Â§II.B COMPLETE - Six Core Modal Operators]**
+#### B.7 Indexically Opaque Operator
 
-All six constraint types now defined with full triple-layer format:
+##### Conceptual Overview
+
+An **Indexically Opaque** constraint is one where power scaling dramatically changes the experienced extraction, making the constraint's "true nature" structurally ambiguous. It has high base extraction (Îµ > 0.45) but low power-scaled extraction (Ï‡ < 0.40), meaning the raw cost is high but the effective experienced cost is low from the evaluating index.
+
+This catches a specific structural gap: constraints that fall through all other gates because their base extraction is too high for Rope but their power-scaled extraction is too low for Tangled Rope or Snare. The disconnect between raw and effective extraction is itself informative â€" it reveals that power position is doing significant work in mediating the constraint's impact.
+
+**Examples:**
+- **Professional licensing** (from institutional perspective): High Îµ (training costs, compliance burden) but institutional power dramatically reduces effective extraction â€" the institution benefits from the barrier to entry
+- **Complex tax codes** (from organized perspective): High raw complexity/cost but organized actors reduce effective burden through professional management
+- **International trade regulations** (from institutional perspective): High base extraction but institutional actors extract net benefit through regulatory capture
+
+##### The Distinguishing Feature: Power Scaling Opacity
+
+The constraint's classification is "opaque" because the same structural mechanism appears fundamentally different depending on your power index. The base extraction is genuinely high (above Rope ceiling), but power scaling compresses it below the Tangled Rope floor.
+
+##### Formal Definition
+
+```
+IndexicallyOpaque(C) â†" Îµ(C) > 0.45 âˆ§ Ï‡(C, I.P, I.S) < 0.40
+```
+
+**Components:**
+- **Îµ(C) > 0.45**: Base extraction exceeds Rope ceiling (`rope_epsilon_ceiling`)
+  - Constraint imposes real costs in absolute terms
+- **Ï‡(C, I.P, I.S) < 0.40**: Power-scaled extraction below Tangled Rope floor (`tangled_rope_chi_floor`)
+  - From the evaluating index, those costs are dramatically compressed by power position
+
+**Gate Position:** Between Piton and unknown â€" catches constraints that fall through all six primary gates.
+
+##### Implementation
+
+```prolog
+% drl_core.pl, classify_from_metrics/6
+classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, indexically_opaque) :-
+    config:param(rope_epsilon_ceiling, EpsCeil),
+    BaseEps > EpsCeil,
+    config:param(tangled_rope_chi_floor, ChiFloor),
+    Chi < ChiFloor, !.
+```
+
+**Priority:** Indexically Opaque > unknown (checked after Piton, before unknown)
+
+##### Network Participation
+
+Indexically Opaque constraints participate in purity contamination propagation with specific parameters:
+
+| Property | Value | Rationale |
+|----------|-------|-----------|
+| `type_contamination_strength` | 0.3 | Moderate-low â€" structural ambiguity limits contagion |
+| `type_immunity` | 0.7 | High susceptibility â€" ambiguous structures easily influenced |
+
+##### Action Implication
+
+**Investigate** â†' The power-scaling opacity itself is the primary finding.
+
+When facing an Indexically Opaque constraint:
+- Investigate why power scaling is doing so much work
+- Re-evaluate from multiple indices (powerless, moderate, institutional)
+- The opacity often reveals that the constraint is a Tangled Rope or Snare from lower-power indices
+- Consider whether the base extraction (Îµ > 0.45) represents real structural cost that power is masking
+
+##### Summary
+
+**Use when:** High base extraction with low power-scaled extraction (Îµ > 0.45, Ï‡ < 0.40)
+
+**Distinguisher:** Power scaling dramatically compresses experienced extraction
+
+**Action:** Investigate â€" re-evaluate from multiple indices
+
+**Diagnostic value:** Reveals constraints where power position does the most structural work in mediating experience
+
+---
+
+**[Â§II.B COMPLETE - Seven Core Modal Operators]**
+
+All seven constraint types now defined with full triple-layer format:
 - âœ… Mountain (â– ): Unchangeable terrain
 - âœ… Rope (âŠž): Coordination mechanisms
 - âœ… Snare (âŠ ): Extraction traps
 - âœ… Tangled Rope (âŠžâŠ ): Hybrid coordination-extraction
 - âœ… Scaffold (âŠ¡): Temporary support
 - âœ… Piton (âŠŸ): Degraded theater
+- âœ… Indexically Opaque: Power-scaling ambiguity
 
 **Next:** Â§II.C Detection Pattern Operators (FNL, CI_Rope, FCR)
 
@@ -1969,9 +2072,9 @@ All six constraint types now defined with full triple-layer format:
 
 ### C. Detection Pattern Operators (Non-Indexed)
 
-Beyond the six indexed types, the system includes **detection patterns** that identify misclassification or structural fraud. These operate as **signature overrides** in the two-regime architecture.
+Beyond the seven indexed types, the system includes **detection patterns** that identify misclassification or structural fraud. These operate as **signature overrides** in the two-regime architecture.
 
-**Architecture note:** Detection patterns run in `structural_signatures.pl` AFTER metric-based classification in `drl_core.pl`. They can override or certify the metric-based type but do not modify the core classification logic.
+**Architecture note:** Detection patterns run in `signature_detection.pl` (via wrapper `structural_signatures.pl`) AFTER metric-based classification in `drl_core.pl`. They can override or certify the metric-based type but do not modify the core classification logic.
 
 ---
 
@@ -2634,7 +2737,7 @@ Employment Snare Until Collective Bargaining:
 
 ### B. Lifecycle States & Drift Types
 
-Constraints are not static. They **degrade over time** through drift. The lifecycle model tracks state transitions between the six types.
+Constraints are not static. They **degrade over time** through drift. The lifecycle model tracks state transitions between the seven types.
 
 **Metaphor:** Drift is the **weather** of constraint-space. You don't just find a Piton on the mountainâ€”you watch a Rope rot into one. Entropy is real.
 
@@ -2902,7 +3005,7 @@ Classification checks types in strict order (first match wins):
 
 **â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”**
 **â”‚ PRIORITY ORDERING (First Match Wins):                  â”‚**
-**â”‚ Mountain > Snare > Scaffold > Rope > Tangled > Piton   â”‚**
+**â”‚ Mountain > Snare > Scaffold > Rope > Tangled > Piton > Indexically Opaque   â”‚**
 **â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜**
 
 **Why this ordering?**
@@ -2933,7 +3036,7 @@ Each type checks its conditions with cut (`!`) at end. First successful check te
 - Compares Îµ, Ï‡, Supp against configured thresholds
 - Checks immutability gates
 - Fast, deterministic classification
-- Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton
+- Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Indexically Opaque
 
 **Regime 2: Signatures (structural_signatures.pl)**
 
@@ -3021,7 +3124,7 @@ Signatures do NOT modify `classify_from_metrics/6`. They operate afterward, prov
 
 Priority ordering and two-regime architecture defined:
 - âœ… Canonical predicate: classify_from_metrics/6
-- âœ… Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton
+- âœ… Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Indexically Opaque
 - âœ… Two-regime: Metrics (fast) â†’ Signatures (structural)
 - âœ… Shadow mode discipline maintained
 - âœ… Override rules specified
@@ -3934,7 +4037,7 @@ Q4: Would people comply without enforcement? â†’ Estimate Supp
 
 **Sections complete:**
 - âœ… Â§I Foundation (indexed realism vs relativism)
-- âœ… Â§II Basic Syntax (index structure, six types, detection patterns, Ï€/Ïƒ modifiers)
+- âœ… Â§II Basic Syntax (index structure, seven types, detection patterns, Ï€/Ïƒ modifiers)
 - âœ… Â§III Temporal Logic (indexed operators, 11 drift types)
 - âœ… Â§IV Inference Rules (priority ordering, two-regime architecture)
 - âœ… Â§V Error Taxonomy (six misclassification types)

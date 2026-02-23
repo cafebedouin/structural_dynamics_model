@@ -82,7 +82,7 @@ This document provides the **canonical threshold values** for all parameters in 
 
 ### 3a. Mountain (â– C[I])
 
-**Formal:** `â– C[I] â†” Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)`
+**Formal:** `â– C[I] â†” Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ NaturalEmergence(C) âˆ§ Immutable(C, I.T, I.E)`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
@@ -215,7 +215,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `natural_law_suppression_max` | **0.15** | 3 | No enforcement needed |
 | `natural_law_resistance_max` | **0.15** | 3 | Cannot be resisted |
 
-**Implementation:** `structural_signatures.pl` natural_law_signature/1
+**Implementation:** `signature_detection.pl` natural_law_signature/1
 
 **Enhancement (Stage 7):** NL claims must pass `boltzmann_invariant_mountain/2` test:
 - Factorization across Power Ã— Scope
@@ -233,7 +233,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `coordination_suppression_max` | **0.15** | 3 | Voluntary compliance |
 | `coordination_resistance_max` | **0.15** | 3 | Minimal opposition |
 
-**Implementation:** `structural_signatures.pl` coordination_scaffold_signature/1
+**Implementation:** `signature_detection.pl` coordination_scaffold_signature/1
 
 **Key Difference from NL:** Alternatives existed (path-dependent), but this path won.
 
@@ -247,7 +247,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `constructed_resistance_min` | **0.20** | 3 | Faces opposition |
 | `constructed_beneficiary_min` | **2** | 3 | Asymmetric gains threshold (count of beneficiaries) |
 
-**Implementation:** `structural_signatures.pl` constructed_constraint_signature/1
+**Implementation:** `signature_detection.pl` constructed_constraint_signature/1
 
 **Sub-categories:** CC_low, CC_mid, CC_high based on extraction levels
 
@@ -278,7 +278,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `boltzmann_factorization_tolerance` | **0.10** | 7 | Relative error margin for Ï‡(P,S) â‰ˆ f(P)Ã—g(S) test |
 | `boltzmann_min_classifications` | **3** | 7 | Min indexed classifications for reliable test (epistemic access) |
 
-**Implementation:** `structural_signatures.pl` boltzmann_compliant/2, cross_index_coupling/2
+**Implementation:** `boltzmann_compliance.pl` boltzmann_compliant/2, cross_index_coupling/2
 
 **Key Insight:** If Ï‡ doesn't factorize â†’ constraint couples independent variables â†’ constructed, not natural.
 
@@ -314,7 +314,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `boltzmann_floor_global_infrastructure` | **0.20** | 7 | Planetary-scale coordination is expensive |
 | `boltzmann_floor_default` | **0.05** | 7 | Fallback |
 
-**Implementation:** `structural_signatures.pl` excess_extraction/2
+**Implementation:** `boltzmann_compliance.pl` excess_extraction/2
 
 **Formula:** Excess = Îµ(C) - BoltzmannFloor(coordination_type)
 
@@ -425,7 +425,7 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 | `network_coupling_threshold` | **0.50** | 8 | Min inferred coupling for network edge |
 | `network_shared_agent_min` | **1** | 8 | Min shared agents (beneficiary/victim) for edge |
 
-**Implementation:** `drl_modal_logic.pl` constraint_neighbors/3
+**Implementation:** `drl_purity_network.pl` constraint_neighbors/3
 
 ---
 
@@ -437,7 +437,7 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 | `purity_attenuation_factor` | **0.50** | 8 | **Edge strength scaling** (contamination loses 50% per hop) |
 | `purity_contamination_source_floor` | **0.50** | 8 | Below â†’ active contamination source |
 
-**Implementation:** `drl_modal_logic.pl` effective_purity/4, purity_contamination_pressure/4
+**Implementation:** `drl_purity_network.pl` effective_purity/4, purity_contamination_pressure/4
 
 **Key Rule:** Downward-only contamination (Snare â†’ Rope, not vice versa)
 
@@ -452,22 +452,47 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 | `contamination_strength_snare` | **1.0** | 8 | Maximum contamination (pure extraction) |
 | `contamination_strength_piton` | **0.8** | 8 | High contamination (degraded state) |
 | `contamination_strength_tangled_rope` | **0.5** | 8 | Moderate contamination (hybrid) |
+| `contamination_strength_indexically_opaque` | **0.3** | 8 | Moderate-low contamination (ambiguous structure) |
 | `contamination_strength_scaffold` | **0.2** | 8 | Low contamination (temporary support) |
 | `contamination_strength_rope` | **0.1** | 8 | Minimal contamination (pure coordination) |
 | `contamination_strength_mountain` | **0.0** | 8 | **Mountains don't contaminate** (natural laws) |
 
-**Implementation:** `drl_modal_logic.pl` type_contamination_strength/2
+**Implementation:** `drl_purity_network.pl` type_contamination_strength/2
+
+**Note:** These values are hardcoded as facts in `drl_purity_network.pl`, not wired through `config.pl`. The `contamination_strength_*` parameters in `config.pl` exist but are unused (dead params). Values match between the two locations.
 
 ---
 
-### 7d. Network Metrics
+### 7d. Type Immunity (Target Susceptibility)
+
+**Purpose:** Different target types have different susceptibility to contamination from neighbors. Immunity scales the total contamination before subtraction from intrinsic purity.
+
+| Type | Immunity | Stage | Logic/Significance |
+|------|----------|-------|-------------------|
+| `mountain` | **0.0** | 8 | **Immune** â€" natural laws unaffected by neighbor contamination |
+| `piton` | **0.3** | 8 | Low susceptibility â€" degraded state already resistant |
+| `snare` | **0.5** | 8 | Moderate susceptibility |
+| `indexically_opaque` | **0.7** | 8 | High susceptibility â€" ambiguous structures easily influenced |
+| `tangled_rope` | **0.8** | 8 | High susceptibility â€" hybrid state easily influenced |
+| `scaffold` | **0.9** | 8 | Very high susceptibility â€" temporary structures fragile |
+| `rope` | **1.0** | 8 | **Fully susceptible** â€" pure coordination most affected |
+
+**Implementation:** `drl_purity_network.pl` type_immunity/2
+
+**Key Insight:** Mountains (immunity 0.0) are completely immune to contamination; Ropes (immunity 1.0) receive full contamination pressure. This reflects the asymmetry: natural laws are structurally robust, while pure coordination is structurally fragile.
+
+**Formula integration:** `EffPurity = max(0.0, Intrinsic - TotalContam Ã— Immunity)`
+
+---
+
+### 7e. Network Metrics
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
 | `network_contamination_risk_threshold` | **2** | 8 | Low-purity neighbors â†’ "at_risk" classification |
 | `network_cluster_degraded_floor` | **0.40** | 8 | Below â†’ cluster classified as "degraded" |
 
-**Implementation:** `drl_modal_logic.pl` network_purity_metrics/2
+**Implementation:** `drl_purity_network.pl` network_purity_metrics/2
 
 ---
 
@@ -540,12 +565,12 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 ### Priority Ordering (classify_from_metrics/6)
 ```
-Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > unknown
+Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Indexically Opaque > unknown
 ```
 
 ### Two-Regime Architecture
 1. **Metrics-first** (`drl_core.pl`): Uses thresholds from this registry
-2. **Signature-override** (`structural_signatures.pl`): Can override metric classification
+2. **Signature-override** (`signature_detection.pl` via wrapper `structural_signatures.pl`): Can override metric classification
 
 ### Shadow Mode (Stages 7-9)
 Boltzmann/Purity/Network logic runs alongside core, doesn't modify `classify_from_metrics/6`.
