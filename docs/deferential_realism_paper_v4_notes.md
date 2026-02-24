@@ -134,3 +134,21 @@ So the write-up for §5.5 has a clean three-part structure:
 3. **The A-S connection (§6):** A-S is the additive special case on a one-dimensional linear site (inventory axis). DR is the multiplicative case on a four-context linear poset. Both compose for the same structural reason (group actions on stalks); they differ in the group (ℝ translation vs ℝ₊ scaling). The multiplicative version preserves χ ≥ 0 by construction.
 
 That's a tight section. And none of it requires new code — it's all derived from results you already have.
+
+---
+
+Good call. The empirical sections will be stronger written against post-sweep results rather than patched incrementally.
+
+Things worth capturing in the notes file now while they're fresh — these are results that emerged across the session and aren't consolidated in any single report:
+
+- **Functor axiom closure.** Boltzmann factorizability = functor axiom for Hub 1. σ(S) = σ(S(P)) confirms no coupling. 7 Chi overrides (1.4% of tangled_ropes) are the exception boundary. Item 1 closed for the linear site, reopens with a well-defined commutativity condition for the product site (item 4). The A-S comparison: additive (translation group) vs multiplicative (scaling group), both compose for the same structural reason.
+
+- **Revised headline figures.** 80.1% genuinely perspectival (not 88%). 502 tangled_rope (not 752). 363 snare (not 78). The old figures were computed on a population with 36% stale claims.
+
+- **f(d) drives 94.9% of perspectival Chi variance.** Scope modifier contributes 5.1%. The 73.3%→85.4% phase transition at σ(global)=1.0→1.05 shows scope acts as a tiebreaker for borderline cases, not a primary driver.
+
+- **The claim/engine mismatch as historiography.** 433 stale claims, dominant pattern tangled_rope→snare (295). The snapshot is preserved in `claim_engine_mismatch_snapshot.json`. This tells a story about calibration evolution — the engine became stricter about extraction than the original labels.
+
+- **33 tie-resolved constraints** sit at type boundaries. Tagged in the data. Sensitivity of headline findings to tie-breaking rule is an open verification question.
+
+Ready for the contamination_strength + dead param prompt when you are.

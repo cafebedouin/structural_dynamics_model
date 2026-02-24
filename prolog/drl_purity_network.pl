@@ -135,6 +135,12 @@ dedup_sorted([H|T], [H|Out]) :-
 
 %% type_contamination_strength(+Type, -Strength)
 %  How much contamination a type emits as a source.
+%  NOTE: These values must match contamination_strength_* params in config.pl.
+%  config_validation.pl §6 validates this at startup (postcorpus).
+%  Hardcoded (not dynamically read from config) because:
+%    1. Catch-all clause provides safe 0.0 default for unknown types
+%    2. Cuts enable first-argument indexing on a hot path (11 call sites)
+%    3. These are architectural constants, not tunable thresholds
 type_contamination_strength(snare,        1.0) :- !.
 type_contamination_strength(piton,        0.8) :- !.
 type_contamination_strength(tangled_rope, 0.5) :- !.

@@ -22,10 +22,6 @@ level(individual).
 % --- General Metric Naming (for dynamic dispatch) ---
 param(suppression_metric_name, suppression_requirement).
 param(extractiveness_metric_name, extractiveness).
-param(temporal_metric_name, time_horizon).
-param(exit_metric_name, exit_options).
-param(power_metric_name, agent_power).
-param(scope_metric_name, spatial_scope).
 param(theater_metric_name, theater_ratio).
 
 /* ================================================================
@@ -126,7 +122,7 @@ param(system_gradient_strong_threshold, 1.00).
 % Min power gain required to be identified as the "Main Beneficiary".
 param(beneficiary_gain_min, 0.50).
 % Max gain allowed for other classes to maintain "Asymmetry".
-param(loser_loss_max_gain, 0.10).
+param(loser_loss_max_gain, 0.10).                        % DOCS-ONLY: not referenced in executable code
 
 % --- Suppression & Resistance Alignment ---
 % Required thresholds for structural-level alignment.
@@ -136,7 +132,7 @@ param(structural_resistance_min, 0.70).
 % --- Data Integrity ---
 % Thresholds for high/medium confidence classification.
 param(data_high_threshold, 0.95).
-param(data_medium_threshold, 0.75).
+param(data_medium_threshold, 0.75).                      % DOCS-ONLY: not referenced in executable code
 
 /* ================================================================
    5. DEFERENTIAL REALISM (DR) THRESHOLDS
@@ -144,13 +140,13 @@ param(data_medium_threshold, 0.75).
 
 % --- Mountain Boundaries ---
 param(mountain_suppression_ceiling, 0.05). % noise floor
-param(mountain_extractiveness_min, 0.0).
+param(mountain_extractiveness_min, 0.0).                  % DOCS-ONLY: not referenced in executable code
 param(mountain_extractiveness_max, 0.25).
 param(false_mountain_extraction_threshold, 0.90). % Claimed mountain with ε > 0.90 → reclassify as snare
 
 % --- Rope Boundaries ---
 % Aligned with core.md: Rope = low extraction, ε ≤ 0.15
-param(rope_extractiveness_min, 0.0).
+param(rope_extractiveness_min, 0.0).                     % DOCS-ONLY: not referenced in executable code
 param(rope_extraction_ceiling, 0.15).       % Registry classification: ε ≤ 0.15 → rope
 % Base suppression ceiling for pure coordination
 param(rope_suppression_ceiling,      0.16).
@@ -160,10 +156,10 @@ param(rope_suppression_ceiling,      0.16).
 param(tangled_rope_extraction_floor, 0.16). % Registry classification: 0.16 ≤ ε ≤ 0.90
 param(tangled_rope_extraction_ceil, 0.90).  % Registry classification upper bound
 param(tangled_rope_suppression_floor, 0.40). % Requires active enforcement
-param(tangled_rope_suppression_ceil, 1.00).
+param(tangled_rope_suppression_ceil, 1.00).               % DOCS-ONLY: not referenced in executable code
 
 % --- Snare Boundaries ---
-param(snare_extraction_ceil,         1.00).
+param(snare_extraction_ceil,         1.00).               % DOCS-ONLY: not referenced in executable code
 param(snare_suppression_floor,       0.60).
 param(snare_load_bearing_threshold,  0.70).  % Above this = load-bearing snare (Theorem 3)
 
@@ -252,9 +248,9 @@ param(coordination_resistance_max,   0.15).  % Minimal opposition
 
 % --- Constructed Constraint Signature ---
 % Identifies institutionally enforced rules (power asymmetries)
-param(constructed_suppression_min,   0.20).  % Requires enforcement
-param(constructed_resistance_min,    0.20).  % Faces opposition
-param(constructed_beneficiary_min,   2).     % Asymmetric gains threshold
+param(constructed_suppression_min,   0.20).  % Requires enforcement          % DOCS-ONLY
+param(constructed_resistance_min,    0.20).  % Faces opposition              % DOCS-ONLY
+param(constructed_beneficiary_min,   2).     % Asymmetric gains threshold    % DOCS-ONLY
 
 % --- Isomorphism Threshold ---
 param(isomorphism_threshold, 0.85).
@@ -285,7 +281,7 @@ param(boltzmann_coupling_strong_threshold, 0.50).
 
 % Tolerance for factorization test: χ(P,S) ≈ f(P)×g(S)
 % within this relative error margin
-param(boltzmann_factorization_tolerance,   0.10).
+param(boltzmann_factorization_tolerance,   0.10).       % DOCS-ONLY: not referenced in executable code
 
 % Minimum number of indexed classifications required before
 % the Boltzmann compliance test is considered reliable.
@@ -322,8 +318,8 @@ param(boltzmann_floor_default,               0.05).
 % Thresholds for coupling-aware reformability assessment.
 % High reformability: independent dimensions, low excess extraction.
 % Low reformability: strongly coupled, high excess extraction.
-param(reformability_high_threshold,  0.70).
-param(reformability_low_threshold,   0.30).
+param(reformability_high_threshold,  0.70).              % DOCS-ONLY: not referenced in executable code
+param(reformability_low_threshold,   0.30).              % DOCS-ONLY: not referenced in executable code
 
 % --- Excess Extraction Factor (Gaussian) ---
 % Smooth inverted-U curve for reformability's excess extraction component.
@@ -353,7 +349,7 @@ param(reform_urgency_reformability_floor,   0.30).
 % --- Boltzmann Floor Drift ---
 % Minimum floor increase to register as a drift event.
 % Distinguishes necessary complexity increase from extractive increase.
-param(boltzmann_floor_drift_threshold, 0.05).
+param(boltzmann_floor_drift_threshold, 0.05).            % DOCS-ONLY: not referenced in executable code
 
 /* ================================================================
    8. PURITY-QUALIFIED ACTION THRESHOLDS (v5.1)
@@ -371,7 +367,7 @@ param(purity_energy_max_multiplier,        3.0).   % Cap on energy cost scaling
 
 % --- Network Discovery ---
 param(network_coupling_threshold,              0.50).  % Min inferred coupling for edge
-param(network_shared_agent_min,                1).     % Min shared agents for edge
+param(network_shared_agent_min,                1).     % Min shared agents for edge  % DOCS-ONLY
 
 % --- Propagation ---
 param(purity_contamination_cap,                0.30).  % Max purity reduction per edge
@@ -379,17 +375,17 @@ param(purity_attenuation_factor,               0.50).  % Edge strength scaling
 
 % --- Type Contamination Strength ---
 param(purity_contamination_source_floor,       0.50).  % Below this purity → contamination source
-param(contamination_strength_snare,            1.0).
-param(contamination_strength_piton,            0.8).
-param(contamination_strength_tangled_rope,     0.5).
-param(contamination_strength_scaffold,         0.2).
-param(contamination_strength_rope,             0.1).
-param(contamination_strength_mountain,         0.0).   % Mountains don't contaminate
-param(contamination_strength_naturalized, 0.3).
+param(contamination_strength_snare,            1.0).   % VALIDATED: must match drl_purity_network.pl
+param(contamination_strength_piton,            0.8).   % VALIDATED: must match drl_purity_network.pl
+param(contamination_strength_tangled_rope,     0.5).   % VALIDATED: must match drl_purity_network.pl
+param(contamination_strength_scaffold,         0.2).   % VALIDATED: must match drl_purity_network.pl
+param(contamination_strength_rope,             0.1).   % VALIDATED: must match drl_purity_network.pl
+param(contamination_strength_mountain,         0.0).   % VALIDATED: must match drl_purity_network.pl
+param(contamination_strength_naturalized, 0.3).        % VALIDATED: must match drl_purity_network.pl
 
 % --- Network Metrics ---
-param(network_contamination_risk_threshold,    2).     % Low-purity neighbors → "at_risk"
-param(network_cluster_degraded_floor,          0.40).  % Below → cluster degraded
+param(network_contamination_risk_threshold,    2).     % Low-purity neighbors → "at_risk"  % DOCS-ONLY
+param(network_cluster_degraded_floor,          0.40).  % Below → cluster degraded          % DOCS-ONLY
 
 % --- Fixed-Point Network Iteration (v5.3) ---
 param(fpn_epsilon,                             0.001). % Convergence threshold (< min zone gap 0.20)

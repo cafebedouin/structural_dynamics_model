@@ -32,10 +32,6 @@
 
 param_spec(suppression_metric_name,    atom, any, "Dynamic dispatch key for suppression metric").
 param_spec(extractiveness_metric_name, atom, any, "Dynamic dispatch key for extractiveness metric").
-param_spec(temporal_metric_name,       atom, any, "Dynamic dispatch key for time horizon metric").
-param_spec(exit_metric_name,           atom, any, "Dynamic dispatch key for exit options metric").
-param_spec(power_metric_name,          atom, any, "Dynamic dispatch key for agent power metric").
-param_spec(scope_metric_name,          atom, any, "Dynamic dispatch key for spatial scope metric").
 param_spec(theater_metric_name,        atom, any, "Dynamic dispatch key for theater ratio metric").
 
 % ============================================================
@@ -98,18 +94,18 @@ param_spec(canonical_d_analytical,    number, range(0.0, 1.0), "Canonical direct
 param_spec(system_gradient_threshold,        number, range(0.0, 1.0), "Min change for non-stable gradient").
 param_spec(system_gradient_strong_threshold, number, range(0.0, 1.0), "Threshold for Strong intent classification").
 param_spec(beneficiary_gain_min,             number, range(0.0, 1.0), "Min power gain for main beneficiary ID").
-param_spec(loser_loss_max_gain,              number, range(0.0, 1.0), "Max gain for non-beneficiaries (asymmetry)").
+param_spec(loser_loss_max_gain,              number, range(0.0, 1.0), "Max gain for non-beneficiaries (asymmetry) [docs-only]").
 param_spec(structural_suppression_min,       number, range(0.0, 1.0), "Required structural suppression alignment").
 param_spec(structural_resistance_min,        number, range(0.0, 1.0), "Required structural resistance alignment").
 param_spec(data_high_threshold,              number, range(0.0, 1.0), "High confidence classification threshold").
-param_spec(data_medium_threshold,            number, range(0.0, 1.0), "Medium confidence classification threshold").
+param_spec(data_medium_threshold,            number, range(0.0, 1.0), "Medium confidence classification threshold [docs-only]").
 
 % ============================================================
 % 8. DEFERENTIAL REALISM — Mountain Boundaries
 % ============================================================
 
 param_spec(mountain_suppression_ceiling,          number, range(0.0, 1.0), "Noise floor for mountain suppression").
-param_spec(mountain_extractiveness_min,           number, range(0.0, 1.0), "Mountain extractiveness lower bound").
+param_spec(mountain_extractiveness_min,           number, range(0.0, 1.0), "Mountain extractiveness lower bound [docs-only]").
 param_spec(mountain_extractiveness_max,           number, range(0.0, 1.0), "Mountain extractiveness upper bound").
 param_spec(false_mountain_extraction_threshold,   number, range(0.0, 1.0), "Claimed mountain reclassification threshold").
 
@@ -117,7 +113,7 @@ param_spec(false_mountain_extraction_threshold,   number, range(0.0, 1.0), "Clai
 % 9. DEFERENTIAL REALISM — Rope Boundaries
 % ============================================================
 
-param_spec(rope_extractiveness_min, number, range(0.0, 1.0), "Rope extractiveness lower bound").
+param_spec(rope_extractiveness_min, number, range(0.0, 1.0), "Rope extractiveness lower bound [docs-only]").
 param_spec(rope_extraction_ceiling, number, range(0.0, 1.0), "Registry classification: epsilon <= this -> rope").
 param_spec(rope_suppression_ceiling, number, range(0.0, 1.0), "Base suppression ceiling for pure coordination").
 
@@ -128,13 +124,13 @@ param_spec(rope_suppression_ceiling, number, range(0.0, 1.0), "Base suppression 
 param_spec(tangled_rope_extraction_floor,   number, range(0.0, 1.0), "Registry tangled rope extraction lower bound").
 param_spec(tangled_rope_extraction_ceil,    number, range(0.0, 1.0), "Registry tangled rope extraction upper bound").
 param_spec(tangled_rope_suppression_floor,  number, range(0.0, 1.0), "Tangled rope requires active enforcement above this").
-param_spec(tangled_rope_suppression_ceil,   number, range(0.0, 1.0), "Tangled rope suppression upper bound").
+param_spec(tangled_rope_suppression_ceil,   number, range(0.0, 1.0), "Tangled rope suppression upper bound [docs-only]").
 
 % ============================================================
 % 11. DEFERENTIAL REALISM — Snare Boundaries
 % ============================================================
 
-param_spec(snare_extraction_ceil,        number, range(0.0, 1.0), "Snare extraction upper bound").
+param_spec(snare_extraction_ceil,        number, range(0.0, 1.0), "Snare extraction upper bound [docs-only]").
 param_spec(snare_suppression_floor,      number, range(0.0, 1.0), "Snare suppression lower bound").
 param_spec(snare_load_bearing_threshold, number, range(0.0, 1.0), "Load-bearing snare threshold (Theorem 3)").
 
@@ -186,9 +182,9 @@ param_spec(natural_law_resistance_max,   number, range(0.0, 1.0), "Natural law: 
 param_spec(coordination_collapse_min,    number, range(0.0, 1.0), "Coordination scaffold: min universal adoption").
 param_spec(coordination_suppression_max, number, range(0.0, 1.0), "Coordination scaffold: max enforcement").
 param_spec(coordination_resistance_max,  number, range(0.0, 1.0), "Coordination scaffold: max opposition").
-param_spec(constructed_suppression_min,  number, range(0.0, 1.0), "Constructed constraint: min enforcement").
-param_spec(constructed_resistance_min,   number, range(0.0, 1.0), "Constructed constraint: min opposition").
-param_spec(constructed_beneficiary_min,  integer, positive,        "Constructed constraint: asymmetric gains threshold").
+param_spec(constructed_suppression_min,  number, range(0.0, 1.0), "Constructed constraint: min enforcement [docs-only]").
+param_spec(constructed_resistance_min,   number, range(0.0, 1.0), "Constructed constraint: min opposition [docs-only]").
+param_spec(constructed_beneficiary_min,  integer, positive,        "Constructed constraint: asymmetric gains threshold [docs-only]").
 param_spec(isomorphism_threshold,        number, range(0.0, 1.0), "Structural isomorphism detection threshold").
 
 % ============================================================
@@ -197,7 +193,7 @@ param_spec(isomorphism_threshold,        number, range(0.0, 1.0), "Structural is
 
 param_spec(boltzmann_coupling_threshold,        number, range(0.0, 1.0), "Max coupling for Boltzmann compliance").
 param_spec(boltzmann_coupling_strong_threshold, number, range(0.0, 1.0), "Coupling classified as strong above this").
-param_spec(boltzmann_factorization_tolerance,   number, range(0.0, 1.0), "Relative error for factorization test").
+param_spec(boltzmann_factorization_tolerance,   number, range(0.0, 1.0), "Relative error for factorization test [docs-only]").
 param_spec(boltzmann_min_classifications,       integer, positive,        "Min classifications for reliable Boltzmann test").
 
 % ============================================================
@@ -224,8 +220,8 @@ param_spec(boltzmann_floor_default,               number, range(0.0, 1.0), "Min 
 % 20. REFORMABILITY SCORING
 % ============================================================
 
-param_spec(reformability_high_threshold, number, range(0.0, 1.0), "High reformability threshold").
-param_spec(reformability_low_threshold,  number, range(0.0, 1.0), "Low reformability threshold").
+param_spec(reformability_high_threshold, number, range(0.0, 1.0), "High reformability threshold [docs-only]").
+param_spec(reformability_low_threshold,  number, range(0.0, 1.0), "Low reformability threshold [docs-only]").
 
 % ============================================================
 % 21. EXCESS EXTRACTION FACTOR (Gaussian)
@@ -258,7 +254,7 @@ param_spec(reform_urgency_reformability_floor, number, range(0.0, 1.0), "Reforma
 % 24. BOLTZMANN FLOOR DRIFT
 % ============================================================
 
-param_spec(boltzmann_floor_drift_threshold, number, range(0.0, 1.0), "Min floor increase to register as drift event").
+param_spec(boltzmann_floor_drift_threshold, number, range(0.0, 1.0), "Min floor increase to register as drift event [docs-only]").
 
 % ============================================================
 % 25. PURITY-QUALIFIED ACTION THRESHOLDS
@@ -276,24 +272,24 @@ param_spec(purity_energy_max_multiplier,   number, positive,        "Cap on ener
 % ============================================================
 
 param_spec(network_coupling_threshold,              number, range(0.0, 1.0), "Min inferred coupling for network edge").
-param_spec(network_shared_agent_min,                integer, positive,        "Min shared agents for network edge").
+param_spec(network_shared_agent_min,                integer, positive,        "Min shared agents for network edge [docs-only]").
 param_spec(purity_contamination_cap,                number, range(0.0, 1.0), "Max purity reduction per edge").
 param_spec(purity_attenuation_factor,               number, range(0.0, 1.0), "Edge strength scaling factor").
 param_spec(purity_contamination_source_floor,       number, range(0.0, 1.0), "Below this purity -> contamination source").
-param_spec(contamination_strength_snare,            number, range(0.0, 1.0), "Contamination strength: snare type").
-param_spec(contamination_strength_piton,            number, range(0.0, 1.0), "Contamination strength: piton type").
-param_spec(contamination_strength_tangled_rope,     number, range(0.0, 1.0), "Contamination strength: tangled rope type").
-param_spec(contamination_strength_scaffold,         number, range(0.0, 1.0), "Contamination strength: scaffold type").
-param_spec(contamination_strength_rope,             number, range(0.0, 1.0), "Contamination strength: rope type").
-param_spec(contamination_strength_mountain,         number, range(0.0, 1.0), "Contamination strength: mountain type (0=none)").
-param_spec(contamination_strength_naturalized, number, range(0.0, 1.0), "Contamination strength: naturalized").
+param_spec(contamination_strength_snare,            number, range(0.0, 1.0), "Contamination strength: snare type [validated-mirror]").
+param_spec(contamination_strength_piton,            number, range(0.0, 1.0), "Contamination strength: piton type [validated-mirror]").
+param_spec(contamination_strength_tangled_rope,     number, range(0.0, 1.0), "Contamination strength: tangled rope type [validated-mirror]").
+param_spec(contamination_strength_scaffold,         number, range(0.0, 1.0), "Contamination strength: scaffold type [validated-mirror]").
+param_spec(contamination_strength_rope,             number, range(0.0, 1.0), "Contamination strength: rope type [validated-mirror]").
+param_spec(contamination_strength_mountain,         number, range(0.0, 1.0), "Contamination strength: mountain type (0=none) [validated-mirror]").
+param_spec(contamination_strength_naturalized, number, range(0.0, 1.0), "Contamination strength: naturalized [validated-mirror]").
 
 % ============================================================
 % 27. NETWORK METRICS
 % ============================================================
 
-param_spec(network_contamination_risk_threshold, integer, positive,        "Low-purity neighbors count for at_risk").
-param_spec(network_cluster_degraded_floor,       number, range(0.0, 1.0), "Below this purity -> cluster degraded").
+param_spec(network_contamination_risk_threshold, integer, positive,        "Low-purity neighbors count for at_risk [docs-only]").
+param_spec(network_cluster_degraded_floor,       number, range(0.0, 1.0), "Below this purity -> cluster degraded [docs-only]").
 
 % ============================================================
 % 28. FIXED-POINT NETWORK ITERATION

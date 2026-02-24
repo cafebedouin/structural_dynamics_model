@@ -137,6 +137,30 @@ config_violation(Msg) :-
            [Description]).
 
 % ============================================================
+% 6. Contamination strength drift — hardcoded values must match config
+% ============================================================
+% drl_purity_network.pl uses hardcoded type_contamination_strength/2 facts
+% for performance (cut-based first-argument indexing) and catch-all safety.
+% Config params contamination_strength_* are the canonical values —
+% this check catches drift between config.pl and the hardcoded facts.
+%
+% Guard: current_predicate check ensures this only fires after
+% drl_purity_network is loaded (validate_config_postcorpus), not during
+% the initialization(validate_config) call at config load time.
+
+config_violation(Msg) :-
+    current_predicate(drl_purity_network:type_contamination_strength/2),
+    member(Type, [snare, piton, tangled_rope, scaffold, rope, mountain, naturalized]),
+    atom_concat('contamination_strength_', Type, ParamName),
+    config:param(ParamName, ConfigVal),
+    drl_purity_network:type_contamination_strength(Type, HardcodedVal),
+    Diff is abs(ConfigVal - HardcodedVal),
+    Diff > 0.0001,
+    format(atom(Msg),
+           'CONFIG ERROR: param(~w, ~w) does not match hardcoded type_contamination_strength(~w, ~w) in drl_purity_network.pl',
+           [ParamName, ConfigVal, Type, HardcodedVal]).
+
+% ============================================================
 % Fire on module load
 % ============================================================
 
