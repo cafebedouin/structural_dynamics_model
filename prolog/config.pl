@@ -191,6 +191,14 @@ param(tangled_rope_chi_floor, 0.40).
 param(tangled_rope_chi_ceil, 0.90).
 param(tangled_rope_epsilon_floor, 0.30).
 
+% --- Gradient Subtype Thresholds ---
+% Classification thresholds for tangled_rope subtype analysis.
+% Used by tangled_gradient.py and chi_variance_decomposition.py.
+% Constraints with max(g_chi) < subtype_rope_threshold are rope-dominant.
+% Constraints with min(g_chi) > subtype_snare_threshold are snare-dominant.
+param(subtype_rope_threshold, 0.30).
+param(subtype_snare_threshold, 0.70).
+
 % --- Scaffold Boundaries ---
 % Temporary supports must remain below this extraction ceiling.
 % v7.0: Raised from 0.30 to 0.45 — accommodates costly transitional support

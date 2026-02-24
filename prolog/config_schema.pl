@@ -149,6 +149,8 @@ param_spec(snare_epsilon_floor,         number, range(0.0, 1.0), "Rule N: min ep
 param_spec(tangled_rope_chi_floor,      number, range(0.0, 1.0), "Rule TR: min chi for tangled rope").
 param_spec(tangled_rope_chi_ceil,       number, range(0.0, 1.0), "Rule TR: max chi for tangled rope").
 param_spec(tangled_rope_epsilon_floor,  number, range(0.0, 1.0), "Rule TR: min epsilon for tangled rope").
+param_spec(subtype_rope_threshold,     number, range(0.0, 1.0), "Max g_chi for rope-dominant tangled_rope subtype").
+param_spec(subtype_snare_threshold,    number, range(0.0, 1.0), "Min g_chi for snare-dominant tangled_rope subtype").
 
 % ============================================================
 % 13. SCAFFOLD & PITON

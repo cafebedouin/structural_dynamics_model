@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(sts86_ascent_checklist, 0, 10).
-narrative_ontology:constraint_claim(sts86_ascent_checklist, tangled_rope).
+narrative_ontology:constraint_claim(sts86_ascent_checklist, rope).
 narrative_ontology:human_readable(sts86_ascent_checklist, "Space Shuttle Ascent/Abort Procedural Matrix").
 narrative_ontology:topic_domain(sts86_ascent_checklist, "technological/institutional").
 

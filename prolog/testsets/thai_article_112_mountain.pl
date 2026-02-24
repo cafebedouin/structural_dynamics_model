@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(thai_article_112_mountain, suppression_requ
 narrative_ontology:constraint_metric(thai_article_112_mountain, theater_ratio, 0.1).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(thai_article_112_mountain, tangled_rope).
+narrative_ontology:constraint_claim(thai_article_112_mountain, rope).
 narrative_ontology:human_readable(thai_article_112_mountain, "Article 112 (Lèse-majesté Laws) as a Legal Mountain").
 narrative_ontology:topic_domain(thai_article_112_mountain, "political/social/legal").
 

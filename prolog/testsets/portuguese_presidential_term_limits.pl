@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(portuguese_presidential_term_limits, suppre
 narrative_ontology:constraint_metric(portuguese_presidential_term_limits, theater_ratio, 0.05).
 
 % Constraint self-claim: It claims to be a coordination mechanism for democratic turnover.
-narrative_ontology:constraint_claim(portuguese_presidential_term_limits, tangled_rope).
+narrative_ontology:constraint_claim(portuguese_presidential_term_limits, rope).
 narrative_ontology:human_readable(portuguese_presidential_term_limits, "Portuguese Constitutional Term Limits (Article 123)").
 narrative_ontology:topic_domain(portuguese_presidential_term_limits, "political/legal").
 
