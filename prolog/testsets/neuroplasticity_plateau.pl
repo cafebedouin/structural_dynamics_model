@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(neuroplasticity_plateau, rope,
 % The analytical view recognizes the hybrid nature: a real biological limit
 % (Mountain-like) is used as a foundation for a coordinative but highly
 % extractive economic system (Tangled Rope).
-constraint_indexing:constraint_classification(neuroplasticity_plateau, snare,
+constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -126,14 +126,14 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(neuroplasticity_plateau, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(neuroplasticity_plateau, snare,
+    constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_rope,
         context(agent_power(analytical), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical perspective resolves to Tangled Rope, indicating
     % successful Mandatrophy resolution.
-    con    constraint_indexing:constraint_classification(neuroplasticity_plateau, snare,
-        context(agent_power(analytical), _, _, _))nd_tests(neuroplasticity_plateau_tests).
+    constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_rope,
+        context(agent_power(analytical), _, _, _)) _, _))nd_tests(neuroplasticity_plateau_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY

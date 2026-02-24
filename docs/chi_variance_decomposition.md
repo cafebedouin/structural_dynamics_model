@@ -1,16 +1,16 @@
 # Chi Variance Decomposition Analysis
 
-*Generated 2026-02-24 13:53 by `python/chi_variance_decomposition.py`*
+*Generated 2026-02-24 14:13 by `python/chi_variance_decomposition.py`*
 
 ---
 
 ## 1. Executive Summary
 
-Analyzed **506** tangled_rope constraints (402 genuinely perspectival).
+Analyzed **502** tangled_rope constraints (402 genuinely perspectival).
 
 **Variance driver**: f(d) (power sigmoid). Of total f(d)+scope variance, f(d) accounts for 94.8% and scope for 5.2%. (Negative interaction means Var_fd + Var_scope > Var_total.)
 
-**Sweep stability**: At σ(global)=1.0, GP fraction = 55.3% (baseline at σ=1.2: 79.4%).
+**Sweep stability**: At σ(global)=1.0, GP fraction = 55.8% (baseline at σ=1.2: 80.1%).
 
 GP drops below 80% at σ(global) = 1.0.
 
@@ -38,16 +38,16 @@ Var_total = Var(χ_full), Var_fd = Var(χ_fd_only), Var_scope = Var(χ_scope_onl
 
 **Note on negative interaction**: When f(d) and scope variations are anti-correlated across perspectives (high f(d) pairs with low scope, and vice versa), their product has less variance than the sum of individual variances. This makes Var_interaction negative and fd_fraction + scope_fraction > 1.0. This is expected, not an error — it means f(d) and scope partially cancel each other.
 
-### 2.2 Full Population (N=506)
+### 2.2 Full Population (N=502)
 
 | Component | Mean | Median | Std | Q25 | Q75 |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| var_total | 0.083826 | 0.080084 | 0.047534 | 0.059974 | 0.089592 |
-| var_fd | 0.084778 | 0.081043 | 0.048154 | 0.060692 | 0.090664 |
-| var_scope | 0.004608 | 0.004294 | 0.002628 | 0.003659 | 0.004804 |
-| var_interaction | -0.005561 | -0.005253 | 0.003217 | -0.005876 | -0.004291 |
-| fd_fraction | 1.007500 | 1.011965 | 0.057133 | 1.011964 | 1.011966 |
-| scope_fraction | 0.064750 | 0.053623 | 0.128753 | 0.053623 | 0.053623 |
+| var_total | 0.084490 | 0.080084 | 0.047135 | 0.065424 | 0.089592 |
+| var_fd | 0.085450 | 0.081043 | 0.047751 | 0.066207 | 0.090664 |
+| var_scope | 0.004645 | 0.004294 | 0.002606 | 0.003659 | 0.004804 |
+| var_interaction | -0.005605 | -0.005253 | 0.003191 | -0.005876 | -0.004291 |
+| fd_fraction | 1.009481 | 1.011965 | 0.035554 | 1.011964 | 1.011966 |
+| scope_fraction | 0.064945 | 0.053623 | 0.129229 | 0.053623 | 0.053623 |
 
 ### 2.3 Genuinely Perspectival Subset (N=402)
 
@@ -66,7 +66,7 @@ Var_total = Var(χ_full), Var_fd = Var(χ_fd_only), Var_scope = Var(χ_scope_onl
 | :--- | ---: | ---: | ---: | ---: |
 | genuinely_perspectival | 402 | 1.0101 | 0.0545 | -0.006355 |
 | structurally_ambiguous | 62 | 1.0089 | 0.0900 | -0.003027 |
-| rope_dominant | 40 | 0.9877 | 0.0522 | -0.001064 |
+| rope_dominant | 36 | 1.0131 | 0.0536 | -0.001179 |
 | snare_dominant | 2 | 0.8468 | 1.5995 | -0.014523 |
 
 ### 2.5 Variance Share Distribution
@@ -83,7 +83,7 @@ Distribution of f(d) share = Var_fd / (Var_fd + Var_scope), which is always in [
   0.6-0.7 | # (0)
   0.7-0.8 | # (0)
   0.8-0.9 | # (1)
-  0.9-1.0 | ######################################## (499)
+  0.9-1.0 | ######################################## (496)
 ```
 
 f(d) share: mean=0.9443, median=0.9497, min=0.2454, max=0.9585
@@ -94,9 +94,9 @@ Mutually exclusive: classified by which source has the larger fraction (must als
 
 | Category | Count | % |
 | :--- | ---: | ---: |
-| f(d)-dominated | 502 | 99.2000 |
+| f(d)-dominated | 499 | 99.4000 |
 | scope-dominated | 2 | 0.4000 |
-| balanced | 2 | 0.4000 |
+| balanced | 1 | 0.2000 |
 
 ### 2.7 Chi Overrides
 
@@ -130,39 +130,39 @@ At each value: recompute χ = ε × f(d) × σ_swept, compute gradient, reclassi
 
 | σ | rope_dom | snare_dom | genuinely_persp | struct_ambig | GP% |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1.00 | 61 | 2 | 280 | 163 | 55.3 |
-| 1.05 | 58 | 2 | 376 | 70 | 74.3 |
-| 1.10 | 58 | 2 | 381 | 65 | 75.3 |
-| 1.15 | 40 | 2 | 391 | 73 | 77.3 |
-| 1.20 | 40 | 2 | 401 | 63 | 79.2 |
-| 1.25 | 37 | 2 | 440 | 27 | 87.0 |
-| 1.30 | 26 | 2 | 440 | 38 | 87.0 |
-| 1.35 | 26 | 2 | 443 | 35 | 87.5 |
-| 1.40 | 24 | 2 | 443 | 37 | 87.5 |
-| 1.45 | 24 | 2 | 461 | 19 | 91.1 |
-| 1.50 | 24 | 2 | 461 | 19 | 91.1 |
+| 1.00 | 57 | 2 | 280 | 163 | 55.8 |
+| 1.05 | 54 | 2 | 376 | 70 | 74.9 |
+| 1.10 | 54 | 2 | 381 | 65 | 75.9 |
+| 1.15 | 36 | 2 | 391 | 73 | 77.9 |
+| 1.20 | 36 | 2 | 401 | 63 | 79.9 |
+| 1.25 | 33 | 2 | 440 | 27 | 87.6 |
+| 1.30 | 22 | 2 | 440 | 38 | 87.6 |
+| 1.35 | 22 | 2 | 443 | 35 | 88.2 |
+| 1.40 | 20 | 2 | 443 | 37 | 88.2 |
+| 1.45 | 20 | 2 | 461 | 19 | 91.8 |
+| 1.50 | 20 | 2 | 461 | 19 | 91.8 |
 
 ### 3.3 Local Scope Sweep
 
 | σ | rope_dom | snare_dom | genuinely_persp | struct_ambig | GP% |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0.50 | 40 | 1 | 404 | 61 | 79.8 |
-| 0.55 | 40 | 1 | 404 | 61 | 79.8 |
-| 0.60 | 40 | 1 | 402 | 63 | 79.5 |
-| 0.65 | 40 | 2 | 401 | 63 | 79.2 |
-| 0.70 | 40 | 2 | 401 | 63 | 79.2 |
-| 0.75 | 40 | 2 | 401 | 63 | 79.2 |
-| 0.80 | 40 | 2 | 401 | 63 | 79.2 |
-| 0.85 | 40 | 2 | 401 | 63 | 79.2 |
-| 0.90 | 40 | 2 | 401 | 63 | 79.2 |
-| 0.95 | 40 | 2 | 401 | 63 | 79.2 |
-| 1.00 | 40 | 2 | 402 | 62 | 79.5 |
+| 0.50 | 36 | 1 | 404 | 61 | 80.5 |
+| 0.55 | 36 | 1 | 404 | 61 | 80.5 |
+| 0.60 | 36 | 1 | 402 | 63 | 80.1 |
+| 0.65 | 36 | 2 | 401 | 63 | 79.9 |
+| 0.70 | 36 | 2 | 401 | 63 | 79.9 |
+| 0.75 | 36 | 2 | 401 | 63 | 79.9 |
+| 0.80 | 36 | 2 | 401 | 63 | 79.9 |
+| 0.85 | 36 | 2 | 401 | 63 | 79.9 |
+| 0.90 | 36 | 2 | 401 | 63 | 79.9 |
+| 0.95 | 36 | 2 | 401 | 63 | 79.9 |
+| 1.00 | 36 | 2 | 402 | 62 | 80.1 |
 
 ### 3.4 Phase Transitions
 
 | Threshold | σ(global) at crossing | σ(local) at crossing |
 | :--- | ---: | ---: |
-| GP < 80% | 1.00 | 0.50 |
+| GP < 80% | 1.00 | 0.65 |
 | GP < 70% | 1.00 | never |
 | GP < 60% | 1.00 | never |
 | GP < 50% | never | never |
@@ -175,7 +175,7 @@ At each value: recompute χ = ε × f(d) × σ_swept, compute gradient, reclassi
 
 ### 3.5 Stability Assessment
 
-At σ(global)=1.0, GP = 55.3%. The finding is **moderately scope-dependent** — GP remains a majority but scope amplification contributes meaningfully.
+At σ(global)=1.0, GP = 55.8%. The finding is **moderately scope-dependent** — GP remains a majority but scope amplification contributes meaningfully.
 
 
 ## 4. Dominant Divergence Pair Analysis

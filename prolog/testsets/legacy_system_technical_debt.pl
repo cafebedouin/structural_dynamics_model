@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(legacy_system_technical_debt, suppression_r
 narrative_ontology:constraint_metric(legacy_system_technical_debt, theater_ratio, 0.85).
 
 % Constraint self-claim
-narrative_ontology:constraint_claim(legacy_system_technical_debt, tangled_rope).
+narrative_ontology:constraint_claim(legacy_system_technical_debt, rope).
 narrative_ontology:human_readable(legacy_system_technical_debt, "Cumulative Technical Debt in Legacy Monoliths").
 narrative_ontology:topic_domain(legacy_system_technical_debt, "technological/economic").
 

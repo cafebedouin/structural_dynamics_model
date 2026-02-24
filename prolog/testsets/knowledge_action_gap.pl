@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(knowledge_action_gap, rope,
 % From an analytical distance, this gap is a snare that extracts future value
 % by suppressing necessary immediate changes.
 % Effective extraction χ = 0.71 * 1.15 (analytical) * 1.2 (global) = 0.9798.
-constraint_indexing:constraint_classification(knowledge_action_gap, snare,
+constraint_indexing:constraint_classification(knowledge_action_gap, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

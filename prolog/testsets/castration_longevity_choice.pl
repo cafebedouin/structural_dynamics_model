@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(castration_longevity_choice, rope,
 % reproductive fitness for longevity) but also asymmetric extraction (the
 % seeker bears all risk/cost) and active enforcement (by the medical
 % establishment). This combination is a Tangled Rope.
-constraint_indexing:constraint_classification(castration_longevity_choice, snare,
+constraint_indexing:constraint_classification(castration_longevity_choice, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -143,7 +143,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical view correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(castration_longevity_choice, snare, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(castration_longevity_choice, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     % Verify the base extraction meets the threshold for a Snare/Tangled Rope.

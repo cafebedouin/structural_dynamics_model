@@ -1,31 +1,31 @@
 # Rope-Dominant Spot Check
 
-*Generated 2026-02-24 13:53 by `python/rope_dominant_spot_check.py`*
+*Generated 2026-02-24 14:13 by `python/rope_dominant_spot_check.py`*
 
 ---
 
 ## 1. Executive Summary
 
-Analyzed **40** rope-dominant tangled_rope constraints (max g_chi < 0.3 across all 4 perspectives).
+Analyzed **36** rope-dominant tangled_rope constraints (max g_chi < 0.3 across all 4 perspectives).
 
 ### Diagnostic Counts
 
 | Diagnostic | Count | % |
 | :--- | ---: | ---: |
-| Low-epsilon trivial (eps < 0.15) | 7 | 17.5% |
+| Low-epsilon trivial (eps < 0.15) | 3 | 8.3% |
 | Sigmoid-compressed (all f(d) < 0.5) | 0 | 0.0% |
 | Low f(d) spread (< 0.1) | 0 | 0.0% |
 | Chi override overlap | 0 | 0.0% |
-| Perspective divergent (>1 type label) | 15 | 37.5% |
-| Has tangled_rope/snare label | 38 | 95.0% |
+| Perspective divergent (>1 type label) | 15 | 41.7% |
+| Has tangled_rope/snare label | 36 | 100.0% |
 
 ### Recommendation Tiers
 
 | Tier | Count | % |
 | :--- | ---: | ---: |
-| Keep | 27 | 67.5% |
-| Investigate | 9 | 22.5% |
-| Reclassify | 4 | 10.0% |
+| Keep | 27 | 75.0% |
+| Investigate | 9 | 25.0% |
+| Reclassify | 0 | 0.0% |
 
 ## 2. Structural Observation
 
@@ -42,7 +42,7 @@ Since chi = epsilon × f(d) × scope_mod, and f(d) and scope_mod are per-perspec
 
 Consequently:
 
-- **f(d) spread** = 1.400858 for all 40 (structural invariant)
+- **f(d) spread** = 1.400858 for all 36 (structural invariant)
 - **Sigmoid-compressed count** = 0 (powerless f(d) = 1.358606 > 0.5)
 
 ## 3. Population Statistics
@@ -51,18 +51,18 @@ Consequently:
 
 | Stat | Value |
 | :--- | ---: |
-| n | 40 |
-| mean | 0.2145 |
-| median | 0.2000 |
-| std | 0.0889 |
-| min | 0.0000 |
+| n | 36 |
+| mean | 0.2347 |
+| median | 0.2500 |
+| std | 0.0682 |
+| min | 0.1000 |
 | max | 0.3200 |
-| q25 | 0.1500 |
+| q25 | 0.2000 |
 | q75 | 0.3000 |
 
 | Range | Count |  |
 | :--- | ---: | :--- |
-| 0.00–0.09 | 4 | ████ |
+| 0.00–0.09 | 0 |  |
 | 0.10–0.14 | 3 | ███ |
 | 0.15–0.19 | 6 | ██████ |
 | 0.20–0.24 | 8 | ████████ |
@@ -73,59 +73,49 @@ Consequently:
 
 | Domain | Count | % |
 | :--- | ---: | ---: |
-| technological/economic | 6 | 15.0% |
-| economic | 2 | 5.0% |
-| economic/political | 2 | 5.0% |
-| economic/social | 2 | 5.0% |
-| political | 2 | 5.0% |
-| technological | 2 | 5.0% |
-| economic/technological | 2 | 5.0% |
-| political/environmental | 1 | 2.5% |
-| investigation/testing | 1 | 2.5% |
-| technological/mathematical | 1 | 2.5% |
-| mathematical/logical | 1 | 2.5% |
-| mathematical/philosophical | 1 | 2.5% |
-| social/ethical | 1 | 2.5% |
-| legal/geopolitical/environmental | 1 | 2.5% |
-| technological/cognitive | 1 | 2.5% |
-| religious/philosophical/social | 1 | 2.5% |
-| political/religious | 1 | 2.5% |
-| technological/legal/economic | 1 | 2.5% |
-| technological/scientific | 1 | 2.5% |
-| health/medical | 1 | 2.5% |
-| technological/social | 1 | 2.5% |
-| medical/health | 1 | 2.5% |
-| social/technological/biological | 1 | 2.5% |
-| political/legal | 1 | 2.5% |
-| technological/political/social | 1 | 2.5% |
-| economic/social/technological | 1 | 2.5% |
-| legal/economic/social | 1 | 2.5% |
+| technological/economic | 5 | 13.9% |
+| economic | 2 | 5.6% |
+| economic/political | 2 | 5.6% |
+| economic/social | 2 | 5.6% |
+| political | 2 | 5.6% |
+| technological | 2 | 5.6% |
+| economic/technological | 2 | 5.6% |
+| political/environmental | 1 | 2.8% |
+| investigation/testing | 1 | 2.8% |
+| technological/mathematical | 1 | 2.8% |
+| mathematical/logical | 1 | 2.8% |
+| mathematical/philosophical | 1 | 2.8% |
+| social/ethical | 1 | 2.8% |
+| legal/geopolitical/environmental | 1 | 2.8% |
+| technological/cognitive | 1 | 2.8% |
+| religious/philosophical/social | 1 | 2.8% |
+| political/religious | 1 | 2.8% |
+| technological/legal/economic | 1 | 2.8% |
+| technological/scientific | 1 | 2.8% |
+| health/medical | 1 | 2.8% |
+| technological/social | 1 | 2.8% |
+| medical/health | 1 | 2.8% |
+| social/technological/biological | 1 | 2.8% |
+| political/legal | 1 | 2.8% |
 
 ### 3.3 Perspective Type Labels
 
-- **Divergent** (>1 unique type across 4 perspectives): **15** / 40
+- **Divergent** (>1 unique type across 4 perspectives): **15** / 36
 
-- **Uniform** (all 4 perspectives agree): **25** / 40
+- **Uniform** (all 4 perspectives agree): **21** / 36
 
-- **Has tangled_rope or snare label**: **38** / 40
+- **Has tangled_rope or snare label**: **36** / 36
 
 ### 3.4 Chi Override Overlap
 
-**0** of the 40 rope-dominant constraints overlap with the 19 chi override set.
+**0** of the 36 rope-dominant constraints overlap with the 19 chi override set.
 
 
 ## 4. Recommendations by Tier
 
-### 4.1 Reclassify (4 constraints)
+### 4.1 Reclassify (0 constraints)
 
-These constraints have epsilon < 0.10.  Extraction potential is trivially low; rope-dominant is obviously correct.  Recommend reclassifying from tangled_rope to rope.
-
-| Constraint | ε | Domain | Perspective Types | Reason |
-| :--- | ---: | :--- | :--- | :--- |
-| `e2ee_digital_privacy_2026` | 0.05 | technological/political/social | tangled_rope | Trivially low epsilon (0.05); rope-dominant is obviously correct |
-| `platform_cooperativism_governance` | 0.05 | economic/social/technological | tangled_rope | Trivially low epsilon (0.05); rope-dominant is obviously correct |
-| `legacy_system_technical_debt` | 0.03 | technological/economic | rope | Trivially low epsilon (0.03); rope-dominant is obviously correct |
-| `public_domain_commons` | 0.00 | legal/economic/social | rope | Trivially low epsilon (0.00); rope-dominant is obviously correct |
+*(none)*
 
 ### 4.2 Investigate (9 constraints)
 
@@ -179,14 +169,12 @@ These constraints have epsilon >= 0.20 and at least one perspective labels them 
 
 ## 5. Calibration Implications
 
-- **4** constraints recommended for reclassification to plain rope (epsilon < 0.1)
+- **0** constraints recommended for reclassification to plain rope (epsilon < 0.1)
 
 - **9** constraints need human review (epsilon 0.1–0.2)
 
 - **27** constraints appear correctly labeled (epsilon >= 0.2 with extraction signals)
 
-
-**If reclassifying**: consider tightening the tangled_rope binary gate to require epsilon >= 0.10 before the tangled_rope label can apply.  This would prevent very-low-extraction coordination mechanisms from receiving the tangled_rope label.
 
 **Structural note**: Since rope-dominance is entirely epsilon-driven (f(d) and scope_mod are perspective constants), the epsilon threshold is the only lever.  The question for the Investigate tier is whether the Prolog specs describe genuine rope-snare entanglement at moderate epsilon levels, or merely incidental extraction.
 
@@ -221,7 +209,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0787, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.0677, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: China implements zero-tariff treatment for 53 African nations to expand market access. While nominally a coordination mechanism (Rope) for trade, the inclusion of "green channels" and "joint economic partnership pacts" introduces structural extraction through standard-setting and diplomatic alignment. KEY AGENTS (by structural relationship): - smallholder_african_farmers: Primary target (powerless/trapped) — bears highest compliance costs, lacks capital to meet standards. - organized_african_exporters: Secondary target (moderate/constrained) — can meet standards but at a significant cost. - china_state_actors: Primary beneficiary (institutional/arbitrage) — gains geopolitical alignment and resource security. - focac_administrators: Analytical observer — monitors the Forum on China-Africa Cooperation (FOCAC) outcomes.
 
@@ -311,7 +299,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0691, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.0597, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: Open Culture is a web-based cultural and educational aggregator that provides free access to a vast repository of high-quality content. The organization is sustained by a voluntary donation model, where a small fraction of users provide the financial support for the entire operation. This constraint is the funding mechanism itself: a system for solving a public goods problem that relies on asymmetric, non-coercive extraction. KEY AGENTS (by structural relationship): - Donors: Primary target (moderate/mobile) — The small subset of users who bear the financial cost of the service for everyone. - Open Culture Editors: Primary beneficiary (institutional/arbitrage) — The organization that uses the funds to operate and fulfill its mission. - Global Learners: Secondary beneficiary (powerless/mobile) — The vast majority of users who access the content for free. - Analytical Observer: Sees the full structure of coordination and asymmetric cost-bearing.
 
@@ -352,7 +340,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.7755, band=snare_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.7811, band=snare_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: The regulatory and tax framework in the United States that treats "carried interest" (performance fees) for partners in private equity and hedge funds as long-term capital gains rather than ordinary income. This results in a significantly lower tax rate. The constraint's existence relies on active lobbying and complex legal structuring to defend its status against legislative challenges that seek to reclassify it as income. KEY AGENTS (by structural relationship): - us_taxpayers: Primary target (powerless/trapped) — bear the cost via reduced public tax revenue, with no direct recourse. - private_equity_partners: Primary beneficiary (institutional/arbitrage) — benefit from lower tax rates on their primary form of compensation. - reformist_legislators: Secondary institutional actor (institutional/constrained) — attempt to change the rule but face high political and structural barriers. - analytical_observer: Analytical observer — sees the dual function of coordination (for partners) and extraction (from the tax base).
 
@@ -397,7 +385,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.4757, band=genuinely_tangled, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.4707, band=genuinely_tangled, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: The 1.5°C target is a global policy constraint that lowered the "safe" warming threshold from 2°C. Championed by the Alliance of Small Island States (AOSIS), it redefines acceptable climate risk based on the survival of the most vulnerable nations rather than the economic convenience of larger powers. It functions as both a coordination mechanism for global climate action and an extractive limit on high-emission development paths. KEY AGENTS (by structural relationship): - Small Island States (AOSIS): Primary beneficiary (organized/trapped) — uses the target as a survival mechanism. - Fossil Fuel Reliant Economies: Primary target (institutional/constrained) — bears the cost of constrained development. - Citizen in a Coastal Community: Secondary target (powerless/trapped) — experiences the physical reality of climate change, for whom the policy target is largely abstract. - Analytical Observer: Sees the dual coordination/extraction function.
 
@@ -442,7 +430,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0973, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.0886, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: A synthetic constraint designed to model a constructed system that could be mistaken for a natural law (a False Natural Law, or FNL). It combines a genuine coordination function with asymmetric extraction, enforced by an active apparatus. Its high suppression score and requirement for active enforcement are structural giveaways that it is constructed, not natural. From the beneficiary's perspective, it appears as a low-cost coordination mechanism (Rope), while for its targets, it is an extractive Tangled Rope. KEY AGENTS (by structural relationship): - constrained_subjects: Primary target (powerless/trapped) — bears the costs of the system. - institutional_apparatus: Primary beneficiary (institutional/arbitrage) — benefits from the coordination and extraction. - Analytical observer: Sees the full structure, including both the coordination function and the asymmetric extraction.
 
@@ -528,7 +516,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.7826, band=snare_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.7880, band=snare_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: The GLN is a 13-digit GS1 identification key used to identify physical locations (warehouses, hospital rooms) or legal entities (corporations). It constrains the digital "map" of global commerce by enforcing a single, globally unique identifier for every point of business interaction.
 
@@ -569,7 +557,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0877, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.0800, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: Inner Model Theory studies sub-universes of the set-theoretic universe (V) that satisfy the axioms of ZFC. The archetypal inner model is Gödel's Constructible Universe (L), defined by the axiom V=L. This axiom imposes a rigid, determinate structure on the transfinite, resolving questions like the Continuum Hypothesis. However, this determinacy comes at the cost of excluding more complex structures like large cardinals, creating a significant perspectival gap between different schools of set theorists. KEY AGENTS (by structural relationship): - Large Cardinal Pluralists (Victim): Set theorists who view V=L as a snare that extracts the potential richness of the set-theoretic universe (V) to enforce a narrow, predictable structure. (moderate/constrained) - Consistency Proof Developers (Beneficiary): Logicians and model theorists who use inner models like L as a coordination tool (a rope) to establish the relative consistency of various mathematical axioms. (institutional/mobile) - The Constructible Set (Subject): A mathematical object whose existence is rigidly defined by the L-hierarchy, for which the constraint is an unchangeable law of its nature. (powerless/trapped) - Analytical Observer: Sees the full structure as a Tangled Rope, acknowledging both its genuine coordination function for consistency proofs and its extractive nature in suppressing alternative set-theoretic ontologies.
 
@@ -610,7 +598,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0050, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.0041, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 *Prolog spec file not found.*
 
@@ -645,7 +633,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0055, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.0044, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 *Prolog spec file not found.*
 
@@ -680,7 +668,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0893, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.0815, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: Moore's Law is the observation that the number of transistors on a microchip doubles approximately every two years. This story models the law not as a physical inevitability, but as a self-fulfilling prophecy or a "socially enforced" pace of innovation that coordinates the global semiconductor industry while simultaneously creating a coercive R&D treadmill and planned obsolescence. KEY AGENTS (by structural relationship): - Chip Fabricators (e.g., Intel, TSMC): Primary target (institutional/constrained) — bears the immense R&D cost to maintain the pace. - Platform Capitalists & Software Developers: Primary beneficiary (institutional/arbitrage) — benefits from predictable hardware gains to build more complex services. - Consumers / Legacy Infrastructure Owners: Secondary target (powerless/mobile) — benefits from cheaper compute but is subject to planned obsolescence. - Analytical Observer: Sees the full structure as a Tangled Rope of coordination and extraction.
 
@@ -721,7 +709,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0061, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
+**Cross-refs**: tangled_psi=0.0049, band=rope_leaning, signature=false_ci_rope, coalition=institutional_dissent
 
 **Spec summary**: This constraint mandates that an advisor must embody their own counsel before delivering it to others. In the source narrative, a Sadhu (holy man) delays giving advice to a boy to stop eating sugar for two weeks because the Sadhu was still consuming sugar himself. The constraint posits that effective social coordination (advice) requires internal synchronization (integrity), extracting time from those seeking immediate solutions to ensure efficacy. KEY AGENTS (by structural relationship): - The Mother & Son (seekers_of_immediate_remedies): Primary targets (powerless/trapped) — bear the cost of the two-week delay. - The Sadhu (upholders_of_tradition): Primary beneficiary (institutional/mobile) — benefits from enhanced authority and social efficacy. - The Community (implicit): Secondary beneficiary — benefits from a system of trustworthy counsel. - Analytical Observer: Sees the full structure of coordination and extraction.
 
@@ -807,7 +795,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.6554, band=genuinely_tangled, signature=false_ci_rope, coalition=uniform_tangled
+**Cross-refs**: tangled_psi=0.6659, band=genuinely_tangled, signature=false_ci_rope, coalition=uniform_tangled
 
 **Spec summary**: A temporary administrative body created to manage a specific recovery period. While it exerts high control (suppression), it includes a mandatory expiration date to prevent it from hardening into a permanent Snare. Its extraction is moderate, representing compliance costs rather than direct rent-seeking.
 
@@ -1131,7 +1119,7 @@ Sorted by epsilon (descending).
 
 **Diagnostics**: low-epsilon=no, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
 
-**Cross-refs**: tangled_psi=0.0406, band=rope_leaning, signature=false_ci_rope, coalition=other
+**Cross-refs**: tangled_psi=0.0428, band=rope_leaning, signature=false_ci_rope, coalition=other
 
 **Spec summary**: The "dharma" or sacred duty of the warrior caste (Kshatriya) to fight in a lawful war, even against kin. It presents a powerful moral obligation rooted in a specific metaphysical worldview and social order, as articulated by Krishna to Arjuna on the battlefield of Kurukshetra. The constraint is the social and ideological pressure to conform to one's caste duty. KEY AGENTS (by structural relationship): - Arjuna: Primary target (powerless/trapped) — bears the moral and psychological cost of the duty. - The Cosmic Order (as personified by Krishna): Primary beneficiary (institutional/arbitrage) — the social and metaphysical system is upheld by adherence to dharma. - The Enlightened Sage: Analytical observer — perceives the system's logic from a detached viewpoint.
 
@@ -1678,168 +1666,6 @@ Sorted by epsilon (descending).
 *Prolog spec file not found.*
 
 **Recommendation**: INVESTIGATE — Moderate epsilon (0.10); tangled_rope label may or may not add signal — needs spec review
-
----
-
-### 6.37. `e2ee_digital_privacy_2026` — **RECLASSIFY**
-
-**End-to-End Encryption (E2EE)** | Domain: technological/political/social
-
-| Metric | Value |
-| :--- | ---: |
-| epsilon (base_extractiveness) | 0.0500 |
-| suppression | 0.5000 |
-| theater_ratio | 0.0900 |
-| max gradient (g_chi) | -0.9081 |
-| max Chi | 0.0685 |
-| claimed_type | tangled_rope |
-| chi override | no |
-| perspective divergence | no |
-| has tangled/snare label | YES |
-
-**Perspective type labels**: powerless=tangled_rope, moderate=tangled_rope, institutional=tangled_rope, analytical=tangled_rope
-
-| Perspective | d | f(d) | scope | Chi | g_chi |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| powerless | 0.9000 | 1.358606 | 0.8 | 0.054344 | -0.953729 |
-| moderate | 0.7000 | 1.106492 | 1.0 | 0.055325 | -0.950565 |
-| institutional | 0.1200 | -0.042252 | 1.0 | -0.002113 | -1.135848 |
-| analytical | 0.7200 | 1.141609 | 1.2 | 0.068497 | -0.908074 |
-
-**Diagnostics**: low-epsilon=YES, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
-
-**Cross-refs**: tangled_psi=0.4762, band=genuinely_tangled, signature=false_natural_law, coalition=uniform_tangled
-
-**Spec summary**: End-to-end encryption (E2EE) is a digital "wall" that ensures messages are only readable by the sender and recipient, rendering them "meaningless gibberish" during transmission. It provides a technological safeguard for privacy by relying on "immutable mathematics" rather than the promises of service providers.
-
-**Key agents**: - The Vulnerable Individual (Individual Powerless): Relies on E2EE for physical safety. - The Surveillance State (Institutional): A spy agency or police force unable to access communications. - The Mathematician (Analytical): Observer of the underlying mathematical laws.
-
-**Beneficiaries**: individual_users
-
-**Victims**: institutional_surveillance
-
-**Recommendation**: RECLASSIFY — Trivially low epsilon (0.05); rope-dominant is obviously correct
-
----
-
-### 6.38. `platform_cooperativism_governance` — **RECLASSIFY**
-
-**Democratic Worker Governance in Platform Cooperativism** | Domain: economic/social/technological
-
-| Metric | Value |
-| :--- | ---: |
-| epsilon (base_extractiveness) | 0.0500 |
-| suppression | 0.2000 |
-| theater_ratio | 0.1200 |
-| max gradient (g_chi) | -0.9081 |
-| max Chi | 0.0685 |
-| claimed_type | tangled_rope |
-| chi override | no |
-| perspective divergence | no |
-| has tangled/snare label | YES |
-
-**Perspective type labels**: powerless=tangled_rope, moderate=tangled_rope, institutional=tangled_rope, analytical=tangled_rope
-
-| Perspective | d | f(d) | scope | Chi | g_chi |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| powerless | 0.9000 | 1.358606 | 0.8 | 0.054344 | -0.953729 |
-| moderate | 0.7000 | 1.106492 | 1.0 | 0.055325 | -0.950565 |
-| institutional | 0.1200 | -0.042252 | 1.0 | -0.002113 | -1.135848 |
-| analytical | 0.7200 | 1.141609 | 1.2 | 0.068497 | -0.908074 |
-
-**Diagnostics**: low-epsilon=YES, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
-
-**Cross-refs**: tangled_psi=0.4762, band=genuinely_tangled, signature=false_natural_law, coalition=uniform_tangled
-
-**Spec summary**: Platform Cooperativism is a model where a digital platform is owned and governed by its workers. The core constraint is a "democratic mandate" that requires profits to be distributed to members and algorithms to be accountable to the collective.
-
-**Key agents**: - The Worker-Owner (Individual Moderate): Possesses voting rights and a share of the surplus. - The VC-Backed Competitor (Institutional): Views the coop's lack of "blitzscaling" as a weakness. - The Non-Member Gig Worker (Individual Powerless): Works for a competitor like Uber, sees the coop as an inaccessible alternative.
-
-**Beneficiaries**: worker_members
-
-**Victims**: external_capital_investors
-
-**Recommendation**: RECLASSIFY — Trivially low epsilon (0.05); rope-dominant is obviously correct
-
----
-
-### 6.39. `legacy_system_technical_debt` — **RECLASSIFY**
-
-**Cumulative Technical Debt in Legacy Monoliths** | Domain: technological/economic
-
-| Metric | Value |
-| :--- | ---: |
-| epsilon (base_extractiveness) | 0.0300 |
-| suppression | 0.0400 |
-| theater_ratio | 0.8500 |
-| max gradient (g_chi) | -0.9965 |
-| max Chi | 0.0411 |
-| claimed_type | tangled_rope |
-| chi override | no |
-| perspective divergence | no |
-| has tangled/snare label | no |
-
-**Perspective type labels**: powerless=rope, moderate=rope, institutional=rope, analytical=rope
-
-| Perspective | d | f(d) | scope | Chi | g_chi |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| powerless | 0.9000 | 1.358606 | 0.8 | 0.032607 | -1.023848 |
-| moderate | 0.7000 | 1.106492 | 1.0 | 0.033195 | -1.021952 |
-| institutional | 0.1200 | -0.042252 | 1.0 | -0.001268 | -1.133123 |
-| analytical | 0.7200 | 1.141609 | 1.2 | 0.041098 | -0.996458 |
-
-**Diagnostics**: low-epsilon=YES, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4009)
-
-**Cross-refs**: tangled_psi=0.0000, band=rope_leaning, signature=constructed_low_extraction, coalition=other
-
-**Spec summary**: Technical debt is the implied cost of future refactoring caused by choosing an easy, limited solution now instead of a better approach. In legacy systems, this debt ossifies into a constraint that limits innovation. What begins as a strategic shortcut (Rope) becomes an unmovable reality (Mountain) for new hires, and eventually an inertial burden (Piton) that consumes resources via performative maintenance.
-
-**Key agents**: - Junior Developer: Subject (Powerless), navigating a brittle codebase. - CTO/VPE: Beneficiary (Institutional), balancing velocity vs. stability. - System Architect/Auditor: Auditor (Analytical), identifying structural decay.
-
-**Beneficiaries**: short_term_profit_margins
-
-**Victims**: engineering_morale, long_term_viability
-
-**Recommendation**: RECLASSIFY — Trivially low epsilon (0.03); rope-dominant is obviously correct
-
----
-
-### 6.40. `public_domain_commons` — **RECLASSIFY**
-
-**The Public Domain as a Cultural Commons** | Domain: legal/economic/social
-
-| Metric | Value |
-| :--- | ---: |
-| epsilon (base_extractiveness) | 0.0000 |
-| suppression | 0.3000 |
-| theater_ratio | 0.0800 |
-| max gradient (g_chi) | -1.1290 |
-| max Chi | 0.0000 |
-| claimed_type | tangled_rope |
-| chi override | no |
-| perspective divergence | no |
-| has tangled/snare label | no |
-
-**Perspective type labels**: powerless=rope, moderate=rope, institutional=rope, analytical=rope
-
-| Perspective | d | f(d) | scope | Chi | g_chi |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| powerless | 0.9500 | 1.392945 | 0.8 | 0.000000 | -1.129032 |
-| moderate | 0.6500 | 1.008614 | 1.0 | 0.000000 | -1.129032 |
-| institutional | 0.1200 | -0.042252 | 1.0 | -0.000000 | -1.129032 |
-| analytical | 0.7200 | 1.141609 | 1.2 | 0.000000 | -1.129032 |
-
-**Diagnostics**: low-epsilon=YES, sigmoid-compressed=no, low-f(d)-spread=no (spread=1.4352)
-
-**Cross-refs**: tangled_psi=0.0000, band=rope_leaning, signature=constructed_low_extraction, coalition=other
-
-**Spec summary**: The Public Domain consists of all creative work to which no exclusive intellectual property rights apply. These works are free for anyone to use, remix, and build upon. It represents the default state of information before or after the artificial constraint of Copyright is applied. This constraint is the existence and defense of that commons. KEY AGENTS (by structural relationship): - Commons Participants (students, artists, developers): Primary beneficiary (powerless/moderate/mobile) — uses the commons for education, creation, and innovation. - Legacy Rights-Holders (large media corporations): Institutional actor (institutional/constrained) — views the commons as a boundary condition that limits their ability to extract rent from intellectual property. - Analytical Observer: Sees the full structure as a pure coordination mechanism.
-
-**Key agents**: (by structural relationship): - Commons Participants (students, artists, developers): Primary beneficiary (powerless/moderate/mobile) — uses the commons for education, creation, and innovation. - Legacy Rights-Holders (large media corporations): Institutional actor (institutional/constrained) — views the commons as a boundary condition that limits their ability to extract rent from intellectual property. - Analytical Observer: Sees the full structure as a pure coordination mechanism.
-
-**Beneficiaries**: commons_participants
-
-**Recommendation**: RECLASSIFY — Trivially low epsilon (0.00); rope-dominant is obviously correct
 
 ---
 

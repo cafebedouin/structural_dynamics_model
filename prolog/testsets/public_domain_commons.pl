@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(public_domain_commons, suppression_requirem
 narrative_ontology:constraint_metric(public_domain_commons, theater_ratio, 0.08).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(public_domain_commons, tangled_rope).
+narrative_ontology:constraint_claim(public_domain_commons, rope).
 narrative_ontology:human_readable(public_domain_commons, "The Public Domain as a Cultural Commons").
 narrative_ontology:topic_domain(public_domain_commons, "legal/economic/social").
 
