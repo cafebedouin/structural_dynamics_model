@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(germline_regulation_threshold_2026, radical
 % PERSPECTIVE 1: THE SUBJECT (FUTURE PROGENY)
 % For those whose genome might be edited, the regulation is an unchangeable
 % protective barrier against unforeseen, permanent errors.
-constraint_indexing:constraint_classification(germline_regulation_threshold_2026, mountain,
+constraint_indexing:constraint_classification(germline_regulation_threshold_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(civilizational),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(germline_regulation_threshold_2026
 % (Rope) to prevent harm, but also one that asymmetrically extracts value
 % (lost opportunity, stifled innovation) from specific groups (Snare).
 % This duality is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(germline_regulation_threshold_2026, tangled_rope,
+constraint_indexing:constraint_classification(germline_regulation_threshold_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

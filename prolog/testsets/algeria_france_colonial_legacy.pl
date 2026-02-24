@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(algeria_france_colonial_legacy, ro
 % Default analytical context (civilizational/analytical/global).
 % Recognizes both the coordination function (imposing a state structure) and
 % the massive asymmetric extraction, classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(algeria_france_colonial_legacy, tangled_rope,
+constraint_indexing:constraint_classification(algeria_france_colonial_legacy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

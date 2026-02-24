@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(us_israel_faa_502b_nonenforcement,
 % and the severe asymmetric extraction (bypassing human rights law at great cost
 % to the victims). The high ε, high suppression, and active enforcement of the
 % non-enforcement confirm the Tangled Rope classification.
-constraint_indexing:constraint_classification(us_israel_faa_502b_nonenforcement, tangled_rope,
+constraint_indexing:constraint_classification(us_israel_faa_502b_nonenforcement, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(us_israel_faa_502b_nonenforcement,
 % political pressure. They experience the constraint as a broken coordination
 % mechanism coupled with coercive internal politics.
 % Engine derives d from: victim membership + institutional power + constrained exit → intermediate/high d
-constraint_indexing:constraint_classification(us_israel_faa_502b_nonenforcement, tangled_rope,
+constraint_indexing:constraint_classification(us_israel_faa_502b_nonenforcement, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(constrained),
@@ -179,7 +179,7 @@ test(tangled_rope_gate_validation) :-
 
 test(analytical_claim_matches_type) :-
     narrative_ontology:constraint_claim(us_israel_faa_502b_nonenforcement, tangled_rope),
-    constraint_indexing:constraint_classification(us_israel_faa_502b_nonenforcement, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_israel_faa_502b_nonenforcement, snare, context(agent_power(analytical), _, _, _)).
 
 
 :- end_tests(us_israel_faa_502b_nonenforcement_tests).

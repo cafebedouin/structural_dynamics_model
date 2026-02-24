@@ -42,7 +42,7 @@ Applied concepts from Yuen (2026) on fully quantum complexity theory to the DR c
 - H¹ band + drift events in pipeline JSON (json_report.pl) — every per_constraint entry now has h1_band and drift_events fields
 - Enrichment pipeline extension (enrich_pipeline_json.py) — loads abductive_data.json, merges triggers per constraint
 - Enhanced report Section F: ABDUCTIVE FLAGS (enhanced_report.py) — renders trigger table in per-constraint reports
-- Makefile dependency wiring — abductive engine runs before enrichment
+- Pipeline dependency wiring (run_pipeline.py) — abductive engine runs before enrichment
 
 **Three new abductive triggers + calibration:**
 
@@ -78,7 +78,7 @@ All validated in config_validation.pl.
 
 ### Key Design Decisions Made
 
-**Makefile ordering over inline execution:** The abductive engine runs as a separate pipeline stage that writes JSON. json_report.pl does NOT load or run the abductive engine. This keeps them independent — if the abductive engine fails, pipeline_output.json still generates. The merge point is enrich_pipeline_json.py.
+**Pipeline ordering over inline execution:** The abductive engine runs as a separate pipeline stage that writes JSON. json_report.pl does NOT load or run the abductive engine. This keeps them independent — if the abductive engine fails, pipeline_output.json still generates. The merge point is enrich_pipeline_json.py.
 
 **Graduation policy:** 6 subsystems graduate from shadow to active diagnostic (indexed MaxEnt, cohomology H¹, restricted classification, gauge-fixed, abductive engine, FPN). 2 remain shadow (MaxEnt classifier stays as independent second opinion; drift/trajectory deferred pending versioned corpus). None change classification — Tier 1 deterministic classifier remains source of truth.
 
@@ -236,7 +236,7 @@ Investigate whether cross-domain structural isomorphism can leverage the diagnos
 - prolog/config_validation.pl — validation for new params
 - python/enrich_pipeline_json.py — abductive data loading and merge
 - python/enhanced_report.py — Section F (abductive flags), H¹ and drift in Section A
-- Makefile — abductive dependency wiring
+- python/run_pipeline.py — pipeline dependency wiring
 
 ### Current trigger inventory (abductive_engine.pl):
 - T1: SIGNATURE_OVERRIDE_ARTIFACT (25 fires) — artifact filter

@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(smartphone_ubiquity, youth_under_ban).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For youth subject to a legal ban, the constraint is a coercive exclusion from
 % the digital social sphere their peers inhabit.
-constraint_indexing:constraint_classification(smartphone_ubiquity, snare,
+constraint_indexing:constraint_classification(smartphone_ubiquity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(smartphone_ubiquity, tangled_rope,
 % PERSPECTIVE 4: THE GLOBAL USER (ROPE)
 % For a user in a developing nation, the smartphone is a pure coordination tool,
 % providing access to banking and information where none existed.
-constraint_indexing:constraint_classification(smartphone_ubiquity, rope,
+constraint_indexing:constraint_classification(smartphone_ubiquity, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),

@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(maladaptive_selection_process, rop
 % coordination. The system requires active enforcement and has clear victims
 % and beneficiaries, meeting all criteria for a Tangled Rope. The high theater
 % ratio (0.90) is a symptom of the extraction being masked, not a sign of inertia.
-constraint_indexing:constraint_classification(maladaptive_selection_process, tangled_rope,
+constraint_indexing:constraint_classification(maladaptive_selection_process, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -126,7 +126,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(maladaptive_selection_process, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(maladaptive_selection_process, tangled_rope,
+    constraint_indexing:constraint_classification(maladaptive_selection_process, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

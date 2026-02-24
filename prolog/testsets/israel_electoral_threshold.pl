@@ -100,7 +100,7 @@ narrative_ontology:constraint_victim(israel_electoral_threshold, small_minority_
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For small parties (powerless) over a biographical/election cycle horizon,
 % the threshold acts as a Snare that captures votes without providing representation.
-constraint_indexing:constraint_classification(israel_electoral_threshold, snare,
+constraint_indexing:constraint_classification(israel_electoral_threshold, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

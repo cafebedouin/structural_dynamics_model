@@ -97,7 +97,7 @@ narrative_ontology:constraint_victim(france_2027_presidential_election, non_inst
 
 % PERSPECTIVE 1: THE DISENCHANTED VOTER (SNARE)
 % High extraction from gridlock and high suppression of choice, felt as a trap.
-constraint_indexing:constraint_classification(france_2027_presidential_election, snare,
+constraint_indexing:constraint_classification(france_2027_presidential_election, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

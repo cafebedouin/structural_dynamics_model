@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(cn_tech_decoupling_security_software, us_se
 % They are trapped by their employment and the state mandate.
 % Engine derives d from canonical powerless fallback: d ≈ 1.0 -> f(d) ≈ 1.42
 %   χ = 0.55 * 1.42 * 1.0 = 0.781. High χ + high suppression -> Snare.
-constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, snare,
+constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(cn_tech_decoupling_security_softwa
 % Engine derives d ≈ 0.73 → f(d) ≈ 1.15 for analytical perspective.
 %   χ = 0.55 * 1.15 * 1.2 (global scope) = 0.759.
 %   With ε=0.55, s=0.85, and χ > 0.40, this is a canonical Tangled Rope.
-constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, tangled_rope,
+constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -182,7 +182,7 @@ constraint_indexing:constraint_classification(cn_tech_decoupling_security_softwa
 % SOEs are themselves powerful state institutions, but they are constrained by
 % the central government's directive. They experience this as extraction.
 % Engine derives d from: victim + institutional + constrained -> higher d than beneficiary -> Snare
-constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, snare,
+constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -206,7 +206,7 @@ test(perspectival_gap_inter_institutional) :-
     constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, snare, context(agent_power(institutional), _, exit_options(constrained), _)).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cn_tech_decoupling_security_software, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(cn_tech_decoupling_security_software, _),

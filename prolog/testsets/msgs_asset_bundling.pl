@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(msgs_asset_bundling, minority_shareholders)
 % Engine derives d from victim + trapped exit → d≈0.95 → f(d)≈1.42 → high χ.
 % χ = 0.48 * f(0.95) * σ(national) ≈ 0.48 * 1.42 * 1.0 ≈ 0.68. This exceeds
 % the Snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(msgs_asset_bundling, snare,
+constraint_indexing:constraint_classification(msgs_asset_bundling, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

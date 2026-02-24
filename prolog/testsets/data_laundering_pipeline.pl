@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(data_laundering_pipeline, rope,
 % Detects the hybrid signature: a genuine coordination function for aggregators
 % that is structurally dependent on high, asymmetric extraction from creators,
 % maintained by active enforcement (obfuscation).
-constraint_indexing:constraint_classification(data_laundering_pipeline, tangled_rope,
+constraint_indexing:constraint_classification(data_laundering_pipeline, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_analytical_view) :-
     % Ensure the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(data_laundering_pipeline, tangled_rope,
+    constraint_indexing:constraint_classification(data_laundering_pipeline, snare,
         context(agent_power(analytical), _, _, _)).
 
 :- end_tests(data_laundering_pipeline_tests).

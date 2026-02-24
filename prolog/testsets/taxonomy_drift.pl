@@ -90,7 +90,7 @@ narrative_ontology:coordination_vitality(taxonomy_drift, dead).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The subject is trapped in a category that is factually wrong but legally binding.
-constraint_indexing:constraint_classification(taxonomy_drift, snare,
+constraint_indexing:constraint_classification(taxonomy_drift, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(taxonomy_drift, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The authority views the rigid taxonomy as a vital Rope for administrative
 % legibility and large-scale coordination.
-constraint_indexing:constraint_classification(taxonomy_drift, rope,
+constraint_indexing:constraint_classification(taxonomy_drift, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

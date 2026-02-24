@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(legitimacy_without_capacity, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.84) and suppression (0.71) masking as coordination.
 % The presence of beneficiaries, victims, and active enforcement confirms Tangled Rope.
-constraint_indexing:constraint_classification(legitimacy_without_capacity, tangled_rope,
+constraint_indexing:constraint_classification(legitimacy_without_capacity, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(legitimacy_without_capacity, tangl
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.91) > 0.70 triggers Piton: the "Sovereignty" is a
 % non-functional, performative artifact maintained by cultural inertia.
-constraint_indexing:constraint_classification(legitimacy_without_capacity, piton,
+constraint_indexing:constraint_classification(legitimacy_without_capacity, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -135,7 +135,7 @@ test(perspectival_gap) :-
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.91) triggers Piton classification.
-    constraint_indexing:constraint_classification(legitimacy_without_capacity, piton,
+    constraint_indexing:constraint_classification(legitimacy_without_capacity, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

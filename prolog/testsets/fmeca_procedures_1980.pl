@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(fmeca_procedures_1980, innovative_design_fl
 
 constraint_indexing:constraint_classification(
     fmeca_procedures_1980,
-    snare,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

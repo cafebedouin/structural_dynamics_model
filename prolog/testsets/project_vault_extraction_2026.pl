@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(project_vault_extraction_2026, rop
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Coordination (security) and extraction (profit) are inseparable due to
 % the debt-financed SPV structure.
-constraint_indexing:constraint_classification(project_vault_extraction_2026, tangled_rope,
+constraint_indexing:constraint_classification(project_vault_extraction_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -132,7 +132,7 @@ test(perspectival_gap) :-
     % Verify the "coerced exchange" between subject (Snare) and beneficiary (Rope).
     constraint_indexing:constraint_classification(project_vault_extraction_2026, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(project_vault_extraction_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(project_vault_extraction_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(project_vault_extraction_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Ensure all three required properties for Tangled Rope are present.

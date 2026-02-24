@@ -87,7 +87,7 @@ narrative_ontology:topic_domain(academic_fashion_modernism_2026, "social/technol
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the scholar, fashion is a snare: failing to consent results in being 
 % "out of date" and excluded from the contemporary "correct" methodology.
-constraint_indexing:constraint_classification(academic_fashion_modernism_2026, snare, 
+constraint_indexing:constraint_classification(academic_fashion_modernism_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(academic_fashion_modernism_2026, s
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % For the institution, fashion is a rope: it coordinates the "right ways" 
 % to study, ensuring peer-review stability and methodological alignment.
-constraint_indexing:constraint_classification(academic_fashion_modernism_2026, rope, 
+constraint_indexing:constraint_classification(academic_fashion_modernism_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -120,8 +120,8 @@ constraint_indexing:constraint_classification(academic_fashion_modernism_2026, p
 
 test(perspectival_gap) :-
     % Subject feels the pressure to consent (Snare), Institution sees coordination (Rope).
-    constraint_indexing:constraint_classification(academic_fashion_modernism_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(academic_fashion_modernism_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(academic_fashion_modernism_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(academic_fashion_modernism_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(theater_check) :-
     domain_priors:theater_ratio(academic_fashion_modernism_2026, TR),

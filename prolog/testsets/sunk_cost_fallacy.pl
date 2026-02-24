@@ -101,7 +101,7 @@ narrative_ontology:constraint_victim(sunk_cost_fallacy, failed_project_investors
 % strangles their current freedom. They cannot leave because they cannot
 % face the "waste" of the past seven years, so they lose the *next* seven years too.
 % χ = 0.5 * 1.5 (powerless) * 0.8 (local) = 0.6. With S=0.6, this is a Snare.
-constraint_indexing:constraint_classification(sunk_cost_fallacy, snare,
+constraint_indexing:constraint_classification(sunk_cost_fallacy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

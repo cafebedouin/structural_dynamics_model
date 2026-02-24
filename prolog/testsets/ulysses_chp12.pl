@@ -86,7 +86,7 @@ domain_priors:requires_active_enforcement(ulysses_cyclops_1904). % The Citizen's
 % PERSPECTIVE 1: LEOPOLD BLOOM (SNARE)
 % Effective Extraction: 0.54 * 1.5 (powerless) * 0.8 (local) = 0.648.
 % Perceived as a predatory trap of "malediction" and the "shouts of the mob."
-constraint_indexing:constraint_classification(ulysses_cyclops_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_cyclops_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -95,7 +95,7 @@ constraint_indexing:constraint_classification(ulysses_cyclops_1904, snare,
 % PERSPECTIVE 2: THE CITIZEN (ROPE)
 % Effective Extraction: 0.54 * -0.2 (institutional) * 0.8 = -0.0864.
 % Viewed as the essential coordination of "Sinn Fein" and "Ireland for the Irish."
-constraint_indexing:constraint_classification(ulysses_cyclops_1904, rope, 
+constraint_indexing:constraint_classification(ulysses_cyclops_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -117,8 +117,8 @@ constraint_indexing:constraint_classification(ulysses_cyclops_1904, piton,
 
 test(perspectival_gap) :-
     % Verify shift from Snare (Bloom) to Rope (Nationalists).
-    constraint_indexing:constraint_classification(ulysses_cyclops_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_cyclops_1904, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_cyclops_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_cyclops_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_check) :-
     % Piton classification requires theater_ratio >= 0.70.

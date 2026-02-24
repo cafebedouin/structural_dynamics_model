@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(iss_ped_ban, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Default analytical context (civilizational/analytical/global).
 % Correctly identifies the dual nature of coordination and extraction.
-constraint_indexing:constraint_classification(iss_ped_ban, tangled_rope,
+constraint_indexing:constraint_classification(iss_ped_ban, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

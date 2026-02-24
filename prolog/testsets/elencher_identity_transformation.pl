@@ -132,7 +132,7 @@ narrative_ontology:constraint_victim(elencher_identity_transformation, continuit
 % For an outsider from a stable society, the Elencher's flux is a Snare. It
 % strangles the possibility of consistent relationship or recognition; you can
 % "never encounter the same entity twice," making the Elencher socially illegible.
-constraint_indexing:constraint_classification(elencher_identity_transformation, snare,
+constraint_indexing:constraint_classification(elencher_identity_transformation, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(elencher_identity_transformation, 
 % For the Elencher entity, this flux is a Rope—a functional coordination
 % mechanism for their "mission". It is the tool they use to reach a higher
 % truth that stable societies cannot access.
-constraint_indexing:constraint_classification(elencher_identity_transformation, rope,
+constraint_indexing:constraint_classification(elencher_identity_transformation, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -166,8 +166,8 @@ constraint_indexing:constraint_classification(elencher_identity_transformation, 
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(elencher_identity_transformation, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(elencher_identity_transformation, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(elencher_identity_transformation, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(elencher_identity_transformation, mountain, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(elencher_identity_transformation, mountain, context(agent_power(analytical), _, _, _)).
 
 test(mountain_thresholds_adherence) :-

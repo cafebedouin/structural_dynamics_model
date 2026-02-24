@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(narrative_capacity_exhaustion, rop
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the combination of a genuine coordination function (for the platform)
 % with severe asymmetric extraction (from the creator), requiring active enforcement.
-constraint_indexing:constraint_classification(narrative_capacity_exhaustion, tangled_rope,
+constraint_indexing:constraint_classification(narrative_capacity_exhaustion, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(narrative_capacity_exhaustion, tan
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.91) > 0.70 triggers Piton: the "Authenticity Guide"
 % is an inertial spike; it signals creative freedom while 0.88 extraction occurs.
-constraint_indexing:constraint_classification(narrative_capacity_exhaustion, piton,
+constraint_indexing:constraint_classification(narrative_capacity_exhaustion, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -133,12 +133,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(narrative_capacity_exhaustion, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(narrative_capacity_exhaustion, tangled_rope,
+    constraint_indexing:constraint_classification(narrative_capacity_exhaustion, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.91) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(narrative_capacity_exhaustion, piton,
+    constraint_indexing:constraint_classification(narrative_capacity_exhaustion, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(climate_catastrophe_belief, general_public_
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % This high effective extraction (χ ≈ 0.52 * 1.42 * 1.2 ≈ 0.88) and high
 % suppression (0.65) lead to a Snare classification.
-constraint_indexing:constraint_classification(climate_catastrophe_belief, snare,
+constraint_indexing:constraint_classification(climate_catastrophe_belief, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(climate_catastrophe_belief, rope,
 % and the asymmetric extraction (psychological cost). Engine derives d ≈ 0.72.
 % χ ≈ 0.52 * 1.15 * 1.2 ≈ 0.72. This, plus the declared beneficiary, victim, and
 % enforcement, satisfies the criteria for a Tangled Rope.
-constraint_indexing:constraint_classification(climate_catastrophe_belief, tangled_rope,
+constraint_indexing:constraint_classification(climate_catastrophe_belief, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(climate_catastrophe_belief, tangle
 % benefits incumbents. Their 'constrained' exit option yields a higher d than
 % the beneficiary's 'arbitrage' exit. χ ≈ 0.52 * f(d) * 1.0. The derived d
 % for institutional+victim+constrained puts χ in the Tangled Rope range.
-constraint_indexing:constraint_classification(climate_catastrophe_belief, tangled_rope,
+constraint_indexing:constraint_classification(climate_catastrophe_belief, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -172,7 +172,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
     assertion(snare \= rope).
 
 test(tangled_rope_analytical_view) :-
-    constraint_indexing:constraint_classification(climate_catastrophe_belief, tangled_rope,
+    constraint_indexing:constraint_classification(climate_catastrophe_belief, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-

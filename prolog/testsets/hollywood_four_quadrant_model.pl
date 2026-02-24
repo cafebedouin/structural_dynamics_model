@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(hollywood_four_quadrant_model, diverse_cont
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.52 * 1.42 * σ(national=1.0) ≈ 0.74.
 % With χ ≥ 0.66 and suppression ≥ 0.60, this classifies as a Snare.
-constraint_indexing:constraint_classification(hollywood_four_quadrant_model, snare,
+constraint_indexing:constraint_classification(hollywood_four_quadrant_model, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(hollywood_four_quadrant_model, rop
 % χ = 0.52 * 1.15 * σ(global=1.2) ≈ 0.72.
 % With a clear beneficiary, victim, and active enforcement, the system identifies
 % both coordination and extraction, classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(hollywood_four_quadrant_model, tangled_rope,
+constraint_indexing:constraint_classification(hollywood_four_quadrant_model, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -171,12 +171,12 @@ constraint_indexing:constraint_classification(hollywood_four_quadrant_model, tan
 
 test(perspectival_gap_target_beneficiary) :-
     % Verify the core perspectival gap between the primary victim and beneficiary.
-    constraint_indexing:constraint_classification(hollywood_four_quadrant_model, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hollywood_four_quadrant_model, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hollywood_four_quadrant_model, rope, context(agent_power(institutional), _, _, _)),
     format('... Perspectival gap validated: powerless (Snare) vs institutional (Rope)').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(hollywood_four_quadrant_model, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(hollywood_four_quadrant_model, snare, context(agent_power(analytical), _, _, _)),
     format('... Analytical perspective correctly identifies Tangled Rope structure').
 
 test(tangled_rope_structural_gates) :-

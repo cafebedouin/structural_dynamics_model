@@ -93,7 +93,7 @@ narrative_ontology:coordination_vitality(rule_update_failure, dead).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % Users are trapped by a rule that serves no purpose, effectively a predatory snare.
-constraint_indexing:constraint_classification(rule_update_failure, snare,
+constraint_indexing:constraint_classification(rule_update_failure, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(rule_update_failure, snare,
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The institution views the rule as a coordination 'Rope' that maintains stability.
-constraint_indexing:constraint_classification(rule_update_failure, rope,
+constraint_indexing:constraint_classification(rule_update_failure, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -134,9 +134,9 @@ constraint_indexing:constraint_classification(rule_update_failure, piton,
 
 test(perspectival_gap) :-
     % Verify Snare (Powerless) vs Rope (Institutional).
-    constraint_indexing:constraint_classification(rule_update_failure, snare,
+    constraint_indexing:constraint_classification(rule_update_failure, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(rule_update_failure, rope,
+    constraint_indexing:constraint_classification(rule_update_failure, piton,
         context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(rule_update_failure, piton,
         context(agent_power(analytical), _, _, _)).

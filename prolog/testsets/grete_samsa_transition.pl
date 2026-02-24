@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(grete_samsa_transition, gregor_samsa). % Is
 % PERSPECTIVE 1: EARLY GRETE (THE SUBJECT)
 % As a powerless caregiver, her new role is a form of coordination that gives
 % her purpose and a unique status in the family. It is a Rope.
-constraint_indexing:constraint_classification(grete_samsa_transition, rope,
+constraint_indexing:constraint_classification(grete_samsa_transition, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(grete_samsa_transition, rope,
 % Grete's actions are a fatal Snare. What began as care becomes a trap from
 % which there is no escape, culminating in his abandonment and death.
 % We use a powerless agent with a biographical time horizon to model this.
-constraint_indexing:constraint_classification(grete_samsa_transition, snare,
+constraint_indexing:constraint_classification(grete_samsa_transition, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

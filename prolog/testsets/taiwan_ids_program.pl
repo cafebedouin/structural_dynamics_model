@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(taiwan_ids_program, prc_strategic_position)
 % PERSPECTIVE 1: THE TAIWANESE TAXPAYER (SNARE)
 % Bears the full financial extraction without direct benefit. Engine derives
 % d from victim status + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> very high χ.
-constraint_indexing:constraint_classification(taiwan_ids_program, snare,
+constraint_indexing:constraint_classification(taiwan_ids_program, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(taiwan_ids_program, rope,
 % Sees both the necessary coordination function and the high asymmetric extraction.
 % Engine derives d ≈ 0.72 -> f(d) ≈ 1.15. The combination of high ε and high f(d)
 % leads to a high χ, but the clear coordination function prevents a Snare classification.
-constraint_indexing:constraint_classification(taiwan_ids_program, tangled_rope,
+constraint_indexing:constraint_classification(taiwan_ids_program, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(taiwan_ids_program, tangled_rope,
 % A beneficiary, but with constrained options. They see the program as necessary
 % coordination but are acutely aware of the immense cost and risk (extraction).
 % Beneficiary + constrained exit -> d is higher than for an arbitrage beneficiary.
-constraint_indexing:constraint_classification(taiwan_ids_program, tangled_rope,
+constraint_indexing:constraint_classification(taiwan_ids_program, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(taiwan_ids_program, tangled_rope,
 % as they control the underlying pressure. They see it as a costly, problematic
 % (for them) coordination effort by Taiwan, acknowledging its function but also
 % its internal financial strain, which they may view as a secondary benefit.
-constraint_indexing:constraint_classification(taiwan_ids_program, tangled_rope,
+constraint_indexing:constraint_classification(taiwan_ids_program, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -180,7 +180,7 @@ test(perspectival_gap_taxpayer_vs_industry, [nondet]) :-
     constraint_indexing:constraint_classification(taiwan_ids_program, rope, context(agent_power(organized), _, exit_options(mobile), _)).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(taiwan_ids_program, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(taiwan_ids_program, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A Tangled Rope requires a beneficiary, a victim, and active enforcement.

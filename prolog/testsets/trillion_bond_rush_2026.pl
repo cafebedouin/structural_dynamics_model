@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(trillion_bond_rush_2026, snare,
 % PERSPECTIVE 2: THE INSTITUTIONAL ISSUER (ROPE)
 % For banks and corporations, the rush is a Rope: a vital coordination 
 % tool to secure runway before potential market closures or hikes.
-constraint_indexing:constraint_classification(trillion_bond_rush_2026, rope, 
+constraint_indexing:constraint_classification(trillion_bond_rush_2026, scaffold, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 

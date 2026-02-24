@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(sapir_whorf_hypothesis, cross_cultural_comm
 % PERSPECTIVE 1: THE MONOLINGUAL SUBJECT (SNARE)
 % Experiences their native language as an inescapable reality, a trap for thought.
 % χ = 0.55 (ε) * 1.5 (π(powerless)) * 1.0 (σ(national)) = 0.825. This is a clear Snare.
-constraint_indexing:constraint_classification(sapir_whorf_hypothesis, snare,
+constraint_indexing:constraint_classification(sapir_whorf_hypothesis, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(sapir_whorf_hypothesis, rope,
 % The metrics (E=0.55, S=0.70), beneficiaries, victims, and enforcement requirement
 % all point to a Tangled Rope from a neutral, analytical viewpoint.
 % χ = 0.55 (ε) * 1.15 (π(analytical)) * 1.2 (σ(global)) = 0.759.
-constraint_indexing:constraint_classification(sapir_whorf_hypothesis, tangled_rope,
+constraint_indexing:constraint_classification(sapir_whorf_hypothesis, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -126,9 +126,9 @@ constraint_indexing:constraint_classification(sapir_whorf_hypothesis, tangled_ro
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless subject (Snare) and the institutional user (Rope).
-    constraint_indexing:constraint_classification(sapir_whorf_hypothesis, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(sapir_whorf_hypothesis, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(sapir_whorf_hypothesis, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(sapir_whorf_hypothesis, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(sapir_whorf_hypothesis, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_for_tangled_rope) :-
     % A Tangled Rope requires high extraction and suppression.

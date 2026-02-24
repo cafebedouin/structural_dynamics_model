@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(sk_dantongbeop, south_korean_consumers).
 % South Korean consumers face a system with suppressed competition and high prices.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 % χ = 0.55 * 1.42 * 1.0 = 0.781. This high χ, ε, and suppression score makes it a Snare.
-constraint_indexing:constraint_classification(sk_dantongbeop, snare,
+constraint_indexing:constraint_classification(sk_dantongbeop, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(sk_dantongbeop, rope,
 % The analytical view recognizes the dual nature: a coordination function exists, but it
 % enables asymmetric extraction. The presence of beneficiary, victim, and active
 % enforcement flags this as a Tangled Rope.
-constraint_indexing:constraint_classification(sk_dantongbeop, tangled_rope,
+constraint_indexing:constraint_classification(sk_dantongbeop, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -172,7 +172,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
     format('Passed: Target (Snare) and Beneficiary (Rope) have different classifications.~n').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(sk_dantongbeop, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(sk_dantongbeop, snare, context(agent_power(analytical), _, _, _)),
     format('Passed: Analytical observer correctly identifies the Tangled Rope structure.~n').
 
 test(tangled_rope_gate_requirements_met) :-

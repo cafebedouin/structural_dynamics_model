@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(risk_socialization_threshold, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid signature of coordination intent (Rope)
 % entangled with extreme, systemic extraction (Snare).
-constraint_indexing:constraint_classification(risk_socialization_threshold, tangled_rope,
+constraint_indexing:constraint_classification(risk_socialization_threshold, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(rafah_crossing_lifeline, waitlisted_patient
 % PERSPECTIVE 1: THE PATIENT (MOUNTAIN)
 % With extreme suppression (S=0.95) and low extraction, the bottleneck is
 % experienced as an immovable, natural-law-like barrier.
-constraint_indexing:constraint_classification(rafah_crossing_lifeline, mountain,
+constraint_indexing:constraint_classification(rafah_crossing_lifeline, rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(rafah_crossing_lifeline, mountain,
 % PERSPECTIVE 2: THE OVERSIGHT COMMITTEE (SCAFFOLD)
 % Viewed by authorities as a temporary, high-security bridge to demilitarization,
 % a necessary scaffold to support a fragile peace process.
-constraint_indexing:constraint_classification(rafah_crossing_lifeline, scaffold,
+constraint_indexing:constraint_classification(rafah_crossing_lifeline, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -126,8 +126,8 @@ constraint_indexing:constraint_classification(rafah_crossing_lifeline, rope,
 
 test(perspectival_gap) :-
     % Verify the gap between the patient (Mountain) and the committee (Scaffold).
-    constraint_indexing:constraint_classification(rafah_crossing_lifeline, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(rafah_crossing_lifeline, scaffold, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(rafah_crossing_lifeline, rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(rafah_crossing_lifeline, rope, context(agent_power(institutional), _, _, _)).
 
 test(scaffold_validation) :-
     % Verify it is classified as a Scaffold and has the required sunset clause.

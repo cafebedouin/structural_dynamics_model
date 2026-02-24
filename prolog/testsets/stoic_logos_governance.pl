@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(stoic_logos_governance, marcus_aurelius_per
 % Despite holding supreme power, Marcus Aurelius is personally trapped by his
 % duty to the Logos. The framework extracts his personal autonomy and vitality
 % for the sake of the state, making it a Snare from his perspective.
-constraint_indexing:constraint_classification(stoic_logos_governance, snare,
+constraint_indexing:constraint_classification(stoic_logos_governance, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(trapped),
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(stoic_logos_governance, snare,
 % To a subject of the Roman Empire, the Emperor's rule, the laws, and the
 % cosmic order (Logos) are perceived as an unchangeable, natural reality.
 % They are fixed features of the world, hence a Mountain.
-constraint_indexing:constraint_classification(stoic_logos_governance, mountain,
+constraint_indexing:constraint_classification(stoic_logos_governance, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(stoic_logos_governance, mountain,
 % Romana) and the severe, asymmetric extraction of the ruler's autonomy. It
 % requires active enforcement (self-discipline, state power) and is not a
 % natural law. This dual nature defines it as a Tangled Rope.
-constraint_indexing:constraint_classification(stoic_logos_governance, tangled_rope,
+constraint_indexing:constraint_classification(stoic_logos_governance, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap_ruler_vs_subject) :-
     TypeRuler \= TypeSubject.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(stoic_logos_governance, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(stoic_logos_governance, snare, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_and_suppression_thresholds) :-
     narrative_ontology:constraint_metric(stoic_logos_governance, extractiveness, E),

@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(qwerty_vs_dvorak, rsi_sufferers).
 % PERSPECTIVE 1: THE TYPIST (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(qwerty_vs_dvorak, snare,
+constraint_indexing:constraint_classification(qwerty_vs_dvorak, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(qwerty_vs_dvorak, tangled_rope,
 
 test(perspectival_gap_is_trichotomy) :-
     % Verify the core trichotomy: Snare for victim, Rope for beneficiary, Tangled Rope for analyst.
-    constraint_indexing:constraint_classification(qwerty_vs_dvorak, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(qwerty_vs_dvorak, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(qwerty_vs_dvorak, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(qwerty_vs_dvorak, tangled_rope, context(agent_power(analytical), _, _, _)).
 

@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(latent_regulatory_bomb, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects both the coordination intent (order) and the predatory extraction (trap).
-constraint_indexing:constraint_classification(latent_regulatory_bomb, tangled_rope,
+constraint_indexing:constraint_classification(latent_regulatory_bomb, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

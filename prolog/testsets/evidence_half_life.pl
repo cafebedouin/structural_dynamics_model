@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(evidence_half_life, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.85) and active enforcement masking as a
 % functional coordination mechanism.
-constraint_indexing:constraint_classification(evidence_half_life, tangled_rope,
+constraint_indexing:constraint_classification(evidence_half_life, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -137,7 +137,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(evidence_half_life, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(evidence_half_life, tangled_rope,
+    constraint_indexing:constraint_classification(evidence_half_life, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(job_hunt_volume_system_2026, rope,
 % Recognizes both the coordination function for institutions and the asymmetric
 % extraction from applicants. The system is a hybrid, not pure coordination or pure extraction.
 % χ = 0.75 * π(analytical:1.15) * σ(global:1.2) = 1.035 (High extraction)
-constraint_indexing:constraint_classification(job_hunt_volume_system_2026, tangled_rope,
+constraint_indexing:constraint_classification(job_hunt_volume_system_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the conflict by identifying the hybrid nature.
-    constraint_indexing:constraint_classification(job_hunt_volume_system_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(job_hunt_volume_system_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify all three structural requirements for Tangled Rope are present.

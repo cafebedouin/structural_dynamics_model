@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(platonic_coparenting_decoupling, s
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The platform operator sees a pure coordination mechanism with negligible extraction.
 % χ = 0.48 * π(institutional, -0.2) * σ(global, 1.2) = -0.1152 (Rope)
-constraint_indexing:constraint_classification(platonic_coparenting_decoupling, rope,
+constraint_indexing:constraint_classification(platonic_coparenting_decoupling, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(platonic_coparenting_decoupling, r
 % The analyst sees a system with both a genuine coordination function and
 % significant, asymmetric extraction, requiring active enforcement.
 % χ = 0.48 * π(analytical, 1.15) * σ(global, 1.2) = 0.6624 (Tangled Rope)
-constraint_indexing:constraint_classification(platonic_coparenting_decoupling, tangled_rope,
+constraint_indexing:constraint_classification(platonic_coparenting_decoupling, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(platonic_coparenting_decoupling, s
 test(perspectival_gap) :-
     % Verify the gap between the powerless subject (Snare) and institutional beneficiary (Rope).
     constraint_indexing:constraint_classification(platonic_coparenting_decoupling, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(platonic_coparenting_decoupling, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(platonic_coparenting_decoupling, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(analytical_resolution_is_tangled_rope) :-
     % Verify the analytical observer resolves the gap as a Tangled Rope.

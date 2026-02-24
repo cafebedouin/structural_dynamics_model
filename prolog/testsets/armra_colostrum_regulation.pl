@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(armra_colostrum_regulation, consumers_of_su
 % NOTE: Per "Dynamic Coalition" extension, this agent's power may be
 % upgraded to 'organized' if the constraint is a snare with a critical
 % mass of victims, potentially changing the classification.
-constraint_indexing:constraint_classification(armra_colostrum_regulation, snare,
+constraint_indexing:constraint_classification(armra_colostrum_regulation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

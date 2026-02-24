@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(asean_ceasefire_2011, nationalist_factions)
 % PERSPECTIVE 1: THE BELLIGERENT STATES (PRIMARY BENEFICIARIES)
 % For the governments of Thailand and Cambodia, the ceasefire is a temporary
 % support structure to escape a negative-sum conflict.
-constraint_indexing:constraint_classification(asean_ceasefire_2011, scaffold,
+constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(asean_ceasefire_2011, scaffold,
 % PERSPECTIVE 2: THE CIVILIANS (SECONDARY BENEFICIARIES)
 % For civilians in the conflict zone, the ceasefire is a life-saving
 % temporary measure. They are beneficiaries, even with trapped exit options.
-constraint_indexing:constraint_classification(asean_ceasefire_2011, scaffold,
+constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(asean_ceasefire_2011, scaffold,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % The analytical view sees the explicit temporary nature, the coordination
 % function, and the low extraction, classifying it as a textbook Scaffold.
-constraint_indexing:constraint_classification(asean_ceasefire_2011, scaffold,
+constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(asean_ceasefire_2011, scaffold,
 % For the mediator (Indonesia), this is a reputational win and a successful
 % act of regional coordination. Their arbitrage exit option gives them a
 % very low directionality score, reinforcing the low-extraction view.
-constraint_indexing:constraint_classification(asean_ceasefire_2011, scaffold,
+constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

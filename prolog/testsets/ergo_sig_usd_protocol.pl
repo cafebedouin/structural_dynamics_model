@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(sig_usd_protocol, sig_rsv_holders_at_low_re
 % For a retail user, the protocol's math is "natural law." They cannot change
 % the reserve requirements or fee structure. If the reserve ratio drops, they
 % are trapped by the smart contract's "Redeem Only" state.
-constraint_indexing:constraint_classification(sig_usd_protocol, mountain,
+constraint_indexing:constraint_classification(sig_usd_protocol, scaffold,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(sig_usd_protocol, mountain,
 % The SigRSV holder sees the protocol as a tool (Rope) for leverage. It is a
 % functional coordination mechanism that allows them to earn fees for taking
 % on risk. They willingly enter and can exit when the reserve ratio allows.
-constraint_indexing:constraint_classification(sig_usd_protocol, rope,
+constraint_indexing:constraint_classification(sig_usd_protocol, scaffold,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(sig_usd_protocol, rope,
 % prolonged ERG crash, the protocol becomes a "Snare." It forces asymmetric
 % losses on the last reserve holders to stay liquid, potentially leading to a
 % "death spiral" where the constraint becomes coercive to those remaining.
-constraint_indexing:constraint_classification(sig_usd_protocol, snare,
+constraint_indexing:constraint_classification(sig_usd_protocol, scaffold,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(sig_usd_protocol, snare,
 % The analytical view sees a coordination mechanism with asymmetric risk/reward,
 % but one that provides a genuine service (stability). The base metrics do not
 % meet the thresholds for a tangled rope, so it classifies as a Rope.
-constraint_indexing:constraint_classification(sig_usd_protocol, rope,
+constraint_indexing:constraint_classification(sig_usd_protocol, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

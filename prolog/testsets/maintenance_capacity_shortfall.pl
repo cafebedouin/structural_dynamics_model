@@ -91,7 +91,7 @@ narrative_ontology:coordination_vitality(maintenance_capacity_shortfall, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The operator is trapped: they must keep the system running, but the lack
 % of capacity liquidates their agency to perform actual repair.
-constraint_indexing:constraint_classification(maintenance_capacity_shortfall, snare,
+constraint_indexing:constraint_classification(maintenance_capacity_shortfall, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(maintenance_capacity_shortfall, sn
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The developer views the shortfall as a Rope—the essential coordination
 % substrate for maintaining "competitive growth" while ignoring the cost of decay.
-constraint_indexing:constraint_classification(maintenance_capacity_shortfall, rope,
+constraint_indexing:constraint_classification(maintenance_capacity_shortfall, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(maintenance_capacity_shortfall, pi
 
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.85) masking as functional coordination (Rope).
-constraint_indexing:constraint_classification(maintenance_capacity_shortfall, tangled_rope,
+constraint_indexing:constraint_classification(maintenance_capacity_shortfall, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -131,9 +131,9 @@ constraint_indexing:constraint_classification(maintenance_capacity_shortfall, ta
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless operator vs Rope for the institutional developer.
-    constraint_indexing:constraint_classification(maintenance_capacity_shortfall, snare,
+    constraint_indexing:constraint_classification(maintenance_capacity_shortfall, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(maintenance_capacity_shortfall, rope,
+    constraint_indexing:constraint_classification(maintenance_capacity_shortfall, piton,
         context(agent_power(institutional), _, _, _)).
 
 test(piton_trigger) :-

@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(path_dependence_lock_in, new_market_entrant
 % PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
 % To the powerless individual, the path-dependence is an immutable law of the environment.
 % χ = 0.65 * 1.5 (powerless) * 1.0 (national) = 0.975. High extraction and suppression feel like a Mountain.
-constraint_indexing:constraint_classification(path_dependence_lock_in, mountain,
+constraint_indexing:constraint_classification(path_dependence_lock_in, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(path_dependence_lock_in, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % High base extraction, suppression, and the presence of both coordination (beneficiaries)
 % and asymmetric extraction (victims) with active enforcement define a Tangled Rope.
-constraint_indexing:constraint_classification(path_dependence_lock_in, tangled_rope,
+constraint_indexing:constraint_classification(path_dependence_lock_in, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -119,9 +119,9 @@ constraint_indexing:constraint_classification(path_dependence_lock_in, tangled_r
 
 test(perspectival_gap) :-
     % Verify the constraint is a Mountain for the powerless but a Rope for the institution.
-    constraint_indexing:constraint_classification(path_dependence_lock_in, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(path_dependence_lock_in, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(path_dependence_lock_in, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(path_dependence_lock_in, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(path_dependence_lock_in, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     narrative_ontology:constraint_metric(path_dependence_lock_in, extractiveness, E),

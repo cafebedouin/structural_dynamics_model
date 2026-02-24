@@ -1123,7 +1123,7 @@ def main():
     parser.add_argument("topic", nargs="?", help="Topic text (or use --input-file / stdin)")
     parser.add_argument("--input-file", "-f", help="Read topic from file")
     parser.add_argument("--axes", type=int, default=3, help="Number of axes to select (default: 3)")
-    parser.add_argument("--skip-corpus-update", action="store_true", help="Skip make quick")
+    parser.add_argument("--skip-corpus-update", action="store_true", help="Skip run_pipeline")
     parser.add_argument("--skip-search", action="store_true", help="Skip search grounding")
     parser.add_argument("--skip-essay", action="store_true", help="Skip essay synthesis")
     parser.add_argument("--dry-run", action="store_true", help="Run SCOPE only, print manifest")

@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(glen_canyon_water_allocation, colorado_rive
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
 % Upper Basin States - constrained exit due to legal obligations and geographic limitations
-constraint_indexing:constraint_classification(glen_canyon_water_allocation, snare,
+constraint_indexing:constraint_classification(glen_canyon_water_allocation, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(glen_canyon_water_allocation, rope
             spatial_scope(national))).
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-constraint_indexing:constraint_classification(glen_canyon_water_allocation, tangled_rope,
+constraint_indexing:constraint_classification(glen_canyon_water_allocation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -140,14 +140,14 @@ constraint_indexing:constraint_classification(glen_canyon_water_allocation, tang
 
 % --- INTER-INSTITUTIONAL PERSPECTIVES (declare when applicable) ---
 % Bureau of Reclamation - tasked with enforcing the compact, but also subject to political pressure
-constraint_indexing:constraint_classification(glen_canyon_water_allocation, tangled_rope,
+constraint_indexing:constraint_classification(glen_canyon_water_allocation, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
 % Colorado River Ecosystem - Powerless entity trapped by the system
-constraint_indexing:constraint_classification(glen_canyon_water_allocation, snare,
+constraint_indexing:constraint_classification(glen_canyon_water_allocation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),

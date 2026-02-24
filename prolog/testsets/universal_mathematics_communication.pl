@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(universal_mathematics_communicatio
 % functional and changeable in its *expression* (e.g., binary vs. prime sequences)
 % to facilitate the goal of interstellar conversation. They are using a
 % Mountain as a tool for coordination.
-constraint_indexing:constraint_classification(universal_mathematics_communication, rope,
+constraint_indexing:constraint_classification(universal_mathematics_communication, mountain,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(mobile),
@@ -177,7 +177,7 @@ test(perspectival_gap) :-
     % Demonstrates that the Bee/Analyst sees a Mountain (nature) while the
     % Scientist sees a Rope (tool).
     constraint_indexing:constraint_classification(universal_mathematics_communication, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(universal_mathematics_communication, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(universal_mathematics_communication, mountain, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(universal_mathematics_communication, mountain, context(agent_power(analytical), _, _, _)).
 
 test(mountain_threshold_validation) :-

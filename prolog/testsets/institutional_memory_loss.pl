@@ -92,7 +92,7 @@ narrative_ontology:coordination_vitality(institutional_memory_loss, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The new hire is trapped: they must obey rules they don't understand to
 % survive the bureaucracy, while the actual rationale for those rules is lost.
-constraint_indexing:constraint_classification(institutional_memory_loss, snare,
+constraint_indexing:constraint_classification(institutional_memory_loss, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(institutional_memory_loss, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The administrator views the memory loss as a Rope—it ensures absolute
 % procedural compliance and coordination without the "friction" of debate.
-constraint_indexing:constraint_classification(institutional_memory_loss, rope,
+constraint_indexing:constraint_classification(institutional_memory_loss, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(institutional_memory_loss, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.84) and suppression (0.73) as a hybrid signature,
 % recognizing the coercive enforcement of a system that still has beneficiaries.
-constraint_indexing:constraint_classification(institutional_memory_loss, tangled_rope,
+constraint_indexing:constraint_classification(institutional_memory_loss, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),

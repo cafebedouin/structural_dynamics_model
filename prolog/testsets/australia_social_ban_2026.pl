@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(australia_social_ban_2026, rope,
 % PERSPECTIVE 3: THE PRIVACY ADVOCATE (TANGLED ROPE)
 % Analysts see a Tangled Rope: Coordination for "safety" mixed with 
 % asymmetric extraction of ID documents from users.
-constraint_indexing:constraint_classification(australia_social_ban_2026, tangled_rope,
+constraint_indexing:constraint_classification(australia_social_ban_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(sk_ai_act_2026, sk_citizens).
 % PERSPECTIVE 1: THE PRIMARY TARGET (CITIZENS)
 % As victims with trapped exit, their derived d is high (~0.95), leading to
 % high effective extraction (χ), classifying the law as a Snare.
-constraint_indexing:constraint_classification(sk_ai_act_2026, snare,
+constraint_indexing:constraint_classification(sk_ai_act_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(sk_ai_act_2026, rope,
 % The analytical view sees both the coordination function and the asymmetric
 % extraction. The high base extraction (ε) and suppression, combined with
 % the existence of clear beneficiaries and victims, makes this a Tangled Rope.
-constraint_indexing:constraint_classification(sk_ai_act_2026, tangled_rope,
+constraint_indexing:constraint_classification(sk_ai_act_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -174,7 +174,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
     true.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(sk_ai_act_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(sk_ai_act_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(sk_ai_act_2026, _),

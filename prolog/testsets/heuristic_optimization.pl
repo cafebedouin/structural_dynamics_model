@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(heuristic_optimization, mountain,
 % functional solutions within budget and time. They coordinate resources
 % towards a viable outcome, where the pursuit of perfection would lead to
 % project failure.
-constraint_indexing:constraint_classification(heuristic_optimization, rope,
+constraint_indexing:constraint_classification(heuristic_optimization, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(arbitrage),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(heuristic_optimization, rope,
 % the heuristic is a coordination mechanism to solve intractable problems.
 % While they are aware of the sub-optimality (the extraction), the overall
 % structure is a Rope that enables progress where none would otherwise be possible.
-constraint_indexing:constraint_classification(heuristic_optimization, rope,
+constraint_indexing:constraint_classification(heuristic_optimization, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -86,7 +86,7 @@ narrative_ontology:constraint_victim(elite_overproduction_instability, aspirant_
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the aspirant, the system is a trap of endless preparation with no guaranteed exit.
-constraint_indexing:constraint_classification(elite_overproduction_instability, snare,
+constraint_indexing:constraint_classification(elite_overproduction_instability, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(elite_overproduction_instability, 
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Recognizes the hybrid: it facilitates talent selection but creates a radicalizing surplus.
-constraint_indexing:constraint_classification(elite_overproduction_instability, tangled_rope,
+constraint_indexing:constraint_classification(elite_overproduction_instability, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -122,7 +122,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_detection) :-
     % Verify that the analytical perspective correctly identifies the Tangled Rope.
-    constraint_indexing:constraint_classification(elite_overproduction_instability, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(elite_overproduction_instability, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(elite_overproduction_instability_tests).
 

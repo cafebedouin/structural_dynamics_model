@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(panama_canal_ports, rope,
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
 % Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
-constraint_indexing:constraint_classification(panama_canal_ports, tangled_rope,
+constraint_indexing:constraint_classification(panama_canal_ports, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

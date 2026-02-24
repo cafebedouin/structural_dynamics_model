@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(ukr_mobilization, rope,
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
 % Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
-constraint_indexing:constraint_classification(ukr_mobilization, tangled_rope,
+constraint_indexing:constraint_classification(ukr_mobilization, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -78,7 +78,7 @@ narrative_ontology:constraint_victim(emotional_cycles_2026, short_term_psycholog
 % In the "Valley of Despair," the cycle is a Snare: a trap of 
 % low motivation and high effort where the exit (quitting) 
 % seems most attractive.
-constraint_indexing:constraint_classification(emotional_cycles_2026, snare, 
+constraint_indexing:constraint_classification(emotional_cycles_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(emotional_cycles_2026, scaffold,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % Analysts view the cycle as a Mountain: an irreducible biological 
 % limit on how fast humans can process significant life transitions.
-constraint_indexing:constraint_classification(emotional_cycles_2026, mountain,
+constraint_indexing:constraint_classification(emotional_cycles_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

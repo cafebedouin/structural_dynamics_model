@@ -115,7 +115,7 @@ narrative_ontology:constraint_victim(constitutional_supremacy, the_citizen).
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % The citizen is trapped within a system that both coordinates their rights
 % and extracts from them via the state's authority, which this system legitimizes.
-constraint_indexing:constraint_classification(constitutional_supremacy, snare,
+constraint_indexing:constraint_classification(constitutional_supremacy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(constitutional_supremacy, snare,
 % Default analytical context. Sees both the coordination function (stabilizing
 % the legal system) and the asymmetric extraction (of sovereignty from the
 % legislature).
-constraint_indexing:constraint_classification(constitutional_supremacy, tangled_rope,
+constraint_indexing:constraint_classification(constitutional_supremacy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

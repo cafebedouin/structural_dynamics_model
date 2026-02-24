@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(neurodiversity_spectrum, individuals_pathol
 % label, the system feels like a Snare. It extracts autonomy and imposes an
 % identity, trapping them in a medicalized framework.
 % χ = 0.72 * 1.5 (powerless) * 1.0 (national) = 1.08
-constraint_indexing:constraint_classification(neurodiversity_spectrum, snare,
+constraint_indexing:constraint_classification(neurodiversity_spectrum, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

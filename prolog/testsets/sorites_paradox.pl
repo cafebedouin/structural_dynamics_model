@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(sorites_paradox, individuals_at_cutoff_marg
 % by a single day or dollar, the arbitrary line is a Snare. It extracts their
 % future, mobility, or quality of life based on a distinction that has no
 % material reality.
-constraint_indexing:constraint_classification(sorites_paradox, snare,
+constraint_indexing:constraint_classification(sorites_paradox, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(sorites_paradox, tangled_rope,
 
 test(perspectival_gap) :-
     % Verify the core perspectival gap: Snare for powerless, Rope for institutional.
-    constraint_indexing:constraint_classification(sorites_paradox, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(sorites_paradox, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(sorites_paradox, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(sorites_paradox, tangled_rope, context(agent_power(analytical), _, _, _)).
 

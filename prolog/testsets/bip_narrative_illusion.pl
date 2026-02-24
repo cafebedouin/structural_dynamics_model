@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(bip_narrative_illusion, rope,
 % The analyst sees a system with a genuine coordination function for its beneficiaries (Rope-like)
 % but which relies on high, asymmetric extraction from its victims and active enforcement (Snare-like).
 % This hybrid nature is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(bip_narrative_illusion, tangled_rope,
+constraint_indexing:constraint_classification(bip_narrative_illusion, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -123,7 +123,7 @@ test(perspectival_gap) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view should resolve the gap into a Tangled Rope.
-    constraint_indexing:constraint_classification(bip_narrative_illusion, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(bip_narrative_illusion, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     % Verify the constraint is correctly identified as high-extraction.

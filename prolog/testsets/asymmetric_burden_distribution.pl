@@ -101,7 +101,7 @@ narrative_ontology:coordination_vitality(asymmetric_burden_distribution, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The resident is trapped: they cannot move due to economic constraints,
 % yet remaining liquidates their health and property value to serve the center.
-constraint_indexing:constraint_classification(asymmetric_burden_distribution, snare,
+constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(asymmetric_burden_distribution, sn
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The central institution views the distribution as a Rope—the only way to
 % coordinate a competitive, low-cost service for the "greater good."
-constraint_indexing:constraint_classification(asymmetric_burden_distribution, rope,
+constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -144,9 +144,9 @@ constraint_indexing:constraint_classification(asymmetric_burden_distribution, ta
 
 test(perspectival_gap) :-
     % Verify Snare for the peripheral subject vs Rope for the central beneficiary.
-    constraint_indexing:constraint_classification(asymmetric_burden_distribution, snare,
+    constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(asymmetric_burden_distribution, rope,
+    constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
         context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(asymmetric_burden_distribution, tangled_rope,
         context(agent_power(analytical), _, _, _)).

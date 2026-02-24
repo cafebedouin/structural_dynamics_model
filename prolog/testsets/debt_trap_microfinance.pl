@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(debt_trap_microfinance, low_income_borrower
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % Scope is national, as this is a systemic issue, not isolated.
 % χ = 0.55 * 1.42 * 1.0 = 0.781 (>= 0.66, Snare)
-constraint_indexing:constraint_classification(debt_trap_microfinance, snare,
+constraint_indexing:constraint_classification(debt_trap_microfinance, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

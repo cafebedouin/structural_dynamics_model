@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(dn_paywall, non_subscribing_readers).
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % Calculation: χ = 0.52 * 1.42 * 1.0 (national scope) ≈ 0.738
 % Since χ >= 0.66 and suppression >= 0.60, this is a Snare.
-constraint_indexing:constraint_classification(dn_paywall, snare,
+constraint_indexing:constraint_classification(dn_paywall, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(dn_paywall, rope,
 % Calculation: χ = 0.52 * 1.15 * 1.2 (global scope) ≈ 0.717
 % The combination of a genuine coordination function and high effective
 % extraction (0.40 <= χ <= 0.90) classifies it as a Tangled Rope.
-constraint_indexing:constraint_classification(dn_paywall, tangled_rope,
+constraint_indexing:constraint_classification(dn_paywall, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

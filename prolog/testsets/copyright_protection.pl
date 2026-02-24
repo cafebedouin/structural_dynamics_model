@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(copyright_protection, ai_developers).
 % PERSPECTIVE 1: THE PUBLIC CONSUMER (MOUNTAIN)
 % Agent who bears extraction of usage rights. Experiences copyright as an
 % immutable fact of the digital landscape, too complex to navigate.
-constraint_indexing:constraint_classification(copyright_protection, mountain,
+constraint_indexing:constraint_classification(copyright_protection, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(copyright_protection, rope,
 % PERSPECTIVE 3: THE INDEPENDENT ARTIST (ROPE)
 % A secondary beneficiary who uses the system to coordinate income and control
 % their work, though with less power than large institutions.
-constraint_indexing:constraint_classification(copyright_protection, rope,
+constraint_indexing:constraint_classification(copyright_protection, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(copyright_protection, rope,
 % An institutional actor, but one targeted by the constraint. The need for
 % massive datasets makes individual licensing impossible, creating a legal
 % bottleneck that traps and strangles large-scale innovation.
-constraint_indexing:constraint_classification(copyright_protection, snare,
+constraint_indexing:constraint_classification(copyright_protection, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

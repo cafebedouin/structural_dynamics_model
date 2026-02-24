@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(temporal_scale_arbitrage, unobserved_transi
 % For a fleeting cosmic event, the survey's cadence is a Snare. If it occurs
 % outside the active "conveyor belt" window, its scientific information is
 % permanently lost.
-constraint_indexing:constraint_classification(temporal_scale_arbitrage, snare,
+constraint_indexing:constraint_classification(temporal_scale_arbitrage, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(temporal_scale_arbitrage, tangled_
 
 test(perspectival_gap) :-
     % Verify there is a perspectival gap between powerless and institutional.
-    constraint_indexing:constraint_classification(temporal_scale_arbitrage, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(temporal_scale_arbitrage, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(temporal_scale_arbitrage, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(temporal_scale_arbitrage, tangled_rope, context(agent_power(analytical), _, _, _)).
 

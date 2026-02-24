@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(cs_ecmo_bridge, patient).
 % The patient is powerless and trapped, facing immense physical, emotional, and
 % financial extraction. The technology is their only hope, but it's a high-risk,
 % high-cost dependency. Effective extraction χ = 0.55 * 1.5 (powerless) * 1.0 (national) = 0.825.
-constraint_indexing:constraint_classification(cs_ecmo_bridge, snare,
+constraint_indexing:constraint_classification(cs_ecmo_bridge, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

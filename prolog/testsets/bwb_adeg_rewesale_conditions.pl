@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, rope
 % powerless to change the regulatory conditions and trapped by their local
 % geography. From this viewpoint, the constraint is an unchangeable feature
 % of their economic landscape, appearing as a Mountain.
-constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, mountain,
+constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

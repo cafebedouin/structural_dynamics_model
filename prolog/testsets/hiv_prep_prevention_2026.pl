@@ -144,7 +144,7 @@ narrative_ontology:constraint_beneficiary(hiv_prep_prevention_2026, public_healt
 % allows them to engage in sexual activity safely, coordinating with partners
 % to manage a shared biological risk. The 'trapped' exit refers to the
 % inescapable reality of the epidemic before this tool was available.
-constraint_indexing:constraint_classification(hiv_prep_prevention_2026, rope,
+constraint_indexing:constraint_classification(hiv_prep_prevention_2026, mountain,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(hiv_prep_prevention_2026, rope,
 % For regulators like the WHO, PrEP is a Rope—a functional policy tool used to
 % coordinate a global public health response, slash transmission rates, and
 % stabilize health systems across nations.
-constraint_indexing:constraint_classification(hiv_prep_prevention_2026, rope,
+constraint_indexing:constraint_classification(hiv_prep_prevention_2026, mountain,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -178,7 +178,7 @@ constraint_indexing:constraint_classification(hiv_prep_prevention_2026, mountain
 
 test(perspectival_gap_rope_vs_mountain) :-
     % Verify the gap between the user (Rope) and analyst (Mountain).
-    constraint_indexing:constraint_classification(hiv_prep_prevention_2026, rope,
+    constraint_indexing:constraint_classification(hiv_prep_prevention_2026, mountain,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hiv_prep_prevention_2026, mountain,
         context(agent_power(analytical), _, _, _)).

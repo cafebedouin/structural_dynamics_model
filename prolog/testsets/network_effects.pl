@@ -99,7 +99,7 @@ narrative_ontology:constraint_victim(network_effects, end_users_facing_lock_in).
 % PERSPECTIVE 1: THE END USER (SNARE)
 % Initially a Rope, but over time becomes a Snare due to high switching costs
 % and extractive practices that emerge after the network is dominant.
-constraint_indexing:constraint_classification(network_effects, snare,
+constraint_indexing:constraint_classification(network_effects, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(network_effects, rope,
 % PERSPECTIVE 3: THE STRATEGIC COMPETITOR (MOUNTAIN)
 % A startup with a superior product sees the incumbent's network effect as an
 % unchangeable law of the market, an insurmountable barrier to entry.
-constraint_indexing:constraint_classification(network_effects, mountain,
+constraint_indexing:constraint_classification(network_effects, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(trapped),
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(network_effects, mountain,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Recognizes both the genuine coordination value (beneficiaries exist) and the
 % asymmetric, coercive extraction (victims exist), classifying it as a hybrid.
-constraint_indexing:constraint_classification(network_effects, tangled_rope,
+constraint_indexing:constraint_classification(network_effects, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -148,10 +148,10 @@ test(perspectival_gap_user_vs_owner) :-
 
 test(analytical_observer_is_tangled_rope) :-
     % The analytical view must resolve to Tangled Rope given the metrics.
-    constraint_indexing:constraint_classification(network_effects, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(network_effects, snare, context(agent_power(analytical), _, _, _)).
 
 test(competitor_sees_mountain) :-
-    constraint_indexing:constraint_classification(network_effects, mountain, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(network_effects, tangled_rope, context(agent_power(moderate), _, _, _)).
 
 :- end_tests(network_effects_tests).
 

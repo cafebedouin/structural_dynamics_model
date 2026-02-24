@@ -82,7 +82,7 @@ domain_priors:requires_active_enforcement(art_market_decoupling).
 
 % PERSPECTIVE 1: THE ARTIST (SNARE)
 % High extraction ($E=0.84$) where creativity is lost to the market.
-constraint_indexing:constraint_classification(art_market_decoupling, snare, 
+constraint_indexing:constraint_classification(art_market_decoupling, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -90,7 +90,7 @@ constraint_indexing:constraint_classification(art_market_decoupling, snare,
 
 % PERSPECTIVE 2: THE INVESTOR (ROPE)
 % Viewed as coordination infrastructure for capital ("buying stocks").
-constraint_indexing:constraint_classification(art_market_decoupling, rope, 
+constraint_indexing:constraint_classification(art_market_decoupling, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -113,8 +113,8 @@ constraint_indexing:constraint_classification(art_market_decoupling, piton,
 
 test(perspectival_gap) :-
     % Verify the Artist sees a Snare while the Investor sees a Rope.
-    constraint_indexing:constraint_classification(art_market_decoupling, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(art_market_decoupling, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(art_market_decoupling, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(art_market_decoupling, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_status) :-
     % Verify Piton classification for the "disgusting" elitist theater.

@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(nasa_faster_better_cheaper, engineering_saf
 % For the engineer, the budget cap is a Mountain. It is an unchangeable law
 % of the project. If a test is required but not budgeted, it simply does
 % not happen. The constraint is treated as an immovable physical limit.
-constraint_indexing:constraint_classification(nasa_faster_better_cheaper, mountain,
+constraint_indexing:constraint_classification(nasa_faster_better_cheaper, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

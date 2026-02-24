@@ -45,9 +45,9 @@ validate_config :-
 
 %% validate_config_postcorpus/0
 %  Post-testset-load safety net. Same checks, with file logging.
-%  The Makefile pipeline redirects stderr to /dev/null (2>/dev/null),
+%  The pipeline redirects stderr to /dev/null (2>/dev/null),
 %  so violations are written to config_violations.log for visibility.
-%  Halts on failure so Make sees the nonzero exit code.
+%  Halts on failure so the pipeline sees the nonzero exit code.
 validate_config_postcorpus :-
     findall(Msg, config_violation(Msg), Violations),
     (   Violations == []

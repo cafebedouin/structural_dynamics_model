@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(deferential_realism_framework, universalist
 % resulting in a Rope classification.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
 % χ = 0.20 * 1.42 * 1.0 (national) = 0.284. This is below the Rope ceiling (0.35).
-constraint_indexing:constraint_classification(deferential_realism_framework, rope,
+constraint_indexing:constraint_classification(deferential_realism_framework, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(deferential_realism_framework, rop
 
 test(uniform_rope_classification) :-
     % Verify that the framework is a uniform-type Rope from all key perspectives.
-    constraint_indexing:constraint_classification(deferential_realism_framework, rope,
+    constraint_indexing:constraint_classification(deferential_realism_framework, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(deferential_realism_framework, rope,
         context(agent_power(institutional), _, _, _)),

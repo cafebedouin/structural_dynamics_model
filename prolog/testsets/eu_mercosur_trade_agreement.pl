@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(eu_mercosur_trade_agreement, french_governm
 % Amazon indigenous communities who face land displacement and ecological collapse.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.48 * 1.42 * 1.2 (global) ≈ 0.82. This is a clear Snare.
-constraint_indexing:constraint_classification(eu_mercosur_trade_agreement, snare,
+constraint_indexing:constraint_classification(eu_mercosur_trade_agreement, naturalized,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -171,7 +171,7 @@ constraint_indexing:constraint_classification(eu_mercosur_trade_agreement, rope,
 % political blowback. Classified as a 'victim' of the political constraint.
 % Engine derives d from victim + constrained exit → higher d → higher χ.
 % They see the extractive elements more clearly because they bear the political cost.
-constraint_indexing:constraint_classification(eu_mercosur_trade_agreement, tangled_rope,
+constraint_indexing:constraint_classification(eu_mercosur_trade_agreement, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

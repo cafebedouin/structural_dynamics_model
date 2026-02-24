@@ -103,7 +103,7 @@ narrative_ontology:constraint_victim(frankenstein_creation_hubris, the_creature)
 % PERSPECTIVE 1: THE CREATURE (MOUNTAIN)
 % For the Creature, social rejection based on his appearance is an immutable
 % law of nature. He cannot negotiate it or escape it. It is a fixed reality.
-constraint_indexing:constraint_classification(frankenstein_creation_hubris, mountain,
+constraint_indexing:constraint_classification(frankenstein_creation_hubris, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(frankenstein_creation_hubris, rope
 % science) but also involves immense asymmetric extraction (destroying its
 % creator and victims) and requires active enforcement (the Creature's revenge).
 % This hybrid nature defines it as a Tangled Rope.
-constraint_indexing:constraint_classification(frankenstein_creation_hubris, tangled_rope,
+constraint_indexing:constraint_classification(frankenstein_creation_hubris, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

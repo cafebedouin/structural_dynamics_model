@@ -99,7 +99,7 @@ narrative_ontology:constraint_victim(hershey_salt_strategy, consumers).
    ========================================================================== */
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-constraint_indexing:constraint_classification(hershey_salt_strategy, snare,
+constraint_indexing:constraint_classification(hershey_salt_strategy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

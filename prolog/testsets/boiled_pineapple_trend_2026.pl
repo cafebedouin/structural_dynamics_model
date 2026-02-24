@@ -87,7 +87,7 @@ narrative_ontology:topic_domain(boiled_pineapple_trend_2026, "social/wellness/te
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the consumer, it is a snare: a "weird" trap of performative wellness 
 % where the "miracle" results are blocked by heat.
-constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, snare, 
+constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, snare
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % For influencers and platforms, it is a rope: it coordinates attention 
 % and community sharing ("TikTok/X/Instagram") around a low-cost hack.
-constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, rope, 
+constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -121,8 +121,8 @@ domain_priors:requires_active_enforcement(boiled_pineapple_trend_2026).
 
 test(perspectival_gap) :-
     % Subject feels a Snare (Trapped by hype); Platforms see a Rope (Coordination).
-    constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(boiled_pineapple_trend_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_verification) :-
     % High theater ratio correctly triggers Piton detection.

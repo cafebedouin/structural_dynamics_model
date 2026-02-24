@@ -144,7 +144,7 @@ narrative_ontology:constraint_victim(gpt_store_marketplace, end_users). % Data e
 % d ≈ 0.95 → f(d) ≈ 1.42.
 % High ε, high suppression, and high f(d) result in a high effective
 % extraction (χ), classifying the constraint as a Snare from this view.
-constraint_indexing:constraint_classification(gpt_store_marketplace, snare,
+constraint_indexing:constraint_classification(gpt_store_marketplace, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

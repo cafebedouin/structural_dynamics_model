@@ -100,7 +100,7 @@ narrative_ontology:constraint_victim(edelman_2026_developing_volatility, foreign
 % PERSPECTIVE 1: THE EMERGING PROFESSIONAL (ROPE)
 % Trust is high; local business is viewed as a reliable partner for progress,
 % making the system feel like pure coordination despite underlying anxieties.
-constraint_indexing:constraint_classification(edelman_2026_developing_volatility, rope,
+constraint_indexing:constraint_classification(edelman_2026_developing_volatility, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(edelman_2026_developing_volatility
 % PERSPECTIVE 2: THE FOREIGN INVESTOR (SNARE)
 % Faced with 34% of people supporting reduced foreign presence even if
 % prices rise, the market appears as an extraction trap for external capital.
-constraint_indexing:constraint_classification(edelman_2026_developing_volatility, snare,
+constraint_indexing:constraint_classification(edelman_2026_developing_volatility, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -132,8 +132,8 @@ constraint_indexing:constraint_classification(edelman_2026_developing_volatility
 
 test(perspectival_gap_rope_snare) :-
     % Verify the key perspectival gap between the local professional and foreign investor.
-    constraint_indexing:constraint_classification(edelman_2026_developing_volatility, rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(edelman_2026_developing_volatility, snare, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(edelman_2026_developing_volatility, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(edelman_2026_developing_volatility, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(edelman_2026_developing_volatility, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-

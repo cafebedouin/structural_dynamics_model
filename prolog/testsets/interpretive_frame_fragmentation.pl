@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(interpretive_frame_fragmentation, 
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.93) masking as essential coordination (Rope).
-constraint_indexing:constraint_classification(interpretive_frame_fragmentation, tangled_rope,
+constraint_indexing:constraint_classification(interpretive_frame_fragmentation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -132,7 +132,7 @@ test(perspectival_gap) :-
     % Verify Snare for the powerless citizen vs Rope for the institutional platform.
     constraint_indexing:constraint_classification(interpretive_frame_fragmentation, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(interpretive_frame_fragmentation, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(interpretive_frame_fragmentation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(interpretive_frame_fragmentation, snare, context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.95) correctly triggers the Piton classification.

@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(india_france_horizon_2047, competing_arms_e
 % Agent who bears the most extraction (Indian Taxpayers). Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 %   χ = 0.48 * 1.42 * 1.0 (national scope) = 0.68. This meets the snare threshold (>= 0.66).
-constraint_indexing:constraint_classification(india_france_horizon_2047, snare,
+constraint_indexing:constraint_classification(india_france_horizon_2047, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),

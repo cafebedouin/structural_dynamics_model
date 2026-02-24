@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(dldr_information_policy, users_expecting_sa
 % χ ≈ 0.20 * 1.42 * 1.0 (national) = 0.284. This is still well within the Rope
 % threshold (χ <= 0.35), showing the system is a coordination tool even for
 % those who find it burdensome.
-constraint_indexing:constraint_classification(dldr_information_policy, rope,
+constraint_indexing:constraint_classification(dldr_information_policy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(dldr_information_policy, rope,
 
 test(is_uniform_rope) :-
     % Verify it is a Rope from key perspectives.
-    constraint_indexing:constraint_classification(dldr_information_policy, rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(dldr_information_policy, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(dldr_information_policy, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(dldr_information_policy, rope, context(agent_power(analytical), _, _, _)).
 

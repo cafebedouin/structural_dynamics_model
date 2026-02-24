@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(power_without_responsibility, pito
 
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.92) masking as essential coordination (Rope).
-constraint_indexing:constraint_classification(power_without_responsibility, tangled_rope,
+constraint_indexing:constraint_classification(power_without_responsibility, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),

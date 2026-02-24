@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(blackstone_tra, rope,
 % Analytically, the TRA has a genuine coordination function (for the SMDs)
 % but also imposes severe asymmetric extraction (on unitholders) and requires
 % active enforcement. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(blackstone_tra, tangled_rope,
+constraint_indexing:constraint_classification(blackstone_tra, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -146,7 +146,7 @@ test(threshold_validation) :-
 
 test(tangled_rope_detection) :-
     % Verify the analytical observer correctly identifies it as a Tangled Rope.
-    constraint_indexing:constraint_classification(blackstone_tra, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(blackstone_tra, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(blackstone_tra_tests).
 

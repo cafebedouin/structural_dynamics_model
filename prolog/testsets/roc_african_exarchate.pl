@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(roc_african_exarchate, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Sees both the coordination function and the asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-constraint_indexing:constraint_classification(roc_african_exarchate, tangled_rope,
+constraint_indexing:constraint_classification(roc_african_exarchate, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(roc_african_exarchate, tangled_rop
 % Perspective 4A: The Patriarchate of Alexandria (Targeted Institution)
 % Experiences the constraint as a coercive, extractive attack.
 % Engine derives d from victim status + constrained exit → high d → high χ.
-constraint_indexing:constraint_classification(roc_african_exarchate, snare,
+constraint_indexing:constraint_classification(roc_african_exarchate, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained), % Cannot easily abandon their historical flock.
@@ -173,7 +173,7 @@ test(perspectival_gap) :-
     % Verify gap between target (powerless), beneficiary (institutional), and analytical.
     constraint_indexing:constraint_classification(roc_african_exarchate, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
     constraint_indexing:constraint_classification(roc_african_exarchate, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(roc_african_exarchate, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(roc_african_exarchate, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_gap) :-
     % Verify gap between the two institutional actors.

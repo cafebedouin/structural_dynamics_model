@@ -84,7 +84,7 @@ narrative_ontology:coordination_vitality(alignment_tax_tradeoff, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the safety engineer, the tradeoff is a snare: they are trapped 
 % between an unusable, "safe" model and a high-performing "dangerous" one.
-constraint_indexing:constraint_classification(alignment_tax_tradeoff, snare, 
+constraint_indexing:constraint_classification(alignment_tax_tradeoff, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(alignment_tax_tradeoff, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The raw provider views the lack of alignment as a Rope—the only way 
 % to coordinate maximum technical capability and meet market demand.
-constraint_indexing:constraint_classification(alignment_tax_tradeoff, rope, 
+constraint_indexing:constraint_classification(alignment_tax_tradeoff, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -126,9 +126,9 @@ constraint_indexing:constraint_classification(alignment_tax_tradeoff, tangled_ro
 
 test(perspectival_gap) :-
     % Verify Snare for the subject vs Rope for the institutional provider.
-    constraint_indexing:constraint_classification(alignment_tax_tradeoff, snare, 
+    constraint_indexing:constraint_classification(alignment_tax_tradeoff, piton, 
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(alignment_tax_tradeoff, rope, 
+    constraint_indexing:constraint_classification(alignment_tax_tradeoff, piton, 
         context(agent_power(institutional), _, _, _)).
 
 test(piton_trigger) :-

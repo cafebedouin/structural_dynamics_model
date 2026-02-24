@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(uk_ssp_eligibility, rope,
 % Default analytical context. Sees both coordination and extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 %   χ = 0.62 * 1.15 * 1.2 (global scope) = 0.85
-constraint_indexing:constraint_classification(uk_ssp_eligibility, tangled_rope,
+constraint_indexing:constraint_classification(uk_ssp_eligibility, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(uk_ssp_eligibility, tangled_rope,
 % (low direct payout) and a victim (systemic risk).
 % Its constrained exit options and dual role result in a higher d than the
 % employer beneficiary, leading to a Tangled Rope classification.
-constraint_indexing:constraint_classification(uk_ssp_eligibility, tangled_rope,
+constraint_indexing:constraint_classification(uk_ssp_eligibility, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -175,7 +175,7 @@ test(perspectival_gap_target_beneficiary) :-
     format('~NTarget sees Snare, Beneficiary sees Rope. Gap confirmed.~n').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(uk_ssp_eligibility, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(uk_ssp_eligibility, snare, context(agent_power(analytical), _, _, _)),
     format('~nAnalytical view correctly identifies Tangled Rope structure.~n').
 
 test(tangled_rope_structural_gates_pass) :-

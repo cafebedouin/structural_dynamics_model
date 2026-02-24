@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(oral_glp1_market_access, health_insurers).
 % victim + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 % χ ≈ 0.55 * 1.42 * 1.0 (national scope) ≈ 0.78. This exceeds the Snare
 % threshold (χ ≥ 0.66), so it classifies as a Snare.
-constraint_indexing:constraint_classification(oral_glp1_market_access, snare,
+constraint_indexing:constraint_classification(oral_glp1_market_access, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(oral_glp1_market_access, rope,
 % Analytical perspective d ≈ 0.72 → f(d) ≈ 1.15.
 % χ ≈ 0.55 * 1.15 * 1.2 (global scope) ≈ 0.76. This falls in the Tangled Rope
 % range (0.40 ≤ χ ≤ 0.90) and meets the structural requirements.
-constraint_indexing:constraint_classification(oral_glp1_market_access, tangled_rope,
+constraint_indexing:constraint_classification(oral_glp1_market_access, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(oral_glp1_market_access, tangled_r
 % An institutional actor forced to participate and bear costs.
 % victim + constrained exit → d is moderately high. The system sees them as
 % less trapped than an individual, but still a victim.
-constraint_indexing:constraint_classification(oral_glp1_market_access, tangled_rope,
+constraint_indexing:constraint_classification(oral_glp1_market_access, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -195,12 +195,12 @@ constraint_indexing:constraint_classification(oral_glp1_market_access, tangled_r
 :- begin_tests(oral_glp1_market_access_tests).
 
 test(perspectival_gap_target_beneficiary) :-
-    constraint_indexing:constraint_classification(oral_glp1_market_access, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(oral_glp1_market_access, tangled_rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(oral_glp1_market_access, rope, context(agent_power(institutional), _, arbitrage, _)),
     format('Passed: Snare (powerless) vs Rope (institutional) gap confirmed.~n').
 
 test(inter_institutional_gap) :-
-    constraint_indexing:constraint_classification(oral_glp1_market_access, tangled_rope, context(agent_power(institutional), _, constrained, _)),
+    constraint_indexing:constraint_classification(oral_glp1_market_access, rope, context(agent_power(institutional), _, constrained, _)),
     constraint_indexing:constraint_classification(oral_glp1_market_access, rope, context(agent_power(institutional), _, arbitrage, _)),
     format('Passed: Inter-institutional gap (constrained vs arbitrage exit) confirmed.~n').
 

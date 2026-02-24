@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(bor_tax_exemption_nl, rope,
 % Recognizes both the stated coordination function (business continuity) and the
 % massive, asymmetric extraction, classifying it as a hybrid.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(bor_tax_exemption_nl, tangled_rope,
+constraint_indexing:constraint_classification(bor_tax_exemption_nl, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(bor_tax_exemption_nl, tangled_rope
 % and lobbying support, but is constrained by public opinion and the rule's complexity.
 % Its position is structurally different from the pure beneficiaries. The constrained
 % exit option reflects its limited room to maneuver politically.
-constraint_indexing:constraint_classification(bor_tax_exemption_nl, tangled_rope,
+constraint_indexing:constraint_classification(bor_tax_exemption_nl, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

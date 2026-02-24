@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(faint_blue_neural_bifurcation, original_ken
 % To Yuki, the change is a 'Mountain'. It is an unchangeable feature of the
 % landscape. No matter what she asks, the "Contrast Adjustment" of Ken's
 % personality remains fixed and irreversible.
-constraint_indexing:constraint_classification(faint_blue_neural_bifurcation, mountain,
+constraint_indexing:constraint_classification(faint_blue_neural_bifurcation, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

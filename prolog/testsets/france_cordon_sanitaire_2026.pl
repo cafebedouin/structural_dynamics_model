@@ -100,7 +100,7 @@ domain_priors:requires_active_enforcement(france_cordon_sanitaire_2026).
 
 % PERSPECTIVE 1: THE DISILLUSIONED VOTER (SNARE)
 % The "Front" acts as a trap that forces a vote for an unpopular incumbent project.
-constraint_indexing:constraint_classification(france_cordon_sanitaire_2026, snare,
+constraint_indexing:constraint_classification(france_cordon_sanitaire_2026, piton,
 context(agent_power(powerless),
 time_horizon(biographical),
 exit_options(trapped),
@@ -108,7 +108,7 @@ spatial_scope(national))).
 
 % PERSPECTIVE 2: THE INSTITUTIONAL ELITE (ROPE)
 % Viewed as the only remaining "Rope" for democratic stability.
-constraint_indexing:constraint_classification(france_cordon_sanitaire_2026, rope,
+constraint_indexing:constraint_classification(france_cordon_sanitaire_2026, piton,
 context(agent_power(institutional),
 time_horizon(generational),
 exit_options(mobile),
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(france_cordon_sanitaire_2026, pito
 
 test(perspectival_variance) :-
 % Ensure high-power agents still perceive it as a functional coordination Rope.
-constraint_indexing:constraint_classification(france_cordon_sanitaire_2026, rope, context(agent_power(institutional), _, _, _)).
+constraint_indexing:constraint_classification(france_cordon_sanitaire_2026, piton, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(france_cordon_sanitaire_tests).
 

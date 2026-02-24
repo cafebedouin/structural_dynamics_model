@@ -88,7 +88,7 @@ narrative_ontology:constraint_victim(mil_std_461g_emi_control, cots_hardware_inn
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For a small contractor, the standard is a costly barrier to entry.
 % χ = 0.5 * 1.5 (powerless) * 0.8 (local) = 0.6. This is high extraction.
-constraint_indexing:constraint_classification(mil_std_461g_emi_control, snare,
+constraint_indexing:constraint_classification(mil_std_461g_emi_control, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

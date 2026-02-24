@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(frontex_pushback_coordination, rop
 % asymmetric extraction. It sees the system for what it is: a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.68 * 1.15 * 1.2 (global) ≈ 0.94.
-constraint_indexing:constraint_classification(frontex_pushback_coordination, tangled_rope,
+constraint_indexing:constraint_classification(frontex_pushback_coordination, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -176,7 +176,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
     format('Passed: Target sees Snare, Beneficiary sees Rope.').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(frontex_pushback_coordination, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(frontex_pushback_coordination, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-
     narrative_ontology:constraint_beneficiary(frontex_pushback_coordination, _), % Implies has_coordination_function

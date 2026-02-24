@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(china_contraceptive_tax, condom_users).
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % The policy acts as a financial trap, penalizing a specific choice.
-constraint_indexing:constraint_classification(china_contraceptive_tax, snare,
+constraint_indexing:constraint_classification(china_contraceptive_tax, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(china_contraceptive_tax, rope,
 % Default analytical context. Sees both the coordination function and the
 % asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(china_contraceptive_tax, tangled_rope,
+constraint_indexing:constraint_classification(china_contraceptive_tax, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -167,7 +167,7 @@ test(perspectival_gap) :-
     TypeTarget \= TypeBeneficiary.
 
 test(tangled_rope_analytical_classification) :-
-    constraint_indexing:constraint_classification(china_contraceptive_tax, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(china_contraceptive_tax, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(china_contraceptive_tax, _),

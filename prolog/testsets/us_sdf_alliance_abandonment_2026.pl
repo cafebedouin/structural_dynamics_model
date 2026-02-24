@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, 
 % A historian or foreign policy analyst sees both the genuine coordination
 % function and the severe asymmetric extraction, classifying it as a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, tangled_rope,
+constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -211,7 +211,7 @@ test(perspectival_gap_powerless_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements) :-
     % Verify that all structural requirements for a Tangled Rope are met.

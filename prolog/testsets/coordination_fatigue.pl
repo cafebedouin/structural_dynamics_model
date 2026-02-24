@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(coordination_fatigue, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.78) and suppression (0.62) alongside a genuine
 % coordination function as a Tangled Rope.
-constraint_indexing:constraint_classification(coordination_fatigue, tangled_rope,
+constraint_indexing:constraint_classification(coordination_fatigue, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -135,7 +135,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(coordination_fatigue, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(coordination_fatigue, tangled_rope,
+    constraint_indexing:constraint_classification(coordination_fatigue, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_audit_logic) :-

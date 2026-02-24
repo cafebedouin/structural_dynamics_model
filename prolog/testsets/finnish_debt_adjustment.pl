@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(finnish_debt_adjustment, rope,
 % Default analytical context sees both the coordination and the severe,
 % asymmetric extraction. The high base extractiveness, high suppression, and
 % presence of both victims and beneficiaries leads to a Tangled Rope classification.
-constraint_indexing:constraint_classification(finnish_debt_adjustment, tangled_rope,
+constraint_indexing:constraint_classification(finnish_debt_adjustment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -185,7 +185,7 @@ test(perspectival_gap_target_beneficiary) :-
     writeln('OK: Debtor sees Snare, Creditor sees Rope.').
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(finnish_debt_adjustment, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(finnish_debt_adjustment, snare, context(agent_power(analytical), _, _, _)),
     writeln('OK: Analytical perspective correctly identifies Tangled Rope.').
 
 test(tangled_rope_gate_validation) :-

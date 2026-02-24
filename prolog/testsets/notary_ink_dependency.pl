@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(notary_ink_dependency, signatories).
 % PERSPECTIVE 1: THE SIGNATORY (SNARE)
 % For the individual, the need to find a physical notary during business
 % hours is a Snare—a low-utility friction that restricts movement.
-constraint_indexing:constraint_classification(notary_ink_dependency, snare,
+constraint_indexing:constraint_classification(notary_ink_dependency, piton,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(notary_ink_dependency, snare,
 % PERSPECTIVE 2: THE BANKING SYSTEM (ROPE)
 % Viewed institutionally, the notary is a Rope. It provides a shared
 % standard of "High-Trust" that coordinates risk across different jurisdictions.
-constraint_indexing:constraint_classification(notary_ink_dependency, rope,
+constraint_indexing:constraint_classification(notary_ink_dependency, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

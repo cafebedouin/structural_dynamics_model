@@ -87,7 +87,7 @@ narrative_ontology:coordination_vitality(second_order_unintended_consequences, d
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The participant is trapped: the "solution" has made their primary task
 % harder, but they are mandated to follow the new protocol.
-constraint_indexing:constraint_classification(second_order_unintended_consequences, snare,
+constraint_indexing:constraint_classification(second_order_unintended_consequences, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(second_order_unintended_consequenc
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The Optimizer views the policy as a Rope—the essential coordination
 % substrate for achieving the primary target at scale.
-constraint_indexing:constraint_classification(second_order_unintended_consequences, rope,
+constraint_indexing:constraint_classification(second_order_unintended_consequences, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(second_order_unintended_consequenc
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.85) and suppression (0.73) masking as functional
 % coordination (Rope), correctly identifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(second_order_unintended_consequences, tangled_rope,
+constraint_indexing:constraint_classification(second_order_unintended_consequences, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -128,11 +128,11 @@ constraint_indexing:constraint_classification(second_order_unintended_consequenc
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless participant vs Rope for the institutional optimizer.
-    constraint_indexing:constraint_classification(second_order_unintended_consequences, snare,
+    constraint_indexing:constraint_classification(second_order_unintended_consequences, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(second_order_unintended_consequences, rope,
+    constraint_indexing:constraint_classification(second_order_unintended_consequences, piton,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(second_order_unintended_consequences, tangled_rope,
+    constraint_indexing:constraint_classification(second_order_unintended_consequences, piton,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(fiat_currency_lifecycle, rope,
 % The analytical observer sees the dual function: it's a coordination tool
 % (medium of exchange) that is inextricably tangled with a powerful,
 % asymmetric extraction mechanism (the inflation tax).
-constraint_indexing:constraint_classification(fiat_currency_lifecycle, tangled_rope,
+constraint_indexing:constraint_classification(fiat_currency_lifecycle, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

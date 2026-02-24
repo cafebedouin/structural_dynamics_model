@@ -89,7 +89,7 @@ constraint_indexing:constraint_classification(nsw_transmission_bottleneck, snare
 
 % PERSPECTIVE 2: THE PRIMARY BENEFICIARY (LOCAL GAS GENERATORS)
 % Perception: Rope. Maintains market viability and regional grid "independence."
-constraint_indexing:constraint_classification(nsw_transmission_bottleneck, rope,
+constraint_indexing:constraint_classification(nsw_transmission_bottleneck, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -115,7 +115,7 @@ test(extraction_threshold) :-
 
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(nsw_transmission_bottleneck, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(nsw_transmission_bottleneck, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(nsw_transmission_bottleneck, scaffold, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(nsw_transmission_bottleneck_tests).
 

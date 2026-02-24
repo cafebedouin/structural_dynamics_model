@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(planetary_boundaries, rope,
 % Analytically, the framework is a Tangled Rope. It has a genuine and necessary
 % coordination function (beneficiary exists) but also imposes severe, asymmetric
 % extraction (victim exists) and requires active political enforcement.
-constraint_indexing:constraint_classification(planetary_boundaries, tangled_rope,
+constraint_indexing:constraint_classification(planetary_boundaries, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

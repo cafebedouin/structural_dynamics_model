@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(policy_lag_catastrophe, rope,
 % Detects high extraction (0.88) and coordination intent (deliberation)
 % as a hybrid Tangled Rope, supported by the presence of beneficiaries,
 % victims, and active enforcement.
-constraint_indexing:constraint_classification(policy_lag_catastrophe, tangled_rope,
+constraint_indexing:constraint_classification(policy_lag_catastrophe, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

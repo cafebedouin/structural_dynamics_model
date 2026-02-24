@@ -90,7 +90,7 @@ narrative_ontology:coordination_vitality(fiscal_dominance_trap, dead).
 % The subject is trapped: their savings lose value as inflation is
 % permitted to rise, yet the "safe" assets they hold are the very
 % instruments being used to sustain the trap.
-constraint_indexing:constraint_classification(fiscal_dominance_trap, snare,
+constraint_indexing:constraint_classification(fiscal_dominance_trap, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(fiscal_dominance_trap, snare,
 % The Treasury views this as a Rope—the essential coordination of
 % monetary and fiscal policy required to avoid a catastrophic
 % sovereign default and systemic collapse.
-constraint_indexing:constraint_classification(fiscal_dominance_trap, rope,
+constraint_indexing:constraint_classification(fiscal_dominance_trap, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(fiscal_dominance_trap, piton,
 % The canonical analytical view recognizes the hybrid nature: a coordination
 % function (avoiding default) exists alongside severe asymmetric extraction
 % (inflation tax), requiring active enforcement. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(fiscal_dominance_trap, tangled_rope,
+constraint_indexing:constraint_classification(fiscal_dominance_trap, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -134,11 +134,11 @@ constraint_indexing:constraint_classification(fiscal_dominance_trap, tangled_rop
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless saver vs Rope for the institutional treasury.
-    constraint_indexing:constraint_classification(fiscal_dominance_trap, snare,
+    constraint_indexing:constraint_classification(fiscal_dominance_trap, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(fiscal_dominance_trap, rope,
+    constraint_indexing:constraint_classification(fiscal_dominance_trap, piton,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(fiscal_dominance_trap, tangled_rope,
+    constraint_indexing:constraint_classification(fiscal_dominance_trap, piton,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_audit_logic) :-

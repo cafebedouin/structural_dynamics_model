@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(circadian_decoupling_arbitrage, ro
 % function (enabling 24/7 logistics) but achieves it via high, asymmetric
 % extraction from a specific group, requiring active enforcement.
 % χ = 0.62 * π(analytical:1.15) * σ(global:1.2) = 0.8556
-constraint_indexing:constraint_classification(circadian_decoupling_arbitrage, tangled_rope,
+constraint_indexing:constraint_classification(circadian_decoupling_arbitrage, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_verification) :-
     % Verify the analytical perspective correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(circadian_decoupling_arbitrage, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(circadian_decoupling_arbitrage, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     narrative_ontology:constraint_metric(circadian_decoupling_arbitrage, extractiveness, E),

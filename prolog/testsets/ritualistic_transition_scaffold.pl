@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(ritual_transition_scaffold, new_hires).
 % PERSPECTIVE 1: THE DISORIENTED WORKER (ROPE)
 % To someone lost in chaos, the theater provides a "Rope" of predictability.
 % The perceived extraction is low because the alternative is high-cost chaos.
-constraint_indexing:constraint_classification(ritual_transition_scaffold, rope,
+constraint_indexing:constraint_classification(ritual_transition_scaffold, piton,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),

@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(complexity_debt, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid signature of essential coordination (Rope)
 % entangled with massive, deferred extraction (Snare).
-constraint_indexing:constraint_classification(complexity_debt, tangled_rope,
+constraint_indexing:constraint_classification(complexity_debt, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -124,7 +124,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(complexity_debt, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(complexity_debt, tangled_rope,
+    constraint_indexing:constraint_classification(complexity_debt, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

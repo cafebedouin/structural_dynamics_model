@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(axiom_of_choice, mountain,
 % For the analyst, AC is a pure coordination tool. It guarantees the existence
 % of objects needed to build theories (e.g., Hahn-Banach theorem), with
 % effectively zero extraction from their perspective.
-constraint_indexing:constraint_classification(axiom_of_choice, rope,
+constraint_indexing:constraint_classification(axiom_of_choice, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -175,7 +175,7 @@ constraint_indexing:constraint_classification(axiom_of_choice, rope,
 % Snare. It extracts the "sanctity of construction" and forces acceptance of
 % "monstrous" results like the Banach-Tarski paradox. The exit option
 % (rejecting ZFC) is professionally costly.
-constraint_indexing:constraint_classification(axiom_of_choice, snare,
+constraint_indexing:constraint_classification(axiom_of_choice, scaffold,
     context(agent_power(moderate),
             time_horizon(civilizational),
             exit_options(constrained),
@@ -200,8 +200,8 @@ constraint_indexing:constraint_classification(axiom_of_choice, mountain,
 
 test(perspectival_gap_analyst_vs_constructivist) :-
     % Verify the analyst (beneficiary) sees a Rope, while the constructivist (victim) sees a Snare.
-    constraint_indexing:constraint_classification(axiom_of_choice, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(axiom_of_choice, snare, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(axiom_of_choice, scaffold, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(axiom_of_choice, scaffold, context(agent_power(moderate), _, _, _)).
 
 test(analytical_view_is_mountain) :-
     % The formal, analytical view must classify as Mountain.

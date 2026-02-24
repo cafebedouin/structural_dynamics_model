@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(availability_heuristic, public_health_polic
 % PERSPECTIVE 1: THE ANXIOUS CITIZEN (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + constrained exit → d ≈ 0.90 → f(d) ≈ 1.35 → high χ
-constraint_indexing:constraint_classification(availability_heuristic, snare,
+constraint_indexing:constraint_classification(availability_heuristic, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),

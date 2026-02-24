@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(winners_curse, rope,
 % Sees the dual function: a genuine coordination mechanism (price discovery)
 % coupled with a systematic, asymmetric extraction from a specific class of
 % participants. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(winners_curse, tangled_rope,
+constraint_indexing:constraint_classification(winners_curse, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -135,7 +135,7 @@ test(perspectival_gap) :-
     % Verify Snare for the powerless amateur vs Rope for the institutional beneficiary.
     constraint_indexing:constraint_classification(winners_curse, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(winners_curse, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(winners_curse, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(winners_curse, snare, context(agent_power(analytical), _, _, _)).
 
 test(extraction_threshold) :-
     % High extraction (> 0.46) triggers lifecycle drift measurement requirement.

@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, 
 
 % PERSPECTIVE 2: THE STATE ANALYST (SNARE)
 % To the institutional incumbent, the network is a Snare that extracts tax base and control.
-constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, snare,
+constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(trapped),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, 
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SCAFFOLD)
 % The analytical observer, noting the low extraction, sunset clause, and coordination
 % function, classifies it as a Scaffold.
-constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, scaffold,
+constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, 
 test(perspectival_gap_user_vs_state) :-
     % Verify the core conflict: users see a Rope, the state sees a Snare.
     constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, snare, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(alternative_sovereignty_scaffold, rope, context(agent_power(institutional), _, _, _)).
 
 test(architect_is_scaffold) :-
     % Verify that for organized power (the architect), it is a Scaffold.

@@ -157,7 +157,7 @@ narrative_ontology:constraint_victim(participatory_observer_hypothesis, quantum_
 %
 % victim membership + trapped exit -> d ~ 0.95 -> f(d) ~ 1.42
 % chi ~ 0.38 x 1.42 x 1.0 ~ 0.54 -> snare territory
-constraint_indexing:constraint_classification(participatory_observer_hypothesis, snare,
+constraint_indexing:constraint_classification(participatory_observer_hypothesis, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

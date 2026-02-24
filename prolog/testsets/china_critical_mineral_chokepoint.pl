@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(china_critical_mineral_chokepoint,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % An analyst sees a hybrid system: a genuine coordination function for one group
 % that enables high, asymmetric extraction from another, requiring active enforcement.
-constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, tangled_rope,
+constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -121,7 +121,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical perspective must resolve the conflict by identifying the hybrid nature.
-    constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify all three structural requirements for a Tangled Rope are present.

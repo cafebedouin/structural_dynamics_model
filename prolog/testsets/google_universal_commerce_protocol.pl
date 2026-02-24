@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(google_universal_commerce_protocol, large_r
 % As victims with a trapped exit, the engine derives d ≈ 0.95, giving f(d) ≈ 1.42.
 % The global scope modifier σ(S)=1.2 amplifies extraction.
 % χ ≈ 0.52 * 1.42 * 1.2 = 0.885. This is well above the Snare threshold of 0.66.
-constraint_indexing:constraint_classification(google_universal_commerce_protocol, snare,
+constraint_indexing:constraint_classification(google_universal_commerce_protocol, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(google_universal_commerce_protocol
 % PERSPECTIVE 2: THE PRIMARY BENEFICIARY (GOOGLE)
 % As a beneficiary with arbitrage exit, the engine derives d ≈ 0.05, f(d) ≈ -0.12.
 % χ is negative, indicating a subsidy. Classification is Rope.
-constraint_indexing:constraint_classification(google_universal_commerce_protocol, rope,
+constraint_indexing:constraint_classification(google_universal_commerce_protocol, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(google_universal_commerce_protocol
 % Analytical d ≈ 0.72, f(d) ≈ 1.15. χ ≈ 0.52 * 1.15 * 1.2 = 0.717.
 % This χ falls in the Tangled Rope range (0.40 ≤ χ ≤ 0.90), and all
 % three structural requirements (beneficiary, victim, enforcement) are met.
-constraint_indexing:constraint_classification(google_universal_commerce_protocol, tangled_rope,
+constraint_indexing:constraint_classification(google_universal_commerce_protocol, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -186,7 +186,7 @@ test(perspectival_gap_target_beneficiary) :-
     constraint_indexing:constraint_classification(google_universal_commerce_protocol, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(google_universal_commerce_protocol, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(google_universal_commerce_protocol, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_perspectives_differ) :-
     % The beneficiary (Google) and constrained institution (Regulator) see it differently.

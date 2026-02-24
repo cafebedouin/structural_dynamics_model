@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(gilgamesh_mortality_limit, humanity).
 
 % PERSPECTIVE 1: THE SUBJECT (GILGAMESH, POST-QUEST) - MOUNTAIN
 % After failing all tests, he accepts mortality as an unchangeable fact.
-constraint_indexing:constraint_classification(gilgamesh_mortality_limit, mountain,
+constraint_indexing:constraint_classification(gilgamesh_mortality_limit, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(gilgamesh_mortality_limit, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER - TANGLED ROPE
 % Recognizes the coordination function but also the total, asymmetric extraction
 % and the requirement for active enforcement (divine decree).
-constraint_indexing:constraint_classification(gilgamesh_mortality_limit, tangled_rope,
+constraint_indexing:constraint_classification(gilgamesh_mortality_limit, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

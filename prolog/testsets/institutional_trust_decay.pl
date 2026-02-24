@@ -92,7 +92,7 @@ narrative_ontology:coordination_vitality(institutional_trust_decay, dead).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The individual feels trapped in a system that no longer yields a ROI on trust.
-constraint_indexing:constraint_classification(institutional_trust_decay, snare,
+constraint_indexing:constraint_classification(institutional_trust_decay, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(institutional_trust_decay, snare,
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The institution maintains that the structures are still essential coordination mechanisms.
-constraint_indexing:constraint_classification(institutional_trust_decay, rope,
+constraint_indexing:constraint_classification(institutional_trust_decay, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

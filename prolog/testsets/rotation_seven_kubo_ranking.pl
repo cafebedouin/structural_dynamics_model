@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(rotation_seven_kubo_ranking, rope,
 % extreme asymmetric extraction from a captive population. It requires active
 % enforcement to maintain. This classification captures both the Rope-like
 % function and the Snare-like harm.
-constraint_indexing:constraint_classification(rotation_seven_kubo_ranking, tangled_rope,
+constraint_indexing:constraint_classification(rotation_seven_kubo_ranking, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -137,7 +137,7 @@ test(threshold_validation) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(rotation_seven_kubo_ranking, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(rotation_seven_kubo_ranking, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(rotation_seven_kubo_ranking_tests).
 

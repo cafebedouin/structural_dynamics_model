@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(tsp_computational_complexity, small_scale_l
 % an intractable trap, forcing reliance on costly or inefficient solutions.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % χ = 0.47 * 1.42 * 1.0 = 0.6674. With ε>=0.46 and suppression>=0.60, this is a Snare.
-constraint_indexing:constraint_classification(tsp_computational_complexity, snare,
+constraint_indexing:constraint_classification(tsp_computational_complexity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

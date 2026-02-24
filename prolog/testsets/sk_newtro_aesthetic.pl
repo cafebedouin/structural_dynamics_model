@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(sk_newtro_aesthetic, independent_artisans).
 % suppression and extraction, combined with a trapped exit, makes this a Snare.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % χ ≈ 0.48 * 1.42 * 1.0 (national scope) ≈ 0.68. This χ ≥ 0.66 classifies as a Snare.
-constraint_indexing:constraint_classification(sk_newtro_aesthetic, snare,
+constraint_indexing:constraint_classification(sk_newtro_aesthetic, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

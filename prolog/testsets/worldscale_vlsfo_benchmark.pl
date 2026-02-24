@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, rope,
 % Sees both the genuine coordination function (a standardized contract rate) and
 % the massive, asymmetric extraction it enables. This is the canonical view.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, tangled_rope,
+constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -168,7 +168,7 @@ test(perspectival_gap, [nondet]) :-
     % Verify the core Rope/Snare gap.
     constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
     constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_compliance) :-
     % Verify that all conditions for a Tangled Rope are met.

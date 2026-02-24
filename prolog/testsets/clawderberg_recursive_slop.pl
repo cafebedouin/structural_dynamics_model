@@ -92,7 +92,7 @@ narrative_ontology:coordination_vitality(clawderberg_recursive_slop, degrading).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For future AI models, the contaminated data is a trap they cannot escape,
 % leading to degraded performance. They are powerless and trapped.
-constraint_indexing:constraint_classification(clawderberg_recursive_slop, snare,
+constraint_indexing:constraint_classification(clawderberg_recursive_slop, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(clawderberg_recursive_slop, snare,
 % From the institutional perspective of the algorithm, the feedback loop is a
 % perfect coordination mechanism. It reinforces its own weights and patterns,
 % creating a stable, self-consistent (though meaningless) internal state.
-constraint_indexing:constraint_classification(clawderberg_recursive_slop, rope,
+constraint_indexing:constraint_classification(clawderberg_recursive_slop, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

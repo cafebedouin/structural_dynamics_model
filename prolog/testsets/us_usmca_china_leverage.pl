@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(us_usmca_china_leverage, canadian_export_se
 % Canadian workers in export-dependent sectors who have no say in policy but
 % bear the risk of economic disruption.
 % Engine derives d from: victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ
-constraint_indexing:constraint_classification(us_usmca_china_leverage, snare,
+constraint_indexing:constraint_classification(us_usmca_china_leverage, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(us_usmca_china_leverage, rope,
 % Default analytical context. Recognizes both the coordination function and the
 % asymmetric extraction, leading to a Tangled Rope classification.
 % Engine derives d ≈ 0.72 -> f(d) ≈ 1.15.
-constraint_indexing:constraint_classification(us_usmca_china_leverage, tangled_rope,
+constraint_indexing:constraint_classification(us_usmca_china_leverage, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(us_usmca_china_leverage, tangled_r
 % The primary target. Though institutional, their constrained exit options
 % due to economic dependency make the constraint feel highly coercive.
 % Engine derives d from: victim membership + institutional power + constrained exit -> d ≈ 0.60 -> high f(d).
-constraint_indexing:constraint_classification(us_usmca_china_leverage, snare,
+constraint_indexing:constraint_classification(us_usmca_china_leverage, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -190,7 +190,7 @@ test(perspectival_gap_inter_institutional, [nondet]) :-
     TypeCanada \= TypeUS.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_usmca_china_leverage, tangled_rope,
+    constraint_indexing:constraint_classification(us_usmca_china_leverage, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-

@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(dexy_gold_protocol, lp_providers).
 % LPs face a Snare during de-pegs. The protocol explicitly prevents LP token
 % redemptions if the oracle rate is significantly below the LP rate to prevent
 % draining reserves. This "locks" the agent into the constraint during crisis.
-constraint_indexing:constraint_classification(dexy_gold_protocol, snare,
+constraint_indexing:constraint_classification(dexy_gold_protocol, rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(dexy_gold_protocol, rope,
 % The analytical view sees both the coordination function (peg maintenance)
 % and the asymmetric extraction (LP locks). This dual nature, combined with
 % active code-based enforcement, defines a Tangled Rope.
-constraint_indexing:constraint_classification(dexy_gold_protocol, tangled_rope,
+constraint_indexing:constraint_classification(dexy_gold_protocol, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(dexy_gold_protocol, tangled_rope,
 % To a user simply looking to hedge into gold, Dexy is a tool (Rope).
 % Unlike a trapped LP, a retail trader can usually exit via the AMM,
 % provided there is liquidity.
-constraint_indexing:constraint_classification(dexy_gold_protocol, rope,
+constraint_indexing:constraint_classification(dexy_gold_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(mobile),
@@ -182,7 +182,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view must resolve the conflict into Tangled Rope.
-    constraint_indexing:constraint_classification(dexy_gold_protocol, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(dexy_gold_protocol, rope, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties_present) :-
     % Verify all three required properties for Tangled Rope are declared.

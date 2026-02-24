@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(ukraine_tight_gas_pilot, potential_domestic
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Future local communities who bear environmental risks without direct compensation.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, snare,
+constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),

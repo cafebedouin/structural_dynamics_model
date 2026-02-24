@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(carrying_capacity, rope,
 % The ecologist sees both the valid coordination function (managing resources)
 % and the severe asymmetric extraction imposed on the powerless. This dual
 % nature is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(carrying_capacity, tangled_rope,
+constraint_indexing:constraint_classification(carrying_capacity, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

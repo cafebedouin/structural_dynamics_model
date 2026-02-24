@@ -85,7 +85,7 @@ domain_priors:requires_active_enforcement(ulysses_nausicaa_1904). % The "cuckoo"
 % PERSPECTIVE 1: GERTY MACDOWELL (SNARE)
 % Effective Extraction: 0.49 * 1.5 (powerless) * 0.8 (local) = 0.588.
 % Perceived as a "mysterious embrace" that is actually a trap of physical and social limitation.
-constraint_indexing:constraint_classification(ulysses_nausicaa_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_nausicaa_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -94,7 +94,7 @@ constraint_indexing:constraint_classification(ulysses_nausicaa_1904, snare,
 % PERSPECTIVE 2: THE CHURCH/ST. MARY'S (ROPE)
 % Effective Extraction: 0.49 * -0.2 (institutional) * 0.8 = -0.0784.
 % Viewed as the essential coordination of "the voice of prayer" and a "beacon" for man.
-constraint_indexing:constraint_classification(ulysses_nausicaa_1904, rope, 
+constraint_indexing:constraint_classification(ulysses_nausicaa_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -116,8 +116,8 @@ constraint_indexing:constraint_classification(ulysses_nausicaa_1904, piton,
 
 test(perspectival_gap) :-
     % Verify the shift from Gerty's Snare to the Church's Rope.
-    constraint_indexing:constraint_classification(ulysses_nausicaa_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_nausicaa_1904, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_nausicaa_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_nausicaa_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_validation) :-
     % Piton classification requires theater_ratio >= 0.70.

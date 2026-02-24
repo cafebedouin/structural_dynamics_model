@@ -134,7 +134,7 @@ narrative_ontology:constraint_victim(un_high_seas_treaty_2026, developing_nation
 % Small-scale operators who lack the capital for compliance or legal challenges.
 % Engine derives d from victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ
 % χ = 0.40 * 1.42 * 1.2 (global scope) ≈ 0.68. This meets the Snare threshold (>= 0.66).
-constraint_indexing:constraint_classification(un_high_seas_treaty_2026, snare,
+constraint_indexing:constraint_classification(un_high_seas_treaty_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

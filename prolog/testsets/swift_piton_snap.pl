@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(swift_piton_snap, legacy_financial_institut
 % PERSPECTIVE 1: THE LEGACY BANKER (SNARE)
 % For the institution that can no longer extract rent, the new network is a Snare—it traps their old business model.
 % Even with low base extraction, the *effect* is total suppression of their prior mode of operation.
-constraint_indexing:constraint_classification(swift_piton_snap, snare,
+constraint_indexing:constraint_classification(swift_piton_snap, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(trapped),
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(swift_piton_snap, snare,
 % PERSPECTIVE 2: THE GLOBAL CITIZEN (MOUNTAIN)
 % For the user, the protocol is as fundamental and unchangeable as a Mountain (a fixed logical limit).
 % Its rules are immutable and its function is a given.
-constraint_indexing:constraint_classification(swift_piton_snap, mountain,
+constraint_indexing:constraint_classification(swift_piton_snap, rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(mobile),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(swift_piton_snap, scaffold,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SCAFFOLD)
 % The analytical view recognizes the coordination function, the temporary nature (sunset clause),
 % and the low extraction, classifying it as a Scaffold.
-constraint_indexing:constraint_classification(swift_piton_snap, scaffold,
+constraint_indexing:constraint_classification(swift_piton_snap, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

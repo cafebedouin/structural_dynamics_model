@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(trade_secret_law, departing_employees_and_w
 % base extraction (0.48) and suppression (0.65) combined with their trapped
 % status (high legal costs, career risk) creates a coercive environment where
 % their options are severely limited. The engine derives d≈0.95, leading to high χ.
-constraint_indexing:constraint_classification(trade_secret_law, snare,
+constraint_indexing:constraint_classification(trade_secret_law, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(trade_secret_law, rope,
 
 test(perspectival_gap) :-
     % Verify the core perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(trade_secret_law, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(trade_secret_law, tangled_rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(trade_secret_law, rope, context(agent_power(institutional), _, arbitrage, _)),
     constraint_indexing:constraint_classification(trade_secret_law, tangled_rope, context(agent_power(analytical), _, _, _)).
 

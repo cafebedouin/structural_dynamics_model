@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(framing_effect, consumers_and_voters).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the individual, a deceptive frame is a Snare. It extracts their wealth or
 % autonomy by manipulating their intuitive judgments.
-constraint_indexing:constraint_classification(framing_effect, snare,
+constraint_indexing:constraint_classification(framing_effect, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(framing_effect, tangled_rope,
 
 test(perspectival_gap_snare_to_rope) :-
     % Verify the gap between the powerless (Snare) and institutional (Rope) views.
-    constraint_indexing:constraint_classification(framing_effect, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(framing_effect, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(framing_effect, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_view_is_tangled_rope) :-

@@ -101,7 +101,7 @@ narrative_ontology:constraint_victim(factional_instability, debtor_class).
 % The debtor class, whose political power is curtailed by the system.
 % They feel the full extractive force (χ = 0.7 * 1.5 * 1.0 = 1.05), viewing
 % the constitutional structure as a trap preventing economic relief.
-constraint_indexing:constraint_classification(factional_instability, snare,
+constraint_indexing:constraint_classification(factional_instability, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

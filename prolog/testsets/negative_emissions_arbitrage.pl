@@ -83,7 +83,7 @@ narrative_ontology:constraint_victim(negative_emissions_arbitrage, high_intensit
 % PERSPECTIVE 1: THE LEGACY EMITTER (SNARE)
 % For firms that cannot decarbonize to absolute-zero, the mandatory purchase
 % of "equivalent removals" is a Snare, extracting profit to fund another sector.
-constraint_indexing:constraint_classification(negative_emissions_arbitrage, snare,
+constraint_indexing:constraint_classification(negative_emissions_arbitrage, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(negative_emissions_arbitrage, tang
 
 test(perspectival_gap) :-
     % Verify the gap between the emitter (Snare), provider (Rope), and analyst (Tangled Rope).
-    constraint_indexing:constraint_classification(negative_emissions_arbitrage, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(negative_emissions_arbitrage, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(negative_emissions_arbitrage, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(negative_emissions_arbitrage, tangled_rope, context(agent_power(analytical), _, _, _)).
 

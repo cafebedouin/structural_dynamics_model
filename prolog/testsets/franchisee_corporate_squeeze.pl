@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(franchisee_corporate_squeeze, franchisees).
 % PERSPECTIVE 1: THE PRIMARY TARGET (FRANCHISEE)
 % Agent who bears the most extraction. In this case, not fully powerless,
 % but heavily constrained by the agreement.
-constraint_indexing:constraint_classification(franchisee_corporate_squeeze, snare,
+constraint_indexing:constraint_classification(franchisee_corporate_squeeze, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(franchisee_corporate_squeeze, tang
 % Indirectly affected by the constraint, experiencing the coordination function
 % (brand consistency) without direct extraction. This satisfies the linter
 % requirement for a powerless perspective.
-constraint_indexing:constraint_classification(franchisee_corporate_squeeze, rope,
+constraint_indexing:constraint_classification(franchisee_corporate_squeeze, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(mobile),

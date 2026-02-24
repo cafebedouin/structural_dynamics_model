@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(procedural_legitimacy_decay, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The observer sees both the coordination claim and the asymmetric extraction,
 % classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(procedural_legitimacy_decay, tangled_rope,
+constraint_indexing:constraint_classification(procedural_legitimacy_decay, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(procedural_legitimacy_decay, tangl
 % A different analytical perspective, focused on function vs performance,
 % sees the extreme theater ratio (0.88) and classifies it as a Piton—an
 % inertial, non-functional process maintained for show.
-constraint_indexing:constraint_classification(procedural_legitimacy_decay, piton,
+constraint_indexing:constraint_classification(procedural_legitimacy_decay, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),

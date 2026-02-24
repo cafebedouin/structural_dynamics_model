@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(tragedy_of_the_commons, future_generations)
 % Forced by the structure to participate in the destruction of the very resource
 % they rely on. Failing to add another animal guarantees starvation today, while
 % adding one only slightly hastens eventual starvation for all.
-constraint_indexing:constraint_classification(tragedy_of_the_commons, snare,
+constraint_indexing:constraint_classification(tragedy_of_the_commons, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

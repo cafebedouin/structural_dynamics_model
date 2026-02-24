@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(cultural_memory_decay, rope,
 % The default analytical context reveals the hybrid nature: a genuine coordination
 % function (beneficiary exists) coupled with high, asymmetric extraction (victim exists)
 % and active enforcement. This is the canonical Tangled Rope signature.
-constraint_indexing:constraint_classification(cultural_memory_decay, tangled_rope,
+constraint_indexing:constraint_classification(cultural_memory_decay, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -135,7 +135,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(cultural_memory_decay, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(cultural_memory_decay, tangled_rope,
+    constraint_indexing:constraint_classification(cultural_memory_decay, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_audit_logic) :-

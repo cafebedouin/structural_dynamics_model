@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(dsa_transparency_requirements, vloops_like_
 % As a victim with constrained exit, the derived d is high, pushing χ above
 % the snare threshold. The coordination benefit is invisible from this
 % perspective, which sees only coercive extraction of resources and data.
-constraint_indexing:constraint_classification(dsa_transparency_requirements, snare,
+constraint_indexing:constraint_classification(dsa_transparency_requirements, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(dsa_transparency_requirements, rop
 % They experience the law's effects indirectly. Their power is low, and they
 % are essentially trapped within the digital ecosystem governed by these rules.
 % They perceive it as a protective rope.
-constraint_indexing:constraint_classification(dsa_transparency_requirements, rope,
+constraint_indexing:constraint_classification(dsa_transparency_requirements, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(dsa_transparency_requirements, rop
 % The analyst sees both the genuine coordination function (benefiting users)
 % and the high, asymmetric extraction imposed on platforms. This dual nature
 % is the definition of a Tangled Rope. This is the canonical classification.
-constraint_indexing:constraint_classification(dsa_transparency_requirements, tangled_rope,
+constraint_indexing:constraint_classification(dsa_transparency_requirements, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -169,7 +169,7 @@ test(perspectival_gap_inter_institutional, [nondet]) :-
     TypeTarget \= TypeBeneficiary.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(dsa_transparency_requirements, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(dsa_transparency_requirements, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A constraint is only a Tangled Rope if it has all three structural markers.

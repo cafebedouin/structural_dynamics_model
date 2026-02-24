@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(womens_sizing_chaos, piton,
 % freedom is a form of coordination benefit for them.
 % Engine derives d from beneficiary + arbitrage exit -> d ≈ 0.05 -> f(d) ≈ -0.12,
 % resulting in negative extraction (a subsidy). This classifies as a Rope.
-constraint_indexing:constraint_classification(womens_sizing_chaos, rope,
+constraint_indexing:constraint_classification(womens_sizing_chaos, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(indo_russian_submarine_lease_2025,
 % intertwined with high asymmetric extraction (cost and dependency). This dual
 % nature is the hallmark of a Tangled Rope.
 % χ ≈ 0.65 * f(0.72) * σ(global) ≈ 0.65 * 1.15 * 1.2 ≈ 0.90
-constraint_indexing:constraint_classification(indo_russian_submarine_lease_2025, tangled_rope,
+constraint_indexing:constraint_classification(indo_russian_submarine_lease_2025, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(indo_russian_submarine_lease_2025,
 % d is derived higher than a pure beneficiary but lower than a pure victim.
 % Let's estimate d ~0.60, f(d) ~0.85
 % χ ≈ 0.65 * f(0.60) * σ(national) ≈ 0.65 * 0.85 * 1.0 ≈ 0.55
-constraint_indexing:constraint_classification(indo_russian_submarine_lease_2025, tangled_rope,
+constraint_indexing:constraint_classification(indo_russian_submarine_lease_2025, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

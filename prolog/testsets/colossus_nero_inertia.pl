@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(colossus_nero_inertia, roman_populace).
 % public funds for an autocrat's glory.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.48 * 1.42 * 1.0 (national scope) ≈ 0.68. This is ≥ 0.66, classifying as Snare.
-constraint_indexing:constraint_classification(colossus_nero_inertia, snare,
+constraint_indexing:constraint_classification(colossus_nero_inertia, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(colossus_nero_inertia, piton,
 
 test(perspectival_gap_target_beneficiary) :-
     % Verify the core perspectival gap between the populace and rulers.
-    constraint_indexing:constraint_classification(colossus_nero_inertia, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(colossus_nero_inertia, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(colossus_nero_inertia, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_view_is_tangled_rope) :-

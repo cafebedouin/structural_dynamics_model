@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(shobies_existential_commitment, individual_
 % For the uncommitted or fearful agent, this is a Snare. The requirement to
 % "stake everything" feels like total extraction, strangling their sense of
 % safety until they surrender their autonomy.
-constraint_indexing:constraint_classification(shobies_existential_commitment, snare,
+constraint_indexing:constraint_classification(shobies_existential_commitment, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

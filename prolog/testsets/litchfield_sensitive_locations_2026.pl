@@ -98,7 +98,7 @@ narrative_ontology:coordination_vitality(litchfield_sensitive_locations_2026, de
 % environment that traps children between educational needs and federal threat.
 % χ = 0.78 (ε) * 1.5 (π(powerless)) * 0.9 (σ(regional)) = 1.053. This high
 % effective extraction confirms the Snare classification.
-constraint_indexing:constraint_classification(litchfield_sensitive_locations_2026, snare,
+constraint_indexing:constraint_classification(litchfield_sensitive_locations_2026, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(litchfield_sensitive_locations_202
 % for national security, regardless of local proximity to schools.
 % χ = 0.78 (ε) * -0.2 (π(institutional)) * 1.0 (σ(national)) = -0.156. The
 % negative effective extraction indicates a perceived benefit, classifying as Rope.
-constraint_indexing:constraint_classification(litchfield_sensitive_locations_2026, rope,
+constraint_indexing:constraint_classification(litchfield_sensitive_locations_2026, piton,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(mobile),

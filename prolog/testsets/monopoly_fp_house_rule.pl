@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(monopoly_fp_house_rule, rope,
 % a pure coordination mechanism for their enjoyment. The engine derives a
 % very low directionality (d), resulting in low or negative effective
 % extraction (χ), yielding a Rope classification.
-constraint_indexing:constraint_classification(monopoly_fp_house_rule, rope,
+constraint_indexing:constraint_classification(monopoly_fp_house_rule, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(monopoly_fp_house_rule, rope,
 % extractiveness, the effective extraction χ crosses the Snare threshold (≥0.66).
 % The coordination function is seen as secondary to the rule's primary effect:
 % distorting the game's economic model.
-constraint_indexing:constraint_classification(monopoly_fp_house_rule, snare,
+constraint_indexing:constraint_classification(monopoly_fp_house_rule, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

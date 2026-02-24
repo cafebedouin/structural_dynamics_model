@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(abstraction_leakage, application_developer)
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The developer is trapped: they cannot fix the leak (it's in the provider's
 % black box), but they are responsible for the resulting downtime.
-constraint_indexing:constraint_classification(abstraction_leakage, snare,
+constraint_indexing:constraint_classification(abstraction_leakage, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(abstraction_leakage, tangled_rope,
 
 test(perspectival_gap_subject_beneficiary) :-
     % Verify the Snare vs Rope conflict for the powerless and institutional indices.
-    constraint_indexing:constraint_classification(abstraction_leakage, snare,
+    constraint_indexing:constraint_classification(abstraction_leakage, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(abstraction_leakage, rope,
         context(agent_power(institutional), _, _, _)).

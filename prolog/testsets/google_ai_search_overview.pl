@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(google_ai_search_overview, rope,
 % Default analytical context. Sees both the coordination function and the
 % asymmetric extraction. Required for Tangled Rope detection.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(google_ai_search_overview, tangled_rope,
+constraint_indexing:constraint_classification(google_ai_search_overview, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(google_ai_search_overview, tangled
 % Experiences convenience but loses source diversity and agency, becoming
 % dependent on a single, potentially flawed AI-generated answer.
 % Engine derives d from: victim membership + constrained exit -> high χ
-constraint_indexing:constraint_classification(google_ai_search_overview, snare,
+constraint_indexing:constraint_classification(google_ai_search_overview, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -169,7 +169,7 @@ test(perspectival_gap_beneficiary_victim, [nondet]) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical observer must see the full structure as a Tangled Rope.
-    constraint_indexing:constraint_classification(google_ai_search_overview, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(google_ai_search_overview, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % A Tangled Rope requires a beneficiary, a victim, and active enforcement.

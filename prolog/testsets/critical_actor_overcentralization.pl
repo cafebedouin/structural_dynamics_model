@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(critical_actor_overcentralization,
 % The default analytical view detects the hybrid nature: a genuine coordination
 % function (beneficiary exists) coupled with coercive, asymmetric extraction
 % (victim exists) that requires active enforcement.
-constraint_indexing:constraint_classification(critical_actor_overcentralization, tangled_rope,
+constraint_indexing:constraint_classification(critical_actor_overcentralization, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(critical_actor_overcentralization,
 % An auditor focused on functional integrity sees the extreme theater (0.93)
 % as the dominant feature. The "Risk Management" is performative, making the
 % constraint a Piton—an inertial spike whose original function is atrophied.
-constraint_indexing:constraint_classification(critical_actor_overcentralization, piton,
+constraint_indexing:constraint_classification(critical_actor_overcentralization, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),

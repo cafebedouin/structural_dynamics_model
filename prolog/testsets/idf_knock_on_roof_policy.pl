@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(idf_knock_on_roof_policy, rope,
 % Sees both the coordination function and the asymmetric extraction.
 % Calculation: χ = 0.55 * 1.15 * 1.2 (global scope) ≈ 0.76.
 % With ε=0.55, supp=0.85, and χ=0.76, this is a clear Tangled Rope.
-constraint_indexing:constraint_classification(idf_knock_on_roof_policy, tangled_rope,
+constraint_indexing:constraint_classification(idf_knock_on_roof_policy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

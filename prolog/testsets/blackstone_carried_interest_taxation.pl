@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(blackstone_carried_interest_taxation, us_ta
 % U.S. taxpayers who indirectly bear the cost through reduced public revenue.
 % They are trapped within the national tax system with no direct ability to
 % change this specific rule.
-constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, snare,
+constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(blackstone_carried_interest_taxati
 % actor but face immense structural resistance, making their exit options
 % 'constrained'. From this viewpoint, the rule is a Snare designed to extract
 % wealth and resist modification.
-constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, snare,
+constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

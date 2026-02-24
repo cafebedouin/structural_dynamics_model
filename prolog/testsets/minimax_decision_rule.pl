@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(minimax_decision_rule, mountain,
 % It allows them to coordinate a standard of security by assuming a worst-case
 % adversary, pulling the system toward a stable, defensible state. The
 % engine derives a negative chi (d≈0.05 -> f(d)≈-0.12), classifying this as Rope.
-constraint_indexing:constraint_classification(minimax_decision_rule, rope,
+constraint_indexing:constraint_classification(minimax_decision_rule, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

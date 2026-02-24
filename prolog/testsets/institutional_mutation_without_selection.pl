@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(institutional_mutation_without_sel
 % Detects high extraction (0.84) and suppression (0.76) masking as essential
 % coordination. The presence of beneficiaries, victims, and active enforcement
 % confirms the Tangled Rope classification.
-constraint_indexing:constraint_classification(institutional_mutation_without_selection, tangled_rope,
+constraint_indexing:constraint_classification(institutional_mutation_without_selection, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(institutional_mutation_without_sel
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.94) > 0.70 triggers Piton: the "Official Mission Statement"
 % is an inertial spike; it performatively signals a purpose that no longer exists.
-constraint_indexing:constraint_classification(institutional_mutation_without_selection, piton,
+constraint_indexing:constraint_classification(institutional_mutation_without_selection, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -136,12 +136,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(institutional_mutation_without_selection, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(institutional_mutation_without_selection, tangled_rope,
+    constraint_indexing:constraint_classification(institutional_mutation_without_selection, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.94) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(institutional_mutation_without_selection, piton,
+    constraint_indexing:constraint_classification(institutional_mutation_without_selection, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

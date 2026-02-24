@@ -91,7 +91,7 @@ narrative_ontology:coordination_type(labor_union_dues, resource_allocation).
 
 % PERSPECTIVE 1: THE RANK-AND-FILE WORKER
 % Low power, high d (victim), trapped exit (closed shop) -> High Chi -> Snare.
-constraint_indexing:constraint_classification(labor_union_dues, snare,
+constraint_indexing:constraint_classification(labor_union_dues, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(labor_union_dues, tangled_rope,
 :- begin_tests(labor_union_dues_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(labor_union_dues, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(labor_union_dues, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(labor_union_dues, rope, context(agent_power(institutional), _, _, _)).
 
 test(tangled_rope_gate) :-

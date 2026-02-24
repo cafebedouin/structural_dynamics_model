@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(oc_donation_model, rope,
 % This user experiences the system as a pure public good with zero extraction.
 % While a beneficiary, their powerless status and mobile exit leads to a
 % derived d ≈ 0.15 -> f(d) ≈ -0.01 -> near-zero χ. Also a Rope.
-constraint_indexing:constraint_classification(oc_donation_model, rope,
+constraint_indexing:constraint_classification(oc_donation_model, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(mobile),

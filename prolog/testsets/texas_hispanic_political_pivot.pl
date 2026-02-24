@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(tx_hispanic_pivot, rope,
 % (beneficiaries exist) but also imposes high, asymmetric extraction on a
 % specific group (victims exist) and requires active enforcement. This is the
 % canonical definition of a Tangled Rope.
-constraint_indexing:constraint_classification(tx_hispanic_pivot, tangled_rope,
+constraint_indexing:constraint_classification(tx_hispanic_pivot, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -140,7 +140,7 @@ test(perspectival_gap) :-
     TypeInstitutional == rope.
 
 test(analytical_observer_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(tx_hispanic_pivot, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(tx_hispanic_pivot, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),

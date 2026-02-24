@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, snare,
 % the need for careful budgeting is a temporary coordination tool (Rope).
 % They coordinate their current spending with future income. The cognitive load
 % is lower because an exit is visible and guaranteed.
-constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, rope,
+constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, rope,
 % intractable problem of poverty. It appears as a Mountain—a persistent,
 % systemic feature of the economic landscape that they must work around but
 % cannot easily change.
-constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, tangled_rope,
+constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, rope,
     context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(analytical),

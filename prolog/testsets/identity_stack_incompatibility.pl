@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(identity_stack_incompatibility, ro
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid signature of high coordination (Rope)
 % entangled with massive, deferred extraction (Snare).
-constraint_indexing:constraint_classification(identity_stack_incompatibility, tangled_rope,
+constraint_indexing:constraint_classification(identity_stack_incompatibility, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

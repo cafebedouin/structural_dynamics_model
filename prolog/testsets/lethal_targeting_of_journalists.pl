@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(lethal_targeting_of_journalists, global_new
 % Journalists on the ground experience this as a pure extraction of their safety
 % and ability to work. Engine derives d from victim + trapped exit -> high d -> high chi.
 % χ = 0.55 * f(d=0.95) * σ(regional=0.9) = 0.55 * 1.42 * 0.9 ≈ 0.70. This meets the Snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(lethal_targeting_of_journalists, snare,
+constraint_indexing:constraint_classification(lethal_targeting_of_journalists, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(lethal_targeting_of_journalists, s
 % The state actor sees this as an effective coordination mechanism for managing the
 % information environment. Engine derives d from beneficiary + arbitrage exit -> low d -> negative chi.
 % χ = 0.55 * f(d=0.05) * σ(national=1.0) = 0.55 * -0.12 * 1.0 ≈ -0.07. Negative chi is Rope.
-constraint_indexing:constraint_classification(lethal_targeting_of_journalists, rope,
+constraint_indexing:constraint_classification(lethal_targeting_of_journalists, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(lethal_targeting_of_journalists, r
 % Recognizes both the coercive coordination function (benefiting the state) and the
 % severe, asymmetric extraction (costing journalists their lives).
 % χ = 0.55 * f(d=0.73) * σ(global=1.2) = 0.55 * 1.15 * 1.2 ≈ 0.76. This is in the Tangled Rope range [0.40, 0.90].
-constraint_indexing:constraint_classification(lethal_targeting_of_journalists, tangled_rope,
+constraint_indexing:constraint_classification(lethal_targeting_of_journalists, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -168,7 +168,7 @@ test(perspectival_gap_target_beneficiary) :-
     format('... Perspectival gap validated: Target (Snare) vs Beneficiary (Rope)').
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(lethal_targeting_of_journalists, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(lethal_targeting_of_journalists, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(lethal_targeting_of_journalists, _),

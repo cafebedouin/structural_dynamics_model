@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(empty_tomb_transformation, the_static_ego).
 % For the individual unable to emerge, the cycle is a Snare. The "tomb of
 % transition" becomes a static trap where life has ended but rebirth has not
 % begun, extracting the agent's hope and agency.
-constraint_indexing:constraint_classification(empty_tomb_transformation, snare,
+constraint_indexing:constraint_classification(empty_tomb_transformation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -131,7 +131,7 @@ constraint_indexing:constraint_classification(empty_tomb_transformation, snare,
 % For the agent who successfully transitions, the cycle is a Rope. It is a
 % functional coordination mechanism for growth, allowing them to use past
 % "deaths" as a record of transformation that informs their new life.
-constraint_indexing:constraint_classification(empty_tomb_transformation, rope,
+constraint_indexing:constraint_classification(empty_tomb_transformation, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),

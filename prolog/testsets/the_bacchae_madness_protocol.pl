@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(the_bacchae_madness_protocol, rope
 % but as a fundamental force. To them, the mandate is a Mountain—an unchangeable
 % law of the cosmos. One does not fight it; one coordinates with it to avoid
 % being crushed. This is the system's final classification.
-constraint_indexing:constraint_classification(the_bacchae_madness_protocol, tangled_rope,
+constraint_indexing:constraint_classification(the_bacchae_madness_protocol, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

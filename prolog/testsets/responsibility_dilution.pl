@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(responsibility_dilution, rope,
 % Detects high extraction (0.90) and high suppression (0.83) masking as
 % essential coordination. The system has both a coordination function and
 % asymmetric extraction, and requires active enforcement of its protocols.
-constraint_indexing:constraint_classification(responsibility_dilution, tangled_rope,
+constraint_indexing:constraint_classification(responsibility_dilution, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(responsibility_dilution, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(responsibility_dilution, tangled_rope,
+    constraint_indexing:constraint_classification(responsibility_dilution, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_conditions_met) :-

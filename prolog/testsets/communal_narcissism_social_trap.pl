@@ -75,7 +75,7 @@ domain_priors:requires_active_enforcement(communal_narcissism_social_trap).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The Disciple perceives high extraction ($E=0.78$) as a trap.
-constraint_indexing:constraint_classification(communal_narcissism_social_trap, snare, 
+constraint_indexing:constraint_classification(communal_narcissism_social_trap, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -83,7 +83,7 @@ constraint_indexing:constraint_classification(communal_narcissism_social_trap, s
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The Saint views the structure as essential coordination for "The Greater Good."
-constraint_indexing:constraint_classification(communal_narcissism_social_trap, rope, 
+constraint_indexing:constraint_classification(communal_narcissism_social_trap, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 

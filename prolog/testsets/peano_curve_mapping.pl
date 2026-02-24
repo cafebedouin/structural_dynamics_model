@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
 % For the engineer, the space-filling curve is a "Rope"—a tool for functional
 % coordination. It allows them to "pull" 2D spatial data into a 1D
 % linear order for efficient indexing and range searches.
-constraint_indexing:constraint_classification(peano_curve_mapping, rope,
+constraint_indexing:constraint_classification(peano_curve_mapping, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(mobile),
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(peano_curve_mapping, rope,
 % of the coordination function. The curve trades perfect 1D locality for
 % manageable 2D locality. This is a Rope, as the cost is inherent to the
 % coordination benefit.
-constraint_indexing:constraint_classification(peano_curve_mapping, rope,
+constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -192,7 +192,7 @@ constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
 test(perspectival_gap) :-
     % Verify perspectival gap between the abstract point and the engineer using it.
     constraint_indexing:constraint_classification(peano_curve_mapping, mountain, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(peano_curve_mapping, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(peano_curve_mapping, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(locality_coordination_cost) :-
     % A powerless data sequence (constrained) sees the loss of locality as a

@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(tiktok_us_divestiture_mandate, us_tiktok_us
 % χ = 0.48 * 1.42 * 1.0 (national) ≈ 0.68. This exceeds the Snare threshold (χ ≥ 0.66).
 % The coordination benefit (national security) is abstract, while the extraction
 % of data/attention is immediate and tangible.
-constraint_indexing:constraint_classification(tiktok_us_divestiture_mandate, snare,
+constraint_indexing:constraint_classification(tiktok_us_divestiture_mandate, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(tiktok_us_divestiture_mandate, tan
 % It is not a pure snare for ByteDance because they receive compensation and
 % avoid a total loss, but it is a highly extractive, coercive arrangement. This
 % classifies correctly as a Tangled Rope.
-constraint_indexing:constraint_classification(tiktok_us_divestiture_mandate, tangled_rope,
+constraint_indexing:constraint_classification(tiktok_us_divestiture_mandate, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

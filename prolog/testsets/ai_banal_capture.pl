@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(ai_banal_capture, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The analyst sees both the coordination function (a genuine utility) and the
 % asymmetric extraction of value and cognitive autonomy.
-constraint_indexing:constraint_classification(ai_banal_capture, tangled_rope,
+constraint_indexing:constraint_classification(ai_banal_capture, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -134,7 +134,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(ai_banal_capture, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ai_banal_capture, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify all three structural properties for Tangled Rope are present.

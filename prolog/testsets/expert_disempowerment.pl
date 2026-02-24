@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(expert_disempowerment, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context reveals the hybrid nature: a coordination function
 % (standardization) coupled with high, asymmetric extraction (loss of agency).
-constraint_indexing:constraint_classification(expert_disempowerment, tangled_rope,
+constraint_indexing:constraint_classification(expert_disempowerment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(expert_disempowerment, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(expert_disempowerment, tangled_rope,
+    constraint_indexing:constraint_classification(expert_disempowerment, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger_logic) :-

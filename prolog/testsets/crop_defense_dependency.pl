@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(crop_defense_dependency, smallholder_farmer
 % The smallholder farmer is trapped by high input costs and lack of alternatives.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % χ = 0.60 * 1.42 * 1.0 (national scope) = 0.852. This is well into Snare territory (χ ≥ 0.66).
-constraint_indexing:constraint_classification(crop_defense_dependency, snare,
+constraint_indexing:constraint_classification(crop_defense_dependency, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(crop_defense_dependency, rope,
 % Engine derives d ≈ 0.73 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.60 * 1.15 * 1.2 (global scope) = 0.828. This χ falls within the Tangled Rope range (0.40 ≤ χ ≤ 0.90),
 % and the other conditions (ε ≥ 0.30, suppression ≥ 0.40) are met.
-constraint_indexing:constraint_classification(crop_defense_dependency, tangled_rope,
+constraint_indexing:constraint_classification(crop_defense_dependency, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -155,12 +155,12 @@ constraint_indexing:constraint_classification(crop_defense_dependency, tangled_r
 
 test(perspectival_gap_snare_vs_rope, [nondet]) :-
     % Verify the core perspectival gap between target (snare) and beneficiary (rope).
-    constraint_indexing:constraint_classification(crop_defense_dependency, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(crop_defense_dependency, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(crop_defense_dependency, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
     % Verify the analytical classification is Tangled Rope.
-    constraint_indexing:constraint_classification(crop_defense_dependency, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(crop_defense_dependency, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_conditions_met) :-
     % Verify that the structural conditions for a Tangled Rope are met.

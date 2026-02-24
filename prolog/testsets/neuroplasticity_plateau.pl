@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(neuroplasticity_plateau, mid_career_pivoter
 % PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
 % To the individual, the increased difficulty in mastering a new language or
 % complex skill in mid-life is an unchangeable biological limit.
-constraint_indexing:constraint_classification(neuroplasticity_plateau, mountain,
+constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(neuroplasticity_plateau, rope,
 % The analytical view recognizes the hybrid nature: a real biological limit
 % (Mountain-like) is used as a foundation for a coordinative but highly
 % extractive economic system (Tangled Rope).
-constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_rope,
+constraint_indexing:constraint_classification(neuroplasticity_plateau, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -122,20 +122,18 @@ constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_r
 
 test(perspectival_gap) :-
     % Verify the Mountain vs Rope conflict.
-    constraint_indexing:constraint_classification(neuroplasticity_plateau, mountain,
+    constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(neuroplasticity_plateau, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_rope,
+    constraint_indexing:constraint_classification(neuroplasticity_plateau, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical perspective resolves to Tangled Rope, indicating
     % successful Mandatrophy resolution.
-    constraint_indexing:constraint_classification(neuroplasticity_plateau, tangled_rope,
-        context(agent_power(analytical), _, _, _)).
-
-:- end_tests(neuroplasticity_plateau_tests).
+    con    constraint_indexing:constraint_classification(neuroplasticity_plateau, snare,
+        context(agent_power(analytical), _, _, _))nd_tests(neuroplasticity_plateau_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY

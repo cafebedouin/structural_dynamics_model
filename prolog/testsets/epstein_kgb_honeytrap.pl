@@ -81,7 +81,7 @@ domain_priors:requires_active_enforcement(epstein_honeytrap).
 
 % PERSPECTIVE 1: THE TARGET (SNARE)
 % The Associate (Subject) experiences the compromise as a predatory trap.
-constraint_indexing:constraint_classification(epstein_honeytrap, snare, 
+constraint_indexing:constraint_classification(epstein_honeytrap, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -89,7 +89,7 @@ constraint_indexing:constraint_classification(epstein_honeytrap, snare,
 
 % PERSPECTIVE 2: THE ARCHITECT (ROPE)
 % The Kremlin (Beneficiary) views this as essential geopolitical coordination.
-constraint_indexing:constraint_classification(epstein_honeytrap, rope, 
+constraint_indexing:constraint_classification(epstein_honeytrap, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -112,8 +112,8 @@ constraint_indexing:constraint_classification(epstein_honeytrap, piton,
 :- begin_tests(epstein_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(epstein_honeytrap, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(epstein_honeytrap, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(epstein_honeytrap, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(epstein_honeytrap, piton, context(agent_power(institutional), _, _, _)).
 
 test(extraction_critical) :-
     domain_priors:base_extractiveness(epstein_honeytrap, E), E > 0.90.

@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(minimax_theorem_game_equilibrium, weaker_pl
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(minimax_theorem_game_equilibrium, snare,
+constraint_indexing:constraint_classification(minimax_theorem_game_equilibrium, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

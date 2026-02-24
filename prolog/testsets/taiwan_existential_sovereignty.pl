@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(taiwan_existential_sovereignty, ro
 % The analyst sees both the coordination function and the severe asymmetric extraction.
 % This is the canonical classification, resolving the Rope/Snare paradox.
 % χ = 0.70 (ε) * 1.15 (π(analytical)) * 1.2 (σ(global)) = 0.966 (High Tangled Rope)
-constraint_indexing:constraint_classification(taiwan_existential_sovereignty, tangled_rope,
+constraint_indexing:constraint_classification(taiwan_existential_sovereignty, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(hypercompression_of_time_horizons,
 % value from stewards). The high suppression and need for enforcement
 % confirm the Tangled Rope classification. The high theater ratio (0.85) is a
 % symptom of the contradiction, not evidence of a non-functional Piton.
-constraint_indexing:constraint_classification(hypercompression_of_time_horizons, tangled_rope,
+constraint_indexing:constraint_classification(hypercompression_of_time_horizons, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hypercompression_of_time_horizons, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(hypercompression_of_time_horizons, tangled_rope,
+    constraint_indexing:constraint_classification(hypercompression_of_time_horizons, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structure) :-

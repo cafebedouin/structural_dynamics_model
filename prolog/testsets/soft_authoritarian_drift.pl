@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(soft_authoritarian_drift, rope,
 % Detects high extraction (0.84) and suppression (0.72) as a hybrid
 % Tangled Rope, where a genuine coordination function is coupled with
 % severe asymmetric extraction, requiring active enforcement.
-constraint_indexing:constraint_classification(soft_authoritarian_drift, tangled_rope,
+constraint_indexing:constraint_classification(soft_authoritarian_drift, snare,
     context(agent_power(analytical),
             time_horizon(civil_izational),
             exit_options(analytical),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(soft_authoritarian_drift, tangled_
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.89) > 0.70 triggers Piton: the "Democratic Processes"
 % are an inertial spike—they exist in form but no longer steer the outcome.
-constraint_indexing:constraint_classification(soft_authoritarian_drift, piton,
+constraint_indexing:constraint_classification(soft_authoritarian_drift, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -136,12 +136,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(soft_authoritarian_drift, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(soft_authoritarian_drift, tangled_rope,
+    constraint_indexing:constraint_classification(soft_authoritarian_drift, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.89) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(soft_authoritarian_drift, piton,
+    constraint_indexing:constraint_classification(soft_authoritarian_drift, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_conditions_met) :-

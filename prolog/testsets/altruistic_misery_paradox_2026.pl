@@ -86,7 +86,7 @@ narrative_ontology:topic_domain(altruistic_misery_paradox_2026, "social/psycholo
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the individual, the duty to "think of others" while being miserable is 
 % a snare: a trap of performative virtue with no biographical exit.
-constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, snare, 
+constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -95,7 +95,7 @@ constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, sn
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % For those who love the individual, the individual's happiness is a rope: 
 % it provides the psychological "rails" for a functional relationship.
-constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, rope, 
+constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -120,8 +120,8 @@ domain_priors:requires_active_enforcement(altruistic_misery_paradox_2026).
 
 test(perspectival_gap) :-
     % Subject feels a Snare; Institutional beneficiary needs a Rope.
-    constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater_ratio correctly triggers Piton classification.

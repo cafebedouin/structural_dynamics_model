@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(rosen_bridge_protocol, small_value_transact
 % For users moving small amounts (e.g., <$100), the $10 minimum fee is a Snare.
 % The high cost per transaction "strangles" their mobility across chains,
 % effectively trapping their capital on one network.
-constraint_indexing:constraint_classification(rosen_bridge_protocol, snare,
+constraint_indexing:constraint_classification(rosen_bridge_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

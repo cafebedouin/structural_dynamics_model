@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(global_food_market_fragility, low_income_co
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % This actor experiences the market as purely extractive during a crisis.
-constraint_indexing:constraint_classification(global_food_market_fragility, snare,
+constraint_indexing:constraint_classification(global_food_market_fragility, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(global_food_market_fragility, rope
 % Default analytical context. Sees both the coordination function and the
 % asymmetric, enforced extraction. This is the basis for the constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for this perspective.
-constraint_indexing:constraint_classification(global_food_market_fragility, tangled_rope,
+constraint_indexing:constraint_classification(global_food_market_fragility, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(global_food_market_fragility, tang
 % It sees the system's extractive failures, but must leverage its coordination
 % function. The `constrained` exit option results in a higher `d` than the
 % beneficiary's `arbitrage` exit, revealing the system's dual nature.
-constraint_indexing:constraint_classification(global_food_market_fragility, tangled_rope,
+constraint_indexing:constraint_classification(global_food_market_fragility, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -180,7 +180,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical perspective correctly identifies the mixed nature of the constraint.
-    constraint_indexing:constraint_classification(global_food_market_fragility, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(global_food_market_fragility, snare, context(agent_power(analytical), _, _, _)),
     format('Passed: Analytical perspective correctly classifies as Tangled Rope.~n').
 
 test(tangled_rope_structural_requirements) :-

@@ -86,7 +86,7 @@ narrative_ontology:constraint_victim(mil_std_810f_tailoring, defense_contractors
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the test lab engineer, the standard is a rigid set of demands that extract
 % time and resources, with failure leading to costly re-testing loops.
-constraint_indexing:constraint_classification(mil_std_810f_tailoring, snare,
+constraint_indexing:constraint_classification(mil_std_810f_tailoring, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

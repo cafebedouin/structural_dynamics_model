@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(cognitive_hacking_2026, rope,
 % both a coordination function (beneficiary view) and severe asymmetric
 % extraction (subject view). It requires active enforcement to maintain.
 % χ = 0.72 * π(analytical:1.15) * σ(global:1.2) = 0.9936
-constraint_indexing:constraint_classification(cognitive_hacking_2026, tangled_rope,
+constraint_indexing:constraint_classification(cognitive_hacking_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(cognitive_hacking_2026, tangled_ro
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(cognitive_hacking_2026, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(cognitive_hacking_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(cognitive_hacking_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cognitive_hacking_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify all three conditions for Tangled Rope are met.

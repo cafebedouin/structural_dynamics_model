@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(us_venezuela_plausible_deniability
 % genuine coordination function with high extraction and active enforcement
 % is the definition of a Tangled Rope.
 % Engine derives d ≈ 0.72, and σ(global)=1.2 amplifies χ.
-constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, tangled_rope,
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(us_venezuela_plausible_deniability
 % power to hold their government accountable. Their exit is constrained by
 % classified information. From this view, it is also a highly extractive constraint.
 % Engine derives d from victim status + constrained exit -> high d -> high chi.
-constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, tangled_rope,
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare,
     context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
@@ -179,7 +179,7 @@ test(perspectival_gap_is_snare_vs_rope) :-
     constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     narrative_ontology:constraint_beneficiary(us_venezuela_plausible_deniability_2025, _),

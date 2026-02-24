@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(dead_sea_effect, rope,
 % For those who cannot leave, the increasing "salinity" is a 'Snare'.
 % As talent leaves, workload and institutional decay accelerate. They are
 % trapped in a failing system with a declining career path.
-constraint_indexing:constraint_classification(dead_sea_effect, snare,
+constraint_indexing:constraint_classification(dead_sea_effect, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(dead_sea_effect, snare,
 % the remaining pool as a sign of loyalty), the effect is a 'Mountain'. They
 % perceive talent attrition as a natural, unchangeable law of business,
 % failing to see it as a symptom of a preventable systemic failure.
-constraint_indexing:constraint_classification(dead_sea_effect, mountain,
+constraint_indexing:constraint_classification(dead_sea_effect, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(analytical),
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(dead_sea_effect, mountain,
 % trapped members and the institution itself, benefiting external competitors.
 % It lacks a true coordination function and is not temporary, classifying it
 % as a constructed Snare resulting from poor policy.
-constraint_indexing:constraint_classification(dead_sea_effect, snare,
+constraint_indexing:constraint_classification(dead_sea_effect, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

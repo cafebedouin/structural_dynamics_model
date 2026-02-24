@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(sludge_bureaucratic_friction, rope
 % The analyst sees both functions: a genuine coordination goal (managing a
 % program) intertwined with asymmetric extraction (cost-shifting onto the
 % most vulnerable). It requires active enforcement to maintain this balance.
-constraint_indexing:constraint_classification(sludge_bureaucratic_friction, tangled_rope,
+constraint_indexing:constraint_classification(sludge_bureaucratic_friction, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -126,7 +126,7 @@ test(perspectival_gap) :-
     assertion(TypePowerless \= TypeInstitutional).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(sludge_bureaucratic_friction, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(sludge_bureaucratic_friction, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_for_high_extraction) :-
     narrative_ontology:constraint_metric(sludge_bureaucratic_friction, extractiveness, E),

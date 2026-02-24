@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(israel_override_clause, rope,
 % but does so by extracting the fundamental "checks and balances" required
 % for long-term democratic stability.
 % χ = 0.75 (ε) * 1.15 (π(analytical)) * 1.0 (σ(national)) = 0.8625.
-constraint_indexing:constraint_classification(israel_override_clause, tangled_rope,
+constraint_indexing:constraint_classification(israel_override_clause, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -141,7 +141,7 @@ test(perspectival_gap) :-
     % Verify it is a Rope for institutions but a Snare for the powerless.
     constraint_indexing:constraint_classification(israel_override_clause, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(israel_override_clause, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(israel_override_clause, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(israel_override_clause, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify that the high extraction value is consistent with a Snare/Tangled Rope classification.

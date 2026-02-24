@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(fb_creator_monetization_indonesia,
 % With ε=0.68, suppression=0.75, and a valid coordination function (beneficiary declared),
 % this meets the Tangled Rope criteria (0.40 ≤ χ ≤ 0.90 is a soft guide; the structural gates matter more).
 % The high χ value pushes it to the upper bound, reflecting its highly extractive nature.
-constraint_indexing:constraint_classification(fb_creator_monetization_indonesia, tangled_rope,
+constraint_indexing:constraint_classification(fb_creator_monetization_indonesia, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -152,7 +152,7 @@ test(perspectival_gap_creator_vs_platform) :-
     constraint_indexing:constraint_classification(fb_creator_monetization_indonesia, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(fb_creator_monetization_indonesia, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(fb_creator_monetization_indonesia, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_met) :-
     % Verify that the structural requirements for a Tangled Rope are present.

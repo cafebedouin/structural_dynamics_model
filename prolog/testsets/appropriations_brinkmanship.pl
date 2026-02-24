@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(appropriations_brinkmanship, rope,
 % and the parasitic, extractive rider (policy concessions under duress). This
 % dual nature is the hallmark of a Tangled Rope.
 % Engine derives d ≈ 0.72 -> f(d) ≈ 1.15
-constraint_indexing:constraint_classification(appropriations_brinkmanship, tangled_rope,
+constraint_indexing:constraint_classification(appropriations_brinkmanship, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(appropriations_brinkmanship, tangl
 % target of the extraction and their exit is constrained. They cannot simply
 % walk away without causing the shutdown they are trying to avoid.
 % Engine derives: victim + constrained exit -> d ≈ 0.7-0.8 -> high χ
-constraint_indexing:constraint_classification(appropriations_brinkmanship, tangled_rope,
+constraint_indexing:constraint_classification(appropriations_brinkmanship, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

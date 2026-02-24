@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(wpl_scotland, low_income_shift_workers).
 % A low-income worker with no public transport options for their shift times.
 % Engine derives d from: victim membership + trapped exit → d≈0.95 → f(d)≈1.42
 % χ = 0.52 * 1.42 * σ(regional=0.9) ≈ 0.664. This exceeds the Snare threshold (χ≥0.66).
-constraint_indexing:constraint_classification(wpl_scotland, snare,
+constraint_indexing:constraint_classification(wpl_scotland, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(wpl_scotland, rope,
 % χ = 0.52 * 1.15 * σ(global=1.2) ≈ 0.718. This χ is in the Tangled Rope
 % range (0.40 ≤ χ ≤ 0.90), and the constraint has the required structural
 % properties (coordination and extraction).
-constraint_indexing:constraint_classification(wpl_scotland, tangled_rope,
+constraint_indexing:constraint_classification(wpl_scotland, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -164,7 +164,7 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(wpl_scotland, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_classification_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(wpl_scotland, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(wpl_scotland, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_conditions_met) :-
     % Verify all three structural conditions for a Tangled Rope are present.

@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(challenger_o_ring_integrity, rope,
 % From the perspective of the physical components, the relationship between
 % temperature and material elasticity is an immutable 'Mountain'. Below a certain
 % temperature, the O-rings will fail. This is a non-negotiable law of physics.
-constraint_indexing:constraint_classification(challenger_o_ring_integrity, tangled_rope,
+constraint_indexing:constraint_classification(challenger_o_ring_integrity, snare,
     context(agent_power(analytical),
             time_horizon(immediate),
             exit_options(trapped),

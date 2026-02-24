@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(dunbars_number, mountain,
 % For a founder structuring an organization, the number is a Rope. It is a
 % vital coordination mechanism. Knowing that culture breaks down past ~150
 % people allows them to proactively split teams to maintain trust and efficiency.
-constraint_indexing:constraint_classification(dunbars_number, rope,
+constraint_indexing:constraint_classification(dunbars_number, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -173,7 +173,7 @@ test(perspectival_gap_mountain_vs_rope) :-
     % Verify the gap between the analytical/powerless view and the institutional view.
     constraint_indexing:constraint_classification(dunbars_number, mountain, context(agent_power(analytical), _, _, _)),
     constraint_indexing:constraint_classification(dunbars_number, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(dunbars_number, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(dunbars_number, mountain, context(agent_power(institutional), _, _, _)).
 
 test(mountain_threshold_adherence) :-
     % Verify that the base metrics are consistent with a Mountain classification.

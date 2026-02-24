@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(finite_pool_of_worry, rope,
 % To the scientist, the finite pool is a "Mountain"—an immutable law of human
 % evolutionary psychology. We cannot escape the fact that our cognitive bandwidth
 % is finite and redirected by immediate, high-volume threats.
-constraint_indexing:constraint_classification(finite_pool_of_worry, tangled_rope,
+constraint_indexing:constraint_classification(finite_pool_of_worry, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

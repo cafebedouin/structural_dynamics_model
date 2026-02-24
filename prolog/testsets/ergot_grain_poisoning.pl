@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(ergot_grain_poisoning, rope,
 % The historian sees both the coordination function (avoiding mass famine) and
 % the brutal, asymmetric extraction. It requires active enforcement (selling bad
 % grain) and has clear victims and beneficiaries. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(ergot_grain_poisoning, tangled_rope,
+constraint_indexing:constraint_classification(ergot_grain_poisoning, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

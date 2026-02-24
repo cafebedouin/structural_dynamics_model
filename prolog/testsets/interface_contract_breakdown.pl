@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(interface_contract_breakdown, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The analytical observer sees both the coordination function and the asymmetric
 % extraction, classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(interface_contract_breakdown, tangled_rope,
+constraint_indexing:constraint_classification(interface_contract_breakdown, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(interface_contract_breakdown, tang
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.86) > 0.70 triggers Piton: the "Changelog" is an
 % inertial spike; it performatively signals order while 0.83 extraction occurs.
-constraint_indexing:constraint_classification(interface_contract_breakdown, piton,
+constraint_indexing:constraint_classification(interface_contract_breakdown, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),

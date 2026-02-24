@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(fitts_law_industrial_application, repetitiv
 % PERSPECTIVE 1: THE REPETITIVE TASK WORKER (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(fitts_law_industrial_application, snare,
+constraint_indexing:constraint_classification(fitts_law_industrial_application, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(fitts_law_industrial_application, 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context. Sees both the coordination function (Rope for
 % designers) and the severe extraction (Snare for workers).
-constraint_indexing:constraint_classification(fitts_law_industrial_application, tangled_rope,
+constraint_indexing:constraint_classification(fitts_law_industrial_application, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(fitts_law_industrial_application, 
 
 test(perspectival_gap_target_vs_beneficiary) :-
     % Verify the worker sees a Snare while the designer sees a Rope.
-    constraint_indexing:constraint_classification(fitts_law_industrial_application, snare,
+    constraint_indexing:constraint_classification(fitts_law_industrial_application, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(fitts_law_industrial_application, rope,
         context(agent_power(institutional), _, _, _)).

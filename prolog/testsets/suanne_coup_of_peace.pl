@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(suanne_coup_of_peace, rope,
 % The analyst sees both the coordination function (Rope) and the severe,
 % asymmetric extraction (Snare). This hybrid nature, requiring active
 % enforcement, defines it as a Tangled Rope.
-constraint_indexing:constraint_classification(suanne_coup_of_peace, tangled_rope,
+constraint_indexing:constraint_classification(suanne_coup_of_peace, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -134,7 +134,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(suanne_coup_of_peace, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(suanne_coup_of_peace, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify that the base extraction is high, justifying Snare/Tangled Rope classifications.

@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(global_water_bankruptcy, rope,
 % PERSPECTIVE 3: THE HYDROLOGICAL SCIENTIST (TANGLED ROPE)
 % Detects how policy "milestones" act as coordination (Rope) while
 % failing to stop the deep, asymmetric extraction of the bankruptcy itself.
-constraint_indexing:constraint_classification(global_water_bankruptcy, tangled_rope,
+constraint_indexing:constraint_classification(global_water_bankruptcy, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -128,7 +128,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical observer must classify this as a tangled_rope, resolving the gap.
-    constraint_indexing:constraint_classification(global_water_bankruptcy, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(global_water_bankruptcy, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties_are_met) :-
     % Verify the structural requirements for a Tangled Rope are declared.

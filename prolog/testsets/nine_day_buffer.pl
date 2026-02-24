@@ -86,7 +86,7 @@ narrative_ontology:constraint_victim(nine_day_buffer, urban_populations).
 % For the powerless, the buffer is a trap; they cannot exit the city or 
 % the supply chain without starvation.
 % χ = 0.52 * π(powerless, 1.5) * σ(regional, 0.9) = 0.702
-constraint_indexing:constraint_classification(nine_day_buffer, snare, 
+constraint_indexing:constraint_classification(nine_day_buffer, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(immediate), 
             exit_options(trapped), 
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(nine_day_buffer, rope,
 % Detects that the coordination (Rope) is inextricably tied to the 
 % extraction of safety margins for capital efficiency (Snare).
 % χ = 0.52 * π(analytical, 1.15) * σ(global, 1.2) = 0.7176
-constraint_indexing:constraint_classification(nine_day_buffer, tangled_rope, 
+constraint_indexing:constraint_classification(nine_day_buffer, snare, 
     context(agent_power(analytical), 
             time_horizon(historical), 
             exit_options(analytical), 
@@ -136,7 +136,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_conditions_met) :-
     % Verify that the analytical observer sees a tangled_rope
-    constraint_indexing:constraint_classification(nine_day_buffer, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(nine_day_buffer, snare, context(agent_power(analytical), _, _, _)),
     % And that the structural conditions are met
     domain_priors:requires_active_enforcement(nine_day_buffer),
     narrative_ontology:constraint_beneficiary(nine_day_buffer, _),

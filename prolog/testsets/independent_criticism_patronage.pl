@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(independent_criticism_patronage, aspiring_c
 % Sees a highly extractive system with high barriers to entry and low
 % probability of success. The lack of alternatives makes it a trap.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(independent_criticism_patronage, snare,
+constraint_indexing:constraint_classification(independent_criticism_patronage, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

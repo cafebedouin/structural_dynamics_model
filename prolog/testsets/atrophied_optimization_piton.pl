@@ -81,7 +81,7 @@ narrative_ontology:coordination_vitality(atrophied_optimization_piton, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The user is trapped in behavioral patterns that no longer serve even the 
 % original machine goal, let alone their own.
-constraint_indexing:constraint_classification(atrophied_optimization_piton, snare, 
+constraint_indexing:constraint_classification(atrophied_optimization_piton, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -90,7 +90,7 @@ constraint_indexing:constraint_classification(atrophied_optimization_piton, snar
 % PERSPECTIVE 2: THE INSTITUTION (ROPE)
 % To the management, the rituals are a Rope—they provide the "predictability" 
 % and "order" required for institutional stability.
-constraint_indexing:constraint_classification(atrophied_optimization_piton, rope, 
+constraint_indexing:constraint_classification(atrophied_optimization_piton, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 

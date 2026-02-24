@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(irreversible_policy_commitment, ro
 % The auditor recognizes both the coordination function (beneficiaries exist)
 % and the severe asymmetric extraction (victims exist), alongside the need for
 % active enforcement. This hybrid nature is classified as a Tangled Rope.
-constraint_indexing:constraint_classification(irreversible_policy_commitment, tangled_rope,
+constraint_indexing:constraint_classification(irreversible_policy_commitment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,7 +128,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(irreversible_policy_commitment, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(irreversible_policy_commitment, tangled_rope,
+    constraint_indexing:constraint_classification(irreversible_policy_commitment, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

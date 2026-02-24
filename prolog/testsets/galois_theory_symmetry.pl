@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(galois_theory_symmetry, mountain,
 % allows them to "climb" from the low-level data of coefficients to the
 % high-level structure of groups, making intractable problems solvable by
 % switching representations.
-constraint_indexing:constraint_classification(galois_theory_symmetry, rope,
+constraint_indexing:constraint_classification(galois_theory_symmetry, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -177,7 +177,7 @@ constraint_indexing:constraint_classification(galois_theory_symmetry, mountain,
 % verifying that link extracts immense cognitive energy and can feel like a
 % coercive barrier to understanding. This is a metaphorical classification
 % reflecting the high cognitive cost imposed on a constrained agent.
-constraint_indexing:constraint_classification(galois_theory_symmetry, snare,
+constraint_indexing:constraint_classification(galois_theory_symmetry, scaffold,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -192,7 +192,7 @@ constraint_indexing:constraint_classification(galois_theory_symmetry, snare,
 test(perspectival_gap_mountain_to_rope) :-
     % Verify the gap between the powerless (roots) and institutional (expert) views.
     constraint_indexing:constraint_classification(galois_theory_symmetry, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(galois_theory_symmetry, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(galois_theory_symmetry, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(student_frustration_snare) :-
     % A moderate power agent in a constrained/biographical context sees the abstraction as a Snare.

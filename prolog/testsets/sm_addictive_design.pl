@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(sm_addictive_design, snare,
 %   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
 % From this view, the "extractive" features are simply effective tools for
 % user retention, making the platform a highly efficient coordination Rope.
-constraint_indexing:constraint_classification(sm_addictive_design, rope,
+constraint_indexing:constraint_classification(sm_addictive_design, snare,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(sm_addictive_design, rope,
 % Default analytical context. Sees both the coordination function and the
 % asymmetric extraction. With high ε, high suppression, and a beneficiary/victim
 % pair, the system is correctly identified as a Tangled Rope.
-constraint_indexing:constraint_classification(sm_addictive_design, tangled_rope,
+constraint_indexing:constraint_classification(sm_addictive_design, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(sm_addictive_design, tangled_rope,
 % law. The default derivation would incorrectly classify it as a beneficiary.
 % We use a directionality override to model its adversarial stance, aligning it
 % with the interests of the victims it seeks to represent.
-constraint_indexing:constraint_classification(sm_addictive_design, tangled_rope,
+constraint_indexing:constraint_classification(sm_addictive_design, snare,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

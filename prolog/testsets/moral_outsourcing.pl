@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(moral_outsourcing, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.84) and suppression (0.76) masking as coordination.
 % The presence of beneficiaries, victims, and active enforcement confirms Tangled Rope.
-constraint_indexing:constraint_classification(moral_outsourcing, tangled_rope,
+constraint_indexing:constraint_classification(moral_outsourcing, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),

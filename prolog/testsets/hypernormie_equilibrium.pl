@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(hypernormie_equilibrium, rope,
 % Detects high extraction (0.86) and suppression (0.74) alongside a genuine
 % coordination function (for platforms) and asymmetric extraction (from creators).
 % This is the canonical signature of a Tangled Rope.
-constraint_indexing:constraint_classification(hypernormie_equilibrium, tangled_rope,
+constraint_indexing:constraint_classification(hypernormie_equilibrium, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

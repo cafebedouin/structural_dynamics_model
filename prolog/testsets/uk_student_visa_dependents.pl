@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(uk_student_visa_dependents, uk_universities
 % An international student on a taught master's course experiences this policy
 % as a pure coercive barrier. The high suppression and extraction make it a Snare,
 % forcing a painful choice between education and family life.
-constraint_indexing:constraint_classification(uk_student_visa_dependents, snare,
+constraint_indexing:constraint_classification(uk_student_visa_dependents, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(uk_student_visa_dependents, rope,
 % The analyst sees both the valid coordination function (a state's right to
 % control its borders) and the significant, asymmetrically imposed costs.
 % This dual nature is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(uk_student_visa_dependents, tangled_rope,
+constraint_indexing:constraint_classification(uk_student_visa_dependents, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(uk_student_visa_dependents, tangle
 % They perceive the high extraction (loss of revenue, talent) and coercion,
 % while understanding the government's stated rationale. This classifies as a
 % Tangled Rope, but with a higher effective extraction than the government sees.
-constraint_indexing:constraint_classification(uk_student_visa_dependents, tangled_rope,
+constraint_indexing:constraint_classification(uk_student_visa_dependents, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

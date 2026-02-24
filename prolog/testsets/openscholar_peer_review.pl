@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(openscholar_peer_review, snare,
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % Viewed as essential infrastructure or coordination.
-constraint_indexing:constraint_classification(openscholar_peer_review, rope,
+constraint_indexing:constraint_classification(openscholar_peer_review, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(openscholar_peer_review, rope,
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
 % Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
-constraint_indexing:constraint_classification(openscholar_peer_review, tangled_rope,
+constraint_indexing:constraint_classification(openscholar_peer_review, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

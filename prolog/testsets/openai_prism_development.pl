@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(openai_prism_development, government_regula
 % extracts value from the public data they also rely on.
 % Engine derives: victim + trapped -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ
 % χ = 0.55 * 1.42 * 1.2 (global scope) ≈ 0.94
-constraint_indexing:constraint_classification(openai_prism_development, snare,
+constraint_indexing:constraint_classification(openai_prism_development, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(openai_prism_development, rope,
 % This dual nature is the hallmark of a Tangled Rope.
 % Engine derives: analytical -> d ≈ 0.73 -> f(d) ≈ 1.15
 % χ = 0.55 * 1.15 * 1.2 ≈ 0.76
-constraint_indexing:constraint_classification(openai_prism_development, tangled_rope,
+constraint_indexing:constraint_classification(openai_prism_development, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(openai_prism_development, tangled_
 % The engine derives a 'd' value between the beneficiary and the trapped target.
 % Engine derives: victim + institutional power + constrained exit -> d ≈ 0.65 -> f(d) ≈ 1.0
 % χ = 0.55 * 1.0 * 1.1 (continental scope, e.g., EU AI Act) ≈ 0.61
-constraint_indexing:constraint_classification(openai_prism_development, tangled_rope,
+constraint_indexing:constraint_classification(openai_prism_development, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -183,7 +183,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical observer must correctly identify the mixed nature of the constraint.
-    constraint_indexing:constraint_classification(openai_prism_development, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(openai_prism_development, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify that the structural data required for Tangled Rope classification exists.

@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(civilizational_lifecycle_solara, r
 % The analytical observer sees the full picture: a system that still has
 % some coordination function (it runs, barely) but is overwhelmingly
 % extractive and coercive. This matches the constraint_claim.
-constraint_indexing:constraint_classification(civilizational_lifecycle_solara, tangled_rope,
+constraint_indexing:constraint_classification(civilizational_lifecycle_solara, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap_deep) :-
     % Verify the massive gap between the Dissident (Snare) and the High Council (Rope).
     constraint_indexing:constraint_classification(civilizational_lifecycle_solara, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(civilizational_lifecycle_solara, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(civilizational_lifecycle_solara, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(civilizational_lifecycle_solara, snare, context(agent_power(analytical), _, _, _)).
 
 test(end_state_is_high_extraction) :-
     narrative_ontology:constraint_metric(civilizational_lifecycle_solara, extractiveness, E),

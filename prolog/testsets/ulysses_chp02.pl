@@ -85,7 +85,7 @@ domain_priors:requires_active_enforcement(ulysses_school_1904). % Deasy's proddi
 % PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
 % Effective Extraction: 0.49 * 1.5 (powerless) * 1.0 (national) = 0.735.
 % Perceived as a nightmare from which he is trying to awake.
-constraint_indexing:constraint_classification(ulysses_school_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_school_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -94,7 +94,7 @@ constraint_indexing:constraint_classification(ulysses_school_1904, snare,
 % PERSPECTIVE 2: MR. DEASY (ROPE)
 % Effective Extraction: 0.49 * -0.2 (institutional) * 1.0 = -0.098.
 % Viewed as the essential coordination of "paying one's way" and justice[cite: 486, 492].
-constraint_indexing:constraint_classification(ulysses_school_1904, rope, 
+constraint_indexing:constraint_classification(ulysses_school_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -116,8 +116,8 @@ constraint_indexing:constraint_classification(ulysses_school_1904, piton,
 
 test(perspectival_gap) :-
     % Verify the shift from Snare (Stephen) to Rope (Deasy).
-    constraint_indexing:constraint_classification(ulysses_school_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_school_1904, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_school_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_school_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_validation) :-
     % Piton classification requires theater_ratio >= 0.70.

@@ -89,7 +89,7 @@ domain_priors:requires_active_enforcement(riot_incentive_loop_2026).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the civilian, the loop is a snare: an inescapable trap where presence 
 % in public leads to chemical extraction and arbitrary detention.
-constraint_indexing:constraint_classification(riot_incentive_loop_2026, snare, 
+constraint_indexing:constraint_classification(riot_incentive_loop_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(riot_incentive_loop_2026, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % For the State, the loop is a rope: it coordinates the "protection of property" 
 % and the "rule of law" through a standardized tactical response.
-constraint_indexing:constraint_classification(riot_incentive_loop_2026, rope, 
+constraint_indexing:constraint_classification(riot_incentive_loop_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -126,8 +126,8 @@ test(piton_detection) :-
 
 test(perspectival_gap) :-
     % Subject feels a Snare; State sees coordination (Rope).
-    constraint_indexing:constraint_classification(riot_incentive_loop_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(riot_incentive_loop_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(riot_incentive_loop_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(riot_incentive_loop_2026, piton, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(riot_loop_tests).
 

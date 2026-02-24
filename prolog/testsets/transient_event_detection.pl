@@ -107,7 +107,7 @@ narrative_ontology:constraint_victim(transient_event_detection, traditional_meth
 
 constraint_indexing:constraint_classification(
     transient_event_detection,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(historical),

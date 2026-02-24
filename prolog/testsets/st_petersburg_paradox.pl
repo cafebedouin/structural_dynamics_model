@@ -101,7 +101,7 @@ narrative_ontology:constraint_victim(st_petersburg_paradox, naive_gamblers).
 % the paradox is a trap. It demands a high (or infinite) entry fee for a
 % prize that is practically unrealizable, extracting all finite wealth.
 % χ = 0.65 * 1.5 (powerless) * 1.0 (national) = 0.975
-constraint_indexing:constraint_classification(st_petersburg_paradox, snare,
+constraint_indexing:constraint_classification(st_petersburg_paradox, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

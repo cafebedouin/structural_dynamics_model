@@ -139,7 +139,7 @@ narrative_ontology:constraint_victim(shadow_fleet_sanctions_evasion, shadow_flee
 % PERSPECTIVE 1: THE DIRECTLY EXPLOITED (SNARE)
 % Crew members on shadow fleet vessels, who are often underpaid, uninsured,
 % and operate in dangerous conditions with little legal recourse.
-constraint_indexing:constraint_classification(shadow_fleet_sanctions_evasion, snare,
+constraint_indexing:constraint_classification(shadow_fleet_sanctions_evasion, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(shadow_fleet_sanctions_evasion, sn
 % PERSPECTIVE 2: THE SANCTIONED NATION (SNARE)
 % The sanctioned nations themselves, who are constrained by sanctions but use
 % the shadow fleet as a costly and risky lifeline.
-constraint_indexing:constraint_classification(shadow_fleet_sanctions_evasion, snare,
+constraint_indexing:constraint_classification(shadow_fleet_sanctions_evasion, tangled_rope,
     context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(shadow_fleet_sanctions_evasion, ro
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
-constraint_indexing:constraint_classification(shadow_fleet_sanctions_evasion, tangled_rope,
+constraint_indexing:constraint_classification(shadow_fleet_sanctions_evasion, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

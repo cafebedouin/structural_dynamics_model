@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(fcc_dji_covered_list, us_drone_users).
 % Represents hobbyists or small businesses who relied on DJI. They are victims
 % with no ability to influence the policy and face higher costs for alternatives.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(fcc_dji_covered_list, snare,
+constraint_indexing:constraint_classification(fcc_dji_covered_list, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(fcc_dji_covered_list, rope,
 % Sees both the coordination (industrial/security policy) and the extraction
 % (costs to users/DJI), classifying it as a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(fcc_dji_covered_list, tangled_rope,
+constraint_indexing:constraint_classification(fcc_dji_covered_list, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -194,7 +194,7 @@ test(perspectival_gap) :-
     true.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(fcc_dji_covered_list, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(fcc_dji_covered_list, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(fcc_dji_covered_list, _),

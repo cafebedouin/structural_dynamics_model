@@ -113,7 +113,7 @@ narrative_ontology:constraint_victim(openai_health_review, medical_regulators).
 % Users seeking health advice who bear the full risk of misinterpretation.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % Calculation: χ = 0.55 * 1.42 * 1.0 (national scope) = 0.781 (Snare, χ ≥ 0.66)
-constraint_indexing:constraint_classification(openai_health_review, snare,
+constraint_indexing:constraint_classification(openai_health_review, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(openai_health_review, rope,
 % Calculation: χ = 0.55 * 1.15 * 1.2 (global scope) = 0.759. This high χ, combined
 % with the presence of beneficiary (coordination) and victim (extraction) flags,
 % confirms the Tangled Rope classification.
-constraint_indexing:constraint_classification(openai_health_review, tangled_rope,
+constraint_indexing:constraint_classification(openai_health_review, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(openai_health_review, tangled_rope
 % Institutional actors whose mandate is bypassed and authority is challenged.
 % They are victims with constrained exit options (cannot ignore it, but slow to act).
 % Victim + constrained exit -> high d -> high χ, classifying as a snare that traps their agency.
-constraint_indexing:constraint_classification(openai_health_review, snare,
+constraint_indexing:constraint_classification(openai_health_review, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -167,7 +167,7 @@ test(perspectival_gap_user_provider, [nondet]) :-
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
     % The analytical observer must see the full tangled structure.
-    constraint_indexing:constraint_classification(openai_health_review, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(openai_health_review, snare, context(agent_power(analytical), _, _, _)).
 
 test(regulator_view_is_snare, [nondet]) :-
     % Verify that the bypassed regulators perceive the constraint as a snare.

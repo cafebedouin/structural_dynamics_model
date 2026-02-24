@@ -88,7 +88,7 @@ narrative_ontology:coordination_vitality(structural_extraction_without_actor, de
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The payer is trapped in a loop where they pay for a non-existent utility.
-constraint_indexing:constraint_classification(structural_extraction_without_actor, snare,
+constraint_indexing:constraint_classification(structural_extraction_without_actor, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(structural_extraction_without_acto
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The institutional code views this as a "coordination" prerequisite for system solvency.
-constraint_indexing:constraint_classification(structural_extraction_without_actor, rope,
+constraint_indexing:constraint_classification(structural_extraction_without_actor, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(structural_extraction_without_acto
 % PERSPECTIVE 4: THE HISTORICAL ANALYST (TANGLED ROPE)
 % A historical view detects the hybrid nature of the original coordination function
 % that has since degraded into a piton.
-constraint_indexing:constraint_classification(structural_extraction_without_actor, tangled_rope,
+constraint_indexing:constraint_classification(structural_extraction_without_actor, piton,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -127,9 +127,9 @@ constraint_indexing:constraint_classification(structural_extraction_without_acto
 
 test(perspectival_gap) :-
     % Verify the Snare vs Rope conflict.
-    constraint_indexing:constraint_classification(structural_extraction_without_actor, snare,
+    constraint_indexing:constraint_classification(structural_extraction_without_actor, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(structural_extraction_without_actor, rope,
+    constraint_indexing:constraint_classification(structural_extraction_without_actor, piton,
         context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(structural_extraction_without_actor, piton,
         context(agent_power(analytical), _, _, _)).

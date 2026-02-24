@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(hollow_state_syndrome, rope,
 % The "State Capability" is a performative facade masking total operational
 % atrophy. The underlying structure is a Tangled Rope, but its functional
 % component has degraded into pure theater.
-constraint_indexing:constraint_classification(hollow_state_syndrome, piton,
+constraint_indexing:constraint_classification(hollow_state_syndrome, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,14 +128,14 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hollow_state_syndrome, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(hollow_state_syndrome, piton,
+    constraint_indexing:constraint_classification(hollow_state_syndrome, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.94) triggers Piton classification.
     domain_priors:theater_ratio(hollow_state_syndrome, TR),
     TR > 0.70,
-    constraint_indexing:constraint_classification(hollow_state_syndrome, piton,
+    constraint_indexing:constraint_classification(hollow_state_syndrome, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

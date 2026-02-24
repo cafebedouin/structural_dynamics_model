@@ -111,7 +111,7 @@ narrative_ontology:constraint_victim(cosmological_evolution_alpha_omega, baryoni
 % PERSPECTIVE 1: BARYONIC MATTER (A STAR) IN THE STELLIFEROUS ERA (ROPE)
 % During the star-forming era, physical laws are a Rope that allows matter to
 % coordinate into complex structures (stars, galaxies).
-constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, rope,
+constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain,
     context(agent_power(powerless),
             time_horizon(biographical), % The 'life' of a star
             exit_options(trapped),      % Trapped within its gravity well
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega
 % PERSPECTIVE 2: A KARDASHEV TYPE III CIVILIZATION (ROPE)
 % An institutional-scale actor sees the laws of physics as a pure coordination
 % mechanism (Rope) for large-scale engineering projects like Dyson spheres.
-constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, rope,
+constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage), % Can manipulate matter and energy within the laws
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega
 % Even in the far future, the underlying laws are still a coordination mechanism,
 % albeit one governing decay and gravitational interactions rather than fusion.
 % The low ε prevents a Tangled Rope classification.
-constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, rope,
+constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain,
     context(agent_power(moderate),
             time_horizon(generational), % The 'life' of a white dwarf
             exit_options(constrained),
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega
 :- begin_tests(cosmological_evolution_alpha_omega_tests).
 
 test(perspectival_variance) :-
-    constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain, context(agent_power(analytical), _, _, _)).
 
 test(mountain_metric_compliance) :-

@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(climate_target_one_point_five, fossil_fuel_
 % PERSPECTIVE 1: CITIZEN IN A COASTAL COMMUNITY (MOUNTAIN)
 % For a citizen trapped by rising sea levels, the policy target is abstract.
 % The physical reality of climate change is an unchangeable force, a Mountain.
-constraint_indexing:constraint_classification(climate_target_one_point_five, mountain,
+constraint_indexing:constraint_classification(climate_target_one_point_five, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(climate_target_one_point_five, rop
 % PERSPECTIVE 3: FOSSIL FUEL RELIANT ECONOMY (SNARE)
 % For a nation focused on rapid industrialization via fossil fuels, the target
 % is a Snare. It tightens emission limits, strangling perceived economic growth.
-constraint_indexing:constraint_classification(climate_target_one_point_five, snare,
+constraint_indexing:constraint_classification(climate_target_one_point_five, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(constrained),

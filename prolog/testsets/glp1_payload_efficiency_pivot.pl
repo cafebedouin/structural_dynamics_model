@@ -106,7 +106,7 @@ narrative_ontology:constraint_victim(glp1_payload_efficiency_pivot, [onboard_cat
 
 constraint_indexing:constraint_classification(
     glp1_payload_efficiency_pivot,
-    rope,
+    scaffold,
     context(
         agent_power(institutional),
         time_horizon(biographical),

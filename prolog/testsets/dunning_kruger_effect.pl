@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(dunning_kruger_effect, organizational_effic
 % The novice is trapped by their own lack of meta-cognition. The high
 % effective extraction (χ = 0.55 * 1.5 * 0.8 = 0.66) represents the severe
 % opportunity cost and potential for catastrophic error they are unaware of.
-constraint_indexing:constraint_classification(dunning_kruger_effect, snare,
+constraint_indexing:constraint_classification(dunning_kruger_effect, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(dunning_kruger_effect, rope,
 % asymmetric extraction (wasted resources). The high effective extraction
 % (χ = 0.55 * 1.15 * 1.2 = 0.759) combined with the structural properties
 % (beneficiary, victim, enforcement) correctly identifies it as a Tangled Rope.
-constraint_indexing:constraint_classification(dunning_kruger_effect, tangled_rope,
+constraint_indexing:constraint_classification(dunning_kruger_effect, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

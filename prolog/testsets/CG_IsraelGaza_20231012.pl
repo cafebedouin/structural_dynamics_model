@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(cg_israelgaza_20231012, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
-constraint_indexing:constraint_classification(cg_israelgaza_20231012, tangled_rope,
+constraint_indexing:constraint_classification(cg_israelgaza_20231012, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

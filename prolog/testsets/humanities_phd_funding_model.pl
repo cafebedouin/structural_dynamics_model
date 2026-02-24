@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(humanities_phd_funding_model, humanities_gr
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % This high effective extraction (χ > 0.66) and high suppression classify
 % the system as a Snare from their perspective.
-constraint_indexing:constraint_classification(humanities_phd_funding_model, snare,
+constraint_indexing:constraint_classification(humanities_phd_funding_model, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -131,7 +131,7 @@ constraint_indexing:constraint_classification(humanities_phd_funding_model, snar
 % From this view, the constraint is highly beneficial. However, the system's
 % high base extractiveness (ε=0.55 > 0.45) prevents a Rope classification.
 % It is a Tangled Rope, reflecting the mix of coordination and extraction they manage.
-constraint_indexing:constraint_classification(humanities_phd_funding_model, tangled_rope,
+constraint_indexing:constraint_classification(humanities_phd_funding_model, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(humanities_phd_funding_model, tang
 % (educating scholars, organizing teaching) and the severe asymmetric
 % extraction. The combination of beneficiary, victim, and active enforcement,
 % alongside the metric values, results in a Tangled Rope classification.
-constraint_indexing:constraint_classification(humanities_phd_funding_model, tangled_rope,
+constraint_indexing:constraint_classification(humanities_phd_funding_model, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -161,7 +161,7 @@ test(perspectival_gap_is_snare_vs_tangled_rope) :-
         context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(humanities_phd_funding_model, tangled_rope,
+    constraint_indexing:constraint_classification(humanities_phd_funding_model, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-

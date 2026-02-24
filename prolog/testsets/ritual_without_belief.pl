@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(ritual_without_belief, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.83) and suppression (0.75) masking as coordination.
 % The presence of beneficiaries, victims, and enforcement confirms Tangled Rope.
-constraint_indexing:constraint_classification(ritual_without_belief, tangled_rope,
+constraint_indexing:constraint_classification(ritual_without_belief, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(ritual_without_belief, tangled_rop
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.95) > 0.70 triggers Piton: the "ritual" is a
 % non-functional, performative artifact of institutional inertia.
-constraint_indexing:constraint_classification(ritual_without_belief, piton,
+constraint_indexing:constraint_classification(ritual_without_belief, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -143,7 +143,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(ritual_without_belief, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(ritual_without_belief, piton,
+    constraint_indexing:constraint_classification(ritual_without_belief, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
@@ -155,7 +155,7 @@ test(piton_audit_logic) :-
     % Ensure extreme theater (0.95) results in Piton detection.
     domain_priors:theater_ratio(ritual_without_belief, TR),
     TR > 0.70,
-    constraint_indexing:constraint_classification(ritual_without_belief, piton,
+    constraint_indexing:constraint_classification(ritual_without_belief, snare,
         context(agent_power(analytical), _, _, _)).
 
 :- end_tests(ritual_without_belief_tests).

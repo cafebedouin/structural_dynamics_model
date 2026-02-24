@@ -3,7 +3,7 @@
 # Pipeline Dashboard — standalone summary of pipeline output files
 # ==============================================================================
 # Reads completed output files and prints a summary dashboard.
-# Called by the Makefile after all targets complete, or standalone:
+# Called by run_pipeline.py after all phases complete, or standalone:
 #   bash scripts/pipeline_dashboard.sh
 # ==============================================================================
 

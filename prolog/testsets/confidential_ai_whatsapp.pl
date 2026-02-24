@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(confidential_ai_whatsapp, whatsapp_users).
 % Users are trapped by network effects and face an opaque, mandatory system.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
 % High χ = 0.48 * 1.42 * 1.2 (global) ≈ 0.82, which is well into Snare territory (>=0.66).
-constraint_indexing:constraint_classification(confidential_ai_whatsapp, snare,
+constraint_indexing:constraint_classification(confidential_ai_whatsapp, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(brazil_2026_general_elections, brazilian_ta
 
 % PERSPECTIVE 1: THE DISILLUSIONED VOTER (SNARE)
 % High extraction (taxation vs services) felt as a predatory trap with no exit.
-constraint_indexing:constraint_classification(brazil_2026_general_elections, snare,
+constraint_indexing:constraint_classification(brazil_2026_general_elections, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(brazil_2026_general_elections, pit
 
 test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
-    constraint_indexing:constraint_classification(brazil_2026_general_elections, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(brazil_2026_general_elections, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(brazil_2026_general_elections, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(brazil_2026_general_elections, TypePowerless, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(brazil_2026_general_elections, TypeInstitutional, context(agent_power(institutional), _, _, _)),

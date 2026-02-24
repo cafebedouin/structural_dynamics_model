@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(governance_overfitting, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % High extraction/suppression with a coordination function triggers the 'Tangled Rope' classification.
-constraint_indexing:constraint_classification(governance_overfitting, tangled_rope,
+constraint_indexing:constraint_classification(governance_overfitting, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -121,7 +121,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification) :-
     % Verify the analytical observer correctly identifies it as a Tangled Rope.
-    constraint_indexing:constraint_classification(governance_overfitting, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(governance_overfitting, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Ensure extraction meets the linter's v3.4 core limits for high-extraction types.

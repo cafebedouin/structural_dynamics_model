@@ -130,7 +130,7 @@ narrative_ontology:constraint_victim(sti_clinical_testing_bottleneck, public_hea
 % For an individual at risk, the system is highly extractive and coercive.
 % Engine derives d from victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
 % χ = 0.50 * 1.42 * 1.0 (national) = 0.71. This exceeds the Snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(sti_clinical_testing_bottleneck, snare,
+constraint_indexing:constraint_classification(sti_clinical_testing_bottleneck, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(sti_clinical_testing_bottleneck, r
 % and the severe asymmetric extraction (delayed care, public health costs).
 % Engine derives analytical d ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.50 * 1.15 * 1.2 (global) = 0.69. This is in Tangled Rope range [0.40, 0.90].
-constraint_indexing:constraint_classification(sti_clinical_testing_bottleneck, tangled_rope,
+constraint_indexing:constraint_classification(sti_clinical_testing_bottleneck, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(sti_clinical_testing_bottleneck, t
 % Their exit is constrained, and they are structurally between beneficiaries and victims.
 % We model them as `both` + `constrained`, giving a derived d ≈ 0.6 → f(d) ≈ 0.88.
 % χ = 0.50 * 0.88 * 1.0 = 0.44. This is a Tangled Rope.
-constraint_indexing:constraint_classification(sti_clinical_testing_bottleneck, tangled_rope,
+constraint_indexing:constraint_classification(sti_clinical_testing_bottleneck, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

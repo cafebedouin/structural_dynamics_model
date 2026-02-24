@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(temporal_scarcity, piton,
 % attention economy. They perceive the extraction as low because it's a
 % cost of doing business, and they overlook the theatrical decay.
 % χ is very low, classifying as Rope.
-constraint_indexing:constraint_classification(temporal_scarcity, rope,
+constraint_indexing:constraint_classification(temporal_scarcity, piton,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(constrained),
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(temporal_scarcity, piton,
 test(perspectival_gap) :-
     % Verify perspectival gap between the media outlet (sees Rope) and the
     % analytical observer (sees Piton).
-    constraint_indexing:constraint_classification(temporal_scarcity, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(temporal_scarcity, piton, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(temporal_scarcity, piton, context(agent_power(analytical), _, _, _)).
 
 test(piton_threshold_validation) :-

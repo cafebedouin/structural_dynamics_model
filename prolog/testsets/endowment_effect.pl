@@ -144,7 +144,7 @@ narrative_ontology:constraint_victim(endowment_effect, owners_needing_liquidity)
 % Snare. Their own psychology strangles their financial future. The value they
 % ascribe to the "endowment" prevents them from taking the "exit" that market
 % reality offers, extracting their potential wealth and freedom.
-constraint_indexing:constraint_classification(endowment_effect, snare,
+constraint_indexing:constraint_classification(endowment_effect, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(endowment_effect, snare,
 % coordination mechanism for closing deals. By encouraging a "test drive" or
 % "free home trial," they induce a sense of ownership, pulling the customer
 % toward a purchase through the psychological "tether" of the endowment effect.
-constraint_indexing:constraint_classification(endowment_effect, rope,
+constraint_indexing:constraint_classification(endowment_effect, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(arbitrage),
@@ -180,8 +180,8 @@ constraint_indexing:constraint_classification(endowment_effect, mountain,
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target, beneficiary, and observer.
-    constraint_indexing:constraint_classification(endowment_effect, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(endowment_effect, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(endowment_effect, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(endowment_effect, scaffold, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(endowment_effect, mountain, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

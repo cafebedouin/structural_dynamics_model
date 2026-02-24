@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(attention_as_bottleneck_resource, 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.87) and suppression (0.76) masking as functional
 % coordination (Rope), with active enforcement. This is the canonical Tangled Rope.
-constraint_indexing:constraint_classification(attention_as_bottleneck_resource, tangled_rope,
+constraint_indexing:constraint_classification(attention_as_bottleneck_resource, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

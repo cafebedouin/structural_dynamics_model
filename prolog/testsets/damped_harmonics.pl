@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(damped_harmonics, mountain,
 % damping coefficient (e.g., in a shock absorber), they ensure a vehicle
 % returns to equilibrium quickly without oscillation, providing safety and
 % performance. It's a pure coordination function from this perspective.
-constraint_indexing:constraint_classification(damped_harmonics, rope,
+constraint_indexing:constraint_classification(damped_harmonics, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(mobile),
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(damped_harmonics, mountain,
 test(perspectival_gap) :-
     % Verify the gap between the physical object (Mountain) and the engineer (Rope).
     constraint_indexing:constraint_classification(damped_harmonics, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(damped_harmonics, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(damped_harmonics, scaffold, context(agent_power(institutional), _, _, _)),
     \+ constraint_indexing:constraint_classification(damped_harmonics, rope, context(agent_power(powerless), _, _, _)).
 
 test(analytical_view_is_mountain) :-

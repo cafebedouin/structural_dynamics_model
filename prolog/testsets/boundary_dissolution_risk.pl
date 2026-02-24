@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(boundary_dissolution_risk, rope,
 % Detects high extraction (0.87) and suppression (0.76) masking as
 % functional coordination. The presence of beneficiaries, victims, and
 % active enforcement meets the structural requirements for a Tangled Rope.
-constraint_indexing:constraint_classification(boundary_dissolution_risk, tangled_rope,
+constraint_indexing:constraint_classification(boundary_dissolution_risk, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(boundary_dissolution_risk, tangled
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.89) > 0.70 triggers Piton: the "Work-Life Balance"
 % policy is an inertial spike; it performatively signals care while 0.87 extraction occurs.
-constraint_indexing:constraint_classification(boundary_dissolution_risk, piton,
+constraint_indexing:constraint_classification(boundary_dissolution_risk, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -136,12 +136,12 @@ test(perspectival_gap) :-
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.89) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(boundary_dissolution_risk, piton,
+    constraint_indexing:constraint_classification(boundary_dissolution_risk, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_detection) :-
     % Verify the analytical observer correctly identifies the Tangled Rope.
-    constraint_indexing:constraint_classification(boundary_dissolution_risk, tangled_rope,
+    constraint_indexing:constraint_classification(boundary_dissolution_risk, snare,
         context(agent_power(analytical), _, _, _)).
 
 :- end_tests(boundary_dissolution_risk_tests).

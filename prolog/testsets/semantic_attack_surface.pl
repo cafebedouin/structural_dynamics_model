@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(semantic_attack_surface, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.87) and active enforcement masking as essential coordination.
-constraint_indexing:constraint_classification(semantic_attack_surface, tangled_rope,
+constraint_indexing:constraint_classification(semantic_attack_surface, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(semantic_attack_surface, tangled_r
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.92) > 0.70 triggers Piton: the "Fact-Check Banner"
 % is an inertial spike; it performatively signals truth while permitting 0.87 extraction.
-constraint_indexing:constraint_classification(semantic_attack_surface, piton,
+constraint_indexing:constraint_classification(semantic_attack_surface, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -137,7 +137,7 @@ test(perspectival_gap) :-
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.92) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(semantic_attack_surface, piton,
+    constraint_indexing:constraint_classification(semantic_attack_surface, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

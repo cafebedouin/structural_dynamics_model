@@ -105,7 +105,7 @@ narrative_ontology:constraint_victim(future_dsm_integration, historically_unders
 % For patients in marginalized communities, the lack of context-sensitive 
 % diagnosis is a Snare: a trap where structural disadvantages are 
 % misidentified as individual pathology.
-constraint_indexing:constraint_classification(future_dsm_integration, snare, 
+constraint_indexing:constraint_classification(future_dsm_integration, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(future_dsm_integration, rope,
 % Analysts view the current transition as a Tangled Rope: Genuine 
 % coordination for diagnostic equity mixed with asymmetric extraction 
 % of patient data for risk-adjusted modeling.
-constraint_indexing:constraint_classification(future_dsm_integration, tangled_rope,
+constraint_indexing:constraint_classification(future_dsm_integration, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

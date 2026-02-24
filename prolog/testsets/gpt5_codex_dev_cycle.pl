@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(gpt5_codex_dev_cycle, junior_developers).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % High extraction felt as a predatory trap leading to deskilling and job insecurity.
-constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, snare,
+constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

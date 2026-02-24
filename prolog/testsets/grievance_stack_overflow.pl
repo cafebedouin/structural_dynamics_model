@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(grievance_stack_overflow, rope,
 % Detects high extraction (0.85) and high suppression (0.72) masking as
 % coordination. The presence of beneficiaries, victims, and active enforcement
 % confirms the Tangled Rope classification.
-constraint_indexing:constraint_classification(grievance_stack_overflow, tangled_rope,
+constraint_indexing:constraint_classification(grievance_stack_overflow, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -134,7 +134,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(grievance_stack_overflow, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(grievance_stack_overflow, tangled_rope,
+    constraint_indexing:constraint_classification(grievance_stack_overflow, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_threshold_validation) :-

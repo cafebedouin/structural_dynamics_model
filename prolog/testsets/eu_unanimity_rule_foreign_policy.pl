@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(eu_unanimity_rule_foreign_policy, eu_majori
 % as a pure trap that denies essential aid.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
 % → high χ. A continental scope (σ=1.1) further amplifies extraction.
-constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, snare,
+constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, 
 % collective will. Their exit is constrained by treaty obligations.
 % Engine derives d from: victim membership + constrained exit → intermediate d
 % → intermediate χ. They see the extractive and coordination aspects.
-constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, tangled_rope,
+constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, 
 % The observer sees the full structure: a rule with a genuine coordination
 % function that has been captured to enable asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, tangled_rope,
+constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -178,7 +178,7 @@ test(inter_institutional_gap) :-
     constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, tangled_rope, context(agent_power(institutional), _, exit_options(constrained), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(eu_unanimity_rule_foreign_policy, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A constraint is a Tangled Rope only if it has both coordination and extraction, and is enforced.

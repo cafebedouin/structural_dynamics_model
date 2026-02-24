@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(cancer_prevention, vulnerable_populations).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % High extraction felt as an immutable limit or predatory trap.
 % NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-constraint_indexing:constraint_classification(cancer_prevention, snare,
+constraint_indexing:constraint_classification(cancer_prevention, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(cancer_prevention, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
-constraint_indexing:constraint_classification(cancer_prevention, tangled_rope,
+constraint_indexing:constraint_classification(cancer_prevention, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

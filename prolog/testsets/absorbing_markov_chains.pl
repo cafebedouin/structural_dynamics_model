@@ -147,7 +147,7 @@ narrative_ontology:constraint_victim(absorbing_markov_chain_trap, trapped_entity
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(absorbing_markov_chain_trap, snare,
+constraint_indexing:constraint_classification(absorbing_markov_chain_trap, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -181,7 +181,7 @@ constraint_indexing:constraint_classification(absorbing_markov_chain_trap, snare
 % Example — Regulatory capture:
 %
 % % Perspective 4A: Captured regulator (institutional, constrained exit)
-constraint_indexing:constraint_classification(absorbing_markov_chain_trap, tangled_rope,
+constraint_indexing:constraint_classification(absorbing_markov_chain_trap, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(knowledge_action_gap, future_generations). 
 % To the powerless individual, the gap feels like an unchangeable law of human nature.
 % Effective extraction χ = 0.71 * 1.5 (powerless) * 1.0 (national) = 1.065.
 % Despite the snare-level extraction, the feeling of immutability results in a Mountain classification.
-constraint_indexing:constraint_classification(knowledge_action_gap, mountain,
+constraint_indexing:constraint_classification(knowledge_action_gap, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(knowledge_action_gap, tangled_rope
 
 test(perspectival_gap) :-
     % Verify the "Individual powerless" sees a Mountain while the "Institutional" sees a Rope.
-    constraint_indexing:constraint_classification(knowledge_action_gap, mountain,
+    constraint_indexing:constraint_classification(knowledge_action_gap, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(knowledge_action_gap, rope,
         context(agent_power(institutional), _, _, _)).

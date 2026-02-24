@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(meta_governance_overload, rope,
 % Theater ratio (0.94) > 0.70 triggers Piton: the "Agile Governance"
 % framework is an inertial spike; it performatively signals speed while
 % siphoning 0.82 of the actual labor agency.
-constraint_indexing:constraint_classification(meta_governance_overload, piton,
+constraint_indexing:constraint_classification(meta_governance_overload, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(meta_governance_overload, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.82) and suppression (0.75) masking as functional
 % coordination (Rope), with active enforcement and clear victims/beneficiaries.
-constraint_indexing:constraint_classification(meta_governance_overload, tangled_rope,
+constraint_indexing:constraint_classification(meta_governance_overload, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -137,7 +137,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(meta_governance_overload, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(meta_governance_overload, piton,
+    constraint_indexing:constraint_classification(meta_governance_overload, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

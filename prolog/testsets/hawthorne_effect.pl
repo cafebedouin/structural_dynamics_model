@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(hawthorne_effect, experimental_integrity).
 % an involuntary "tightening" of performance. They cannot relax into their
 % natural rhythm; the gaze extracts extra vitality and focus, strangling their
 % autonomy and mental peace until the observer leaves.
-constraint_indexing:constraint_classification(hawthorne_effect, snare,
+constraint_indexing:constraint_classification(hawthorne_effect, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(hawthorne_effect, rope,
 % coordination function (aligning effort, gathering data) but also imposes
 % a significant, asymmetric extractive cost on the observed subjects. It
 % requires the active enforcement of the observer's presence to function.
-constraint_indexing:constraint_classification(hawthorne_effect, tangled_rope,
+constraint_indexing:constraint_classification(hawthorne_effect, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -165,9 +165,9 @@ constraint_indexing:constraint_classification(hawthorne_effect, tangled_rope,
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target, beneficiary, and analyst.
-    constraint_indexing:constraint_classification(hawthorne_effect, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hawthorne_effect, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hawthorne_effect, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(hawthorne_effect, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(hawthorne_effect, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-
     % Verify that the structural data needed for a Tangled Rope classification exists.

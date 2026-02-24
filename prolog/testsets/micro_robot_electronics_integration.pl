@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(micro_robot_electronics_integration, the_mi
 % For the bot, the relationship between current (I) and speed (v) is a
 % Mountain (v ∝ I). It is an unchangeable law of its world, emerging
 % naturally from physics.
-constraint_indexing:constraint_classification(micro_robot_electronics_integration, mountain,
+constraint_indexing:constraint_classification(micro_robot_electronics_integration, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(micro_robot_electronics_integratio
 % some researchers) and the asymmetric extraction (lost potential for
 % intelligence, suppressed alternative research paths). This hybrid nature,
 % requiring active enforcement through research paradigms, is a Tangled Rope.
-constraint_indexing:constraint_classification(micro_robot_electronics_integration, tangled_rope,
+constraint_indexing:constraint_classification(micro_robot_electronics_integration, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

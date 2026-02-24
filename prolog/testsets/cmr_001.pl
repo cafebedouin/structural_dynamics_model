@@ -85,7 +85,7 @@ narrative_ontology:constraint_victim(cmr_001, global_mineral_suppliers).
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % High extraction felt as an immutable limit or predatory trap.
 % NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-constraint_indexing:constraint_classification(cmr_001, snare,
+constraint_indexing:constraint_classification(cmr_001, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

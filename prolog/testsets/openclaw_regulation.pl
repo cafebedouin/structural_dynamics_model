@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(openclaw_regulation, sandboxed_ai_users).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % High extraction felt as an immutable limit or predatory trap.
 % χ = 0.55 * 1.5 (powerless) * 1.0 (national) = 0.825. This is a clear Snare.
-constraint_indexing:constraint_classification(openclaw_regulation, snare,
+constraint_indexing:constraint_classification(openclaw_regulation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(openclaw_regulation, rope,
 % Default analytical context (civilizational/analytical/global).
 % χ = 0.55 * 1.15 (analytical) * 1.2 (global) = 0.759. High extraction.
 % The system has beneficiaries, victims, and requires enforcement, meeting all criteria for a Tangled Rope.
-constraint_indexing:constraint_classification(openclaw_regulation, tangled_rope,
+constraint_indexing:constraint_classification(openclaw_regulation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

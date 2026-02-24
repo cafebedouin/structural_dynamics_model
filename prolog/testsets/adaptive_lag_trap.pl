@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(adaptive_lag_trap, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature: a genuine coordination function benefiting
 % regulators, coupled with severe asymmetric extraction from innovators.
-constraint_indexing:constraint_classification(adaptive_lag_trap, tangled_rope,
+constraint_indexing:constraint_classification(adaptive_lag_trap, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -134,7 +134,7 @@ test(perspectival_gap) :-
     % Verify Snare for the powerless innovator vs Rope for the institutional regulator.
     constraint_indexing:constraint_classification(adaptive_lag_trap, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(adaptive_lag_trap, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(adaptive_lag_trap, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(adaptive_lag_trap, snare, context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.89) correctly triggers the Piton classification.

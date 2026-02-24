@@ -115,7 +115,7 @@ narrative_ontology:constraint_victim(epstein_document_release_2026, individuals_
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(epstein_document_release_2026, snare,
+constraint_indexing:constraint_classification(epstein_document_release_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(epstein_document_release_2026, tan
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context sees both the coordination function and the
 % severe asymmetric extraction.
-constraint_indexing:constraint_classification(epstein_document_release_2026, tangled_rope,
+constraint_indexing:constraint_classification(epstein_document_release_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(epstein_document_release_2026, tan
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(epstein_document_release_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(epstein_document_release_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(epstein_document_release_2026, tangled_rope, context(agent_power(institutional), _, _, _)),
     true. % Snare and Tangled Rope are different types.
 

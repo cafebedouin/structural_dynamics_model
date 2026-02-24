@@ -132,7 +132,7 @@ narrative_ontology:constraint_victim(inner_model_theory_constraints, large_cardi
 % For a set within L, the constraints of constructibility are a Mountain.
 % It exists only because it was defined by a formula at a specific level.
 % It cannot "exit" to the outer universe (V) if V=L is the governing law.
-constraint_indexing:constraint_classification(inner_model_theory_constraints, mountain,
+constraint_indexing:constraint_classification(inner_model_theory_constraints, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(inner_model_theory_constraints, ro
 % For those seeking a "large" universe with measurable cardinals, the axiom
 % V=L is a Snare. It strangles this possibility (by Scott's Theorem). It
 % extracts the "richness of V" to maintain a thin, constructible reality.
-constraint_indexing:constraint_classification(inner_model_theory_constraints, snare,
+constraint_indexing:constraint_classification(inner_model_theory_constraints, rope,
     context(agent_power(moderate),
             time_horizon(civilizational),
             exit_options(constrained),

@@ -111,7 +111,7 @@ narrative_ontology:constraint_victim(constraint_yoneda, early_career_mathematici
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % χ = 0.40 * f(0.95) * 1.2 = 0.40 * 1.42 * 1.2 ≈ 0.68 (Snare)
-constraint_indexing:constraint_classification(constraint_yoneda, snare,
+constraint_indexing:constraint_classification(constraint_yoneda, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

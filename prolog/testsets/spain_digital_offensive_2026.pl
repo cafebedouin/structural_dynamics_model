@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(spain_digital_offensive_2026, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid of genuine safety coordination and aggressive
 % state extraction of corporate power.
-constraint_indexing:constraint_classification(spain_digital_offensive_2026, tangled_rope,
+constraint_indexing:constraint_classification(spain_digital_offensive_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

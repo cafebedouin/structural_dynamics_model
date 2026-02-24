@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(scurvy_maritime_extraction, rope,
 % The analyst sees a system with a genuine coordination function (global trade)
 % that is inextricably linked to asymmetric, lethal extraction, and requires active enforcement (naval policy).
 % This is the canonical definition of a Tangled Rope.
-constraint_indexing:constraint_classification(scurvy_maritime_extraction, tangled_rope,
+constraint_indexing:constraint_classification(scurvy_maritime_extraction, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(scurvy_maritime_extraction, tangle
 test(perspectival_gap_snare_to_rope) :-
     constraint_indexing:constraint_classification(scurvy_maritime_extraction, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(scurvy_maritime_extraction, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(scurvy_maritime_extraction, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(scurvy_maritime_extraction, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify the necessary conditions for a tangled_rope classification are met.

@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(israel_norwegian_law, replacement_mk).
 % PERSPECTIVE 1: THE REPLACEMENT MK (SNARE)
 % Viewed as a precarious trap where independence is traded for a seat
 % that can be revoked at any moment by a minister's whim.
-constraint_indexing:constraint_classification(israel_norwegian_law, snare,
+constraint_indexing:constraint_classification(israel_norwegian_law, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(israel_norwegian_law, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature: a genuine coordination function (staffing committees)
 % coupled with asymmetric extraction (fiscal cost and loss of MK independence).
-constraint_indexing:constraint_classification(israel_norwegian_law, tangled_rope,
+constraint_indexing:constraint_classification(israel_norwegian_law, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the conflict as a Tangled Rope.
-    constraint_indexing:constraint_classification(israel_norwegian_law, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(israel_norwegian_law, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify that base extraction meets the high-extraction threshold for Tangled Rope/Snare.

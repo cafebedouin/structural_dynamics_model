@@ -108,7 +108,7 @@ narrative_ontology:constraint_victim(magna_carta_liberties, [arbitrary_monarchy,
 % 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     magna_carta_liberties,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),
@@ -194,7 +194,7 @@ test(monarch_coercion) :-
 
 test(due_process_mountain) :-
     % For the powerless, due process is a fixed Mountain of protection
-    constraint_indexing:constraint_classification(magna_carta_liberties, mountain, context(agent_power(powerless), _, _, _)).
+    constraint_indexing:constraint_classification(magna_carta_liberties, tangled_rope, context(agent_power(powerless), _, _, _)).
 
 :- end_tests(magna_carta_tests).
 

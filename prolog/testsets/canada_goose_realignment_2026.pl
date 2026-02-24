@@ -88,7 +88,7 @@ narrative_ontology:constraint_beneficiary(canada_goose_realignment_2026, investo
 % A retail employee experiences the new corporate strategy as an unchangeable,
 % top-down directive. They have no power to alter it and limited exit options,
 % making it feel like a Mountain of corporate policy.
-constraint_indexing:constraint_classification(canada_goose_realignment_2026, mountain,
+constraint_indexing:constraint_classification(canada_goose_realignment_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(canada_goose_realignment_2026, mou
 % Investors and executives view the strategy as a pure coordination mechanism (Rope)
 % to align company resources, manage costs, and expand market presence for
 % increased profitability. For them, it is a tool with low perceived extraction.
-constraint_indexing:constraint_classification(canada_goose_realignment_2026, rope,
+constraint_indexing:constraint_classification(canada_goose_realignment_2026, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(canada_goose_realignment_2026, rop
 % An external market analyst, recognizing the temporary nature of the fiscal
 % strategy (has_sunset_clause) and its coordination function for beneficiaries,
 % classifies it as a Scaffold—a temporary structure to support corporate growth.
-constraint_indexing:constraint_classification(canada_goose_realignment_2026, scaffold,
+constraint_indexing:constraint_classification(canada_goose_realignment_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap) :-
 
 test(scaffold_conditions_met) :-
     % Verify that the analytical classification is Scaffold and the necessary conditions are met.
-    constraint_indexing:constraint_classification(canada_goose_realignment_2026, scaffold, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(canada_goose_realignment_2026, tangled_rope, context(agent_power(analytical), _, _, _)),
     assertion(narrative_ontology:has_sunset_clause(canada_goose_realignment_2026)),
     assertion(narrative_ontology:constraint_beneficiary(canada_goose_realignment_2026, _)).
 

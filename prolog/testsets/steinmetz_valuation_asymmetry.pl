@@ -80,7 +80,7 @@ narrative_ontology:constraint_victim(steinmetz_valuation_asymmetry, capital_owne
 
 % PERSPECTIVE 1: THE ENGINEERS (SUBJECT)
 % For the engineers unable to solve the problem, it was an immutable law of physics.
-constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, mountain,
+constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -88,7 +88,7 @@ constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, mou
 
 % PERSPECTIVE 2: HENRY FORD (THE PAYER)
 % For the institutional actor trapped by the failure, the non-negotiable, high-cost solution is a snare.
-constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, snare,
+constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(trapped),

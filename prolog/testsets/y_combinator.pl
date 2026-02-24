@@ -137,7 +137,7 @@ narrative_ontology:constraint_victim(yc_equity_squeeze, startup_founders).
 % PERSPECTIVE 1: THE PRIMARY TARGET (STARTUP FOUNDERS)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(yc_equity_squeeze, snare,
+constraint_indexing:constraint_classification(yc_equity_squeeze, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(yc_equity_squeeze, rope,
 
 % PERSPECTIVE 5: STARTUPS WITH OTHER FUNDING OPTIONS
 % If a startup has alternative funding sources, they may see the YC terms as less of a constraint.
-constraint_indexing:constraint_classification(yc_equity_squeeze, rope,
+constraint_indexing:constraint_classification(yc_equity_squeeze, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),

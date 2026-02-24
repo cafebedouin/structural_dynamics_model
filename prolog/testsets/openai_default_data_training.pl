@@ -135,7 +135,7 @@ narrative_ontology:constraint_victim(openai_default_data_training, chatgpt_users
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.52 * 1.42 * 1.2 (global scope) ≈ 0.88. This χ > 0.66 and suppression > 0.60
 % classifies it as a Snare.
-constraint_indexing:constraint_classification(openai_default_data_training, snare,
+constraint_indexing:constraint_classification(openai_default_data_training, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(openai_default_data_training, rope
 % χ = 0.52 * 1.15 * 1.2 ≈ 0.72. This χ is in the [0.40, 0.90] range.
 % With ε > 0.30, S > 0.40, and presence of coordination, extraction, and
 % enforcement, it is a canonical Tangled Rope.
-constraint_indexing:constraint_classification(openai_default_data_training, tangled_rope,
+constraint_indexing:constraint_classification(openai_default_data_training, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -179,7 +179,7 @@ test(perspectival_gap_snare_vs_rope) :-
     format('Perspectival gap validated: Snare (powerless) vs. Rope (institutional).~n').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(openai_default_data_training, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(openai_default_data_training, snare, context(agent_power(analytical), _, _, _)),
     format('Analytical classification as Tangled Rope validated.~n').
 
 test(tangled_rope_gate_requirements_met) :-

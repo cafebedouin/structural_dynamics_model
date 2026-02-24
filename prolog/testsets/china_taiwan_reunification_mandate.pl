@@ -97,7 +97,7 @@ narrative_ontology:constraint_victim(china_taiwan_reunification_mandate, regiona
 % PERSPECTIVE 1: THE SUBJECT (MAINLAND CITIZEN) -> MOUNTAIN
 % For a citizen socialized within the state's educational and media apparatus, Taiwan as part of
 % China is an unchangeable fact of history and geography, akin to a natural law.
-constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, mountain,
+constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(china_taiwan_reunification_mandate
 % The observer sees both the coordination function (unifying national identity) and the severe,
 % asymmetric extraction (loss of regional stability, suppression of Taiwanese self-determination).
 % Because it has both, and requires active enforcement, it is a Tangled Rope.
-constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, tangled_rope,
+constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -140,13 +140,13 @@ constraint_indexing:constraint_classification(china_taiwan_reunification_mandate
 :- begin_tests(china_taiwan_reunification_mandate_tests).
 
 test(perspectival_gap_mountain_vs_rope) :-
-    constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, mountain,
+    constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, snare,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, rope,
         context(agent_power(institutional), _, _, _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, tangled_rope,
+    constraint_indexing:constraint_classification(china_taiwan_reunification_mandate, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_and_suppression_thresholds) :-

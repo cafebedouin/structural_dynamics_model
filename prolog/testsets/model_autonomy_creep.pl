@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(model_autonomy_creep, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects both the coordination function and the high asymmetric extraction.
-constraint_indexing:constraint_classification(model_autonomy_creep, tangled_rope,
+constraint_indexing:constraint_classification(model_autonomy_creep, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(model_autonomy_creep, tangled_rope
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.88) > 0.70 triggers Piton: the "Manual Override" is an
 % inertial spike of logic; it exists in form but is never practically functional.
-constraint_indexing:constraint_classification(model_autonomy_creep, piton,
+constraint_indexing:constraint_classification(model_autonomy_creep, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -131,12 +131,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(model_autonomy_creep, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(model_autonomy_creep, tangled_rope,
+    constraint_indexing:constraint_classification(model_autonomy_creep, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.88) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(model_autonomy_creep, piton,
+    constraint_indexing:constraint_classification(model_autonomy_creep, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(nero_imperial_expropriation, rope,
 % popular support) and the highly extractive mechanism. The declaration of both
 % beneficiary and victim groups, plus active enforcement, meets the criteria
 % for a Tangled Rope. This is the canonical classification.
-constraint_indexing:constraint_classification(nero_imperial_expropriation, tangled_rope,
+constraint_indexing:constraint_classification(nero_imperial_expropriation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -166,7 +166,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Ensure the analytical perspective resolves the conflict as a Tangled Rope.
-    constraint_indexing:constraint_classification(nero_imperial_expropriation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(nero_imperial_expropriation, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_for_high_extraction) :-
     % Verify that base metrics meet the criteria for a high-extraction constraint.

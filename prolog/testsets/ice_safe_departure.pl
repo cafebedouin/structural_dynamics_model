@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(ice_safe_departure, rope,
 % The observer sees both the genuine coordination function (for the state) and
 % the severe, asymmetric extraction imposed on the individual. This dual
 % nature is the hallmark of a Tangled Rope.
-constraint_indexing:constraint_classification(ice_safe_departure, tangled_rope,
+constraint_indexing:constraint_classification(ice_safe_departure, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -171,7 +171,7 @@ test(perspectival_gap) :-
     format('Perspectival gap validated: powerless -> snare, institutional -> rope~n').
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(ice_safe_departure, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ice_safe_departure, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     narrative_ontology:constraint_beneficiary(ice_safe_departure, _),

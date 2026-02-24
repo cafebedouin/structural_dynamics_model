@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(silent_dependency_activation, rope
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid signature of standard-setting coordination vs predatory rent-seeking.
-constraint_indexing:constraint_classification(silent_dependency_activation, tangled_rope,
+constraint_indexing:constraint_classification(silent_dependency_activation, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -125,7 +125,7 @@ test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
     constraint_indexing:constraint_classification(silent_dependency_activation, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(silent_dependency_activation, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(silent_dependency_activation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(silent_dependency_activation, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),

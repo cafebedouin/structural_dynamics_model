@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(narrative_engineering_2026, sensationalist_
 % For consumers, the structural rigors of Narrative Engineering appear 
 % as a Mountain: an immutable physical/logical limit on how information 
 % must be formatted to be "true."
-constraint_indexing:constraint_classification(narrative_engineering_2026, mountain, 
+constraint_indexing:constraint_classification(narrative_engineering_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(narrative_engineering_2026, mounta
 % PERSPECTIVE 2: THE ARCHITECT (ROPE)
 % Narrative Engineers view the methodology as a Rope: essential 
 % coordination infrastructure for stabilizing the information environment.
-constraint_indexing:constraint_classification(narrative_engineering_2026, rope, 
+constraint_indexing:constraint_classification(narrative_engineering_2026, tangled_rope, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -132,8 +132,8 @@ test(functional_signal) :-
     TR < 0.10.
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(narrative_engineering_2026, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(narrative_engineering_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(narrative_engineering_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(narrative_engineering_2026, tangled_rope, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(narrative_engineering_2026_tests).
 

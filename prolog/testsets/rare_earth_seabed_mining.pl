@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(rare_earth_seabed_mining, marine_ecosystem)
 % High extraction felt as an immutable limit or predatory trap.
 % The marine ecosystem is powerless and trapped, experiencing the mining as a pure Snare.
 % χ = 0.65 * 1.5 (powerless) * 1.2 (global) = 1.17 (Snare)
-constraint_indexing:constraint_classification(rare_earth_seabed_mining, snare,
+constraint_indexing:constraint_classification(rare_earth_seabed_mining, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),

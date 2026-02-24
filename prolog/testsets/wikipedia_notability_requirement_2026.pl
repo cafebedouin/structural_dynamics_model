@@ -108,7 +108,7 @@ narrative_ontology:constraint_victim(wikipedia_notability_requirement_2026, marg
 % For those trying to document marginalized knowledge, the rule is a barrier
 % that extracts their labor (research, writing) for no gain, as the article
 % is ultimately deleted. Their exit is trapped as there is no comparable alternative platform.
-constraint_indexing:constraint_classification(wikipedia_notability_requirement_2026, snare,
+constraint_indexing:constraint_classification(wikipedia_notability_requirement_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

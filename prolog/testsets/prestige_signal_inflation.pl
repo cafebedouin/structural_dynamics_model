@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(prestige_signal_inflation, piton,
 
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.81) and coordination intent as a Tangled Rope.
-constraint_indexing:constraint_classification(prestige_signal_inflation, tangled_rope,
+constraint_indexing:constraint_classification(prestige_signal_inflation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -138,7 +138,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(prestige_signal_inflation, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(prestige_signal_inflation, tangled_rope,
+    constraint_indexing:constraint_classification(prestige_signal_inflation, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_audit_logic) :-

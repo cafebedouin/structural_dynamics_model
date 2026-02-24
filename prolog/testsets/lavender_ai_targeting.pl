@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(lavender_ai_targeting, rope,
 % It has a real coordination purpose (beneficiary exists) and a brutal extractive
 % one (victims exist), with active enforcement. This is the definition of a
 % Tangled Rope.
-constraint_indexing:constraint_classification(lavender_ai_targeting, tangled_rope,
+constraint_indexing:constraint_classification(lavender_ai_targeting, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -190,7 +190,7 @@ test(perspectival_gap_target_beneficiary) :-
     true.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(lavender_ai_targeting, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(lavender_ai_targeting, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_view_is_rope) :-
     constraint_indexing:constraint_classification(lavender_ai_targeting, rope, context(agent_power(institutional), _, exit_options(constrained), _)).

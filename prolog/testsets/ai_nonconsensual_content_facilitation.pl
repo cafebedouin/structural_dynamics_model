@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(ai_nonconsensual_content_facilitat
 % This view recognizes both the platform's coordination function and the
 % severe, asymmetric extraction it enables. It satisfies all gates for a
 % Tangled Rope classification.
-constraint_indexing:constraint_classification(ai_nonconsensual_content_facilitation, tangled_rope,
+constraint_indexing:constraint_classification(ai_nonconsensual_content_facilitation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -169,7 +169,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
     true.
 
 test(tangled_rope_analytical_view) :-
-    constraint_indexing:constraint_classification(ai_nonconsensual_content_facilitation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ai_nonconsensual_content_facilitation, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     domain_priors:base_extractiveness(ai_nonconsensual_content_facilitation, E),

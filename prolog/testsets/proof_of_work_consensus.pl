@@ -115,7 +115,7 @@ narrative_ontology:constraint_victim(proof_of_work_consensus, malicious_attacker
 % Agent who relies on the network's security. This is a subjective
 % classification overriding the metrics; the user perceives an unchangeable
 % foundation of trust, even though it is an actively maintained system.
-constraint_indexing:constraint_classification(proof_of_work_consensus, mountain,
+constraint_indexing:constraint_classification(proof_of_work_consensus, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(proof_of_work_consensus, snare,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context. Recognizes both the vital coordination function
 % (Rope) and the significant, asymmetric extraction (Snare component).
-constraint_indexing:constraint_classification(proof_of_work_consensus, tangled_rope,
+constraint_indexing:constraint_classification(proof_of_work_consensus, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

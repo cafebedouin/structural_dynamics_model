@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(genie_ip_constraint, snare,
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % Viewed as essential infrastructure or coordination.
-constraint_indexing:constraint_classification(genie_ip_constraint, rope,
+constraint_indexing:constraint_classification(genie_ip_constraint, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

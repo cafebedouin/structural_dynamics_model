@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(non_compete_agreements, rope,
 % workers who possess no secrets). It requires active enforcement and has clear
 % winners and losers, making it a canonical Tangled Rope.
 % χ = 0.80 * 1.15 (analytical) * 1.2 (global) = 1.104 (High Tangled Rope)
-constraint_indexing:constraint_classification(non_compete_agreements, tangled_rope,
+constraint_indexing:constraint_classification(non_compete_agreements, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
     % Verify the gap between the worker (Snare) and the firm (Rope).
     constraint_indexing:constraint_classification(non_compete_agreements, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(non_compete_agreements, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(non_compete_agreements, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(non_compete_agreements, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify that all three conditions for Tangled Rope are met.

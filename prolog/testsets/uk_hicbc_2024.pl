@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(uk_hicbc_2024, rope,
 % Default analytical context. Recognizes both the coordination function
 % (revenue) and the asymmetric extraction. Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
 % This produces χ = 0.65 * 1.15 * 1.2 (global scope) ≈ 0.90, which matches Tangled Rope.
-constraint_indexing:constraint_classification(uk_hicbc_2024, tangled_rope,
+constraint_indexing:constraint_classification(uk_hicbc_2024, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -153,7 +153,7 @@ test(perspectival_gap) :-
     % Verify the gap between the targeted family (Snare) and Treasury (Rope).
     constraint_indexing:constraint_classification(uk_hicbc_2024, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
     constraint_indexing:constraint_classification(uk_hicbc_2024, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(uk_hicbc_2024, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(uk_hicbc_2024, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_validation) :-
     % Verify that all three conditions for a Tangled Rope are met.

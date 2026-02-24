@@ -136,7 +136,7 @@ narrative_ontology:constraint_victim(p_vs_np, optimization_engineers).
 % Agent who bears the most cost. The practical inability to find optimal
 % solutions for NP-hard problems within a deadline feels like a trap.
 % Engine derives d from victim status + constrained exit -> high d -> high χ.
-constraint_indexing:constraint_classification(p_vs_np, snare,
+constraint_indexing:constraint_classification(p_vs_np, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(p_vs_np, snare,
 % Agent who benefits most. The hardness of NP problems is the coordination
 % mechanism that enables public-key cryptography and digital trust.
 % Engine derives d from beneficiary status + arbitrage exit -> low d -> negative χ.
-constraint_indexing:constraint_classification(p_vs_np, rope,
+constraint_indexing:constraint_classification(p_vs_np, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

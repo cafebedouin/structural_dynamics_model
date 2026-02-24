@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(hp_liberalism, younger_generations).
 % PERSPECTIVE 1: THE MILLENNIAL "HP ADULT" (SNARE)
 % Trapped by nostalgia, the high extraction from monetization is felt directly.
 % χ = 0.52 * 1.5 (powerless) * 1.0 (national) = 0.78. This is a clear Snare.
-constraint_indexing:constraint_classification(hp_liberalism, snare,
+constraint_indexing:constraint_classification(hp_liberalism, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(hp_liberalism, piton,
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless (Snare) and institutional (Rope).
-    constraint_indexing:constraint_classification(hp_liberalism, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hp_liberalism, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hp_liberalism, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(hp_liberalism, tangled_rope, context(agent_power(analytical), _, _, _)).
 

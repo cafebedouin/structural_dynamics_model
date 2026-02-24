@@ -96,7 +96,7 @@ narrative_ontology:constraint_victim(aging_longevity_tests, aging_patients).
 % The system is experienced as a costly, coercive trap. Poor scores lead to
 % expensive, mandatory interventions, creating a cycle of dependency.
 % χ = 0.52 * 1.5 (powerless) * 1.0 (national) = 0.78.
-constraint_indexing:constraint_classification(aging_longevity_tests, snare,
+constraint_indexing:constraint_classification(aging_longevity_tests, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(aging_longevity_tests, tangled_rop
 
 test(perspectival_gap_snare_vs_rope) :-
     % Verify the core perspectival gap between the patient (snare) and provider (rope).
-    constraint_indexing:constraint_classification(aging_longevity_tests, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(aging_longevity_tests, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(aging_longevity_tests, rope, context(agent_power(institutional), _, _, _)).
 
 test(tangled_rope_structure_validation) :-

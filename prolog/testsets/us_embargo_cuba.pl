@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(us_embargo_cuba, us_companies_seeking_trade
 % PERSPECTIVE 1: THE PRIMARY TARGET (CUBAN CITIZENS)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(us_embargo_cuba, snare,
+constraint_indexing:constraint_classification(us_embargo_cuba, naturalized,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(us_embargo_cuba, snare,
 %   beneficiary membership + constrained exit → d ≈ 0.25 → f(d) ≈ 0.12 → moderate χ
 % The 'constrained' exit reflects diplomatic and economic costs, making this a
 % complex Tangled Rope, not a simple Rope.
-constraint_indexing:constraint_classification(us_embargo_cuba, tangled_rope,
+constraint_indexing:constraint_classification(us_embargo_cuba, rope,
     context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(constrained),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(us_embargo_cuba, snare,
 % PERSPECTIVE 4: US COMPANIES (SECONDARY VICTIM)
 % US companies are victims as they lose trade opportunities, but have mobile
 % exit (they can invest elsewhere). This makes it a Tangled Rope for them.
-constraint_indexing:constraint_classification(us_embargo_cuba, tangled_rope,
+constraint_indexing:constraint_classification(us_embargo_cuba, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -178,7 +178,7 @@ constraint_indexing:constraint_classification(us_embargo_cuba, snare,
 % PERSPECTIVE 6: GLOBAL TRADE PARTNERS
 % Countries trading with Cuba face risks of secondary sanctions but have
 % arbitrage options. For them, it's a Tangled Rope involving coordination and risk.
-constraint_indexing:constraint_classification(us_embargo_cuba, tangled_rope,
+constraint_indexing:constraint_classification(us_embargo_cuba, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

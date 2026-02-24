@@ -137,7 +137,7 @@ narrative_ontology:constraint_victim(global_digital_divide, disconnected_populat
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(global_digital_divide, snare,
+constraint_indexing:constraint_classification(global_digital_divide, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(global_digital_divide, rope,
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(global_digital_divide, tangled_rope,
+constraint_indexing:constraint_classification(global_digital_divide, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(global_digital_divide, tangled_rop
 % An institutional actor (e.g., government) whose exit options are constrained
 % by political or economic factors, leading them to experience the constraint
 % more extractively than the primary beneficiary.
-constraint_indexing:constraint_classification(global_digital_divide, tangled_rope,
+constraint_indexing:constraint_classification(global_digital_divide, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

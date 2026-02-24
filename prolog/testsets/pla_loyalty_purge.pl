@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(pla_loyalty_purge, rope,
 % and the severe, asymmetric extraction. This dual nature is the hallmark of a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % The structure includes beneficiary, victim, and active enforcement.
-constraint_indexing:constraint_classification(pla_loyalty_purge, tangled_rope,
+constraint_indexing:constraint_classification(pla_loyalty_purge, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(pla_loyalty_purge, tangled_rope,
 % constrained; it must enforce the purge. It experiences the system as a
 % high-stakes mechanism that it must operate, acknowledging its extractive nature.
 % The directionality 'd' is intermediate, leading to a Tangled Rope classification.
-constraint_indexing:constraint_classification(pla_loyalty_purge, tangled_rope,
+constraint_indexing:constraint_classification(pla_loyalty_purge, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

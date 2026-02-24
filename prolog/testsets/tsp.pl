@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(tsp_duplicate_elimination, computational_re
 % the constraint is a Rope. The overhead of checking for duplicates (the
 % "extraction") is minimal and serves a clear coordination function that
 % reduces overall workload.
-constraint_indexing:constraint_classification(tsp_duplicate_elimination, rope,
+constraint_indexing:constraint_classification(tsp_duplicate_elimination, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

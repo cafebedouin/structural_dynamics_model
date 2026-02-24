@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, rope
 % Because it possesses a genuine coordination function (beneficiary is declared),
 % asymmetric extraction (victim is declared), and requires enforcement, the structure
 % is a Tangled Rope, despite the very high extraction.
-constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, tangled_rope,
+constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -170,7 +170,7 @@ test(perspectival_gap_is_snare_vs_rope) :-
     constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % A constraint is a Tangled Rope only if it has a beneficiary (coordination),

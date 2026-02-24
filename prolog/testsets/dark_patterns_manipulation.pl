@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(dark_patterns_manipulation, rope,
 % psychological vulnerability. Human cognitive biases (loss aversion, default bias)
 % are immutable. The fact that they *can* be exploited is a feature of our biological
 % nature that designers must either respect or abuse.
-constraint_indexing:constraint_classification(dark_patterns_manipulation, tangled_rope,
+constraint_indexing:constraint_classification(dark_patterns_manipulation, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -131,7 +131,7 @@ test(perspectival_gap) :-
     assertion(TypeInstitutional == rope).
 
 test(analytical_perspective_is_mountain) :-
-    constraint_indexing:constraint_classification(dark_patterns_manipulation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(dark_patterns_manipulation, snare, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_and_suppression) :-
     domain_priors:base_extractiveness(dark_patterns_manipulation, E),

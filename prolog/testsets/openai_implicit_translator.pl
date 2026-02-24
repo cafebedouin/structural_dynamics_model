@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(openai_implicit_translator, incumbent_trans
 % Users providing data are the victims. The engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 %   χ = 0.52 * 1.42 * 1.2 (global) ≈ 0.88. This is χ >= 0.66, so it's a Snare.
-constraint_indexing:constraint_classification(openai_implicit_translator, snare,
+constraint_indexing:constraint_classification(openai_implicit_translator, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(openai_implicit_translator, rope,
 % (data). High ε and high suppression force a Tangled Rope classification.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.52 * 1.15 * 1.2 (global) ≈ 0.72. This is 0.40 <= χ <= 0.90.
-constraint_indexing:constraint_classification(openai_implicit_translator, tangled_rope,
+constraint_indexing:constraint_classification(openai_implicit_translator, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(openai_implicit_translator, tangle
 % competition. Their exit is constrained. The engine derives a moderately high d.
 % They see both the coordination function (it's a real service) and the extractive
 % threat to their market share, classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(openai_implicit_translator, tangled_rope,
+constraint_indexing:constraint_classification(openai_implicit_translator, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -175,7 +175,7 @@ test(perspectival_gap_user_vs_provider, [nondet]) :-
     constraint_indexing:constraint_classification(openai_implicit_translator, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(openai_implicit_translator, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(openai_implicit_translator, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements) :-
     % Verify all three conditions for Tangled Rope are met.

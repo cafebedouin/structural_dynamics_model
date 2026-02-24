@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(cholesterol_pill_cost, rope,
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
 % Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
-constraint_indexing:constraint_classification(cholesterol_pill_cost, tangled_rope,
+constraint_indexing:constraint_classification(cholesterol_pill_cost, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

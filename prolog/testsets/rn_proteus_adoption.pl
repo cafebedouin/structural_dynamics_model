@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(rn_proteus_adoption, manned_helicopter_crew
 % threat is existential, the base extraction (ε=0.20) of this initial pilot
 % program is too low to classify as a Tangled Rope, even from their powerless
 % perspective. It registers as a coercive Rope.
-constraint_indexing:constraint_classification(rn_proteus_adoption, rope,
+constraint_indexing:constraint_classification(rn_proteus_adoption, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -131,7 +131,7 @@ constraint_indexing:constraint_classification(rn_proteus_adoption, rope,
 % As the primary commercial beneficiary with high exit (can sell to other navies),
 % Leonardo perceives this as a pure coordination mechanism that subsidizes them.
 % d is low, f(d) is negative, leading to a Rope classification.
-constraint_indexing:constraint_classification(rn_proteus_adoption, rope,
+constraint_indexing:constraint_classification(rn_proteus_adoption, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(rn_proteus_adoption, rope,
 % As the adopting institution, the RN also sees a coordination tool. Their exit
 % is 'constrained' by the significant investment, leading to a slightly higher
 % directionality than Leonardo, but still firmly classifying as Rope.
-constraint_indexing:constraint_classification(rn_proteus_adoption, rope,
+constraint_indexing:constraint_classification(rn_proteus_adoption, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(rn_proteus_adoption, rope,
 % The analytical view sees a temporary support structure. The low effective
 % extraction (χ ≈ 0.20 * 1.15 * 1.2 = 0.276 <= 0.30) combined with the de facto
 % sunset clause (the 2-year trial) meets the criteria for a Scaffold.
-constraint_indexing:constraint_classification(rn_proteus_adoption, scaffold,
+constraint_indexing:constraint_classification(rn_proteus_adoption, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -167,7 +167,7 @@ test(perspectival_gap_scaffold_vs_rope, [nondet]) :-
     % Verify the key gap: participants see Rope, analysis sees Scaffold.
     constraint_indexing:constraint_classification(rn_proteus_adoption, rope,
         context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(rn_proteus_adoption, scaffold,
+    constraint_indexing:constraint_classification(rn_proteus_adoption, tangled_rope,
         context(agent_power(analytical), _, _, _)).
 
 test(target_is_not_snare_due_to_low_epsilon, [nondet]) :-

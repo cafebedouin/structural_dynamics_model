@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(regional_military_deterrence_midea
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The analytical view recognizes both the coordinating intent and the immense,
 % asymmetric extraction and coercion, classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(regional_military_deterrence_mideast, tangled_rope,
+constraint_indexing:constraint_classification(regional_military_deterrence_mideast, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -168,7 +168,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
 
 test(analytical_synthesis_is_tangled_rope) :-
     % Verify the analytical perspective correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(regional_military_deterrence_mideast, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(regional_military_deterrence_mideast, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_for_tangled_rope) :-
     % Tangled Rope requires high base extraction and suppression.

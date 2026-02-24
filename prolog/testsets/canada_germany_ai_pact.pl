@@ -131,7 +131,7 @@ narrative_ontology:constraint_victim(canada_germany_ai_pact, national_competitio
 % the market. Their d is high due to victim status and trapped exit.
 % χ = 0.48 * f(0.95) * 1.0 ≈ 0.48 * 1.42 = 0.68. This meets snare thresholds
 % (ε≥0.46, suppression≥0.60, χ≥0.66).
-constraint_indexing:constraint_classification(canada_germany_ai_pact, snare,
+constraint_indexing:constraint_classification(canada_germany_ai_pact, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(canada_germany_ai_pact, rope,
 % simply ignore a major government initiative. This results in a moderate d
 % and a Tangled Rope classification. They see the coordination benefits but
 % are acutely aware of the extractive, anti-competitive side effects.
-constraint_indexing:constraint_classification(canada_germany_ai_pact, tangled_rope,
+constraint_indexing:constraint_classification(canada_germany_ai_pact, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -188,14 +188,14 @@ constraint_indexing:constraint_classification(canada_germany_ai_pact, tangled_ro
 
 test(perspectival_gap_target_beneficiary) :-
     % Verify perspectival gap between target (SME) and beneficiary (Corp).
-    constraint_indexing:constraint_classification(canada_germany_ai_pact, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(canada_germany_ai_pact, naturalized, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(canada_germany_ai_pact, rope, context(agent_power(institutional), _, arbitrage, _)),
     true.
 
 test(perspectival_gap_inter_institutional) :-
     % Verify gap between the policy architect and the competition bureau.
     constraint_indexing:constraint_classification(canada_germany_ai_pact, rope, context(agent_power(institutional), _, arbitrage, _)),
-    constraint_indexing:constraint_classification(canada_germany_ai_pact, tangled_rope, context(agent_power(institutional), _, constrained, _)),
+    constraint_indexing:constraint_classification(canada_germany_ai_pact, rope, context(agent_power(institutional), _, constrained, _)),
     true.
 
 test(analytical_claim_matches) :-

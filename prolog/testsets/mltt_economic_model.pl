@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(mltt_economic_model, professional_players).
 % game in town. As a member of the 'victim' group with 'trapped' exit, the
 % engine derives a d value near 1.0, maximizing effective extraction. From
 % this view, the league is a pure Snare.
-constraint_indexing:constraint_classification(mltt_economic_model, snare,
+constraint_indexing:constraint_classification(mltt_economic_model, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(mltt_economic_model, snare,
 % is tied to the league's success), the engine derives a high d value,
 % amplifying the base extractiveness. From their view, the league is a highly
 % coercive structure that controls their professional life.
-constraint_indexing:constraint_classification(mltt_economic_model, snare,
+constraint_indexing:constraint_classification(mltt_economic_model, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),

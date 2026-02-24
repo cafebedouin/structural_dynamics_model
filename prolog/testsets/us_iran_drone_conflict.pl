@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(us_iran_drone_conflict, iran).
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives.  Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(us_iran_drone_conflict, snare,
+constraint_indexing:constraint_classification(us_iran_drone_conflict, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(us_iran_drone_conflict, rope,
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
 % Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
-constraint_indexing:constraint_classification(us_iran_drone_conflict, tangled_rope,
+constraint_indexing:constraint_classification(us_iran_drone_conflict, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

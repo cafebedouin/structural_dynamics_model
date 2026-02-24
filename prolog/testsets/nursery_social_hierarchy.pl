@@ -82,7 +82,7 @@ narrative_ontology:constraint_victim(nursery_social_hierarchy, plush_toys).
 % PERSPECTIVE 1: THE VELVETEEN RABBIT (SNARE)
 % A system of total insignificance and mockery.
 % Derived d from victim status + trapped exit -> d ≈ 0.95 -> high chi
-constraint_indexing:constraint_classification(nursery_social_hierarchy, snare,
+constraint_indexing:constraint_classification(nursery_social_hierarchy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(nursery_social_hierarchy, rope,
 % The institutional power that provides the toys and sets the environment.
 % Sees the hierarchy as a self-organizing, low-maintenance system of order.
 % Beneficiary status + arbitrage exit -> d ≈ 0.05 -> low/negative chi
-constraint_indexing:constraint_classification(nursery_social_hierarchy, rope,
+constraint_indexing:constraint_classification(nursery_social_hierarchy, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(nursery_social_hierarchy, rope,
 
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SNARE)
 % Sees the full extractive structure behind the social theater.
-constraint_indexing:constraint_classification(nursery_social_hierarchy, snare,
+constraint_indexing:constraint_classification(nursery_social_hierarchy, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -123,9 +123,9 @@ constraint_indexing:constraint_classification(nursery_social_hierarchy, snare,
 
 test(perspectival_gap) :-
     % Target sees a Snare; Beneficiaries (powerful/institutional) see a Rope.
-    constraint_indexing:constraint_classification(nursery_social_hierarchy, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(nursery_social_hierarchy, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(nursery_social_hierarchy, rope, context(agent_power(powerful), _, _, _)),
-    constraint_indexing:constraint_classification(nursery_social_hierarchy, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(nursery_social_hierarchy, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(threshold_validation) :-
     % Verify high extraction consistent with Snare classification.

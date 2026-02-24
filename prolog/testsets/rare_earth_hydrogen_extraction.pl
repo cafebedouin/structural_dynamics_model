@@ -114,7 +114,7 @@ narrative_ontology:constraint_victim(rare_earth_hydrogen_extraction, developing_
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Developing nations without REE resources, trapped by economic dependency.
 % victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(rare_earth_hydrogen_extraction, snare,
+constraint_indexing:constraint_classification(rare_earth_hydrogen_extraction, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(rare_earth_hydrogen_extraction, sn
 % PERSPECTIVE 2: INDUSTRIAL HYDROGEN CONSUMERS (SNARE)
 % Agent who bears the extraction costs related to REE dependencies.
 % victim membership + constrained exit → d ≈ 0.85 → f(d) ≈ 1.15 → high χ
-constraint_indexing:constraint_classification(rare_earth_hydrogen_extraction, snare,
+constraint_indexing:constraint_classification(rare_earth_hydrogen_extraction, tangled_rope,
     context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),

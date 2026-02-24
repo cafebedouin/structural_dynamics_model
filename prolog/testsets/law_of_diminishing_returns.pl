@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(law_of_diminishing_returns, overextended_fi
 % harder for everyone, yet they are judged by the falling marginal output.
 % The system strangles their effectiveness, extracting their labor within a
 % trap of decreasing returns.
-constraint_indexing:constraint_classification(law_of_diminishing_returns, snare,
+constraint_indexing:constraint_classification(law_of_diminishing_returns, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(law_of_diminishing_returns, tangle
 
 test(perspectival_gap) :-
     % Verify the gap between the worker (Snare) and the owner (Rope).
-    constraint_indexing:constraint_classification(law_of_diminishing_returns, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(law_of_diminishing_returns, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(law_of_diminishing_returns, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(law_of_diminishing_returns, tangled_rope, context(agent_power(analytical), _, _, _)).
 

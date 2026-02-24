@@ -54,7 +54,7 @@ narrative_ontology:constraint_victim(theatrical_neutrality, civic_discourse).
    3. INDEXED CLASSIFICATIONS
    ========================================================================== */
 % Editorial perspective: It's a Rope/Piton to preserve brand authority.
-constraint_indexing:constraint_classification(theatrical_neutrality, piton,
+constraint_indexing:constraint_classification(theatrical_neutrality, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

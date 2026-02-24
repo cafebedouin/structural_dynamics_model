@@ -89,7 +89,7 @@ domain_priors:requires_active_enforcement(ulysses_oxen_1904). % The "Horhorn" qu
 % Effective Extraction: 0.55 * 1.5 (powerless) * 0.8 (local) = 0.66.
 % Perceived as a "lutulent reality" of pain and "downwardtending" force 
 % .
-constraint_indexing:constraint_classification(ulysses_oxen_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_oxen_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(ulysses_oxen_1904, snare,
 % Effective Extraction: 0.55 * -0.2 (institutional) * 1.0 = -0.11.
 % The "omnipollent nature’s incorrupted benefaction" functions as a 
 % structural floor.
-constraint_indexing:constraint_classification(ulysses_oxen_1904, mountain, 
+constraint_indexing:constraint_classification(ulysses_oxen_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(civilizational), 
             exit_options(mobile), 
@@ -122,8 +122,8 @@ constraint_indexing:constraint_classification(ulysses_oxen_1904, piton,
 
 test(perspectival_gap) :-
     % Verify shift from Snare (Mina) to Mountain (Biological Law).
-    constraint_indexing:constraint_classification(ulysses_oxen_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_oxen_1904, mountain, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_oxen_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_oxen_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_check) :-
     % Piton classification requires theater_ratio >= 0.70.

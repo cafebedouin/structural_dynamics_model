@@ -113,7 +113,7 @@ narrative_ontology:constraint_victim(adverse_possession, negligent_property_owne
 
 constraint_indexing:constraint_classification(
     adverse_possession,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(historical),

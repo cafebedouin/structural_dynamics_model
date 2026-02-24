@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(roman_bath_system, provincial_taxpayers).
 % From the perspective of an enslaved laborer or a heavily taxed provincial,
 % the system is pure extraction of their life/resources for others' benefit.
 % Engine derives: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(roman_bath_system, snare,
+constraint_indexing:constraint_classification(roman_bath_system, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(roman_bath_system, snare,
 % From the perspective of a Roman citizen, the baths are a low-cost public good.
 % A pure coordination mechanism for health and social life.
 % Engine derives d from beneficiary status + mobile exit -> d ≈ 0.15 -> f(d) ≈ -0.01 -> low χ
-constraint_indexing:constraint_classification(roman_bath_system, rope,
+constraint_indexing:constraint_classification(roman_bath_system, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -170,8 +170,8 @@ constraint_indexing:constraint_classification(roman_bath_system, tangled_rope,
 :- begin_tests(roman_bath_system_tests).
 
 test(perspectival_gap_target_vs_beneficiary, [nondet]) :-
-    constraint_indexing:constraint_classification(roman_bath_system, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(roman_bath_system, rope, context(agent_power(moderate), _, _, _)),
+    constraint_indexing:constraint_classification(roman_bath_system, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(roman_bath_system, tangled_rope, context(agent_power(moderate), _, _, _)),
     constraint_indexing:constraint_classification(roman_bath_system, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-

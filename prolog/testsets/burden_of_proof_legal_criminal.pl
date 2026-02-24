@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(burden_of_proof_legal_criminal, state_prose
 % Agent who is protected by the constraint. While it feels like an
 % unchangeable Mountain, it is structurally a highly stable Rope.
 % The suppression score (0.20) is too high for a Mountain (max 0.05).
-constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope,
+constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, ro
 
 test(uniform_rope_classification) :-
     % Verify that from all key perspectives, this is a Rope.
-    constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope, context(agent_power(analytical), _, _, _)).
 

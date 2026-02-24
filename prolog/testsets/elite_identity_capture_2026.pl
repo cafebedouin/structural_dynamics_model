@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(elite_identity_capture_2026, rope,
 % the beneficiary (Rope aspect) while simultaneously performing high, asymmetric
 % extraction on the target (Snare aspect). This hybrid nature is the definition
 % of a Tangled Rope.
-constraint_indexing:constraint_classification(elite_identity_capture_2026, tangled_rope,
+constraint_indexing:constraint_classification(elite_identity_capture_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(mass_market_extinction_2026, rope,
 % function (democratizing literacy) but became highly extractive and required
 % active enforcement of its pricing/distribution model, ultimately harming one group
 % while benefiting another's exit strategy.
-constraint_indexing:constraint_classification(mass_market_extinction_2026, tangled_rope,
+constraint_indexing:constraint_classification(mass_market_extinction_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap) :-
     % Subject feels the loss of access (Snare), Institution coordinates the exit (Rope).
     constraint_indexing:constraint_classification(mass_market_extinction_2026, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(mass_market_extinction_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(mass_market_extinction_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(mass_market_extinction_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(extraction_threshold) :-
     domain_priors:base_extractiveness(mass_market_extinction_2026, E),

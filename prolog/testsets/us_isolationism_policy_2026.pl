@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(us_isolationism_policy_2026, snare
 
 % Perspective 4A: International Organizations (e.g., UN, WHO)
 % As victims with constrained exit, their derived `d` is high, leading to a Snare classification.
-constraint_indexing:constraint_classification(us_isolationism_policy_2026, snare,
+constraint_indexing:constraint_classification(us_isolationism_policy_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(us_isolationism_policy_2026, snare
 % Perspective 4B: Allied Nations (e.g., a NATO member)
 % Also victims, they see the withdrawal as a Snare that undermines collective security.
 % Their exit is constrained because they cannot easily replace the US security guarantee.
-constraint_indexing:constraint_classification(us_isolationism_policy_2026, snare,
+constraint_indexing:constraint_classification(us_isolationism_policy_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

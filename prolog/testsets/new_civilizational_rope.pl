@@ -84,7 +84,7 @@ constraint_indexing:constraint_classification(decentralized_infrastructure_rope,
 % PERSPECTIVE 2: THE INSTITUTIONAL INCUMBENT (SNARE)
 % To the old legacy bureaucracy, the new auditable system is a Snare—it 
 % prevents them from extracting political rent or hiding decay.
-constraint_indexing:constraint_classification(decentralized_infrastructure_rope, snare, 
+constraint_indexing:constraint_classification(decentralized_infrastructure_rope, rope, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(trapped), 
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(decentralized_infrastructure_rope,
 % PERSPECTIVE 3: THE CIVILIZATIONAL OBSERVER (MOUNTAIN)
 % Over long horizons, the protocol becomes a Mountain—a fundamental, 
 % unchangeable physical/logical limit that society takes for granted.
-constraint_indexing:constraint_classification(decentralized_infrastructure_rope, tangled_rope, 
+constraint_indexing:constraint_classification(decentralized_infrastructure_rope, rope, 
     context(agent_power(analytical), 
             time_horizon(civilizational), 
             exit_options(analytical), 

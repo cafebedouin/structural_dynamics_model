@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(tear_gas_repression_2026, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The Auditor identifies the "riot-incentive" loop: the gas is a hybrid
 % coordination (dispersal) and extraction (incitement/harm) tool.
-constraint_indexing:constraint_classification(tear_gas_repression_2026, tangled_rope,
+constraint_indexing:constraint_classification(tear_gas_repression_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap) :-
     % Subject feels a Snare (Trapped/Pain), State sees a Rope (Coordination).
     constraint_indexing:constraint_classification(tear_gas_repression_2026, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(tear_gas_repression_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(tear_gas_repression_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(tear_gas_repression_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_threshold_validation) :-
     % A tangled_rope requires high extraction and suppression.

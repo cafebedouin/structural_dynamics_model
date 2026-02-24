@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(fda_component_efficacy_standard, combinatio
 % A small, powerless developer with one product is trapped. The high cost of
 % trials is an existential threat. The engine derives a high d (~0.95), leading
 % to very high effective extraction (χ), classifying this as a Snare.
-constraint_indexing:constraint_classification(fda_component_efficacy_standard, snare,
+constraint_indexing:constraint_classification(fda_component_efficacy_standard, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(fda_component_efficacy_standard, r
 % heavy asymmetric extraction (high costs on developers). The high ε and
 % suppression, combined with the presence of both beneficiaries and victims,
 % lead to a Tangled Rope classification.
-constraint_indexing:constraint_classification(fda_component_efficacy_standard, tangled_rope,
+constraint_indexing:constraint_classification(fda_component_efficacy_standard, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(fda_component_efficacy_standard, t
 % sell in the US without approval), the engine derives a moderately high d.
 % The resulting χ is high enough to be extractive, but not a pure snare,
 % recognizing both the coordination and extraction elements. A classic Tangled Rope.
-constraint_indexing:constraint_classification(fda_component_efficacy_standard, tangled_rope,
+constraint_indexing:constraint_classification(fda_component_efficacy_standard, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -180,7 +180,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view must identify the hybrid nature of the constraint.
-    constraint_indexing:constraint_classification(fda_component_efficacy_standard, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(fda_component_efficacy_standard, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_gap) :-
     % Verify the gap between two institutional actors with different exit options.

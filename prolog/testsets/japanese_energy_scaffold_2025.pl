@@ -86,7 +86,7 @@ narrative_ontology:constraint_victim(japanese_energy_scaffold_2025, fossil_fuel_
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For a local community, the top-down national project is a coercive trap.
 % χ = 0.55 (ε) * 1.5 (π(powerless)) * 0.8 (σ(local)) = 0.66
-constraint_indexing:constraint_classification(japanese_energy_scaffold_2025, snare,
+constraint_indexing:constraint_classification(japanese_energy_scaffold_2025, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(japanese_energy_scaffold_2025, rop
 % The system has a genuine coordination function (energy security) but also
 % imposes high, asymmetric extraction and requires active enforcement.
 % χ = 0.55 (ε) * 1.15 (π(analytical)) * 1.2 (σ(global)) = 0.759
-constraint_indexing:constraint_classification(japanese_energy_scaffold_2025, tangled_rope,
+constraint_indexing:constraint_classification(japanese_energy_scaffold_2025, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -127,7 +127,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical perspective must resolve the gap as a Tangled Rope.
-    constraint_indexing:constraint_classification(japanese_energy_scaffold_2025, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(japanese_energy_scaffold_2025, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-
     % Verify all three structural requirements for Tangled Rope are met.

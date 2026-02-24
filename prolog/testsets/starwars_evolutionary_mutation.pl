@@ -106,7 +106,7 @@ narrative_ontology:constraint_victim(starwars_evolutionary_mutation, the_jedi_li
 % Mountain. It is an unchangeable feature of the institutional landscape that
 % no amount of evidence can shift because the Council has delegated its
 % "diagnostic sensors" to the Senate.
-constraint_indexing:constraint_classification(starwars_evolutionary_mutation, mountain,
+constraint_indexing:constraint_classification(starwars_evolutionary_mutation, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

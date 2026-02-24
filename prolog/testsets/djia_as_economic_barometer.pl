@@ -135,7 +135,7 @@ narrative_ontology:constraint_victim(djia_as_economic_barometer, non_investors).
 % Bears the cost of policy misdirection. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 %   χ = 0.48 * 1.42 * 1.0 (national) ≈ 0.68. This meets the snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(djia_as_economic_barometer, snare,
+constraint_indexing:constraint_classification(djia_as_economic_barometer, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

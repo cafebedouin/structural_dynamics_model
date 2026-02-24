@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(helsinki_bus_theory, novice_artists).
 % For the beginner, the theory is a 'Snare'. They are "always being compared to others"
 % and feel that their time is being wasted in a derivative loop, strangling their
 % sense of creative self-worth and leading to frustration.
-constraint_indexing:constraint_classification(helsinki_bus_theory, snare,
+constraint_indexing:constraint_classification(helsinki_bus_theory, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(helsinki_bus_theory, rope,
 % To the master, the constraint is a 'Mountain'—an unchangeable structural reality of
 % how mastery works. One cannot simply "leap" to uniqueness; the first kilometer
 % is a zero-degree-of-freedom path that all must traverse.
-constraint_indexing:constraint_classification(helsinki_bus_theory, mountain,
+constraint_indexing:constraint_classification(helsinki_bus_theory, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),

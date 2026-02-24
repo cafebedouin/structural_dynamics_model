@@ -89,11 +89,11 @@ constraint_indexing:constraint_classification(apartheid_nuclear_program, snare,
     context(agent_power(powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(local))).
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-constraint_indexing:constraint_classification(apartheid_nuclear_program, tangled_rope, 
+constraint_indexing:constraint_classification(apartheid_nuclear_program, snare, 
     context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))).
 
 % PERSPECTIVE 4: THE NUCLEAR PHYSICIST (MOUNTAIN)
-constraint_indexing:constraint_classification(apartheid_nuclear_program, mountain, 
+constraint_indexing:constraint_classification(apartheid_nuclear_program, snare, 
     context(agent_power(analytical), time_horizon(civilizational), exit_options(analytical), spatial_scope(continental))).
 
 /* ==========================================================================

@@ -1,20 +1,20 @@
 # Chi Variance Decomposition Analysis
 
-*Generated 2026-02-24 02:09 by `python/chi_variance_decomposition.py`*
+*Generated 2026-02-24 13:53 by `python/chi_variance_decomposition.py`*
 
 ---
 
 ## 1. Executive Summary
 
-Analyzed **752** tangled_rope constraints (664 genuinely perspectival).
+Analyzed **506** tangled_rope constraints (402 genuinely perspectival).
 
-**Variance driver**: f(d) (power sigmoid). Of total f(d)+scope variance, f(d) accounts for 94.9% and scope for 5.1%. (Negative interaction means Var_fd + Var_scope > Var_total.)
+**Variance driver**: f(d) (power sigmoid). Of total f(d)+scope variance, f(d) accounts for 94.8% and scope for 5.2%. (Negative interaction means Var_fd + Var_scope > Var_total.)
 
-**Sweep stability**: At σ(global)=1.0, GP fraction = 73.3% (baseline at σ=1.2: 88.3%).
+**Sweep stability**: At σ(global)=1.0, GP fraction = 55.3% (baseline at σ=1.2: 79.4%).
 
 GP drops below 80% at σ(global) = 1.0.
 
-Chi overrides detected: **19** constraints (tolerance = 0.01).
+Chi overrides detected: **7** constraints (tolerance = 0.01).
 
 
 Discovered scope mapping: {'powerless': 0.8, 'moderate': 1.0, 'institutional': 1.0, 'analytical': 1.2}
@@ -38,35 +38,35 @@ Var_total = Var(χ_full), Var_fd = Var(χ_fd_only), Var_scope = Var(χ_scope_onl
 
 **Note on negative interaction**: When f(d) and scope variations are anti-correlated across perspectives (high f(d) pairs with low scope, and vice versa), their product has less variance than the sum of individual variances. This makes Var_interaction negative and fd_fraction + scope_fraction > 1.0. This is expected, not an error — it means f(d) and scope partially cancel each other.
 
-### 2.2 Full Population (N=752)
+### 2.2 Full Population (N=506)
 
 | Component | Mean | Median | Std | Q25 | Q75 |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| var_total | 0.118268 | 0.089592 | 0.062098 | 0.068238 | 0.166596 |
-| var_fd | 0.119662 | 0.090664 | 0.062906 | 0.069054 | 0.168589 |
-| var_scope | 0.006431 | 0.005343 | 0.003323 | 0.003659 | 0.008933 |
-| var_interaction | -0.007825 | -0.006146 | 0.004179 | -0.010927 | -0.004476 |
-| fd_fraction | 1.010231 | 1.011965 | 0.029675 | 1.011964 | 1.011966 |
-| scope_fraction | 0.062325 | 0.053623 | 0.110016 | 0.053623 | 0.053623 |
+| var_total | 0.083826 | 0.080084 | 0.047534 | 0.059974 | 0.089592 |
+| var_fd | 0.084778 | 0.081043 | 0.048154 | 0.060692 | 0.090664 |
+| var_scope | 0.004608 | 0.004294 | 0.002628 | 0.003659 | 0.004804 |
+| var_interaction | -0.005561 | -0.005253 | 0.003217 | -0.005876 | -0.004291 |
+| fd_fraction | 1.007500 | 1.011965 | 0.057133 | 1.011964 | 1.011966 |
+| scope_fraction | 0.064750 | 0.053623 | 0.128753 | 0.053623 | 0.053623 |
 
-### 2.3 Genuinely Perspectival Subset (N=664)
+### 2.3 Genuinely Perspectival Subset (N=402)
 
 | Component | Mean | Median | Std | Q25 | Q75 |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| var_total | 0.129634 | 0.106621 | 0.056841 | 0.089592 | 0.166596 |
-| var_fd | 0.131170 | 0.107897 | 0.057589 | 0.090664 | 0.168589 |
-| var_scope | 0.006970 | 0.005717 | 0.003030 | 0.004804 | 0.008933 |
-| var_interaction | -0.008506 | -0.006993 | 0.003887 | -0.010927 | -0.005664 |
-| fd_fraction | 1.010927 | 1.011965 | 0.029144 | 1.011964 | 1.011966 |
-| scope_fraction | 0.054144 | 0.053623 | 0.008703 | 0.053623 | 0.053623 |
+| var_total | 0.097301 | 0.089592 | 0.043532 | 0.068238 | 0.089592 |
+| var_fd | 0.098410 | 0.090664 | 0.044125 | 0.069054 | 0.090664 |
+| var_scope | 0.005246 | 0.004804 | 0.002318 | 0.003659 | 0.004804 |
+| var_interaction | -0.006355 | -0.005876 | 0.002965 | -0.005876 | -0.004476 |
+| fd_fraction | 1.010058 | 1.011965 | 0.036629 | 1.011964 | 1.011966 |
+| scope_fraction | 0.054466 | 0.053623 | 0.011177 | 0.053623 | 0.053623 |
 
 ### 2.4 By Subtype
 
 | Subtype | N | Mean fd_frac | Mean scope_frac | Mean interaction |
 | :--- | ---: | ---: | ---: | ---: |
-| genuinely_perspectival | 664 | 1.0109 | 0.0541 | -0.008506 |
-| structurally_ambiguous | 58 | 1.0071 | 0.1072 | -0.003080 |
-| rope_dominant | 28 | 1.0120 | 0.0536 | -0.001033 |
+| genuinely_perspectival | 402 | 1.0101 | 0.0545 | -0.006355 |
+| structurally_ambiguous | 62 | 1.0089 | 0.0900 | -0.003027 |
+| rope_dominant | 40 | 0.9877 | 0.0522 | -0.001064 |
 | snare_dominant | 2 | 0.8468 | 1.5995 | -0.014523 |
 
 ### 2.5 Variance Share Distribution
@@ -79,14 +79,14 @@ Distribution of f(d) share = Var_fd / (Var_fd + Var_scope), which is always in [
   0.2-0.3 | # (1)
   0.3-0.4 | # (1)
   0.4-0.5 | # (0)
-  0.5-0.6 | # (4)
+  0.5-0.6 | # (3)
   0.6-0.7 | # (0)
   0.7-0.8 | # (0)
   0.8-0.9 | # (1)
-  0.9-1.0 | ######################################## (745)
+  0.9-1.0 | ######################################## (499)
 ```
 
-f(d) share: mean=0.9455, median=0.9497, min=0.2454, max=0.9531
+f(d) share: mean=0.9443, median=0.9497, min=0.2454, max=0.9585
 
 ### 2.6 Dominance Classification
 
@@ -94,31 +94,19 @@ Mutually exclusive: classified by which source has the larger fraction (must als
 
 | Category | Count | % |
 | :--- | ---: | ---: |
-| f(d)-dominated | 749 | 99.6000 |
-| scope-dominated | 2 | 0.3000 |
-| balanced | 1 | 0.1000 |
+| f(d)-dominated | 502 | 99.2000 |
+| scope-dominated | 2 | 0.4000 |
+| balanced | 2 | 0.4000 |
 
 ### 2.7 Chi Overrides
 
-19 constraints have Chi values that differ from `ε × f(d) × σ(S)` by more than 0.01.
+7 constraints have Chi values that differ from `ε × f(d) × σ(S)` by more than 0.01.
 
 These are constraints where manual overrides or rounding effects produce non-multiplicative Chi. The variance decomposition uses actual Chi for Var_total but multiplicative formula for counterfactuals.
 
 | Constraint | Max Discrepancy |
 | :--- | ---: |
-| trump_second_term_authoritarianism_2026 | 0.481852 |
-| dionysiac_frenzy | 0.453508 |
-| indonesia_penal_code_2023 | 0.425164 |
-| jp_nativist_politics | 0.385482 |
-| digital_credentialing_verification | 0.368475 |
-| nvidia_cuda_ecosystem_lockin | 0.368475 |
-| ai_compute_capital_moat | 0.351469 |
-| pele_microreactor_deployment | 0.340131 |
-| ai_performance_watermark | 0.311787 |
-| dk_us_alliance_espionage | 0.311787 |
-| openai_prism_development | 0.311787 |
-| semiconductor_fabrication_chokepoint | 0.311787 |
-| us_usmca_china_leverage | 0.311787 |
+| trojan_war_spoils | 0.566885 |
 | google_universal_commerce_protocol | 0.294780 |
 | canada_germany_ai_pact | 0.272105 |
 | eu_mercosur_trade_agreement | 0.272105 |
@@ -136,102 +124,102 @@ Global scope perspectives (from data): ['analytical']
 
 Local scope perspectives (from data): ['powerless']
 
-At each value: recompute χ = ε × f(d) × σ_swept, compute gradient, reclassify subtypes. **19 Chi overrides are replaced** by the multiplicative formula during sweep.
+At each value: recompute χ = ε × f(d) × σ_swept, compute gradient, reclassify subtypes. **7 Chi overrides are replaced** by the multiplicative formula during sweep.
 
 ### 3.2 Global Scope Sweep
 
 | σ | rope_dom | snare_dom | genuinely_persp | struct_ambig | GP% |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1.00 | 50 | 2 | 551 | 149 | 73.3 |
-| 1.05 | 47 | 2 | 642 | 61 | 85.4 |
-| 1.10 | 47 | 2 | 647 | 56 | 86.0 |
-| 1.15 | 28 | 2 | 655 | 67 | 87.1 |
-| 1.20 | 28 | 2 | 663 | 59 | 88.2 |
-| 1.25 | 26 | 2 | 696 | 28 | 92.5 |
-| 1.30 | 17 | 2 | 696 | 37 | 92.5 |
-| 1.35 | 17 | 2 | 699 | 34 | 93.0 |
-| 1.40 | 16 | 2 | 699 | 35 | 93.0 |
-| 1.45 | 16 | 2 | 718 | 16 | 95.5 |
-| 1.50 | 16 | 2 | 718 | 16 | 95.5 |
+| 1.00 | 61 | 2 | 280 | 163 | 55.3 |
+| 1.05 | 58 | 2 | 376 | 70 | 74.3 |
+| 1.10 | 58 | 2 | 381 | 65 | 75.3 |
+| 1.15 | 40 | 2 | 391 | 73 | 77.3 |
+| 1.20 | 40 | 2 | 401 | 63 | 79.2 |
+| 1.25 | 37 | 2 | 440 | 27 | 87.0 |
+| 1.30 | 26 | 2 | 440 | 38 | 87.0 |
+| 1.35 | 26 | 2 | 443 | 35 | 87.5 |
+| 1.40 | 24 | 2 | 443 | 37 | 87.5 |
+| 1.45 | 24 | 2 | 461 | 19 | 91.1 |
+| 1.50 | 24 | 2 | 461 | 19 | 91.1 |
 
 ### 3.3 Local Scope Sweep
 
 | σ | rope_dom | snare_dom | genuinely_persp | struct_ambig | GP% |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0.50 | 28 | 1 | 667 | 56 | 88.7 |
-| 0.55 | 28 | 1 | 666 | 57 | 88.6 |
-| 0.60 | 28 | 1 | 664 | 59 | 88.3 |
-| 0.65 | 28 | 2 | 663 | 59 | 88.2 |
-| 0.70 | 28 | 2 | 663 | 59 | 88.2 |
-| 0.75 | 28 | 2 | 663 | 59 | 88.2 |
-| 0.80 | 28 | 2 | 663 | 59 | 88.2 |
-| 0.85 | 28 | 2 | 663 | 59 | 88.2 |
-| 0.90 | 28 | 2 | 663 | 59 | 88.2 |
-| 0.95 | 28 | 2 | 663 | 59 | 88.2 |
-| 1.00 | 28 | 2 | 663 | 59 | 88.2 |
+| 0.50 | 40 | 1 | 404 | 61 | 79.8 |
+| 0.55 | 40 | 1 | 404 | 61 | 79.8 |
+| 0.60 | 40 | 1 | 402 | 63 | 79.5 |
+| 0.65 | 40 | 2 | 401 | 63 | 79.2 |
+| 0.70 | 40 | 2 | 401 | 63 | 79.2 |
+| 0.75 | 40 | 2 | 401 | 63 | 79.2 |
+| 0.80 | 40 | 2 | 401 | 63 | 79.2 |
+| 0.85 | 40 | 2 | 401 | 63 | 79.2 |
+| 0.90 | 40 | 2 | 401 | 63 | 79.2 |
+| 0.95 | 40 | 2 | 401 | 63 | 79.2 |
+| 1.00 | 40 | 2 | 402 | 62 | 79.5 |
 
 ### 3.4 Phase Transitions
 
 | Threshold | σ(global) at crossing | σ(local) at crossing |
 | :--- | ---: | ---: |
-| GP < 80% | 1.00 | never |
-| GP < 70% | never | never |
-| GP < 60% | never | never |
+| GP < 80% | 1.00 | 0.50 |
+| GP < 70% | 1.00 | never |
+| GP < 60% | 1.00 | never |
 | GP < 50% | never | never |
 
 **Snare growth > 5%**: global sweep = never, local sweep = never
 
 **No single subtype > 50%**: global sweep = never, local sweep = never
 
-**Max GP count change in one step**: global = 91 (σ 1.00→1.05), local = 2 (σ 0.55→0.60)
+**Max GP count change in one step**: global = 96 (σ 1.00→1.05), local = 2 (σ 0.55→0.60)
 
 ### 3.5 Stability Assessment
 
-At σ(global)=1.0 (scope neutralized with national), GP = 73.3%. **The 88% genuinely perspectival finding is robust** — it is driven primarily by f(d) and structural properties, not scope amplification.
+At σ(global)=1.0, GP = 55.3%. The finding is **moderately scope-dependent** — GP remains a majority but scope amplification contributes meaningfully.
 
 
 ## 4. Dominant Divergence Pair Analysis
 
-### 4.1 All Perspective Pairs (N=664 genuinely perspectival)
+### 4.1 All Perspective Pairs (N=402 genuinely perspectival)
 
 | Pair | Mean |Δχ| | Median |Δχ| | Std |
 | :--- | ---: | ---: | ---: |
-| institutional-analytical | 0.911924 | 0.847309 | 0.201823 |
-| moderate-institutional | 0.741882 | 0.689246 | 0.164844 |
-| powerless-institutional | 0.720106 | 0.677482 | 0.172730 |
-| powerless-analytical | 0.192432 | 0.175488 | 0.068703 |
-| moderate-analytical | 0.170109 | 0.158063 | 0.037757 |
-| powerless-moderate | 0.022367 | 0.012156 | 0.056994 |
+| institutional-analytical | 0.793446 | 0.776701 | 0.159477 |
+| moderate-institutional | 0.644658 | 0.631810 | 0.131141 |
+| powerless-institutional | 0.629411 | 0.621026 | 0.131364 |
+| powerless-analytical | 0.165012 | 0.155675 | 0.055298 |
+| moderate-analytical | 0.148788 | 0.144891 | 0.030612 |
+| powerless-moderate | 0.017073 | 0.010784 | 0.044539 |
 
 **Dominant pair**: institutional-analytical
 
 ### 4.2 Institutional↔Analytical Decomposition
 
-N = 664
+N = 402
 
 | Component | Mean | Median | Std |
 | :--- | ---: | ---: | ---: |
-| delta_chi | -0.911924 | -0.847309 | 0.201823 |
-| delta_due_to_fd | -0.840691 | -0.781348 | 0.186754 |
-| delta_due_to_scope | -0.071233 | -0.065961 | 0.015554 |
+| delta_chi | -0.793446 | -0.776701 | 0.159477 |
+| delta_due_to_fd | -0.731276 | -0.716236 | 0.148108 |
+| delta_due_to_scope | -0.062170 | -0.060465 | 0.012383 |
 | delta_interaction | 0.000000 | 0.000000 | 0.000000 |
 
-f(d) dominates in 664/664 = 100.0% of constraints.
+f(d) dominates in 402/402 = 100.0% of constraints.
 
 *Note: Under the symmetric decomposition, the interaction term is algebraically zero for constraints without Chi overrides. Non-zero values indicate override effects.*
 
 ### 4.3 Powerless↔Institutional Decomposition
 
-N = 664
+N = 402
 
 | Component | Mean | Median | Std |
 | :--- | ---: | ---: | ---: |
-| delta_chi | 0.719515 | 0.677482 | 0.175177 |
-| delta_due_to_fd | 0.814436 | 0.756463 | 0.180263 |
-| delta_due_to_scope | -0.085299 | -0.078981 | 0.018601 |
-| delta_interaction | -0.009621 | 0.000000 | 0.057031 |
+| delta_chi | 0.628434 | 0.621026 | 0.135961 |
+| delta_due_to_fd | 0.708359 | 0.693425 | 0.142418 |
+| delta_due_to_scope | -0.074397 | -0.072399 | 0.014735 |
+| delta_interaction | -0.005527 | 0.000000 | 0.043657 |
 
-f(d) dominates in 664/664 = 100.0% of constraints.
+f(d) dominates in 402/402 = 100.0% of constraints.
 
 *Note: Under the symmetric decomposition, the interaction term is algebraically zero for constraints without Chi overrides. Non-zero values indicate override effects.*
 
@@ -241,12 +229,12 @@ If powerless had scope_mod=1.0 instead of 0.8:
 
 | Pair | Original Mean |Δχ| | Counterfactual Mean |Δχ| |
 | :--- | ---: | ---: |
-| institutional-analytical | 0.911924 | 0.911924 |
-| powerless-institutional | 0.720106 | 0.904928 |
-| moderate-institutional | 0.741882 | 0.741882 |
-| moderate-analytical | 0.170109 | 0.170109 |
-| powerless-moderate | 0.022367 | 0.163047 |
-| powerless-analytical | 0.192432 | 0.007632 |
+| institutional-analytical | 0.793446 | 0.793446 |
+| powerless-institutional | 0.629411 | 0.787065 |
+| moderate-institutional | 0.644658 | 0.644658 |
+| moderate-analytical | 0.148788 | 0.148788 |
+| powerless-moderate | 0.017073 | 0.142407 |
+| powerless-analytical | 0.165012 | 0.006381 |
 
 **Counterfactual dominant pair**: institutional-analytical
 

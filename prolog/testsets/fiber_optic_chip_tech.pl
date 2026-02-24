@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(fiber_optic_chip_tech, end_consumers).
 % They are institutional victims with constrained exit. Their previous
 % technological monopoly is being bypassed, creating a strategic trap.
 % Engine derives a high d, leading to high χ and a Snare classification.
-constraint_indexing:constraint_classification(fiber_optic_chip_tech, snare,
+constraint_indexing:constraint_classification(fiber_optic_chip_tech, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(fiber_optic_chip_tech, rope,
 % Sees both the genuine coordination function (enabling 6G) and the
 % asymmetric geopolitical extraction. This balanced view, combining the
 % function and the cost, correctly identifies the structure as a Tangled Rope.
-constraint_indexing:constraint_classification(fiber_optic_chip_tech, tangled_rope,
+constraint_indexing:constraint_classification(fiber_optic_chip_tech, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(fiber_optic_chip_tech, tangled_rop
 % ecosystem. They bear the downstream costs of geopolitical competition (e.g.,
 % price hikes, fragmented standards, data sovereignty risks) without any
 % ability to influence the outcome. For them, the system is a Snare.
-constraint_indexing:constraint_classification(fiber_optic_chip_tech, snare,
+constraint_indexing:constraint_classification(fiber_optic_chip_tech, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

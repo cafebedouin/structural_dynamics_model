@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(ice_raids_minnesota_2026, snare,
 % This institutional actor is a victim, not a beneficiary. Its exit is constrained
 % by federal law. The engine derives a higher d than for the beneficiary.
 % victim membership + constrained exit → higher d → positive χ
-constraint_indexing:constraint_classification(ice_raids_minnesota_2026, snare,
+constraint_indexing:constraint_classification(ice_raids_minnesota_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

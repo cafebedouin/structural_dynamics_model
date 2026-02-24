@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(bureaucratic_legibility_collapse, 
 % Detects the combination of a coordination function (beneficiary exists),
 % asymmetric extraction (victim exists), and active enforcement. The high
 % extraction and suppression confirm the Tangled Rope classification.
-constraint_indexing:constraint_classification(bureaucratic_legibility_collapse, tangled_rope,
+constraint_indexing:constraint_classification(bureaucratic_legibility_collapse, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -125,7 +125,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(bureaucratic_legibility_collapse, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(bureaucratic_legibility_collapse, tangled_rope,
+    constraint_indexing:constraint_classification(bureaucratic_legibility_collapse, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

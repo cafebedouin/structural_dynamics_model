@@ -86,7 +86,7 @@ narrative_ontology:constraint_victim(maha_recovery_2026, upf_manufacturers).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % Effective Extraction: 0.42 * 1.5 (powerless) * 1.0 (national) = 0.63.
 % High extraction felt as a restrictive trap on existing dietary habits.
-constraint_indexing:constraint_classification(maha_recovery_2026, snare, 
+constraint_indexing:constraint_classification(maha_recovery_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(maha_recovery_2026, scaffold,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Default context for the system's baseline claim.
-constraint_indexing:constraint_classification(maha_recovery_2026, scaffold,
+constraint_indexing:constraint_classification(maha_recovery_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(maha_recovery_2026, scaffold,
 
 test(perspectival_gap) :-
     % Verify the gap between the citizen (Snare) and the Rancher/HHS (Scaffold).
-    constraint_indexing:constraint_classification(maha_recovery_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(maha_recovery_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(maha_recovery_2026, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(scaffold_integrity) :-

@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(the_calm_protocol_suppression, rop
 % An analyst sees both the genuine coordination function (protocol for survival)
 % and the asymmetric extraction (psychological weight). It requires active
 % enforcement and has clear victims and beneficiaries. This is a classic Tangled Rope.
-constraint_indexing:constraint_classification(the_calm_protocol_suppression, tangled_rope,
+constraint_indexing:constraint_classification(the_calm_protocol_suppression, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(emergency_oversight_bureau, scaffo
 % PERSPECTIVE 3: THE BENEFICIARY (ROPE)
 % From an institutional view, this is pure coordination to prevent total collapse.
 % χ = 0.28 * -0.2 * 1.1 = -0.06. Effective extraction is negative.
-constraint_indexing:constraint_classification(emergency_oversight_bureau, rope,
+constraint_indexing:constraint_classification(emergency_oversight_bureau, tangled_rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(mobile),
@@ -137,7 +137,7 @@ test(scaffold_validation) :-
 test(perspectival_gap) :-
     % Verify it appears as a Tangled Rope to the powerless but a Rope to the institutional.
     constraint_indexing:constraint_classification(emergency_oversight_bureau, tangled_rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(emergency_oversight_bureau, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(emergency_oversight_bureau, tangled_rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(emergency_oversight_bureau, scaffold, context(agent_power(organized), _, _, _)).
 
 :- end_tests(emergency_oversight_bureau_tests).

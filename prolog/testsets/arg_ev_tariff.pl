@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(arg_ev_tariff, chinese_ev_manufacturers).
 % Bears the full cost of higher prices and reduced choice.
 % Engine derives d from: victim membership + trapped exit → d≈0.95 → f(d)≈1.42 → high χ
 % χ = 0.55 * 1.42 * 1.0 (national) ≈ 0.78. This exceeds the Snare threshold (χ≥0.66).
-constraint_indexing:constraint_classification(arg_ev_tariff, snare,
+constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(arg_ev_tariff, rope,
 % Sees both the geopolitical coordination and the asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.55 * 1.15 * 1.2 (global) ≈ 0.76. Meets Tangled Rope criteria (0.40 ≤ χ ≤ 0.90).
-constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope,
+constraint_indexing:constraint_classification(arg_ev_tariff, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -197,7 +197,7 @@ test(perspectival_gap_inter_institutional) :-
 
 test(analytical_claim_matches_type) :-
     narrative_ontology:constraint_claim(arg_ev_tariff, tangled_rope),
-    constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(arg_ev_tariff, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gates_pass) :-
     narrative_ontology:constraint_beneficiary(arg_ev_tariff, _),

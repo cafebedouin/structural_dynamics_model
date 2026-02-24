@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(eu_asylum_outsourcing_framework, r
 % The analytical observer sees the valid coordination function for member states
 % AND the severe asymmetric extraction from asylum seekers, which are the
 % definitional components of a Tangled Rope. The high χ confirms this.
-constraint_indexing:constraint_classification(eu_asylum_outsourcing_framework, tangled_rope,
+constraint_indexing:constraint_classification(eu_asylum_outsourcing_framework, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(eu_asylum_outsourcing_framework, t
 % Assuming derived d ≈ 0.6 -> f(d) ≈ 0.88.
 % χ = 0.75 * 0.88 * σ(regional=0.9) ≈ 0.59.
 % They experience it as a Tangled Rope: a coordination deal with significant extractive burdens.
-constraint_indexing:constraint_classification(eu_asylum_outsourcing_framework, tangled_rope,
+constraint_indexing:constraint_classification(eu_asylum_outsourcing_framework, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -175,7 +175,7 @@ test(perspectival_gap_target_beneficiary) :-
     TypeTarget \= TypeBeneficiary.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(eu_asylum_outsourcing_framework, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(eu_asylum_outsourcing_framework, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     narrative_ontology:constraint_beneficiary(eu_asylum_outsourcing_framework, _), % Has coordination function

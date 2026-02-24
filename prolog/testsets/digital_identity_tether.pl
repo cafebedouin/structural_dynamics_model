@@ -97,7 +97,7 @@ narrative_ontology:constraint_victim(digital_identity_tether, platform_users).
 % verified work history and social connections.
 % χ = 0.58 (ε) * 1.5 (π(powerless)) * 1.2 (σ(global)) = 1.044. This is a very high
 % effective extraction, clearly a Snare.
-constraint_indexing:constraint_classification(digital_identity_tether, snare,
+constraint_indexing:constraint_classification(digital_identity_tether, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(digital_identity_tether, rope,
 % Detects the hybrid nature where the "Single Sign-On" convenience (Rope)
 % is the mechanism that delivers the user into the data-harvesting silo (Snare).
 % This is the correct structural classification.
-constraint_indexing:constraint_classification(digital_identity_tether, tangled_rope,
+constraint_indexing:constraint_classification(digital_identity_tether, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -137,7 +137,7 @@ test(perspectival_gap, [nondet]) :-
     TypeInstitutional == rope.
 
 test(analytical_classification_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(digital_identity_tether, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(digital_identity_tether, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_conditions_met) :-
     narrative_ontology:constraint_beneficiary(digital_identity_tether, _), % -> has_coordination_function

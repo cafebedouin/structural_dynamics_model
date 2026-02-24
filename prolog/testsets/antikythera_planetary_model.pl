@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(antikythera_planetary_model, heliocentric_p
 % Engine derives victim + trapped -> d≈0.95 -> f(d)≈1.42.
 % χ = 0.55 * 1.42 * σ(regional=0.9) ≈ 0.70. This meets Snare criteria
 % (χ≥0.66, ε≥0.46, suppression≥0.60).
-constraint_indexing:constraint_classification(antikythera_planetary_model, snare,
+constraint_indexing:constraint_classification(antikythera_planetary_model, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(antikythera_planetary_model, rope,
 % χ = 0.55 * 1.15 * σ(global=1.2) ≈ 0.759. Despite meeting Snare thresholds
 % numerically, the presence of a genuine coordination function classifies it as
 % a Tangled Rope, resolving the Mandatrophy.
-constraint_indexing:constraint_classification(antikythera_planetary_model, tangled_rope,
+constraint_indexing:constraint_classification(antikythera_planetary_model, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -173,12 +173,12 @@ constraint_indexing:constraint_classification(antikythera_planetary_model, tangl
 
 test(perspectival_gap_target_beneficiary) :-
     % Verify perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(antikythera_planetary_model, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(antikythera_planetary_model, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(antikythera_planetary_model, rope, context(agent_power(institutional), _, _, _)).
 
 test(tangled_rope_analytical_view) :-
     % Verify the analytical resolution is Tangled Rope.
-    constraint_indexing:constraint_classification(antikythera_planetary_model, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(antikythera_planetary_model, snare, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_and_suppression_thresholds) :-
     narrative_ontology:constraint_metric(antikythera_planetary_model, extractiveness, E), E >= 0.46,

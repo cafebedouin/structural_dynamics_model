@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(kjv_linguistic_residue, rope,
 % For an academic institution or the literary canon, the KJV's residue is a
 % curated historical artifact. Its primary function has atrophied, but it is
 % maintained by institutional inertia. It is a classic Piton.
-constraint_indexing:constraint_classification(kjv_linguistic_residue, piton,
+constraint_indexing:constraint_classification(kjv_linguistic_residue, rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(analytical),
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(kjv_linguistic_residue, piton,
 % The analytical view sees a constraint whose original function is largely inert
 % in secular contexts, maintained primarily by theatricality and inertia.
 % The high theater ratio (0.85) is decisive, classifying it as a Piton.
-constraint_indexing:constraint_classification(kjv_linguistic_residue, piton,
+constraint_indexing:constraint_classification(kjv_linguistic_residue, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -153,7 +153,7 @@ test(perspectival_gap_passive_vs_active_use) :-
     % and those who actively leverage it as a tool (Rope).
     constraint_indexing:constraint_classification(kjv_linguistic_residue, piton, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(kjv_linguistic_residue, rope, context(agent_power(powerful), _, _, _)),
-    constraint_indexing:constraint_classification(kjv_linguistic_residue, piton, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(kjv_linguistic_residue, rope, context(agent_power(institutional), _, _, _)).
 
 test(piton_threshold_validation) :-
     % Verify that the metrics support the Piton classification.

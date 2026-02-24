@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(ibm_shield_contract_2026, rope,
 % requires active enforcement to maintain its structure, classifying it as a
 % Tangled Rope.
 % χ = 0.62 * π(analytical, 1.15) * σ(global, 1.2) = 0.8556
-constraint_indexing:constraint_classification(ibm_shield_contract_2026, tangled_rope,
+constraint_indexing:constraint_classification(ibm_shield_contract_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap) :-
     TypePowerless \= TypeInstitutional.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(ibm_shield_contract_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ibm_shield_contract_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     narrative_ontology:constraint_beneficiary(ibm_shield_contract_2026, _), % -> has_coordination_function

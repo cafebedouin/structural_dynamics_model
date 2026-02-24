@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(usc_26_469_passive_loss, passive_activity_i
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The individual investor perceives the disallowance as a predatory trap.
 % Losses are real cash-out-the-door, but the deduction is "snared" by the code.
-constraint_indexing:constraint_classification(usc_26_469_passive_loss, snare,
+constraint_indexing:constraint_classification(usc_26_469_passive_loss, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(usc_26_469_passive_loss, rope,
 % The auditor recognizes that while it solves the "tax shelter" problem (Coordination),
 % it also extracts high compliance costs and penalizes legitimate
 % small-business failures (Asymmetric Extraction).
-constraint_indexing:constraint_classification(usc_26_469_passive_loss, tangled_rope,
+constraint_indexing:constraint_classification(usc_26_469_passive_loss, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -137,7 +137,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(usc_26_469_passive_loss, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(usc_26_469_passive_loss, snare, context(agent_power(analytical), _, _, _)).
 
 test(extraction_threshold_for_high_extraction_rules) :-
     narrative_ontology:constraint_metric(usc_26_469_passive_loss, extractiveness, E),

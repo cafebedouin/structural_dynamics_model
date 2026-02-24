@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(shield_east_fortification, potential_aggres
 % As victims with trapped exit, engine derives d ≈ 0.95 → f(d) ≈ 1.42.
 % High ε (0.48) and suppression (0.85) lead to a Snare classification.
 % χ = 0.48 * 1.42 * 1.0 (national) ≈ 0.68, which is ≥ 0.66 (Snare threshold).
-constraint_indexing:constraint_classification(shield_east_fortification, snare,
+constraint_indexing:constraint_classification(shield_east_fortification, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(shield_east_fortification, tangled
 % Engine derives d ≈ 0.6-0.7 → f(d) ≈ 0.9-1.1.
 % χ = 0.48 * ~1.0 * 1.1 (continental) ≈ 0.53. This is also a Tangled Rope.
 % It acknowledges the constraint's effectiveness while recognizing the actor's power.
-constraint_indexing:constraint_classification(shield_east_fortification, tangled_rope,
+constraint_indexing:constraint_classification(shield_east_fortification, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

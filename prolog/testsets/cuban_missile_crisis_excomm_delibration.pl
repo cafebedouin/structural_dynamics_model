@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(cuban_missile_crisis_excomm_deliberation, c
 % The protocol is a Rope that coordinates powerful actors to prevent global
 % annihilation. While civilians are trapped by the background threat of MAD,
 % this specific constraint (the protocol) works in their favor.
-constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_deliberation, rope,
+constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_deliberation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

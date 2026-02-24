@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(coalition_disinfo_framework_2026, small_tec
 % benefits are irrelevant compared to the threat of suppression.
 % Engine derives d from victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.48 * 1.42 * 1.0 (national scope) ≈ 0.68. This high χ and high suppression (0.65) classify it as a Snare.
-constraint_indexing:constraint_classification(coalition_disinfo_framework_2026, snare,
+constraint_indexing:constraint_classification(coalition_disinfo_framework_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

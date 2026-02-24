@@ -89,7 +89,7 @@ narrative_ontology:coordination_vitality(shadow_pricing_failure, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The subject is trapped in an exchange where their contribution is
 % systematically undervalued by the hidden pricing mechanism.
-constraint_indexing:constraint_classification(shadow_pricing_failure, snare,
+constraint_indexing:constraint_classification(shadow_pricing_failure, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(shadow_pricing_failure, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The institution views the simplified (failed) shadow price as a Rope,
 % enabling mass coordination without the friction of complex valuation.
-constraint_indexing:constraint_classification(shadow_pricing_failure, rope,
+constraint_indexing:constraint_classification(shadow_pricing_failure, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(shadow_pricing_failure, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % High extraction (0.82) and high suppression (0.75) with both coordination
 % and asymmetric extraction functions define a Tangled Rope.
-constraint_indexing:constraint_classification(shadow_pricing_failure, tangled_rope,
+constraint_indexing:constraint_classification(shadow_pricing_failure, piton,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -131,8 +131,8 @@ constraint_indexing:constraint_classification(shadow_pricing_failure, tangled_ro
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless but Rope for the institution.
-    constraint_indexing:constraint_classification(shadow_pricing_failure, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(shadow_pricing_failure, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(shadow_pricing_failure, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(shadow_pricing_failure, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_audit_logic) :-
     % Ensure high theater results in Piton detection.

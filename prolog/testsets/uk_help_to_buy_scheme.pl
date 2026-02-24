@@ -132,7 +132,7 @@ narrative_ontology:constraint_victim(uk_help_to_buy_scheme, uk_taxpayers).
 % Engine derives d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.0 (national scope) ≈ 0.78. This high effective
 % extraction, combined with high suppression, classifies as a Snare.
-constraint_indexing:constraint_classification(uk_help_to_buy_scheme, snare,
+constraint_indexing:constraint_classification(uk_help_to_buy_scheme, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(uk_help_to_buy_scheme, rope,
 % homes) and the asymmetric extraction (inflated prices, risky loans).
 % The metrics ε=0.55, suppression=0.65 and structural data (beneficiary,
 % victim, enforcement) meet the Tangled Rope criteria.
-constraint_indexing:constraint_classification(uk_help_to_buy_scheme, tangled_rope,
+constraint_indexing:constraint_classification(uk_help_to_buy_scheme, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(uk_help_to_buy_scheme, tangled_rop
 % It cannot easily abandon the scheme without political and financial fallout.
 % It is aware of both the coordination goals and the extractive outcomes.
 % From this viewpoint, it's a tool of policy with mixed results.
-constraint_indexing:constraint_classification(uk_help_to_buy_scheme, tangled_rope,
+constraint_indexing:constraint_classification(uk_help_to_buy_scheme, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -185,7 +185,7 @@ test(perspectival_gap_target_beneficiary, [nondet]) :-
         context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(tangled_rope_analytical_classification, [nondet]) :-
-    constraint_indexing:constraint_classification(uk_help_to_buy_scheme, tangled_rope,
+    constraint_indexing:constraint_classification(uk_help_to_buy_scheme, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_conditions_met) :-

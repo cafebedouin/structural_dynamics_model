@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(hydra_game, finitist_philosophers).
 % For any physical machine, the game is a Snare. The promise of a "guaranteed win"
 % is a trap, as the resources required (time, energy) exceed those available in
 % the physical universe. It extracts all computational utility.
-constraint_indexing:constraint_classification(hydra_game, snare,
+constraint_indexing:constraint_classification(hydra_game, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

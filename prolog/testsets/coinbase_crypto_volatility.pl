@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(coinbase_crypto_volatility, retail_investor
 % For the retail trader during a flash crash, volatility combined with the
 % exchange's structure is a Snare. They are liquidated or unable to exit
 % positions due to platform congestion, resulting in asymmetric capital loss.
-constraint_indexing:constraint_classification(coinbase_crypto_volatility, snare,
+constraint_indexing:constraint_classification(coinbase_crypto_volatility, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

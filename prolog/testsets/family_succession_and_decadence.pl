@@ -81,7 +81,7 @@ narrative_ontology:constraint_victim(family_succession_system, young_heirs). % e
 % PERSPECTIVE 1: THE SUBJECT (Sōichi) - MOUNTAIN
 % For the youth, the "Ie" system is as unchangeable as a mountain. They cannot
 % negotiate with it; they can only collide with it and break.
-constraint_indexing:constraint_classification(family_succession_system, tangled_rope,
+constraint_indexing:constraint_classification(family_succession_system, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(family_succession_system, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER - TANGLED ROPE
 % An observer sees a system with a genuine coordination function (inheritance)
 % achieved via extreme coercion and asymmetric extraction, a classic Tangled Rope.
-constraint_indexing:constraint_classification(family_succession_system, tangled_rope,
+constraint_indexing:constraint_classification(family_succession_system, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -113,9 +113,9 @@ constraint_indexing:constraint_classification(family_succession_system, tangled_
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless (Mountain) and institutional (Rope) views.
-    constraint_indexing:constraint_classification(family_succession_system, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(family_succession_system, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(family_succession_system, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(family_succession_system, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(family_succession_system, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-
     % Verify that the conditions for a Tangled Rope classification are met.

@@ -141,7 +141,7 @@ narrative_ontology:constraint_victim(cultural_homogenization_social_media, small
 % NOTE: Per "Dynamic Coalition" extension, this agent's power may be
 % upgraded to 'organized' if the constraint is a snare with a critical
 % mass of victims, potentially changing the classification.
-constraint_indexing:constraint_classification(cultural_homogenization_social_media, snare,
+constraint_indexing:constraint_classification(cultural_homogenization_social_media, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(cultural_homogenization_social_med
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(cultural_homogenization_social_media, tangled_rope,
+constraint_indexing:constraint_classification(cultural_homogenization_social_media, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -171,14 +171,14 @@ constraint_indexing:constraint_classification(cultural_homogenization_social_med
 % structural relationships, declare separate perspectives for each.
 
 % Perspective 4A: National Governments (institutional, constrained exit)
-constraint_indexing:constraint_classification(cultural_homogenization_social_media, tangled_rope,
+constraint_indexing:constraint_classification(cultural_homogenization_social_media, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
 % Perspective 4B: Regional Governments (institutional, constrained exit)
-constraint_indexing:constraint_classification(cultural_homogenization_social_media, tangled_rope,
+constraint_indexing:constraint_classification(cultural_homogenization_social_media, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

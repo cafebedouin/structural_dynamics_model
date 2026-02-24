@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(nuclear_site_safety_norms, military_aggress
 % and have no agency, making the system feel like a coercive threat.
 %   victim + trapped → d≈0.95 → f(d)≈1.42
 %   χ = 0.48 * 1.42 * 1.0 (national scope) = 0.68. This clears χ ≥ 0.66 for Snare.
-constraint_indexing:constraint_classification(nuclear_site_safety_norms, snare,
+constraint_indexing:constraint_classification(nuclear_site_safety_norms, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

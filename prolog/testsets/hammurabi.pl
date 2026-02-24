@@ -81,7 +81,7 @@ narrative_ontology:constraint_victim(hammurabi_lex_talionis, wardu_class). % Der
 
 % PERSPECTIVE 1: THE SLAVE (SNARE)
 % Subject to physical mutilation with zero exit options. The law is a trap.
-constraint_indexing:constraint_classification(hammurabi_lex_talionis, snare,
+constraint_indexing:constraint_classification(hammurabi_lex_talionis, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(hammurabi_lex_talionis, rope,
 % The system has a genuine coordination function (stability) but also
 % clear asymmetric extraction and requires active enforcement. This is the
 % canonical definition of a Tangled Rope.
-constraint_indexing:constraint_classification(hammurabi_lex_talionis, tangled_rope,
+constraint_indexing:constraint_classification(hammurabi_lex_talionis, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(unconditional_university_offers_uk, educati
 % A student who accepts the offer is trapped; their incentive to perform is
 % reduced, leading to lower attainment. Victim + Trapped -> d ≈ 0.95 -> f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.0 = 0.781. With χ > 0.66 and suppression > 0.60, this is a Snare.
-constraint_indexing:constraint_classification(unconditional_university_offers_uk, snare,
+constraint_indexing:constraint_classification(unconditional_university_offers_uk, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(unconditional_university_offers_uk
 % χ = 0.55 * 1.15 * 1.2 = 0.759.
 % χ (0.759) > 0.40, Suppression (0.70) > 0.40, and the constraint has both
 % coordination (beneficiary) and extraction (victim) functions. This is a Tangled Rope.
-constraint_indexing:constraint_classification(unconditional_university_offers_uk, tangled_rope,
+constraint_indexing:constraint_classification(unconditional_university_offers_uk, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(unconditional_university_offers_uk
 % by its mandate and limited powers, and is a victim of the system-gaming.
 % Victim + Constrained -> d is high, but lower than powerless/trapped. Est d ≈ 0.7.
 % The regulator sees the system as a harmful hybrid.
-constraint_indexing:constraint_classification(unconditional_university_offers_uk, tangled_rope,
+constraint_indexing:constraint_classification(unconditional_university_offers_uk, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -168,7 +168,7 @@ test(perspectival_gap_student_vs_university) :-
     constraint_indexing:constraint_classification(unconditional_university_offers_uk, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(unconditional_university_offers_uk, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(unconditional_university_offers_uk, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % A constraint must have all three to be a canonical Tangled Rope.

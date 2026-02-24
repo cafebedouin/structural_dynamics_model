@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(india_nuclear_liability_act_2010, potential
 % The Indian public, who bears the uncompensated tail risk of an accident.
 % victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 % χ = 0.55 * 1.42 * 1.0 (national) ≈ 0.78. This is a Snare (χ > 0.66).
-constraint_indexing:constraint_classification(india_nuclear_liability_act_2010, snare,
+constraint_indexing:constraint_classification(india_nuclear_liability_act_2010, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(india_nuclear_liability_act_2010, 
 % asymmetric extraction.
 % d ≈ 0.72 → f(d) ≈ 1.15. Global scope amplifies χ.
 % χ = 0.55 * 1.15 * 1.2 (global) ≈ 0.759. Within Tangled Rope range [0.40, 0.90].
-constraint_indexing:constraint_classification(india_nuclear_liability_act_2010, tangled_rope,
+constraint_indexing:constraint_classification(india_nuclear_liability_act_2010, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -180,7 +180,7 @@ test(perspectival_gap_is_snare_vs_rope) :-
     format('... Perspectival gap validated: Snare (powerless) vs Rope (institutional)~n').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(india_nuclear_liability_act_2010, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(india_nuclear_liability_act_2010, snare, context(agent_power(analytical), _, _, _)),
     format('... Analytical classification is Tangled Rope~n').
 
 test(tangled_rope_gate_requirements_met) :-

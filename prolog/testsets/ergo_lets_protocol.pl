@@ -110,7 +110,7 @@ narrative_ontology:constraint_victim(ergo_lets_protocol, defaulters).
 % For a user without the required ERG to post as collateral, the protocol's
 % entry requirement is a Mountain. It is an unchangeable law of the system
 % that prevents them from accessing the "Rope" of credit.
-constraint_indexing:constraint_classification(ergo_lets_protocol, mountain,
+constraint_indexing:constraint_classification(ergo_lets_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(ergo_lets_protocol, mountain,
 % For the established user, LETS is a Rope. It is a pure coordination tool
 % they use to transact when liquidity in ERG or fiat is low. They have the
 % agency to issue credit and settle debts within the system's rules.
-constraint_indexing:constraint_classification(ergo_lets_protocol, rope,
+constraint_indexing:constraint_classification(ergo_lets_protocol, tangled_rope,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(mobile),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(ergo_lets_protocol, rope,
 % From an institutional or designer's view, the "Sum = 0" rule is a
 % Mountain. It is the core mathematical constraint that ensures systemic
 % solvency and cannot be relaxed without destroying the protocol.
-constraint_indexing:constraint_classification(ergo_lets_protocol, mountain,
+constraint_indexing:constraint_classification(ergo_lets_protocol, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(analytical),
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(ergo_lets_protocol, mountain,
 % When a user defaults, the collateral seizure mechanism becomes a Snare.
 % The smart contract "strangles" their assets to repay the pool's debt,
 % acting coercively to maintain the zero-sum balance.
-constraint_indexing:constraint_classification(ergo_lets_protocol, snare,
+constraint_indexing:constraint_classification(ergo_lets_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -163,7 +163,7 @@ test(multi_perspective_variance) :-
 
 test(zero_sum_immutability) :-
     % Analytical/Institutional perspective correctly identifies the math as Mountain.
-    constraint_indexing:constraint_classification(ergo_lets_protocol, mountain, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ergo_lets_protocol, tangled_rope, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(ergo_lets_protocol_tests).
 

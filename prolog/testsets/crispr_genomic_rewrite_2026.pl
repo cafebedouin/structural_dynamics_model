@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(crispr_genomic_rewrite_2026, unenhanced_pop
 % For this agent, the technology is a pure coordination tool that fixes a
 % biological error. The extractive potential is irrelevant to their immediate
 % escape from a trapped state.
-constraint_indexing:constraint_classification(crispr_genomic_rewrite_2026, rope,
+constraint_indexing:constraint_classification(crispr_genomic_rewrite_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

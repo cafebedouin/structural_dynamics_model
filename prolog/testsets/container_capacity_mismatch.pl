@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(container_capacity_mismatch, rope,
 % Detects high extraction (0.85) and suppression (0.74) masking as essential
 % coordination. The presence of beneficiaries, victims, and active enforcement
 % confirms the Tangled Rope structure.
-constraint_indexing:constraint_classification(container_capacity_mismatch, tangled_rope,
+constraint_indexing:constraint_classification(container_capacity_mismatch, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(container_capacity_mismatch, tangl
 % Theater ratio (0.82) > 0.70 triggers Piton: the "Congestion Management"
 % protocol is an inertial spike; it signals fairness while enabling extraction.
 % This is a valid sub-classification focusing on the system's decay.
-constraint_indexing:constraint_classification(container_capacity_mismatch, piton,
+constraint_indexing:constraint_classification(container_capacity_mismatch, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -139,12 +139,12 @@ test(perspectival_gap) :-
     % Verify Snare for the powerless producer vs Rope for the institutional gatekeeper.
     constraint_indexing:constraint_classification(container_capacity_mismatch, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(container_capacity_mismatch, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(container_capacity_mismatch, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(container_capacity_mismatch, snare, context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.82) correctly triggers the Piton classification.
     domain_priors:theater_ratio(container_capacity_mismatch, TR), TR > 0.70,
-    constraint_indexing:constraint_classification(container_capacity_mismatch, piton, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(container_capacity_mismatch, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify all three structural requirements for Tangled Rope are met.

@@ -101,7 +101,7 @@ narrative_ontology:constraint_victim(attribution_ambiguity_triplet_sc, original_
    ========================================================================== */
 
 % PERSPECTIVE 1: The original research group whose claim is under scrutiny. The ambiguity traps their reputation and research program, extracting significant resources to defend the claim against a global community of skeptics.
-constraint_indexing:constraint_classification(attribution_ambiguity_triplet_sc, snare,
+constraint_indexing:constraint_classification(attribution_ambiguity_triplet_sc, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(attribution_ambiguity_triplet_sc, 
             spatial_scope(global))).
 
 % PERSPECTIVE 3: An institution like a funding agency or journal. They must coordinate the peer review process (Rope) but are constrained by the high-cost, high-risk nature of the debate, where funding either side could be a waste (Snare).
-constraint_indexing:constraint_classification(attribution_ambiguity_triplet_sc, tangled_rope,
+constraint_indexing:constraint_classification(attribution_ambiguity_triplet_sc, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(constrained),

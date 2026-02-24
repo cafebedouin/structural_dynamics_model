@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(nonstandard_arithmetic_models, mou
 % For the institutional mathematician, nonstandard models are a powerful tool
 % for coordination and proof (a Rope), allowing them to prove results about
 % the standard model via nonstandard means (e.g., nonstandard analysis).
-constraint_indexing:constraint_classification(nonstandard_arithmetic_models, rope,
+constraint_indexing:constraint_classification(nonstandard_arithmetic_models, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(nonstandard_arithmetic_models, rop
 % Theorem proves that no nonstandard model of PA can be computable. This is not
 % a Snare (a contingent, coercive trap) but a Mountain (an absolute, unchangeable
 % limit). Their hopes are dashed against a fact of logic.
-constraint_indexing:constraint_classification(nonstandard_arithmetic_models, mountain,
+constraint_indexing:constraint_classification(nonstandard_arithmetic_models, scaffold,
     context(agent_power(moderate),
             time_horizon(civilizational),
             exit_options(constrained),

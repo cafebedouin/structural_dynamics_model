@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(model_of_models_regression, rope,
 % Detects the hybrid signature of coordination intent (beneficiaries exist)
 % resulting in predatory, recursive extraction (victims exist), all held
 % together by active enforcement.
-constraint_indexing:constraint_classification(model_of_models_regression, tangled_rope,
+constraint_indexing:constraint_classification(model_of_models_regression, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -132,7 +132,7 @@ test(perspectival_gap) :-
     % Verify the Snare vs Rope conflict at the core of the regression.
     constraint_indexing:constraint_classification(model_of_models_regression, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(model_of_models_regression, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(model_of_models_regression, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(model_of_models_regression, snare, context(agent_power(analytical), _, _, _)).
 
 test(piton_audit_logic) :-
     % Ensure high theater results in Piton detection by systems auditors.

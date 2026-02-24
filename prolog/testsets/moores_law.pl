@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(moores_law, legacy_infrastructure_owners).
 % treadmill." If they fail to meet the doubling pace for a single cycle,
 % their market position evaporates. The cost of maintaining the pace
 % increases exponentially as physical limits approach.
-constraint_indexing:constraint_classification(moores_law, snare,
+constraint_indexing:constraint_classification(moores_law, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(constrained),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(moores_law, rope,
 % today will be significantly more powerful than older models, lowering the
 % barrier to entry for complex software. The extraction via planned
 % obsolescence is less salient than the immediate utility gain.
-constraint_indexing:constraint_classification(moores_law, rope,
+constraint_indexing:constraint_classification(moores_law, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(mobile),
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(moores_law, tangled_rope,
 
 test(perspectival_gap) :-
     % Verify gap between the fabricator (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(moores_law, snare, context(agent_power(institutional), _, constrained, _)),
+    constraint_indexing:constraint_classification(moores_law, rope, context(agent_power(institutional), _, constrained, _)),
     constraint_indexing:constraint_classification(moores_law, rope, context(agent_power(institutional), _, arbitrage, _)).
 
 test(analytical_claim_matches_tangled_rope) :-

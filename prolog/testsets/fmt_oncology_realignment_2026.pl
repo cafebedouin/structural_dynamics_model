@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(fmt_oncology_2026, standard_immunotherapy_l
 % Previously, late-stage cancer patients faced a Snare: a dysfunctional 
 % microbiome that either resisted immunotherapy or increased its toxicity 
 % .
-constraint_indexing:constraint_classification(fmt_oncology_2026, snare, 
+constraint_indexing:constraint_classification(fmt_oncology_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(fmt_oncology_2026, snare,
 % PERSPECTIVE 2: THE CLINICIAN (ROPE)
 % Researchers view oral FMT as a Rope: a coordination tool to rebuild 
 % the microbiome and boost natural immune defenses.
-constraint_indexing:constraint_classification(fmt_oncology_2026, rope, 
+constraint_indexing:constraint_classification(fmt_oncology_2026, tangled_rope, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -125,8 +125,8 @@ narrative_ontology:has_sunset_clause(fmt_oncology_2026).
 :- begin_tests(fmt_oncology_2026_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(fmt_oncology_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(fmt_oncology_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(fmt_oncology_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fmt_oncology_2026, tangled_rope, context(agent_power(institutional), _, _, _)).
 
 test(response_rate_fidelity) :-
     domain_priors:theater_ratio(fmt_oncology_2026, TR),

@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(nuclear_order_2026, non_combatant_populatio
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The powerless view the lack of limits as a predatory trap where their safety
 % is the extracted variable for superpower posture.
-constraint_indexing:constraint_classification(nuclear_order_2026, snare,
+constraint_indexing:constraint_classification(nuclear_order_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(nuclear_order_2026, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (TANGLED ROPE)
 % Institutional actors view this as coordination (Rope) for deterrence,
 % but the asymmetric extraction of security makes it "Tangled."
-constraint_indexing:constraint_classification(nuclear_order_2026, tangled_rope,
+constraint_indexing:constraint_classification(nuclear_order_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

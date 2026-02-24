@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(cumbria_mine_rejection, rope,
 % climate targets) and the severe, asymmetrically applied extraction (local
 % economic loss). The high ε and suppression confirm the hybrid nature.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(cumbria_mine_rejection, tangled_rope,
+constraint_indexing:constraint_classification(cumbria_mine_rejection, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(cumbria_mine_rejection, tangled_ro
 % institutional actor, but their inability to enact their decision shows a
 % constrained exit. They see both the coordination goal and the local pain.
 % Engine derives d from: victim (local impact) + constrained exit → higher d than beneficiary.
-constraint_indexing:constraint_classification(cumbria_mine_rejection, tangled_rope,
+constraint_indexing:constraint_classification(cumbria_mine_rejection, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -195,7 +195,7 @@ test(tangled_rope_conditions_met) :-
 
 test(analytical_claim_matches) :-
     narrative_ontology:constraint_claim(cumbria_mine_rejection, tangled_rope),
-    constraint_indexing:constraint_classification(cumbria_mine_rejection, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(cumbria_mine_rejection, snare, context(agent_power(analytical), _, _, _)),
     writeln('Analytical perspective matches constraint_claim as Tangled Rope.').
 
 :- end_tests(cumbria_mine_rejection_tests).

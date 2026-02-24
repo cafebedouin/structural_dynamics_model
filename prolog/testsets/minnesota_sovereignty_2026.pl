@@ -92,7 +92,7 @@ narrative_ontology:coordination_vitality(minnesota_sovereignty_2026, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % Local residents and school districts view the operation as a Snare, 
 % citing disrupted learning environments and fatal force.
-constraint_indexing:constraint_classification(minnesota_sovereignty_2026, snare, 
+constraint_indexing:constraint_classification(minnesota_sovereignty_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(minnesota_sovereignty_2026, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % Federal leadership (Homan) views the operation as a Rope—essential 
 % infrastructure for national border security.
-constraint_indexing:constraint_classification(minnesota_sovereignty_2026, rope, 
+constraint_indexing:constraint_classification(minnesota_sovereignty_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -133,8 +133,8 @@ constraint_indexing:constraint_classification(minnesota_sovereignty_2026, scaffo
 :- begin_tests(minnesota_sovereignty_2026_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(minnesota_sovereignty_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(minnesota_sovereignty_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(minnesota_sovereignty_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(minnesota_sovereignty_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(extraction_accumulation) :-
     domain_priors:base_extractiveness(minnesota_sovereignty_2026, E),

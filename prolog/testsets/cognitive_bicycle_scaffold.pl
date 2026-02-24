@@ -98,7 +98,7 @@ narrative_ontology:constraint_victim(cognitive_bicycle_scaffold, dependent_users
 % For a powerless user, the tool extracts the habit of thinking, creating dependency.
 % χ = 0.20 * 1.5 (powerless) * 0.8 (local) = 0.24. While numerically low, the
 % classification engine also considers the structural victimhood.
-constraint_indexing:constraint_classification(cognitive_bicycle_scaffold, snare,
+constraint_indexing:constraint_classification(cognitive_bicycle_scaffold, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(cognitive_bicycle_scaffold, snare,
 % PERSPECTIVE 2: THE SYSTEM ARCHITECT (SCAFFOLD)
 % The institutional provider views it as temporary support to transition users
 % to a new cognitive state, with an eventual sunset.
-constraint_indexing:constraint_classification(cognitive_bicycle_scaffold, scaffold,
+constraint_indexing:constraint_classification(cognitive_bicycle_scaffold, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(cognitive_bicycle_scaffold, scaffo
 % PERSPECTIVE 3: THE SKILLED USER (ROPE)
 % For an analytical user, the tool is pure coordination of thought, a force multiplier.
 % χ = 0.20 * 1.15 (analytical) * 1.2 (global) = 0.276. This is low enough to be a Rope.
-constraint_indexing:constraint_classification(cognitive_bicycle_scaffold, rope,
+constraint_indexing:constraint_classification(cognitive_bicycle_scaffold, tangled_rope,
     context(agent_power(analytical),
             time_horizon(biographical),
             exit_options(analytical),

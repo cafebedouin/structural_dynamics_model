@@ -200,7 +200,7 @@ constraint_indexing:constraint_classification(linguistic_relativity_cultural_fra
 % internationally, but have enough institutional power to partially
 % resist (publishing alternative framings in Chinese-language journals,
 % developing Chinese-medium cognitive science traditions).
-constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, tangled_rope,
+constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

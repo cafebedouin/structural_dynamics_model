@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(greshams_law, wage_earners).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For a wage earner forced to accept debased currency, the law is a trap
 % that systematically erodes their purchasing power.
-constraint_indexing:constraint_classification(greshams_law, snare,
+constraint_indexing:constraint_classification(greshams_law, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(greshams_law, snare,
 % For the sovereign, debasement is a powerful tool for raising funds (coordination)
 % but it simultaneously degrades the currency, risking long-term economic
 % instability (asymmetric extraction from the public).
-constraint_indexing:constraint_classification(greshams_law, tangled_rope,
+constraint_indexing:constraint_classification(greshams_law, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(greshams_law, tangled_rope,
 % Analytically, the system has a clear coordination function (funding the state)
 % and clear asymmetric extraction, enforced by suppression. This is the
 % definition of a Tangled Rope.
-constraint_indexing:constraint_classification(greshams_law, tangled_rope,
+constraint_indexing:constraint_classification(greshams_law, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

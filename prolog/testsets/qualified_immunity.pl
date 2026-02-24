@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(qualified_immunity, rope,
 % coordination function (protecting officials) but also imposes severe,
 % asymmetric extraction on a specific class of victims, requiring active
 % judicial enforcement to maintain.
-constraint_indexing:constraint_classification(qualified_immunity, tangled_rope,
+constraint_indexing:constraint_classification(qualified_immunity, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(qualified_immunity, tangled_rope,
 % PERSPECTIVE 4: THE PRACTITIONER (MOUNTAIN)
 % For a civil rights attorney, it's a Mountain—an immovable feature of the
 % legal landscape that makes most cases "dead on arrival."
-constraint_indexing:constraint_classification(qualified_immunity, mountain,
+constraint_indexing:constraint_classification(qualified_immunity, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -137,7 +137,7 @@ test(perspectival_gap_snare_rope) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the conflict by identifying it as a Tangled Rope.
-    constraint_indexing:constraint_classification(qualified_immunity, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(qualified_immunity, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify that all three conditions for a Tangled Rope are met.

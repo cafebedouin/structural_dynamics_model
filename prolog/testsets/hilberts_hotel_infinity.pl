@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
 % For the educator, Hilbert's Hotel is a "Rope"—a functional coordination
 % mechanism. It allows them to pull students away from the confusion of
 % finite intuition and toward a standard understanding of set theory.
-constraint_indexing:constraint_classification(hilberts_hotel_infinity, rope,
+constraint_indexing:constraint_classification(hilberts_hotel_infinity, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(mobile),
@@ -171,7 +171,7 @@ test(perspectival_gap) :-
     % Verify the gap between the guest's experience and the teacher's application.
     constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(hilberts_hotel_infinity, rope,
+    constraint_indexing:constraint_classification(hilberts_hotel_infinity, scaffold,
         context(agent_power(institutional), _, _, _)).
 
 test(analytical_view_is_mountain) :-

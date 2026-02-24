@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(requirement_invasive_diabetes_test
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Reconciles the coordination function with the asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(requirement_invasive_diabetes_testing, tangled_rope,
+constraint_indexing:constraint_classification(requirement_invasive_diabetes_testing, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -170,7 +170,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view must classify as Tangled Rope, reconciling the two extremes.
-    constraint_indexing:constraint_classification(requirement_invasive_diabetes_testing, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(requirement_invasive_diabetes_testing, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A constraint can only be a Tangled Rope if it has a beneficiary (coordination),

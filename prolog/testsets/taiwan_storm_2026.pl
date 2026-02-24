@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(taiwan_storm_2026, rope,
 % severe asymmetric extraction (from Taiwan), supported by active enforcement.
 % This is the definition of a Tangled Rope.
 % χ = 0.82 * π(analytical=1.15) * σ(global=1.2) = 1.13. High extraction.
-constraint_indexing:constraint_classification(taiwan_storm_2026, tangled_rope,
+constraint_indexing:constraint_classification(taiwan_storm_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,7 +138,7 @@ test(perspectival_gap_snare_rope) :-
 
 test(analytical_observer_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(taiwan_storm_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(taiwan_storm_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties_present) :-
     % A Tangled Rope requires enforcement, a beneficiary, and a victim.

@@ -138,7 +138,7 @@ narrative_ontology:constraint_victim(plastic_asphalt_mandate, small_contractors_
 
 % PERSPECTIVE 1: THE POWERLESS TARGET (SNARE)
 % Small contractors or municipalities with no lobbying power or ability to absorb costs.
-constraint_indexing:constraint_classification(plastic_asphalt_mandate, snare,
+constraint_indexing:constraint_classification(plastic_asphalt_mandate, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(plastic_asphalt_mandate, snare,
 
 % PERSPECTIVE 2: THE MODERATE TARGET (SNARE)
 % Larger road construction companies who are constrained but not entirely trapped.
-constraint_indexing:constraint_classification(plastic_asphalt_mandate, snare,
+constraint_indexing:constraint_classification(plastic_asphalt_mandate, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),

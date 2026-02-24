@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(litany_of_the_real, mountain,
 % Agent who uses the Litany for navigation. For this agent, it is a pure
 % coordination tool for aligning action with reality.
 % Engine derives low d from beneficiary + mobile exit -> low χ -> Rope.
-constraint_indexing:constraint_classification(litany_of_the_real, rope,
+constraint_indexing:constraint_classification(litany_of_the_real, mountain,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(mobile),

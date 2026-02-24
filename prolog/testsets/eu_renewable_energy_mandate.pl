@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(eu_renewable_energy_mandate, fossil_fuel_se
 % Experiences the constraint as a non-negotiable surcharge on energy bills.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.48 * 1.42 * 1.1 (continental scope) ≈ 0.75. This is well into Snare territory (χ ≥ 0.66).
-constraint_indexing:constraint_classification(eu_renewable_energy_mandate, snare,
+constraint_indexing:constraint_classification(eu_renewable_energy_mandate, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -173,7 +173,7 @@ constraint_indexing:constraint_classification(eu_renewable_energy_mandate, snare
 % Not a full beneficiary or victim; exit is constrained by EU law.
 % This mixed role derives a d value closer to 0.5. Let's estimate d ≈ 0.55 → f(d) ≈ 0.75.
 % χ = 0.48 * 0.75 * 1.1 ≈ 0.40. This is a perfect Tangled Rope classification.
-constraint_indexing:constraint_classification(eu_renewable_energy_mandate, tangled_rope,
+constraint_indexing:constraint_classification(eu_renewable_energy_mandate, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

@@ -98,7 +98,7 @@ narrative_ontology:constraint_victim(nuclear_vacuum_2026, global_civilian_popula
 % For the global population, the expiration is a Snare. The effective extraction
 % is amplified by their powerlessness (χ = 0.58 * 1.5 * 1.2 = 1.044).
 % It is a predatory trap of existential risk where they are "trapped" without any exit option.
-constraint_indexing:constraint_classification(nuclear_vacuum_2026, snare,
+constraint_indexing:constraint_classification(nuclear_vacuum_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(nuclear_vacuum_2026, rope,
 % suppression (0.85) is high, and it has both a coordination function (beneficiary)
 % and asymmetric extraction (victim), and requires active enforcement.
 % Effective extraction χ = 0.58 * 1.15 * 1.2 = 0.80.
-constraint_indexing:constraint_classification(nuclear_vacuum_2026, tangled_rope,
+constraint_indexing:constraint_classification(nuclear_vacuum_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -132,12 +132,12 @@ constraint_indexing:constraint_classification(nuclear_vacuum_2026, tangled_rope,
 :- begin_tests(nuclear_vacuum_2026_tests).
 
 test(perspectival_gap_subject_vs_beneficiary) :-
-    constraint_indexing:constraint_classification(nuclear_vacuum_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(nuclear_vacuum_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(nuclear_vacuum_2026, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(nuclear_vacuum_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(nuclear_vacuum_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % A Tangled Rope requires all three of these properties.

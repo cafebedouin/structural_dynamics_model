@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(institutional_inertia_lock, new_entrant_fir
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % To a new entrant, the inertia is a snare that prevents market entry and extracts a 'time-tax'.
 % χ = 0.52 * 1.5 (powerless) * 1.0 (national) = 0.78. This is a clear Snare.
-constraint_indexing:constraint_classification(institutional_inertia_lock, snare,
+constraint_indexing:constraint_classification(institutional_inertia_lock, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(institutional_inertia_lock, tangle
 
 test(perspectival_gap) :-
     % Verify Snare for powerless vs Rope for institutional.
-    constraint_indexing:constraint_classification(institutional_inertia_lock, snare,
+    constraint_indexing:constraint_classification(institutional_inertia_lock, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(institutional_inertia_lock, rope,
         context(agent_power(institutional), _, _, _)),

@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(mutual_defection_equilibrium, individual_ac
 % PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
 % To the powerless individual, the need to defect is an unchangeable law of survival.
 % Cooperating alone leads to certain exploitation.
-constraint_indexing:constraint_classification(mutual_defection_equilibrium, mountain,
+constraint_indexing:constraint_classification(mutual_defection_equilibrium, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(mutual_defection_equilibrium, rope
 % coordination function (creating a stable, predictable state) but this function
 % is coupled with extreme asymmetric extraction (the loss of all potential
 % cooperative surplus, borne by the individual actors).
-constraint_indexing:constraint_classification(mutual_defection_equilibrium, tangled_rope,
+constraint_indexing:constraint_classification(mutual_defection_equilibrium, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -126,9 +126,9 @@ constraint_indexing:constraint_classification(mutual_defection_equilibrium, tang
 
 test(perspectival_gap) :-
     % Verify the 'Individual' sees a Mountain (necessity) while the 'Auditor' sees a Tangled Rope (trap).
-    constraint_indexing:constraint_classification(mutual_defection_equilibrium, mountain,
+    constraint_indexing:constraint_classification(mutual_defection_equilibrium, snare,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(mutual_defection_equilibrium, tangled_rope,
+    constraint_indexing:constraint_classification(mutual_defection_equilibrium, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

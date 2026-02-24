@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(comitatus_bond, thanes_and_warrior_class).
 % Loyalty is compelled by the threat of social death (exile), which is the
 % ultimate sanction in a world with no alternative social structures.
 % Engine derives d from: victim membership + trapped exit -> d ≈ 0.95 -> high χ.
-constraint_indexing:constraint_classification(comitatus_bond, snare,
+constraint_indexing:constraint_classification(comitatus_bond, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

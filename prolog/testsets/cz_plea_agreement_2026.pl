@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(cz_plea_agreement_2026, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Observers detect a hybrid: it stabilizes the market (coordination) but
 % functions as an asymmetric extraction of wealth from offshore to onshore.
-constraint_indexing:constraint_classification(cz_plea_agreement_2026, tangled_rope,
+constraint_indexing:constraint_classification(cz_plea_agreement_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -132,7 +132,7 @@ test(perspectival_gap) :-
     % Verify the Subject (CZ) feels a Snare, while the State views it as a Rope.
     constraint_indexing:constraint_classification(cz_plea_agreement_2026, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(cz_plea_agreement_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(cz_plea_agreement_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cz_plea_agreement_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(extraction_threshold) :-
     domain_priors:base_extractiveness(cz_plea_agreement_2026, E),

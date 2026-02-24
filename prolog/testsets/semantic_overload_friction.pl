@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(semantic_overload_friction, layman).
 % PERSPECTIVE 1: THE LAYMAN (SNARE)
 % For the non-specialist, the language is a Snare. They are trapped by
 % rules they cannot understand, requiring them to hire intermediaries.
-constraint_indexing:constraint_classification(semantic_overload_friction, snare,
+constraint_indexing:constraint_classification(semantic_overload_friction, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(semantic_overload_friction, rope,
 % Analytically, the system is a Tangled Rope. The very tool used for
 % coordination (specialized terms) is the same tool used for extraction
 % (gatekeeping).
-constraint_indexing:constraint_classification(semantic_overload_friction, tangled_rope,
+constraint_indexing:constraint_classification(semantic_overload_friction, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -146,7 +146,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify that high-extraction language is flagged as a Tangled Rope.
-    constraint_indexing:constraint_classification(semantic_overload_friction, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(semantic_overload_friction, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify that all structural requirements for a Tangled Rope are declared.

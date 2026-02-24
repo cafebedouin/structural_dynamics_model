@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(cascading_constraint_failure, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature of hyper-efficient coordination (Rope)
 % inevitably resulting in total systemic extraction (Snare) upon failure.
-constraint_indexing:constraint_classification(cascading_constraint_failure, tangled_rope,
+constraint_indexing:constraint_classification(cascading_constraint_failure, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the Tangled Rope.
-    constraint_indexing:constraint_classification(cascading_constraint_failure, tangled_rope,
+    constraint_indexing:constraint_classification(cascading_constraint_failure, snare,
         context(agent_power(analytical), _, _, _)).
 
 :- end_tests(cascading_constraint_failure_tests).

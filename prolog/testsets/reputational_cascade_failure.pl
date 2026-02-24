@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(reputational_cascade_failure, rope
 % The default analytical context detects extreme extraction (0.91) masking as
 % coordination (Rope), classifying it as a Tangled Rope. This is the basis
 % for the constraint_claim.
-constraint_indexing:constraint_classification(reputational_cascade_failure, tangled_rope,
+constraint_indexing:constraint_classification(reputational_cascade_failure, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(reputational_cascade_failure, tang
 % A secondary analytical view focused on the performative "Appeals Process".
 % The high theater ratio (0.87 > 0.70) triggers a Piton classification,
 % identifying the process as an inertial spike that lacks functional authority.
-constraint_indexing:constraint_classification(reputational_cascade_failure, piton,
+constraint_indexing:constraint_classification(reputational_cascade_failure, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -148,12 +148,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(reputational_cascade_failure, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(reputational_cascade_failure, tangled_rope,
+    constraint_indexing:constraint_classification(reputational_cascade_failure, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.87) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(reputational_cascade_failure, piton,
+    constraint_indexing:constraint_classification(reputational_cascade_failure, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

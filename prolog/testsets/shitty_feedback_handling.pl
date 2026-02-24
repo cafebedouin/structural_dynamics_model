@@ -97,7 +97,7 @@ narrative_ontology:constraint_victim(shitty_feedback_handling, emotional_energy)
 
 constraint_indexing:constraint_classification(
     shitty_feedback_handling,
-    snare,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

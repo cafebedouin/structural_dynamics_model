@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(global_trade_externalities_neobiota, local_
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 %   χ = 0.55 * 1.42 * 1.0 (national scope) ≈ 0.78. With suppression=0.75, this is a Snare.
-constraint_indexing:constraint_classification(global_trade_externalities_neobiota, snare,
+constraint_indexing:constraint_classification(global_trade_externalities_neobiota, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(global_trade_externalities_neobiot
 % χ = 0.55 * 1.15 * 1.2 (global scope) ≈ 0.76.
 % The system recognizes the high χ, high suppression, AND the coordination function
 % (via `constraint_beneficiary` declaration) and correctly classifies it as Tangled Rope.
-constraint_indexing:constraint_classification(global_trade_externalities_neobiota, tangled_rope,
+constraint_indexing:constraint_classification(global_trade_externalities_neobiota, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -166,7 +166,7 @@ test(perspectival_gap_is_snare_vs_rope) :-
     constraint_indexing:constraint_classification(global_trade_externalities_neobiota, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(global_trade_externalities_neobiota, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(global_trade_externalities_neobiota, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_conditions_met) :-
     narrative_ontology:constraint_beneficiary(global_trade_externalities_neobiota, _),

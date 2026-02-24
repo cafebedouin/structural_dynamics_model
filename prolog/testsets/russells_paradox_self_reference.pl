@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(russells_paradox_self_reference, s
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The axiomatic architect who uses the paradox to justify and coordinate the adoption of new, more robust foundations for mathematics.
 % χ = 0.7 (ε) * -0.2 (institutional) * 1.2 (global) = -0.168. This is a pure coordination tool with negative perceived extraction.
-constraint_indexing:constraint_classification(russells_paradox_self_reference, rope,
+constraint_indexing:constraint_classification(russells_paradox_self_reference, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(bushman_money_magic, rope,
 % To the observer, the "scam" is a "Mountain"—an immutable feature of human
 % social systems where information asymmetry and greed inevitably produce
 % asymmetric extraction. It is a natural law of social interaction.
-constraint_indexing:constraint_classification(bushman_money_magic, tangled_rope,
+constraint_indexing:constraint_classification(bushman_money_magic, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -141,7 +141,7 @@ test(perspectival_gap) :-
 
 test(analytical_perspective) :-
     % Verify the analytical observer sees a Mountain.
-    constraint_indexing:constraint_classification(bushman_money_magic, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(bushman_money_magic, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_snare) :-
     % Verify the base metrics align with a high-extraction constraint.

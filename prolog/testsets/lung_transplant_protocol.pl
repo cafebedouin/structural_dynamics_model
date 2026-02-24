@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(lung_transplant_protocol, patients_in_need)
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % High extraction felt as an immutable limit or predatory trap.
 % NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-constraint_indexing:constraint_classification(lung_transplant_protocol, snare,
+constraint_indexing:constraint_classification(lung_transplant_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(lung_transplant_protocol, rope,
 % This perspective is used by the bridge to derive constraint_claim.
 % The canonical classifier identifies this as Tangled Rope due to the presence of
 % coordination (beneficiary), asymmetric extraction (victim), and enforcement.
-constraint_indexing:constraint_classification(lung_transplant_protocol, tangled_rope,
+constraint_indexing:constraint_classification(lung_transplant_protocol, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

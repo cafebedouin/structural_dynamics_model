@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(logistic_map_dynamics, proponents_of_linear
 % PERSPECTIVE 1: THE POPULATION ITERATE (THE SYSTEM STATE)
 % For the state variable x_n itself, the iterative law is an absolute,
 % unyielding Mountain. It cannot "choose" its next state; it is determined.
-constraint_indexing:constraint_classification(logistic_map_dynamics, mountain,
+constraint_indexing:constraint_classification(logistic_map_dynamics, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(logistic_map_dynamics, rope,
 % the map is a Snare. It extracts predictive certainty due to sensitive
 % dependence on initial conditions (the "Butterfly Effect"), trapping the
 % planner in a state of irreducible uncertainty.
-constraint_indexing:constraint_classification(logistic_map_dynamics, snare,
+constraint_indexing:constraint_classification(logistic_map_dynamics, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),

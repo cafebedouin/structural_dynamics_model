@@ -150,7 +150,7 @@ narrative_ontology:constraint_victim(us_debt_ceiling, us_economy).
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(us_debt_ceiling, snare,
+constraint_indexing:constraint_classification(us_debt_ceiling, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(us_debt_ceiling, rope,
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(us_debt_ceiling, tangled_rope,
+constraint_indexing:constraint_classification(us_debt_ceiling, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -198,14 +198,14 @@ constraint_indexing:constraint_classification(us_debt_ceiling, tangled_rope,
 %             spatial_scope(national))).
 
 % PERSPECTIVE 5: The Global Financial System (Institutional, Constrained)
-constraint_indexing:constraint_classification(us_debt_ceiling, tangled_rope,
+constraint_indexing:constraint_classification(us_debt_ceiling, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
 
 % PERSPECTIVE 6: Defaulting creditor perspective (powerless/trapped)
-constraint_indexing:constraint_classification(us_debt_ceiling, snare,
+constraint_indexing:constraint_classification(us_debt_ceiling, tangled_rope,
 context(agent_power(powerless),
 time_horizon(biographical),
 exit_options(trapped),

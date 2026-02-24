@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(teaching_horses_to_sing, the_thief).
 % For the thief, the bargain is a trap. Despite buying time, he is imprisoned
 % and his life is forfeit at the end. The effective extraction is immense.
 % χ = 0.75 * 1.5 (powerless) * 0.8 (local) = 0.90.
-constraint_indexing:constraint_classification(teaching_horses_to_sing, snare,
+constraint_indexing:constraint_classification(teaching_horses_to_sing, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

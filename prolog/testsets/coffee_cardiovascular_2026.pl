@@ -88,7 +88,7 @@ narrative_ontology:constraint_victim(coffee_cardiovascular_2026, medical_precaut
 % PERSPECTIVE 1: THE FORMER PATIENT (SNARE)
 % Previously, patients viewed caffeine as a Snare: an addictive substance 
 % that trapped them in a cycle of jitters and heart risk.
-constraint_indexing:constraint_classification(coffee_cardiovascular_2026, snare, 
+constraint_indexing:constraint_classification(coffee_cardiovascular_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(coffee_cardiovascular_2026, snare,
 % PERSPECTIVE 2: THE MODERN CLINICIAN (ROPE)
 % Modern cardiologists see daily coffee as a Rope: essential coordination 
 % for weight loss, reduced inflammation, and a 17% reduction in AF recurrence.
-constraint_indexing:constraint_classification(coffee_cardiovascular_2026, rope, 
+constraint_indexing:constraint_classification(coffee_cardiovascular_2026, tangled_rope, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -130,8 +130,8 @@ test(functional_signal) :-
 
 test(perspectival_shift) :-
     % Verify the shift from Snare (Powerless) to Rope (Institutional)
-    constraint_indexing:constraint_classification(coffee_cardiovascular_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(coffee_cardiovascular_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(coffee_cardiovascular_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(coffee_cardiovascular_2026, tangled_rope, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(coffee_cardiovascular_2026_tests).
 

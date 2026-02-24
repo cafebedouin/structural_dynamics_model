@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(traveling_salesperson_problem, delivery_dri
 % standard that extracts uncompensated time and well-being.
 % Engine derives d from: victim + trapped → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ ≈ 0.60 * 1.42 * 0.8 (local) ≈ 0.68 (Snare).
-constraint_indexing:constraint_classification(traveling_salesperson_problem, snare,
+constraint_indexing:constraint_classification(traveling_salesperson_problem, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(traveling_salesperson_problem, rop
 % The analyst sees both sides: the genuine coordination function that benefits
 % the company and the asymmetric extraction imposed on the drivers. This
 % hybrid nature defines it as a Tangled Rope.
-constraint_indexing:constraint_classification(traveling_salesperson_problem, tangled_rope,
+constraint_indexing:constraint_classification(traveling_salesperson_problem, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -159,12 +159,12 @@ constraint_indexing:constraint_classification(traveling_salesperson_problem, tan
 
 test(perspectival_gap_driver_vs_company) :-
     % Verify the driver sees a Snare while the company sees a Rope.
-    constraint_indexing:constraint_classification(traveling_salesperson_problem, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(traveling_salesperson_problem, tangled_rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(traveling_salesperson_problem, rope, context(agent_power(institutional), _, arbitrage, _)).
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view must resolve the gap as a Tangled Rope.
-    constraint_indexing:constraint_classification(traveling_salesperson_problem, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(traveling_salesperson_problem, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % Verify all three conditions for Tangled Rope are met.

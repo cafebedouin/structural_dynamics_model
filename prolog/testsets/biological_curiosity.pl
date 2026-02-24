@@ -132,7 +132,7 @@ narrative_ontology:constraint_victim(biological_curiosity, subjects_in_total_ins
 % curiosity is a "Snare." Seeking out information leads to punishment or
 % psychological despair, as the agent discovers alternatives they are legally
 % or physically unable to reach.
-constraint_indexing:constraint_classification(biological_curiosity, snare,
+constraint_indexing:constraint_classification(biological_curiosity, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(biological_curiosity, snare,
 % biological drive that, when properly channeled, can be used as a powerful
 % coordination mechanism for learning, exploration, and the transmission of
 % knowledge.
-constraint_indexing:constraint_classification(biological_curiosity, rope,
+constraint_indexing:constraint_classification(biological_curiosity, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(biological_curiosity, mountain,
 % For the agent with surplus energy, curiosity is a "Rope." It coordinates
 % their internal resources to engage with the unknown. It allows them
 % to climb out of stagnant environments and discover new opportunities.
-constraint_indexing:constraint_classification(biological_curiosity, rope,
+constraint_indexing:constraint_classification(biological_curiosity, scaffold,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),

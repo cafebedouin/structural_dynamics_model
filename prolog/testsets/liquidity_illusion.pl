@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(liquidity_illusion, rope,
 % Detects the hybrid signature of coordination intent (Rope)
 % entangled with predatory risk-concealment (Snare). This is the canonical
 % classification based on the structural properties.
-constraint_indexing:constraint_classification(liquidity_illusion, tangled_rope,
+constraint_indexing:constraint_classification(liquidity_illusion, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(liquidity_illusion, tangled_rope,
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.92) > 0.70 triggers Piton: the "liquidity" is a
 % non-functional, performative artifact that does not withstand pressure.
-constraint_indexing:constraint_classification(liquidity_illusion, piton,
+constraint_indexing:constraint_classification(liquidity_illusion, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -135,12 +135,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(liquidity_illusion, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(liquidity_illusion, tangled_rope,
+    constraint_indexing:constraint_classification(liquidity_illusion, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.92) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(liquidity_illusion, piton,
+    constraint_indexing:constraint_classification(liquidity_illusion, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

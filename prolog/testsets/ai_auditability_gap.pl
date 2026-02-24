@@ -76,7 +76,7 @@ narrative_ontology:constraint_victim(ai_auditability_gap, citizens).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The citizen sees a predatory trap; they cannot exit the algorithmic ecosystem.
-constraint_indexing:constraint_classification(ai_auditability_gap, snare, 
+constraint_indexing:constraint_classification(ai_auditability_gap, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(ai_auditability_gap, piton,
 
 test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
-    constraint_indexing:constraint_classification(ai_auditability_gap, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ai_auditability_gap, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(ai_auditability_gap, rope, context(agent_power(institutional), _, _, _)).
 
 test(threshold_validation) :-

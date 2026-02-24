@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(genai_mil_platform, dod_analysts).
 % The DoD Analyst. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 %   χ = 0.48 * 1.42 * 1.0 = 0.68. This exceeds the Snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(genai_mil_platform, snare,
+constraint_indexing:constraint_classification(genai_mil_platform, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

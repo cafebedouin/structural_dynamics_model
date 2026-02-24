@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(landscape_of_fear_2026, prey_populations).
 % that strangles their ability to feed and reproduce, forcing them into
 % low-quality habitats even when superior food is nearby. They are trapped
 % in the ecosystem and bear the full cost.
-constraint_indexing:constraint_classification(landscape_of_fear_2026, snare,
+constraint_indexing:constraint_classification(landscape_of_fear_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

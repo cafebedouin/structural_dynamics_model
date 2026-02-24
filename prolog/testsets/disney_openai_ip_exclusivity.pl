@@ -114,7 +114,7 @@ narrative_ontology:constraint_victim(disney_openai_ip_exclusivity, competing_ai_
 % Independent creators are victims with no access to the data (trapped).
 % The engine derives d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.2 (global scope) ≈ 0.94. This is a clear Snare.
-constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, snare,
+constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, rope
 % With ε=0.55 and suppression=0.75, it meets the criteria for a Tangled Rope.
 % The engine derives d ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.55 * 1.15 * 1.2 ≈ 0.76. This is a clear Tangled Rope.
-constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, tangled_rope,
+constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, tang
 % pressure, giving them less freedom than the deal's beneficiaries. They see
 % the anti-competitive nature (extraction) alongside the business logic
 % (coordination), classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, tangled_rope,
+constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -166,7 +166,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The integrated analytical view must be Tangled Rope.
-    constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(disney_openai_ip_exclusivity, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify that all three conditions for Tangled Rope are met.

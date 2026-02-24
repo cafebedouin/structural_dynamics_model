@@ -130,7 +130,7 @@ narrative_ontology:constraint_victim(gaza_aid_permit_revocation, local_palestini
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % The Palestinian civilian population dependent on aid. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → very high χ
-constraint_indexing:constraint_classification(gaza_aid_permit_revocation, snare,
+constraint_indexing:constraint_classification(gaza_aid_permit_revocation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

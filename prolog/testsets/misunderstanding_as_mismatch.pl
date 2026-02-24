@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(misunderstanding_as_mismatch, rope
 % It serves a group purpose but at a high, coercive cost to a specific victim class.
 % χ = 0.75 * 1.15 (analytical) * 1.2 (global) = 1.035. High extraction.
 % With high extraction, high suppression, enforcement, and both beneficiary/victim, it's a Tangled Rope.
-constraint_indexing:constraint_classification(misunderstanding_as_mismatch, tangled_rope,
+constraint_indexing:constraint_classification(misunderstanding_as_mismatch, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -148,7 +148,7 @@ test(perspectival_gap_subject_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical observer must correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(misunderstanding_as_mismatch, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(misunderstanding_as_mismatch, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     % Verify the base extraction is high enough to be a Snare/Tangled Rope.

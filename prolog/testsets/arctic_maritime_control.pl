@@ -150,7 +150,7 @@ narrative_ontology:constraint_victim(arctic_maritime_control, non_arctic_nations
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(arctic_maritime_control, snare,
+constraint_indexing:constraint_classification(arctic_maritime_control, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(constrained),
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(arctic_maritime_control, rope,
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(arctic_maritime_control, tangled_rope,
+constraint_indexing:constraint_classification(arctic_maritime_control, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -182,7 +182,7 @@ constraint_indexing:constraint_classification(arctic_maritime_control, tangled_r
 % produce different d values even for the same power atom.
 %
 % Perspective 4A: A major Arctic nation (e.g. Russia), institutional but constrained by the regime
-constraint_indexing:constraint_classification(arctic_maritime_control, tangled_rope,
+constraint_indexing:constraint_classification(arctic_maritime_control, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

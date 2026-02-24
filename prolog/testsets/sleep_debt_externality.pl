@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(sleep_debt_externality, rope,
 % From a biological standpoint, the need for glymphatic clearance during
 % sleep is an irreducible Mountain of mammalian physics. This is the underlying
 % reality the socio-economic constraint operates upon.
-constraint_indexing:constraint_classification(sleep_debt_externality, tangled_rope,
+constraint_indexing:constraint_classification(sleep_debt_externality, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(sleep_debt_externality, tangled_ro
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The default analytical context reveals the hybrid nature. The system provides
 % real coordination but at a highly extractive cost to a specific group.
-constraint_indexing:constraint_classification(sleep_debt_externality, tangled_rope,
+constraint_indexing:constraint_classification(sleep_debt_externality, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

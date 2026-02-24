@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(viral_transmission_rates, rope,
 % The epidemiologist sees the full picture: a necessary coordination function
 % (the Rope part) entangled with severe, asymmetrically applied extraction
 % (the Snare part). The high ε and suppression are undeniable.
-constraint_indexing:constraint_classification(viral_transmission_rates, tangled_rope,
+constraint_indexing:constraint_classification(viral_transmission_rates, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(viral_transmission_rates, tangled_
 % The business owner needs the system to coordinate safety so customers return
 % (Rope), but the mandates asymmetrically extract their revenue and viability
 % (Snare). They experience the hybrid nature directly.
-constraint_indexing:constraint_classification(viral_transmission_rates, tangled_rope,
+constraint_indexing:constraint_classification(viral_transmission_rates, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -163,7 +163,7 @@ test(perspectival_gap) :-
     % Verify perspectival gap between target and beneficiary.
     constraint_indexing:constraint_classification(viral_transmission_rates, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(viral_transmission_rates, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(viral_transmission_rates, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(viral_transmission_rates, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify that the base metrics are in the high-extraction range.
@@ -174,7 +174,7 @@ test(threshold_validation) :-
 
 test(hybrid_tangled_rope_detection) :-
     % Ensure moderate power detects the coordination/extraction hybrid.
-    constraint_indexing:constraint_classification(viral_transmission_rates, tangled_rope, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(viral_transmission_rates, snare, context(agent_power(moderate), _, _, _)).
 
 :- end_tests(viral_transmission_rates_tests).
 

@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(family_estrangement_ratio, rope,
 % The analyst sees the dual function: it's a coordination mechanism for the group
 % (beneficiary) that relies on asymmetric extraction from individuals (victims)
 % and requires active enforcement. This is the canonical definition of a Tangled Rope.
-constraint_indexing:constraint_classification(family_estrangement_ratio, tangled_rope,
+constraint_indexing:constraint_classification(family_estrangement_ratio, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -126,7 +126,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical observer must correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(family_estrangement_ratio, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(family_estrangement_ratio, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties_present) :-
     % Verify all three required properties for Tangled Rope are declared.

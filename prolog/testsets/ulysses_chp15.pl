@@ -88,7 +88,7 @@ domain_priors:requires_active_enforcement(ulysses_circe_1904). % Whistles, calls
 % PERSPECTIVE 1: THE HALLUCINATING SUBJECT (SNARE)
 % Effective Extraction: 0.58 * 1.5 (powerless) * 0.8 (local) = 0.696.
 % Perceived as a trap of "skeleton tracks" and "danger signals".
-constraint_indexing:constraint_classification(ulysses_circe_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_circe_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(ulysses_circe_1904, snare,
 % Effective Extraction: 0.58 * -0.2 (institutional/fixed) * 1.2 = -0.139.
 % χ < 0.05 check: The vision of Rudy is an irreducible fixed point of 
 % the psychological landscape.
-constraint_indexing:constraint_classification(ulysses_circe_1904, mountain, 
+constraint_indexing:constraint_classification(ulysses_circe_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(civilizational), 
             exit_options(mobile), 
@@ -121,8 +121,8 @@ constraint_indexing:constraint_classification(ulysses_circe_1904, piton,
 
 test(perspectival_gap) :-
     % Verify shift from the Snare of the district to the Mountain of Rudy.
-    constraint_indexing:constraint_classification(ulysses_circe_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_circe_1904, mountain, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_circe_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_circe_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_validation) :-
     % Piton classification requires theater_ratio >= 0.70.

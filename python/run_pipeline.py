@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pipeline orchestrator — pure-Python replacement for `make -j4 quick`.
+"""Pipeline orchestrator — runs the full DR analysis pipeline.
 
 Runs the full DR analysis pipeline (Prolog analyses, Python reports,
 enrichment) with structured error reporting and parallel execution.

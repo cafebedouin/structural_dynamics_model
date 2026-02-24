@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(procedural_compliance_theater, worker).
 % For the worker, the checklist is a Snare—a predatory extraction of cognitive
 % bandwidth with no exit.
 % χ = 0.58 * 1.5 (powerless) * 0.8 (local) = 0.696
-constraint_indexing:constraint_classification(procedural_compliance_theater, snare,
+constraint_indexing:constraint_classification(procedural_compliance_theater, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(procedural_compliance_theater, sna
 % For the institution, the theater is a Rope—it provides the "coordination"
 % necessary to satisfy external regulators and mitigate legal risk.
 % χ = 0.58 * -0.2 (institutional) * 1.0 (national) = -0.116 (felt as a net benefit)
-constraint_indexing:constraint_classification(procedural_compliance_theater, rope,
+constraint_indexing:constraint_classification(procedural_compliance_theater, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

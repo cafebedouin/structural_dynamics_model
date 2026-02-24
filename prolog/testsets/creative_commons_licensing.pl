@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(creative_commons_licensing, legacy_publishe
 % PERSPECTIVE 1: THE CONTENT USER (e.g., Student, Wikipedian)
 % Agent who benefits from the coordination function. Engine derives d from:
 %   beneficiary membership + mobile exit → d ≈ 0.15 → f(d) ≈ -0.01 → low/negative χ
-constraint_indexing:constraint_classification(creative_commons_licensing, rope,
+constraint_indexing:constraint_classification(creative_commons_licensing, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(mobile),
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(creative_commons_licensing, rope,
 % PERSPECTIVE 2: THE LEGACY PUBLISHER
 % Agent whose business model is targeted by the constraint. Engine derives d from:
 %   victim membership + constrained exit → d ≈ 0.90 → f(d) ≈ 1.35 → high χ
-constraint_indexing:constraint_classification(creative_commons_licensing, tangled_rope,
+constraint_indexing:constraint_classification(creative_commons_licensing, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

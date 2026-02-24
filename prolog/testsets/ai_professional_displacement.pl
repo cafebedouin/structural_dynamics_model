@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(ai_professional_displacement, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % An analyst sees the dual nature: a genuine coordination/efficiency gain for
 % firms, coupled with severe, asymmetric extraction from the junior labor pool.
-constraint_indexing:constraint_classification(ai_professional_displacement, tangled_rope,
+constraint_indexing:constraint_classification(ai_professional_displacement, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(ai_professional_displacement, tang
 % Managers use AI to coordinate departmental output (Rope function) but also
 % manage the extractive consequences: loss of mentorship pipelines and human
 % capital development (Snare function).
-constraint_indexing:constraint_classification(ai_professional_displacement, tangled_rope,
+constraint_indexing:constraint_classification(ai_professional_displacement, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -156,7 +156,7 @@ test(perspectival_gap) :-
     TypeBeneficiary == rope.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(ai_professional_displacement, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ai_professional_displacement, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_for_tangled_rope) :-
     domain_priors:base_extractiveness(ai_professional_displacement, E),

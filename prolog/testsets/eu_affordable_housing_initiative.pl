@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(eu_affordable_housing_initiative, small_loc
 % high d (~0.95), leading to high effective extraction (χ). With high
 % suppression, this appears as a Snare: a system that promises help but
 % traps them in a high-cost environment.
-constraint_indexing:constraint_classification(eu_affordable_housing_initiative, snare,
+constraint_indexing:constraint_classification(eu_affordable_housing_initiative, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -170,7 +170,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
     format('Passed: Target (snare) and Beneficiary (rope) have different classifications.~n').
 
 test(perspectival_gap_architect_vs_target) :-
-    constraint_indexing:constraint_classification(eu_affordable_housing_initiative, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(eu_affordable_housing_initiative, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(eu_affordable_housing_initiative, rope, context(agent_power(institutional), _, exit_options(constrained), _)),
     format('Passed: Target (snare) and Architect (rope) have different classifications.~n').
 

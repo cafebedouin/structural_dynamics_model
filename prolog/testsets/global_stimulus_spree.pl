@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(global_stimulus_spree, future_taxpayers).
 % PERSPECTIVE 1: THE FUTURE TAXPAYER (SNARE)
 % The debt burden is a trap where future generations pay the bill
 % for current growth-sapping shocks.
-constraint_indexing:constraint_classification(global_stimulus_spree, snare,
+constraint_indexing:constraint_classification(global_stimulus_spree, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(global_stimulus_spree, snare,
 % PERSPECTIVE 2: THE NATIONAL GOVERNMENT (ROPE)
 % Viewed as essential coordination for generational investments
 % in infrastructure and sovereignty.
-constraint_indexing:constraint_classification(global_stimulus_spree, rope,
+constraint_indexing:constraint_classification(global_stimulus_spree, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(mobile),
@@ -137,8 +137,8 @@ constraint_indexing:constraint_classification(global_stimulus_spree, scaffold,
 
 test(perspectival_gap) :-
     % Verify the stimulus is a Snare for the powerless but a Rope for the institution.
-    constraint_indexing:constraint_classification(global_stimulus_spree, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(global_stimulus_spree, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(global_stimulus_spree, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(global_stimulus_spree, scaffold, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(global_stimulus_spree, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

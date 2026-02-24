@@ -142,7 +142,7 @@ narrative_ontology:constraint_victim(international_seabed_mining_regime, develop
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(international_seabed_mining_regime, snare,
+constraint_indexing:constraint_classification(international_seabed_mining_regime, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(international_seabed_mining_regime
 % PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
 % Agent who benefits most. Engine derives d from:
 %   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(international_seabed_mining_regime, rope,
+constraint_indexing:constraint_classification(international_seabed_mining_regime, naturalized,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(international_seabed_mining_regime
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(international_seabed_mining_regime, tangled_rope,
+constraint_indexing:constraint_classification(international_seabed_mining_regime, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(international_seabed_mining_regime
 % Perspective 4A: ISA Secretariat (institutional, constrained exit, subject to capture)
 % The regulator's function is compromised, serving both coordination and extraction.
 % This is a classic tangled_rope, not a piton, as the function is subverted, not inert.
-constraint_indexing:constraint_classification(international_seabed_mining_regime, tangled_rope,
+constraint_indexing:constraint_classification(international_seabed_mining_regime, naturalized,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -182,7 +182,7 @@ constraint_indexing:constraint_classification(international_seabed_mining_regime
 
 % Perspective 4B: Mining Companies (institutional, arbitrage exit, beneficiary)
 % This is the same as Perspective 2, included for clarity in the inter-institutional analysis.
-constraint_indexing:constraint_classification(international_seabed_mining_regime, rope,
+constraint_indexing:constraint_classification(international_seabed_mining_regime, naturalized,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

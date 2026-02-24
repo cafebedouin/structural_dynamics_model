@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(geopolitical_insularity_2026, domestic_work
 % PERSPECTIVE 1: THE DOMESTIC WORKER (SNARE)
 % Sees global trade as a trap; 66% worry trade policies will hurt their employer.
 % χ = 0.60 * 1.5 (powerless) * 1.0 (national) = 0.90. High extraction felt directly.
-constraint_indexing:constraint_classification(geopolitical_insularity_2026, snare,
+constraint_indexing:constraint_classification(geopolitical_insularity_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(geopolitical_insularity_2026, rope
 % Detects both the coordination function (aligning business with national sentiment)
 % and the severe asymmetric extraction imposed on workers and consumers.
 % χ = 0.60 * 1.15 (analytical) * 1.2 (global) = 0.828. High extraction is visible.
-constraint_indexing:constraint_classification(geopolitical_insularity_2026, tangled_rope,
+constraint_indexing:constraint_classification(geopolitical_insularity_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -127,9 +127,9 @@ constraint_indexing:constraint_classification(geopolitical_insularity_2026, tang
 
 test(perspectival_gap) :-
     % Verify the core perspectival gap between the worker (snare) and the corporation (rope).
-    constraint_indexing:constraint_classification(geopolitical_insularity_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(geopolitical_insularity_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(geopolitical_insularity_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(geopolitical_insularity_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(geopolitical_insularity_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify that all three structural requirements for Tangled Rope are met.

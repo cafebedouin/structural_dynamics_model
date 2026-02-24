@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(uk_necc_formation, economic_crime_syndicate
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % For an economic criminal, the NECC is a pure instrument of coercion.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(uk_necc_formation, snare,
+constraint_indexing:constraint_classification(uk_necc_formation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

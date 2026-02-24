@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(indian_import_tariffs_eu, indian_consumers)
 % PERSPECTIVE 1: THE INDIAN CONSUMER (PRIMARY TARGET - SNARE)
 % Victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * σ(national=1.0) = 0.78 (Snare)
-constraint_indexing:constraint_classification(indian_import_tariffs_eu, snare,
+constraint_indexing:constraint_classification(indian_import_tariffs_eu, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(indian_import_tariffs_eu, rope,
 % for domestic industry and the high asymmetric extraction.
 % d ≈ 0.72 -> f(d) ≈ 1.15.
 % χ = 0.55 * 1.15 * σ(global=1.2) = 0.76 (Tangled Rope)
-constraint_indexing:constraint_classification(indian_import_tariffs_eu, tangled_rope,
+constraint_indexing:constraint_classification(indian_import_tariffs_eu, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(indian_import_tariffs_eu, rope,
 % engine derives a higher d value than for the Indian govt.
 % Represents victims + constrained exit -> d ≈ 0.7 -> f(d) ≈ 1.1.
 % χ = 0.55 * 1.1 * σ(continental=1.1) = 0.66 (Tangled Rope).
-constraint_indexing:constraint_classification(indian_import_tariffs_eu, tangled_rope,
+constraint_indexing:constraint_classification(indian_import_tariffs_eu, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -189,7 +189,7 @@ constraint_indexing:constraint_classification(indian_import_tariffs_eu, tangled_
 test(perspectival_gap_target_vs_beneficiary) :-
     % Verify that the primary victim (consumer) sees a Snare and the primary
     % beneficiary (producer) sees a Rope.
-    constraint_indexing:constraint_classification(indian_import_tariffs_eu, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(indian_import_tariffs_eu, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(indian_import_tariffs_eu, rope, context(agent_power(institutional), time_horizon(generational), exit_options(arbitrage), _)).
 
 test(inter_institutional_gap) :-

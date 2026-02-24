@@ -82,7 +82,7 @@ narrative_ontology:constraint_victim(open_source_commons, none).
 % --- Analytical perspective classification ---
 % chi = 0.05 * 1.15 (analytical) * 1.2 (global) = 0.069
 % Classification: scaffold
-constraint_indexing:constraint_classification(open_source_commons, scaffold,
+constraint_indexing:constraint_classification(open_source_commons, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(udhr_1948, authoritarian_regimes).
 % For the powerless, the UDHR is framed as "natural law" (born free and equal).
 % Because they cannot change the declaration and rely on its "inalienable"
 % status to survive, it functions as an unchangeable Mountain of reality.
-constraint_indexing:constraint_classification(udhr_1948, mountain,
+constraint_indexing:constraint_classification(udhr_1948, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(udhr_1948, rope,
 % For a regime seeking absolute control, the UDHR is an asymmetric constraint
 % imposed by an external collective. It restricts their "sovereign right"
 % to suppress dissent, acting as a Snare that tightens via international law.
-constraint_indexing:constraint_classification(udhr_1948, snare,
+constraint_indexing:constraint_classification(udhr_1948, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

@@ -89,7 +89,7 @@ narrative_ontology:coordination_vitality(railway_gauge_standard, degrading).
 
 % PERSPECTIVE 1: THE PASSENGER / FREIGHT USER (MOUNTAIN)
 % For the ordinary user, the gauge is an immutable fact of the world.
-constraint_indexing:constraint_classification(railway_gauge_standard, mountain,
+constraint_indexing:constraint_classification(railway_gauge_standard, piton,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(railway_gauge_standard, mountain,
 
 % PERSPECTIVE 2: THE NATIONAL TRANSPORT AUTHORITY (ROPE)
 % For the regulator, the standard is a pure coordination mechanism.
-constraint_indexing:constraint_classification(railway_gauge_standard, rope,
+constraint_indexing:constraint_classification(railway_gauge_standard, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(railway_gauge_standard, rope,
 
 % PERSPECTIVE 3: ISAMBARD KINGDOM BRUNEL (THE INNOVATOR) (SNARE)
 % For the innovator with a superior but incompatible alternative, the standard is a snare.
-constraint_indexing:constraint_classification(railway_gauge_standard, snare,
+constraint_indexing:constraint_classification(railway_gauge_standard, piton,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),

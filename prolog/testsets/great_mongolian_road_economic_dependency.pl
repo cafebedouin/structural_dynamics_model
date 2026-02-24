@@ -138,7 +138,7 @@ narrative_ontology:constraint_victim(great_mongolian_road_economic_dependency, m
 % PERSPECTIVE 1: THE MOST VULNERABLE TARGET (SNARE)
 % Local communities who are powerless and trapped. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, snare,
+constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(great_mongolian_road_economic_depe
 % NOTE: Classification is Tangled Rope, not Rope, because base extractiveness (ε=0.59)
 % is too high for the Rope gate (ε ≤ 0.45). The classification reflects the
 % underlying structure, while the negative χ reflects the beneficiary's experience.
-constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, tangled_rope,
+constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(great_mongolian_road_economic_depe
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, tangled_rope,
+constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(great_mongolian_road_economic_depe
 % PERSPECTIVE 4: THE NATION-STATE TARGET (SNARE)
 % Mongolia as a state actor. Victim membership + constrained exit options
 % result in a high derived directionality, pushing χ into the snare range.
-constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, snare,
+constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, tangled_rope,
     context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
@@ -179,7 +179,7 @@ constraint_indexing:constraint_classification(great_mongolian_road_economic_depe
 % China's perspective. The road could benefit China (coordination) but also
 % reduce its regional influence (extraction). This ambiguity is characteristic
 % of a Tangled Rope. The classification is not Rope because ε is too high.
-constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, tangled_rope,
+constraint_indexing:constraint_classification(great_mongolian_road_economic_dependency, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

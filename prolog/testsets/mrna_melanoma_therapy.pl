@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(mrna_melanoma_therapy, healthcare_payers). 
 % Sees a life-saving treatment that is inaccessible due to its price structure.
 % The existence of the cure becomes a source of extraction (desperation, debt).
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(mrna_melanoma_therapy, snare,
+constraint_indexing:constraint_classification(mrna_melanoma_therapy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(mrna_melanoma_therapy, rope,
 % Recognizes both the genuine coordination function (a biological rope targeting
 % cancer) and the asymmetric extraction enabled by the economic structure (a snare).
 % This is the basis for the constraint_claim.
-constraint_indexing:constraint_classification(mrna_melanoma_therapy, tangled_rope,
+constraint_indexing:constraint_classification(mrna_melanoma_therapy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(mrna_melanoma_therapy, tangled_rop
 % beneficiary of improved patient outcomes (which can reduce other long-term costs).
 % Their exit is constrained; refusing to cover a breakthrough therapy is politically
 % and ethically untenable. The engine derives a moderate `d`, resulting in a Tangled Rope.
-constraint_indexing:constraint_classification(mrna_melanoma_therapy, tangled_rope,
+constraint_indexing:constraint_classification(mrna_melanoma_therapy, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -177,7 +177,7 @@ test(tangled_rope_conditions_met, [nondet]) :-
     format('... Tangled Rope structural requirements validated (enforcement, beneficiary, victim)').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(mrna_melanoma_therapy, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(mrna_melanoma_therapy, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(mrna_melanoma_therapy_tests).
 

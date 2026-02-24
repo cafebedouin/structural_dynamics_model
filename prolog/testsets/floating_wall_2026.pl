@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(floating_wall_2026, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Analysts view the wall as a Tangled Rope: a dual-use infrastructure 
 % where legitimate fishing utility is inextricably knotted with military goals.
-constraint_indexing:constraint_classification(floating_wall_2026, tangled_rope,
+constraint_indexing:constraint_classification(floating_wall_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

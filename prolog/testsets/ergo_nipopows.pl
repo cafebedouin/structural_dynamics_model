@@ -128,7 +128,7 @@ narrative_ontology:constraint_beneficiary(ergo_nipopows, protocol_auditors).
 % 'Rope'. It grants them the security of a full node without the impossible
 % burden of downloading the entire blockchain. It's a tool that coordinates
 % trust in a decentralized way.
-constraint_indexing:constraint_classification(ergo_nipopows, rope,
+constraint_indexing:constraint_classification(ergo_nipopows, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(mobile),
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(ergo_nipopows, rope,
 % For an institution building a cross-chain bridge, NiPoPoWs are also a 'Rope'.
 % They provide a trustless mechanism to verify events on another chain, forming
 % the foundation for secure interoperability.
-constraint_indexing:constraint_classification(ergo_nipopows, rope,
+constraint_indexing:constraint_classification(ergo_nipopows, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(arbitrage),

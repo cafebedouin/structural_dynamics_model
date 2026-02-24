@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(institutional_mutation_domesticati
 % An analyst sees both the genuine coordination function (peacekeeping) and the
 % asymmetric extraction (consuming the Jedi's autonomy and potential). The need
 % for active enforcement confirms it is not pure coordination. It is a Tangled Rope.
-constraint_indexing:constraint_classification(institutional_mutation_domestication, tangled_rope,
+constraint_indexing:constraint_classification(institutional_mutation_domestication, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(arrows_impossibility_theorem, individual_vo
 % PERSPECTIVE 1: THE DEMOCRATIC REFORMER (SNARE)
 % Agent who bears the most extraction. The theorem is used to strangle hope
 % for a "perfect" system, extracting political energy and foreclosing options.
-constraint_indexing:constraint_classification(arrows_impossibility_theorem, snare,
+constraint_indexing:constraint_classification(arrows_impossibility_theorem, tangled_rope,
     context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(arrows_impossibility_theorem, tang
 % Experiences the system's flaws as an inescapable reality. While it feels
 % like a Mountain (a law of nature), its high base extractiveness (in terms
 % of democratic legitimacy) makes it a Snare from their trapped perspective.
-constraint_indexing:constraint_classification(arrows_impossibility_theorem, snare,
+constraint_indexing:constraint_classification(arrows_impossibility_theorem, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

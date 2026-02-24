@@ -139,7 +139,7 @@ narrative_ontology:constraint_victim(israeli_settlement_policy_authority_restric
 % PERSPECTIVE 1A: THE POWERLESS TARGET (Palestinian Residents)
 % Agent who bears the most direct extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(israeli_settlement_policy_authority_restriction, snare,
+constraint_indexing:constraint_classification(israeli_settlement_policy_authority_restriction, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(israeli_settlement_policy_authorit
 
 % PERSPECTIVE 1B: THE INSTITUTIONAL TARGET (Palestinian Authority)
 % A more powerful but still trapped actor, experiencing extraction of authority.
-constraint_indexing:constraint_classification(israeli_settlement_policy_authority_restriction, snare,
+constraint_indexing:constraint_classification(israeli_settlement_policy_authority_restriction, tangled_rope,
     context(agent_power(moderate),
             time_horizon(generational),
             exit_options(trapped),
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(israeli_settlement_policy_authorit
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(israeli_settlement_policy_authority_restriction, tangled_rope,
+constraint_indexing:constraint_classification(israeli_settlement_policy_authority_restriction, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -176,7 +176,7 @@ constraint_indexing:constraint_classification(israeli_settlement_policy_authorit
 % Experiences the policy as a Piton due to high maintenance costs (diplomatic,
 % legal, financial) for a policy whose original function has degraded, now
 % primarily serving a narrow interest group. High theater ratio reflects this.
-constraint_indexing:constraint_classification(israeli_settlement_policy_authority_restriction, piton,
+constraint_indexing:constraint_classification(israeli_settlement_policy_authority_restriction, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

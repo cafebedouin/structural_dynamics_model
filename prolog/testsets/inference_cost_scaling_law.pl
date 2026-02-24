@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(inference_cost_scaling_law, rope,
 % The default analytical context detects both the coordination function
 % (beneficiaries exist) and the severe asymmetric extraction (victims exist),
 % classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(inference_cost_scaling_law, tangled_rope,
+constraint_indexing:constraint_classification(inference_cost_scaling_law, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

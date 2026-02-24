@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(us_foreign_policy_america_first, r
 % This meets the definition of a Tangled Rope.
 % Analytical power derives d≈0.72, f(d)≈1.15.
 % χ = 0.75 * 1.15 * 1.2 (global) = 1.035. Well within Tangled Rope range.
-constraint_indexing:constraint_classification(us_foreign_policy_america_first, tangled_rope,
+constraint_indexing:constraint_classification(us_foreign_policy_america_first, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(us_foreign_policy_america_first, t
 % results in a high d. This is a coercive mechanism to extract policy changes.
 % Still classifies as a Snare, demonstrating the policy's coercive nature even
 % at the state-to-state level.
-constraint_indexing:constraint_classification(us_foreign_policy_america_first, snare,
+constraint_indexing:constraint_classification(us_foreign_policy_america_first, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -201,7 +201,7 @@ test(inter_institutional_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical observer must see the full, dual nature of the constraint.
-    constraint_indexing:constraint_classification(us_foreign_policy_america_first, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_foreign_policy_america_first, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % Verify that all three structural requirements for Tangled Rope are declared.

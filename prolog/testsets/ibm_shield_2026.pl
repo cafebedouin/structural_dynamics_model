@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(ibm_shield_2026, rope,
 % Analysts see a Tangled Rope: Genuine existential security coordination
 % mixed with high rent-extraction from the IDIQ structure.
 % χ = 0.62 * 1.15 (analytical) * 1.2 (global) = 0.8556
-constraint_indexing:constraint_classification(ibm_shield_2026, tangled_rope,
+constraint_indexing:constraint_classification(ibm_shield_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

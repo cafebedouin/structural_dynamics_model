@@ -97,7 +97,7 @@ narrative_ontology:coordination_vitality(elite_capture_2026, degrading).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For those "in the streets," the environment is a Snare: a trap where
 % their representative icons have been financialized against them.
-constraint_indexing:constraint_classification(elite_capture_2026, snare,
+constraint_indexing:constraint_classification(elite_capture_2026, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(elite_capture_2026, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % Elites view this capture as a Rope: a coordination tool to prevent
 % disruptive social unrest and maintain market predictability.
-constraint_indexing:constraint_classification(elite_capture_2026, rope,
+constraint_indexing:constraint_classification(elite_capture_2026, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

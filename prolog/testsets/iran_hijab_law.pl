@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(iran_hijab_law, rope,
 % severe asymmetric extraction. All three gates for Tangled Rope are met:
 % has_coordination_function, has_asymmetric_extraction, requires_active_enforcement.
 % χ = 0.75 * 1.15 * 1.2 (global scope) = 1.035.
-constraint_indexing:constraint_classification(iran_hijab_law, tangled_rope,
+constraint_indexing:constraint_classification(iran_hijab_law, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -171,7 +171,7 @@ test(perspectival_gap_target_beneficiary) :-
     constraint_indexing:constraint_classification(iran_hijab_law, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(iran_hijab_law, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(iran_hijab_law, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_met) :-
     narrative_ontology:constraint_beneficiary(iran_hijab_law, _), % provides coordination function

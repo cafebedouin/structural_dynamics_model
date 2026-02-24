@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(quine_self_replication, rope,
 % an extractive one (it consumes resources and analytic effort to contain).
 % It's not a Snare because the base extraction of the mechanism is low; the
 % "snare" is the malware payload, a separate constraint.
-constraint_indexing:constraint_classification(quine_self_replication, tangled_rope,
+constraint_indexing:constraint_classification(quine_self_replication, rope,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(constrained),
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(quine_self_replication, tangled_ro
 % The analytical view sees the full structure: a Mountain of logic that enables
 % Rope-like coordination (pedagogy) and also extractive side-effects (malware).
 % This hybrid nature is best captured as a Tangled Rope.
-constraint_indexing:constraint_classification(quine_self_replication, tangled_rope,
+constraint_indexing:constraint_classification(quine_self_replication, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -183,13 +183,11 @@ test(perspectival_gap) :-
     % Verify the code itself sees a Mountain, while educators see a Rope.
     constraint_indexing:constraint_classification(quine_self_replication, mountain, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(quine_self_replication, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(quine_self_replication, tangled_rope, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(quine_self_replication, rope, context(agent_power(moderate), _, _, _)).
 
 test(defender_tangled_rope_insight) :-
     % Demonstrates that for the defender, self-replication is a Tangled Rope.
-    constraint_indexing:constraint_classification(quine_self_replication, tangled_rope, context(agent_power(moderate), _, _, _)).
-
-test(emergence_and_nl_profile) :-
+    cons    constraint_indexing:constraint_classification(quine_self_replication, rope, context(agent_power(moderate), _, _, _))emergence_and_nl_profile) :-
     domain_priors:emerges_naturally(quine_self_replication),
     narrative_ontology:constraint_metric(quine_self_replication, accessibility_collapse, AC), AC >= 0.85,
     narrative_ontology:constraint_metric(quine_self_replication, resistance, R), R =< 0.15.

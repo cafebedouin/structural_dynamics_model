@@ -83,7 +83,7 @@ narrative_ontology:coordination_vitality(gold_piton_2026, dead).
 % PERSPECTIVE 1: THE RETAIL INVESTOR (SNARE)
 % Effective Extraction: 0.20 * 1.5 (powerless) * 1.2 (global) = 0.36.
 % Note: In "Flash Crash" scenarios, base_extractiveness spikes to > 0.60.
-constraint_indexing:constraint_classification(gold_piton_2026, snare, 
+constraint_indexing:constraint_classification(gold_piton_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -118,7 +118,7 @@ test(piton_threshold) :-
 
 test(perspectival_gap) :-
     % Verify the gap between the institutional Piton and the retail Snare.
-    constraint_indexing:constraint_classification(gold_piton_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(gold_piton_2026, piton, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(gold_piton_2026, piton, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(gold_piton_2026_tests).

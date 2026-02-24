@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(naming_as_control, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The combination of a genuine coordination function (beneficiary exists) with
 % high, asymmetric extraction (victim exists) and active enforcement defines a Tangled Rope.
-constraint_indexing:constraint_classification(naming_as_control, tangled_rope,
+constraint_indexing:constraint_classification(naming_as_control, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_conditions_met) :-
     % Verify that the analytical observer correctly classifies as tangled_rope.
-    constraint_indexing:constraint_classification(naming_as_control, tangled_rope,
+    constraint_indexing:constraint_classification(naming_as_control, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

@@ -126,7 +126,7 @@ narrative_ontology:coordination_vitality(trajans_bridge_lifecycle, dead).
 % river. From this perspective, they are a natural hazard, a fixed obstacle
 % with no recourse. Engine derives d ≈ 0.95 (victim + trapped).
 % χ ≈ 0.18 * 1.42 * 0.9 = 0.23. Low extraction, but feels like an immutable fact.
-constraint_indexing:constraint_classification(trajans_bridge_lifecycle, mountain,
+constraint_indexing:constraint_classification(trajans_bridge_lifecycle, rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(trajans_bridge_lifecycle, rope,
 % object now maintained primarily for theatrical reasons. The high theater
 % ratio (0.85) is the dominant signal.
 % Engine derives analytical d ≈ 0.72 → f(d) ≈ 1.15.
-constraint_indexing:constraint_classification(trajans_bridge_lifecycle, piton,
+constraint_indexing:constraint_classification(trajans_bridge_lifecycle, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -172,7 +172,7 @@ test(analytical_piton_detection) :-
     % Verify the analytical perspective correctly identifies the Piton.
     domain_priors:theater_ratio(trajans_bridge_lifecycle, TR),
     TR > 0.70,
-    constraint_indexing:constraint_classification(trajans_bridge_lifecycle, piton, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(trajans_bridge_lifecycle, rope, context(agent_power(analytical), _, _, _)).
 
 test(piton_threshold_validation) :-
     narrative_ontology:constraint_metric(trajans_bridge_lifecycle, extractiveness, E),

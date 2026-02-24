@@ -83,7 +83,7 @@ domain_priors:requires_active_enforcement(thai_article_112_mountain).
 
 % PERSPECTIVE 1: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % Viewed as an irreducible logical limit within the current Thai legal geometry.
-constraint_indexing:constraint_classification(thai_article_112_mountain, tangled_rope, 
+constraint_indexing:constraint_classification(thai_article_112_mountain, rope, 
     context(agent_power(analytical), 
             time_horizon(historical), 
             exit_options(analytical), 
@@ -91,7 +91,7 @@ constraint_indexing:constraint_classification(thai_article_112_mountain, tangled
 
 % PERSPECTIVE 2: THE INSTITUTIONAL ACTOR (MOUNTAIN/ROPE)
 % Viewed as a foundational, unchangeable pillar of state coordination.
-constraint_indexing:constraint_classification(thai_article_112_mountain, tangled_rope, 
+constraint_indexing:constraint_classification(thai_article_112_mountain, rope, 
     context(agent_power(institutional), 
             time_horizon(civilizational), 
             exit_options(mobile), 
@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(thai_article_112_mountain, tangled
 % PERSPECTIVE 3: THE DISFRANCHISED PROGRESSIVE (SNARE)
 % What the institution calls a "Mountain," the trapped agent experiences as 
 % a predatory trap (Snare) that eliminates their political representation.
-constraint_indexing:constraint_classification(thai_article_112_mountain, snare, 
+constraint_indexing:constraint_classification(thai_article_112_mountain, rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -117,14 +117,12 @@ test(mountain_validation) :-
     domain_priors:base_extractiveness(thai_article_112_mountain, E),
 
     E =< 0.05,
-    constraint_indexing:constraint_classification(thai_article_112_mountain, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(thai_article_112_mountain, rope, context(agent_power(analytical), _, _, _)).
 
 test(perspectival_gap_existence) :-
     % Verify the Subject sees a Snare while the Auditor sees a Mountain.
-    constraint_indexing:constraint_classification(thai_article_112_mountain, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(thai_article_112_mountain, tangled_rope, context(agent_power(analytical), _, _, _)).
-
-:- end_tests(thai_article_112_mountain_tests).
+    constraint_indexing:constraint_classification(thai_article_112_mountain, rope, context(agent_power(powerless), _, _, _)),
+    cons    constraint_indexing:constraint_classification(thai_article_112_mountain, rope, context(agent_power(analytical), _, _, _))d_tests(thai_article_112_mountain_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY

@@ -95,7 +95,7 @@ narrative_ontology:coordination_vitality(huang_expectation_resilience_2026, dead
 % The elite student is "trapped" in their success, where high expectations
 % actively erode the ability to handle future setbacks.
 % χ = 0.75 * π(powerless:1.5) * σ(national:1.0) = 1.125. High extraction -> Snare.
-constraint_indexing:constraint_classification(huang_expectation_resilience_2026, snare,
+constraint_indexing:constraint_classification(huang_expectation_resilience_2026, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(huang_expectation_resilience_2026,
 % From the institutional level, "pain and suffering" is infrastructure used to
 % "refine the character of the company." Extraction is perceived as a net benefit.
 % χ = 0.75 * π(institutional:-0.2) * σ(national:1.0) = -0.15. Negative extraction -> Rope.
-constraint_indexing:constraint_classification(huang_expectation_resilience_2026, rope,
+constraint_indexing:constraint_classification(huang_expectation_resilience_2026, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

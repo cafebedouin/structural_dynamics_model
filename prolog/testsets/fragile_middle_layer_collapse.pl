@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(fragile_middle_layer_collapse, rop
 % Detects high extraction (0.86) and suppression (0.73) masking as essential
 % coordination (Rope), with both beneficiaries and victims. This is the
 % canonical definition of a Tangled Rope.
-constraint_indexing:constraint_classification(fragile_middle_layer_collapse, tangled_rope,
+constraint_indexing:constraint_classification(fragile_middle_layer_collapse, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -143,7 +143,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(fragile_middle_layer_collapse, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(fragile_middle_layer_collapse, tangled_rope,
+    constraint_indexing:constraint_classification(fragile_middle_layer_collapse, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

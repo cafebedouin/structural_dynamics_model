@@ -86,7 +86,7 @@ narrative_ontology:constraint_victim(global_hoarding_scaling_laws, global_precar
 % PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
 % At a global scale with zero exit options, the overwhelming extraction and
 % suppression are felt as an unchangeable natural law, not a constructed system.
-constraint_indexing:constraint_classification(global_hoarding_scaling_laws, mountain,
+constraint_indexing:constraint_classification(global_hoarding_scaling_laws, snare,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(global_hoarding_scaling_laws, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The analyst sees both the coordination function for beneficiaries and the
 % severe, asymmetric extraction from victims, classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(global_hoarding_scaling_laws, tangled_rope,
+constraint_indexing:constraint_classification(global_hoarding_scaling_laws, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,7 +124,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the tangled rope.
-    constraint_indexing:constraint_classification(global_hoarding_scaling_laws, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(global_hoarding_scaling_laws, snare, context(agent_power(analytical), _, _, _)).
 
 test(extraction_is_severe) :-
     domain_priors:base_extractiveness(global_hoarding_scaling_laws, E),

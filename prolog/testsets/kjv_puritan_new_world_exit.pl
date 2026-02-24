@@ -115,7 +115,7 @@ narrative_ontology:constraint_victim(kjv_puritan_new_world_exit, english_puritan
 % different context (England), while the base metrics (ε=0.2) reflect the
 % constraint's re-indexed function in the New World. This creates a logical
 % tension that highlights the core theme of re-indexing.
-constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, snare,
+constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, rope,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(trapped),
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, rope,
 % The high suppression score (0.5) prevents a true Mountain classification by
 % the engine, but the *perceptual* classification is Mountain due to the lack
 % of experienced alternatives.
-constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, mountain,
+constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),

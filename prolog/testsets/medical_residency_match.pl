@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(medical_residency_match, medical_graduates)
 % For the student, the Match is a trap. Exit is impossible without abandoning
 % one's career. The outcome is legally binding with no room for negotiation.
 % χ = 0.60 * 1.5 (powerless) * 1.0 (national) = 0.90. This is a clear Snare.
-constraint_indexing:constraint_classification(medical_residency_match, snare,
+constraint_indexing:constraint_classification(medical_residency_match, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(medical_residency_match, rope,
 % It requires active enforcement, has beneficiaries and victims. This is the
 % canonical definition of a Tangled Rope.
 % χ = 0.60 * 1.15 (analytical) * 1.2 (global) = 0.828.
-constraint_indexing:constraint_classification(medical_residency_match, tangled_rope,
+constraint_indexing:constraint_classification(medical_residency_match, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,12 +130,12 @@ constraint_indexing:constraint_classification(medical_residency_match, tangled_r
 
 test(perspectival_gap_snare_vs_rope) :-
     % Verify the core perspectival gap between the student (powerless) and hospital (institutional).
-    constraint_indexing:constraint_classification(medical_residency_match, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(medical_residency_match, tangled_rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(medical_residency_match, rope, context(agent_power(institutional), _, mobile, _)).
 
 test(analytical_observer_detects_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(medical_residency_match, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(medical_residency_match, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction_and_suppression) :-
     % Verify the base metrics meet the criteria for a high-coercion constraint.

@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(us_two_party_duopoly, rope,
 % governance (Rope aspect) but does so via coercive suppression of alternatives,
 % leading to asymmetric extraction of political capital (Snare aspect).
 % χ = 0.75 * 1.15 (analytical) * 1.2 (global) = 1.035
-constraint_indexing:constraint_classification(us_two_party_duopoly, tangled_rope,
+constraint_indexing:constraint_classification(us_two_party_duopoly, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

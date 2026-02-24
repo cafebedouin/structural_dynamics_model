@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(hanlons_razor, victims_of_systemic_neglect)
 % experience and strangles their ability to demand accountability by reframing
 % systemic malice or neglect as a series of isolated, forgivable "mistakes."
 % χ = 0.55 * 1.5 (powerless) * 1.0 (national) = 0.825
-constraint_indexing:constraint_classification(hanlons_razor, snare,
+constraint_indexing:constraint_classification(hanlons_razor, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

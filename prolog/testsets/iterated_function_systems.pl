@@ -147,7 +147,7 @@ narrative_ontology:constraint_victim(iterated_function_system_convergence, limit
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(iterated_function_system_convergence, snare,
+constraint_indexing:constraint_classification(iterated_function_system_convergence, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -97,7 +97,7 @@ narrative_ontology:constraint_victim(ancient_grudge_verona, house_heirs).
 % From their perspective, the feud is an immutable law of nature, a "star-crossed"
 % fate they cannot escape. The high extraction feels absolute.
 % χ = 0.80 * π(powerless:1.5) * σ(regional:0.9) = 1.08
-constraint_indexing:constraint_classification(ancient_grudge_verona, mountain,
+constraint_indexing:constraint_classification(ancient_grudge_verona, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(ancient_grudge_verona, tangled_rop
 % trap that undermines civil order and extracts the lives of his subjects. It has
 % no redeeming coordination value for the city as a whole.
 % χ = 0.80 * π(institutional:-0.2) * σ(regional:0.9) = -0.144 (a net cost)
-constraint_indexing:constraint_classification(ancient_grudge_verona, snare,
+constraint_indexing:constraint_classification(ancient_grudge_verona, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(ancient_grudge_verona, snare,
 % identity, honor) and the highly coercive, asymmetric extraction (death of heirs).
 % This dual nature is the definition of a Tangled Rope.
 % χ = 0.80 * π(analytical:1.15) * σ(global:1.2) = 1.104
-constraint_indexing:constraint_classification(ancient_grudge_verona, tangled_rope,
+constraint_indexing:constraint_classification(ancient_grudge_verona, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -144,9 +144,9 @@ constraint_indexing:constraint_classification(ancient_grudge_verona, tangled_rop
 
 test(perspectival_gap_subject_vs_enforcer) :-
     % Verify the gap between the powerless victims (Mountain) and powerful enforcers (Tangled Rope).
-    constraint_indexing:constraint_classification(ancient_grudge_verona, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ancient_grudge_verona, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(ancient_grudge_verona, tangled_rope, context(agent_power(powerful), _, _, _)),
-    constraint_indexing:constraint_classification(ancient_grudge_verona, snare, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ancient_grudge_verona, rope, context(agent_power(institutional), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     % This constraint must be classified as high-extraction.

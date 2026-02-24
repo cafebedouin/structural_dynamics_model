@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(artificial_snow_2026, regional_water_reserv
 % For local water systems and ecosystems, the snow dependency is a Snare:
 % an extractive trap that diverts 948,000 m3 of water and energy equivalent
 % to 17,000 homes to maintain a seasonal fiction.
-constraint_indexing:constraint_classification(artificial_snow_2026, snare,
+constraint_indexing:constraint_classification(artificial_snow_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(artificial_snow_2026, snare,
 % Analysts view the snow dependency as a Piton: an inertial anchor 
 % driven by a 20th-century winter sport model that is now fixed into 
 % a hostile 21st-century climate.
-constraint_indexing:constraint_classification(artificial_snow_2026, piton, 
+constraint_indexing:constraint_classification(artificial_snow_2026, tangled_rope, 
     context(agent_power(analytical), 
             time_horizon(civilizational), 
             exit_options(arbitrage), 

@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(eu_digital_services_act, rope,
 % and the asymmetric extraction (victims exist), along with the need for
 % active enforcement. This combination perfectly matches the signature of a
 % Tangled Rope.
-constraint_indexing:constraint_classification(eu_digital_services_act, tangled_rope,
+constraint_indexing:constraint_classification(eu_digital_services_act, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(eu_digital_services_act, tangled_r
 % EU law. It aligns with the victims. The engine derives a moderately high 'd',
 % leading to a high χ. From its view, the DSA is not a valid coordination
 % mechanism but an extractive Snare targeting its domestic industry.
-constraint_indexing:constraint_classification(eu_digital_services_act, snare,
+constraint_indexing:constraint_classification(eu_digital_services_act, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -203,7 +203,7 @@ test(inter_institutional_conflict) :-
     TypeUS = snare.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(eu_digital_services_act, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(eu_digital_services_act, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Ensure all three conditions for a Tangled Rope are present.

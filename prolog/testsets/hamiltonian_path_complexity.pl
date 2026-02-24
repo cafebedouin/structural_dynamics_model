@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(hamiltonian_path_complexity, mount
 % complexity is a tool. It's a pure coordination device: the "agreement" is
 % that certain problems are too hard to solve, forming the basis of security.
 % They have arbitrage exit, as they can choose which hard problems to use.
-constraint_indexing:constraint_classification(hamiltonian_path_complexity, rope,
+constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -177,7 +177,7 @@ test(perspectival_gap_mountain_rope) :-
     % Verify the specific gap: Mountain for the powerless and analytical,
     % but Rope for the institutional agent who can leverage it.
     constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(hamiltonian_path_complexity, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain, context(agent_power(analytical), _, _, _)).
 
 test(mountain_thresholds_adherence) :-

@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(paxsilica_framework, excluded_nations_tech_
 % For an individual researcher or small startup in a targeted nation, the
 % framework is an insurmountable barrier. They are powerless and trapped,
 % experiencing it as a pure Snare that forecloses their professional future.
-constraint_indexing:constraint_classification(paxsilica_framework, snare,
+constraint_indexing:constraint_classification(paxsilica_framework, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

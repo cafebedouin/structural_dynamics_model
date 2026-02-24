@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(suanne_face_restoration, rope,
 % brilliant coordination function (Rope aspect). It requires active enforcement
 % and has clear victims and beneficiaries. This is the canonical Tangled Rope.
 % χ = 0.75 * π(analytical, 1.15) * σ(global, 1.2) = 1.035.
-constraint_indexing:constraint_classification(suanne_face_restoration, tangled_rope,
+constraint_indexing:constraint_classification(suanne_face_restoration, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,7 +124,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The canonical classification for this structure should be Tangled Rope.
-    constraint_indexing:constraint_classification(suanne_face_restoration, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(suanne_face_restoration, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(suanne_face_restoration_tests).
 

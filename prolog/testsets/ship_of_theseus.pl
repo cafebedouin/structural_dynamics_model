@@ -138,7 +138,7 @@ narrative_ontology:constraint_victim(ship_of_theseus, believers_in_original_iden
 % PERSPECTIVE 1: THE PRIMARY TARGET (TANGLED ROPE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(ship_of_theseus, tangled_rope,
+constraint_indexing:constraint_classification(ship_of_theseus, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(ship_of_theseus, rope,
 % The analytical observer sees the "identity" as a label maintained through
 % inertia and performance, while the underlying substance has atrophied or
 % been replaced. The original function (being *that specific ship*) is gone.
-constraint_indexing:constraint_classification(ship_of_theseus, piton,
+constraint_indexing:constraint_classification(ship_of_theseus, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

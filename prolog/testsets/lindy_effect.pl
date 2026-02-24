@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(lindy_effect, disruptive_innovators).
 % harder they try to prove themselves. They are "guilty of being new"
 % until they are old, but they cannot become old without surviving
 % the bias that seeks to kill them for being new.
-constraint_indexing:constraint_classification(lindy_effect, snare,
+constraint_indexing:constraint_classification(lindy_effect, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(lindy_effect, rope,
 % from the asymmetric suppression of new entrants (a Snare-like quality).
 % The high suppression score (0.5) makes a Mountain classification impossible;
 % it is a social, not physical, law.
-constraint_indexing:constraint_classification(lindy_effect, tangled_rope,
+constraint_indexing:constraint_classification(lindy_effect, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

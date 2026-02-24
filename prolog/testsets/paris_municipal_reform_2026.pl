@@ -98,7 +98,7 @@ narrative_ontology:constraint_victim(paris_municipal_reform_2026, incumbent_majo
 % PERSPECTIVE 1: THE SUBJECT (POWERLESS VOTER)
 % For a voter whose party was previously unrepresented, the reform is pure
 % coordination, better aligning their vote with council seats.
-constraint_indexing:constraint_classification(paris_municipal_reform_2026, rope,
+constraint_indexing:constraint_classification(paris_municipal_reform_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(paris_municipal_reform_2026, rope,
 % PERSPECTIVE 2: THE VICTIM (INSTITUTIONAL MAJORITY)
 % The incumbent party sees the reduction of the majority premium as a Snare that
 % extracts governability and makes the city unmanageable without costly coalitions.
-constraint_indexing:constraint_classification(paris_municipal_reform_2026, snare,
+constraint_indexing:constraint_classification(paris_municipal_reform_2026, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(trapped),

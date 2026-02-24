@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, s
 % PERSPECTIVE 2: THE BENEFICIARY (INSTITUTIONAL) - MOUNTAIN
 % The museum presents the scientific consensus as a 'Mountain'. The complex, debated 'Rope'
 % of the scientists is simplified into an immutable, factual diorama for public consumption.
-constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, mountain,
+constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, m
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER - ROPE
 % For the scientist, the bottleneck and expansion is a 'Rope'—a powerful explanatory
 % framework that ties together disparate data points into a coherent narrative about human origins.
-constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, rope,
+constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

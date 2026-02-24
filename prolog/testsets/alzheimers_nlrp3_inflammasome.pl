@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, sna
 % perspective, the disease's existence is a stable "coordination" point for
 % a massive market.
 % Engine derives d from: beneficiary + arbitrage → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, rope,
+constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

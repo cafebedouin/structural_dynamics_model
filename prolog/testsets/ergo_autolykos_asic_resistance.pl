@@ -111,7 +111,7 @@ narrative_ontology:constraint_victim(ergo_autolykos_asic_resistance, asic_manufa
 
 constraint_indexing:constraint_classification(
     ergo_autolykos_asic_resistance,
-    snare,
+    tangled_rope,
     context(
         agent_power(institutional),
         time_horizon(historical),
@@ -213,7 +213,7 @@ constraint_indexing:constraint_classification(
  */
 test(multi_perspective_variance) :-
     % ASIC Manufacturer (Snare)
-    constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, snare, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, tangled_rope, context(agent_power(institutional), _, _, _)),
     % Home Miner (Rope)
     constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, rope, context(agent_power(individual_moderate), _, _, _)),
     % The Protocol (Mountain)

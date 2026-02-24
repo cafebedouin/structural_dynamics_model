@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(collective_action_deadlock, rope,
 % The analytical view sees a hybrid: a system with a coordination function
 % (beneficiary exists) but also severe asymmetric extraction (victim exists)
 % that requires active enforcement. This is a canonical Tangled Rope.
-constraint_indexing:constraint_classification(collective_action_deadlock, tangled_rope,
+constraint_indexing:constraint_classification(collective_action_deadlock, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,7 +128,7 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(collective_action_deadlock, rope,
         context(agent_power(institutional), _, _, _)),
     % Ensure the analytical view is different from both.
-    constraint_indexing:constraint_classification(collective_action_deadlock, tangled_rope,
+    constraint_indexing:constraint_classification(collective_action_deadlock, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

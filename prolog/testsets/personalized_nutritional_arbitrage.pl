@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(pna, generic_diet_followers).
 % For the user without access, the existence of a superior, personalized system
 % renders generic public health advice a trap that extracts health and agency.
 % χ = 0.65 * π(powerless, 1.5) * σ(national, 1.0) = 0.975
-constraint_indexing:constraint_classification(pna, snare,
+constraint_indexing:constraint_classification(pna, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

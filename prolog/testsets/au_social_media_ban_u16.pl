@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(au_social_media_ban_u16, social_media_platf
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % For a teenager, the ban is purely coercive and extractive, removing a key
 % social utility with no immediate, tangible benefit.
-constraint_indexing:constraint_classification(au_social_media_ban_u16, snare,
+constraint_indexing:constraint_classification(au_social_media_ban_u16, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(au_social_media_ban_u16, tangled_r
 % constrained exit options (cannot easily abandon the Australian market).
 % Engine derives d from: victim membership + constrained exit -> d > 0.5.
 % They see the coordination function but also the heavy, targeted cost.
-constraint_indexing:constraint_classification(au_social_media_ban_u16, tangled_rope,
+constraint_indexing:constraint_classification(au_social_media_ban_u16, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

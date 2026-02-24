@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(regulatory_pathway_psychedelic_therapy, pat
 % coordination function (long-term public safety) is an abstraction compared
 % to their immediate suffering. High ε combined with their derived d≈0.95 and
 % national scope σ=1.0 results in χ > 0.66, a clear Snare.
-constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, snare,
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_the
 % profitable, patent-protected market. For them, it is a pure coordination
 % mechanism (Rope). Their derived d≈0.05 and global scope σ=1.2 results in a
 % negative χ, indicating a subsidy.
-constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, rope,
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, naturalized,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_the
 % balance innovation with safety. Their directionality is more neutral than
 % the developer's but still sees the system as functional. We use an override
 % to capture this specific structural position.
-constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, rope,
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, naturalized,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -176,7 +176,7 @@ constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_the
 
 test(perspectival_gap) :-
     % Verify the gap between the patient (Snare) and the developer (Rope).
-    constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
     true.
 

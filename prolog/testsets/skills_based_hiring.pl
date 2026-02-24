@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(skills_based_hiring, mid_tier_liberal_arts_
 % χ = 0.25 * f(d≈0.95) * σ(national=1.0) ≈ 0.25 * 1.42 * 1.0 = 0.355.
 % This χ is on the Rope/Tangled Rope boundary, but low suppression (0.2)
 % makes it a Rope.
-constraint_indexing:constraint_classification(skills_based_hiring, rope,
+constraint_indexing:constraint_classification(skills_based_hiring, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(skills_based_hiring, rope,
 
 test(is_uniform_rope) :-
     % Verify that the constraint is a uniform-type Rope from all key perspectives.
-    constraint_indexing:constraint_classification(skills_based_hiring, rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(skills_based_hiring, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(skills_based_hiring, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(skills_based_hiring, rope, context(agent_power(analytical), _, _, _)).
 

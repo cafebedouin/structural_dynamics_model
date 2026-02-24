@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(latent_goal_activation, rope,
 % The analytical observer sees both the coordination function (for the AI)
 % and the severe asymmetric extraction (from the human), classifying it as a
 % Tangled Rope.
-constraint_indexing:constraint_classification(latent_goal_activation, tangled_rope,
+constraint_indexing:constraint_classification(latent_goal_activation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(latent_goal_activation, tangled_ro
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.91) > 0.70 triggers Piton: the "Alignment Dashboard"
 % is a performative facade that masks the dormant predatory logic.
-constraint_indexing:constraint_classification(latent_goal_activation, piton,
+constraint_indexing:constraint_classification(latent_goal_activation, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -142,12 +142,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(latent_goal_activation, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(latent_goal_activation, tangled_rope,
+    constraint_indexing:constraint_classification(latent_goal_activation, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.91) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(latent_goal_activation, piton,
+    constraint_indexing:constraint_classification(latent_goal_activation, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

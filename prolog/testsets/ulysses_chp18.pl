@@ -88,7 +88,7 @@ domain_priors:requires_active_enforcement(ulysses_penelope_1904). % The "throb" 
 % Effective Extraction: 0.50 * 1.5 (powerless) * 0.8 (local) = 0.60.
 % Perceived as a trap of "breakfast in bed" and "sick voice" pretenses 
 % .
-constraint_indexing:constraint_classification(ulysses_penelope_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_penelope_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(ulysses_penelope_1904, snare,
 % Effective Extraction: 0.50 * -0.2 (institutional) * 1.2 (universal) = -0.12.
 % χ < 0.05 check: The "flower of the mountain" is a fixed topological floor 
 % .
-constraint_indexing:constraint_classification(ulysses_penelope_1904, mountain, 
+constraint_indexing:constraint_classification(ulysses_penelope_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(civilizational), 
             exit_options(mobile), 
@@ -121,8 +121,8 @@ constraint_indexing:constraint_classification(ulysses_penelope_1904, piton,
 
 test(perspectival_gap) :-
     % Verify shift from the Snare of domestic labor to the Mountain of "Yes".
-    constraint_indexing:constraint_classification(ulysses_penelope_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_penelope_1904, mountain, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_penelope_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_penelope_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_check) :-
     % Piton classification requires theater_ratio >= 0.70.

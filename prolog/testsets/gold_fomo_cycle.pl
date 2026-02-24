@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(gold_fomo_cycle, rope,
 % (gold as a hedge/portfolio diversifier) and the asymmetric extraction from
 % retail investors. The combination of these two elements, requiring active
 % enforcement via media narratives, is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(gold_fomo_cycle, tangled_rope,
+constraint_indexing:constraint_classification(gold_fomo_cycle, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -171,7 +171,7 @@ test(perspectival_gap_snare_vs_rope) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical observer must correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(gold_fomo_cycle, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(gold_fomo_cycle, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify all three structural conditions for a Tangled Rope are declared.

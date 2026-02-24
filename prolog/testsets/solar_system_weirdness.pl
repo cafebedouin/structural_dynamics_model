@@ -136,7 +136,7 @@ narrative_ontology:constraint_victim(solar_system_weirdness, legacy_copernican_m
 % WHERE: trapped (Neat, round orbits with no trajectory exit)
 % SCOPE: universal (Governed by universal physical laws)
 % WHY: The physical arrangement is an immutable Mountain governed by physics.
-constraint_indexing:constraint_classification(solar_system_weirdness, mountain,
+constraint_indexing:constraint_classification(solar_system_weirdness, tangled_rope,
     context(agent_power(powerless),
             time_horizon(civilizational),
             exit_options(trapped),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(solar_system_weirdness, mountain,
 % SCOPE: global (Academic consensus groups)
 % WHY: The "Normalcy Snare" extracted the ability to detect other planet types by
 % assuming our system was typical, leading to decades of misdirected search.
-constraint_indexing:constraint_classification(solar_system_weirdness, snare,
+constraint_indexing:constraint_classification(solar_system_weirdness, tangled_rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(trapped),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(solar_system_weirdness, snare,
 % SCOPE: global (Utilizing telescopes like Kepler and TESS)
 % WHY: For the researcher, "weirdness" is a Rope—a functional tool to re-evaluate
 % how systems form and to build better models.
-constraint_indexing:constraint_classification(solar_system_weirdness, rope,
+constraint_indexing:constraint_classification(solar_system_weirdness, tangled_rope,
     context(agent_power(analytical),
             time_horizon(biographical),
             exit_options(arbitrage),
@@ -184,9 +184,9 @@ test(perspectival_gap) :-
 
 test(multi_perspective_variance) :-
     % Astronomer (Rope) vs Sun (Mountain) vs Legacy Theory (Snare)
-    constraint_indexing:constraint_classification(solar_system_weirdness, rope, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(solar_system_weirdness, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(solar_system_weirdness, snare, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(solar_system_weirdness, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(solar_system_weirdness, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(solar_system_weirdness, tangled_rope, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(solar_system_weirdness_tests).
 

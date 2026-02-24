@@ -107,7 +107,7 @@ narrative_ontology:constraint_victim(brain_network_paradigm_2026, legacy_modular
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Agent whose career and research paradigm is suppressed by the new model.
 % Engine derives d from: victim membership + constrained exit -> high d -> high χ
-constraint_indexing:constraint_classification(brain_network_paradigm_2026, snare,
+constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(brain_network_paradigm_2026, rope,
 % PERSPECTIVE 3: THE SECONDARY BENEFICIARY (ROPE)
 % The patient, for whom the paradigm is a coordination tool for understanding their
 % condition, even if they are trapped by their biological reality.
-constraint_indexing:constraint_classification(brain_network_paradigm_2026, rope,
+constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(brain_network_paradigm_2026, rope,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Sees both the genuine coordination function for neuroscience and the asymmetric
 % extraction of professional resources from the old guard.
-constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope,
+constraint_indexing:constraint_classification(brain_network_paradigm_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangl
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(brain_network_paradigm_2026, snare, context(agent_power(moderate), _, _, _)),
+    constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope, context(agent_power(moderate), _, _, _)),
     constraint_indexing:constraint_classification(brain_network_paradigm_2026, rope, context(agent_power(institutional), _, _, _)),
     true. % Test passes if both clauses unify.
 

@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(delayed_feedback_instability, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % From a mathematical perspective, the Nyquist-Shannon limit and phase
 % shifts in feedback loops represent an irreducible Mountain of physics.
-constraint_indexing:constraint_classification(delayed_feedback_instability, tangled_rope,
+constraint_indexing:constraint_classification(delayed_feedback_instability, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(delayed_feedback_instability, tang
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (TANGLED ROPE)
 % The combination of a coordination function (for beneficiaries) and asymmetric
 % extraction (from victims) under active enforcement makes this a Tangled Rope.
-constraint_indexing:constraint_classification(delayed_feedback_instability, tangled_rope,
+constraint_indexing:constraint_classification(delayed_feedback_instability, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -135,7 +135,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(delayed_feedback_instability, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(delayed_feedback_instability, tangled_rope,
+    constraint_indexing:constraint_classification(delayed_feedback_instability, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-

@@ -88,7 +88,7 @@ narrative_ontology:constraint_victim(global_protocol_entrenchment, local_innovat
 
 % PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
 % At a global scope, the individual sees no "outside"; the protocol is the environment.
-constraint_indexing:constraint_classification(global_protocol_entrenchment, mountain,
+constraint_indexing:constraint_classification(global_protocol_entrenchment, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(global_protocol_entrenchment, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The analytical view recognizes both the coordination function and the asymmetric extraction.
 % This is the default analytical context.
-constraint_indexing:constraint_classification(global_protocol_entrenchment, tangled_rope,
+constraint_indexing:constraint_classification(global_protocol_entrenchment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -119,12 +119,12 @@ constraint_indexing:constraint_classification(global_protocol_entrenchment, tang
 
 test(perspectival_gap_is_extreme) :-
     % Verify the extreme gap between Mountain (powerless) and Rope (institutional).
-    constraint_indexing:constraint_classification(global_protocol_entrenchment, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(global_protocol_entrenchment, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(global_protocol_entrenchment, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(global_protocol_entrenchment, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(global_protocol_entrenchment, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(global_protocol_entrenchment_tests).
 

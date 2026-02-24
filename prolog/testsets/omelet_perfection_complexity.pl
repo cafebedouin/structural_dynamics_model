@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(omelet_perfection_complexity, adherents_of_
 % Trapped by a "no-brainer" mindset, the layperson is a victim of the standard's
 % suppression of alternatives. The high suppression and their trapped status
 % lead to a Snare classification, where potential for quality is strangled.
-constraint_indexing:constraint_classification(omelet_perfection_complexity, snare,
+constraint_indexing:constraint_classification(omelet_perfection_complexity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

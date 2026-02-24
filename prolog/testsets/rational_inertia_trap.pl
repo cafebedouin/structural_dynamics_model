@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(rational_inertia_trap, rope,
 % The analytical view sees both the coordination function (beneficiary exists)
 % and the asymmetric extraction (victim exists), with active enforcement. This
 % is the canonical signature of a Tangled Rope.
-constraint_indexing:constraint_classification(rational_inertia_trap, tangled_rope,
+constraint_indexing:constraint_classification(rational_inertia_trap, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -138,7 +138,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(rational_inertia_trap, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(rational_inertia_trap, tangled_rope,
+    constraint_indexing:constraint_classification(rational_inertia_trap, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

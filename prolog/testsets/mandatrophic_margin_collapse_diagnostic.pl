@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, rop
 % The analyst sees both the coordination function (aligning the organization)
 % and the asymmetric extraction (destroying resilience). This duality is the
 % signature of a Tangled Rope.
-constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, tangled_rope,
+constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, tan
 % For the victim of the eventual collapse (e.g., a passenger), the event is a
 % Mountain. It is a sudden, unyielding physical limit that appears as a "freak
 % accident," where negotiation with the system is impossible.
-constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, mountain,
+constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, snare,
     context(agent_power(powerless),
             time_horizon(historical),
             exit_options(trapped),
@@ -163,7 +163,7 @@ test(perspectival_gap_manager_vs_operator) :-
 
 test(tangled_rope_analytical_view) :-
     % Verify the analytical observer correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, snare, context(agent_power(analytical), _, _, _)),
     domain_priors:requires_active_enforcement(mandatrophy_systemic_collapse),
     narrative_ontology:constraint_beneficiary(mandatrophy_systemic_collapse, _),
     narrative_ontology:constraint_victim(mandatrophy_systemic_collapse, _).

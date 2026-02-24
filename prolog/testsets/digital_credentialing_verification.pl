@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(digital_credentialing_verification, non_com
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For a professional whose livelihood depends on the credential, the system is a
 % high-stakes trap where status can be algorithmically revoked.
-constraint_indexing:constraint_classification(digital_credentialing_verification, snare,
+constraint_indexing:constraint_classification(digital_credentialing_verification, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(digital_credentialing_verification
 % The system has a genuine coordination function (beneficiaries exist) but also
 % imposes high, asymmetric extraction on its subjects (victims exist) and requires
 % active enforcement to maintain. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(digital_credentialing_verification, tangled_rope,
+constraint_indexing:constraint_classification(digital_credentialing_verification, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -136,7 +136,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the gap as a Tangled Rope.
-    constraint_indexing:constraint_classification(digital_credentialing_verification, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(digital_credentialing_verification, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify all three structural properties for Tangled Rope are present.

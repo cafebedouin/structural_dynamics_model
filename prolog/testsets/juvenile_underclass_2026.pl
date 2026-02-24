@@ -93,7 +93,7 @@ domain_priors:requires_active_enforcement(juvenile_underclass_2026).
 % PERSPECTIVE 1: THE CHILD (MOUNTAIN)
 % From the child's perspective, being a minor is an immutable Mountain: 
 % an irreducible biological and legal limit with zero degrees of freedom.
-constraint_indexing:constraint_classification(juvenile_underclass_2026, mountain, 
+constraint_indexing:constraint_classification(juvenile_underclass_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(juvenile_underclass_2026, mountain
 % PERSPECTIVE 2: THE STATE (ROPE)
 % Institutions view the management of children as a Rope: essential 
 % coordination for future social stability and "civilized" development.
-constraint_indexing:constraint_classification(juvenile_underclass_2026, rope, 
+constraint_indexing:constraint_classification(juvenile_underclass_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -124,8 +124,8 @@ constraint_indexing:constraint_classification(juvenile_underclass_2026, piton,
 :- begin_tests(juvenile_underclass_2026_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(juvenile_underclass_2026, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(juvenile_underclass_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(juvenile_underclass_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(juvenile_underclass_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_check) :-
     domain_priors:theater_ratio(juvenile_underclass_2026, TR),

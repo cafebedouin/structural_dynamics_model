@@ -141,7 +141,7 @@ narrative_ontology:constraint_victim(noether_isomorphism_access, novice_mathemat
 % NOTE: Per "Dynamic Coalition" extension, this agent's power may be
 % upgraded to 'organized' if the constraint is a snare with a critical
 % mass of victims, potentially changing the classification.
-constraint_indexing:constraint_classification(noether_isomorphism_access, snare,
+constraint_indexing:constraint_classification(noether_isomorphism_access, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

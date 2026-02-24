@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(political_art_factional_alignment,
 % PERSPECTIVE 2: THE INSTITUTIONAL TARGET (THE FAILED STUDIO)
 % As a victim with constrained exit options due to sunk costs, the studio
 % also experiences the market dynamic as a highly extractive snare.
-constraint_indexing:constraint_classification(political_art_factional_alignment, snare,
+constraint_indexing:constraint_classification(political_art_factional_alignment, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(constrained),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(political_art_factional_alignment,
 % The analyst sees both the coordination function (for beneficiaries) and the
 % asymmetric extraction (from victims), classifying it as a Tangled Rope. This
 % is the ground-truth classification for the system.
-constraint_indexing:constraint_classification(political_art_factional_alignment, tangled_rope,
+constraint_indexing:constraint_classification(political_art_factional_alignment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -182,7 +182,7 @@ test(perspectival_gap_victim_beneficiary) :-
     constraint_indexing:constraint_classification(political_art_factional_alignment, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(political_art_factional_alignment, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(political_art_factional_alignment, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify that all three conditions for a Tangled Rope are present.

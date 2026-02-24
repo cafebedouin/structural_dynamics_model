@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(unrequited_love_protocol, snare,
 % PERSPECTIVE 2: THE RECIPIENT (ROPE)
 % From the beneficiary's side, it's a "Rope" of social coordination (maintaining 
 % a friendship/social circle) with a negative chi (net benefit).
-constraint_indexing:constraint_classification(unrequited_love_protocol, rope,
+constraint_indexing:constraint_classification(unrequited_love_protocol, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(unrequited_love_protocol, snare,
 
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(unrequited_love_protocol, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(unrequited_love_protocol, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(unrequited_love_protocol, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(extraction_threshold) :-
     narrative_ontology:constraint_metric(unrequited_love_protocol, extractiveness, E),

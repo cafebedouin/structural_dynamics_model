@@ -134,7 +134,7 @@ narrative_ontology:constraint_victim(max_flow_min_cut, end_users).
 % logistics network, the bottleneck is a coercive limit with no alternatives.
 % Engine derives d from victim membership + trapped exit → high χ.
 % χ = 0.50 * f(0.95) * σ(national) = 0.50 * 1.42 * 1.0 = 0.71. (Snare)
-constraint_indexing:constraint_classification(max_flow_min_cut, snare,
+constraint_indexing:constraint_classification(max_flow_min_cut, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(max_flow_min_cut, rope,
 % definition of a Tangled Rope.
 % Engine derives d ≈ 0.72 for analytical perspective.
 % χ = 0.50 * f(0.72) * σ(global) = 0.50 * 1.15 * 1.2 = 0.69. (Tangled Rope/Snare)
-constraint_indexing:constraint_classification(max_flow_min_cut, tangled_rope,
+constraint_indexing:constraint_classification(max_flow_min_cut, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -171,12 +171,12 @@ constraint_indexing:constraint_classification(max_flow_min_cut, tangled_rope,
 
 test(perspectival_gap_target_beneficiary) :-
     % Verify the gap between the user (Snare) and the owner (Rope).
-    constraint_indexing:constraint_classification(max_flow_min_cut, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(max_flow_min_cut, tangled_rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(max_flow_min_cut, rope, context(agent_power(institutional), _, arbitrage, _)).
 
 test(analytical_claim_is_tangled_rope) :-
     % Verify the analytical observer sees the dual function.
-    constraint_indexing:constraint_classification(max_flow_min_cut, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(max_flow_min_cut, snare, context(agent_power(analytical), _, _, _)),
     narrative_ontology:constraint_claim(max_flow_min_cut, tangled_rope).
 
 test(tangled_rope_structural_gates_met) :-

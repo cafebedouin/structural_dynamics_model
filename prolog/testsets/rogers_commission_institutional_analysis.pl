@@ -104,7 +104,7 @@ narrative_ontology:constraint_victim(rogers_commission_institutional_analysis, c
 % low temperatures). However, the institutional process made this physical
 % reality invisible to decision-makers, creating an artificial Mountain: the
 % immovable requirement to prove 100% that the launch was unsafe.
-constraint_indexing:constraint_classification(rogers_commission_institutional_analysis, mountain,
+constraint_indexing:constraint_classification(rogers_commission_institutional_analysis, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(rogers_commission_institutional_an
 
 test(perspectival_gap_mountain_vs_rope) :-
     % Verify the critical gap between the engineer's view (Mountain) and management's view (Rope).
-    constraint_indexing:constraint_classification(rogers_commission_institutional_analysis, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(rogers_commission_institutional_analysis, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(rogers_commission_institutional_analysis, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(rogers_commission_institutional_analysis, snare, context(agent_power(analytical), _, _, _)).
 

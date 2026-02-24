@@ -111,7 +111,7 @@ narrative_ontology:constraint_victim(drc_rwanda_peace_deal_2024, drc_government)
 % The deal fails to protect them, trapping them in conflict. They experience
 % the framework's failure as a pure cost with no coordination benefit.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → high χ.
-constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, snare,
+constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, rope,
 % Sees both the stated coordination function and the actual asymmetric extraction.
 % The high base extraction (ε=0.55) and suppression (0.65) lead to a
 % Tangled Rope classification, capturing the duality of the constraint.
-constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, tangled_rope,
+constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -180,7 +180,7 @@ test(inter_institutional_gap) :-
     RopeType = rope.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(drc_rwanda_peace_deal_2024, _),

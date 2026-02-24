@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(agg1_genetic_determinism, rope,
 % asymmetric extraction from individuals, recognizing the complete structure.
 % This requires active enforcement to maintain.
 % analytical -> d ≈ 0.72 -> high χ.
-constraint_indexing:constraint_classification(agg1_genetic_determinism, tangled_rope,
+constraint_indexing:constraint_classification(agg1_genetic_determinism, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -160,7 +160,7 @@ test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
     constraint_indexing:constraint_classification(agg1_genetic_determinism, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(agg1_genetic_determinism, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(agg1_genetic_determinism, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_met, [nondet]) :-
     % A Tangled Rope requires a beneficiary, a victim, and active enforcement.

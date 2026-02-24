@@ -116,14 +116,14 @@ constraint_indexing:constraint_classification(individual_vs_systemic_causation, 
             spatial_scope(global))).
 
 % Public health institutions are caught between the genuine goal of improving health (coordination) and the political/economic reality of industry influence that shifts costs onto the public (extraction).
-constraint_indexing:constraint_classification(individual_vs_systemic_causation, tangled_rope,
+constraint_indexing:constraint_classification(individual_vs_systemic_causation, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
 % The analytical view recognizes a dual function: a minor coordination role in promoting individual health, and a major extractive role in deflecting regulatory responsibility from systemic sources of harm.
-constraint_indexing:constraint_classification(individual_vs_systemic_causation, tangled_rope,
+constraint_indexing:constraint_classification(individual_vs_systemic_causation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

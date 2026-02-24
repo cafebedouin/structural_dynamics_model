@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(us_vaccine_recommendation_dismantl
 % Engine derives a higher d for them (victim + constrained). This correctly
 % classifies the constraint as a Snare even from an institutional perspective,
 % capturing the coercive nature of the cost-shifting.
-constraint_indexing:constraint_classification(us_vaccine_recommendation_dismantling_2026, snare,
+constraint_indexing:constraint_classification(us_vaccine_recommendation_dismantling_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

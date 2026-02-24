@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(cognitive_induction_gap, rope,
 % The analyst sees both the coordination function (group cohesion) and the
 % asymmetric extraction (loss of individual judgment). The need for active social
 % enforcement to maintain this balance makes it a canonical Tangled Rope.
-constraint_indexing:constraint_classification(cognitive_induction_gap, tangled_rope,
+constraint_indexing:constraint_classification(cognitive_induction_gap, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(cognitive_induction_gap, tangled_r
 % For an agent who consciously uses feedback to improve their intuitive leaps over
 % time, the gap is a manageable coordination problem. They are not trapped by it
 % but use it as a tool, making it a Rope.
-constraint_indexing:constraint_classification(cognitive_induction_gap, rope,
+constraint_indexing:constraint_classification(cognitive_induction_gap, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -146,7 +146,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical observer should classify this as Tangled Rope.
-    constraint_indexing:constraint_classification(cognitive_induction_gap, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cognitive_induction_gap, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify that the base extractiveness is high, justifying Snare/Tangled Rope classifications.

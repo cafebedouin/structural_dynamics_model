@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(us_china_chip_tariffs_v2, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Sees both the coordination function and the asymmetric extraction, classifying it as a Tangled Rope.
 % Engine derives d ≈ 0.72 -> f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(us_china_chip_tariffs_v2, tangled_rope,
+constraint_indexing:constraint_classification(us_china_chip_tariffs_v2, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(us_china_chip_tariffs_v2, rope,
 % PERSPECTIVE 5: SECONDARY VICTIM (US DOWNSTREAM INDUSTRIES/CONSUMERS)
 % These groups bear costs through higher prices and have limited ability to avoid them.
 % Engine derives d from: victim membership + powerless + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> very high χ
-constraint_indexing:constraint_classification(us_china_chip_tariffs_v2, snare,
+constraint_indexing:constraint_classification(us_china_chip_tariffs_v2, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -175,7 +175,7 @@ test(perspectival_gap) :-
     true.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_china_chip_tariffs_v2, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_china_chip_tariffs_v2, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_compliance) :-
     % Verify all three conditions for a Tangled Rope are met.

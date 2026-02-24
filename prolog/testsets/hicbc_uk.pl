@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(hicbc_uk, rope,
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.65 * 1.15 * 1.2 (global scope) = 0.897. Meets Tangled Rope thresholds
 % (0.40 ≤ χ ≤ 0.90, ε ≥ 0.30, suppression ≥ 0.40).
-constraint_indexing:constraint_classification(hicbc_uk, tangled_rope,
+constraint_indexing:constraint_classification(hicbc_uk, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -167,7 +167,7 @@ test(perspectival_gap) :-
     % Verify perspectival gap between target (Snare) and beneficiary (Rope).
     constraint_indexing:constraint_classification(hicbc_uk, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hicbc_uk, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(hicbc_uk, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(hicbc_uk, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements) :-
     % Verify that all three conditions for a Tangled Rope are met.

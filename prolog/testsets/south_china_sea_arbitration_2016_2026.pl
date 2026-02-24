@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(south_china_sea_arbitration_2016_2026, fili
 % offers no physical protection, creating a trap where asserting those rights
 % invites physical harm.
 % d(victim, trapped) -> high; χ = 0.55 * f(d) * σ(regional) -> high enough for Snare
-constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, snare,
+constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2
 % From Beijing's perspective, the ruling is an externally imposed, non-consensual
 % constraint designed to extract its historical claims and limit its sovereignty.
 % d(victim, constrained) -> high; χ = 0.55 * f(d) * σ(national) -> high enough for Snare
-constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, snare,
+constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2
 % coalition (Rope) and a coercive, extractive function for another (Snare),
 % requiring active enforcement to resolve the tension. This duality is the
 % definition of a Tangled Rope.
-constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, tangled_rope,
+constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

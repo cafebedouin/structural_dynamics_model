@@ -85,7 +85,7 @@ narrative_ontology:constraint_victim(sa_renewable_price_differential, nsw_indust
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (NSW CONSUMER)
 % Perception: Snare. High prices are unavoidable until local firming arrives.
-constraint_indexing:constraint_classification(sa_renewable_price_differential, snare,
+constraint_indexing:constraint_classification(sa_renewable_price_differential, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(sa_renewable_price_differential, t
 :- begin_tests(sa_renewable_price_differential_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(sa_renewable_price_differential, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(sa_renewable_price_differential, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(sa_renewable_price_differential, rope, context(agent_power(institutional), _, _, _)).
 
 test(extraction_logic) :-

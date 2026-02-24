@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(climate_attribution_2026, mountain
 % For the scientist, attribution is a 'Rope'—a pure coordination mechanism that
 % links specific data points (weather events) to global trends (climate models).
 % It is a functional tool used to create a coherent, shared understanding.
-constraint_indexing:constraint_classification(climate_attribution_2026, rope,
+constraint_indexing:constraint_classification(climate_attribution_2026, scaffold,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(climate_attribution_2026, rope,
 % framework that serves a primary coordination function (linking cause and
 % effect) with some extractive applications (legal liability). This matches the
 % Rope classification.
-constraint_indexing:constraint_classification(climate_attribution_2026, rope,
+constraint_indexing:constraint_classification(climate_attribution_2026, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

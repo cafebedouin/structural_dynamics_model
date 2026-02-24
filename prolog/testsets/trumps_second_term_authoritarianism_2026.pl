@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(trump_second_term_authoritarianism_2026, un
 % PERSPECTIVE 1: THE DISSIDENT (SNARE)
 % For the protester, the state is a coercive Snare. The penalty for dissent has
 % shifted from legal to lethal, making participation a calculation of survival.
-constraint_indexing:constraint_classification(trump_second_term_authoritarianism_2026, snare,
+constraint_indexing:constraint_classification(trump_second_term_authoritarianism_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(trump_second_term_authoritarianism
 % From a detached, historical viewpoint, the transition to authoritarianism appears
 % as an inevitable structural closure (Mountain). The system's internal logic
 % seems to be collapsing toward a fixed, oppressive state.
-constraint_indexing:constraint_classification(trump_second_term_authoritarianism_2026, tangled_rope,
+constraint_indexing:constraint_classification(trump_second_term_authoritarianism_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

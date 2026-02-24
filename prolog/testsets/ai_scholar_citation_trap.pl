@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(ai_scholar_citation_trap, snare,
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % Viewed as essential infrastructure or coordination.
-constraint_indexing:constraint_classification(ai_scholar_citation_trap, rope,
+constraint_indexing:constraint_classification(ai_scholar_citation_trap, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

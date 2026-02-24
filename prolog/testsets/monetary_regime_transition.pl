@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(monetary_regime_transition, fixed_income_sa
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For a saver with fixed income, inflation is a direct, coercive extraction of
 % purchasing power. Effective extraction χ = 0.55 * 1.5 (powerless) * 1.0 (national) = 0.825.
-constraint_indexing:constraint_classification(monetary_regime_transition, snare,
+constraint_indexing:constraint_classification(monetary_regime_transition, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(monetary_regime_transition, tangle
 
 test(perspectival_gap) :-
     % Verify the saver (powerless) sees a Snare while the state (institutional) sees a Rope.
-    constraint_indexing:constraint_classification(monetary_regime_transition, snare,
+    constraint_indexing:constraint_classification(monetary_regime_transition, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(monetary_regime_transition, rope,
         context(agent_power(institutional), _, _, _)).

@@ -88,7 +88,7 @@ narrative_ontology:coordination_vitality(epstein_files_2026, degrading).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The UK public views the secret vetting files as a Snare—an opaque mechanism 
 % shielding a potentially compromised leadership.
-constraint_indexing:constraint_classification(epstein_files_2026, snare, 
+constraint_indexing:constraint_classification(epstein_files_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(epstein_files_2026, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The Starmer government views the withholding of files as a Rope—essential 
 % infrastructure for national security and bilateral relations.
-constraint_indexing:constraint_classification(epstein_files_2026, rope, 
+constraint_indexing:constraint_classification(epstein_files_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(historical), 
             exit_options(mobile), 
@@ -119,8 +119,8 @@ constraint_indexing:constraint_classification(epstein_files_2026, piton,
 :- begin_tests(epstein_files_2026_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(epstein_files_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(epstein_files_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(epstein_files_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(epstein_files_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_check) :-
     domain_priors:theater_ratio(epstein_files_2026, TR),

@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(hedonic_adaptation_baseline, platform_users
 % PERSPECTIVE 1: THE PLATFORM USER (MOUNTAIN)
 % At the biographical level, the return to baseline feels like an
 % unchangeable law of nature. You cannot "win" the game of permanent bliss.
-constraint_indexing:constraint_classification(hedonic_adaptation_baseline, mountain,
+constraint_indexing:constraint_classification(hedonic_adaptation_baseline, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(hedonic_adaptation_baseline, mount
 % From an institutional view, this biological constant is a resource to be
 % mined. It functions as a Snare ensuring user "retention." Since users adapt
 % to features, new ones must be constantly fed to them to maintain engagement.
-constraint_indexing:constraint_classification(hedonic_adaptation_baseline, snare,
+constraint_indexing:constraint_classification(hedonic_adaptation_baseline, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -125,8 +125,8 @@ constraint_indexing:constraint_classification(hedonic_adaptation_baseline, tangl
 
 test(perspectival_gap) :-
     % Verify the constraint is a Mountain for the individual but a Snare for the institution.
-    constraint_indexing:constraint_classification(hedonic_adaptation_baseline, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(hedonic_adaptation_baseline, snare, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(hedonic_adaptation_baseline, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hedonic_adaptation_baseline, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(hedonic_adaptation_baseline, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

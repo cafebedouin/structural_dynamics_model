@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(semiconductor_fabrication_chokepoint, geopo
 % prohibitive costs and minimum order quantities. For them, the chokepoint is a
 % pure extraction mechanism that can kill their business. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoint, snare,
+constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoint, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoi
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER
 % The analyst sees both the coordination function and the asymmetric extraction/risk.
 % The classification correctly resolves to Tangled Rope, capturing the duality.
-constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoint, tangled_rope,
+constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoint, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoi
 % the supply chain concentration (Snare aspect). The exit option is 'constrained'
 % because building a domestic alternative (onshoring) is a decade-long,
 % monumentally expensive project.
-constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoint, tangled_rope,
+constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoint, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -191,7 +191,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical observer should correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoint, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(semiconductor_fabrication_chokepoint, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A constraint can only be a Tangled Rope if it has a coordination function (beneficiary),

@@ -89,7 +89,7 @@ narrative_ontology:coordination_vitality(crisis_signal_saturation, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The citizen is trapped: they cannot disconnect without missing vital info,
 % but staying connected liquidates their capacity for meaningful response.
-constraint_indexing:constraint_classification(crisis_signal_saturation, snare,
+constraint_indexing:constraint_classification(crisis_signal_saturation, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(crisis_signal_saturation, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The aggregator views the flood as a Rope—the essential coordination
 % substrate for maintaining a "Perfectly Aware" and "Responsive" global state.
-constraint_indexing:constraint_classification(crisis_signal_saturation, rope,
+constraint_indexing:constraint_classification(crisis_signal_saturation, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(crisis_signal_saturation, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.89) masking as essential coordination (Rope),
 % supported by enforcement and asymmetric benefit/harm.
-constraint_indexing:constraint_classification(crisis_signal_saturation, tangled_rope,
+constraint_indexing:constraint_classification(crisis_signal_saturation, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -130,9 +130,9 @@ constraint_indexing:constraint_classification(crisis_signal_saturation, tangled_
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless citizen vs Rope for the institutional aggregator.
-    constraint_indexing:constraint_classification(crisis_signal_saturation, snare,
+    constraint_indexing:constraint_classification(crisis_signal_saturation, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(crisis_signal_saturation, rope,
+    constraint_indexing:constraint_classification(crisis_signal_saturation, piton,
         context(agent_power(institutional), _, _, _)).
 
 test(piton_trigger) :-

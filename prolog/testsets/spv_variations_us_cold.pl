@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(spv_variations_us_cold, mountain,
 % For forecasters, the P-cluster classification system is a pure coordination
 % tool (Rope). It allows them to standardize predictions and coordinate warnings
 % and resource allocation.
-constraint_indexing:constraint_classification(spv_variations_us_cold, rope,
+constraint_indexing:constraint_classification(spv_variations_us_cold, mountain,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(arbitrage),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(spv_variations_us_cold, rope,
 % The analytical perspective aligns with the constraint_claim, focusing on the
 % human-interactive layer (the model) which is a Rope. It acknowledges the
 % underlying Mountain but classifies the system by its function.
-constraint_indexing:constraint_classification(spv_variations_us_cold, rope,
+constraint_indexing:constraint_classification(spv_variations_us_cold, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(israel_egypt_gas_deal, egyptian_state_and_p
 % Bears the cost of dependency and is powerless to change the terms.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
 % χ = 0.48 * 1.42 * 1.0 (national scope) ≈ 0.68. This is ≥ 0.66, classifying as a Snare.
-constraint_indexing:constraint_classification(israel_egypt_gas_deal, snare,
+constraint_indexing:constraint_classification(israel_egypt_gas_deal, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(israel_egypt_gas_deal, tangled_rop
 % f(d) ≈ 1.25. χ = 0.48 * 1.25 * 1.0 ≈ 0.60.
 % This χ is in the Tangled Rope range (0.40 ≤ χ ≤ 0.90), reflecting
 % a coercive but necessary coordination mechanism.
-constraint_indexing:constraint_classification(israel_egypt_gas_deal, tangled_rope,
+constraint_indexing:constraint_classification(israel_egypt_gas_deal, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

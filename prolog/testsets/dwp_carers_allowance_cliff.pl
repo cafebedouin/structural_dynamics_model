@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(dwp_carers_allowance_cliff, rope,
 % χ = 0.85 * 1.15 * 1.2 (global scope) = 1.173. This χ is very high, but because
 % the structural requirements for Tangled Rope are met (beneficiary + victim +
 % enforcement), it classifies as such.
-constraint_indexing:constraint_classification(dwp_carers_allowance_cliff, tangled_rope,
+constraint_indexing:constraint_classification(dwp_carers_allowance_cliff, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -166,7 +166,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification) :-
     % Verify the analytical observer sees a Tangled Rope.
-    constraint_indexing:constraint_classification(dwp_carers_allowance_cliff, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(dwp_carers_allowance_cliff, snare, context(agent_power(analytical), _, _, _)),
     true.
 
 test(tangled_rope_structural_gates) :-

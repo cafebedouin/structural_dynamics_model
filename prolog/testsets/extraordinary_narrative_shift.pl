@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(extraordinary_narrative_shift, individuals_
 % For the Sherpa, the tourist's "extraordinary" summit is a Snare. The narrative
 % extracts the value of their daily, repetitive labor, rendering their lived
 % experience invisible to the marketable story.
-constraint_indexing:constraint_classification(extraordinary_narrative_shift, snare,
+constraint_indexing:constraint_classification(extraordinary_narrative_shift, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(extraordinary_narrative_shift, tan
 % For an individual like Moitessier with the agency to reject the "extraordinary"
 % race narrative, the constraint is a Rope. He uses the "ordinary" repetition of
 % sailing to coordinate his existence with the journey itself, not the prize.
-constraint_indexing:constraint_classification(extraordinary_narrative_shift, rope,
+constraint_indexing:constraint_classification(extraordinary_narrative_shift, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),

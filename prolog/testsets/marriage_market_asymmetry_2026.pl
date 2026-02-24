@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(marriage_market_asymmetry_2026, ro
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects a hybrid: Gale-Shapley provides a coordination framework (Rope)
 % that ignores the extraction of "time-value" (Snare).
-constraint_indexing:constraint_classification(marriage_market_asymmetry_2026, tangled_rope,
+constraint_indexing:constraint_classification(marriage_market_asymmetry_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

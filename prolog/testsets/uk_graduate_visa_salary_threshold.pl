@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(uk_graduate_visa_salary_threshold,
 % easily leave the UK market). This results in a high derived d value, leading to
 % a high χ. For them, a system meant to attract talent has become a Snare
 % that damages their financial model and global competitiveness.
-constraint_indexing:constraint_classification(uk_graduate_visa_salary_threshold, snare,
+constraint_indexing:constraint_classification(uk_graduate_visa_salary_threshold, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

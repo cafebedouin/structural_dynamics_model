@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(credibility_inflation, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The default analytical context detects high extraction (0.82) masking as
 % essential coordination, enforced on victims for the benefit of others.
-constraint_indexing:constraint_classification(credibility_inflation, tangled_rope,
+constraint_indexing:constraint_classification(credibility_inflation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(credibility_inflation, tangled_rop
 % A specialized analytical view focusing on system decay. The high theater
 % ratio (0.89) > 0.70 triggers Piton: the "Degree" is an inertial spike;
 % it remains a requirement only because it has always been one.
-constraint_indexing:constraint_classification(credibility_inflation, piton,
+constraint_indexing:constraint_classification(credibility_inflation, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -133,12 +133,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(credibility_inflation, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(credibility_inflation, tangled_rope,
+    constraint_indexing:constraint_classification(credibility_inflation, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.89) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(credibility_inflation, piton,
+    constraint_indexing:constraint_classification(credibility_inflation, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

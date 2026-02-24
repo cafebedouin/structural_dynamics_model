@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(ad_synaptic_deficit, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % [RESOLVED ONTOLOGICAL_MISMATCH]: Corrects false_summit by identifying irreducible law.
-constraint_indexing:constraint_classification(ad_synaptic_deficit, tangled_rope, 
+constraint_indexing:constraint_classification(ad_synaptic_deficit, snare, 
     context(agent_power(analytical), 
             time_horizon(civilizational), 
             exit_options(analytical), 

@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(trojan_war_spoils, astyanax).
 % For the women, their enslavement is not a system to be analyzed but an
 % immutable, crushing reality akin to a natural disaster. The suppression is
 % so total (S=1.0) that it feels like a law of physics.
-constraint_indexing:constraint_classification(trojan_war_spoils, mountain,
+constraint_indexing:constraint_classification(trojan_war_spoils, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(trojan_war_spoils, snare,
 
 test(perspectival_gap_subject_beneficiary) :-
     % Verify the classic gap: the powerless see a Mountain (or Snare), the institutional see a Rope.
-    constraint_indexing:constraint_classification(trojan_war_spoils, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(trojan_war_spoils, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(trojan_war_spoils, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_observer_sees_snare) :-

@@ -96,7 +96,7 @@ narrative_ontology:constraint_victim(gender_performance_cost, chitra_true_self).
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % From Chitra's view, the performance is a trap that robs her of "the prizes 
 % of love" for her true self.
-constraint_indexing:constraint_classification(gender_performance_cost, snare,
+constraint_indexing:constraint_classification(gender_performance_cost, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(gender_performance_cost, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Recognizes the coordination (love) built on structural extraction (deceit).
-constraint_indexing:constraint_classification(gender_performance_cost, tangled_rope,
+constraint_indexing:constraint_classification(gender_performance_cost, snare,
     context(agent_power(analytical),
             time_horizon(generational),
             exit_options(analytical),
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(gender_performance_cost, tangled_r
 :- begin_tests(gender_performance_cost_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(gender_performance_cost, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(gender_performance_cost, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(gender_performance_cost, rope, context(agent_power(powerful), _, _, _)).
 
 test(tangled_rope_requirements) :-

@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(feedback_loop_desynchronization, r
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects both the coordination of global markets and the asymmetric extraction of local capital.
-constraint_indexing:constraint_classification(feedback_loop_desynchronization, tangled_rope,
+constraint_indexing:constraint_classification(feedback_loop_desynchronization, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -127,7 +127,7 @@ test(perspectival_gap) :-
     TypeInstitutional == rope.
 
 test(tangled_rope_analytical_view) :-
-    constraint_indexing:constraint_classification(feedback_loop_desynchronization, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(feedback_loop_desynchronization, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),

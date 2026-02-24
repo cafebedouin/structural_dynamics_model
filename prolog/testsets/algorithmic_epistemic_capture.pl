@@ -84,7 +84,7 @@ narrative_ontology:coordination_vitality(algorithmic_epistemic_capture, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The subject is trapped: their "choices" are pre-filtered by an engine 
 % they do not control, creating a predatory cognitive lock-in.
-constraint_indexing:constraint_classification(algorithmic_epistemic_capture, snare, 
+constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(algorithmic_epistemic_capture, sna
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The platform views the capture as a Rope—the only way to coordinate 
 % millions of users' attention and manage the infinite noise of the internet.
-constraint_indexing:constraint_classification(algorithmic_epistemic_capture, rope, 
+constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -127,9 +127,9 @@ constraint_indexing:constraint_classification(algorithmic_epistemic_capture, tan
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless consumer vs Rope for the institutional platform.
-    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, snare, 
+    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, rope, 
+    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
         context(agent_power(institutional), _, _, _)).
 
 test(piton_trigger) :-

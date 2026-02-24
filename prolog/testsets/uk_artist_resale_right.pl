@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(uk_artist_resale_right, snare,
 % Artists and their estates who see the ARR as a fair, beneficial coordination
 % mechanism that secures them ongoing income from their work's success.
 % Engine derives d from: beneficiary membership + constrained exit -> d ≈ 0.3 -> f(d) ≈ 0.16 -> low χ
-constraint_indexing:constraint_classification(uk_artist_resale_right, rope,
+constraint_indexing:constraint_classification(uk_artist_resale_right, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(uk_artist_resale_right, tangled_ro
 % society's commission, and their lack of resources to pursue claims make the
 % system feel extractive. The benefit is theoretical, but the cost is real.
 % Engine derives d from: powerless + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ
-constraint_indexing:constraint_classification(uk_artist_resale_right, snare,
+constraint_indexing:constraint_classification(uk_artist_resale_right, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -176,7 +176,7 @@ test(perspectival_gap_seller_vs_artist) :-
     format('Seller/Target sees Snare, Artist/Beneficiary sees Rope. Gap confirmed.~n').
 
 test(perspectival_gap_powerless_vs_institutional) :-
-    constraint_indexing:constraint_classification(uk_artist_resale_right, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(uk_artist_resale_right, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(uk_artist_resale_right, rope, context(agent_power(institutional), _, _, _)),
     format('Powerless sees Snare, Institutional sees Rope. Gap confirmed.~n').
 

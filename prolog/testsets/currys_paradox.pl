@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(currys_paradox, mountain,
 % PERSPECTIVE 2: THE SYSTEM ARCHITECT (ROPE)
 % A programmer or language designer sees the paradox as a known hazard to
 % coordinate around, leading to safer type systems and compilers.
-constraint_indexing:constraint_classification(currys_paradox, rope,
+constraint_indexing:constraint_classification(currys_paradox, scaffold,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(currys_paradox, rope,
 % For the mathematical establishment, the paradox is an unchangeable feature
 % of the logical landscape. One does not "fix" it; one builds systems (like ZFC)
 % to avoid it.
-constraint_indexing:constraint_classification(currys_paradox, mountain,
+constraint_indexing:constraint_classification(currys_paradox, scaffold,
     context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(trapped),

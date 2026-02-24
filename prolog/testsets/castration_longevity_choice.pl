@@ -100,7 +100,7 @@ narrative_ontology:constraint_victim(castration_longevity_choice, longevity_seek
 % The longevity seeker perceives a high-cost, high-reward option that is
 % actively blocked by social and institutional forces, trapping them between
 % aging and pathologization. The choice is extractive and coercive.
-constraint_indexing:constraint_classification(castration_longevity_choice, snare,
+constraint_indexing:constraint_classification(castration_longevity_choice, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(castration_longevity_choice, snare
 % The medical institution (IRB) perceives its ethical guidelines against such
 % a procedure not as a choice but as an immutable "Mountain" of medical ethics
 % ("do no harm"). This is a false natural law claim, as the ethics are constructed.
-constraint_indexing:constraint_classification(castration_longevity_choice, mountain,
+constraint_indexing:constraint_classification(castration_longevity_choice, rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(constrained),
@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(castration_longevity_choice, mount
 % reproductive fitness for longevity) but also asymmetric extraction (the
 % seeker bears all risk/cost) and active enforcement (by the medical
 % establishment). This combination is a Tangled Rope.
-constraint_indexing:constraint_classification(castration_longevity_choice, tangled_rope,
+constraint_indexing:constraint_classification(castration_longevity_choice, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -143,7 +143,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical view correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(castration_longevity_choice, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(castration_longevity_choice, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     % Verify the base extraction meets the threshold for a Snare/Tangled Rope.

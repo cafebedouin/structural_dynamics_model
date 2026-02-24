@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(education_unbundling_implementation, legacy
 % A beneficiary, but with limited power and constrained options in the new,
 % still-unproven ecosystem. They see the coordination benefit.
 % Engine derives d from: beneficiary membership + constrained exit -> low d -> low χ
-constraint_indexing:constraint_classification(education_unbundling_implementation, rope,
+constraint_indexing:constraint_classification(education_unbundling_implementation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(education_unbundling_implementatio
 % An institutional actor, but one who is a victim of the transition and trapped
 % by their existing business model and accreditation rules.
 % Engine derives d from: victim membership + trapped exit -> high d -> high χ
-constraint_indexing:constraint_classification(education_unbundling_implementation, snare,
+constraint_indexing:constraint_classification(education_unbundling_implementation, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(trapped),

@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(rotation_seven_black_soil, sector_seven_res
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For an exposed resident, the toxicity is a slow, inescapable trap that
 % extracts their health and life.
-constraint_indexing:constraint_classification(rotation_seven_black_soil, snare,
+constraint_indexing:constraint_classification(rotation_seven_black_soil, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

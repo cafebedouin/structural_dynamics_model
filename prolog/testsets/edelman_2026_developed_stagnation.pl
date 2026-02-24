@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(edelman_2026_developed_stagnation, low_inco
 % PERSPECTIVE 1: THE DISPLACED WORKER (SNARE)
 % Viewed as an inescapable trap where AI and trade wars threaten jobs (66%).
 % Effective extraction χ = 0.58 * 1.5 (powerless) * 1.0 (national) = 0.87.
-constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, snare,
+constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(edelman_2026_developed_stagnation,
 % The system has a genuine coordination function (local trust) but also features
 % high asymmetric extraction and requires active enforcement to maintain.
 % Effective extraction χ = 0.58 * 1.15 (analytical) * 1.2 (global) = 0.80.
-constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, tangled_rope,
+constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,12 +124,12 @@ constraint_indexing:constraint_classification(edelman_2026_developed_stagnation,
 
 test(perspectival_gap_is_snare_vs_rope) :-
     % Verify the core perspectival gap between the powerless (Snare) and institutional (Rope).
-    constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, rope, context(agent_power(institutional), _, _, _)).
 
 test(tangled_rope_structural_validation) :-
     % Verify that the analytical observer correctly identifies a Tangled Rope.
-    constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(edelman_2026_developed_stagnation, snare, context(agent_power(analytical), _, _, _)),
     % And that the necessary structural properties are declared.
     narrative_ontology:constraint_beneficiary(edelman_2026_developed_stagnation, _),
     narrative_ontology:constraint_victim(edelman_2026_developed_stagnation, _),

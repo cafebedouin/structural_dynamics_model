@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(epistemic_free_rider_problem, rope
 % The default analytical context detects a system with both a coordination function
 % (beneficiaries exist) and asymmetric extraction (victims exist), requiring active
 % enforcement. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(epistemic_free_rider_problem, tangled_rope,
+constraint_indexing:constraint_classification(epistemic_free_rider_problem, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(epistemic_free_rider_problem, tang
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.83) > 0.70 triggers Piton: the "News Aggregator"
 % is an inertial spike; it performatively signals "News" while hollowing the producers.
-constraint_indexing:constraint_classification(epistemic_free_rider_problem, piton,
+constraint_indexing:constraint_classification(epistemic_free_rider_problem, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -140,7 +140,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(epistemic_free_rider_problem, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(epistemic_free_rider_problem, tangled_rope,
+    constraint_indexing:constraint_classification(epistemic_free_rider_problem, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

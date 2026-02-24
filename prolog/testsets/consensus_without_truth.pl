@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(consensus_without_truth, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature: a coordination function for beneficiaries,
 % funded by high asymmetric extraction from victims, requiring active enforcement.
-constraint_indexing:constraint_classification(consensus_without_truth, tangled_rope,
+constraint_indexing:constraint_classification(consensus_without_truth, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -121,7 +121,7 @@ test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
     constraint_indexing:constraint_classification(consensus_without_truth, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(consensus_without_truth, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(consensus_without_truth, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(consensus_without_truth, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_properties, [nondet]) :-
     % A valid Tangled Rope requires enforcement, a beneficiary, and a victim.

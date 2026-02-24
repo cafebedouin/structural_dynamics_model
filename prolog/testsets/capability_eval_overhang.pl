@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(capability_eval_overhang, rope,
 % PERSPECTIVE 3: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.86) > 0.70 triggers Piton: the "Benchmark Suite"
 % is an inertial spike of logic maintained for optics, not functional safety.
-constraint_indexing:constraint_classification(capability_eval_overhang, piton,
+constraint_indexing:constraint_classification(capability_eval_overhang, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(capability_eval_overhang, piton,
 % Detects high extraction (0.83), a coordination function (beneficiary exists),
 % asymmetric extraction (victim exists), and active enforcement. This is the
 % canonical signature of a Tangled Rope.
-constraint_indexing:constraint_classification(capability_eval_overhang, tangled_rope,
+constraint_indexing:constraint_classification(capability_eval_overhang, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -136,12 +136,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(capability_eval_overhang, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(capability_eval_overhang, tangled_rope,
+    constraint_indexing:constraint_classification(capability_eval_overhang, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.86) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(capability_eval_overhang, piton,
+    constraint_indexing:constraint_classification(capability_eval_overhang, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

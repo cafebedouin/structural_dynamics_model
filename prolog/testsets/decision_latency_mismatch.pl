@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(decision_latency_mismatch, retail_trader).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The retail trader is trapped by the lag, losing value to "invisible" slippage.
-constraint_indexing:constraint_classification(decision_latency_mismatch, snare,
+constraint_indexing:constraint_classification(decision_latency_mismatch, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(decision_latency_mismatch, tangled
 
 test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
-    constraint_indexing:constraint_classification(decision_latency_mismatch, snare,
+    constraint_indexing:constraint_classification(decision_latency_mismatch, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(decision_latency_mismatch, rope,
         context(agent_power(institutional), _, _, _)).

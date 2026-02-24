@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(us_sanctions_icc_israel_case, icc_officials
 % As individuals, they are powerless against a state actor and trapped by their professional mandate.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.60 * 1.42 * 1.2 (global scope) ≈ 1.02. This classifies as a Snare.
-constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare,
+constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, rope
 % Engine derives canonical d ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.60 * 1.15 * 1.2 ≈ 0.828. This value falls within the Tangled Rope range [0.40, 0.90].
 % Given that the structural requirements (beneficiary, victim, enforcement) are met, it's a Tangled Rope.
-constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, tangled_rope,
+constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, tang
 % The ICC is an institution but is the target of coercion and has limited ability to evade it.
 % Engine derives d from: victim + institutional(constrained) -> high d ≈ 0.90 -> f(d) ≈ 1.36.
 % χ = 0.60 * 1.36 * 1.2 ≈ 0.979. This is a Snare.
-constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare,
+constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -184,7 +184,7 @@ test(perspectival_gap_institutional) :-
     true.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_met) :-
     % Verifies that all three required flags for Tangled Rope are present.

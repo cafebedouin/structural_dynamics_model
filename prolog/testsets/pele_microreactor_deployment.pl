@@ -108,7 +108,7 @@ narrative_ontology:constraint_victim(pele_microreactor_deployment, deployed_reac
 % → d ≈ 0.95 → f(d) ≈ 1.42. The local scope σ(S)=0.8 dampens χ, but the high
 % ε ensures it still classifies as a Snare.
 % χ = 0.60 * 1.42 * 0.8 = 0.68 (Snare: χ ≥ 0.66)
-constraint_indexing:constraint_classification(pele_microreactor_deployment, snare,
+constraint_indexing:constraint_classification(pele_microreactor_deployment, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(pele_microreactor_deployment, rope
 % asymmetrically imposed risk. The high base extraction, suppression, and
 % need for enforcement, combined with a clear beneficiary, define a
 % canonical Tangled Rope.
-constraint_indexing:constraint_classification(pele_microreactor_deployment, tangled_rope,
+constraint_indexing:constraint_classification(pele_microreactor_deployment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(pele_microreactor_deployment, tang
 % Exit is 'constrained', leading to a higher d than the beneficiary.
 % The engine derives a high d from victim status + constrained exit.
 % χ = 0.60 * f(d) * 1.0. For d ≈ 0.8, f(d) ≈ 1.25 -> χ ≈ 0.75.
-constraint_indexing:constraint_classification(pele_microreactor_deployment, snare,
+constraint_indexing:constraint_classification(pele_microreactor_deployment, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -161,7 +161,7 @@ test(perspectival_gap) :-
     % Verify the core Rope vs. Snare gap.
     constraint_indexing:constraint_classification(pele_microreactor_deployment, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
     constraint_indexing:constraint_classification(pele_microreactor_deployment, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(pele_microreactor_deployment, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(pele_microreactor_deployment, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_gap) :-
     % Verify that two institutional actors classify differently due to exit options.

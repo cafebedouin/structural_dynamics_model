@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(china_ev_export_oversupply, western_ev_manu
 % PERSPECTIVE 1: WORKERS IN WESTERN EV MANUFACTURING (SNARE)
 % Agent who bears the most direct extraction via job loss. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(china_ev_export_oversupply, snare,
+constraint_indexing:constraint_classification(china_ev_export_oversupply, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(china_ev_export_oversupply, rope,
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(china_ev_export_oversupply, tangled_rope,
+constraint_indexing:constraint_classification(china_ev_export_oversupply, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(china_ev_export_oversupply, tangle
 % PERSPECTIVE 4: WESTERN EV MANUFACTURERS (SNARE)
 % Corporate agent who faces suppressed market share. Engine derives d from:
 %   victim membership + constrained exit → d ≈ 0.85 → f(d) ≈ 1.15 → high χ
-constraint_indexing:constraint_classification(china_ev_export_oversupply, snare,
+constraint_indexing:constraint_classification(china_ev_export_oversupply, tangled_rope,
     context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(china_ev_export_oversupply, rope,
             spatial_scope(national))).
 
 % Perspective 5B: Pro-Domestic Industry Government (institutional, constrained exit - protects jobs)
-constraint_indexing:constraint_classification(china_ev_export_oversupply, tangled_rope,
+constraint_indexing:constraint_classification(china_ev_export_oversupply, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(quellcrist_falconer_justice, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The analytical view must account for both the coordination function and the asymmetric extraction.
 % The system has beneficiaries, victims, high extraction, and requires active enforcement. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(quellcrist_falconer_justice, tangled_rope,
+constraint_indexing:constraint_classification(quellcrist_falconer_justice, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
     TypePowerless \= TypeInstitutional.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(quellcrist_falconer_justice, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(quellcrist_falconer_justice, snare, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_and_suppression) :-
     domain_priors:base_extractiveness(quellcrist_falconer_justice, E),

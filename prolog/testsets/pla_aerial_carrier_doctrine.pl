@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(pla_aerial_carrier_doctrine, regional_adver
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % High ε (0.55) and high suppression (0.75) amplified by high f(d) results in
 % a high χ, classifying as a Snare.
-constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, snare,
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % A global defense analyst sees both the coordination and extraction functions.
 % The engine's derived d ≈ 0.72 → f(d) ≈ 1.15 produces a χ in the Tangled Rope range.
-constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, tangled_rope,
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, tangl
 % The resulting χ is positive and significant, revealing the coercive aspect of the
 % doctrine. It is also a Tangled Rope, but the computed χ will be lower than for
 % the powerless victim but higher (and positive) than for the PLA beneficiary.
-constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, tangled_rope,
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

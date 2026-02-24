@@ -702,7 +702,7 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 **Implementation:** `trajectory_mining.pl`
 
 **Key Notes:**
-- Currently disabled (`trajectory_enabled = 0`) — checked at Makefile shell level, entire trajectory mining step is skipped
+- Currently disabled (`trajectory_enabled = 0`) — checked at pipeline level (run_pipeline.py), entire trajectory mining step is skipped
 - Distance metric is a weighted sum of four components (shift, metric, stability, pathology)
 - Isomorphism detection finds constraints from different domains with near-identical structural trajectories
 

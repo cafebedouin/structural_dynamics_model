@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(asce_7_22_seismic_design, junior_structural
 % liability and get permits. This traps them in a specific methodology,
 % which feels like a Mountain but is structurally a Snare due to the high
 % suppression and required enforcement.
-constraint_indexing:constraint_classification(asce_7_22_seismic_design, snare,
+constraint_indexing:constraint_classification(asce_7_22_seismic_design, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(asce_7_22_seismic_design, rope,
 % For a developer, especially on marginal projects, the unyielding and costly
 % requirements can make a project financially non-viable. The high suppression
 % of cheaper alternatives and mandatory enforcement makes it a classic Snare.
-constraint_indexing:constraint_classification(asce_7_22_seismic_design, snare,
+constraint_indexing:constraint_classification(asce_7_22_seismic_design, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),

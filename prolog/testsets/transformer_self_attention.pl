@@ -84,7 +84,7 @@ narrative_ontology:constraint_victim(transformer_self_attention, legacy_rnn_deve
 % For developers invested in prior architectures (RNNs), the transformer is a Snare.
 % Its dominance makes their skills and tools obsolete, trapping them in a non-competitive paradigm.
 % χ = 0.75 (ε) * 1.5 (π(powerless)) * 1.0 (σ(national)) = 1.125
-constraint_indexing:constraint_classification(transformer_self_attention, snare,
+constraint_indexing:constraint_classification(transformer_self_attention, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(transformer_self_attention, tangle
 :- begin_tests(transformer_self_attention_tests).
 
 test(perspectival_gap_is_snare_vs_rope) :-
-    constraint_indexing:constraint_classification(transformer_self_attention, snare,
+    constraint_indexing:constraint_classification(transformer_self_attention, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(transformer_self_attention, rope,
         context(agent_power(institutional), _, _, _)).

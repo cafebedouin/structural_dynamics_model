@@ -132,7 +132,7 @@ narrative_ontology:constraint_victim(greenland_defence_pact_2026, greenlandic_go
 % Local communities who bear the direct costs. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 %   Calculation: χ = 0.52 * 1.42 * 0.9 (regional) ≈ 0.664. This meets the χ ≥ 0.66 threshold for a Snare.
-constraint_indexing:constraint_classification(greenland_defence_pact_2026, snare,
+constraint_indexing:constraint_classification(greenland_defence_pact_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(greenland_defence_pact_2026, rope,
 % Default analytical context (civilizational/analytical/global). Sees both coordination and extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
 % Calculation: χ = 0.52 * 1.15 * 1.2 (global) ≈ 0.717. This is within the Tangled Rope band [0.40, 0.90].
-constraint_indexing:constraint_classification(greenland_defence_pact_2026, tangled_rope,
+constraint_indexing:constraint_classification(greenland_defence_pact_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

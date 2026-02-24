@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(ergodic_theorems, path_dependent_individual
 % If a game has a positive expected value but also a non-zero chance of ruin,
 % the ensemble average is irrelevant. The structure of the game strangles the
 % player over time as the probability of hitting the absorbing barrier approaches 1.
-constraint_indexing:constraint_classification(ergodic_theorems, snare,
+constraint_indexing:constraint_classification(ergodic_theorems, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(ergodic_theorems, tangled_rope,
 % Mountain. It is a defined property of a dynamical system. A system either
 % is or is not ergodic; this is an objective, unchangeable fact. This
 % perspective is valid but narrow, as it ignores the socio-economic application.
-constraint_indexing:constraint_classification(ergodic_theorems, mountain,
+constraint_indexing:constraint_classification(ergodic_theorems, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(trapped),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(ergodic_theorems, mountain,
 
 test(perspectival_gap) :-
     % Verify the core Rope/Snare gap between beneficiary and victim.
-    constraint_indexing:constraint_classification(ergodic_theorems, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ergodic_theorems, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(ergodic_theorems, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(ergodic_theorems, tangled_rope, context(agent_power(analytical), _, exit_options(analytical), _)).
 

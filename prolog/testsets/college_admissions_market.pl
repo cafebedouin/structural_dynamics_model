@@ -99,7 +99,7 @@ narrative_ontology:constraint_victim(college_admissions_market, unmatched_applic
 % For the student who invests years and significant resources only to be
 % rejected, the system is a Snare. The sunk costs are immense, and the lack
 % of alternatives at the same prestige level feels punitive and extractive.
-constraint_indexing:constraint_classification(college_admissions_market, snare,
+constraint_indexing:constraint_classification(college_admissions_market, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(college_admissions_market, tangled
 :- begin_tests(college_admissions_market_tests).
 
 test(perspectival_gap_applicant_vs_university) :-
-    constraint_indexing:constraint_classification(college_admissions_market, snare,
+    constraint_indexing:constraint_classification(college_admissions_market, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(college_admissions_market, rope,
         context(agent_power(institutional), _, _, _)),

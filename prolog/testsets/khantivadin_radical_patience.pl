@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(khantivadin_radical_patience, rope
 % From the Buddha's perspective, the sage's response reveals an immutable
 % moral law (a Mountain): true patience is a property of mind, not body,
 % and is a zero-degree-of-freedom requirement for enlightenment.
-constraint_indexing:constraint_classification(khantivadin_radical_patience, tangled_rope,
+constraint_indexing:constraint_classification(khantivadin_radical_patience, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

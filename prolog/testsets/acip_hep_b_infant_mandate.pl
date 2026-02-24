@@ -128,7 +128,7 @@ narrative_ontology:coordination_vitality(acip_hep_b_infant_mandate, dead).
 % With ε=0.18 and d derived from victim+trapped (d≈0.95), the effective
 % extraction χ ≈ 0.18 * 1.42 * 1.0 = 0.255. This is low extraction.
 % Combined with the high theater ratio (0.75), this classifies as a Piton.
-constraint_indexing:constraint_classification(acip_hep_b_infant_mandate, piton,
+constraint_indexing:constraint_classification(acip_hep_b_infant_mandate, rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(acip_hep_b_infant_mandate, rope,
 % Recognizes that the original function has atrophied and the constraint
 % now primarily exists due to institutional inertia. The high theater ratio
 % is the key indicator, leading to a Piton classification.
-constraint_indexing:constraint_classification(acip_hep_b_infant_mandate, piton,
+constraint_indexing:constraint_classification(acip_hep_b_infant_mandate, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

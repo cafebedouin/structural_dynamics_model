@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(capital_rotation_ai_narrative, us_tech_cent
 % Agent who bears the most extraction via career risk and forced re-allocation.
 % Engine derives d from victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42.
 % χ = 0.48 * 1.42 * 1.2 (global scope) ≈ 0.82. This is a clear Snare (χ >= 0.66).
-constraint_indexing:constraint_classification(capital_rotation_ai_narrative, snare,
+constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tan
 % A more nuanced view of the fund manager: not powerless, but constrained.
 % Engine derives d from victim membership + mobile exit -> d ≈ 0.85 -> f(d) ≈ 1.15.
 % χ = 0.48 * 1.15 * 1.2 (global scope) ≈ 0.66. Still a Snare, showing robustness.
-constraint_indexing:constraint_classification(capital_rotation_ai_narrative, snare,
+constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(capital_rotation_ai_narrative, sna
 
 test(perspectival_gap_target_beneficiary) :-
     % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(capital_rotation_ai_narrative, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(capital_rotation_ai_narrative, rope, context(agent_power(institutional), _, _, _)),
     format('... Perspectival gap test passed (Snare vs Rope)\n').
 

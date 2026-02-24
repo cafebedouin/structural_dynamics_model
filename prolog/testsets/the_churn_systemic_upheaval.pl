@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(the_churn_systemic_upheaval, snare
 % PERSPECTIVE 2: THE SYSTEMIC ARCHITECT (ROPE)
 % For the institutional player, the churn is a functional, albeit violent,
 % mechanism for clearing out "loose ends" and building "somethin' new".
-constraint_indexing:constraint_classification(the_churn_systemic_upheaval, rope,
+constraint_indexing:constraint_classification(the_churn_systemic_upheaval, scaffold,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(mobile),
@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(the_churn_systemic_upheaval, rope,
 
 % PERSPECTIVE 3: THE VETERAN SURVIVOR (MOUNTAIN)
 % For the survivor, the churn is an unchangeable natural law comparable to physics.
-constraint_indexing:constraint_classification(the_churn_systemic_upheaval, mountain,
+constraint_indexing:constraint_classification(the_churn_systemic_upheaval, snare,
     context(agent_power(moderate),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -125,8 +125,8 @@ constraint_indexing:constraint_classification(the_churn_systemic_upheaval, snare
 test(perspectival_gap) :-
     % Verify there is a perspectival gap between powerless, institutional, and moderate.
     constraint_indexing:constraint_classification(the_churn_systemic_upheaval, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(the_churn_systemic_upheaval, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(the_churn_systemic_upheaval, mountain, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(the_churn_systemic_upheaval, scaffold, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(the_churn_systemic_upheaval, snare, context(agent_power(moderate), _, _, _)).
 
 test(extraction_threshold) :-
     % Extraction is high (0.9), confirming the "liquidation" aspect and Snare classification.

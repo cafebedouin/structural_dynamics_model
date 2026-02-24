@@ -511,7 +511,7 @@ param(cohomology_enabled,                  1).       % Graduated Phase 7-T1: com
                          Graduated Phase 7-T2.
 
    COMPUTATION GATES (flag prevents computation entirely):
-     - trajectory_enabled (Section 13): Checked at Makefile shell level.
+     - trajectory_enabled (Section 13): Checked at pipeline level (run_pipeline.py).
                          Entire trajectory mining step is skipped.
                          Deferred — requires runtime benchmarking.
    ================================================================ */

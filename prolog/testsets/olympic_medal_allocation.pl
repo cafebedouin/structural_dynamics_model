@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(olympic_medal_allocation, smaller_nations).
    ========================================================================== */
 
 % PERSPECTIVE 1: SMALLER NATIONS (SNARE)
-constraint_indexing:constraint_classification(olympic_medal_allocation, snare,
+constraint_indexing:constraint_classification(olympic_medal_allocation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),

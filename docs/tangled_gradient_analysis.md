@@ -1,12 +1,12 @@
 # Tangled Gradient Analysis
 
-**Generated:** 2026-02-24 01:22
+**Generated:** 2026-02-24 13:53
 
 ---
 
 ## 1. Executive Summary
 
-Analyzed **752** tangled_rope constraints (defined by `claimed_type == 'tangled_rope'`).
+Analyzed **506** tangled_rope constraints (defined by `claimed_type == 'tangled_rope'`).
 
 Each constraint's position on the rope–snare continuum is measured via a gradient vector computed per-perspective. The primary axis (Chi) varies by observer; epsilon and suppression are observer-invariant.
 
@@ -14,12 +14,12 @@ Each constraint's position on the rope–snare continuum is measured via a gradi
 
 | Subtype | Count | % | Interpretation |
 | :--- | ---: | ---: | :--- |
-| rope_dominant | 28 | 3.7% | Complicated rope — coordination primary |
-| snare_dominant | 2 | 0.3% | Disguised snare — extraction primary |
-| genuinely_perspectival | 664 | 88.3% | True tangled_rope — framework validation |
-| structurally_ambiguous | 58 | 7.7% | Coordination and extraction inseparable |
+| rope_dominant | 40 | 7.9% | Complicated rope — coordination primary |
+| snare_dominant | 2 | 0.4% | Disguised snare — extraction primary |
+| genuinely_perspectival | 402 | 79.4% | True tangled_rope — framework validation |
+| structurally_ambiguous | 62 | 12.3% | Coordination and extraction inseparable |
 | unclassifiable | 0 | 0.0% | Missing Chi data |
-| **Total** | **752** | **100%** | |
+| **Total** | **506** | **100%** | |
 
 ## 2. Data Sources
 
@@ -66,28 +66,28 @@ Based on clamped Chi-only gradient across 4 perspectives:
 | genuinely_perspectival | min(G_chi) < 0.30 AND max(G_chi) > 0.70 |
 | structurally_ambiguous | All else |
 
-### rope_dominant exemplars (28 total)
+### rope_dominant exemplars (40 total)
 
 - **`blackstone_carried_interest_taxation`**: Chi gradients = pow=-0.08, mod=-0.06, ins=-1.17, ana=0.20 → rope_dominant
-- **`boltzmann_universality_2026`**: Chi gradients = pow=-0.60, mod=-0.59, ins=-1.15, ana=-0.47 → rope_dominant
+- **`canada_goose_realignment_2026`**: Chi gradients = pow=-0.23, mod=-0.32, ins=-1.16, ana=-0.02 → rope_dominant
 - **`china_africa_zero_tariff_2026`**: Chi gradients = pow=-0.01, mod=0.01, ins=-1.17, ana=0.29 → rope_dominant
 - **`climate_target_one_point_five`**: Chi gradients = pow=-0.08, mod=-0.06, ins=-1.17, ana=0.20 → rope_dominant
-- **`decentralized_infrastructure_rope`**: Chi gradients = pow=-0.85, mod=-0.84, ins=-1.14, ana=-0.78 → rope_dominant
+- **`coffee_cardiovascular_2026`**: Chi gradients = pow=-0.71, mod=-0.70, ins=-1.15, ana=-0.60 → rope_dominant
 
 ### snare_dominant exemplars (2 total)
 
 - **`horizon_liability_contract`**: Chi gradients = pow=1.85, mod=1.90, ins=1.33, ana=2.63 → snare_dominant
 - **`sm_addictive_design`**: Chi gradients = pow=1.26, mod=1.30, ins=1.48, ana=1.88 → snare_dominant
 
-### genuinely_perspectival exemplars (664 total)
+### genuinely_perspectival exemplars (402 total)
 
-- **`26usc469_real_estate_exemption`**: Chi gradients = pow=1.50, mod=1.55, ins=-1.23, ana=2.19 → genuinely_perspectival
-- **`abstraction_boundary_overrun`**: Chi gradients = pow=1.71, mod=1.76, ins=-1.24, ana=2.45 → genuinely_perspectival
+- **`absorbing_markov_chain_trap`**: Chi gradients = pow=0.80, mod=0.83, ins=-1.20, ana=1.30 → genuinely_perspectival
 - **`abstraction_leakage`**: Chi gradients = pow=1.47, mod=1.51, ins=-1.23, ana=2.14 → genuinely_perspectival
 - **`academic_peer_review_gatekeeping`**: Chi gradients = pow=1.50, mod=1.55, ins=-1.23, ana=2.19 → genuinely_perspectival
-- **`academic_tenure_system`**: Chi gradients = pow=1.50, mod=1.55, ins=-1.23, ana=2.19 → genuinely_perspectival
+- **`access_arbitrage`**: Chi gradients = pow=0.45, mod=0.48, ins=-1.19, ana=0.86 → genuinely_perspectival
+- **`adverse_possession`**: Chi gradients = pow=1.15, mod=1.19, ins=-1.22, ana=1.74 → genuinely_perspectival
 
-### structurally_ambiguous exemplars (58 total)
+### structurally_ambiguous exemplars (62 total)
 
 - **`advice_as_dangerous_gift`**: Chi gradients = pow=0.10, mod=0.12, ins=-1.18, ana=0.42 → structurally_ambiguous
 - **`alzheimers_levetiracetam`**: Chi gradients = pow=0.10, mod=0.12, ins=-1.18, ana=0.42 → structurally_ambiguous
@@ -101,20 +101,19 @@ Based on clamped Chi-only gradient across 4 perspectives:
 
 | Subtype | Count | Mean variance | Gradient flips |
 | :--- | ---: | ---: | ---: |
-| rope_dominant | 28 | 0.1639 | 0 |
+| rope_dominant | 40 | 0.1660 | 0 |
 | snare_dominant | 2 | 0.1364 | 0 |
-| genuinely_perspectival | 664 | 1.3490 | 664 |
-| structurally_ambiguous | 58 | 0.4293 | 37 |
+| genuinely_perspectival | 402 | 1.0125 | 402 |
+| structurally_ambiguous | 62 | 0.4425 | 43 |
 
 ### Most common maximum-divergence pairs
 
 | Pair | Frequency | Mean divergence |
 | :--- | ---: | ---: |
-| institutional↔analytical | 749 | 2.7714 |
+| institutional↔analytical | 503 | 2.3356 |
 | powerless↔analytical | 2 | 1.0233 |
-| moderate↔institutional | 1 | 2.7792 |
 
-**Epsilon invariance:** 752/752 constraints have identical epsilon across all perspectives (confirmed).
+**Epsilon invariance:** 506/506 constraints have identical epsilon across all perspectives (confirmed).
 
 ## 6. Cross-References
 
@@ -122,43 +121,43 @@ Based on clamped Chi-only gradient across 4 perspectives:
 
 | Subtype | genuinely_tangled | rope_leaning | snare_leaning |
 | :--- | ---: | ---: | ---: |
-| rope_dominant | 6 | 21 | 1 |
+| rope_dominant | 8 | 30 | 2 |
 | snare_dominant | 0 | 0 | 2 |
-| genuinely_perspectival | 52 | 29 | 583 |
-| structurally_ambiguous | 15 | 26 | 17 |
+| genuinely_perspectival | 19 | 13 | 370 |
+| structurally_ambiguous | 13 | 17 | 32 |
 
 ### H1 band × subtype
 
-| Subtype | H1=0 | H1=3 | H1=4 | H1=5 | H1=6 |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| rope_dominant | 12 | 10 | 6 | 0 | 0 |
-| snare_dominant | 2 | 0 | 0 | 0 | 0 |
-| genuinely_perspectival | 38 | 424 | 0 | 197 | 5 |
-| structurally_ambiguous | 6 | 50 | 1 | 1 | 0 |
+| Subtype | H1=0 | H1=3 | H1=4 | H1=5 |
+| :--- | ---: | ---: | ---: | ---: |
+| rope_dominant | 25 | 5 | 10 | 0 |
+| snare_dominant | 2 | 0 | 0 | 0 |
+| genuinely_perspectival | 2 | 221 | 0 | 179 |
+| structurally_ambiguous | 2 | 60 | 0 | 0 |
 
 ### Signature × subtype
 
-| Subtype | false_ci_rope | false_natural_law | constructed_high_extraction | constructed_low_extraction |
+| Subtype | false_ci_rope | constructed_high_extraction | false_natural_law | constructed_low_extraction |
 | :--- | ---: | ---: | ---: | ---: |
-| rope_dominant | 17 | 5 | 0 | 6 |
-| snare_dominant | 2 | 0 | 0 | 0 |
-| genuinely_perspectival | 619 | 38 | 7 | 0 |
-| structurally_ambiguous | 51 | 6 | 1 | 0 |
+| rope_dominant | 32 | 0 | 6 | 2 |
+| snare_dominant | 0 | 2 | 0 | 0 |
+| genuinely_perspectival | 333 | 67 | 2 | 0 |
+| structurally_ambiguous | 58 | 2 | 2 | 0 |
 
 ### Coalition type × subtype
 
 | Subtype | analytical_dissent | institutional_dissent | other | split_field | uniform_tangled |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| rope_dominant | 1 | 7 | 13 | 0 | 7 |
-| snare_dominant | 0 | 0 | 0 | 0 | 2 |
-| genuinely_perspectival | 0 | 423 | 1 | 202 | 38 |
-| structurally_ambiguous | 3 | 47 | 1 | 1 | 6 |
+| rope_dominant | 0 | 12 | 5 | 0 | 23 |
+| snare_dominant | 0 | 0 | 2 | 0 | 0 |
+| genuinely_perspectival | 0 | 220 | 1 | 179 | 2 |
+| structurally_ambiguous | 4 | 56 | 0 | 0 | 2 |
 
 ## 7. Implications
 
-1. **Framework validation:** 664 genuinely_perspectival constraints (88.3%) demonstrate that observer perspective genuinely changes the rope↔snare classification — the core tangled_rope thesis.
+1. **Framework validation:** 402 genuinely_perspectival constraints (79.4%) demonstrate that observer perspective genuinely changes the rope↔snare classification — the core tangled_rope thesis.
 
-2. **Population refinement:** 28 rope_dominant + 2 snare_dominant constraints (4.0%) could potentially be reclassified to their dominant type, reducing the tangled_rope population.
+2. **Population refinement:** 40 rope_dominant + 2 snare_dominant constraints (8.3%) could potentially be reclassified to their dominant type, reducing the tangled_rope population.
 
-3. **Structural ambiguity:** 58 structurally_ambiguous constraints (7.7%) resist clean decomposition — extraction and coordination are genuinely intertwined.
+3. **Structural ambiguity:** 62 structurally_ambiguous constraints (12.3%) resist clean decomposition — extraction and coordination are genuinely intertwined.
 

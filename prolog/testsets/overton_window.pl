@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(overton_window, radical_reformers).
 % Agent whose survival depends on a policy currently outside the window.
 % Engine derives d from victim status + trapped exit -> d ≈ 0.95 -> high χ.
 % χ = 0.48 * f(0.95) * σ(national) = 0.48 * 1.42 * 1.0 = 0.68 -> Snare
-constraint_indexing:constraint_classification(overton_window, snare,
+constraint_indexing:constraint_classification(overton_window, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(overton_window, tangled_rope,
 
 test(perspectival_gap_snare_vs_rope) :-
     % Verify the core perspectival gap between the victim and beneficiaries.
-    constraint_indexing:constraint_classification(overton_window, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(overton_window, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(overton_window, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(overton_window, rope, context(agent_power(powerful), _, _, _)).
 

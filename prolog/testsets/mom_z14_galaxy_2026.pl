@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(mom_z14_2026, superseded_formation_models).
 % --- Analytical perspective classification ---
 % chi = 0.05 * 1.15 (analytical) * 1.2 (global) = 0.069
 % Classification: scaffold
-constraint_indexing:constraint_classification(mom_z14_2026, scaffold,
+constraint_indexing:constraint_classification(mom_z14_2026, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -133,7 +133,7 @@ narrative_ontology:constraint_victim(ncaa_eligibility_rules, student_athletes).
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(ncaa_eligibility_rules, snare,
+constraint_indexing:constraint_classification(ncaa_eligibility_rules, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(ncaa_eligibility_rules, rope,
 
 % PERSPECTIVE 2A: THE SECONDARY BENEFICIARY
 % Universities benefit, but are also constrained by the rules.
-constraint_indexing:constraint_classification(ncaa_eligibility_rules, tangled_rope,
+constraint_indexing:constraint_classification(ncaa_eligibility_rules, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(ncaa_eligibility_rules, tangled_ro
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(ncaa_eligibility_rules, tangled_rope,
+constraint_indexing:constraint_classification(ncaa_eligibility_rules, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

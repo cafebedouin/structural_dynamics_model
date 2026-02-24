@@ -92,7 +92,7 @@ narrative_ontology:coordination_vitality(agent_opt_2026, degrading).
 % PERSPECTIVE 1: THE PESSIMIST (SNARE)
 % For the protestor, the economy is a Snare: an inescapable zero-sum trap 
 % where providing help to others is seen as impossible.
-constraint_indexing:constraint_classification(agent_opt_2026, snare, 
+constraint_indexing:constraint_classification(agent_opt_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(agent_opt_2026, snare,
 % PERSPECTIVE 2: THE POLICY MAKER (ROPE)
 % Policy elites view "agentive optimism" as a Rope: the essential 
 % coordination tool required to tackle solvable problems.
-constraint_indexing:constraint_classification(agent_opt_2026, rope, 
+constraint_indexing:constraint_classification(agent_opt_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -123,8 +123,8 @@ constraint_indexing:constraint_classification(agent_opt_2026, piton,
 :- begin_tests(agent_opt_2026_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(agent_opt_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(agent_opt_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(agent_opt_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(agent_opt_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(theater_check) :-
     domain_priors:theater_ratio(agent_opt_2026, TR),

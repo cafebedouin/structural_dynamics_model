@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(med_diet_consensus_2026, processed_food_ind
 % the "Gold Standard" acts as a Snare. It is a normative requirement for
 % health that is economically inaccessible, creating systemic exclusion.
 % Engine derives d ≈ 0.95 → high χ.
-constraint_indexing:constraint_classification(med_diet_consensus_2026, snare,
+constraint_indexing:constraint_classification(med_diet_consensus_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(med_diet_consensus_2026, tangled_r
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(med_diet_consensus_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(med_diet_consensus_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(med_diet_consensus_2026, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(med_diet_consensus_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
 

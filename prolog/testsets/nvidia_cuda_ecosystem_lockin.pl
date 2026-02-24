@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(nvidia_cuda_ecosystem_lockin, large_cloud_p
 % costs and lack of viable alternatives make it a Snare.
 % Engine derives d from: victim + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % With σ(global)=1.2, χ = 0.65 * 1.42 * 1.2 ≈ 1.11. This is a clear Snare.
-constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, snare,
+constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, rope
 % enforcement that maintains the lock-in. This is the canonical Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.65 * 1.15 * 1.2 ≈ 0.90. Meets Tangled Rope thresholds.
-constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, tangled_rope,
+constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -178,11 +178,11 @@ constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, tang
 :- begin_tests(nvidia_cuda_ecosystem_lockin_tests).
 
 test(perspectival_gap_is_snare_vs_rope) :-
-    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, naturalized, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     narrative_ontology:constraint_beneficiary(nvidia_cuda_ecosystem_lockin, _),

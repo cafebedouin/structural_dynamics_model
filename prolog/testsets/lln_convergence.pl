@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(lln_convergence, mountain,
 % For an actuary or casino, the LLN is a pure coordination tool. It allows
 % the conversion of individual chaos into institutional order and profit.
 % χ = 0.25 * f(d≈0.05) * σ(1.2) ≈ 0.25 * -0.12 * 1.2 ≈ -0.036 (negative extraction)
-constraint_indexing:constraint_classification(lln_convergence, rope,
+constraint_indexing:constraint_classification(lln_convergence, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(lln_convergence, rope,
 % it as a Rope. The "snare" is an emergent property of repeated interaction,
 % not the law itself.
 % χ = 0.25 * f(d≈0.95) * σ(0.8) ≈ 0.25 * 1.42 * 0.8 ≈ 0.284 (Rope, not Snare)
-constraint_indexing:constraint_classification(lln_convergence, rope,
+constraint_indexing:constraint_classification(lln_convergence, mountain,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(lln_convergence, rope,
 % From a detached analytical view, the LLN is a tool for understanding and
 % prediction, a form of coordination between theory and observation.
 % χ = 0.25 * f(d≈0.73) * σ(1.2) ≈ 0.25 * 1.15 * 1.2 ≈ 0.345 (Rope)
-constraint_indexing:constraint_classification(lln_convergence, rope,
+constraint_indexing:constraint_classification(lln_convergence, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -179,7 +179,7 @@ constraint_indexing:constraint_classification(lln_convergence, rope,
 test(perspectival_gap) :-
     % Verify the gap between the single trial (Mountain) and the institution (Rope).
     constraint_indexing:constraint_classification(lln_convergence, mountain, context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))),
-    constraint_indexing:constraint_classification(lln_convergence, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(lln_convergence, scaffold, context(agent_power(institutional), _, _, _)),
     true.
 
 test(finite_capital_perspective) :-

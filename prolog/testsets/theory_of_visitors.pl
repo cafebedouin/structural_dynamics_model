@@ -85,7 +85,7 @@ narrative_ontology:constraint_victim(theory_of_visitors, hosts_seeking_permanenc
 % For the individual experiencing loss, transience is a Snare. The visitor
 % extracts an irreplaceable part of the self and leaves, strangling the
 % host's sense of continuity and meaning.
-constraint_indexing:constraint_classification(theory_of_visitors, snare,
+constraint_indexing:constraint_classification(theory_of_visitors, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

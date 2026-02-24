@@ -91,7 +91,7 @@ narrative_ontology:coordination_vitality(adversarial_truth_decay, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The consumer is trapped: verifying every piece of data is biologically
 % impossible, yet acting on unverified data is increasingly dangerous.
-constraint_indexing:constraint_classification(adversarial_truth_decay, snare,
+constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(adversarial_truth_decay, snare,
 % The architect views the decay as a Rope—the most efficient way to
 % coordinate mass sentiment and suppress counter-narratives without
 % the friction of traditional censorship.
-constraint_indexing:constraint_classification(adversarial_truth_decay, rope,
+constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature: a coordination function for architects that
 % relies on asymmetric extraction from consumers, requiring active enforcement.
-constraint_indexing:constraint_classification(adversarial_truth_decay, tangled_rope,
+constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -134,11 +134,11 @@ constraint_indexing:constraint_classification(adversarial_truth_decay, tangled_r
 
 test(perspectival_gap) :-
     % Verify Snare for the subject vs Rope for the institutional architect.
-    constraint_indexing:constraint_classification(adversarial_truth_decay, snare,
+    constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(adversarial_truth_decay, rope,
+    constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(adversarial_truth_decay, tangled_rope,
+    constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(jp_nativist_politics, japanese_feminists).
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % From the perspective of a targeted minority, this is a coercive trap that
 % extracts their sense of safety and social legitimacy for others' political gain.
-constraint_indexing:constraint_classification(jp_nativist_politics, snare,
+constraint_indexing:constraint_classification(jp_nativist_politics, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(jp_nativist_politics, rope,
 % asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % The high scope modifier amplifies the perceived extraction.
-constraint_indexing:constraint_classification(jp_nativist_politics, tangled_rope,
+constraint_indexing:constraint_classification(jp_nativist_politics, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -165,7 +165,7 @@ test(perspectival_gap) :-
     % Verify the core Rope/Snare gap between beneficiary and victim.
     constraint_indexing:constraint_classification(jp_nativist_politics, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
     constraint_indexing:constraint_classification(jp_nativist_politics, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(jp_nativist_politics, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(jp_nativist_politics, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements) :-
     % Verify that all structural requirements for a Tangled Rope are met.

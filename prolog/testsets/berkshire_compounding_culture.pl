@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(berkshire_compounding_culture, rop
 % For an investor needing current income, the "forego dividends" rule is a Snare.
 % They are trapped because the only exit is to sell shares, triggering capital
 % gains taxes. This friction suppresses liquidity in favor of the reinvestment creed.
-constraint_indexing:constraint_classification(berkshire_compounding_culture, snare,
+constraint_indexing:constraint_classification(berkshire_compounding_culture, rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(berkshire_compounding_culture, sna
 % flexibility ("we can't come and go on a dime"). The "creed" becomes a form of
 % institutional inertia that must be performatively maintained, even when it
 % constrains strategic options. This is a classic Piton.
-constraint_indexing:constraint_classification(berkshire_compounding_culture, piton,
+constraint_indexing:constraint_classification(berkshire_compounding_culture, rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(trapped),
@@ -185,7 +185,7 @@ test(perspectival_gap_powerless) :-
 
 test(institutional_inertia) :-
     % Institutional CEO sees a Piton due to scale and cultural inertia.
-    constraint_indexing:constraint_classification(berkshire_compounding_culture, piton, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(berkshire_compounding_culture, rope, context(agent_power(institutional), _, _, _)).
 
 test(low_extraction_and_high_theater) :-
     % Verify the core metrics for a Rope that has degraded to a Piton for some actors.

@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(eu_irgc_terrorist_designation, sna
 % from broad sanctions. They are powerless and trapped by the geopolitical
 % conflict. For them, the designation is an indiscriminate Snare that harms
 % them without offering any recourse or benefit.
-constraint_indexing:constraint_classification(eu_irgc_terrorist_designation, snare,
+constraint_indexing:constraint_classification(eu_irgc_terrorist_designation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(eu_irgc_terrorist_designation, rop
 % The analyst sees both the coordination function for the EU and the
 % severe extraction imposed on Iran. This hybrid nature is the definition of
 % a Tangled Rope.
-constraint_indexing:constraint_classification(eu_irgc_terrorist_designation, tangled_rope,
+constraint_indexing:constraint_classification(eu_irgc_terrorist_designation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -173,7 +173,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(eu_irgc_terrorist_designation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(eu_irgc_terrorist_designation, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A constraint can only be a Tangled Rope if it has a beneficiary (coordination),

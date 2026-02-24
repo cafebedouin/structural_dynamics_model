@@ -82,7 +82,7 @@ domain_priors:requires_active_enforcement(us_employer_health_insurance). % Tax c
 
 % PERSPECTIVE 1: THE EMPLOYEE (SNARE)
 % χ = 0.55 * 1.5 (powerless) * 1.0 (national) = 0.825
-constraint_indexing:constraint_classification(us_employer_health_insurance, snare,
+constraint_indexing:constraint_classification(us_employer_health_insurance, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(us_employer_health_insurance, rope
 
 % PERSPECTIVE 3: THE POLICY ANALYST (TANGLED ROPE)
 % Default analytical context for civilizational assessment.
-constraint_indexing:constraint_classification(us_employer_health_insurance, tangled_rope,
+constraint_indexing:constraint_classification(us_employer_health_insurance, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(us_employer_health_insurance, tang
 :- begin_tests(us_employer_health_insurance_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(us_employer_health_insurance, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(us_employer_health_insurance, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(us_employer_health_insurance, rope, context(agent_power(institutional), _, _, _)).
 
 test(extraction_threshold) :-

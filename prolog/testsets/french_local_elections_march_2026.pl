@@ -104,7 +104,7 @@ narrative_ontology:constraint_victim(france_local_elections_march_2026, independ
 % The new mandatory list system blocks individual entries in small communes.
 % χ = 0.35 * π(powerless, 1.5) * σ(local, 0.8) = 0.42. Borderline, but high
 % suppression (0.45) pushes it to Snare for the trapped agent.
-constraint_indexing:constraint_classification(france_local_elections_march_2026, snare,
+constraint_indexing:constraint_classification(france_local_elections_march_2026, scaffold,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(france_local_elections_march_2026,
 % PERSPECTIVE 2: THE INSTITUTIONAL PARTY (ROPE)
 % A coordination tool for "counting mayors" and building the 2027 presidential base.
 % χ = 0.35 * π(institutional, -0.2) = -0.07. Felt as pure coordination.
-constraint_indexing:constraint_classification(france_local_elections_march_2026, rope,
+constraint_indexing:constraint_classification(france_local_elections_march_2026, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

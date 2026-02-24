@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(toxoplasma_hub_2026, snare,
 % PERSPECTIVE 2: THE PARASITE (ROPE)
 % From the parasite's perspective, the cyst is a pure coordination mechanism
 % for long-term survival, resource management, and eventual transmission.
-constraint_indexing:constraint_classification(toxoplasma_hub_2026, rope,
+constraint_indexing:constraint_classification(toxoplasma_hub_2026, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

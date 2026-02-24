@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(social_narrative_casting, criticized_subjec
 % PERSPECTIVE 1: THE CRITICIZED SUBJECT (Unaware Actor)
 % For a subject who internalizes the criticism, it is a Snare. The critic's
 % narrative constrains their identity, leaving them trapped in someone else's movie.
-constraint_indexing:constraint_classification(social_narrative_casting, snare,
+constraint_indexing:constraint_classification(social_narrative_casting, rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(social_narrative_casting, rope,
 test(perspectival_gap) :-
     % Verify the gap between the subject who internalizes the role (Snare)
     % and the therapist who uses the concept as a tool (Rope).
-    constraint_indexing:constraint_classification(social_narrative_casting, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(social_narrative_casting, tangled_rope, context(agent_power(analytical), _, _, _)).
 

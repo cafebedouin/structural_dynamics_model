@@ -107,7 +107,7 @@ narrative_ontology:constraint_victim(golden_handcuffs, powerless).
 
 constraint_indexing:constraint_classification(
     golden_handcuffs,
-    rope,
+    tangled_rope,
     context(
         agent_power(institutional),
         time_horizon(generational),

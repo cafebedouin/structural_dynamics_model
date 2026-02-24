@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(skolems_paradox, mountain,
 % coordination device that defines the rules for moving between an object-language
 % (the theory) and a meta-language (the model), enabling the exploration of
 % different mathematical universes.
-constraint_indexing:constraint_classification(skolems_paradox, rope,
+constraint_indexing:constraint_classification(skolems_paradox, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

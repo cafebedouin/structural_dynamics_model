@@ -83,7 +83,7 @@ narrative_ontology:constraint_victim(insult_wisdom_training, disciple_present_se
 % PERSPECTIVE 1: THE DISCIPLE (DURING THE TRIAL)
 % From an immediate, trapped perspective, the constant extraction of money and
 % dignity feels like a predatory trap with no escape.
-constraint_indexing:constraint_classification(insult_wisdom_training, snare,
+constraint_indexing:constraint_classification(insult_wisdom_training, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(insult_wisdom_training, tangled_ro
 
 test(perspectival_gap_snare_to_rope) :-
     % Verify the key perspectival gap between the subject and the beneficiary.
-    constraint_indexing:constraint_classification(insult_wisdom_training, snare,
+    constraint_indexing:constraint_classification(insult_wisdom_training, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(insult_wisdom_training, rope,
         context(agent_power(institutional), _, _, _)),

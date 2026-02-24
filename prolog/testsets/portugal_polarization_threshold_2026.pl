@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(portugal_polarization_threshold_2026, anti_
 
 % PERSPECTIVE 1: THE ANTI-ESTABLISHMENT VOTER (SNARE)
 % Experienced as a trap designed to delegitimize dissent and fix the outcome.
-constraint_indexing:constraint_classification(portugal_polarization_threshold_2026, snare,
+constraint_indexing:constraint_classification(portugal_polarization_threshold_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(portugal_polarization_threshold_20
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the dual-function of protecting norms while extracting voter choice.
-constraint_indexing:constraint_classification(portugal_polarization_threshold_2026, tangled_rope,
+constraint_indexing:constraint_classification(portugal_polarization_threshold_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap) :-
 
 test(analytical_observer_sees_tangled_rope) :-
     % Verify the analytical auditor detects the hybrid signature.
-    constraint_indexing:constraint_classification(portugal_polarization_threshold_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(portugal_polarization_threshold_2026, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(portugal_polarization_threshold_2026_tests).
 

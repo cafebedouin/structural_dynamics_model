@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(denmark_asylum_outsourcing, rope,
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % The high base extraction and suppression, combined with a genuine beneficiary,
 % points unambiguously to a Tangled Rope.
-constraint_indexing:constraint_classification(denmark_asylum_outsourcing, tangled_rope,
+constraint_indexing:constraint_classification(denmark_asylum_outsourcing, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(denmark_asylum_outsourcing, tangle
 % Its exit is constrained, as it cannot easily expel Denmark or ignore the precedent.
 % The derived `d` is higher than the beneficiary's, revealing the tension.
 % victim membership + institutional power + constrained exit → intermediate d → intermediate χ
-constraint_indexing:constraint_classification(denmark_asylum_outsourcing, tangled_rope,
+constraint_indexing:constraint_classification(denmark_asylum_outsourcing, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

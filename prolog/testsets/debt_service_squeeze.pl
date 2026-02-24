@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(debt_service_squeeze, rope,
 % this is a Tangled Rope. The high χ value (0.94) places it at the very edge
 % of the Tangled Rope/Snare boundary, indicating the extractive function
 % is currently dominating the coordination function.
-constraint_indexing:constraint_classification(debt_service_squeeze, tangled_rope,
+constraint_indexing:constraint_classification(debt_service_squeeze, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -175,7 +175,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification) :-
     % Verify the analytical perspective resolves to Tangled Rope.
-    constraint_indexing:constraint_classification(debt_service_squeeze, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(debt_service_squeeze, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify base extractiveness and suppression are in the high-extraction range.

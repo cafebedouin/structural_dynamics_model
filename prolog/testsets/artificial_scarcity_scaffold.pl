@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(artificial_scarcity_scaffold, resource_cons
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % To the powerless agent, the high cost and lack of choice feel like a predatory trap.
 % χ = 0.48 * 1.5 (powerless) * 1.0 (national) = 0.72, which is a Snare (>= 0.66).
-constraint_indexing:constraint_classification(artificial_scarcity_scaffold, snare,
+constraint_indexing:constraint_classification(artificial_scarcity_scaffold, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(artificial_scarcity_scaffold, snar
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The institution views this as a vital coordination Rope for systemic stability.
 % χ = 0.48 * -0.2 (institutional) * 1.2 (global) = -0.115, which is a Rope.
-constraint_indexing:constraint_classification(artificial_scarcity_scaffold, rope,
+constraint_indexing:constraint_classification(artificial_scarcity_scaffold, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

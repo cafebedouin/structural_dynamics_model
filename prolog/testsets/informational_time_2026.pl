@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(informational_time_2026, rope,
 % PERSPECTIVE 3: THE RECORDING COSMOS (MOUNTAIN)
 % From the view of fundamental reality, informational imprinting is a 
 % Mountain: an irreducible physical limit from which spacetime geometry emerges.
-constraint_indexing:constraint_classification(informational_time_2026, tangled_rope,
+constraint_indexing:constraint_classification(informational_time_2026, snare,
     context(agent_power(analytical),
             time_horizon(universal),
             exit_options(analytical),

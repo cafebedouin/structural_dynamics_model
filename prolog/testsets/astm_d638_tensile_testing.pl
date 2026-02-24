@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(astm_d638_tensile_testing, innovative_non_s
 % The high suppression score and enforcement make this a Snare, despite low ε.
 % It feels like a Mountain (immutable rules), but is structurally a Snare
 % because it's a human-made system that traps participants via certification.
-constraint_indexing:constraint_classification(astm_d638_tensile_testing, snare,
+constraint_indexing:constraint_classification(astm_d638_tensile_testing, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(astm_d638_tensile_testing, rope,
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(astm_d638_tensile_testing, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(astm_d638_tensile_testing, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(astm_d638_tensile_testing, rope, context(agent_power(institutional), _, _, _)).
 
 test(low_extractiveness_check) :-

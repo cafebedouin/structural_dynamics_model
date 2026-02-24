@@ -134,7 +134,7 @@ narrative_ontology:coordination_type(bgs_eigenvector_thermalization, information
 % exceptions to ETH" to pass peer review. Powerless relative to the
 % mainstream consensus, trapped by funding and publication norms.
 % High d (victim), trapped exit -> High Chi -> Snare.
-constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, snare,
+constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, ta
 :- begin_tests(bgs_eigenvector_thermalization_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, rope, context(agent_power(institutional), _, _, _)).
 
 test(tangled_rope_gate) :-

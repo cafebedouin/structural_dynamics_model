@@ -114,7 +114,7 @@ narrative_ontology:constraint_victim(ai_adoption_stigma, non_technical_knowledge
 % From the perspective of an employee fearing replacement, the stigma is a
 % coercive trap that forces them into a high-risk, low-reward situation.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(ai_adoption_stigma, snare,
+constraint_indexing:constraint_classification(ai_adoption_stigma, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(ai_adoption_stigma, rope,
 % technology into the economy) AND the highly asymmetric extraction (transferring
 % risk to workers). The presence of beneficiaries, victims, and active enforcement
 % makes this a canonical Tangled Rope.
-constraint_indexing:constraint_classification(ai_adoption_stigma, tangled_rope,
+constraint_indexing:constraint_classification(ai_adoption_stigma, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -155,7 +155,7 @@ test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
         context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(ai_adoption_stigma, tangled_rope,
+    constraint_indexing:constraint_classification(ai_adoption_stigma, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-

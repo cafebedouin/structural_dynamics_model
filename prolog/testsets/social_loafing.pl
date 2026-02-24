@@ -97,7 +97,7 @@ narrative_ontology:constraint_victim(social_loafing, the_organization).
 % PERSPECTIVE 1: THE DILIGENT CONTRIBUTOR (SNARE)
 % For the high-performer, the system is a trap that extracts their uncredited
 % labor to compensate for others, strangling their individual potential.
-constraint_indexing:constraint_classification(social_loafing, snare,
+constraint_indexing:constraint_classification(social_loafing, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

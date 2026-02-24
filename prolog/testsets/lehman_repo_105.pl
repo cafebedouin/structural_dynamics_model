@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(lehman_repo_105, rope,
 % function (for the beneficiaries) but is coupled with severe asymmetric
 % extraction from victims and requires active enforcement (legal opinions)
 % to maintain its structure.
-constraint_indexing:constraint_classification(lehman_repo_105, tangled_rope,
+constraint_indexing:constraint_classification(lehman_repo_105, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

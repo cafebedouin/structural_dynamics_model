@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(financial_drag, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid signature of coordination intent (Rope)
 % masking deep, structural extraction of real-world value (Snare).
-constraint_indexing:constraint_classification(financial_drag, tangled_rope,
+constraint_indexing:constraint_classification(financial_drag, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, rope,
 % Sees the full picture: a coordination function with a cost, but critically,
 % a temporary and reversible structure designed to rebuild capacity. The
 % 'has_sunset_clause' flag is key to this classification.
-constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, scaffold,
+constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, scaffo
 % research strength) that is politically necessary but also reversible.
 % Exit is 'constrained' by domestic political pressure from the academic sector.
 % beneficiary + constrained -> d≈0.25, f(d)≈0.15.
-constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, scaffold,
+constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, scaffo
 % strengthens the overall coordination network. Their exit option is 'arbitrage'
 % as the program functions well with or without the UK.
 % beneficiary + arbitrage -> d≈0.05, f(d)≈-0.12.
-constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, rope,
+constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

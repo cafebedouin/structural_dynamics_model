@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(cia_fbi_legal_wall, rope,
 % Retrospectively, the Wall is a classic Tangled Rope. It had a genuine
 % coordination function (beneficiary exists) but also produced severe asymmetric
 % extraction (victim exists) and required active enforcement.
-constraint_indexing:constraint_classification(cia_fbi_legal_wall, tangled_rope,
+constraint_indexing:constraint_classification(cia_fbi_legal_wall, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -135,7 +135,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_analytical_view) :-
     % Verify the analytical observer correctly identifies it as a Tangled Rope.
-    constraint_indexing:constraint_classification(cia_fbi_legal_wall, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cia_fbi_legal_wall, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify the base extraction is high enough to warrant Snare/Tangled Rope classification.

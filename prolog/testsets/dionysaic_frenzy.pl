@@ -99,7 +99,7 @@ narrative_ontology:constraint_victim(dionysiac_frenzy, theban_women).
 % The high base extraction (0.8) is amplified by their powerlessness (π=1.5),
 % resulting in a massive effective extraction (χ = 0.8 * 1.5 * 0.9 = 1.08).
 % It feels like a Mountain, but its high extraction makes it a Snare.
-constraint_indexing:constraint_classification(dionysiac_frenzy, snare,
+constraint_indexing:constraint_classification(dionysiac_frenzy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(dionysiac_frenzy, rope,
 % and the severe asymmetric extraction (mortals suffer for the god's glory).
 % It requires active enforcement by Dionysus. This combination of coordination,
 % extraction, and enforcement is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(dionysiac_frenzy, tangled_rope,
+constraint_indexing:constraint_classification(dionysiac_frenzy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -141,7 +141,7 @@ test(perspectival_gap) :-
     TypeInstitutional == rope.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(dionysiac_frenzy, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(dionysiac_frenzy, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     narrative_ontology:constraint_metric(dionysiac_frenzy, extractiveness, E),

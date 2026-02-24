@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(platform_app_store_duopoly, national_regula
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % App developers who are forced to use the platform's systems. Engine derives d
 % from victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(platform_app_store_duopoly, snare,
+constraint_indexing:constraint_classification(platform_app_store_duopoly, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(platform_app_store_duopoly, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Sees both the genuine coordination function and the asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(platform_app_store_duopoly, tangled_rope,
+constraint_indexing:constraint_classification(platform_app_store_duopoly, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(platform_app_store_duopoly, tangle
 % National regulators attempting to break the duopoly. They are an institutional
 % power, but their exit options are constrained by the global nature of the
 % platforms. They are structurally opposed to the constraint.
-constraint_indexing:constraint_classification(platform_app_store_duopoly, tangled_rope,
+constraint_indexing:constraint_classification(platform_app_store_duopoly, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -171,7 +171,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Ensure the analytical view correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(platform_app_store_duopoly, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(platform_app_store_duopoly, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify that all three conditions for a Tangled Rope are met.

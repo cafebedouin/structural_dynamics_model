@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(cartel_drone_surveillance_el_paso,
 % mandate to patrol the border, unlike the cartel's 'arbitrage' exit.
 % Engine derives d from:
 %  victim membership + constrained exit → d ≈ 0.6-0.7 → f(d) ≈ 0.9-1.1 → high χ
-constraint_indexing:constraint_classification(cartel_drone_surveillance_el_paso, snare,
+constraint_indexing:constraint_classification(cartel_drone_surveillance_el_paso, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

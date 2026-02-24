@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(self_surpassing, the_higher_man).
 % To the "hop-flea" of the earth who wants only comfort, the demand for
 % greatness is an incomprehensible, immutable feature of a world he rejects.
 % It is a Mountain whose heights he has no desire to scale.
-constraint_indexing:constraint_classification(self_surpassing, mountain,
+constraint_indexing:constraint_classification(self_surpassing, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(self_surpassing, rope,
 % suppression (S=0.7), a clear coordination function (beneficiary exists),
 % asymmetric extraction (victim exists), and active enforcement. This is the
 % canonical definition of a Tangled Rope.
-constraint_indexing:constraint_classification(self_surpassing, tangled_rope,
+constraint_indexing:constraint_classification(self_surpassing, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -140,16 +140,14 @@ constraint_indexing:constraint_classification(self_surpassing, snare,
 :- begin_tests(self_surpassing_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(self_surpassing, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(self_surpassing, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(self_surpassing, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(self_surpassing, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(self_surpassing, snare, context(agent_power(analytical), _, _, _)),
     constraint_indexing:constraint_classification(self_surpassing, snare, context(agent_power(powerful), _, _, _)).
 
 test(tangled_rope_detection) :-
     % The analytical view must be Tangled Rope due to high extraction + coordination function.
-    constraint_indexing:constraint_classification(self_surpassing, tangled_rope, context(agent_power(analytical), _, _, _)).
-
-test(extraction_threshold) :-
+    con    constraint_indexing:constraint_classification(self_surpassing, snare, context(agent_power(analytical), _, _, _))(extraction_threshold) :-
     domain_priors:base_extractiveness(self_surpassing, Score),
     Score >= 0.46.
 

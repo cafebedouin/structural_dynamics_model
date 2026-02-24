@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(epigenetics_complexity_2026, mount
 % For the scientist, epigenetics is a "Rope"—a functional coordination
 % mechanism that allows them to explain the complexity of evolution
 % beyond simple protein-coding genes. It's a tool for understanding.
-constraint_indexing:constraint_classification(epigenetics_complexity_2026, rope,
+constraint_indexing:constraint_classification(epigenetics_complexity_2026, mountain,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(mobile),
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(epigenetics_complexity_2026, mount
 test(perspectival_gap_biologist_vs_organism) :-
     % Verify the key perspectival gap: the biologist sees a Rope (explanatory tool),
     % while the organism and analyst see a Mountain (immutable reality).
-    constraint_indexing:constraint_classification(epigenetics_complexity_2026, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(epigenetics_complexity_2026, mountain, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(epigenetics_complexity_2026, mountain, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(epigenetics_complexity_2026, mountain, context(agent_power(analytical), _, _, _)).
 

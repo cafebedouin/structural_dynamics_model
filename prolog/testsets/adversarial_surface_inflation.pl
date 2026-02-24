@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(adversarial_surface_inflation, rop
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.84) and active enforcement masking as essential coordination.
 % Engine derives d ≈ 0.72 for analytical perspective.
-constraint_indexing:constraint_classification(adversarial_surface_inflation, tangled_rope,
+constraint_indexing:constraint_classification(adversarial_surface_inflation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -165,7 +165,7 @@ test(perspectival_gap) :-
     % Verify Snare for the powerless defender vs Rope for the institutional architect.
     constraint_indexing:constraint_classification(adversarial_surface_inflation, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(adversarial_surface_inflation, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(adversarial_surface_inflation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(adversarial_surface_inflation, snare, context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.89) correctly triggers the Piton classification.

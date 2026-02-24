@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(vns_implant_for_trd, healthcare_insurers_cm
 % creating a 'trapped' condition. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % This high effective extraction and high suppression make it a Snare.
-constraint_indexing:constraint_classification(vns_implant_for_trd, snare,
+constraint_indexing:constraint_classification(vns_implant_for_trd, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(vns_implant_for_trd, rope,
 % The observer sees both the coordination function and the asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ ≈ 0.55 * 1.15 * 1.2 ≈ 0.76. This, with high ε & suppression, is a Tangled Rope.
-constraint_indexing:constraint_classification(vns_implant_for_trd, tangled_rope,
+constraint_indexing:constraint_classification(vns_implant_for_trd, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(vns_implant_for_trd, tangled_rope,
 % constrained by its mandate to cover effective care. The engine derives a
 % mid-to-high d, leading to a Tangled Rope classification. It recognizes the
 % therapeutic coordination but is subjected to the high extraction.
-constraint_indexing:constraint_classification(vns_implant_for_trd, tangled_rope,
+constraint_indexing:constraint_classification(vns_implant_for_trd, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -186,7 +186,7 @@ test(perspectival_gap_target_beneficiary) :-
     constraint_indexing:constraint_classification(vns_implant_for_trd, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(vns_implant_for_trd, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(vns_implant_for_trd, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_victim_is_tangled_rope) :-
     % Verifies that the institutional victim (insurer) also sees a Tangled Rope, distinct from the beneficiary's Rope.

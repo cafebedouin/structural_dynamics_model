@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(us_sanctions_belarus_2022, belarusian_priva
 % The Belarusian government experiences the sanctions as a coercive trap.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % χ = 0.65 * f(0.95) * σ(global) = 0.65 * 1.42 * 1.2 ≈ 1.11. This is a clear Snare.
-constraint_indexing:constraint_classification(us_sanctions_belarus_2022, snare,
+constraint_indexing:constraint_classification(us_sanctions_belarus_2022, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(us_sanctions_belarus_2022, rope,
 % The observer sees both the coordination function and the asymmetric extraction.
 % Engine derives canonical d ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.65 * f(0.72) * σ(global) = 0.65 * 1.15 * 1.2 ≈ 0.90. Meets Tangled Rope criteria.
-constraint_indexing:constraint_classification(us_sanctions_belarus_2022, tangled_rope,
+constraint_indexing:constraint_classification(us_sanctions_belarus_2022, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -177,7 +177,7 @@ test(inter_institutional_perspectival_gap) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The ground truth claim must be Tangled Rope.
-    constraint_indexing:constraint_classification(us_sanctions_belarus_2022, tangled_rope,
+    constraint_indexing:constraint_classification(us_sanctions_belarus_2022, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-

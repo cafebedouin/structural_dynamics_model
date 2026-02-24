@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(project_vault_2026, manufacturers).
 % PERSPECTIVE 1: THE MANUFACTURER (SNARE)
 % Effective Extraction: 0.55 * 1.5 (powerless) * 1.2 (global) = 0.99.
 % At χ ≈ 1.0, the manufacturer is in a state of total extraction/captivity.
-constraint_indexing:constraint_classification(project_vault_2026, snare, 
+constraint_indexing:constraint_classification(project_vault_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(project_vault_2026, scaffold,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Identifies the "Tangled Rope" transition as extraction intensifies.
-constraint_indexing:constraint_classification(project_vault_2026, tangled_rope,
+constraint_indexing:constraint_classification(project_vault_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(project_vault_2026, tangled_rope,
 
 test(extraction_paradox) :-
     % Verify that the same policy yields a Snare and a Scaffold based on power.
-    constraint_indexing:constraint_classification(project_vault_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(project_vault_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(project_vault_2026, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(scaffold_integrity) :-

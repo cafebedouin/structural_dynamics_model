@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(model_collapse_feedback_loop, rope
 % Detects high extraction (0.89) and suppression (0.77) masking as functional
 % scaling (Rope). The presence of beneficiaries, victims, and enforcement
 % confirms the Tangled Rope structure.
-constraint_indexing:constraint_classification(model_collapse_feedback_loop, tangled_rope,
+constraint_indexing:constraint_classification(model_collapse_feedback_loop, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -140,7 +140,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(model_collapse_feedback_loop, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(model_collapse_feedback_loop, tangled_rope,
+    constraint_indexing:constraint_classification(model_collapse_feedback_loop, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

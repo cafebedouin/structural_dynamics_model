@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(us_legal_standard_reasonable_doubt, targete
 % PERSPECTIVE 1: THE POWERLESS SUPPORTER (SNARE)
 % Experiences the legal system as a coercive, illegitimate force targeting
 % their political identity. Victim membership + trapped exit → d ≈ 0.95 → high χ.
-constraint_indexing:constraint_classification(us_legal_standard_reasonable_doubt, snare,
+constraint_indexing:constraint_classification(us_legal_standard_reasonable_doubt, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

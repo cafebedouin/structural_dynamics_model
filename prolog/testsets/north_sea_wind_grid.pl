@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(north_sea_wind_grid, snare,
 % PERSPECTIVE 2: TAXPAYERS OF MEMBER STATES (SECONDARY TARGET)
 % They bear the initial financial burden and are structurally powerless.
 % d is derived highest (victim + trapped exit). High χ → Snare.
-constraint_indexing:constraint_classification(north_sea_wind_grid, snare,
+constraint_indexing:constraint_classification(north_sea_wind_grid, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

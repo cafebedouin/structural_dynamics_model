@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(indian_ai_licensing_regime, indian_citizens
 % As a member of the 'victim' group with 'trapped' exit, the engine
 % derives a high d (≈0.95), leading to a high f(d) (≈1.42).
 % χ ≈ 0.48 * 1.42 * 1.0 (national) ≈ 0.68. This exceeds the Snare threshold (0.66).
-constraint_indexing:constraint_classification(indian_ai_licensing_regime, snare,
+constraint_indexing:constraint_classification(indian_ai_licensing_regime, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

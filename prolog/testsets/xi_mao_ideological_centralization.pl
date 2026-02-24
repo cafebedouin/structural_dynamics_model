@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(xi_mao_ideological_centralization,
 % For the mid-level enforcer, the system is a Tangled Rope. It provides a
 % path to power and resources (coordination) but also subjects them to
 % intense scrutiny and disciplinary inspection (extraction).
-constraint_indexing:constraint_classification(xi_mao_ideological_centralization, tangled_rope,
+constraint_indexing:constraint_classification(xi_mao_ideological_centralization, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),

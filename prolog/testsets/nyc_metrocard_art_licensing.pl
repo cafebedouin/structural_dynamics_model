@@ -137,7 +137,7 @@ narrative_ontology:constraint_victim(nyc_metrocard_art_licensing, artists).
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(nyc_metrocard_art_licensing, snare,
+constraint_indexing:constraint_classification(nyc_metrocard_art_licensing, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(average_is_over_2026, rope,
 % Analysts see a system with both a genuine coordination function (for the
 % elite) and severe asymmetric extraction (from the middle). This hybrid
 % nature, requiring active enforcement, defines a Tangled Rope.
-constraint_indexing:constraint_classification(average_is_over_2026, tangled_rope,
+constraint_indexing:constraint_classification(average_is_over_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -142,7 +142,7 @@ test(perspectival_gap) :-
 
 test(analytical_observer_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(average_is_over_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(average_is_over_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(extraction_threshold) :-
     domain_priors:base_extractiveness(average_is_over_2026, E),

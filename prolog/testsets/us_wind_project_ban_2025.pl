@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(us_wind_project_ban_2025, rope,
 % χ ≈ 0.75 * 1.15 * 1.2 = 1.035. While numerically high, the analytical
 % perspective has access to the structural flags (beneficiary, victim, enforcement)
 % which gates the classification to Tangled Rope.
-constraint_indexing:constraint_classification(us_wind_project_ban_2025, tangled_rope,
+constraint_indexing:constraint_classification(us_wind_project_ban_2025, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(us_wind_project_ban_2025, tangled_
 % Engine derives d from: no beneficiary/victim status + constrained exit -> falls back to power atom -> d ~ 0.5.
 % The judiciary sees both the state's claimed power to regulate (coordinate)
 % and the harm (extraction), classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(us_wind_project_ban_2025, tangled_rope,
+constraint_indexing:constraint_classification(us_wind_project_ban_2025, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -173,7 +173,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
 
 test(tangled_rope_analytical_classification) :-
     % Verify the analytical observer correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(us_wind_project_ban_2025, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_wind_project_ban_2025, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_are_met) :-
     % A constraint is only a Tangled Rope if it has both coordination and extraction, and requires enforcement.

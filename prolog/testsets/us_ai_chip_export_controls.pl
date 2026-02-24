@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(us_ai_chip_export_controls, rope,
 % The analytical view considers both the coordination function (beneficiary exists)
 % and the high asymmetric extraction (victim exists), alongside the requirement for
 % active enforcement. This combination is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(us_ai_chip_export_controls, tangled_rope,
+constraint_indexing:constraint_classification(us_ai_chip_export_controls, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(us_ai_chip_export_controls, tangle
 % insurmountable barrier to participation in cutting-edge AI development.
 % As a 'victim' with 'trapped' exit, the engine derives the highest possible
 % directionality, classifying this as a pure Snare.
-constraint_indexing:constraint_classification(us_ai_chip_export_controls, snare,
+constraint_indexing:constraint_classification(us_ai_chip_export_controls, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -190,7 +190,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The system's objective classification must be Tangled Rope.
-    constraint_indexing:constraint_classification(us_ai_chip_export_controls, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_ai_chip_export_controls, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_view_is_tangled_rope) :-
     % The constrained US industry also views it as a Tangled Rope, not a simple Rope.

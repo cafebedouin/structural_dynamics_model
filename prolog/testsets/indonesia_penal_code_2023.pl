@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(indonesia_penal_code_2023, foreign_tourism_
 % An ordinary Indonesian citizen subject to the morality clauses.
 % They are a declared victim with trapped exit. Engine derives d ≈ 0.95 -> f(d) ≈ 1.42.
 % χ = 0.75 * 1.42 * 1.0 (national) ≈ 1.065. High extraction, high suppression.
-constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare,
+constraint_indexing:constraint_classification(indonesia_penal_code_2023, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(indonesia_penal_code_2023, rope,
 % Sees both the coordination function for beneficiaries and the severe asymmetric
 % extraction from victims. Requires active enforcement. Canonical Tangled Rope.
 % Engine derives d ≈ 0.72 -> f(d) ≈ 1.15. Global scope amplifies χ.
-constraint_indexing:constraint_classification(indonesia_penal_code_2023, tangled_rope,
+constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -170,12 +170,12 @@ constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare,
 
 test(perspectival_gap_target_vs_beneficiary) :-
     % Verify the core perspectival gap.
-    constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(indonesia_penal_code_2023, naturalized, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(indonesia_penal_code_2023, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-
     % Ensure the analytical view correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(indonesia_penal_code_2023, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_and_suppression_thresholds) :-
     % Verify the base metrics are in the Snare/Tangled Rope range.

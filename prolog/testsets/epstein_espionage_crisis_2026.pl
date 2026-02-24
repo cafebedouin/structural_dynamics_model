@@ -90,7 +90,7 @@ narrative_ontology:coordination_vitality(epstein_espionage_2026, degrading).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the UK public, the withholding of vetting files is a Snare: an 
 % opaque institutional trap that prevents accountability for network ties.
-constraint_indexing:constraint_classification(epstein_espionage_2026, snare, 
+constraint_indexing:constraint_classification(epstein_espionage_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(epstein_espionage_2026, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The Starmer government views vetting secrecy as a Rope: essential 
 % coordination for national security and the protection of intelligence assets.
-constraint_indexing:constraint_classification(epstein_espionage_2026, rope, 
+constraint_indexing:constraint_classification(epstein_espionage_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(historical), 
             exit_options(mobile), 
@@ -122,8 +122,8 @@ constraint_indexing:constraint_classification(epstein_espionage_2026, piton,
 :- begin_tests(epstein_starmer_2026_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(epstein_espionage_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(epstein_espionage_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(epstein_espionage_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(epstein_espionage_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_threshold) :-
     domain_priors:theater_ratio(epstein_espionage_2026, TR),

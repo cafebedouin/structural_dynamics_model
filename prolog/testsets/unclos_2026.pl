@@ -109,7 +109,7 @@ narrative_ontology:constraint_victim(unclos_2026, maritime_unilateralists). % Po
 
 constraint_indexing:constraint_classification(
     unclos_2026,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(biographical),
@@ -269,7 +269,7 @@ narrative_ontology:constraint_metric(unclos_2026, theater_ratio, 0.14).
 % --- Analytical perspective classification (missing) ---
 % chi = 0.3 * 1.15 (analytical) * 1.2 (global) = 0.414
 % Classification: rope
-constraint_indexing:constraint_classification(unclos_2026, rope,
+constraint_indexing:constraint_classification(unclos_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

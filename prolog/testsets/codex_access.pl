@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(codex_access, dependent_developers).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % High extraction felt as a predatory trap due to dependency and high switching costs.
-constraint_indexing:constraint_classification(codex_access, snare,
+constraint_indexing:constraint_classification(codex_access, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(codex_access, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED_ROPE)
 % Default analytical context (civilizational/analytical/global).
 % Recognizes both the coordination function and the asymmetric extraction.
-constraint_indexing:constraint_classification(codex_access, tangled_rope,
+constraint_indexing:constraint_classification(codex_access, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(threshold_validation_high_extraction) :-
 
 test(tangled_rope_conditions_met) :-
     % Verify the analytical observer sees a tangled_rope
-    constraint_indexing:constraint_classification(codex_access, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(codex_access, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(codex_access_tests).
 

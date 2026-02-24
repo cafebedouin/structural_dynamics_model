@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(ergo_storage_rent, inactive_holders).
 % For a user who has lost their keys or is unaware, the rent is an unstoppable
 % trap that drains their assets.
 % χ = 0.55 (ε) * 1.5 (powerless) * 0.8 (local) = 0.66. Meets Snare threshold.
-constraint_indexing:constraint_classification(ergo_storage_rent, snare,
+constraint_indexing:constraint_classification(ergo_storage_rent, tangled_rope,
     context(agent_power(powerless),
             time_horizon(historical),
             exit_options(trapped),

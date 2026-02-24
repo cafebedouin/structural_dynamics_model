@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(neural_interoperability, bci_users).
 % for translation creates a trap. Their innermost thoughts are processed by a
 % system they don't control.
 % χ = 0.85 (ε) * 1.5 (powerless) * 0.8 (local) = 1.02. This is a definitive Snare.
-constraint_indexing:constraint_classification(neural_interoperability, snare,
+constraint_indexing:constraint_classification(neural_interoperability, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

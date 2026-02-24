@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(us_military_recruitment_advertising, young_
 % NOTE: Per "Dynamic Coalition" extension, this agent's power may be
 % upgraded to 'organized' if the constraint is a snare with a critical
 % mass of victims, potentially changing the classification.
-constraint_indexing:constraint_classification(us_military_recruitment_advertising, snare,
+constraint_indexing:constraint_classification(us_military_recruitment_advertising, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(us_military_recruitment_advertisin
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(us_military_recruitment_advertising, tangled_rope,
+constraint_indexing:constraint_classification(us_military_recruitment_advertising, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

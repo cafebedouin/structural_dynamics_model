@@ -85,7 +85,7 @@ narrative_ontology:constraint_victim(net_zero_stabilization, legacy_carbon_emitt
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For legacy emitters, the rule is a Snare that extracts their ability to operate without costly removals.
-constraint_indexing:constraint_classification(net_zero_stabilization, snare,
+constraint_indexing:constraint_classification(net_zero_stabilization, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

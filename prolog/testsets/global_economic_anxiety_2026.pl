@@ -90,7 +90,7 @@ narrative_ontology:coordination_vitality(global_economic_anxiety_2026, degrading
 % PERSPECTIVE 1: THE YOUTH (SNARE)
 % For adults aged 15-34, the economy is a Snare—a trap where they feel 
 % locked out of prosperity despite national growth headlines.
-constraint_indexing:constraint_classification(global_economic_anxiety_2026, snare, 
+constraint_indexing:constraint_classification(global_economic_anxiety_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(global_economic_anxiety_2026, snar
 % PERSPECTIVE 2: THE INSTITUTION (ROPE)
 % Leaders view GDP and standard economic indicators as a Rope—the essential 
 % coordination tools for managing national progress.
-constraint_indexing:constraint_classification(global_economic_anxiety_2026, rope, 
+constraint_indexing:constraint_classification(global_economic_anxiety_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -121,8 +121,8 @@ constraint_indexing:constraint_classification(global_economic_anxiety_2026, pito
 :- begin_tests(global_economic_anxiety_2026_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(global_economic_anxiety_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(global_economic_anxiety_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(global_economic_anxiety_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(global_economic_anxiety_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(perception_over_performance) :-
     domain_priors:theater_ratio(global_economic_anxiety_2026, TR),

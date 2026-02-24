@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification('26usc469_real_estate_exemption', 
 % For the full-time professional, the rule is a Rope. It is a clear, functional
 % pathway to classifying themselves as "active" and unlocking significant tax
 % benefits by deducting paper losses against their income.
-constraint_indexing:constraint_classification('26usc469_real_estate_exemption', rope,
+constraint_indexing:constraint_classification('26usc469_real_estate_exemption', snare,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(mobile),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification('26usc469_real_estate_exemption', 
 % The analyst sees both the coordination function (a clear rule for the IRS and
 % full-time professionals) and the asymmetric extraction (disallowing losses for
 % a specific, trapped group). This dual nature is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification('26usc469_real_estate_exemption', tangled_rope,
+constraint_indexing:constraint_classification('26usc469_real_estate_exemption', snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

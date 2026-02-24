@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(doomsday_clock_framework, aspirant_nuclear_
 % Bears the cost of defense spending and existential dread with no agency.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.2 (global scope) ≈ 0.94. This is a clear Snare (χ ≥ 0.66).
-constraint_indexing:constraint_classification(doomsday_clock_framework, snare,
+constraint_indexing:constraint_classification(doomsday_clock_framework, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(doomsday_clock_framework, rope,
 % Sees both the vital coordination function and the massive extraction.
 % Engine uses canonical d for analytical ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.55 * 1.15 * 1.2 ≈ 0.76. This is a Tangled Rope (0.40 ≤ χ ≤ 0.90).
-constraint_indexing:constraint_classification(doomsday_clock_framework, tangled_rope,
+constraint_indexing:constraint_classification(doomsday_clock_framework, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -169,7 +169,7 @@ test(perspectival_gap_target_vs_beneficiary, [nondet]) :-
     constraint_indexing:constraint_classification(doomsday_clock_framework, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_classification_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(doomsday_clock_framework, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(doomsday_clock_framework, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(doomsday_clock_framework, _),

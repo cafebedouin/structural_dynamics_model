@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(horizon_liability_contract, snare,
 % PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
 % Post Office & Fujitsu, who profited and enforced the system.
 % Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-constraint_indexing:constraint_classification(horizon_liability_contract, rope,
+constraint_indexing:constraint_classification(horizon_liability_contract, snare,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(horizon_liability_contract, rope,
 % system) and the actual function (asymmetric extraction), classifying it as a
 % Tangled Rope due to the high ε, suppression, and required enforcement.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-constraint_indexing:constraint_classification(horizon_liability_contract, tangled_rope,
+constraint_indexing:constraint_classification(horizon_liability_contract, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(horizon_liability_contract, tangle
 % ambiguous: it benefits from a "profitable" entity but is politically trapped
 % by the scandal. Its exit is constrained. We use a directionality override
 % to capture this conflicted state, where it is both beneficiary and victim.
-constraint_indexing:constraint_classification(horizon_liability_contract, tangled_rope,
+constraint_indexing:constraint_classification(horizon_liability_contract, snare,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -175,7 +175,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view must correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(horizon_liability_contract, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(horizon_liability_contract, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify all three conditions for Tangled Rope classification are declared.

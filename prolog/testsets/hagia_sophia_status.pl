@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(hagia_sophia_status, orthodox_christians_an
 % extractive and coercive. They are victims with no internal recourse (trapped).
 % Engine derives d from: victim + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.48 * 1.42 * 1.0 (national) = 0.68. This meets the Snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(hagia_sophia_status, snare,
+constraint_indexing:constraint_classification(hagia_sophia_status, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),

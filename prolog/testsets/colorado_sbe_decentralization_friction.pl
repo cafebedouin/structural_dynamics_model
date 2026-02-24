@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(colorado_sbe_decentralization_fric
 % The system is a Tangled Rope. It has a genuine coordination function
 % (benefiting legacy districts) but also imposes asymmetric extraction on
 % innovators (victims) and requires active enforcement to maintain.
-constraint_indexing:constraint_classification(colorado_sbe_decentralization_friction, tangled_rope,
+constraint_indexing:constraint_classification(colorado_sbe_decentralization_friction, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -133,7 +133,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_detection) :-
     % The analytical observer must see the hybrid nature of the constraint.
-    constraint_indexing:constraint_classification(colorado_sbe_decentralization_friction, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(colorado_sbe_decentralization_friction, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify the base extraction meets the high-extraction criteria.

@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(cbdc_implementation, rope,
 % The analyst sees a system with a genuine coordination function (payment
 % efficiency) but also with deeply embedded, asymmetric extraction and high
 % enforcement. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(cbdc_implementation, tangled_rope,
+constraint_indexing:constraint_classification(cbdc_implementation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(newtons_method_convergence, mounta
 % For the developer, the method is a tool—a highly efficient "Rope" for
 % coordination (finding a root) that can be swapped out for other methods
 % (like Bisection) if its preconditions aren't met.
-constraint_indexing:constraint_classification(newtons_method_convergence, rope,
+constraint_indexing:constraint_classification(newtons_method_convergence, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

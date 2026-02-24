@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(metamorphosis_samsa, gregor_samsa).
 % For Gregor, the transformation is an absolute, unchangeable physical fact.
 % It has zero degrees of freedom, making it a Mountain from his trapped perspective.
 % His powerlessness (π=1.5) and local scope (σ=0.8) yield χ = 0.8 * 1.5 * 0.8 = 0.96.
-constraint_indexing:constraint_classification(metamorphosis_samsa, mountain,
+constraint_indexing:constraint_classification(metamorphosis_samsa, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(metamorphosis_samsa, mountain,
 % Institutional power (π=-0.2) makes extraction feel negligible or even beneficial.
 % χ = 0.8 * -0.2 * 1.0 = -0.16 (perceived as a net benefit/necessary cost).
 % The system classifies as Snare based on base metrics, despite the negative chi.
-constraint_indexing:constraint_classification(metamorphosis_samsa, snare,
+constraint_indexing:constraint_classification(metamorphosis_samsa, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(mobile),

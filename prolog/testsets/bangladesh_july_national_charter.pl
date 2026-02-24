@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(bangladesh_july_national_charter, ordinary_
 % PERSPECTIVE 1: THE DISENFRANCHISED VOTER (SNARE)
 % For supporters of the banned Awami League or those wary of the "Yes" campaign, 
 % the charter is a Snare that traps the nation's future in an un-vetted document.
-constraint_indexing:constraint_classification(bangladesh_july_national_charter, snare, 
+constraint_indexing:constraint_classification(bangladesh_july_national_charter, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(bangladesh_july_national_charter, 
 % PERSPECTIVE 2: THE REFORM ALLIANCE (ROPE)
 % For the Jamaat-e-Islami and NCP, the Charter is a Rope (coordination) that 
 % prevents the return of "neo-fascism" and the BNP/Awami League duopoly.
-constraint_indexing:constraint_classification(bangladesh_july_national_charter, rope, 
+constraint_indexing:constraint_classification(bangladesh_july_national_charter, scaffold, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -130,8 +130,8 @@ constraint_indexing:constraint_classification(bangladesh_july_national_charter, 
 
 test(perspectival_gap) :-
     % Verify the Charter is a Snare for the powerless but a Rope for the institutional players.
-    constraint_indexing:constraint_classification(bangladesh_july_national_charter, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(bangladesh_july_national_charter, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(bangladesh_july_national_charter, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(bangladesh_july_national_charter, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(threshold_validation) :-
     domain_priors:base_extractiveness(bangladesh_july_national_charter, E),

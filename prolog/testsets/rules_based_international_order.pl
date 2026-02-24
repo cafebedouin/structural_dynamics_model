@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(rules_based_international_order, r
 % The analyst sees both the genuine coordination function (beneficiary exists)
 % and the asymmetric extraction (victim exists), maintained by active enforcement.
 % This is the canonical definition of a Tangled Rope.
-constraint_indexing:constraint_classification(rules_based_international_order, tangled_rope,
+constraint_indexing:constraint_classification(rules_based_international_order, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

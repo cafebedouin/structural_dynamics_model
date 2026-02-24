@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(brazil_mexico_financial_requiremen
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15. χ remains high. The presence of
 % both a coordination function (beneficiary) and asymmetric extraction (victim)
 % with active enforcement qualifies it as a Tangled Rope.
-constraint_indexing:constraint_classification(brazil_mexico_financial_requirement, tangled_rope,
+constraint_indexing:constraint_classification(brazil_mexico_financial_requirement, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

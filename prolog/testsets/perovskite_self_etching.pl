@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(perovskite_self_etching, perovskite_device_
 % Traditional lithography is a trap that damages soft materials and consumes
 % research budgets, with no viable exit.
 % χ = 0.52 * 1.5 (powerless) * 0.8 (local) = 0.624
-constraint_indexing:constraint_classification(perovskite_self_etching, snare,
+constraint_indexing:constraint_classification(perovskite_self_etching, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(perovskite_self_etching, snare,
 % good. The negative effective extraction reflects the immense profits and
 % subsidies that make the constraint beneficial to them.
 % χ = 0.52 * -0.2 (institutional) * 1.2 (global) = -0.1248
-constraint_indexing:constraint_classification(perovskite_self_etching, rope,
+constraint_indexing:constraint_classification(perovskite_self_etching, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(perovskite_self_etching, rope,
 % the wider semiconductor industry and the asymmetric extraction imposed on
 % emerging material scientists.
 % χ = 0.52 * 1.15 (analytical) * 1.2 (global) = 0.7176
-constraint_indexing:constraint_classification(perovskite_self_etching, tangled_rope,
+constraint_indexing:constraint_classification(perovskite_self_etching, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,12 +138,12 @@ constraint_indexing:constraint_classification(perovskite_self_etching, scaffold,
 
 test(perspectival_gap_subject_beneficiary) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institutional beneficiary.
-    constraint_indexing:constraint_classification(perovskite_self_etching, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(perovskite_self_etching, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(perovskite_self_etching, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(perovskite_self_etching, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the gap into a Tangled Rope.
-    constraint_indexing:constraint_classification(perovskite_self_etching, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(perovskite_self_etching, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_for_snare) :-
     domain_priors:base_extractiveness(perovskite_self_etching, E),

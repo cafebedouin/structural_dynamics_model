@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(systemic_blindspot, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid signature of high coordination efficiency (Rope)
 % masking predatory, unpriced risk accumulation (Snare).
-constraint_indexing:constraint_classification(systemic_blindspot, tangled_rope,
+constraint_indexing:constraint_classification(systemic_blindspot, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -142,7 +142,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(systemic_blindspot, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(systemic_blindspot, tangled_rope,
+    constraint_indexing:constraint_classification(systemic_blindspot, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_audit_logic) :-

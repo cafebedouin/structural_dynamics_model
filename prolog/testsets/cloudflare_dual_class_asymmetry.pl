@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(cloudflare_dual_class_asymmetry, r
 % The system has a genuine coordination function (for founders) but also
 % imposes severe, asymmetric extraction (on public shareholders) and requires
 % active legal enforcement. This is the canonical signature of a Tangled Rope.
-constraint_indexing:constraint_classification(cloudflare_dual_class_asymmetry, tangled_rope,
+constraint_indexing:constraint_classification(cloudflare_dual_class_asymmetry, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the conflict as a Tangled Rope.
-    constraint_indexing:constraint_classification(cloudflare_dual_class_asymmetry, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cloudflare_dual_class_asymmetry, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify all three structural requirements for Tangled Rope are present.

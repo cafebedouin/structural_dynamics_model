@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(metabolic_constraint_cognition, ro
 % the severe, asymmetric extraction (from the victim), classifying it as a
 % Tangled Rope. This acknowledges the dual nature of exploiting a real
 % biological limit for systemic gain.
-constraint_indexing:constraint_classification(metabolic_constraint_cognition, tangled_rope,
+constraint_indexing:constraint_classification(metabolic_constraint_cognition, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -136,7 +136,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(metabolic_constraint_cognition, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(metabolic_constraint_cognition, tangled_rope,
+    constraint_indexing:constraint_classification(metabolic_constraint_cognition, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

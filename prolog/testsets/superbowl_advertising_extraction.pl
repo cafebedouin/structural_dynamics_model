@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(superbowl_advertising_extraction, large_cor
 % For a small business or startup, the multi-million dollar cost of entry is
 % an absolute, unchangeable barrier. It functions as a Mountain of economic
 % reality, completely foreclosing participation.
-constraint_indexing:constraint_classification(superbowl_advertising_extraction, mountain,
+constraint_indexing:constraint_classification(superbowl_advertising_extraction, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -149,7 +149,7 @@ narrative_ontology:coordination_vitality(corporate_social_responsibility_theater
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(corporate_social_responsibility_theater, snare,
+constraint_indexing:constraint_classification(corporate_social_responsibility_theater, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(corporate_social_responsibility_th
 % PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
 % Agent who benefits most. Engine derives d from:
 %   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(corporate_social_responsibility_theater, rope,
+constraint_indexing:constraint_classification(corporate_social_responsibility_theater, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -183,7 +183,7 @@ constraint_indexing:constraint_classification(corporate_social_responsibility_th
 % Example — Regulatory capture:
 %
 % Perspective 4A: Captured regulator (institutional, constrained exit)
-constraint_indexing:constraint_classification(corporate_social_responsibility_theater, rope,
+constraint_indexing:constraint_classification(corporate_social_responsibility_theater, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

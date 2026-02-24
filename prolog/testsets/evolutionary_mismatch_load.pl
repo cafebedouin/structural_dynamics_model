@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(evolutionary_mismatch_load, rope,
 % The analytical view recognizes both the coordination function (beneficiary)
 % and the severe asymmetric extraction (victim), classifying it as a Tangled Rope.
 % The high extraction (0.83) and suppression (0.70) confirm this.
-constraint_indexing:constraint_classification(evolutionary_mismatch_load, tangled_rope,
+constraint_indexing:constraint_classification(evolutionary_mismatch_load, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

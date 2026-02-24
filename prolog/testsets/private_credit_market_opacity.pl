@@ -131,7 +131,7 @@ narrative_ontology:constraint_victim(private_credit_market_opacity, public_finan
 % systemic crisis. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 %   χ = 0.55 * 1.42 * 1.2 (global) ≈ 0.94. This easily clears the Snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(private_credit_market_opacity, snare,
+constraint_indexing:constraint_classification(private_credit_market_opacity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(private_credit_market_opacity, sna
 % for generating high returns. Engine derives d from:
 %   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
 %   χ = 0.55 * -0.12 * 1.2 ≈ -0.08. This is a Rope.
-constraint_indexing:constraint_classification(private_credit_market_opacity, rope,
+constraint_indexing:constraint_classification(private_credit_market_opacity, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(private_credit_market_opacity, rop
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.55 * 1.15 * 1.2 ≈ 0.76. This is in the Tangled Rope/Snare range (0.40 ≤ χ ≤ 0.90).
 % Given the declared coordination function, it classifies as Tangled Rope.
-constraint_indexing:constraint_classification(private_credit_market_opacity, tangled_rope,
+constraint_indexing:constraint_classification(private_credit_market_opacity, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -100,8 +100,7 @@ Full mismatch data preserved in `outputs/claim_engine_mismatch_snapshot.json`.
 After reconciliation, regenerate downstream artifacts:
 
 ```bash
-make pipeline_output
-make enriched_pipeline
+python3 python/run_pipeline.py
 python3 python/tangled_gradient.py
 python3 python/chi_variance_decomposition.py
 python3 python/rope_dominant_spot_check.py

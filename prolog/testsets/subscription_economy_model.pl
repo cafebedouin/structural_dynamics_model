@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(subscription_economy_model, individual_cons
 % NOTE: Per "Dynamic Coalition" extension, a large enough group of consumers
 % could become 'organized', which would shift their power and potentially
 % the classification from their perspective.
-constraint_indexing:constraint_classification(subscription_economy_model, snare,
+constraint_indexing:constraint_classification(subscription_economy_model, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(subscription_economy_model, rope,
 % Calculation: χ = 0.52 * f(0.72) * σ(global) ≈ 0.52 * 1.15 * 1.2 ≈ 0.72
 % Meets Tangled Rope criteria: 0.40 ≤ χ ≤ 0.90, ε ≥ 0.30, s ≥ 0.40.
 % The system requires a beneficiary, victim, and enforcement, all of which are declared.
-constraint_indexing:constraint_classification(subscription_economy_model, tangled_rope,
+constraint_indexing:constraint_classification(subscription_economy_model, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -167,7 +167,7 @@ test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
     % Verify the analytical classification is Tangled Rope.
-    constraint_indexing:constraint_classification(subscription_economy_model, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(subscription_economy_model, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify that the structural requirements for a Tangled Rope are present.

@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(governance_latency_gap, rope,
 % The system correctly identifies a high-extraction (0.82) constraint with both
 % coordination (beneficiary) and asymmetric extraction (victim) functions,
 % requiring active (if slow) enforcement. This is a canonical Tangled Rope.
-constraint_indexing:constraint_classification(governance_latency_gap, tangled_rope,
+constraint_indexing:constraint_classification(governance_latency_gap, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -142,7 +142,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(governance_latency_gap, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(governance_latency_gap, tangled_rope,
+    constraint_indexing:constraint_classification(governance_latency_gap, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

@@ -130,7 +130,7 @@ narrative_ontology:constraint_victim(openclaw_data_lock_in, individual_openclaw_
 % and loss of autonomy make it feel like a pure trap.
 % Engine derives d from victim membership + trapped exit → d≈0.95 → f(d)≈1.42.
 % χ = 0.52 * 1.42 * 1.2 (global) ≈ 0.88, which is a Snare (χ ≥ 0.66).
-constraint_indexing:constraint_classification(openclaw_data_lock_in, snare,
+constraint_indexing:constraint_classification(openclaw_data_lock_in, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(openclaw_data_lock_in, rope,
 % extraction, and active enforcement through technological design.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.52 * 1.15 * 1.2 (global) ≈ 0.72, which is a Tangled Rope (0.40 ≤ χ ≤ 0.90).
-constraint_indexing:constraint_classification(openclaw_data_lock_in, tangled_rope,
+constraint_indexing:constraint_classification(openclaw_data_lock_in, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -172,7 +172,7 @@ test(perspectival_gap_user_vs_corp, [nondet]) :-
     constraint_indexing:constraint_classification(openclaw_data_lock_in, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(openclaw_data_lock_in, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(openclaw_data_lock_in, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_conditions_met) :-
     narrative_ontology:constraint_beneficiary(openclaw_data_lock_in, _),

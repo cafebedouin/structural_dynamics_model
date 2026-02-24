@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, ro
 % extraction. It recognizes that a system designed for coordination has,
 % under changed conditions, become primarily extractive. This is the
 % definition of a Tangled Rope.
-constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, tangled_rope,
+constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

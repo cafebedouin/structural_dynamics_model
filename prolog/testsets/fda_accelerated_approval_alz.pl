@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(fda_accelerated_approval_alz, public_payers
 % high effective extraction (χ ≈ 0.48 * 1.42 * 1.0 = 0.68). This high χ,
 % combined with high suppression, meets the Snare criteria. They experience a
 % high-cost, high-risk system with uncertain rewards.
-constraint_indexing:constraint_classification(fda_accelerated_approval_alz, snare,
+constraint_indexing:constraint_classification(fda_accelerated_approval_alz, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(fda_accelerated_approval_alz, rope
 % χ ≈ 0.48 * f(0.9) * 1.0 ≈ 0.48 * 1.37 ≈ 0.66. They see a highly extractive
 % system that strains their budget for questionable benefit, classifying it
 % as a Snare or, acknowledging the coordination goal, a Tangled Rope.
-constraint_indexing:constraint_classification(fda_accelerated_approval_alz, tangled_rope,
+constraint_indexing:constraint_classification(fda_accelerated_approval_alz, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

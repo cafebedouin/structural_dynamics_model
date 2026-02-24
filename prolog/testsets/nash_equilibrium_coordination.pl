@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(nash_equilibrium_coordination, collective_p
 % PERSPECTIVE 1: THE STRATEGIC ACTOR (MOUNTAIN)
 % For an individual shopkeeper or prisoner, the equilibrium is an unchangeable
 % fact of their environment. Deviating is irrational and costly.
-constraint_indexing:constraint_classification(nash_equilibrium_coordination, mountain,
+constraint_indexing:constraint_classification(nash_equilibrium_coordination, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

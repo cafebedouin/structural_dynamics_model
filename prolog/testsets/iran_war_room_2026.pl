@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(iran_war_room_2026, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % Analysts view the potential for regional escalation as a Mountain: 
 % an irreducible geopolitical limit that forces a rethinking of US calculations.
-constraint_indexing:constraint_classification(iran_war_room_2026, tangled_rope,
+constraint_indexing:constraint_classification(iran_war_room_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

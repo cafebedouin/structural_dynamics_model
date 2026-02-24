@@ -78,7 +78,7 @@ domain_priors:requires_active_enforcement(narcissistic_ego_maintenance).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % High extraction ($E=0.75$) felt as an emotional trap with limited exit.
-constraint_indexing:constraint_classification(narcissistic_ego_maintenance, snare, 
+constraint_indexing:constraint_classification(narcissistic_ego_maintenance, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -86,7 +86,7 @@ constraint_indexing:constraint_classification(narcissistic_ego_maintenance, snar
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The "Image" views this as necessary infrastructure for internal psychological coherence.
-constraint_indexing:constraint_classification(narcissistic_ego_maintenance, rope, 
+constraint_indexing:constraint_classification(narcissistic_ego_maintenance, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -109,8 +109,8 @@ constraint_indexing:constraint_classification(narcissistic_ego_maintenance, pito
 
 test(perspectival_gap) :-
     % Verify the Subject sees a Snare while the internal System sees a Rope.
-    constraint_indexing:constraint_classification(narcissistic_ego_maintenance, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(narcissistic_ego_maintenance, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(narcissistic_ego_maintenance, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(narcissistic_ego_maintenance, piton, context(agent_power(institutional), _, _, _)).
 
 test(extraction_threshold) :-
     domain_priors:base_extractiveness(narcissistic_ego_maintenance, E),

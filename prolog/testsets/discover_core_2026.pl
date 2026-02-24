@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(discover_core_2026, international_digital_p
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % International publishers view the update as a Snare that traps their
 % business model. χ = 0.58 * 1.5 (powerless) * 1.2 (global) = 1.044.
-constraint_indexing:constraint_classification(discover_core_2026, snare,
+constraint_indexing:constraint_classification(discover_core_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(discover_core_2026, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Analysts see a Tangled Rope: Genuine quality improvements (coordination)
 % mixed with aggressive asymmetric extraction of publisher resources.
-constraint_indexing:constraint_classification(discover_core_2026, tangled_rope,
+constraint_indexing:constraint_classification(discover_core_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -135,7 +135,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the Tangled Rope.
-    constraint_indexing:constraint_classification(discover_core_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(discover_core_2026, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(discover_core_2026_tests).
 

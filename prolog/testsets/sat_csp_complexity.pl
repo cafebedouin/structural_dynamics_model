@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(sat_csp_complexity, embedded_systems_design
 % PERSPECTIVE 1: THE EMBEDDED SYSTEM (SNARE)
 % Agent who bears the most extraction. For a real-time system, the exponential
 % search time is a trap that can cause mission failure.
-constraint_indexing:constraint_classification(sat_csp_complexity, snare,
+constraint_indexing:constraint_classification(sat_csp_complexity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(sat_csp_complexity, tangled_rope,
 test(perspectival_gap) :-
     % Verify the core perspectival gap: Snare for the powerless, Rope for the
     % institutional, and Tangled Rope for the analytical observer.
-    constraint_indexing:constraint_classification(sat_csp_complexity, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(sat_csp_complexity, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(sat_csp_complexity, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(sat_csp_complexity, tangled_rope, context(agent_power(analytical), _, _, _)).
 

@@ -98,4 +98,4 @@ Each iteration calls the architect model (gemini-2.5-pro) with the full story JS
 
 ### Stale Batch Data Trade-off
 
-During iteration, `enhanced_report.py` re-runs the Prolog analysis stack fresh on the updated .pl file, but corpus-level batch data (enriched_pipeline.json, orbit_data.json) remains from the last `make quick` run. This is acceptable because core diagnostic signals (classification, drift, purity, coupling) come from per-constraint Prolog analysis, not corpus statistics. Running `make quick` during iteration would add ~60s per cycle.
+During iteration, `enhanced_report.py` re-runs the Prolog analysis stack fresh on the updated .pl file, but corpus-level batch data (enriched_pipeline.json, orbit_data.json) remains from the last `run_pipeline.py` run. This is acceptable because core diagnostic signals (classification, drift, purity, coupling) come from per-constraint Prolog analysis, not corpus statistics. Running `run_pipeline.py` during iteration would add ~60s per cycle.

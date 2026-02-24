@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(synthetic_data_feedback_loop, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the dual nature: a genuine coordination problem (data scaling)
 % solved via a mechanism with severe asymmetric extraction (liquidating the commons).
-constraint_indexing:constraint_classification(synthetic_data_feedback_loop, tangled_rope,
+constraint_indexing:constraint_classification(synthetic_data_feedback_loop, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -141,7 +141,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(synthetic_data_feedback_loop, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(synthetic_data_feedback_loop, tangled_rope,
+    constraint_indexing:constraint_classification(synthetic_data_feedback_loop, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

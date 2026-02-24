@@ -120,7 +120,7 @@ narrative_ontology:constraint_beneficiary(postman_survival_protocol, individual_
 % For the person adopting the protocol, it is a pure coordination tool (Rope).
 % It helps regularize personal behavior to gain agency and cope with external pressures.
 % The low extraction represents the cognitive overhead of adherence.
-constraint_indexing:constraint_classification(postman_survival_protocol, rope,
+constraint_indexing:constraint_classification(postman_survival_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(mobile),
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(postman_survival_protocol, rope,
 
 test(uniform_classification) :-
     % Verify this is a uniform-type constraint (Rope from all perspectives).
-    constraint_indexing:constraint_classification(postman_survival_protocol, rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(postman_survival_protocol, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(postman_survival_protocol, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(postman_survival_protocol, rope, context(agent_power(analytical), _, _, _)).
 

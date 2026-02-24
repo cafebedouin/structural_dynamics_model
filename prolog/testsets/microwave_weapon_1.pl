@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(microwave_weapon_1, other_nations).
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % High extraction felt as an immutable limit or predatory trap.
 % NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-constraint_indexing:constraint_classification(microwave_weapon_1, snare,
+constraint_indexing:constraint_classification(microwave_weapon_1, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(microwave_weapon_1, rope,
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
 % Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
-constraint_indexing:constraint_classification(microwave_weapon_1, tangled_rope,
+constraint_indexing:constraint_classification(microwave_weapon_1, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

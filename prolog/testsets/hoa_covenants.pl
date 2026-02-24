@@ -94,7 +94,7 @@ narrative_ontology:coordination_vitality(hoa_covenants, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The homeowner faces asymmetric power, fines, and high exit costs.
 % χ = 0.55 (ε) * 1.5 (π(powerless)) * 0.8 (σ(local)) = 0.66
-constraint_indexing:constraint_classification(hoa_covenants, snare,
+constraint_indexing:constraint_classification(hoa_covenants, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(hoa_covenants, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The HOA board sees the covenants as an essential coordination tool.
 % χ = 0.55 (ε) * -0.2 (π(institutional)) * 0.9 (σ(regional)) = -0.099 (felt as a net benefit)
-constraint_indexing:constraint_classification(hoa_covenants, rope,
+constraint_indexing:constraint_classification(hoa_covenants, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -127,8 +127,8 @@ constraint_indexing:constraint_classification(hoa_covenants, piton,
 
 test(perspectival_gap_snare_vs_rope, [nondet]) :-
     % Verify the homeowner sees a Snare while the board sees a Rope.
-    constraint_indexing:constraint_classification(hoa_covenants, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(hoa_covenants, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(hoa_covenants, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hoa_covenants, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_classification_requires_high_theater, [nondet]) :-
     % Verify the Piton classification is correctly conditioned on the theater_ratio.

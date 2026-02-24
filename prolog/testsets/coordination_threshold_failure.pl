@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(coordination_threshold_failure, sn
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The institution views this as a necessary Rope—a coordination ritual
 % that filters for high-conviction participants to ensure long-term stability.
-constraint_indexing:constraint_classification(coordination_threshold_failure, rope,
+constraint_indexing:constraint_classification(coordination_threshold_failure, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(coordination_threshold_failure, ro
 % The combination of a coordination function (beneficiary exists), asymmetric
 % extraction (victim exists), and active enforcement, alongside high base
 % extraction, yields a Tangled Rope classification.
-constraint_indexing:constraint_classification(coordination_threshold_failure, tangled_rope,
+constraint_indexing:constraint_classification(coordination_threshold_failure, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,7 +138,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(coordination_threshold_failure, tangled_rope,
+    constraint_indexing:constraint_classification(coordination_threshold_failure, snare,
         context(agent_power(analytical), _, _, _)).
 
 :- end_tests(coordination_threshold_failure_tests).

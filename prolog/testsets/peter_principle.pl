@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(peter_principle, organizational_efficiency_
 % unable to perform effectively but also unable to be demoted without severe
 % social and financial penalty. The system extracts their well-being and their
 % team's productivity.
-constraint_indexing:constraint_classification(peter_principle, snare,
+constraint_indexing:constraint_classification(peter_principle, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(peter_principle, rope,
 % and the severe asymmetric extraction (the Snare of promoting incompetence).
 % Because it has both functions and requires active enforcement through cultural
 % norms and HR policy, it is a Tangled Rope.
-constraint_indexing:constraint_classification(peter_principle, tangled_rope,
+constraint_indexing:constraint_classification(peter_principle, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -136,7 +136,7 @@ test(perspectival_gap) :-
     TypeInstitutional == rope.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(peter_principle, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(peter_principle, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),

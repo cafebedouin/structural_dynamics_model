@@ -85,7 +85,7 @@ narrative_ontology:constraint_victim(constitutional_consecration, secessionists)
 % For the soldier whose life is forfeit, the proposition is a fatal trap.
 % The effective extraction is total (χ = 0.60 * 1.5 * 0.8 = 0.72), far into Snare territory.
 % It feels like a Mountain because their agency is zero, but its constructed nature makes it a Snare.
-constraint_indexing:constraint_classification(constitutional_consecration, snare,
+constraint_indexing:constraint_classification(constitutional_consecration, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(constitutional_consecration, rope,
 % The observer sees both the coordination function (preserving the Union) and the
 % brutal, asymmetric extraction (death of soldiers). It requires active enforcement (the war).
 % This combination of properties defines a Tangled Rope.
-constraint_indexing:constraint_classification(constitutional_consecration, tangled_rope,
+constraint_indexing:constraint_classification(constitutional_consecration, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -136,7 +136,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the gap into a Tangled Rope.
-    constraint_indexing:constraint_classification(constitutional_consecration, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(constitutional_consecration, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify the base metrics align with a high-extraction, high-suppression constraint.

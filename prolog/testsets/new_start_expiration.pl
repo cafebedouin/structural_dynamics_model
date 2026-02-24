@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(new_start_expiration, global_public).
 % The global public is trapped in a dynamic that extracts public funds for
 % private profit and increases existential risk.
 % χ = 0.6 * 1.5 (powerless) * 1.2 (global) = 1.08 (Snare)
-constraint_indexing:constraint_classification(new_start_expiration, snare,
+constraint_indexing:constraint_classification(new_start_expiration, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(new_start_expiration, rope,
 % deterrence) but which is dominated by asymmetric extraction (public funds
 % to private industry) and high suppression of alternatives.
 % χ = 0.6 * 1.15 (analytical) * 1.2 (global) = 0.828 (Tangled Rope/Snare)
-constraint_indexing:constraint_classification(new_start_expiration, tangled_rope,
+constraint_indexing:constraint_classification(new_start_expiration, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(russian_war_cannibalization, rope,
 % An analyst sees both the coordination function (resource mobilization for
 % the war effort) and the severe, asymmetric extraction from the civilian
 % sphere. It requires active enforcement to maintain, fitting the Tangled Rope profile.
-constraint_indexing:constraint_classification(russian_war_cannibalization, tangled_rope,
+constraint_indexing:constraint_classification(russian_war_cannibalization, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -145,7 +145,7 @@ test(perspectival_gap_is_rope_vs_snare) :-
         context(agent_power(powerless), _, _, _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(russian_war_cannibalization, tangled_rope,
+    constraint_indexing:constraint_classification(russian_war_cannibalization, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_and_suppression_are_set) :-

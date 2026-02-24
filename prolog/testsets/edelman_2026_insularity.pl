@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(edelman_2026_insularity, low_income_citizen
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The low-income subject feels trapped by a system they believe favors the rich[cite: 667, 1385].
-constraint_indexing:constraint_classification(edelman_2026_insularity, snare,
+constraint_indexing:constraint_classification(edelman_2026_insularity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(edelman_2026_insularity, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature of insularity: it provides local safety but extracts
 % global progress[cite: 584, 595].
-constraint_indexing:constraint_classification(edelman_2026_insularity, tangled_rope,
+constraint_indexing:constraint_classification(edelman_2026_insularity, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -127,11 +127,11 @@ constraint_indexing:constraint_classification(edelman_2026_insularity, tangled_r
 
 test(perspectival_gap) :-
     % Verify there is a perspectival gap between powerless and institutional.
-    constraint_indexing:constraint_classification(edelman_2026_insularity, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(edelman_2026_insularity, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(edelman_2026_insularity, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(edelman_2026_insularity, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(edelman_2026_insularity, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     domain_priors:base_extractiveness(edelman_2026_insularity, E),

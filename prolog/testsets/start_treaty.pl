@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(start_treaty, global_community).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % The global community is trapped in a more dangerous world with no alternative.
-constraint_indexing:constraint_classification(start_treaty, snare,
+constraint_indexing:constraint_classification(start_treaty, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(start_treaty, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % The situation has both a coordination function (residual norms, strategic
 % posturing) and high asymmetric extraction (risk borne by populace).
-constraint_indexing:constraint_classification(start_treaty, tangled_rope,
+constraint_indexing:constraint_classification(start_treaty, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -134,7 +134,7 @@ test(threshold_validation) :-
 
 test(tangled_rope_conditions_met) :-
     % Verify that the conditions for a tangled_rope are met for the analytical perspective.
-    constraint_indexing:constraint_classification(start_treaty, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(start_treaty, snare, context(agent_power(analytical), _, _, _)),
     domain_priors:requires_active_enforcement(start_treaty),
     narrative_ontology:constraint_beneficiary(start_treaty, _),
     narrative_ontology:constraint_victim(start_treaty, _).

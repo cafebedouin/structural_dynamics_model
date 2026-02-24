@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(technological_point_of_no_return, bio_digit
 
 % PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
 % For the powerless agent, the technology is now as unalterable as the atmosphere.
-constraint_indexing:constraint_classification(technological_point_of_no_return, mountain,
+constraint_indexing:constraint_classification(technological_point_of_no_return, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(technological_point_of_no_return, 
 
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (TANGLED ROPE)
 % High extraction (0.86) and enforcement trigger the hybrid Tangled Rope signature.
-constraint_indexing:constraint_classification(technological_point_of_no_return, tangled_rope,
+constraint_indexing:constraint_classification(technological_point_of_no_return, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(technological_point_of_no_return, 
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless (Mountain) and institutional (Rope) views.
-    constraint_indexing:constraint_classification(technological_point_of_no_return, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(technological_point_of_no_return, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(technological_point_of_no_return, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_divergence) :-

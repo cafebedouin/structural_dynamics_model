@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(sadhu_integrity_protocol, rope,
 % freedom to continue his habit is extracted because the authority is now
 % "inescapable," being backed by demonstrated integrity. The social cost of
 % defiance becomes extremely high.
-constraint_indexing:constraint_classification(sadhu_integrity_protocol, snare,
+constraint_indexing:constraint_classification(sadhu_integrity_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

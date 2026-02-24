@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(goodharts_law, qualitative_performers).
 % PERSPECTIVE 1: THE OVER-MANAGED WORKER (SNARE)
 % The metric is a trap forcing meaningless work to "hit the number,"
 % extracting professional integrity and purpose.
-constraint_indexing:constraint_classification(goodharts_law, snare,
+constraint_indexing:constraint_classification(goodharts_law, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(goodharts_law, rope,
 % PERSPECTIVE 3: THE SYSTEMS THEORIST (MOUNTAIN)
 % Goodhart's Law is an unchangeable feature of the informational landscape,
 % a natural law of social systems. Any proxy will eventually succumb.
-constraint_indexing:constraint_classification(goodharts_law, tangled_rope,
+constraint_indexing:constraint_classification(goodharts_law, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -122,9 +122,9 @@ constraint_indexing:constraint_classification(goodharts_law, tangled_rope,
 
 test(perspectival_gap) :-
     % Verify the gap between Worker (Snare), Architect (Rope), and Theorist (Mountain).
-    constraint_indexing:constraint_classification(goodharts_law, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(goodharts_law, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(goodharts_law, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(goodharts_law, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(goodharts_law, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     config:param(extractiveness_metric_name, ExtMetricName),

@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(polar_bear_biobanking, traditional_conserva
 % It extracts their genetic identity while the cause of their decline continues.
 % This is pure, coercive extraction. Engine derives d from victim + trapped.
 % d ≈ 0.95 -> f(d) ≈ 1.42. χ ≈ 0.48 * 1.42 * 1.2 ≈ 0.82. -> Snare.
-constraint_indexing:constraint_classification(polar_bear_biobanking, snare,
+constraint_indexing:constraint_classification(polar_bear_biobanking, naturalized,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -179,7 +179,7 @@ constraint_indexing:constraint_classification(polar_bear_biobanking, tangled_rop
 :- begin_tests(polar_bear_biobanking_tests).
 
 test(perspectival_gap_target_beneficiary) :-
-    constraint_indexing:constraint_classification(polar_bear_biobanking, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(polar_bear_biobanking, naturalized, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(polar_bear_biobanking, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
     format('... Perspectival gap validated (Snare vs. Rope)\n').
 

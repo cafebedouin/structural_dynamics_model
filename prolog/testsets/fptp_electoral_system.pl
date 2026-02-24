@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(fptp_electoral_system, rope,
 % χ ≈ 0.75 * 1.15 * 1.2 (global scope) = 1.035.
 % While χ is high, the analytical perspective recognizes the coordination function
 % (beneficiary exists) and asymmetric extraction (victim exists), leading to Tangled Rope.
-constraint_indexing:constraint_classification(fptp_electoral_system, tangled_rope,
+constraint_indexing:constraint_classification(fptp_electoral_system, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -172,7 +172,7 @@ test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
     % The system's final claim must be Tangled Rope.
-    constraint_indexing:constraint_classification(fptp_electoral_system, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(fptp_electoral_system, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % Verify that all three structural conditions for a Tangled Rope are met.

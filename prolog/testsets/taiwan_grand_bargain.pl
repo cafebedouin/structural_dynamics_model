@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(taiwan_grand_bargain, rope,
 % The observer sees the high effective extraction (0.897) and suppression (0.70)
 % alongside a genuine coordination function (beneficiary exists) and asymmetric
 % extraction (victim exists), classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(taiwan_grand_bargain, tangled_rope,
+constraint_indexing:constraint_classification(taiwan_grand_bargain, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -123,7 +123,7 @@ test(perspectival_gap_snare_vs_rope) :-
     % Verify the bargain is a Snare for the powerless but a Rope for the institutional.
     constraint_indexing:constraint_classification(taiwan_grand_bargain, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(taiwan_grand_bargain, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(taiwan_grand_bargain, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(taiwan_grand_bargain, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-
     % Verify all three structural requirements for Tangled Rope are met.

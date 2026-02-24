@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(ai_compute_capital_moat, open_source_ai_dev
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
 %   χ = 0.62 * 1.42 * σ(global=1.2) = 1.06
 %   High χ (≥ 0.66), high ε (≥ 0.46), high suppression (≥ 0.60) → Snare
-constraint_indexing:constraint_classification(ai_compute_capital_moat, snare,
+constraint_indexing:constraint_classification(ai_compute_capital_moat, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(ai_compute_capital_moat, rope,
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15
 %   χ = 0.62 * 1.15 * σ(global=1.2) = 0.85
 %   χ is in [0.40, 0.90], ε ≥ 0.30, suppression ≥ 0.40 → Tangled Rope
-constraint_indexing:constraint_classification(ai_compute_capital_moat, tangled_rope,
+constraint_indexing:constraint_classification(ai_compute_capital_moat, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -179,7 +179,7 @@ test(perspectival_gap_is_snare_vs_rope) :-
     constraint_indexing:constraint_classification(ai_compute_capital_moat, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(ai_compute_capital_moat, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ai_compute_capital_moat, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_met) :-
     narrative_ontology:constraint_beneficiary(ai_compute_capital_moat, _),

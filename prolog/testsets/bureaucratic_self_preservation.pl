@@ -88,7 +88,7 @@ narrative_ontology:coordination_vitality(bureaucratic_self_preservation, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The applicant experiences the bureaucracy as a predatory trap of red tape,
 % where χ = 0.72 * 1.5 (powerless) * 1.0 (national) = 1.08.
-constraint_indexing:constraint_classification(bureaucratic_self_preservation, snare,
+constraint_indexing:constraint_classification(bureaucratic_self_preservation, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(bureaucratic_self_preservation, sn
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The bureau chief sees the rules as essential coordination ("due process"),
 % experiencing negative extraction (benefit): χ = 0.72 * -0.2 (institutional) * 1.0 (national) = -0.144.
-constraint_indexing:constraint_classification(bureaucratic_self_preservation, rope,
+constraint_indexing:constraint_classification(bureaucratic_self_preservation, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -121,8 +121,8 @@ constraint_indexing:constraint_classification(bureaucratic_self_preservation, pi
 
 test(perspectival_gap) :-
     % Verify there is a perspectival gap between powerless (snare) and institutional (rope).
-    constraint_indexing:constraint_classification(bureaucratic_self_preservation, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(bureaucratic_self_preservation, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(bureaucratic_self_preservation, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(bureaucratic_self_preservation, piton, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(bureaucratic_self_preservation, piton, context(agent_power(analytical), _, _, _)).
 
 test(piton_detection_by_theater) :-

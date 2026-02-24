@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(internet_evolution_lifecycle, rope
 % PERSPECTIVE 3: A DIGITAL PRIVACY ADVOCATE (TANGLED ROPE)
 % The analytical observer sees the internet's dual nature: a powerful tool for
 % global coordination that is now dominated by an extractive business model.
-constraint_indexing:constraint_classification(internet_evolution_lifecycle, tangled_rope,
+constraint_indexing:constraint_classification(internet_evolution_lifecycle, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(internet_evolution_lifecycle, tang
 test(perspectival_gap, [nondet]) :-
     constraint_indexing:constraint_classification(internet_evolution_lifecycle, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(internet_evolution_lifecycle, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(internet_evolution_lifecycle, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(internet_evolution_lifecycle, snare, context(agent_power(analytical), _, _, _)).
 
 test(end_state_is_extractive_and_suppressive) :-
     narrative_ontology:constraint_metric(internet_evolution_lifecycle, extractiveness, E),

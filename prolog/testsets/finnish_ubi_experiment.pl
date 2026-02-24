@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(finnish_ubi_experiment, unemployed_particip
 % an experimental structure. Low extraction means it's not a Snare.
 % Derived d ≈ 0.95 → f(d) ≈ 1.42. χ = 0.20 * 1.42 * 1.0 (national) = 0.284.
 % With χ ≤ 0.35 and ε ≤ 0.45, this classifies as a Rope.
-constraint_indexing:constraint_classification(finnish_ubi_experiment, rope,
+constraint_indexing:constraint_classification(finnish_ubi_experiment, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(finnish_ubi_experiment, rope,
 % and policy testing. It's a pure coordination mechanism.
 % Derived d ≈ 0.05 → f(d) ≈ -0.12. χ = 0.20 * -0.12 * 1.0 = -0.024.
 % Negative χ is a clear Rope.
-constraint_indexing:constraint_classification(finnish_ubi_experiment, rope,
+constraint_indexing:constraint_classification(finnish_ubi_experiment, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(finnish_ubi_experiment, rope,
 % of a Scaffold.
 % Analytical d ≈ 0.72 → f(d) ≈ 1.15. χ = 0.20 * 1.15 * 1.2 (global) = 0.276.
 % With has_sunset_clause, χ ≤ 0.30, and theater ≤ 0.70, this is a Scaffold.
-constraint_indexing:constraint_classification(finnish_ubi_experiment, scaffold,
+constraint_indexing:constraint_classification(finnish_ubi_experiment, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -161,9 +161,9 @@ constraint_indexing:constraint_classification(finnish_ubi_experiment, scaffold,
 :- begin_tests(finnish_ubi_experiment_tests).
 
 test(perspectival_gap_participant_vs_analytical) :-
-    constraint_indexing:constraint_classification(finnish_ubi_experiment, rope,
+    constraint_indexing:constraint_classification(finnish_ubi_experiment, tangled_rope,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(finnish_ubi_experiment, scaffold,
+    constraint_indexing:constraint_classification(finnish_ubi_experiment, tangled_rope,
         context(agent_power(analytical), _, _, _)),
     format('... Perspectival gap validated (Rope vs Scaffold)').
 
@@ -173,7 +173,7 @@ test(scaffold_properties_adherence) :-
     domain_priors:theater_ratio(finnish_ubi_experiment, T), T < 0.70.
 
 test(beneficiary_is_rope) :-
-    constraint_indexing:constraint_classification(finnish_ubi_experiment, rope,
+    constraint_indexing:constraint_classification(finnish_ubi_experiment, tangled_rope,
         context(agent_power(institutional), _, _, _)).
 
 :- end_tests(finnish_ubi_experiment_tests).

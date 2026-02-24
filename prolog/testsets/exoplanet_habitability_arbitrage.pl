@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(exoplanetary_habitability_arbitrage, legacy
 % PERSPECTIVE 1: THE LEGACY PLANET HUNTER (SNARE)
 % Agent whose research paradigm is being de-funded and suppressed.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, snare,
+constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrag
 % PERSPECTIVE 2: THE MODERN PLANETARY THEORIST (ROPE)
 % Agent who benefits from the new paradigm and resource allocation.
 % Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, rope,
+constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrag
 % Default analytical context. Sees the strategy as a functional coordination
 % mechanism, albeit one with extractive consequences for some parties.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, rope,
+constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

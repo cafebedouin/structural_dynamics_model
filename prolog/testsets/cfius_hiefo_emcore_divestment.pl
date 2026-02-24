@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, rop
 % and the coercive, asymmetric extraction (forcing a sale).
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.65 * f(0.72) * σ(global) ≈ 0.65 * 1.15 * 1.2 ≈ 0.897 (Tangled Rope)
-constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, tangled_rope,
+constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -190,7 +190,7 @@ test(perspectival_gap_target_beneficiary) :-
     true.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(cfius_hiefo_emcore_divestment, _),

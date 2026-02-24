@@ -96,7 +96,7 @@ narrative_ontology:constraint_victim(civilizational_maintenance_debt, current_re
 % To the powerless individual, the failure of the power grid is a trap. The high base
 % extraction (0.62) is amplified by powerlessness (π=1.5), resulting in an
 % effective extraction χ of 0.93. This is a Snare, not a Mountain.
-constraint_indexing:constraint_classification(civilizational_maintenance_debt, snare,
+constraint_indexing:constraint_classification(civilizational_maintenance_debt, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -128,7 +128,7 @@ constraint_indexing:constraint_classification(civilizational_maintenance_debt, t
 
 test(perspectival_gap) :-
     % Verify variance: Snare for the powerless, Rope for the institution.
-    constraint_indexing:constraint_classification(civilizational_maintenance_debt, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(civilizational_maintenance_debt, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(civilizational_maintenance_debt, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(civilizational_maintenance_debt, tangled_rope, context(agent_power(analytical), _, _, _)).
 

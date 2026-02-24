@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(burali_forti_paradox, naive_comprehension_p
 % PERSPECTIVE 1: THE NAIVE MATHEMATICIAN (SNARE)
 % Agent attempting to use unrestricted comprehension. The paradox acts as a
 % trap that collapses their foundational system into contradiction.
-constraint_indexing:constraint_classification(burali_forti_paradox, snare,
+constraint_indexing:constraint_classification(burali_forti_paradox, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(burali_forti_paradox, snare,
 % For a formal system like ZFC, the paradox is a coordination mechanism. It
 % forces the distinction between "Sets" and "Proper Classes," a functional
 % tool that prevents the system from collapsing.
-constraint_indexing:constraint_classification(burali_forti_paradox, rope,
+constraint_indexing:constraint_classification(burali_forti_paradox, scaffold,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(arbitrage),

@@ -76,7 +76,7 @@ domain_priors:requires_active_enforcement(repair_probe_incomplete).
    ========================================================================== */
 
 % PERSPECTIVE 1: POWERLESS SUBJECT (SNARE)
-constraint_indexing:constraint_classification(repair_probe_incomplete, snare,
+constraint_indexing:constraint_classification(repair_probe_incomplete, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(us_greenland_envoy, rope,
 % definition of a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ ≈ 0.65 * 1.15 * 1.2 (global) = 0.897. This fits Tangled Rope (0.40 ≤ χ ≤ 0.90).
-constraint_indexing:constraint_classification(us_greenland_envoy, tangled_rope,
+constraint_indexing:constraint_classification(us_greenland_envoy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(us_greenland_envoy, tangled_rope,
 % Engine derives d from: victim + constrained exit → d ≈ 0.90 → f(d) ≈ 1.35 → high χ.
 % χ ≈ 0.65 * 1.35 * 1.0 (national) = 0.8775. From Denmark's perspective, this is a
 % coercive Snare that compromises its sovereignty and diplomatic freedom.
-constraint_indexing:constraint_classification(us_greenland_envoy, snare,
+constraint_indexing:constraint_classification(us_greenland_envoy, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -189,7 +189,7 @@ test(perspectival_gap_inter_institutional) :-
     TypeBeneficiary \= TypeConstrained.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_greenland_envoy, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_greenland_envoy, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify that all three conditions for a Tangled Rope are present.

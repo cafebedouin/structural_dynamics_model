@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(erised_expectation, snare,
 % it has beneficiaries (coordination), victims (asymmetric extraction), and
 % requires enforcement.
 % χ = 0.65 * -0.2 (institutional) * 1.2 (global) = -0.156.
-constraint_indexing:constraint_classification(erised_expectation, tangled_rope,
+constraint_indexing:constraint_classification(erised_expectation, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(erised_expectation, piton,
 test(perspectival_gap_snare_vs_tangled_rope) :-
     % Verify the gap between the subject (Snare) and beneficiary (Tangled Rope).
     constraint_indexing:constraint_classification(erised_expectation, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(erised_expectation, tangled_rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(erised_expectation, rope, context(agent_power(institutional), _, _, _)).
 
 test(piton_classification_from_high_theater) :-
     % Verify the analytical observer sees a Piton due to high theater ratio.

@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(pe_rental_market_lockin, rope,
 % severe, asymmetric extraction. The high ε and suppression, combined with
 % the dual beneficiary/victim structure, define a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(pe_rental_market_lockin, tangled_rope,
+constraint_indexing:constraint_classification(pe_rental_market_lockin, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(pe_rental_market_lockin, tangled_r
 % making its exit 'constrained'. It sees the extractive elements more clearly
 % than the beneficiary does, but still within an institutional frame.
 % The derived 'd' will be higher than the PE firm's but lower than the tenant's.
-constraint_indexing:constraint_classification(pe_rental_market_lockin, tangled_rope,
+constraint_indexing:constraint_classification(pe_rental_market_lockin, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -190,7 +190,7 @@ test(perspectival_gap_target_beneficiary) :-
     format('OK: Perspectival gap [Snare vs Rope] confirmed.~n').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(pe_rental_market_lockin, tangled_rope,
+    constraint_indexing:constraint_classification(pe_rental_market_lockin, snare,
         context(agent_power(analytical), _, _, _)),
     narrative_ontology:constraint_claim(pe_rental_market_lockin, tangled_rope),
     format('OK: Analytical classification matches constraint claim.~n').

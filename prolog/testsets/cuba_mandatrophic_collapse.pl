@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(cuba_mandatrophic_collapse, general_populat
 % For the citizen, Mandatrophy is a Snare. The regime's "Mandate" (preserving
 % the military-run tourism empire) has extracted their electricity,
 % medicine, and food rations. Every peso they earn is "choked" by inflation.
-constraint_indexing:constraint_classification(cuba_mandatrophic_collapse, snare,
+constraint_indexing:constraint_classification(cuba_mandatrophic_collapse, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

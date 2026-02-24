@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(boom_bust_path_dependency, rope,
 % PERSPECTIVE 3: THE FISCAL REALIST (PITON)
 % Recognizes a former coordination tool (the Heritage Fund) that has atrophied
 % into theatrical maintenance while wealth is drained.
-constraint_indexing:constraint_classification(boom_bust_path_dependency, piton,
+constraint_indexing:constraint_classification(boom_bust_path_dependency, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(boom_bust_path_dependency, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (PITON)
 % Identifies the atrophied function and high theater of "fiscal responsibility"
 % rhetoric in a boom-bust cycle.
-constraint_indexing:constraint_classification(boom_bust_path_dependency, piton,
+constraint_indexing:constraint_classification(boom_bust_path_dependency, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

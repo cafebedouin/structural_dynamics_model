@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(em_clinical_guidelines, atypical_patients).
 % The frontline ER physician experiences the guideline as an asymmetric liability trap.
 % Following it gives little reward, but deviating creates significant legal risk.
 % χ = 0.60 (ε) * 1.5 (π(powerless)) * 0.8 (σ(local)) = 0.72
-constraint_indexing:constraint_classification(em_clinical_guidelines, snare,
+constraint_indexing:constraint_classification(em_clinical_guidelines, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

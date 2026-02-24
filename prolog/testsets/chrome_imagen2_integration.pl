@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(chrome_imagen2_integration, rope,
 % χ = 0.65 * 1.15 * 1.2 (global scope) ≈ 0.89. This is between 0.40 and 0.90.
 % The system has a genuine coordination function (provides a tool) but also high
 % asymmetric extraction (data harvesting, market suppression). This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(chrome_imagen2_integration, tangled_rope,
+constraint_indexing:constraint_classification(chrome_imagen2_integration, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -177,7 +177,7 @@ test(perspectival_gap_user_vs_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical perspective must see the combined nature of the constraint.
-    constraint_indexing:constraint_classification(chrome_imagen2_integration, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(chrome_imagen2_integration, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A Tangled Rope must have a beneficiary, a victim, and require active enforcement.

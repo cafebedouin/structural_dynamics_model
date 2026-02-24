@@ -85,7 +85,7 @@ domain_priors:requires_active_enforcement(ulysses_hades_1904). % Gravediggers an
 % Effective Extraction: 0.49 * 1.5 (powerless) * 1.2 (universal) = 0.882.
 % χ < 0.05 logic check: In death, extraction ceases because agency is zero.
 % However, for the survivor Bloom, it is a Mountain of "Inertial Limit".
-constraint_indexing:constraint_classification(ulysses_hades_1904, mountain, 
+constraint_indexing:constraint_classification(ulysses_hades_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(civilizational), 
             exit_options(trapped), 
@@ -94,7 +94,7 @@ constraint_indexing:constraint_classification(ulysses_hades_1904, mountain,
 % PERSPECTIVE 2: THE CARETAKER (ROPE)
 % Effective Extraction: 0.49 * -0.2 (institutional) * 0.8 (local) = -0.0784.
 % Viewed as the essential coordination of "cheering a fellow up" and "keys".
-constraint_indexing:constraint_classification(ulysses_hades_1904, rope, 
+constraint_indexing:constraint_classification(ulysses_hades_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -116,8 +116,8 @@ constraint_indexing:constraint_classification(ulysses_hades_1904, piton,
 
 test(perspectival_gap) :-
     % Verify shift from the Mountain of death to the Rope of the caretaker.
-    constraint_indexing:constraint_classification(ulysses_hades_1904, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_hades_1904, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_hades_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_hades_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_check) :-
     % Piton classification requires theater_ratio >= 0.70.

@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(slow_crisis_invisibility, snare,
 % PERSPECTIVE 4: THE SYSTEM AUDITOR (TANGLED ROPE)
 % Detects both the coordination function (beneficiaries exist) and the massive
 % asymmetric extraction (victims exist), plus the active enforcement.
-constraint_indexing:constraint_classification(slow_crisis_invisibility, tangled_rope,
+constraint_indexing:constraint_classification(slow_crisis_invisibility, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),

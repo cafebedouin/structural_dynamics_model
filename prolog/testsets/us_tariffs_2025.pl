@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(us_tariffs_2025, domestic_importing_firms).
 % to avoid the price increases. They experience the tariff as pure cost.
 % Engine derives d from victim status + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.48 * 1.42 * 1.0 (national) ≈ 0.68. This is ≥ 0.66, thus a Snare.
-constraint_indexing:constraint_classification(us_tariffs_2025, snare,
+constraint_indexing:constraint_classification(us_tariffs_2025, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(us_tariffs_2025, tangled_rope,
 % diplomacy or retaliation. They see the stated US goal but experience it as extraction.
 % Victim + institutional + constrained exit -> d > 0.5. Assume d ≈ 0.6.
 % χ = 0.48 * f(0.6) * 1.1 (continental) = 0.48 * 0.84 * 1.1 ≈ 0.44. Tangled Rope.
-constraint_indexing:constraint_classification(us_tariffs_2025, tangled_rope,
+constraint_indexing:constraint_classification(us_tariffs_2025, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

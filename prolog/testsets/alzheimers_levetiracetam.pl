@@ -113,7 +113,7 @@ narrative_ontology:constraint_victim(alzheimers_levetiracetam, individuals_at_ri
 % PERSPECTIVE 1A: THE VULNERABLE TARGET (SNARE)
 % Agent who bears the most extraction, with no alternatives. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(alzheimers_levetiracetam, snare,
+constraint_indexing:constraint_classification(alzheimers_levetiracetam, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

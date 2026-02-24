@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(us_canada_geopolitical_asymmetry, 
 % negotiable system but a fixed, unchangeable feature of their geopolitical
 % reality. It functions as a Mountain, a background condition with zero
 % degrees of freedom at their level of agency.
-constraint_indexing:constraint_classification(us_canada_geopolitical_asymmetry, mountain,
+constraint_indexing:constraint_classification(us_canada_geopolitical_asymmetry, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

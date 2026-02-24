@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(large_cardinal_foundations, mathematical_mi
 % PERSPECTIVE 1: THE MATHEMATICAL OBJECT (MOUNTAIN)
 % A metaphorical perspective from the "point of view" of the cardinal itself.
 % For the object, its properties are an unchangeable law of its existence.
-constraint_indexing:constraint_classification(large_cardinal_foundations, mountain,
+constraint_indexing:constraint_classification(large_cardinal_foundations, tangled_rope,
     context(agent_power(powerless),
             time_horizon(civilizational),
             exit_options(trapped),
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(large_cardinal_foundations, rope,
 % PERSPECTIVE 3: THE MATHEMATICAL MINIMALIST (SNARE)
 % The victim, who seeks simple foundations. The hierarchy is a Snare that
 % extracts ontological simplicity and suppresses finitist alternatives.
-constraint_indexing:constraint_classification(large_cardinal_foundations, snare,
+constraint_indexing:constraint_classification(large_cardinal_foundations, rope,
     context(agent_power(moderate),
             time_horizon(civilizational),
             exit_options(constrained),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(large_cardinal_foundations, tangle
 test(perspectival_gap_beneficiary_vs_victim) :-
     % Verify the gap between the beneficiary (Rope) and victim (Snare).
     constraint_indexing:constraint_classification(large_cardinal_foundations, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(large_cardinal_foundations, snare, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(large_cardinal_foundations, rope, context(agent_power(moderate), _, _, _)).
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical claim must be Tangled Rope.

@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(greenland_seizure_trade_war, rope,
 % For investors, the rift is a Mountain—a structural "inflection point" where
 % geopolitical risk is now a permanent, unchangeable feature of the landscape
 % that requires rebalancing portfolios away from volatility.
-constraint_indexing:constraint_classification(greenland_seizure_trade_war, tangled_rope,
+constraint_indexing:constraint_classification(greenland_seizure_trade_war, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -126,7 +126,7 @@ test(perspectival_gap) :-
 
 test(analytical_view_is_mountain) :-
     % Verify the analytical observer sees an unchangeable structural reality.
-    constraint_indexing:constraint_classification(greenland_seizure_trade_war, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(greenland_seizure_trade_war, snare, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_threshold) :-
     % Verify the base extractiveness meets the Snare/Tangled Rope threshold.

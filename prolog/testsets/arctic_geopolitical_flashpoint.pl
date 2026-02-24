@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(arctic_geopolitical_flashpoint, ta
    negotiate with the warming rate; the exposure of the seabed is 
    now an unchangeable natural law.
    -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(arctic_geopolitical_flashpoint, mountain, 
+constraint_indexing:constraint_classification(arctic_geopolitical_flashpoint, snare, 
     context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))).
 
 /* ==========================================================================

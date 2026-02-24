@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(ai_religion_regulation, vulnerable_online_u
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(ai_religion_regulation, snare,
+constraint_indexing:constraint_classification(ai_religion_regulation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(ai_religion_regulation, rope,
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(ai_religion_regulation, tangled_rope,
+constraint_indexing:constraint_classification(ai_religion_regulation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(geocentric_cosmology, future_scholars_and_a
 % Future scholars trapped within the paradigm, unable to pursue alternatives.
 % The cost is the 1500-year delay in the scientific revolution.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(geocentric_cosmology, snare,
+constraint_indexing:constraint_classification(geocentric_cosmology, tangled_rope,
     context(agent_power(powerless),
             time_horizon(civilizational),
             exit_options(trapped),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(geocentric_cosmology, rope,
 % and the severe, long-term extraction. The high ε and suppression, combined
 % with both beneficiary and victim groups, points to a Tangled Rope.
 % This matches the constraint_claim.
-constraint_indexing:constraint_classification(geocentric_cosmology, tangled_rope,
+constraint_indexing:constraint_classification(geocentric_cosmology, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

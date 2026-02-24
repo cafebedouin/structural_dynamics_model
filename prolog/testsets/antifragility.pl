@@ -111,14 +111,14 @@ constraint_indexing:constraint_classification(antifragility, rope,
             spatial_scope(global))).
 
 % PERSPECTIVE 3: THE BUREAUCRAT (TANGLED ROPE)
-constraint_indexing:constraint_classification(antifragility, tangled_rope,
+constraint_indexing:constraint_classification(antifragility, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(constrained),
             spatial_scope(national))).
 
 % PERSPECTIVE 4: THE EVOLUTIONARY OBSERVER (MOUNTAIN)
-constraint_indexing:constraint_classification(antifragility, mountain,
+constraint_indexing:constraint_classification(antifragility, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

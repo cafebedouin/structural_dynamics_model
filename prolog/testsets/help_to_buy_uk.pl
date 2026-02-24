@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(help_to_buy_uk, first_time_buyers).
 % Bears the cost of price inflation and risky loan terms. Once in the scheme,
 % they are trapped by the loan conditions and market dynamics.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(help_to_buy_uk, snare,
+constraint_indexing:constraint_classification(help_to_buy_uk, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(help_to_buy_uk, rope,
 % Sees both the genuine coordination function (helping some people buy houses)
 % and the severe asymmetric extraction (price inflation benefiting builders).
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(help_to_buy_uk, tangled_rope,
+constraint_indexing:constraint_classification(help_to_buy_uk, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -176,7 +176,7 @@ test(perspectival_gap_target_beneficiary) :-
     format('... Perspectival gap [Snare vs Rope] validated.~n').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(help_to_buy_uk, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(help_to_buy_uk, snare, context(agent_power(analytical), _, _, _)),
     format('... Analytical classification as Tangled Rope validated.~n').
 
 test(tangled_rope_gate_conditions_met) :-

@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(pe_fund_level_leverage, rope,
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.68 * 1.15 * 1.2 (global scope) ≈ 0.94. Very high extraction, but with a
 % coordination function present, it classifies as Tangled Rope.
-constraint_indexing:constraint_classification(pe_fund_level_leverage, tangled_rope,
+constraint_indexing:constraint_classification(pe_fund_level_leverage, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(pe_fund_level_leverage, tangled_ro
 % Engine derives d from: victim + constrained exit → d ≈ 0.65 -> f(d) ≈ 1.0.
 % χ = 0.68 * 1.0 * 1.0 (national scope) ≈ 0.68. This is a Tangled Rope,
 % reflecting their awareness of the problem's dual nature.
-constraint_indexing:constraint_classification(pe_fund_level_leverage, tangled_rope,
+constraint_indexing:constraint_classification(pe_fund_level_leverage, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

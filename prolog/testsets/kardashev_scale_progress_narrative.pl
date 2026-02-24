@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(kardashev_scale_progress_narrative
 % It traps their long-term vision within an energy-centric paradigm, making it
 % difficult to even consider or value alternative futures. They are effectively
 % powerless and trapped within the dominant discourse.
-constraint_indexing:constraint_classification(kardashev_scale_progress_narrative, snare,
+constraint_indexing:constraint_classification(kardashev_scale_progress_narrative, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

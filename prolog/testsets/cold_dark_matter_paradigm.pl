@@ -134,7 +134,7 @@ narrative_ontology:constraint_victim(cold_dark_matter_paradigm, early_career_dis
 % career, face rejection from journals/funders, and are effectively trapped.
 % Victim + Trapped -> d ≈ 0.95 -> f(d) ≈ 1.42.
 % χ = 0.48 * 1.42 * 1.2 ≈ 0.82 (Snare).
-constraint_indexing:constraint_classification(cold_dark_matter_paradigm, snare,
+constraint_indexing:constraint_classification(cold_dark_matter_paradigm, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

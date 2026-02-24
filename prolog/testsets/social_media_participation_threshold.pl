@@ -99,7 +99,7 @@ narrative_ontology:constraint_victim(social_media_participation_threshold, non_d
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % Feels like a Mountain (inescapable) but is metrically a Snare due to high extraction.
 % χ = 0.60 (ε) * 1.5 (π(powerless)) * 0.9 (σ(regional)) = 0.81
-constraint_indexing:constraint_classification(social_media_participation_threshold, snare,
+constraint_indexing:constraint_classification(social_media_participation_threshold, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(social_media_participation_thresho
 
 test(perspectival_gap) :-
     % Verify the powerless user sees a Snare while the institution sees a Rope.
-    constraint_indexing:constraint_classification(social_media_participation_threshold, snare,
+    constraint_indexing:constraint_classification(social_media_participation_threshold, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(social_media_participation_threshold, rope,
         context(agent_power(institutional), _, _, _)).

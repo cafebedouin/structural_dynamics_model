@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(mandatrophic_margin_collapse, rope
 % Recognizes both the coordination claim and the severe asymmetric extraction.
 % The system is a Tangled Rope: it has a coordination function (beneficiary exists),
 % asymmetric extraction (victim exists), and requires active enforcement.
-constraint_indexing:constraint_classification(mandatrophic_margin_collapse, tangled_rope,
+constraint_indexing:constraint_classification(mandatrophic_margin_collapse, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,7 +138,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical observer should correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(mandatrophic_margin_collapse, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(mandatrophic_margin_collapse, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % High extraction confirms Snare/Tangled Rope status.

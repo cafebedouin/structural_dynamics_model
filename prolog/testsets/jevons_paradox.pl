@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(jevons_paradox, planetary_ecosystems).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The environmentalist sees efficiency gains being extracted to fuel more consumption,
 % trapping conservation efforts in a cycle of failure.
-constraint_indexing:constraint_classification(jevons_paradox, snare,
+constraint_indexing:constraint_classification(jevons_paradox, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(lp_pikachu_illustrator, rope,
 % severe asymmetric extraction. The high base extraction (ε=0.68), high
 % suppression (0.85), and presence of both beneficiaries and victims, plus
 % active enforcement, meets all criteria for a Tangled Rope.
-constraint_indexing:constraint_classification(lp_pikachu_illustrator, tangled_rope,
+constraint_indexing:constraint_classification(lp_pikachu_illustrator, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -162,7 +162,7 @@ test(perspectival_gap_is_snare_vs_rope) :-
         context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(lp_pikachu_illustrator, tangled_rope,
+    constraint_indexing:constraint_classification(lp_pikachu_illustrator, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-

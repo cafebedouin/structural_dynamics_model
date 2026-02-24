@@ -130,7 +130,7 @@ narrative_ontology:constraint_victim(roman_monumental_construction, provincial_p
 % pure coercion and extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 % The high ε (0.48) and suppression (0.65) easily cross the Snare threshold.
-constraint_indexing:constraint_classification(roman_monumental_construction, snare,
+constraint_indexing:constraint_classification(roman_monumental_construction, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

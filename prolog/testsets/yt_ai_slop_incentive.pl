@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(yt_ai_slop_incentive, rope,
 % Sees both the coordination function (allocating attention) and the severe
 % asymmetric extraction, classifying it as a Tangled Rope.
 % Engine derives d for analytical (≈0.72) → high χ.
-constraint_indexing:constraint_classification(yt_ai_slop_incentive, tangled_rope,
+constraint_indexing:constraint_classification(yt_ai_slop_incentive, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -191,7 +191,7 @@ test(perspectival_gap) :-
     format('Passed: Perspectival gap (Snare vs Rope) verified.~n').
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(yt_ai_slop_incentive, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(yt_ai_slop_incentive, snare, context(agent_power(analytical), _, _, _)),
     format('Passed: Analytical perspective correctly identifies Tangled Rope.~n').
 
 test(threshold_validation_high_extraction) :-

@@ -95,7 +95,7 @@ constraint_indexing:constraint_classification(boltzmann_universality_2026, rope,
 % PERSPECTIVE 2: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % From the view of reality, the uniqueness of the distribution is a 
 % Mountain: an irreducible logical limit governing all chaotic systems.
-constraint_indexing:constraint_classification(boltzmann_universality_2026, tangled_rope,
+constraint_indexing:constraint_classification(boltzmann_universality_2026, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(boltzmann_universality_2026, tangl
 % PERSPECTIVE 3: THE INDIVIDUAL COMPONENT (SNARE)
 % For a single die or molecule, the probability distribution is a Snare: 
 % an inescapable set of chances governing random behavior.
-constraint_indexing:constraint_classification(boltzmann_universality_2026, snare, 
+constraint_indexing:constraint_classification(boltzmann_universality_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 

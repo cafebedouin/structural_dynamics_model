@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(invisible_infrastructure_dependenc
 % PERSPECTIVE 3: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.91) > 0.70 triggers Piton: the "Official Status Page" 
 % is an inertial spike; it performatively signals "Green" status while 0.87 extraction continues.
-constraint_indexing:constraint_classification(invisible_infrastructure_dependency, piton,
+constraint_indexing:constraint_classification(invisible_infrastructure_dependency, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(invisible_infrastructure_dependenc
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.87) masking as essential coordination (Rope),
 % enabled by active enforcement and clear victim/beneficiary classes.
-constraint_indexing:constraint_classification(invisible_infrastructure_dependency, tangled_rope,
+constraint_indexing:constraint_classification(invisible_infrastructure_dependency, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -140,7 +140,7 @@ test(perspectival_gap) :-
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.91) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(invisible_infrastructure_dependency, piton,
+    constraint_indexing:constraint_classification(invisible_infrastructure_dependency, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-

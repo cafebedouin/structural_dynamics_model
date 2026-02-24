@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(manganese_catalysis_2026, precious_metal_ca
 % PERSPECTIVE 1: THE PREVIOUS MARKET (MOUNTAIN)
 % From the old perspective of platinum-dependent fuel cells, the 
 % cost of hydrogen was an immutable Mountain (Fixed Limit).
-constraint_indexing:constraint_classification(manganese_catalysis_2026, mountain, 
+constraint_indexing:constraint_classification(manganese_catalysis_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(historical), 
             exit_options(trapped), 
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(manganese_catalysis_2026, mountain
 % PERSPECTIVE 2: THE NEW ECONOMY (ROPE)
 % For CCU developers, the manganese catalyst is a Rope: essential 
 % infrastructure for coordinating affordable carbon utilization.
-constraint_indexing:constraint_classification(manganese_catalysis_2026, rope, 
+constraint_indexing:constraint_classification(manganese_catalysis_2026, tangled_rope, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 

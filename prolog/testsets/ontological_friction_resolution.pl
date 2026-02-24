@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(ontological_friction_resolution, r
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Recognizes that the "Ultimate Truth" is a coordination that requires the 
 % extraction (destruction) of the pleasant "Illusion".
-constraint_indexing:constraint_classification(ontological_friction_resolution, tangled_rope,
+constraint_indexing:constraint_classification(ontological_friction_resolution, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

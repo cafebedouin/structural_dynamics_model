@@ -122,7 +122,7 @@ narrative_ontology:constraint_victim(fatf_grey_list_russia, russian_federation_f
 % As the victim of the constraint with no viable exit from the global financial
 % system, Russia experiences this as a highly coercive and extractive mechanism.
 % Engine derives d from: victim + institutional + trapped -> high d -> high χ
-constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
+constraint_indexing:constraint_classification(fatf_grey_list_russia, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(trapped),
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(fatf_grey_list_russia, rope,
 % along with active enforcement, defines a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15. With global scope σ=1.2,
 % χ = 0.65 * 1.15 * 1.2 ≈ 0.90, classifying it as Tangled Rope.
-constraint_indexing:constraint_classification(fatf_grey_list_russia, tangled_rope,
+constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -179,7 +179,7 @@ test(powerless_perspective_is_snare) :-
         context(agent_power(powerless), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(fatf_grey_list_russia, tangled_rope,
+    constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-

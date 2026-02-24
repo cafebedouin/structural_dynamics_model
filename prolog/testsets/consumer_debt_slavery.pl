@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(consumer_debt_slavery, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature: a genuine coordination function (liquidity)
 % coupled with severe asymmetric extraction.
-constraint_indexing:constraint_classification(consumer_debt_slavery, tangled_rope,
+constraint_indexing:constraint_classification(consumer_debt_slavery, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -126,7 +126,7 @@ test(perspectival_gap) :-
     % Verify the Borrower sees a Snare while the Institutional Creditor sees a Rope.
     constraint_indexing:constraint_classification(consumer_debt_slavery, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(consumer_debt_slavery, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(consumer_debt_slavery, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(consumer_debt_slavery, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify all three conditions for Tangled Rope are met.

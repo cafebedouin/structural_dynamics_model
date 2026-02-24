@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(iran_guardian_council_vetting, rop
 % An external observer sees both the stated coordination function (maintaining
 % the Islamic Republic's principles) and the severe, asymmetric extraction of
 % political power. This dual nature is the hallmark of a Tangled Rope.
-constraint_indexing:constraint_classification(iran_guardian_council_vetting, tangled_rope,
+constraint_indexing:constraint_classification(iran_guardian_council_vetting, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

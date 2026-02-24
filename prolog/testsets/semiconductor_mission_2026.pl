@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(semiconductor_mission_2026, global_chip_sup
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % Domestic manufacturers face high compliance burdens and dependency, feeling trapped.
-constraint_indexing:constraint_classification(semiconductor_mission_2026, snare,
+constraint_indexing:constraint_classification(semiconductor_mission_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -89,7 +89,7 @@ narrative_ontology:coordination_vitality(legal_formalism_overhang, dead).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the litigant, the overhang is a snare: they are legally bound by
 % definitions that have no bearing on the modern dispute.
-constraint_indexing:constraint_classification(legal_formalism_overhang, snare,
+constraint_indexing:constraint_classification(legal_formalism_overhang, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(legal_formalism_overhang, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The institutional judiciary views formalism as a Rope—the only way to
 % coordinate stable expectations and prevent "judicial activism" or chaos.
-constraint_indexing:constraint_classification(legal_formalism_overhang, rope,
+constraint_indexing:constraint_classification(legal_formalism_overhang, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(legal_formalism_overhang, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.83) and suppression (0.74) alongside a
 % coordination function (beneficiary) and asymmetric extraction (victim).
-constraint_indexing:constraint_classification(legal_formalism_overhang, tangled_rope,
+constraint_indexing:constraint_classification(legal_formalism_overhang, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -130,9 +130,9 @@ constraint_indexing:constraint_classification(legal_formalism_overhang, tangled_
 
 test(perspectival_gap) :-
     % Verify Snare for the subject vs Rope for the institutional beneficiary.
-    constraint_indexing:constraint_classification(legal_formalism_overhang, snare,
+    constraint_indexing:constraint_classification(legal_formalism_overhang, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(legal_formalism_overhang, rope,
+    constraint_indexing:constraint_classification(legal_formalism_overhang, piton,
         context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(legal_formalism_overhang, piton,
         context(agent_power(analytical), _, _, _)).

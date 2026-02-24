@@ -84,7 +84,7 @@ narrative_ontology:topic_domain(other_peoples_troubles_2026, "social/psychologic
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the one in trouble, the situation is a snare: they are trapped in 
 % suffering while the "strength" of others offers no functional escape.
-constraint_indexing:constraint_classification(other_peoples_troubles_2026, snare, 
+constraint_indexing:constraint_classification(other_peoples_troubles_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(other_peoples_troubles_2026, snare
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % For the observer, their own "strength" is a rope: it coordinates their 
 % emotional stability and prevents the "trouble" from disrupting their life.
-constraint_indexing:constraint_classification(other_peoples_troubles_2026, rope, 
+constraint_indexing:constraint_classification(other_peoples_troubles_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -118,8 +118,8 @@ domain_priors:requires_active_enforcement(other_peoples_troubles_2026).
 
 test(perspectival_gap) :-
     % Subject feels a Snare; Institutional observer maintains a Rope.
-    constraint_indexing:constraint_classification(other_peoples_troubles_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(other_peoples_troubles_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(other_peoples_troubles_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(other_peoples_troubles_2026, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_detection) :-
     % Verify the Piton classification is active for high-theater observers.

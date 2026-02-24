@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(heglig_oil_field_control, rope,
 % An institutional actor, but one that is targeted and constrained. The engine
 % derives a high 'd' from their victim status and constrained exit, leading to high χ.
 % They experience this not as a coordination failure, but as a direct, coercive seizure.
-constraint_indexing:constraint_classification(heglig_oil_field_control, snare,
+constraint_indexing:constraint_classification(heglig_oil_field_control, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

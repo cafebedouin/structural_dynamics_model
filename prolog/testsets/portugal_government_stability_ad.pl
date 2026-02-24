@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(portugal_ad_stability_2026, scaffo
 
 % PERSPECTIVE 2: THE INSTITUTIONAL LOYALIST (ROPE)
 % Viewed as necessary coordination to avoid a mid-cycle constitutional crisis.
-constraint_indexing:constraint_classification(portugal_ad_stability_2026, rope,
+constraint_indexing:constraint_classification(portugal_ad_stability_2026, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(portugal_ad_stability_2026, rope,
 
 % PERSPECTIVE 3: THE POLICY CRITIC (SNARE)
 % Viewed as a trap where the need for "stability" is used to extract concessions and suppress dissent.
-constraint_indexing:constraint_classification(portugal_ad_stability_2026, snare,
+constraint_indexing:constraint_classification(portugal_ad_stability_2026, scaffold,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(technocratic_overreach, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid: The technical coordination is functional (Rope), but
 % the removal of democratic consent is extractive (Snare).
-constraint_indexing:constraint_classification(technocratic_overreach, tangled_rope,
+constraint_indexing:constraint_classification(technocratic_overreach, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -121,7 +121,7 @@ test(perspectival_gap) :-
     % Verify the shift from Snare (Powerless) to Rope (Institutional).
     constraint_indexing:constraint_classification(technocratic_overreach, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(technocratic_overreach, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(technocratic_overreach, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(technocratic_overreach, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-
     % Verify that all three structural requirements for Tangled Rope are met.

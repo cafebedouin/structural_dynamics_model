@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(cost_of_observation, situated_agent).
 % Experiences the cost as a direct, unavoidable drain on resources, trapping
 % them in a constant struggle for energy and attention.
 % χ = 0.85 * 1.5 (powerless) * 0.8 (local) = 1.02
-constraint_indexing:constraint_classification(cost_of_observation, snare,
+constraint_indexing:constraint_classification(cost_of_observation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

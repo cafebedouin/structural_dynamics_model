@@ -151,7 +151,7 @@ constraint_indexing:directionality_override(vision_of_the_cross, analytical, 0.6
 % With override: d=0.60, f(d)≈0.88. χ = 0.75 * 0.88 * 1.2 = 0.792.
 % This χ is in the Tangled Rope range [0.40, 0.90]. ε=0.75, suppression=0.85
 % also satisfy Tangled Rope criteria (ε≥0.30, supp≥0.40).
-constraint_indexing:constraint_classification(vision_of_the_cross, tangled_rope,
+constraint_indexing:constraint_classification(vision_of_the_cross, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -175,7 +175,7 @@ test(tangled_rope_conditions_met_analytically) :-
     domain_priors:requires_active_enforcement(vision_of_the_cross),
     narrative_ontology:constraint_beneficiary(vision_of_the_cross, _),
     narrative_ontology:constraint_victim(vision_of_the_cross, _),
-    constraint_indexing:constraint_classification(vision_of_the_cross, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(vision_of_the_cross, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(vision_of_the_cross_tests).
 

@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(german_board_gender_quota, tangled
 % the extraction of its autonomy in hiring.
 % Engine derives victim + constrained exit → d ≈ 0.8 -> f(d) ≈ 1.28
 % χ = 0.40 * 1.28 * 1.0 (national) = 0.512. This is also a Tangled Rope.
-constraint_indexing:constraint_classification(german_board_gender_quota, tangled_rope,
+constraint_indexing:constraint_classification(german_board_gender_quota, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

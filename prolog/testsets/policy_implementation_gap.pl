@@ -103,7 +103,7 @@ narrative_ontology:constraint_victim(policy_implementation_gap, underfunded_publ
    ========================================================================== */
 
 % From the perspective of an individual in a high-risk, low-access population, the gap between known prevention and available care is a Snare. They bear the full cost of systemic failure with no exit.
-constraint_indexing:constraint_classification(policy_implementation_gap, snare,
+constraint_indexing:constraint_classification(policy_implementation_gap, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(policy_implementation_gap, rope,
             spatial_scope(global))).
 
 % For the public health body, the gap is a Tangled Rope. They participate in the coordination (setting guidelines) but are victims of the extraction (underfunding, political suppression) that prevents effective implementation.
-constraint_indexing:constraint_classification(policy_implementation_gap, tangled_rope,
+constraint_indexing:constraint_classification(policy_implementation_gap, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

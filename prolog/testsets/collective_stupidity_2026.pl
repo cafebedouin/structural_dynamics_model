@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(collective_stupidity_2026, snare,
 % behavior that persists despite causing constant damage. The high theater_ratio
 % (0.92) and negative effective extraction (χ = 0.88 * π(institutional:-0.2) = -0.176)
 % confirm this view. It's a pure cost center.
-constraint_indexing:constraint_classification(collective_stupidity_2026, piton,
+constraint_indexing:constraint_classification(collective_stupidity_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

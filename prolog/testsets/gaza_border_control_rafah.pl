@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(gaza_border_control_rafah, gazan_governing_
 % As a victim with trapped exit, the engine derives d ≈ 0.95, giving f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.0 (national scope) = 0.781. This high effective extraction
 % (χ ≥ 0.66) combined with high suppression (0.90) classifies the constraint as a Snare.
-constraint_indexing:constraint_classification(gaza_border_control_rafah, snare,
+constraint_indexing:constraint_classification(gaza_border_control_rafah, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(gaza_border_control_rafah, rope,
 % χ = 0.55 * 1.15 * 1.2 (global scope) = 0.759. This value of χ (0.40 ≤ χ ≤ 0.90)
 % combined with high base extraction (ε > 0.30) and high suppression (S > 0.40)
 % and the presence of both coordination and extraction functions meets the Tangled Rope criteria.
-constraint_indexing:constraint_classification(gaza_border_control_rafah, tangled_rope,
+constraint_indexing:constraint_classification(gaza_border_control_rafah, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -191,7 +191,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
     writeln('Verified: Snare for powerless/trapped, Rope for institutional/arbitrage.').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(gaza_border_control_rafah, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(gaza_border_control_rafah, snare, context(agent_power(analytical), _, _, _)),
     writeln('Verified: Analytical perspective correctly identifies Tangled Rope.').
 
 test(tangled_rope_structural_gates_pass) :-

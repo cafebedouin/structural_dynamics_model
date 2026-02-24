@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(airbnb_str_regulation, professional_hosts).
 % For a casual host, the regulations are a trap. The high suppression (permit complexity,
 % night caps) and extraction (fees, lost income) make participation costly and risky.
 % χ = 0.60 * 1.5 (powerless) * 0.8 (local) = 0.72. This is high effective extraction.
-constraint_indexing:constraint_classification(airbnb_str_regulation, snare,
+constraint_indexing:constraint_classification(airbnb_str_regulation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(airbnb_str_regulation, rope,
 % The analytical view reveals a Tangled Rope. It has a genuine coordination function
 % (beneficiaries exist) but also imposes high, asymmetric extraction on a specific group
 % (victims exist) and requires active enforcement. This captures the dual nature of the policy.
-constraint_indexing:constraint_classification(airbnb_str_regulation, tangled_rope,
+constraint_indexing:constraint_classification(airbnb_str_regulation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,12 +128,12 @@ constraint_indexing:constraint_classification(airbnb_str_regulation, tangled_rop
 
 test(perspectival_gap) :-
     % Verify the gap between the host (powerless) and regulator (institutional).
-    constraint_indexing:constraint_classification(airbnb_str_regulation, snare, context(agent_power(powerless), _, _, spatial_scope(local))),
+    constraint_indexing:constraint_classification(airbnb_str_regulation, tangled_rope, context(agent_power(powerless), _, _, spatial_scope(local))),
     constraint_indexing:constraint_classification(airbnb_str_regulation, rope, context(agent_power(institutional), _, _, spatial_scope(national))).
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(airbnb_str_regulation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(airbnb_str_regulation, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     narrative_ontology:constraint_metric(airbnb_str_regulation, extractiveness, E),

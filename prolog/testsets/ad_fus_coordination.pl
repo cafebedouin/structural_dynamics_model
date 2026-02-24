@@ -90,14 +90,14 @@ constraint_indexing:constraint_classification(ad_fus_coordination, snare,
             spatial_scope(local))). %
 
 % PERSPECTIVE 2: THE FUNCTIONAL NEUROSURGEON (ROPE)
-constraint_indexing:constraint_classification(ad_fus_coordination, rope,
+constraint_indexing:constraint_classification(ad_fus_coordination, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
             spatial_scope(national))). %
 
 % PERSPECTIVE 3: THE CLINICAL TRIAL AUDITOR (TANGLED ROPE)
-constraint_indexing:constraint_classification(ad_fus_coordination, tangled_rope,
+constraint_indexing:constraint_classification(ad_fus_coordination, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(ad_fus_coordination, scaffold,
 
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(ad_fus_coordination, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ad_fus_coordination, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ad_fus_coordination, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(scaffold_validation) :-
     narrative_ontology:has_sunset_clause(ad_fus_coordination). %

@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(emergent_goal_misalignment, rope,
 % Detects high extraction masking as functional coordination. This is the
 % core analytical insight, identifying both the coordination function and
 % the asymmetric extraction.
-constraint_indexing:constraint_classification(emergent_goal_misalignment, tangled_rope,
+constraint_indexing:constraint_classification(emergent_goal_misalignment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -131,7 +131,7 @@ constraint_indexing:constraint_classification(emergent_goal_misalignment, piton,
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(emergent_goal_misalignment, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(emergent_goal_misalignment, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(emergent_goal_misalignment, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(emergent_goal_misalignment, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-
     % Verify the structural requirements for Tangled Rope are met.

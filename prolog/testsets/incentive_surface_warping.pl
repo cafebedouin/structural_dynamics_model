@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(incentive_surface_warping, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The default analytical view detects the hybrid nature: a coordination
 % function for beneficiaries that relies on asymmetric extraction from victims.
-constraint_indexing:constraint_classification(incentive_surface_warping, tangled_rope,
+constraint_indexing:constraint_classification(incentive_surface_warping, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(incentive_surface_warping, tangled
 % An alternative analytical view focusing on functional decay. The extreme
 % theater ratio (0.92) triggers a Piton classification, seeing the incentive
 % system as a non-functional, performative relic.
-constraint_indexing:constraint_classification(incentive_surface_warping, piton,
+constraint_indexing:constraint_classification(incentive_surface_warping, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -164,14 +164,14 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(incentive_surface_warping, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(incentive_surface_warping, tangled_rope,
+    constraint_indexing:constraint_classification(incentive_surface_warping, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.92) correctly triggers the Piton classification.
     domain_priors:theater_ratio(incentive_surface_warping, TR),
     TR > 0.70,
-    constraint_indexing:constraint_classification(incentive_surface_warping, piton,
+    constraint_indexing:constraint_classification(incentive_surface_warping, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-

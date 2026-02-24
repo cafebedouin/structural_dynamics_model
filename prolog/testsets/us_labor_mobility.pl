@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(us_labor_mobility, mobile_labor_force).
 
 % PERSPECTIVE 1: THE MORTGAGE-LOCKED WORKER (SNARE)
 % Victim + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → χ ≈ 0.68
-constraint_indexing:constraint_classification(us_labor_mobility, snare,
+constraint_indexing:constraint_classification(us_labor_mobility, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

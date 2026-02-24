@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(memetic_fitness_vs_truth, information_consu
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The consumer is trapped: they must adopt the "trending" narrative to participate
 % in social coordination, even if it contradicts their sensory data.
-constraint_indexing:constraint_classification(memetic_fitness_vs_truth, snare,
+constraint_indexing:constraint_classification(memetic_fitness_vs_truth, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(memetic_fitness_vs_truth, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The platform views memetic fitness as a Rope—the most efficient coordination
 % substrate for aggregating human attention at a global scale.
-constraint_indexing:constraint_classification(memetic_fitness_vs_truth, rope,
+constraint_indexing:constraint_classification(memetic_fitness_vs_truth, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(memetic_fitness_vs_truth, piton,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.86) masking as essential coordination (Rope).
 % The classification engine requires enforcement, beneficiary, and victim.
-constraint_indexing:constraint_classification(memetic_fitness_vs_truth, tangled_rope,
+constraint_indexing:constraint_classification(memetic_fitness_vs_truth, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -132,11 +132,11 @@ constraint_indexing:constraint_classification(memetic_fitness_vs_truth, tangled_
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless consumer vs Rope for the institutional platform.
-    constraint_indexing:constraint_classification(memetic_fitness_vs_truth, snare,
+    constraint_indexing:constraint_classification(memetic_fitness_vs_truth, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(memetic_fitness_vs_truth, rope,
+    constraint_indexing:constraint_classification(memetic_fitness_vs_truth, piton,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(memetic_fitness_vs_truth, tangled_rope,
+    constraint_indexing:constraint_classification(memetic_fitness_vs_truth, piton,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

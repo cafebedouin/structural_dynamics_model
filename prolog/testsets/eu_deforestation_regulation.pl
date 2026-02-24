@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(eu_deforestation_regulation, smallholder_fa
 % PERSPECTIVE 1: SMALLHOLDER FARMERS (SNARE)
 % Smallholder farmers lack the resources for traceability and may be excluded
 % from EU markets.
-constraint_indexing:constraint_classification(eu_deforestation_regulation, snare,
+constraint_indexing:constraint_classification(eu_deforestation_regulation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

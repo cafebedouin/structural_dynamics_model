@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(microbiome_symbiosis, human_host).
 % PERSPECTIVE 1: THE ANCIENT ROMAN (MOUNTAIN)
 % To ancient humans, the effects of gut health were an immutable part of nature's
 % 'Mountain'—uncontrollable, mysterious, and a matter of fate or natural law.
-constraint_indexing:constraint_classification(microbiome_symbiosis, mountain,
+constraint_indexing:constraint_classification(microbiome_symbiosis, tangled_rope,
     context(agent_power(powerless),
             time_horizon(historical),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(microbiome_symbiosis, rope,
 % When microbial-immune communication fails (dysbiosis), it can trigger
 % debilitating conditions. The symbiotic constraint becomes a 'Snare' where
 % the host's internal ecosystem actively harms them, creating a trap of chronic illness.
-constraint_indexing:constraint_classification(microbiome_symbiosis, snare,
+constraint_indexing:constraint_classification(microbiome_symbiosis, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

@@ -84,7 +84,7 @@ domain_priors:requires_active_enforcement(ulysses_lestrygonians_1904). % The "en
 % PERSPECTIVE 1: THE HUNGRY SUBJECT (SNARE)
 % Effective Extraction: 0.50 * 1.5 (powerless) * 0.8 (local) = 0.60.
 % Bloom perceives the Burton restaurant as a predatory trap of "stinking" food.
-constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, snare,
 % PERSPECTIVE 2: THE INSTITUTIONAL DINER (ROPE)
 % Effective Extraction: 0.50 * -0.2 (institutional) * 0.8 = -0.08.
 % Viewed as the essential "nourishment" and coordination of the "Great Daily Organ".
-constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, rope, 
+constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 

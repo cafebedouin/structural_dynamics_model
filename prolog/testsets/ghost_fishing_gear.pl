@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(ghost_fishing_gear, snare,
 % are forced to manage, not a benefit. Constrained exit means they can't
 % easily opt-out. d will be derived higher than the industry's.
 % It appears as a messy, high-extraction problem: a Tangled Rope or Snare.
-constraint_indexing:constraint_classification(ghost_fishing_gear, tangled_rope,
+constraint_indexing:constraint_classification(ghost_fishing_gear, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

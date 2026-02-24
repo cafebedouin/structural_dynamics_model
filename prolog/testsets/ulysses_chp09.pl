@@ -86,7 +86,7 @@ narrative_ontology:has_sunset_clause(ulysses_scylla_1904).     % Stephen's theor
 % PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
 % Effective Extraction: 0.50 * 1.5 (powerless) * 0.8 (local) = 0.60.
 % Perceived as a trap of "toothless terrors" and social mockery[cite: 6998, 6429].
-constraint_indexing:constraint_classification(ulysses_scylla_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_scylla_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -95,7 +95,7 @@ constraint_indexing:constraint_classification(ulysses_scylla_1904, snare,
 % PERSPECTIVE 2: THE LITERARY CIRCLE (ROPE)
 % Effective Extraction: 0.50 * -0.2 (institutional) * 0.8 = -0.08.
 % Viewed as the essential coordination of "priceless pages" and debate[cite: 7948].
-constraint_indexing:constraint_classification(ulysses_scylla_1904, rope, 
+constraint_indexing:constraint_classification(ulysses_scylla_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -126,8 +126,8 @@ constraint_indexing:constraint_classification(ulysses_scylla_1904, scaffold,
 
 test(perspectival_gap) :-
     % Verify shift from the Snare of Stephen's isolation to the Rope of culture.
-    constraint_indexing:constraint_classification(ulysses_scylla_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_scylla_1904, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_scylla_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_scylla_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_validation) :-
     % Piton classification requires theater_ratio >= 0.70.

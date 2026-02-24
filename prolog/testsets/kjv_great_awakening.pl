@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(great_awakening_rekindling, old_light_clerg
 % hierarchy of the established church. It coordinates a new, empowered
 % community of believers.
 % Engine derives d from: beneficiary + mobile exit -> d ≈ 0.15 -> f(d) ≈ -0.01 -> low χ
-constraint_indexing:constraint_classification(great_awakening_rekindling, rope,
+constraint_indexing:constraint_classification(great_awakening_rekindling, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(mobile),
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(great_awakening_rekindling, rope,
 % economic support. They are trapped within their parishes, unable to easily
 % escape the challenge to their power.
 % Engine derives d from: victim + constrained exit -> d ≈ 0.90 -> f(d) ≈ 1.35 -> high χ
-constraint_indexing:constraint_classification(great_awakening_rekindling, snare,
+constraint_indexing:constraint_classification(great_awakening_rekindling, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(constrained),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(great_awakening_rekindling, snare,
 % Tangled Rope: it has a genuine coordination function (uniting the New Lights)
 % but is inextricably linked to an asymmetric extraction of power from the
 % Old Light establishment, requiring active enforcement (preaching) to sustain.
-constraint_indexing:constraint_classification(great_awakening_rekindling, tangled_rope,
+constraint_indexing:constraint_classification(great_awakening_rekindling, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -170,7 +170,7 @@ test(perspectival_gap) :-
 
 test(analytical_type_is_tangled_rope) :-
     % The analytical view must resolve the conflict as a Tangled Rope.
-    constraint_indexing:constraint_classification(great_awakening_rekindling, tangled_rope,
+    constraint_indexing:constraint_classification(great_awakening_rekindling, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_check) :-

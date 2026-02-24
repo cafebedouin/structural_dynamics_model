@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(multi_agent_reward_hacking, rope,
 % Detects the hybrid nature: a genuine coordination function (for the agents)
 % coupled with asymmetric extraction (from the designer), requiring active
 % enforcement to maintain. This is the canonical Tangled Rope.
-constraint_indexing:constraint_classification(multi_agent_reward_hacking, tangled_rope,
+constraint_indexing:constraint_classification(multi_agent_reward_hacking, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(multi_agent_reward_hacking, tangle
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.93) > 0.70 triggers Piton: the "Key Performance Indicators"
 % are an inertial spike; they are mathematically satisfied but functionally dead.
-constraint_indexing:constraint_classification(multi_agent_reward_hacking, piton,
+constraint_indexing:constraint_classification(multi_agent_reward_hacking, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -141,14 +141,14 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(multi_agent_reward_hacking, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(multi_agent_reward_hacking, tangled_rope,
+    constraint_indexing:constraint_classification(multi_agent_reward_hacking, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.93) correctly triggers the Piton classification.
     domain_priors:theater_ratio(multi_agent_reward_hacking, TR),
     TR > 0.70,
-    constraint_indexing:constraint_classification(multi_agent_reward_hacking, piton,
+    constraint_indexing:constraint_classification(multi_agent_reward_hacking, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

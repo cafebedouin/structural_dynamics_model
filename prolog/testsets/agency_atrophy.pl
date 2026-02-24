@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(agency_atrophy, rope,
 % Detects high extraction (0.88) and suppression (0.79) masking as essential
 % coordination. The presence of both beneficiaries and victims, plus active
 % enforcement (via friction), confirms the Tangled Rope structure.
-constraint_indexing:constraint_classification(agency_atrophy, tangled_rope,
+constraint_indexing:constraint_classification(agency_atrophy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(agency_atrophy, tangled_rope,
 % Theater ratio (0.92) > 0.70 triggers Piton: the "Brain Training"
 % module is an inertial spike; it performatively signals cognitive health
 % while the underlying agency has already atrophied.
-constraint_indexing:constraint_classification(agency_atrophy, piton,
+constraint_indexing:constraint_classification(agency_atrophy, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -142,14 +142,14 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(agency_atrophy, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(agency_atrophy, tangled_rope,
+    constraint_indexing:constraint_classification(agency_atrophy, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.92 >= 0.70) correctly triggers the Piton classification.
     domain_priors:theater_ratio(agency_atrophy, TR),
     TR >= 0.70,
-    constraint_indexing:constraint_classification(agency_atrophy, piton,
+    constraint_indexing:constraint_classification(agency_atrophy, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-

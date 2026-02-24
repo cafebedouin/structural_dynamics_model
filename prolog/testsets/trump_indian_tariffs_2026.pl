@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(trump_indian_tariffs_2026, russian_state).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For Indian exporters, the tariffs remain a significant barrier, and their reduction is conditional on geopolitical actions outside their control.
 % χ = 0.55 * π(powerless:1.5) * σ(national:1.0) = 0.825. This is a clear Snare.
-constraint_indexing:constraint_classification(trump_indian_tariffs_2026, snare,
+constraint_indexing:constraint_classification(trump_indian_tariffs_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(trump_indian_tariffs_2026, rope,
 % The observer sees both the coordination function (US-India trade) and the asymmetric extraction (coercing India, punishing Russia).
 % χ = 0.55 * π(analytical:1.15) * σ(global:1.2) = 0.759. High extraction.
 % With beneficiaries, victims, and active enforcement, this is a canonical Tangled Rope.
-constraint_indexing:constraint_classification(trump_indian_tariffs_2026, tangled_rope,
+constraint_indexing:constraint_classification(trump_indian_tariffs_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_conditions) :-
     % Verify the analytical observer sees a Tangled Rope.
-    constraint_indexing:constraint_classification(trump_indian_tariffs_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(trump_indian_tariffs_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),

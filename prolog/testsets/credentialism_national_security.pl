@@ -132,7 +132,7 @@ narrative_ontology:constraint_victim(credentialism_national_security, non_creden
 % Agent who bears the most extraction (non_credentialed_outsiders).
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 % For this group, the constraint is a pure barrier with no coordination benefit.
-constraint_indexing:constraint_classification(credentialism_national_security, snare,
+constraint_indexing:constraint_classification(credentialism_national_security, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(credentialism_national_security, r
 % The observer sees both the coordination function and the severe asymmetric
 % extraction, classifying it as a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(credentialism_national_security, tangled_rope,
+constraint_indexing:constraint_classification(credentialism_national_security, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

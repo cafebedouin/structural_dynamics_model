@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(protocol_drift_accumulation, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.83) and suppression (0.70) masking as essential
 % coordination. It has beneficiaries, victims, and requires enforcement.
-constraint_indexing:constraint_classification(protocol_drift_accumulation, tangled_rope,
+constraint_indexing:constraint_classification(protocol_drift_accumulation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,7 +138,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(protocol_drift_accumulation, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(protocol_drift_accumulation, tangled_rope,
+    constraint_indexing:constraint_classification(protocol_drift_accumulation, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

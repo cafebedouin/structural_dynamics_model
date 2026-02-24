@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(indo_german_defense_pact, indian_government
 % They see a massive, multi-decade financial drain with indirect benefits,
 % paying for systems that create foreign, not domestic, value.
 % Engine derives: victim + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ -> SNARE
-constraint_indexing:constraint_classification(indo_german_defense_pact, snare,
+constraint_indexing:constraint_classification(indo_german_defense_pact, naturalized,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(indo_german_defense_pact, rope,
 % It simultaneously pursues the coordination goal (strategic autonomy, modernization)
 % while bearing the costs and dependency risks of the extraction.
 % Engine derives: beneficiary/victim + constrained exit -> middling d -> f(d) > 0 -> TANGLED ROPE
-constraint_indexing:constraint_classification(indo_german_defense_pact, tangled_rope,
+constraint_indexing:constraint_classification(indo_german_defense_pact, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

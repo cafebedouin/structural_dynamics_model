@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(status_flattening_effect, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % High extraction (0.82) and high suppression (0.75), combined with a
 % coordination function and active enforcement, trigger the hybrid Tangled Rope signature.
-constraint_indexing:constraint_classification(status_flattening_effect, tangled_rope,
+constraint_indexing:constraint_classification(status_flattening_effect, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -123,7 +123,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(status_flattening_effect, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(status_flattening_effect, tangled_rope,
+    constraint_indexing:constraint_classification(status_flattening_effect, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(extraction_mandatrophy) :-

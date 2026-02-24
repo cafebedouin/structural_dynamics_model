@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(ia_digital_preservation, copyright_holders)
 % For the user, the constraint is a trap where access to knowledge is
 % precarious and subject to sudden removal by court order.
 % χ = 0.58 * π(powerless=1.5) * σ(global=1.2) = 1.044. A powerful Snare.
-constraint_indexing:constraint_classification(ia_digital_preservation, snare,
+constraint_indexing:constraint_classification(ia_digital_preservation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(ia_digital_preservation, snare,
 % From the IA's internal perspective, it is a pure coordination mechanism for
 % digital history, creating a shared cultural record.
 % χ = 0.58 * π(institutional=-0.2) * σ(global=1.2) = -0.139. A clear Rope.
-constraint_indexing:constraint_classification(ia_digital_preservation, rope,
+constraint_indexing:constraint_classification(ia_digital_preservation, scaffold,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(mobile),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(ia_digital_preservation, rope,
 % function (beneficiaries exist) but also creates asymmetric extraction (victims exist)
 % and requires active enforcement (legal battles). This is the canonical Tangled Rope signature.
 % χ = 0.58 * π(analytical=1.15) * σ(global=1.2) = 0.80.
-constraint_indexing:constraint_classification(ia_digital_preservation, tangled_rope,
+constraint_indexing:constraint_classification(ia_digital_preservation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -140,9 +140,9 @@ constraint_indexing:constraint_classification(ia_digital_preservation, scaffold,
 
 test(perspectival_gap) :-
     % Verify the core gap: IA sees a Rope, users see a Snare.
-    constraint_indexing:constraint_classification(ia_digital_preservation, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(ia_digital_preservation, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ia_digital_preservation, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ia_digital_preservation, scaffold, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(ia_digital_preservation, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ia_digital_preservation, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify that the conditions for a Tangled Rope classification are met.

@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(the_wall_procedural_barrier, intelligence_g
 % For the field agent, The Wall was an incomprehensible, immovable bureaucratic
 % obstacle. It was a fact of their job they could not change or reason with,
 % directly impeding their ability to act on information.
-constraint_indexing:constraint_classification(the_wall_procedural_barrier, mountain,
+constraint_indexing:constraint_classification(the_wall_procedural_barrier, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

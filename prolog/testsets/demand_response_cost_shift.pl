@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(demand_response_cost_shift, low_income_hous
 % means to access the benefits. Their trapped status and victimhood derive a
 % high directionality (d ≈ 0.95), making effective extraction χ very high.
 % From this perspective, the constraint is a pure Snare.
-constraint_indexing:constraint_classification(demand_response_cost_shift, snare,
+constraint_indexing:constraint_classification(demand_response_cost_shift, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

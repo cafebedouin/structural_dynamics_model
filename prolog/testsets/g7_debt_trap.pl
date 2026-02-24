@@ -107,7 +107,7 @@ narrative_ontology:constraint_victim(g7_debt_trap, developing_nations).
    ========================================================================== */
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-constraint_indexing:constraint_classification(g7_debt_trap, snare,
+constraint_indexing:constraint_classification(g7_debt_trap, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -121,14 +121,14 @@ constraint_indexing:constraint_classification(g7_debt_trap, rope,
             spatial_scope(global))).
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-constraint_indexing:constraint_classification(g7_debt_trap, tangled_rope,
+constraint_indexing:constraint_classification(g7_debt_trap, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
 % PERSPECTIVE 4: LOCAL ELITES IN DEVELOPING NATIONS
-constraint_indexing:constraint_classification(g7_debt_trap, rope,
+constraint_indexing:constraint_classification(g7_debt_trap, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),

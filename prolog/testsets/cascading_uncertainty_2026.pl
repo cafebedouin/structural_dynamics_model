@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(cascading_uncertainty_2026, rope,
 % With high extraction (0.75), suppression (0.88), a clear coordination function
 % (defense), asymmetric extraction (loss of social cohesion), and active enforcement,
 % the system is a canonical Tangled Rope.
-constraint_indexing:constraint_classification(cascading_uncertainty_2026, tangled_rope,
+constraint_indexing:constraint_classification(cascading_uncertainty_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(cascading_uncertainty_2026, tangle
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(cascading_uncertainty_2026, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(cascading_uncertainty_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(cascading_uncertainty_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cascading_uncertainty_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_conditions_met) :-
     domain_priors:base_extractiveness(cascading_uncertainty_2026, E), E >= 0.50,

@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(hu_2026_election_rules, opposition_voters).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The opposition voter views the system as a Snare; gerrymandered districts
 % (spatial_scope: national) act as a trap where individual votes are diluted.
-constraint_indexing:constraint_classification(hu_2026_election_rules, snare,
+constraint_indexing:constraint_classification(hu_2026_election_rules, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(hu_2026_election_rules, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Historical analysis detects high extraction (0.58) combined with coordination functions.
 % This is a classic Tangled Rope where the "extraction" is baked into the "coordination."
-constraint_indexing:constraint_classification(hu_2026_election_rules, tangled_rope,
+constraint_indexing:constraint_classification(hu_2026_election_rules, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -122,9 +122,9 @@ constraint_indexing:constraint_classification(hu_2026_election_rules, tangled_ro
 
 test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
-    constraint_indexing:constraint_classification(hu_2026_election_rules, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hu_2026_election_rules, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hu_2026_election_rules, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(hu_2026_election_rules, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(hu_2026_election_rules, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     narrative_ontology:constraint_metric(hu_2026_election_rules, extractiveness, E),

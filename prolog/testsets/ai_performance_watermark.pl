@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(ai_performance_watermark, independent_creat
 % This agent is a victim of the compliance overhead and licensing costs
 % enabled by the watermarking system. With trapped exit options, the engine
 % derives a very high d value (d ≈ 0.95), leading to a classification of Snare.
-constraint_indexing:constraint_classification(ai_performance_watermark, snare,
+constraint_indexing:constraint_classification(ai_performance_watermark, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(ai_performance_watermark, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Sees both the genuine coordination function (authenticity standard) and the
 % asymmetric extraction. With high ε and suppression, this is a classic Tangled Rope.
-constraint_indexing:constraint_classification(ai_performance_watermark, tangled_rope,
+constraint_indexing:constraint_classification(ai_performance_watermark, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(ai_performance_watermark, snare,
 % inability to fully exit the human-talent-based market. The engine derives
 % a moderate d value, classifying this as a Tangled Rope, acknowledging
 % both the benefits and the costs they experience.
-constraint_indexing:constraint_classification(ai_performance_watermark, tangled_rope,
+constraint_indexing:constraint_classification(ai_performance_watermark, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -178,9 +178,9 @@ constraint_indexing:constraint_classification(ai_performance_watermark, tangled_
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless target (Snare) and institutional beneficiary (Rope).
-    constraint_indexing:constraint_classification(ai_performance_watermark, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ai_performance_watermark, naturalized, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(ai_performance_watermark, rope, context(agent_power(institutional), exit_options(arbitrage), _, _)),
-    constraint_indexing:constraint_classification(ai_performance_watermark, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ai_performance_watermark, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements) :-
     % A Tangled Rope requires a beneficiary, a victim, and active enforcement.

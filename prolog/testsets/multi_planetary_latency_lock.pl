@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(multi_planetary_latency_lock, rope
 % The observer sees both the coordination function for Earth and the asymmetric
 % extraction from the colonies, supported by active enforcement.
 % Effective extraction χ = 0.75 * 1.15 * 1.0 = 0.8625 (Tangled Rope).
-constraint_indexing:constraint_classification(multi_planetary_latency_lock, tangled_rope,
+constraint_indexing:constraint_classification(multi_planetary_latency_lock, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,7 +128,7 @@ test(perspectival_gap) :-
     % Verify the gap between the colonist (Snare) and the consortium (Rope).
     constraint_indexing:constraint_classification(multi_planetary_latency_lock, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(multi_planetary_latency_lock, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(multi_planetary_latency_lock, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(multi_planetary_latency_lock, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify that all three requirements for Tangled Rope are met.

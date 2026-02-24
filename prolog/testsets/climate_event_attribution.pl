@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(climate_event_attribution, rope,
 % The analytical view sees both the coordination function and the asymmetric
 % extraction. The high ε and suppression, combined with both beneficiary and
 % victim groups, makes this a classic Tangled Rope.
-constraint_indexing:constraint_classification(climate_event_attribution, tangled_rope,
+constraint_indexing:constraint_classification(climate_event_attribution, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(climate_event_attribution, tangled
 % Vulnerable nations are powerless and trapped by geography, but this constraint
 % is a pure benefit to them, providing leverage for climate finance. This shows
 % that being 'powerless' does not automatically imply being a victim of every constraint.
-constraint_indexing:constraint_classification(climate_event_attribution, rope,
+constraint_indexing:constraint_classification(climate_event_attribution, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),

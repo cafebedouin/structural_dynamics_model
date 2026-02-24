@@ -129,7 +129,7 @@ narrative_ontology:constraint_victim(eu_ev_tariff_wall, european_consumers).
 % PERSPECTIVE 1: THE PRIMARY TARGET (European Consumers)
 % As victims with no exit, they perceive the tariffs as a pure Snare.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(eu_ev_tariff_wall, snare,
+constraint_indexing:constraint_classification(eu_ev_tariff_wall, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(eu_ev_tariff_wall, rope,
 % Sees both the coordination function and the asymmetric extraction, classifying it as a Tangled Rope.
 % This is the basis for the constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(eu_ev_tariff_wall, tangled_rope,
+constraint_indexing:constraint_classification(eu_ev_tariff_wall, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -195,7 +195,7 @@ test(perspectival_gap_chinese_vs_european_industry, [nondet]) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view must resolve the perspectival gaps into a Tangled Rope.
-    constraint_indexing:constraint_classification(eu_ev_tariff_wall, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(eu_ev_tariff_wall, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_conditions_met) :-
     % Verify that all structural preconditions for a Tangled Rope are present.

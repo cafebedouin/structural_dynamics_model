@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(us_suburban_zoning_2025, rope,
 % severe asymmetric extraction. Combined with active enforcement, this is a
 % canonical Tangled Rope.
 % χ = 0.70 (ε) * 1.15 (π(analytical)) * 1.2 (σ(global)) = 0.966.
-constraint_indexing:constraint_classification(us_suburban_zoning_2025, tangled_rope,
+constraint_indexing:constraint_classification(us_suburban_zoning_2025, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

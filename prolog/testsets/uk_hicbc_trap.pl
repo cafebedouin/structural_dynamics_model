@@ -130,7 +130,7 @@ narrative_ontology:constraint_victim(uk_hicbc_trap, single_earner_households_60k
 % without significant career/financial changes (trapped).
 % The engine derives d ≈ 0.95, giving a high f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.0 = 0.78. This exceeds the Snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(uk_hicbc_trap, snare,
+constraint_indexing:constraint_classification(uk_hicbc_trap, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(uk_hicbc_trap, rope,
 % Using global scope σ(S)=1.2 amplifies the perceived extraction.
 % χ = 0.55 * 1.15 * 1.2 = 0.76. This is within the Tangled Rope range (0.40 ≤ χ ≤ 0.90),
 % and all structural requirements (beneficiary, victim, enforcement) are met.
-constraint_indexing:constraint_classification(uk_hicbc_trap, tangled_rope,
+constraint_indexing:constraint_classification(uk_hicbc_trap, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -168,12 +168,12 @@ constraint_indexing:constraint_classification(uk_hicbc_trap, tangled_rope,
 
 test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
     % Verify the core perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(uk_hicbc_trap, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(uk_hicbc_trap, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(uk_hicbc_trap, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
     % Verify the analytical observer sees the hybrid nature.
-    constraint_indexing:constraint_classification(uk_hicbc_trap, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(uk_hicbc_trap, snare, context(agent_power(analytical), _, _, _)).
 
 test(structural_requirements_for_tangled_rope_met) :-
     % The analytical claim is Tangled Rope, so its gates must be satisfied.

@@ -97,7 +97,7 @@ narrative_ontology:constraint_beneficiary(boundary_protocol, the_voyager).
 % PERSPECTIVE 1: THE EXTERNAL (MOUNTAIN)
 % To the person whose behavior triggers the boundary, it appears as an
 % immovable law of nature—they cannot change it through negotiation.
-constraint_indexing:constraint_classification(boundary_protocol, mountain,
+constraint_indexing:constraint_classification(boundary_protocol, rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

@@ -88,7 +88,7 @@ narrative_ontology:coordination_vitality(legitimacy_without_effectiveness, dead)
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % To the individual, the law is no longer a guide but a trap that extracts
 % taxes/compliance without providing safety.
-constraint_indexing:constraint_classification(legitimacy_without_effectiveness, snare,
+constraint_indexing:constraint_classification(legitimacy_without_effectiveness, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(legitimacy_without_effectiveness, 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % To the institution, the mandate is a Rope—the essential coordination tool
 % that prevents total social dissolution, justifying its own existence.
-constraint_indexing:constraint_classification(legitimacy_without_effectiveness, rope,
+constraint_indexing:constraint_classification(legitimacy_without_effectiveness, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(hygiene_disposal_protocol, snare,
 % PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
 % For the Doctor, this is a standard, non-extractive coordination mechanism for public health.
 % Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-constraint_indexing:constraint_classification(hygiene_disposal_protocol, rope,
+constraint_indexing:constraint_classification(hygiene_disposal_protocol, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(arbitrage),

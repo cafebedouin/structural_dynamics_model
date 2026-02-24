@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(narrative_overfitting, rope,
 % Detects high extraction (0.87) and high suppression (0.76) masking as
 % essential coordination (Rope). The presence of beneficiaries, victims, and
 % active enforcement confirms the Tangled Rope classification.
-constraint_indexing:constraint_classification(narrative_overfitting, tangled_rope,
+constraint_indexing:constraint_classification(narrative_overfitting, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,7 +128,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(narrative_overfitting, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(narrative_overfitting, tangled_rope,
+    constraint_indexing:constraint_classification(narrative_overfitting, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

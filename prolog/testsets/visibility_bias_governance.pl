@@ -82,7 +82,7 @@ narrative_ontology:constraint_victim(visibility_bias_governance, resident).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The individual is trapped by a system that claims everything is fine (based 
 % on metrics) while their actual environment is failing.
-constraint_indexing:constraint_classification(visibility_bias_governance, snare, 
+constraint_indexing:constraint_classification(visibility_bias_governance, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 

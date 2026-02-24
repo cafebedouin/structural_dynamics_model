@@ -111,7 +111,7 @@ narrative_ontology:constraint_victim(verification_bottleneck, funding_agencies).
    ========================================================================== */
 
 % PERSPECTIVE 1: FIELD EPISTEMIC RELIABILITY (SNARE) — Cannot exit the verification crisis; bears full cost of premature claims
-constraint_indexing:constraint_classification(verification_bottleneck, snare,
+constraint_indexing:constraint_classification(verification_bottleneck, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(verification_bottleneck, rope,
             spatial_scope(global))).
 
 % PERSPECTIVE 4: FUNDING AGENCY (TANGLED ROPE) — Needs breakthrough claims for political support but bears cost of false positives
-constraint_indexing:constraint_classification(verification_bottleneck, tangled_rope,
+constraint_indexing:constraint_classification(verification_bottleneck, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

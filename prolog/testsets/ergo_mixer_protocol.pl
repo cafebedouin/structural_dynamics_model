@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(ergo_mixer_protocol, small_pool_users).
 % PERSPECTIVE 1: THE USER IN A SMALL POOL (SNARE)
 % Agent who bears the risk of deanonymization. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(ergo_mixer_protocol, snare,
+constraint_indexing:constraint_classification(ergo_mixer_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -128,7 +128,7 @@ constraint_indexing:constraint_classification(ergo_mixer_protocol, snare,
 % PERSPECTIVE 2: THE PRIVACY-SEEKING USER (ROPE)
 % Agent who benefits from the coordination function. Engine derives d from:
 %   beneficiary membership + mobile exit → d ≈ 0.15 → f(d) ≈ -0.01 → low/negative χ
-constraint_indexing:constraint_classification(ergo_mixer_protocol, rope,
+constraint_indexing:constraint_classification(ergo_mixer_protocol, tangled_rope,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(mobile),
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(ergo_mixer_protocol, rope,
 % PERSPECTIVE 3: THE REGULATORY BODY / CHAIN ANALYST (SNARE)
 % This agent's function is suppressed by the protocol. They are a victim.
 % Engine derives d from: victim membership + constrained exit -> d ~ 0.9 -> f(d) ~ 1.35 -> high χ
-constraint_indexing:constraint_classification(ergo_mixer_protocol, snare,
+constraint_indexing:constraint_classification(ergo_mixer_protocol, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(constrained),

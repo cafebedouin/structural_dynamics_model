@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(optimization_fragility, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid signature of extreme coordination efficiency (Rope) 
 % entangled with massive, hidden systemic risk (Snare).
-constraint_indexing:constraint_classification(optimization_fragility, tangled_rope, 
+constraint_indexing:constraint_classification(optimization_fragility, snare, 
     context(agent_power(analytical), 
             time_horizon(historical), 
             exit_options(analytical), 
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
     constraint_indexing:constraint_classification(optimization_fragility, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(optimization_fragility, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(optimization_fragility, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(optimization_fragility, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify all three required properties for Tangled Rope are present.

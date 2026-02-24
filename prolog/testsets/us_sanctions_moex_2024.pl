@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(us_sanctions_moex_2024, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % An observer who sees both the coordination function and the asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(us_sanctions_moex_2024, tangled_rope,
+constraint_indexing:constraint_classification(us_sanctions_moex_2024, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(us_sanctions_moex_2024, tangled_ro
 % a direct victim with its operations fundamentally constrained.
 % victim membership + institutional power + trapped exit → high d → high χ
 % This demonstrates one institution snaring another.
-constraint_indexing:constraint_classification(us_sanctions_moex_2024, snare,
+constraint_indexing:constraint_classification(us_sanctions_moex_2024, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(trapped),
@@ -171,7 +171,7 @@ test(perspectival_gap_inter_institutional) :-
     TypeTrapped \= TypeArbitrage.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_sanctions_moex_2024, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_sanctions_moex_2024, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     narrative_ontology:constraint_beneficiary(us_sanctions_moex_2024, _),

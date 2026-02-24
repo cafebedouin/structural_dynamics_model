@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(toxic_social_infection, rope,
 % Default analytical context (civilizational/analytical/global).
 % The high extraction, suppression, and need for enforcement, combined with a
 % clear coordination function for the beneficiary, make this a Tangled Rope.
-constraint_indexing:constraint_classification(toxic_social_infection, tangled_rope,
+constraint_indexing:constraint_classification(toxic_social_infection, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -134,7 +134,7 @@ test(threshold_validation_high_extraction) :-
     E >= 0.46. % Ensures it's a high-extraction Snare/Tangled Rope.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(toxic_social_infection, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(toxic_social_infection, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(toxic_social_infection_tests).
 

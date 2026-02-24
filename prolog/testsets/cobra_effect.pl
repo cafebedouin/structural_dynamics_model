@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(cobra_effect, public_safety_subjects).
 % PERSPECTIVE 1: THE BITTEN CITIZEN (SNARE)
 % Experiences the policy's failure as a direct, inescapable threat to safety.
 % χ = 0.60 * 1.5 (powerless) * 0.8 (local) = 0.72
-constraint_indexing:constraint_classification(cobra_effect, snare,
+constraint_indexing:constraint_classification(cobra_effect, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -111,7 +111,7 @@ narrative_ontology:constraint_victim(nfl_superbowl_marketing_regulation, competi
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
 % Small businesses and non-sponsors are completely excluded from the marketing ecosystem.
-constraint_indexing:constraint_classification(nfl_superbowl_marketing_regulation, snare,
+constraint_indexing:constraint_classification(nfl_superbowl_marketing_regulation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(nfl_superbowl_marketing_regulation
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % The constraint has elements of both coordination (brand protection) and extraction (rent-seeking)
-constraint_indexing:constraint_classification(nfl_superbowl_marketing_regulation, tangled_rope,
+constraint_indexing:constraint_classification(nfl_superbowl_marketing_regulation, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

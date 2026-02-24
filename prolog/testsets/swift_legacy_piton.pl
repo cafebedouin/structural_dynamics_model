@@ -88,7 +88,7 @@ narrative_ontology:coordination_vitality(swift_legacy_piton, dead).
 % PERSPECTIVE 1: THE GLOBAL SOUTH MERCHANT (SNARE)
 % To the merchant, SWIFT is a Snare—a mandatory, slow, and extractive trap with no viable state-sanctioned exit.
 % χ = 0.49 (ε) * 1.5 (π(powerless)) * 1.2 (σ(global)) = 0.882
-constraint_indexing:constraint_classification(swift_legacy_piton, snare,
+constraint_indexing:constraint_classification(swift_legacy_piton, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(swift_legacy_piton, snare,
 % PERSPECTIVE 2: THE CENTRAL BANK (ROPE)
 % To the state, it remains a Rope—the only reliable way to coordinate global liquidity and enforcement.
 % χ = 0.49 (ε) * -0.2 (π(institutional)) * 1.2 (σ(global)) = -0.1176 (felt as a benefit/necessity)
-constraint_indexing:constraint_classification(swift_legacy_piton, rope,
+constraint_indexing:constraint_classification(swift_legacy_piton, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

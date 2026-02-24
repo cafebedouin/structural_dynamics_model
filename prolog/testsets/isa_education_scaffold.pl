@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(isa_education_scaffold, repaying_graduate).
 % During the repayment window, the graduate feels the income share as a Snare.
 % Effective extraction χ = 0.42 * π(powerless:1.5) * σ(national:1.0) = 0.63.
 % This high perceived extraction limits biographical mobility and savings.
-constraint_indexing:constraint_classification(isa_education_scaffold, snare,
+constraint_indexing:constraint_classification(isa_education_scaffold, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(isa_education_scaffold, snare,
 % diversifying risk across a cohort.
 % Effective extraction χ = 0.42 * π(institutional:-0.2) * σ(global:1.2) = -0.10.
 % The negative value indicates it's seen as a value-generating investment.
-constraint_indexing:constraint_classification(isa_education_scaffold, rope,
+constraint_indexing:constraint_classification(isa_education_scaffold, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(isa_education_scaffold, rope,
 % Analytically, the constraint is a Scaffold. Its primary function is temporary
 % support, and its existence is contingent on the sunset clause which prevents
 % it from becoming a permanent Snare.
-constraint_indexing:constraint_classification(isa_education_scaffold, scaffold,
+constraint_indexing:constraint_classification(isa_education_scaffold, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -126,8 +126,8 @@ constraint_indexing:constraint_classification(isa_education_scaffold, scaffold,
 
 test(perspectival_gap_snare_vs_rope) :-
     % Verify the core perspectival gap between the subject and beneficiary.
-    constraint_indexing:constraint_classification(isa_education_scaffold, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(isa_education_scaffold, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(isa_education_scaffold, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(isa_education_scaffold, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(scaffold_structural_validation) :-
     % A constraint can only be a Scaffold if a sunset clause is declared.

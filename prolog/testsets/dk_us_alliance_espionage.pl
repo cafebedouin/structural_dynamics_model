@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(dk_us_alliance_espionage, intelligence_whis
 % As a victim with constrained exit options within the alliance, the derived
 % directionality 'd' is high (d ≈ 0.9), leading to high effective extraction (χ).
 % The coordination function appears broken, making the constraint feel like a Snare.
-constraint_indexing:constraint_classification(dk_us_alliance_espionage, snare,
+constraint_indexing:constraint_classification(dk_us_alliance_espionage, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(dk_us_alliance_espionage, rope,
 % The analyst sees both the genuine coordination function of the alliance AND
 % the asymmetric extraction. This dual nature is the definition of a Tangled Rope.
 % This is the basis for the constraint_claim.
-constraint_indexing:constraint_classification(dk_us_alliance_espionage, tangled_rope,
+constraint_indexing:constraint_classification(dk_us_alliance_espionage, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(dk_us_alliance_espionage, tangled_
 % attempts to expose the activity. They are trapped by secrecy laws and face
 % severe personal and legal repercussions. For them, the entire apparatus of
 % state secrecy that enables this unaccountable action is a pure Snare.
-constraint_indexing:constraint_classification(dk_us_alliance_espionage, snare,
+constraint_indexing:constraint_classification(dk_us_alliance_espionage, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -187,7 +187,7 @@ test(perspectival_gap_institutional, [nondet]) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Ensure the analytical perspective correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(dk_us_alliance_espionage, tangled_rope,
+    constraint_indexing:constraint_classification(dk_us_alliance_espionage, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-

@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(integrated_digital_governance_stac
 % active enforcement to maintain its integrity. This combination of high-efficiency
 % coordination and high-coercion extraction is the definition of a Tangled Rope.
 % χ = 0.90 * 1.15 (analytical) * 1.2 (global) = 1.242 (Tangled Rope)
-constraint_indexing:constraint_classification(integrated_digital_governance_stack, tangled_rope,
+constraint_indexing:constraint_classification(integrated_digital_governance_stack, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

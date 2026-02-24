@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(openbsd_netiquette_protocol, newcomers_and_
 % non-compliance leads to being ignored (social liquidation), extracting their
 % time and effort with no return.
 % Math: χ = 0.60 * f(d=0.95) * σ(local=0.8) ≈ 0.60 * 1.42 * 0.8 ≈ 0.68 (Snare)
-constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare,
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(openbsd_netiquette_protocol, rope,
 % significant "homework" labor (Snare aspect) for every contribution. They
 % experience both the coordination function and the asymmetric extraction.
 % Math: χ = 0.60 * f(d=0.85) * σ(global=1.2) ≈ 0.60 * 1.15 * 1.2 ≈ 0.83 (Tangled Rope)
-constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope,
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangl
 % coordination function that is sustained by high, asymmetric extraction and
 % active enforcement. This is the definition of a Tangled Rope.
 % Math: χ = 0.60 * f(d=0.72) * σ(global=1.2) ≈ 0.60 * 1.15 * 1.2 ≈ 0.83 (Tangled Rope)
-constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope,
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -172,9 +172,9 @@ constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangl
 
 test(perspectival_gap) :-
     % Verify the gap between the newcomer (target) and core dev (beneficiary).
-    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(openbsd_netiquette_protocol, rope, context(agent_power(institutional), _, arbitrage, _)),
-    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify the base metrics align with a high-extraction Tangled Rope/Snare.

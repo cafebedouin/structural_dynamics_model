@@ -130,7 +130,7 @@ narrative_ontology:constraint_victim(jordan_microfinance, low_income_borrowers).
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.60 * 1.42 * 0.8 (local scope) = 0.68.
 % With ε=0.60, suppression=0.75, and χ=0.68, this meets the Snare thresholds.
-constraint_indexing:constraint_classification(jordan_microfinance, snare,
+constraint_indexing:constraint_classification(jordan_microfinance, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(jordan_microfinance, rope,
 % χ = 0.60 * 1.15 * 1.2 (global scope) = 0.828.
 % With ε=0.60, suppression=0.75, χ=0.83, and all three Tangled Rope gate
 % conditions met, this is a clear Tangled Rope.
-constraint_indexing:constraint_classification(jordan_microfinance, tangled_rope,
+constraint_indexing:constraint_classification(jordan_microfinance, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -174,7 +174,7 @@ test(perspectival_gap) :-
     % Verify the core perspectival gap between target (Snare) and beneficiary (Rope).
     constraint_indexing:constraint_classification(jordan_microfinance, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
     constraint_indexing:constraint_classification(jordan_microfinance, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(jordan_microfinance, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(jordan_microfinance, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gates_pass) :-
     % A constraint is only a Tangled Rope if it has a coordination function

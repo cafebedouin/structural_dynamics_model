@@ -138,7 +138,7 @@ narrative_ontology:constraint_victim(hasbro_licensing_restriction, toy_licensees
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % A small startup licensee with no negotiating power. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(hasbro_licensing_restriction, snare,
+constraint_indexing:constraint_classification(hasbro_licensing_restriction, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(hasbro_licensing_restriction, tang
 % An established licensee with more resources but still subject to the terms.
 % Their 'constrained' exit is better than 'trapped', but the high base
 % extractiveness still results in a Snare classification.
-constraint_indexing:constraint_classification(hasbro_licensing_restriction, snare,
+constraint_indexing:constraint_classification(hasbro_licensing_restriction, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),

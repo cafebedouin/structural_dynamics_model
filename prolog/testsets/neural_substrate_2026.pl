@@ -100,7 +100,7 @@ narrative_ontology:constraint_victim(neural_substrate_2026, individual_cognitive
 % From the perspective of the biological subject, tFUS is a Snare:
 % non-invasive modulation of the "causal" nature of their experience.
 % χ = 0.52 * 1.5 (powerless) * 0.8 (local) = 0.624
-constraint_indexing:constraint_classification(neural_substrate_2026, snare,
+constraint_indexing:constraint_classification(neural_substrate_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(neural_substrate_2026, rope,
 % Analysts see a Tangled Rope: Genuine coordination of knowledge mixed with
 % asymmetric extraction of neuronal control.
 % χ = 0.52 * 1.15 (analytical) * 1.2 (global) = 0.7176
-constraint_indexing:constraint_classification(neural_substrate_2026, tangled_rope,
+constraint_indexing:constraint_classification(neural_substrate_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -142,7 +142,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(neural_substrate_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(neural_substrate_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_conditions_met) :-
     % Verify the structural properties for a Tangled Rope are declared.

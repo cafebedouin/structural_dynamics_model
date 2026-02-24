@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(car_ownership_norm_us, low_middle_income_ho
 % but also a major financial burden with no viable alternatives.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
 % χ = 0.55 * 1.42 * 1.0 (national) ≈ 0.78. This meets Snare criteria (χ ≥ 0.66).
-constraint_indexing:constraint_classification(car_ownership_norm_us, snare,
+constraint_indexing:constraint_classification(car_ownership_norm_us, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(car_ownership_norm_us, rope,
 % coordination function and the asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for this perspective.
 % χ = 0.55 * 1.15 * 1.0 ≈ 0.63. This is in the Tangled Rope range (0.40 ≤ χ ≤ 0.90).
-constraint_indexing:constraint_classification(car_ownership_norm_us, tangled_rope,
+constraint_indexing:constraint_classification(car_ownership_norm_us, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -170,7 +170,7 @@ test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(car_ownership_norm_us, tangled_rope,
+    constraint_indexing:constraint_classification(car_ownership_norm_us, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-

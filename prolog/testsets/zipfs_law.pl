@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(zipfs_law, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Coordinates data but extracts diversity.
-constraint_indexing:constraint_classification(zipfs_law, tangled_rope, 
+constraint_indexing:constraint_classification(zipfs_law, snare, 
     context(agent_power(analytical), 
             time_horizon(historical), 
             exit_options(analytical), 

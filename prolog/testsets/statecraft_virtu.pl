@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(statecraft_virtu, rope,
 % An analyst sees both the coordination function (providing stability) and the
 % severe, asymmetric extraction required to maintain it. It requires active
 % enforcement, benefits the ruler, and victimizes rivals. This is a classic Tangled Rope.
-constraint_indexing:constraint_classification(statecraft_virtu, tangled_rope,
+constraint_indexing:constraint_classification(statecraft_virtu, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_analytical_view) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(statecraft_virtu, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(statecraft_virtu, snare, context(agent_power(analytical), _, _, _)),
     writeln('Analytical classification as Tangled Rope confirmed.').
 
 test(tangled_rope_structural_requirements) :-

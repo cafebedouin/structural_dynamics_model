@@ -136,7 +136,7 @@ narrative_ontology:constraint_victim(us_taiwan_arms_sales, prc_containment_targe
 % group) and with no ability to exit the national system, the individual
 % taxpayer experiences this as a pure extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(us_taiwan_arms_sales, snare,
+constraint_indexing:constraint_classification(us_taiwan_arms_sales, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(us_taiwan_arms_sales, rope,
 % The analytical observer sees both the coordination function (security) and
 % the asymmetric extraction (financial, geopolitical). The high base extraction,
 % high suppression, and active enforcement lead to a Tangled Rope classification.
-constraint_indexing:constraint_classification(us_taiwan_arms_sales, tangled_rope,
+constraint_indexing:constraint_classification(us_taiwan_arms_sales, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -190,7 +190,7 @@ constraint_indexing:constraint_classification(us_taiwan_arms_sales, rope,
 % As a designated victim ('prc_containment_target') with 'constrained' exit,
 % the PRC experiences the policy as pure geopolitical coercion with no
 % coordination benefit. The derived d is high, making this a clear Snare.
-constraint_indexing:constraint_classification(us_taiwan_arms_sales, snare,
+constraint_indexing:constraint_classification(us_taiwan_arms_sales, rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(constrained),
@@ -222,7 +222,7 @@ test(inter_institutional_gap_us_vs_prc) :-
     assertion(member(snare, Types)).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_taiwan_arms_sales, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(us_taiwan_arms_sales, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     narrative_ontology:constraint_beneficiary(us_taiwan_arms_sales, _),

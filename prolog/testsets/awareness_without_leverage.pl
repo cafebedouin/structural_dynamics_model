@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(awareness_without_leverage, rope,
 % The combination of high extraction, suppression, a coordination function
 % (beneficiary), asymmetric extraction (victim), and active enforcement
 % classifies this as a Tangled Rope.
-constraint_indexing:constraint_classification(awareness_without_leverage, tangled_rope,
+constraint_indexing:constraint_classification(awareness_without_leverage, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

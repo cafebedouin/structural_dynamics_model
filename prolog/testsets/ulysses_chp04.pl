@@ -84,7 +84,7 @@ domain_priors:requires_active_enforcement(ulysses_calypso_1904). % Molly's calls
 % PERSPECTIVE 1: LEOPOLD BLOOM (SNARE)
 % Effective Extraction: 0.47 * 1.5 (powerless) * 0.8 (local) = 0.564.
 % Perceived as a trap of "useless" affection and looming "destiny" (Milly/Molly).
-constraint_indexing:constraint_classification(ulysses_calypso_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_calypso_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(ulysses_calypso_1904, snare,
 % PERSPECTIVE 2: MOLLY BLOOM (ROPE)
 % Effective Extraction: 0.47 * -0.2 (institutional) * 0.8 = -0.0752.
 % Viewed as the essential coordination of being "parched" and needing tea.
-constraint_indexing:constraint_classification(ulysses_calypso_1904, rope, 
+constraint_indexing:constraint_classification(ulysses_calypso_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 

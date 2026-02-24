@@ -146,7 +146,7 @@ narrative_ontology:constraint_victim(us_arms_transfer_policy, civilian_populatio
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(us_arms_transfer_policy, snare,
+constraint_indexing:constraint_classification(us_arms_transfer_policy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(us_arms_transfer_policy, rope,
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(us_arms_transfer_policy, tangled_rope,
+constraint_indexing:constraint_classification(us_arms_transfer_policy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

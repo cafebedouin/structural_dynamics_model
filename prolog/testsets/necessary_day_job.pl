@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(necessary_day_job, rope,
 % extraction that is actively enforced by economic precarity. It is a functional
 % system built on an exploitative foundation.
 % χ = 0.65 * π(analytical:1.15) * σ(global:1.2) = 0.897
-constraint_indexing:constraint_classification(necessary_day_job, tangled_rope,
+constraint_indexing:constraint_classification(necessary_day_job, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

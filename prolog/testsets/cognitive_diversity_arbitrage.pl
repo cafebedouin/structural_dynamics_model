@@ -90,7 +90,7 @@ narrative_ontology:constraint_victim(cognitive_diversity_arbitrage, unsupported_
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The unsupported neurodivergent employee who must "mask" to fit in. The
 % pressure to conform while their unique skills are extracted feels like a trap.
-constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, snare,
+constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, sna
 % The corporation views this as a pure coordination benefit—a rope for harnessing
 % diverse talent to achieve better outcomes for everyone. Extraction is framed as
 % productivity and is not felt by the institution.
-constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, rope,
+constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

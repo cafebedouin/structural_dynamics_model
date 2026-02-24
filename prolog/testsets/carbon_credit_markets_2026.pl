@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(carbon_credit_markets_2026, developing_nati
 % For small businesses or consumers, the system is an extractive trap. Compliance costs are high,
 % and price increases are non-negotiable. The high base extraction (0.55) scaled by powerlessness (1.5)
 % results in a very high effective extraction, classifying it as a Snare.
-constraint_indexing:constraint_classification(carbon_credit_markets_2026, snare,
+constraint_indexing:constraint_classification(carbon_credit_markets_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(carbon_credit_markets_2026, rope,
 % The analytical view, which considers both the coordination function (beneficiaries exist)
 % and the asymmetric extraction (victims exist), classifies this as a Tangled Rope.
 % It is a hybrid system that simultaneously coordinates and extracts.
-constraint_indexing:constraint_classification(carbon_credit_markets_2026, tangled_rope,
+constraint_indexing:constraint_classification(carbon_credit_markets_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -123,14 +123,14 @@ constraint_indexing:constraint_classification(carbon_credit_markets_2026, tangle
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless subject (Snare) and the institutional beneficiary (Rope).
-    constraint_indexing:constraint_classification(carbon_credit_markets_2026, snare,
+    constraint_indexing:constraint_classification(carbon_credit_markets_2026, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(carbon_credit_markets_2026, rope,
         context(agent_power(institutional), _, _, _)).
 
 test(tangled_rope_analytical_resolution) :-
     % Verify the analytical observer correctly identifies the hybrid Tangled Rope nature.
-    constraint_indexing:constraint_classification(carbon_credit_markets_2026, tangled_rope,
+    constraint_indexing:constraint_classification(carbon_credit_markets_2026, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_threshold) :-

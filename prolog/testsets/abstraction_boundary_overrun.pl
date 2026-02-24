@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(abstraction_boundary_overrun, rope
 % Detects high extraction (0.81) and suppression (0.69) masking as essential
 % coordination. The system has a genuine coordination function but also
 % imposes severe, asymmetric costs, requiring active enforcement to maintain.
-constraint_indexing:constraint_classification(abstraction_boundary_overrun, tangled_rope,
+constraint_indexing:constraint_classification(abstraction_boundary_overrun, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -131,7 +131,7 @@ test(perspectival_gap_snare_vs_rope) :-
 
 test(analytical_observer_detects_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature of the constraint.
-    constraint_indexing:constraint_classification(abstraction_boundary_overrun, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(abstraction_boundary_overrun, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(abstraction_boundary_overrun_tests).
 

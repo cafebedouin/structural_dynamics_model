@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(emergency_powers_ratchet, snare,
 % The state views the expanded powers as a Rope—the only way to coordinate
 % complex societal responses and maintain order in an increasingly
 % volatile environment.
-constraint_indexing:constraint_classification(emergency_powers_ratchet, rope,
+constraint_indexing:constraint_classification(emergency_powers_ratchet, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(emergency_powers_ratchet, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % High extraction (0.84) and suppression (0.78) with both coordination
 % and asymmetric extraction functions trigger the Tangled Rope signature.
-constraint_indexing:constraint_classification(emergency_powers_ratchet, tangled_rope,
+constraint_indexing:constraint_classification(emergency_powers_ratchet, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -142,9 +142,9 @@ test(perspectival_gap) :-
     % Verify Snare for the powerless citizen vs Rope for the institutional state.
     constraint_indexing:constraint_classification(emergency_powers_ratchet, snare,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(emergency_powers_ratchet, rope,
+    constraint_indexing:constraint_classification(emergency_powers_ratchet, scaffold,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(emergency_powers_ratchet, tangled_rope,
+    constraint_indexing:constraint_classification(emergency_powers_ratchet, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

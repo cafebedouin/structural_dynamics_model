@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(conversational_dogmas_interruption, individ
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The "Civilist" is silenced or steamrolled by the COI member.
 % χ = 0.55 * 1.5 (powerless) * 0.8 (local) = 0.66. Meets Snare threshold.
-constraint_indexing:constraint_classification(conversational_dogmas_interruption, snare,
+constraint_indexing:constraint_classification(conversational_dogmas_interruption, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(conversational_dogmas_interruption
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The COI member sees interruption as an efficient coordination tool.
 % χ = 0.55 * 1.0 (moderate) * 0.8 (local) = 0.44. Perceived as a coordination cost.
-constraint_indexing:constraint_classification(conversational_dogmas_interruption, rope,
+constraint_indexing:constraint_classification(conversational_dogmas_interruption, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(conversational_dogmas_interruption
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The analyst sees both the coordination function (beneficiaries) and the asymmetric
 % extraction (victims), classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(conversational_dogmas_interruption, tangled_rope,
+constraint_indexing:constraint_classification(conversational_dogmas_interruption, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

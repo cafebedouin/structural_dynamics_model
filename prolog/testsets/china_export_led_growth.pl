@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(china_export_led_growth, chinese_domestic_c
 % PERSPECTIVE 1: THE PRIMARY TARGET (FOREIGN MANUFACTURER)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(china_export_led_growth, snare,
+constraint_indexing:constraint_classification(china_export_led_growth, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(china_export_led_growth, tangled_r
 % As a victim with constrained exit options (tariffs are costly and politically
 % difficult), this institutional actor experiences significant extraction.
 % The derived d will be high for an institutional actor.
-constraint_indexing:constraint_classification(china_export_led_growth, tangled_rope,
+constraint_indexing:constraint_classification(china_export_led_growth, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -181,7 +181,7 @@ constraint_indexing:constraint_classification(china_export_led_growth, rope,
 
 test(perspectival_gap_target_beneficiary) :-
     % Verify perspectival gap between powerless target and institutional beneficiary.
-    constraint_indexing:constraint_classification(china_export_led_growth, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(china_export_led_growth, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(china_export_led_growth, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(perspectival_gap_inter_institutional) :-

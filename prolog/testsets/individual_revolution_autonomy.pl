@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(individual_revolution_autonomy, ro
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % χ = 0.75 * 1.15 (analytical) * 1.2 (global) = 1.035
 % High extraction + High suppression + Presence of Coordination (via beneficiary) = Tangled Rope.
-constraint_indexing:constraint_classification(individual_revolution_autonomy, tangled_rope,
+constraint_indexing:constraint_classification(individual_revolution_autonomy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

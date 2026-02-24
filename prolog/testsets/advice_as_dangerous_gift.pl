@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(advice_as_dangerous_gift, advice_seekers).
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % For Frodo, trapped by circumstance, bad advice is a snare; it forecloses
 % better paths and locks him into a course of action he did not fully author.
-constraint_indexing:constraint_classification(advice_as_dangerous_gift, snare,
+constraint_indexing:constraint_classification(advice_as_dangerous_gift, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

@@ -130,7 +130,7 @@ narrative_ontology:constraint_victim(carrier_deployment_deterrence, civilian_pop
 % threat that increases the risk of conflict, from which they cannot escape.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 % χ ≈ 0.55 * 1.42 * 0.9 (regional) ≈ 0.70. This meets the snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(carrier_deployment_deterrence, snare,
+constraint_indexing:constraint_classification(carrier_deployment_deterrence, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(carrier_deployment_deterrence, rop
 % extraction imposed on adversaries. This dual nature defines a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ ≈ 0.55 * 1.15 * 1.2 (global) ≈ 0.76. Fits Tangled Rope (0.40 ≤ χ ≤ 0.90, ε≥0.3, supp≥0.4).
-constraint_indexing:constraint_classification(carrier_deployment_deterrence, tangled_rope,
+constraint_indexing:constraint_classification(carrier_deployment_deterrence, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -205,7 +205,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical observer must see the full tangled structure.
-    constraint_indexing:constraint_classification(carrier_deployment_deterrence, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(carrier_deployment_deterrence, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_exit_difference) :-
     % Verify that different exit options for institutional actors are modeled.

@@ -97,7 +97,7 @@ narrative_ontology:coordination_vitality(moltbook_agent_theater, dead).
 % For human observers or those paying for the compute, the network is a
 % resource trap, consuming energy and attention for "A.I. slop".
 % χ = 0.70 * 1.5 (powerless) * 0.8 (local) = 0.84
-constraint_indexing:constraint_classification(moltbook_agent_theater, snare,
+constraint_indexing:constraint_classification(moltbook_agent_theater, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(moltbook_agent_theater, snare,
 % The institutional operators see it as a valuable coordination mechanism for
 % studying emergent agent behavior.
 % χ = 0.70 * -0.2 (institutional) * 1.0 (national) = -0.14 (felt as a benefit)
-constraint_indexing:constraint_classification(moltbook_agent_theater, rope,
+constraint_indexing:constraint_classification(moltbook_agent_theater, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

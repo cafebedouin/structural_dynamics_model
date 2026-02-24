@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(attention_market_cannibalization, 
 % Detects high extraction (0.91) and high suppression (0.84) masking as
 % essential coordination. The presence of beneficiaries, victims, and active
 % enforcement confirms the Tangled Rope classification.
-constraint_indexing:constraint_classification(attention_market_cannibalization, tangled_rope,
+constraint_indexing:constraint_classification(attention_market_cannibalization, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),

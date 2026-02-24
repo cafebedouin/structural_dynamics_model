@@ -85,7 +85,7 @@ narrative_ontology:constraint_victim(silklink_2026, legacy_intermediary_carriers
 % PERSPECTIVE 1: THE SYRIAN CITIZEN (ROPE)
 % For individual citizens, SilkLink is a Rope: a coordination tool that
 % restores connectivity and economic capacity previously destroyed by conflict.
-constraint_indexing:constraint_classification(silklink_2026, rope,
+constraint_indexing:constraint_classification(silklink_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(silklink_2026, scaffold,
 % PERSPECTIVE 2: THE REGIONAL DATA MARKET (ROPE)
 % For international hyperscalers, the project is a Rope: a new, reliable 
 % coordination path to bypass Red Sea congestion and reduce latency.
-constraint_indexing:constraint_classification(silklink_2026, rope, 
+constraint_indexing:constraint_classification(silklink_2026, tangled_rope, 
     context(agent_power(institutional), 
             time_horizon(civilizational), 
             exit_options(mobile), 
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(silklink_2026, rope,
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SCAFFOLD)
 % Analysts view SilkLink as a Scaffold: a temporary coordination structure
 % with a sunset clause, enabling Syria's digital transition at low extraction.
-constraint_indexing:constraint_classification(silklink_2026, scaffold,
+constraint_indexing:constraint_classification(silklink_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

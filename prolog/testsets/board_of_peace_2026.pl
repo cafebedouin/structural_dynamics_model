@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(board_of_peace_2026, legacy_international_b
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 %   χ = 0.48 (ε) * 1.42 (f(d)) * 1.0 (σ(National)) ≈ 0.68.
 %   With χ > 0.66 and suppression > 0.60, this is a Snare.
-constraint_indexing:constraint_classification(board_of_peace_2026, snare,
+constraint_indexing:constraint_classification(board_of_peace_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(board_of_peace_2026, tangled_rope,
 %   lower than for the analytical observer, reflecting its partial ability
 %   to mitigate the constraint's effects. This demonstrates a measurable
 %   perspectival gap between different institutional actors.
-constraint_indexing:constraint_classification(board_of_peace_2026, tangled_rope,
+constraint_indexing:constraint_classification(board_of_peace_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

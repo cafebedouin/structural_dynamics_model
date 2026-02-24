@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(us_venezuela_oil_pressure, rope,
 % The analytical view sees both the coordination function (for the US) and the
 % asymmetric extraction (from Venezuela). With high ε, high suppression, and active
 % enforcement, it fits the definition of a Tangled Rope perfectly.
-constraint_indexing:constraint_classification(us_venezuela_oil_pressure, tangled_rope,
+constraint_indexing:constraint_classification(us_venezuela_oil_pressure, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -179,7 +179,7 @@ constraint_indexing:constraint_classification(us_venezuela_oil_pressure, rope,
 % coercive. Its institutional power is undermined, and its exit options are
 % severely limited ('constrained'). It is a victim. The directionality `d` is
 % high, leading to a Tangled Rope classification that borders on Snare.
-constraint_indexing:constraint_classification(us_venezuela_oil_pressure, tangled_rope,
+constraint_indexing:constraint_classification(us_venezuela_oil_pressure, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -206,7 +206,7 @@ test(inter_institutional_gap) :-
 
 test(analytical_claim_matches_type) :-
     narrative_ontology:constraint_claim(us_venezuela_oil_pressure, tangled_rope),
-    constraint_indexing:constraint_classification(us_venezuela_oil_pressure, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(us_venezuela_oil_pressure, snare, context(agent_power(analytical), _, _, _)),
     format('Analytical claim matches Tangled Rope type.~n').
 
 test(tangled_rope_gates_pass) :-

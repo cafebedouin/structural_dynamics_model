@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(ai_superpowers_2026, snare,
 % PERSPECTIVE 2: THE CHINESE TECH GIANT (ROPE)
 % Giants like Tencent and Alibaba view AI as a Rope: essential coordination 
 % to extend existing apps (WeChat, Douyin) and win the consumer market.
-constraint_indexing:constraint_classification(ai_superpowers_2026, rope, 
+constraint_indexing:constraint_classification(ai_superpowers_2026, scaffold, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -124,7 +124,7 @@ narrative_ontology:has_sunset_clause(ai_superpowers_2026).
 
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(ai_superpowers_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ai_superpowers_2026, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ai_superpowers_2026, scaffold, context(agent_power(institutional), _, _, _)).
 
 test(theater_check) :-
     domain_priors:theater_ratio(ai_superpowers_2026, TR),

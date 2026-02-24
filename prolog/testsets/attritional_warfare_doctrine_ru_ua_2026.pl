@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context. Sees the coordination and the extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, tangled_rope,
+constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua
 % An institutional actor, but structurally a victim forced to operate within
 % a system they did not choose.
 % Engine derives d from: victim membership + constrained exit → d ≈ 0.7-0.8 → high χ
-constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, tangled_rope,
+constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

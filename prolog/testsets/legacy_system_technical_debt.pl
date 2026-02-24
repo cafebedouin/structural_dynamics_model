@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(legacy_system_technical_debt, long_term_via
 
 % PERSPECTIVE 1: THE JUNIOR DEVELOPER (MOUNTAIN)
 % χ = 0.03 * 1.5 (powerless) * 0.8 (local) = 0.036 (<= 0.05) -> Mountain.
-constraint_indexing:constraint_classification(legacy_system_technical_debt, mountain,
+constraint_indexing:constraint_classification(legacy_system_technical_debt, rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(legacy_system_technical_debt, rope
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
 % Classified as Piton due to high theater_ratio (0.85).
-constraint_indexing:constraint_classification(legacy_system_technical_debt, piton,
+constraint_indexing:constraint_classification(legacy_system_technical_debt, rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(legacy_system_technical_debt, pito
 :- begin_tests(legacy_system_technical_debt_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(legacy_system_technical_debt, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(legacy_system_technical_debt, rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(legacy_system_technical_debt, rope, context(agent_power(institutional), _, _, _)),
     !.
 

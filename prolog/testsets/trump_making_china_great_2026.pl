@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(trump_making_china_great_2026, liberal_inte
 % PERSPECTIVE 1: THE EUROPEAN UNION (SNARE)
 % Trapped by US unreliability and Russian aggression, the shift feels predatory.
 % χ = 0.65 * π(powerless=1.5) * σ(continental=1.1) = 1.07 (High Snare)
-constraint_indexing:constraint_classification(trump_making_china_great_2026, snare,
+constraint_indexing:constraint_classification(trump_making_china_great_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

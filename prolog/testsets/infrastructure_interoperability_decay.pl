@@ -91,7 +91,7 @@ narrative_ontology:coordination_vitality(infrastructure_interoperability_decay, 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The operator is trapped: they must use the platform to access the market,
 % but the decay of standards liquidates their ability to exit the ecosystem.
-constraint_indexing:constraint_classification(infrastructure_interoperability_decay, snare,
+constraint_indexing:constraint_classification(infrastructure_interoperability_decay, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -100,7 +100,7 @@ constraint_indexing:constraint_classification(infrastructure_interoperability_de
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The platform views the proprietary silo as a Rope—the essential coordination
 % substrate for providing a "superior, secure, and integrated" user experience.
-constraint_indexing:constraint_classification(infrastructure_interoperability_decay, rope,
+constraint_indexing:constraint_classification(infrastructure_interoperability_decay, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(infrastructure_interoperability_de
 
 % PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.86) masking as functional coordination (Rope).
-constraint_indexing:constraint_classification(infrastructure_interoperability_decay, tangled_rope,
+constraint_indexing:constraint_classification(infrastructure_interoperability_decay, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -131,9 +131,9 @@ constraint_indexing:constraint_classification(infrastructure_interoperability_de
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless operator vs Rope for the institutional provider.
-    constraint_indexing:constraint_classification(infrastructure_interoperability_decay, snare,
+    constraint_indexing:constraint_classification(infrastructure_interoperability_decay, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(infrastructure_interoperability_decay, rope,
+    constraint_indexing:constraint_classification(infrastructure_interoperability_decay, piton,
         context(agent_power(institutional), _, _, _)).
 
 test(piton_trigger) :-

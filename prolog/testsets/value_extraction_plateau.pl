@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(value_extraction_plateau, rope,
 % Default analytical context. Detects high extraction (0.89), high suppression (0.78),
 % a coordination function (beneficiary exists), asymmetric extraction (victim exists),
 % and active enforcement, classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(value_extraction_plateau, tangled_rope,
+constraint_indexing:constraint_classification(value_extraction_plateau, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

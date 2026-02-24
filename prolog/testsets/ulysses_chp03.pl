@@ -84,7 +84,7 @@ domain_priors:requires_active_enforcement(ulysses_proteus_1904). % Memory and gu
 % PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
 % Effective Extraction: 0.52 * 1.5 (powerless) * 0.8 (local) = 0.624.
 % Perceived as a trap of "unwholesome sandflats" and "sewage breath".
-constraint_indexing:constraint_classification(ulysses_proteus_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_proteus_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(ulysses_proteus_1904, snare,
 % PERSPECTIVE 2: THE PHYSICAL UNIVERSE (MOUNTAIN)
 % Effective Extraction: 0.52 * -0.2 (institutional) * 1.0 (national/universal) = -0.104.
 % The "lex eterna"  functions as a fixed topological floor.
-constraint_indexing:constraint_classification(ulysses_proteus_1904, mountain, 
+constraint_indexing:constraint_classification(ulysses_proteus_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(civilizational), 
             exit_options(mobile), 
@@ -115,8 +115,8 @@ constraint_indexing:constraint_classification(ulysses_proteus_1904, piton,
 
 test(perspectival_gap) :-
     % Verify the shift from Snare (Subjective guilt) to Mountain (Objective physics).
-    constraint_indexing:constraint_classification(ulysses_proteus_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_proteus_1904, mountain, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_proteus_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_proteus_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_validation) :-
     % Piton classification requires theater_ratio >= 0.70.

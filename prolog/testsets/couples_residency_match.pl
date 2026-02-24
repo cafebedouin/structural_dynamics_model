@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(couples_residency_match, high_achieving_par
 % The binding nature of the contract means they might be forced into
 % their 50th-ranked pair of programs simply because it's the only
 % one that works for both, a "voluntary" trap.
-constraint_indexing:constraint_classification(couples_residency_match, snare,
+constraint_indexing:constraint_classification(couples_residency_match, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(couples_residency_match, rope,
 % (helping couples stay together), but this comes at the cost of asymmetric
 % extraction (high-achieving partners sacrifice rank for joint stability) and
 % requires high suppression (enforced matching rules) to function.
-constraint_indexing:constraint_classification(couples_residency_match, tangled_rope,
+constraint_indexing:constraint_classification(couples_residency_match, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -136,7 +136,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical view correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(couples_residency_match, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(couples_residency_match, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify all three conditions for Tangled Rope are met.

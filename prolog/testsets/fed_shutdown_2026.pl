@@ -85,7 +85,7 @@ narrative_ontology:constraint_victim(fed_shutdown_2026, federal_workers_and_inve
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % Effective Extraction: 0.58 * 1.5 (powerless) * 1.0 (national) = 0.87.
 % At χ > 0.46, the subject feels this as a predatory trap (Snare).
-constraint_indexing:constraint_classification(fed_shutdown_2026, snare, 
+constraint_indexing:constraint_classification(fed_shutdown_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -94,7 +94,7 @@ constraint_indexing:constraint_classification(fed_shutdown_2026, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (TANGLED ROPE)
 % Effective Extraction: 0.58 * -0.2 (institutional) * 1.0 = -0.116.
 % To the institution, the friction is a necessary coordination tool.
-constraint_indexing:constraint_classification(fed_shutdown_2026, tangled_rope, 
+constraint_indexing:constraint_classification(fed_shutdown_2026, rope, 
     context(agent_power(institutional), 
             time_horizon(biographical), 
             exit_options(constrained), 
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(fed_shutdown_2026, tangled_rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Default analytical context for system-wide claims.
-constraint_indexing:constraint_classification(fed_shutdown_2026, tangled_rope,
+constraint_indexing:constraint_classification(fed_shutdown_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -127,8 +127,8 @@ constraint_indexing:constraint_classification(fed_shutdown_2026, tangled_rope,
 
 test(perspectival_gap) :-
     % Verify that the powerless feel a Snare while the institution sees a Rope.
-    constraint_indexing:constraint_classification(fed_shutdown_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(fed_shutdown_2026, tangled_rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(fed_shutdown_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fed_shutdown_2026, rope, context(agent_power(institutional), _, _, _)).
 
 test(tangled_rope_properties) :-
     % Ensure all structural requirements for Tangled Rope are present.

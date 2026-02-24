@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(mit_tfus_2026, snare,
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % MIT views this as a Rope: essential infrastructure for coordinating 
 % the future of mental health treatment and fundamental physics of the mind.
-constraint_indexing:constraint_classification(mit_tfus_2026, rope, 
+constraint_indexing:constraint_classification(mit_tfus_2026, scaffold, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 

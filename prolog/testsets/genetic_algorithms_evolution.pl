@@ -137,7 +137,7 @@ narrative_ontology:constraint_victim(genetic_algorithms_evolution, sub_optimal_s
 % For a candidate solution with low fitness, the GA is a 'Snare'. The objective
 % function is a rigid bottleneck that "strangles" its persistence in the gene
 % pool. It is the cost paid for the system's progress.
-constraint_indexing:constraint_classification(genetic_algorithms_evolution, snare,
+constraint_indexing:constraint_classification(genetic_algorithms_evolution, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(genetic_algorithms_evolution, snar
 % For a research lab or AI company, genetic algorithms are a 'Rope' – a
 % powerful computational tool to solve complex optimization problems. They
 % efficiently navigate vast search spaces, enabling breakthroughs.
-constraint_indexing:constraint_classification(genetic_algorithms_evolution, rope,
+constraint_indexing:constraint_classification(genetic_algorithms_evolution, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(mobile),

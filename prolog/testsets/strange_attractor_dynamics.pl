@@ -136,7 +136,7 @@ narrative_ontology:constraint_victim(strange_attractor_dynamics, laplacian_deter
 % PERSPECTIVE 1: THE LONG-TERM FORECASTER (SNARE)
 % Agent whose predictive models are destroyed by chaotic dynamics.
 % χ = 0.50 * f(d=0.90) * σ(national=1.0) = 0.50 * 1.35 * 1.0 = 0.675 -> Snare
-constraint_indexing:constraint_classification(strange_attractor_dynamics, snare,
+constraint_indexing:constraint_classification(strange_attractor_dynamics, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),

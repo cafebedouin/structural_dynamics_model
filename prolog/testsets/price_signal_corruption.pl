@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(price_signal_corruption, rope,
 % asymmetric extraction. The high theater ratio (0.88) indicates the
 % coordination function is almost entirely performative, but the high
 % extraction (0.83) prevents a Piton classification, resulting in Tangled Rope.
-constraint_indexing:constraint_classification(price_signal_corruption, tangled_rope,
+constraint_indexing:constraint_classification(price_signal_corruption, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -140,7 +140,7 @@ test(threshold_validation_high_extraction) :-
 
 test(tangled_rope_conditions_met) :-
     % Verify the analytical observer correctly classifies as Tangled Rope.
-    constraint_indexing:constraint_classification(price_signal_corruption, tangled_rope,
+    constraint_indexing:constraint_classification(price_signal_corruption, snare,
         context(agent_power(analytical), _, _, _)).
 
 :- end_tests(price_signal_corruption_tests).

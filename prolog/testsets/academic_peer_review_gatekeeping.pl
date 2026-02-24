@@ -81,7 +81,7 @@ narrative_ontology:constraint_victim(academic_peer_review_gatekeeping, junior_pr
 
 % PERSPECTIVE 1: THE JUNIOR PROFESSOR (SNARE/MOUNTAIN)
 % Viewed as an immutable limit of the "publish or perish" landscape.
-constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, mountain, 
+constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, 
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects both the coordination value (peer review quality) and the high extraction.
-constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, tangled_rope,
+constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

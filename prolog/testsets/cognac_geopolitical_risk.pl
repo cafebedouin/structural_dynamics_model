@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(cognac_geopolitical_risk, tangled_
 %   victim membership + constrained exit → d ≈ 0.85 → f(d) ≈ 1.15
 %   Global scope σ(global)=1.2 amplifies χ over the snare threshold.
 %   χ = 0.50 * 1.15 * 1.2 = 0.69 -> Snare
-constraint_indexing:constraint_classification(cognac_geopolitical_risk, snare,
+constraint_indexing:constraint_classification(cognac_geopolitical_risk, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(constrained),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(cognac_geopolitical_risk, rope,
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(cognac_geopolitical_risk, tangled_rope,
+constraint_indexing:constraint_classification(cognac_geopolitical_risk, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

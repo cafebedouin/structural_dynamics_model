@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, r
 % A system with a genuine coordination function (for designers/platforms) but
 % also high asymmetric extraction from users, requiring active enforcement.
 % χ = 0.65 * 1.15 (analytical) * 1.2 (global) = 0.897 (High Tangled Rope)
-constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, tangled_rope,
+constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -132,7 +132,7 @@ test(perspectival_gap_user_vs_designer) :-
     % Verify the user (powerless) sees a Snare while the designer (institutional) sees a Rope.
     constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % Verify that the necessary conditions for a Tangled Rope are declared.

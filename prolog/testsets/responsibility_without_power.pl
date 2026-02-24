@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(responsibility_without_power, rope
 % with severe asymmetric extraction (liquidating the subject's agency) and active
 % enforcement. The high theater ratio (0.93) indicates the coordination function
 % is decaying into pure performance.
-constraint_indexing:constraint_classification(responsibility_without_power, tangled_rope,
+constraint_indexing:constraint_classification(responsibility_without_power, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -139,7 +139,7 @@ test(perspectival_gap_snare_vs_rope, [nondet]) :-
 
 test(analytical_classification_is_tangled_rope, [nondet]) :-
     % Verify the analytical observer correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(responsibility_without_power, tangled_rope,
+    constraint_indexing:constraint_classification(responsibility_without_power, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-

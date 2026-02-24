@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(elliq_ai_companion, isolated_seniors).
 % the policy ambition.
 % Engine derives d from: victim membership + trapped exit → d≈0.95 → f(d)≈1.42
 % χ = 0.55 * 1.42 * 1.0 (national scope) = 0.78. This exceeds the Snare threshold of χ≥0.66.
-constraint_indexing:constraint_classification(elliq_ai_companion, snare,
+constraint_indexing:constraint_classification(elliq_ai_companion, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(elliq_ai_companion, rope,
 % This χ value (0.76) and the base metrics (ε=0.55, S=0.65) satisfy the
 % Tangled Rope conditions (0.40≤χ≤0.90, ε≥0.30, S≥0.40) and has the required
 % beneficiary/victim/enforcement declarations.
-constraint_indexing:constraint_classification(elliq_ai_companion, tangled_rope,
+constraint_indexing:constraint_classification(elliq_ai_companion, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -164,7 +164,7 @@ test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
     constraint_indexing:constraint_classification(elliq_ai_companion, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(elliq_ai_companion, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(elliq_ai_companion, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     narrative_ontology:constraint_beneficiary(elliq_ai_companion, _),

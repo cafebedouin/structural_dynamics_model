@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(recipe_scaling_ai, snare,
 % Viewed as essential infrastructure that solves a user coordination problem.
 % The platform feels minimal extraction.
 % χ = 0.49 * -0.2 (institutional) * 1.0 (national) = -0.098
-constraint_indexing:constraint_classification(recipe_scaling_ai, rope,
+constraint_indexing:constraint_classification(recipe_scaling_ai, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(recipe_scaling_ai, rope,
 % PERSPECTIVE 3: THE CULINARY ANALYST (TANGLED ROPE)
 % Recognizes the coordination benefit but also the asymmetric extraction of risk.
 % χ = 0.49 * 1.15 (analytical) * 1.2 (global) = 0.676
-constraint_indexing:constraint_classification(recipe_scaling_ai, tangled_rope,
+constraint_indexing:constraint_classification(recipe_scaling_ai, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,8 +138,8 @@ constraint_indexing:constraint_classification(recipe_scaling_ai, scaffold,
 test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
     constraint_indexing:constraint_classification(recipe_scaling_ai, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(recipe_scaling_ai, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(recipe_scaling_ai, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(recipe_scaling_ai, scaffold, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(recipe_scaling_ai, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     domain_priors:base_extractiveness(recipe_scaling_ai, E),

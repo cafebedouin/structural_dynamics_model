@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(soe_property_bailout, chinese_taxpayers).
 % buyers, making them powerless and trapped.
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 %   χ = 0.55 * 1.42 * 1.0 (national scope) ≈ 0.78. This is a clear Snare (χ > 0.66).
-constraint_indexing:constraint_classification(soe_property_bailout, snare,
+constraint_indexing:constraint_classification(soe_property_bailout, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(soe_property_bailout, rope,
 %   canonical d ≈ 0.72 → f(d) ≈ 1.15
 %   χ = 0.55 * 1.15 * 1.2 (global scope) ≈ 0.76. Meets Tangled Rope χ criteria.
 %   The structural elements (beneficiary, victim, enforcement) confirm Tangled Rope.
-constraint_indexing:constraint_classification(soe_property_bailout, tangled_rope,
+constraint_indexing:constraint_classification(soe_property_bailout, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -178,7 +178,7 @@ test(perspectival_gap_is_snare_vs_rope) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view must correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(soe_property_bailout, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(soe_property_bailout, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % Verify all three structural requirements for Tangled Rope are present.

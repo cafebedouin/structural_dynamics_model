@@ -118,7 +118,7 @@ narrative_ontology:constraint_victim(eu_russian_asset_freeze_2025, russian_feder
 % As the victim with trapped exit options, the derived directionality `d` is
 % very high (~0.95), leading to a high effective extraction (χ) that qualifies
 % the constraint as a Snare. The coordination benefit is irrelevant to them.
-constraint_indexing:constraint_classification(eu_russian_asset_freeze_2025, snare,
+constraint_indexing:constraint_classification(eu_russian_asset_freeze_2025, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(eu_russian_asset_freeze_2025, rope
 % 27 EU member states) and the severe asymmetric extraction. The presence of
 % beneficiary, victim, and active enforcement flags, combined with high ε and
 % suppression, classifies this as a canonical Tangled Rope.
-constraint_indexing:constraint_classification(eu_russian_asset_freeze_2025, tangled_rope,
+constraint_indexing:constraint_classification(eu_russian_asset_freeze_2025, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -179,7 +179,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(eu_russian_asset_freeze_2025, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(eu_russian_asset_freeze_2025, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_check) :-
     % A constraint can only be a Tangled Rope if it has all three structural markers.

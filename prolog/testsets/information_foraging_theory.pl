@@ -140,7 +140,7 @@ narrative_ontology:constraint_victim(information_foraging_theory, attention_farm
 % goal completion, the user becomes trapped. Continuous micro-scents
 % (infinite scroll, notifications) create a low-value extractive loop.
 % Engine derives d ≈ 0.95 -> high χ.
-constraint_indexing:constraint_classification(information_foraging_theory, snare,
+constraint_indexing:constraint_classification(information_foraging_theory, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(information_foraging_theory, snare
 % it leads to predictable failure (user abandonment). It is a fixed
 % environmental constraint to be designed around, not challenged.
 % Engine sees ε=0.20, S=0.05, and emerges_naturally -> Mountain.
-constraint_indexing:constraint_classification(information_foraging_theory, mountain,
+constraint_indexing:constraint_classification(information_foraging_theory, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(analytical),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(information_foraging_theory, mount
 % It's an evolved heuristic that enables efficient navigation of complex
 % information landscapes, making it a natural Rope.
 % χ = 0.20 * f(0.72) * 1.2 ≈ 0.20 * 1.15 * 1.2 ≈ 0.276 -> Rope
-constraint_indexing:constraint_classification(information_foraging_theory, rope,
+constraint_indexing:constraint_classification(information_foraging_theory, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(information_foraging_theory, rope,
 % For a typical user with a clear goal and freedom to navigate, IFT is a
 % pure coordination tool (Rope). It helps them find the shortest path to
 % their goal, minimizing cognitive load.
-constraint_indexing:constraint_classification(information_foraging_theory, rope,
+constraint_indexing:constraint_classification(information_foraging_theory, scaffold,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(mobile),
@@ -186,9 +186,9 @@ constraint_indexing:constraint_classification(information_foraging_theory, rope,
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target, beneficiary, and standard user.
-    constraint_indexing:constraint_classification(information_foraging_theory, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(information_foraging_theory, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(information_foraging_theory, rope, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(information_foraging_theory, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(information_foraging_theory, scaffold, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(information_foraging_theory, scaffold, context(agent_power(moderate), _, _, _)).
 
 test(threshold_validation) :-
     % Verify metrics are consistent with a Mountain classification possibility.

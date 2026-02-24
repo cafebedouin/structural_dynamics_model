@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(scam_doubt_manufacturing, rope,
 % This high χ combined with the presence of a coordination function
 % (beneficiary declared) and asymmetric extraction (victim declared) leads
 % to the Tangled Rope classification.
-constraint_indexing:constraint_classification(scam_doubt_manufacturing, tangled_rope,
+constraint_indexing:constraint_classification(scam_doubt_manufacturing, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(scam_doubt_manufacturing, tangled_
 % It perceives the coordination function but is also subject to the extraction
 % (in the form of undermined authority and inability to fulfill its mandate).
 % It correctly identifies the structure as a Tangled Rope.
-constraint_indexing:constraint_classification(scam_doubt_manufacturing, tangled_rope,
+constraint_indexing:constraint_classification(scam_doubt_manufacturing, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -184,7 +184,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(tangled_rope_detection) :-
     % Verify the analytical and constrained institutional views see a Tangled Rope.
-    constraint_indexing:constraint_classification(scam_doubt_manufacturing, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(scam_doubt_manufacturing, snare, context(agent_power(analytical), _, _, _)),
     constraint_indexing:constraint_classification(scam_doubt_manufacturing, tangled_rope, context(agent_power(institutional), _, exit_options(constrained), _)).
 
 test(tangled_rope_structural_gates_pass) :-

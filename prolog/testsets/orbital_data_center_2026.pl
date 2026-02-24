@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(orbital_data_center_2026, rope,
 % extractive potential of a privately-owned global utility, classifying it
 % as a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(orbital_data_center_2026, tangled_rope,
+constraint_indexing:constraint_classification(orbital_data_center_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -147,7 +147,7 @@ test(perspectival_gap) :-
     TypeBeneficiary == rope.
 
 test(analytical_classification) :-
-    constraint_indexing:constraint_classification(orbital_data_center_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(orbital_data_center_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates) :-
     narrative_ontology:constraint_beneficiary(orbital_data_center_2026, _),

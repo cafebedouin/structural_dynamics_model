@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(lorenz_attractor_dynamics, linear_extrapola
 % feels like a Mountain, the system's high base extraction (ε=0.4) means it
 % cannot be one by definition. Instead, it is a Snare whose mechanism is so
 % total and inescapable that it appears as a law of nature to the trapped agent.
-constraint_indexing:constraint_classification(lorenz_attractor_dynamics, snare,
+constraint_indexing:constraint_classification(lorenz_attractor_dynamics, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(lorenz_attractor_dynamics, rope,
 % provide certain outcomes, forcing enormous investment in probabilistic
 % scenarios that can never be fully verified. High base extraction and high
 % directionality (d≈1.0) yield a high effective extraction (χ), defining a Snare.
-constraint_indexing:constraint_classification(lorenz_attractor_dynamics, snare,
+constraint_indexing:constraint_classification(lorenz_attractor_dynamics, tangled_rope,
     context(agent_power(powerless),
             time_horizon(civilizational),
             exit_options(constrained),

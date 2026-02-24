@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(dutch_minority_govt_2026, parliamentary_opp
 % Experiences only the extractive outcomes (restrictive policies) with no
 % recourse or benefit from the "stability" coordination.
 % Engine derives d from victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ
-constraint_indexing:constraint_classification(dutch_minority_govt_2026, snare,
+constraint_indexing:constraint_classification(dutch_minority_govt_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -182,7 +182,7 @@ constraint_indexing:constraint_classification(dutch_minority_govt_2026, snare,
 :- begin_tests(dutch_minority_govt_2026_tests).
 
 test(perspectival_gap_target_beneficiary) :-
-    constraint_indexing:constraint_classification(dutch_minority_govt_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(dutch_minority_govt_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(dutch_minority_govt_2026, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
     format('... Perspectival gap validated (Snare vs Rope)\n').
 

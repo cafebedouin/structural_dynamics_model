@@ -114,7 +114,7 @@ narrative_ontology:constraint_victim(nfl_superbowl_halftime_exclusivity, competi
 % PERSPECTIVE 1: THE EMERGING PERFORMER (POWERLESS TARGET)
 % An emerging artist or backup performer with no negotiating power.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(nfl_superbowl_halftime_exclusivity, snare,
+constraint_indexing:constraint_classification(nfl_superbowl_halftime_exclusivity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(nfl_superbowl_halftime_exclusivity
 
 % PERSPECTIVE 2: THE ESTABLISHED PERFORMER (MODERATE TARGET)
 % The headline act, who has some leverage but is still constrained by the NFL's market power.
-constraint_indexing:constraint_classification(nfl_superbowl_halftime_exclusivity, snare,
+constraint_indexing:constraint_classification(nfl_superbowl_halftime_exclusivity, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),

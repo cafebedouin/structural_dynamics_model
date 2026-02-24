@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(digital_euro_cbdc, commercial_banking_secto
 % PERSPECTIVE 1: THE PRIVACY-CONSCIOUS CITIZEN (SNARE)
 % Engine derives d from: victim membership + trapped exit (if cash is phased out) → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.1 (continental) ≈ 0.86. This is well into Snare territory (χ >= 0.66).
-constraint_indexing:constraint_classification(digital_euro_cbdc, snare,
+constraint_indexing:constraint_classification(digital_euro_cbdc, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(digital_euro_cbdc, rope,
 % χ = 0.55 * 1.15 * 1.2 (global) ≈ 0.76. Meets Tangled Rope χ criteria.
 % The logic gates for Tangled Rope also pass: has_coordination_function (from beneficiary)
 % + has_asymmetric_extraction (from victim) + requires_active_enforcement.
-constraint_indexing:constraint_classification(digital_euro_cbdc, tangled_rope,
+constraint_indexing:constraint_classification(digital_euro_cbdc, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(digital_euro_cbdc, tangled_rope,
 % Engine derives d from: 'both' + 'constrained' exit -> d ≈ 0.50 -> f(d) ≈ 0.65.
 % χ = 0.55 * 0.65 * 1.1 (continental) ≈ 0.39. This is below the Snare threshold but reflects a
 % system with both benefits and significant costs/risks. Classified as Tangled Rope.
-constraint_indexing:constraint_classification(digital_euro_cbdc, tangled_rope,
+constraint_indexing:constraint_classification(digital_euro_cbdc, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -171,7 +171,7 @@ test(perspectival_gap_citizen_vs_state, [nondet]) :-
 
 test(analytical_classification_is_tangled_rope, [nondet]) :-
     % The analytical observer must correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(digital_euro_cbdc, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(digital_euro_cbdc, snare, context(agent_power(analytical), _, _, _)).
 
 test(inter_institutional_perspective_is_distinct, [nondet]) :-
     % Verify the commercial bank perspective is different from the central bank perspective.

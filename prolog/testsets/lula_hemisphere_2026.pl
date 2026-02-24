@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(lula_hemisphere_2026, venezuelan_civilians)
 % PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
 % For a Venezuelan civilian, the intervention is an overwhelming, inescapable force of nature.
 % χ = 0.75 * 1.5 (powerless) * 1.0 (national) = 1.125. High extraction and suppression feel like a Mountain.
-constraint_indexing:constraint_classification(lula_hemisphere_2026, mountain,
+constraint_indexing:constraint_classification(lula_hemisphere_2026, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(lula_hemisphere_2026, rope,
 % to serve hegemonic interests, trapping the region in a dependent relationship.
 % χ = 0.75 * -0.2 (institutional) * 1.1 (continental) = -0.165. The negative extraction reflects
 % the institutional cost and loss of stability for Brazil, classifying it as a predatory Snare.
-constraint_indexing:constraint_classification(lula_hemisphere_2026, snare,
+constraint_indexing:constraint_classification(lula_hemisphere_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

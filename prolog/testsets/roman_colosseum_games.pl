@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(roman_colosseum_games, condemned_and_captiv
 % Experiences the system as pure, inescapable extraction. Engine derives
 % d from victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.0 (national scope) ≈ 0.78, which is a Snare (>= 0.66).
-constraint_indexing:constraint_classification(roman_colosseum_games, snare,
+constraint_indexing:constraint_classification(roman_colosseum_games, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(roman_colosseum_games, rope,
 % χ = 0.55 * 1.15 * 1.2 (global scope) ≈ 0.76. This value, combined with the
 % high ε and suppression, and the presence of both beneficiary and victim,
 % classifies as a Tangled Rope (0.40 <= χ <= 0.90).
-constraint_indexing:constraint_classification(roman_colosseum_games, tangled_rope,
+constraint_indexing:constraint_classification(roman_colosseum_games, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -173,7 +173,7 @@ test(perspectival_gap_target_beneficiary) :-
     true.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(roman_colosseum_games, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(roman_colosseum_games, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     narrative_ontology:constraint_beneficiary(roman_colosseum_games, _),

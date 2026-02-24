@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(poetic_verse_and_past, rope,
 % χ = 0.75 * 1.15 (analytical) * 1.2 (global) = 1.035.
 % With high extraction, high suppression, enforcement, and both beneficiaries
 % and victims, the structure is a textbook Tangled Rope.
-constraint_indexing:constraint_classification(poetic_verse_and_past, tangled_rope,
+constraint_indexing:constraint_classification(poetic_verse_and_past, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -131,7 +131,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(poetic_verse_and_past, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(poetic_verse_and_past, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % High-extraction constraints must meet the Snare/Tangled Rope threshold.

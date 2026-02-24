@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(fda_gonorrhea_efficacy_standard, public_hea
 % but who is denied access. From this view, the standard is a purely
 % extractive barrier to a needed treatment.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(fda_gonorrhea_efficacy_standard, snare,
+constraint_indexing:constraint_classification(fda_gonorrhea_efficacy_standard, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(fda_gonorrhea_efficacy_standard, t
 % 'victim' but have institutional power. Their constrained exit (they must work
 % within the FDA framework) results in a higher directionality `d` than the FDA.
 % They see the coordination function but feel the extraction more keenly.
-constraint_indexing:constraint_classification(fda_gonorrhea_efficacy_standard, tangled_rope,
+constraint_indexing:constraint_classification(fda_gonorrhea_efficacy_standard, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

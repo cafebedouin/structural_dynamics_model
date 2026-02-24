@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(unrwa_eviction_order, snare,
 % UNRWA is an institution, but its exit options are constrained by the
 % sovereign power of the state it operates in. The engine derives a high d
 % from victim status + constrained exit, leading to a Snare classification.
-constraint_indexing:constraint_classification(unrwa_eviction_order, snare,
+constraint_indexing:constraint_classification(unrwa_eviction_order, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

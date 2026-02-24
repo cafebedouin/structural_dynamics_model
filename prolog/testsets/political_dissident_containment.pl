@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(political_dissident_containment, s
 % Western governments and international bodies see the system as a violation
 % of norms they uphold, but their ability to act is limited. They are a victim
 % of the norm-breaking with constrained exit options.
-constraint_indexing:constraint_classification(political_dissident_containment, snare,
+constraint_indexing:constraint_classification(political_dissident_containment, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

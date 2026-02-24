@@ -116,14 +116,14 @@ narrative_ontology:constraint_victim(seedance_export_restriction, international_
    ========================================================================== */
 
 % PERSPECTIVE 1: THE POWERLESS TARGET (International Developers)
-constraint_indexing:constraint_classification(seedance_export_restriction, snare,
+constraint_indexing:constraint_classification(seedance_export_restriction, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
 % PERSPECTIVE 2: ByteDance (PRIMARY INSTITUTIONAL TARGET)
-constraint_indexing:constraint_classification(seedance_export_restriction, snare,
+constraint_indexing:constraint_classification(seedance_export_restriction, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(seedance_export_restriction, rope,
             spatial_scope(national))).
 
 % PERSPECTIVE 5: THE ANALYTICAL OBSERVER
-constraint_indexing:constraint_classification(seedance_export_restriction, tangled_rope,
+constraint_indexing:constraint_classification(seedance_export_restriction, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

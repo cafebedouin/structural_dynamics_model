@@ -134,7 +134,7 @@ narrative_ontology:constraint_victim(roman_road_network, conquered_peoples).
 % NOTE: Per "Dynamic Coalition" extension, this agent's power may be
 % upgraded to 'organized' if the constraint is a snare with a critical
 % mass of victims, potentially changing the classification.
-constraint_indexing:constraint_classification(roman_road_network, snare,
+constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(roman_road_network, rope,
 % lead to the Tangled Rope classification.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ ≈ 0.55 * 1.15 * 1.2 (global scope) = 0.76. Meets Tangled Rope threshold.
-constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
+constraint_indexing:constraint_classification(roman_road_network, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
 % but are still subject to the state's power (taxes, tolls).
 % Engine derives d from: beneficiary membership + mobile exit → d ≈ 0.15 → f(d) ≈ -0.01 → low χ
 % χ ≈ 0.55 * -0.01 * 1.0 = -0.0055. Still a Rope, but less subsidized than the state's view.
-constraint_indexing:constraint_classification(roman_road_network, rope,
+constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -181,13 +181,13 @@ constraint_indexing:constraint_classification(roman_road_network, rope,
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(roman_road_network, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(roman_road_network, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(roman_road_network, rope, context(agent_power(institutional), _, _, _)),
     snare \= rope.
 
 test(analytical_classification) :-
     % Verify the analytical observer correctly identifies the Tangled Rope.
-    constraint_indexing:constraint_classification(roman_road_network, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(roman_road_network, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_fulfilled) :-
     % Check that all three conditions for Tangled Rope are met.

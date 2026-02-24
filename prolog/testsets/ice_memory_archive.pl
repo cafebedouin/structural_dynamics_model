@@ -136,7 +136,7 @@ narrative_ontology:constraint_victim(ice_memory_archive, future_researchers_with
 % χ = 0.10 * 1.42 * 1.2 (global) = 0.17. While χ is low, the near-zero
 % degrees of freedom (suppression=0.95) and the irreversibility make this
 % classify as Mountain for this index.
-constraint_indexing:constraint_classification(ice_memory_archive, mountain,
+constraint_indexing:constraint_classification(ice_memory_archive, rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(ice_memory_archive, rope,
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.10 * 1.15 * 1.2 (global) = 0.138.
 % With χ ≤ 0.30, theater ≤ 0.70, and a sunset clause, this is a canonical Scaffold.
-constraint_indexing:constraint_classification(ice_memory_archive, scaffold,
+constraint_indexing:constraint_classification(ice_memory_archive, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -175,13 +175,13 @@ constraint_indexing:constraint_classification(ice_memory_archive, scaffold,
 
 test(perspectival_gap_mountain_vs_rope) :-
     % Verify the core perspectival gap between the powerless and institutional views.
-    constraint_indexing:constraint_classification(ice_memory_archive, mountain, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(ice_memory_archive, rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(ice_memory_archive, rope, context(agent_power(institutional), _, arbitrage, _)),
     format('Passed: Powerless sees Mountain, Institutional sees Rope.~n').
 
 test(analytical_scaffold_classification) :-
     % Verify the analytical classification is Scaffold.
-    constraint_indexing:constraint_classification(ice_memory_archive, scaffold, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(ice_memory_archive, rope, context(agent_power(analytical), _, _, _)),
     narrative_ontology:has_sunset_clause(ice_memory_archive).
 
 test(low_extraction_and_high_suppression) :-

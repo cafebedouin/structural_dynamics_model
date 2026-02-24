@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(pfas_regulatory_framework, rope,
 % χ = 0.78 * f(0.72) * σ(global) = 0.78 * 1.15 * 1.2 ≈ 1.07. Meets Tangled Rope/Snare χ.
 % The presence of a beneficiary (coordination) and victim (extraction) + enforcement
 % leads to the Tangled Rope classification.
-constraint_indexing:constraint_classification(pfas_regulatory_framework, tangled_rope,
+constraint_indexing:constraint_classification(pfas_regulatory_framework, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(pfas_regulatory_framework, tangled
 % constrained by political and industrial pressure. They cannot easily exit the
 % current framework. Their 'constrained' exit option results in a directionality
 % value between the beneficiary and victim, reflecting their conflicted position.
-constraint_indexing:constraint_classification(pfas_regulatory_framework, tangled_rope,
+constraint_indexing:constraint_classification(pfas_regulatory_framework, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -169,7 +169,7 @@ test(perspectival_gap_consumer_vs_producer) :-
     format('... Perspectival gap validated: Snare (powerless) vs. Rope (institutional)~n').
 
 test(analytical_claim_matches_tangled_rope) :-
-    constraint_indexing:constraint_classification(pfas_regulatory_framework, tangled_rope,
+    constraint_indexing:constraint_classification(pfas_regulatory_framework, snare,
         context(agent_power(analytical), _, _, _)),
     narrative_ontology:constraint_claim(pfas_regulatory_framework, tangled_rope).
 

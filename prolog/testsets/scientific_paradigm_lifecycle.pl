@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(scientific_paradigm_lifecycle, anomaly_disc
 % For a junior researcher or graduate student whose findings contradict the
 % paradigm, the system is a Snare. It extracts their labor and career prospects,
 % suppresses their work, and offers no path to success. They are trapped.
-constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, snare,
+constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, sna
 % remains a useful Rope for generating puzzles and publications, even as the
 % crisis brews. As a beneficiary, their derived directionality `d` is low,
 % leading to a low effective extraction `χ`.
-constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, rope,
+constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, rop
 % paradigm into a Piton. Its primary function is no longer discovery, but
 % self-preservation through institutional defense and high "theater"
 % (conferences, keynote speeches, editorial control).
-constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, piton,
+constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -141,9 +141,9 @@ constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, tan
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless victim and the moderate beneficiary.
-    constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, rope, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, piton, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, tangled_rope, context(agent_power(moderate), _, _, _)),
+    constraint_indexing:constraint_classification(scientific_paradigm_lifecycle, rope, context(agent_power(institutional), _, _, _)).
 
 test(crisis_state_metrics_are_high) :-
     narrative_ontology:constraint_metric(scientific_paradigm_lifecycle, extractiveness, E),

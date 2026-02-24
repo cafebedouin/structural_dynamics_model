@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, r
 % Analytically, the system is a Tangled Rope. It has a legitimate coordination
 % function (investor protection) but also imposes high, asymmetric extraction
 % on new market entrants, benefiting incumbents. It requires active enforcement.
-constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, tangled_rope,
+constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -131,7 +131,7 @@ test(perspectival_gap) :-
     assertion(TypeInstitutional == rope).
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     narrative_ontology:constraint_metric(coinbase_regulatory_uncertainty, extractiveness, E),

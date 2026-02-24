@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(legibility_trap, rope,
 % canonical signature of a Tangled Rope. The high theater ratio (0.92) is a
 % symptom of its degradation, not a reclassification to Piton, as extraction
 % remains extremely high.
-constraint_indexing:constraint_classification(legibility_trap, tangled_rope,
+constraint_indexing:constraint_classification(legibility_trap, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -131,7 +131,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(legibility_trap, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(legibility_trap, tangled_rope,
+    constraint_indexing:constraint_classification(legibility_trap, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_conditions) :-

@@ -135,7 +135,7 @@ narrative_ontology:constraint_victim(ec_meta_manus_block, meta_platforms_inc).
 % As the victim with constrained exit options within the EU market, Meta perceives
 % the block as a highly coercive and extractive act.
 % Engine derives d from: victim membership + constrained exit -> high d -> high χ.
-constraint_indexing:constraint_classification(ec_meta_manus_block, snare,
+constraint_indexing:constraint_classification(ec_meta_manus_block, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(ec_meta_manus_block, rope,
 % PERSPECTIVE 4: TERTIARY BENEFICIARIES (CONSUMERS)
 % Consumers, though individually powerless, are beneficiaries. The constraint appears
 % as a protective rope ensuring future choice.
-constraint_indexing:constraint_classification(ec_meta_manus_block, rope,
+constraint_indexing:constraint_classification(ec_meta_manus_block, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(ec_meta_manus_block, rope,
 % PERSPECTIVE 5: THE ANALYTICAL OBSERVER
 % The analytical view integrates both the coordination function and the asymmetric
 % extraction, classifying the constraint as a Tangled Rope. This matches the claim.
-constraint_indexing:constraint_classification(ec_meta_manus_block, tangled_rope,
+constraint_indexing:constraint_classification(ec_meta_manus_block, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

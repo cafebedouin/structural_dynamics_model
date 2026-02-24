@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(iran_nuclear_deal_informal_2023, iranian_go
 % Agent who bears the cost of the overarching sanctions regime. This informal
 % deal is a minor modification to a larger Snare, not a fundamental change.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(iran_nuclear_deal_informal_2023, snare,
+constraint_indexing:constraint_classification(iran_nuclear_deal_informal_2023, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(iran_nuclear_deal_informal_2023, r
 % Default analytical context sees both the coordination function and the
 % asymmetric extraction inherent in the sanctions leverage.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(iran_nuclear_deal_informal_2023, tangled_rope,
+constraint_indexing:constraint_classification(iran_nuclear_deal_informal_2023, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(iran_nuclear_deal_informal_2023, t
 % the US perspective. The engine derives a mid-to-high d, revealing the hybrid nature.
 % Derivation: (institutional, constrained, beneficiary+victim) -> d ~ 0.55 -> f(d) ~ 0.75.
 % χ = 0.55 * 0.75 * 1.0 (national scope) ≈ 0.41, which is in the Tangled Rope range.
-constraint_indexing:constraint_classification(iran_nuclear_deal_informal_2023, tangled_rope,
+constraint_indexing:constraint_classification(iran_nuclear_deal_informal_2023, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

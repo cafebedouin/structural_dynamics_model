@@ -146,7 +146,7 @@ narrative_ontology:constraint_victim(trivial_topology_info_asymmetry, informatio
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, snare,
+constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

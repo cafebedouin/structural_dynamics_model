@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(utopia_apocalypse_fragility, rope,
 
 % PERSPECTIVE 3: THE MODERATE CITIZEN (TANGLED ROPE)
 % Experiences the system as both beneficial coordination and a source of existential risk.
-constraint_indexing:constraint_classification(utopia_apocalypse_fragility, tangled_rope,
+constraint_indexing:constraint_classification(utopia_apocalypse_fragility, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(utopia_apocalypse_fragility, tangl
 
 % PERSPECTIVE 4: THE EXISTENTIAL REALIST (MOUNTAIN)
 % Views the underlying fragility as an unchangeable, natural law of complex systems.
-constraint_indexing:constraint_classification(utopia_apocalypse_fragility, tangled_rope,
+constraint_indexing:constraint_classification(utopia_apocalypse_fragility, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -134,7 +134,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_emergence) :-
     % Verify that a moderate agent perceives the mixed nature of the constraint.
-    constraint_indexing:constraint_classification(utopia_apocalypse_fragility, tangled_rope, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(utopia_apocalypse_fragility, snare, context(agent_power(moderate), _, _, _)).
 
 test(threshold_validation) :-
     % High extraction is required for Snare/Tangled Rope classifications.

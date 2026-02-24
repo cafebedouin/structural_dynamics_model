@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(cross_domain_coupling_spiral, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the combination of a genuine coordination function (beneficiaries exist)
 % with severe asymmetric extraction (victims exist) and active enforcement.
-constraint_indexing:constraint_classification(cross_domain_coupling_spiral, tangled_rope,
+constraint_indexing:constraint_classification(cross_domain_coupling_spiral, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(cross_domain_coupling_spiral, tang
 % Theater ratio (0.91) > 0.70 triggers Piton: the "Failover Strategy"
 % is an inertial spike; it performatively charts a recovery path that
 % cannot withstand cross-domain contagion.
-constraint_indexing:constraint_classification(cross_domain_coupling_spiral, piton,
+constraint_indexing:constraint_classification(cross_domain_coupling_spiral, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -138,7 +138,7 @@ test(perspectival_gap) :-
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.91) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(cross_domain_coupling_spiral, piton,
+    constraint_indexing:constraint_classification(cross_domain_coupling_spiral, snare,
         context(agent_power(analytical), _, _, _)),
     writeln('Piton classification validated by high theater ratio.').
 

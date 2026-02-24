@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(gig_economy_algorithmic_management
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Recognizes the dual nature: a genuine coordination function for consumers
 % that is inextricably linked with asymmetric extraction from workers.
-constraint_indexing:constraint_classification(gig_economy_algorithmic_management, tangled_rope,
+constraint_indexing:constraint_classification(gig_economy_algorithmic_management, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

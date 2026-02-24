@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(protocol_capture_eee, third_party_developer
 
 % PERSPECTIVE 1: THE CAPTIVE DEVELOPER (SNARE)
 % To the developer, the "extensions" are a trap; they cannot revert to the open standard without losing critical data/access.
-constraint_indexing:constraint_classification(protocol_capture_eee, snare,
+constraint_indexing:constraint_classification(protocol_capture_eee, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(protocol_capture_eee, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid: The system provides genuine coordination (it works) but relies on extraction (lock-in).
-constraint_indexing:constraint_classification(protocol_capture_eee, tangled_rope,
+constraint_indexing:constraint_classification(protocol_capture_eee, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical perspective correctly identifies the Tangled Rope signature.
-    constraint_indexing:constraint_classification(protocol_capture_eee, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(protocol_capture_eee, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(eee_capture_tests).
 

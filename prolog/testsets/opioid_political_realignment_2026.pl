@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(opioid_political_realignment_2026,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature: a coordination around public transfers (Rope)
 % entangled with predatory pharmaceutical extraction (Snare).
-constraint_indexing:constraint_classification(opioid_political_realignment_2026, tangled_rope,
+constraint_indexing:constraint_classification(opioid_political_realignment_2026, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
     % Verify the Subject sees a Snare while the Beneficiary sees a Rope.
     constraint_indexing:constraint_classification(opioid_political_realignment_2026, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(opioid_political_realignment_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(opioid_political_realignment_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(opioid_political_realignment_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties_present) :-
     % Verify all three required properties for Tangled Rope are declared.

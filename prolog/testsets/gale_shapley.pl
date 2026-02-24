@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(gale_shapley, rope,
 % It solves a real coordination problem but does so by concentrating power and
 % extracting agency. It requires active enforcement and has clear winners and
 % losers, making it a canonical Tangled Rope.
-constraint_indexing:constraint_classification(gale_shapley, tangled_rope,
+constraint_indexing:constraint_classification(gale_shapley, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap) :-
     TypePowerless \= TypeInstitutional.
 
 test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(gale_shapley, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(gale_shapley, snare, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_threshold) :-
     narrative_ontology:constraint_metric(gale_shapley, extractiveness, E),

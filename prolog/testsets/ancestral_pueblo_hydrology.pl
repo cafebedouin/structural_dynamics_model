@@ -94,7 +94,7 @@ constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, snare,
 % PERSPECTIVE 2: THE THEOCRATIC LEADERSHIP (ROPE)
 % Viewed as the essential coordination of reservoirs and ritual labor 
 % that sustained the "Golden Age" for three centuries.
-constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, rope, 
+constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, scaffold, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, scaffo
 
 test(perspectival_shift) :-
     % Verify the infrastructure is a Rope for the leadership but a Snare for the farmer.
-    constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, scaffold, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, snare, context(agent_power(powerless), _, _, _)).
 
 test(mountain_validation) :-

@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(gamblers_ruin_stochastic_extinctio
 % For the House, this is a pure coordination mechanism for profit. Their
 % institutional power inverts the perceived extraction.
 % χ = 0.90 * π(institutional) * σ(global) = 0.90 * -0.2 * 1.2 = -0.216.
-constraint_indexing:constraint_classification(gamblers_ruin_stochastic_extinction, rope,
+constraint_indexing:constraint_classification(gamblers_ruin_stochastic_extinction, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

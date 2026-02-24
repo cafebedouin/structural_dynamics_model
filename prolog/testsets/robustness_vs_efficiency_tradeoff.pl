@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(robustness_vs_efficiency_tradeoff,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % High extraction and a genuine coordination function trigger the hybrid
 % Tangled Rope signature from a systemic, analytical perspective.
-constraint_indexing:constraint_classification(robustness_vs_efficiency_tradeoff, tangled_rope,
+constraint_indexing:constraint_classification(robustness_vs_efficiency_tradeoff, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -130,7 +130,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(robustness_vs_efficiency_tradeoff, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(robustness_vs_efficiency_tradeoff, tangled_rope,
+    constraint_indexing:constraint_classification(robustness_vs_efficiency_tradeoff, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

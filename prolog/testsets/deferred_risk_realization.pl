@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(deferred_risk_realization, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the present coordination (Rope) inextricably tied to future extraction (Snare).
-constraint_indexing:constraint_classification(deferred_risk_realization, tangled_rope,
+constraint_indexing:constraint_classification(deferred_risk_realization, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -125,7 +125,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical observer must classify this as a tangled_rope.
-    constraint_indexing:constraint_classification(deferred_risk_realization, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(deferred_risk_realization, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties_present) :-
     % Verify all three required properties for Tangled Rope are declared.

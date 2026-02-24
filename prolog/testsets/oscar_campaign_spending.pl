@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(oscar_campaign_spending, smaller_studios).
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
 % Smaller Studios/Independent Filmmakers
-constraint_indexing:constraint_classification(oscar_campaign_spending, snare,
+constraint_indexing:constraint_classification(oscar_campaign_spending, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

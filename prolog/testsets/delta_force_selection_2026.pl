@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(delta_force_selection_2026, rope,
 % operators) and the asymmetric, brutal extraction required to achieve it.
 % The high extraction (0.92) and active enforcement make it a Tangled Rope.
 % χ = 0.92 * 1.15 (analytical) * 1.2 (global) = 1.2696.
-constraint_indexing:constraint_classification(delta_force_selection_2026, tangled_rope,
+constraint_indexing:constraint_classification(delta_force_selection_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -136,7 +136,7 @@ test(perspectival_gap) :-
     % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(delta_force_selection_2026, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(delta_force_selection_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(delta_force_selection_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(delta_force_selection_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_analytical_view) :-
     % The analytical observer must classify this as a Tangled Rope.

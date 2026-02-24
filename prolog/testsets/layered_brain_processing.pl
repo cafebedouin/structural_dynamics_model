@@ -137,7 +137,7 @@ narrative_ontology:constraint_victim(layered_brain_processing, traditional_lingu
 % From this view, language *is* the rules; phonemes and morphemes are
 % the unchangeable building blocks of reality[cite: 41, 43]. They are trapped
 % in a paradigm they perceive as natural law.
-constraint_indexing:constraint_classification(layered_brain_processing, mountain,
+constraint_indexing:constraint_classification(layered_brain_processing, scaffold,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(layered_brain_processing, mountain
 % The layered hierarchy is a tool for building meaning gradually[cite: 12, 42].
 % It is functional coordination that allows the brain to grasp complex context[cite: 30, 45].
 % This is the analytical perspective.
-constraint_indexing:constraint_classification(layered_brain_processing, rope,
+constraint_indexing:constraint_classification(layered_brain_processing, tangled_rope,
     context(agent_power(analytical),
             time_horizon(biographical),
             exit_options(mobile),
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(layered_brain_processing, rope,
 % must pass through a series of steps[cite: 28]. This biological necessity,
 % combined with high suppression from the old linguistic paradigm, is
 % experienced as a snare.
-constraint_indexing:constraint_classification(layered_brain_processing, snare,
+constraint_indexing:constraint_classification(layered_brain_processing, scaffold,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

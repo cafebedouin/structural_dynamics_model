@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(demographic_inertia_trap, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the present coordination (Rope) inextricably tied to predatory extraction (Snare).
-constraint_indexing:constraint_classification(demographic_inertia_trap, tangled_rope,
+constraint_indexing:constraint_classification(demographic_inertia_trap, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -131,7 +131,7 @@ test(perspectival_gap) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institution.
     constraint_indexing:constraint_classification(demographic_inertia_trap, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(demographic_inertia_trap, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(demographic_inertia_trap, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(demographic_inertia_trap, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),

@@ -88,7 +88,7 @@ domain_priors:requires_active_enforcement(ulysses_eumaeus_1904). % Bloom's "duty
 % PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
 % Effective Extraction: 0.47 * 1.5 (powerless) * 0.8 (local) = 0.564.
 % Perceived as a trap of "unsteady" mind and the "rub" of finding beverage.
-constraint_indexing:constraint_classification(ulysses_eumaeus_1904, snare, 
+constraint_indexing:constraint_classification(ulysses_eumaeus_1904, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -97,7 +97,7 @@ constraint_indexing:constraint_classification(ulysses_eumaeus_1904, snare,
 % PERSPECTIVE 2: LEOPOLD BLOOM (ROPE)
 % Effective Extraction: 0.47 * -0.2 (institutional) * 0.8 = -0.0752.
 % Viewed as the essential coordination of "suitable ways and means".
-constraint_indexing:constraint_classification(ulysses_eumaeus_1904, rope, 
+constraint_indexing:constraint_classification(ulysses_eumaeus_1904, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -119,8 +119,8 @@ constraint_indexing:constraint_classification(ulysses_eumaeus_1904, piton,
 
 test(perspectival_gap) :-
     % Verify shift from the Snare of Stephen's fatigue to the Rope of Bloom's coordination.
-    constraint_indexing:constraint_classification(ulysses_eumaeus_1904, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ulysses_eumaeus_1904, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(ulysses_eumaeus_1904, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_eumaeus_1904, piton, context(agent_power(institutional), _, _, _)).
 
 test(piton_theater_check) :-
     % Piton classification requires theater_ratio >= 0.70.

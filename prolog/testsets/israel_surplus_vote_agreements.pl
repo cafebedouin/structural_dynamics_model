@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(israel_surplus_vote_agreements, small_partn
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For a smaller party that provides 0.9 seats' worth of surplus votes only for the
 % larger partner to "capture" the resulting seat, this feels like a predatory Snare.
-constraint_indexing:constraint_classification(israel_surplus_vote_agreements, snare,
+constraint_indexing:constraint_classification(israel_surplus_vote_agreements, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

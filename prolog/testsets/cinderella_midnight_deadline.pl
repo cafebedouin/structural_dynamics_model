@@ -133,7 +133,7 @@ narrative_ontology:constraint_victim(cinderella_midnight_deadline, cinderella).
 % For Cinderella, the deadline is an absolute limit on a temporary gift.
 % It enables her attendance (coordination) but has a hard, inescapable
 % endpoint. This is the classic structure of a Scaffold.
-constraint_indexing:constraint_classification(cinderella_midnight_deadline, scaffold,
+constraint_indexing:constraint_classification(cinderella_midnight_deadline, rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(cinderella_midnight_deadline, rope
 % Analytically, the constraint is a temporary support structure with a defined
 % end point, designed to solve a specific problem (Cinderella's exclusion).
 % This is the definition of a Scaffold.
-constraint_indexing:constraint_classification(cinderella_midnight_deadline, scaffold,
+constraint_indexing:constraint_classification(cinderella_midnight_deadline, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

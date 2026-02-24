@@ -115,7 +115,7 @@ narrative_ontology:constraint_victim(condiment_tyranny, consumers_with_minority_
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 % χ = 0.45 * 1.42 * 1.0 = 0.639. This is very close to the snare threshold (0.66) and
 % coupled with high suppression (0.65), it classifies as a snare from this view.
-constraint_indexing:constraint_classification(condiment_tyranny, snare,
+constraint_indexing:constraint_classification(condiment_tyranny, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(condiment_tyranny, tangled_rope,
 
 test(perspectival_gap) :-
     % Verify perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(condiment_tyranny, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(condiment_tyranny, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(condiment_tyranny, rope, context(agent_power(institutional), _, _, _)),
     format('Perspectival gap confirmed: Snare (powerless) vs Rope (institutional)~n').
 

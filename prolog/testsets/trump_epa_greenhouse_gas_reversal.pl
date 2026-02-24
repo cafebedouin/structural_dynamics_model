@@ -133,7 +133,7 @@ narrative_ontology:constraint_victim(trump_epa_greenhouse_gas_reversal, us_popul
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, snare,
+constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal,
 % PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
 % Agent who benefits most. Engine derives d from:
 %   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, rope,
+constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, naturalized,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal,
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, tangled_rope,
+constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -167,14 +167,14 @@ constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal,
 % Example — Regulatory capture:
 %
 % Perspective 4A: Captured regulator (institutional, constrained exit)
-constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, rope,
+constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, naturalized,
      context(agent_power(institutional),
              time_horizon(generational),
              exit_options(constrained),
              spatial_scope(national))).
 %
 % Perspective 4B: Regulated company (institutional, arbitrage exit)
-constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, rope,
+constraint_indexing:constraint_classification(trump_epa_greenhouse_gas_reversal, naturalized,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),

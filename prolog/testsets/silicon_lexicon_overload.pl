@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(silicon_lexicon_overload, rope,
 % genuine coordination benefit (Rope aspect) but achieves it through coercive
 % suppression of other linguistic modes, enabling asymmetric extraction of value
 % from employees (Snare aspect).
-constraint_indexing:constraint_classification(silicon_lexicon_overload, tangled_rope,
+constraint_indexing:constraint_classification(silicon_lexicon_overload, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -132,7 +132,7 @@ test(perspectival_gap_rope_snare) :-
 
 test(analytical_resolution_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(silicon_lexicon_overload, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(silicon_lexicon_overload, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements_met) :-
     % A Tangled Rope requires enforcement, a beneficiary (for coordination), and a victim (for extraction).

@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(fused_quartz_5d_archival, legacy_storage_in
 % Cannot access the technology, trapped in the old system of data decay.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % χ = 0.47 * 1.42 * 1.0 (national scope) = 0.667, which meets the Snare threshold (>=0.66).
-constraint_indexing:constraint_classification(fused_quartz_5d_archival, snare,
+constraint_indexing:constraint_classification(fused_quartz_5d_archival, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(fused_quartz_5d_archival, tangled_
 % The legacy storage industry, whose business model is disrupted.
 % They are a victim, but an institutional actor with a constrained exit.
 % Engine derives a moderately high d from victim + constrained exit.
-constraint_indexing:constraint_classification(fused_quartz_5d_archival, tangled_rope,
+constraint_indexing:constraint_classification(fused_quartz_5d_archival, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(planning_fallacy, project_laborers).
 % PERSPECTIVE 1: THE INDIVIDUAL CONTRIBUTOR (SNARE)
 % The initial underestimation creates an impossible deadline, extracting unpaid
 % overtime ("crunch") to compensate.
-constraint_indexing:constraint_classification(planning_fallacy, snare,
+constraint_indexing:constraint_classification(planning_fallacy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(planning_fallacy, rope,
 % To the scientist, the underlying bias is a Mountain—an apparently unchangeable
 % feature of human cognition (the "Inside View") that favors specific plans
 % over statistical base rates.
-constraint_indexing:constraint_classification(planning_fallacy, mountain,
+constraint_indexing:constraint_classification(planning_fallacy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(trapped),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(planning_fallacy, mountain,
 % coordination function (getting projects started) but also enables asymmetric
 % extraction (labor exploitation) and requires active enforcement (suppressing
 % realistic forecasts).
-constraint_indexing:constraint_classification(planning_fallacy, tangled_rope,
+constraint_indexing:constraint_classification(planning_fallacy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -150,7 +150,7 @@ test(threshold_validation) :-
 
 test(tangled_rope_structural_properties) :-
     % Verify the analytical observer sees a Tangled Rope due to the correct structural properties.
-    constraint_indexing:constraint_classification(planning_fallacy, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(planning_fallacy, snare, context(agent_power(analytical), _, _, _)),
     narrative_ontology:constraint_beneficiary(planning_fallacy, _), % -> has_coordination_function
     narrative_ontology:constraint_victim(planning_fallacy, _),     % -> has_asymmetric_extraction
     domain_priors:requires_active_enforcement(planning_fallacy).

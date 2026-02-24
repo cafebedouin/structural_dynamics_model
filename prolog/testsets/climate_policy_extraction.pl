@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(climate_policy_extraction, snare,
 % PERSPECTIVE 2: THE FEDERAL GOVERNMENT (MOUNTAIN)
 % Perceived as an inescapable physical/moral law necessitated by the
 % warming world, justifying the enforcement actions.
-constraint_indexing:constraint_classification(climate_policy_extraction, mountain,
+constraint_indexing:constraint_classification(climate_policy_extraction, rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(constrained),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(climate_policy_extraction, mountai
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Recognizes a genuine coordination function (global survival) that is
 % deeply entangled with the coercive extraction from a regional sub-economy.
-constraint_indexing:constraint_classification(climate_policy_extraction, tangled_rope,
+constraint_indexing:constraint_classification(climate_policy_extraction, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,7 +128,7 @@ constraint_indexing:constraint_classification(climate_policy_extraction, tangled
 % From the perspective of those who will inherit the climate, the policy is a
 % pure coordination mechanism for global survival. The regional extraction is
 % invisible or seen as a necessary cost for the collective good.
-constraint_indexing:constraint_classification(climate_policy_extraction, rope,
+constraint_indexing:constraint_classification(climate_policy_extraction, snare,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
@@ -144,8 +144,8 @@ constraint_indexing:constraint_classification(climate_policy_extraction, rope,
 test(perspectival_clash) :-
     % Verify the core conflict: Target sees Snare, Enforcer sees Mountain, Beneficiary sees Rope.
     constraint_indexing:constraint_classification(climate_policy_extraction, snare, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(climate_policy_extraction, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(climate_policy_extraction, rope, context(agent_power(powerless), _, _, _)).
+    constraint_indexing:constraint_classification(climate_policy_extraction, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(climate_policy_extraction, snare, context(agent_power(powerless), _, _, _)).
 
 test(snare_thresholds) :-
     % Verify Snare metrics: E >= 0.46, S >= 0.60.

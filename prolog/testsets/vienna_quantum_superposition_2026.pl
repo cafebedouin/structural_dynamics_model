@@ -121,7 +121,7 @@ narrative_ontology:constraint_victim(vienna_quantum_superposition_2026, observed
 % For the nanoparticle, the interferometer is a snare: it is trapped in
 % isolation and forced to exist in multiple states simultaneously.
 % Engine derives d ≈ 0.95 (victim + trapped) → high χ.
-constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, snare,
+constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(vienna_quantum_superposition_2026,
 % The system has a genuine coordination function (advancing science) but
 % relies on pure extraction/coercion (isolating particles) to function.
 % This dual nature is the hallmark of a Tangled Rope.
-constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, tangled_rope,
+constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -156,9 +156,9 @@ constraint_indexing:constraint_classification(vienna_quantum_superposition_2026,
 test(perspectival_gap) :-
     % Verify the nanoparticle (target) sees a Snare, while the researcher
     % (beneficiary) sees a Rope.
-    constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_thresholds) :-
     % Verify metrics are consistent with Tangled Rope classification.

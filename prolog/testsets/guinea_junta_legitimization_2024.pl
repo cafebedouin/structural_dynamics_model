@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(guinea_junta_legitimization_2024, 
 % Sees both the coordination function (state control) and asymmetric extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.65 * 1.15 * 1.2 (global scope) ≈ 0.90 -> Tangled Rope
-constraint_indexing:constraint_classification(guinea_junta_legitimization_2024, tangled_rope,
+constraint_indexing:constraint_classification(guinea_junta_legitimization_2024, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(guinea_junta_legitimization_2024, 
 % but lower than a trapped victim.
 % Engine derivation for organized victim with constrained exit -> d ≈ 0.6
 % f(d) ≈ 0.85. χ = 0.65 * 0.85 * 0.9 (regional scope) ≈ 0.50 -> Tangled Rope.
-constraint_indexing:constraint_classification(guinea_junta_legitimization_2024, tangled_rope,
+constraint_indexing:constraint_classification(guinea_junta_legitimization_2024, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -174,7 +174,7 @@ test(perspectival_gap_target_beneficiary) :-
 
 test(analytical_view_is_tangled_rope) :-
     % The analytical view must resolve the conflict into Tangled Rope.
-    constraint_indexing:constraint_classification(guinea_junta_legitimization_2024, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(guinea_junta_legitimization_2024, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A Tangled Rope requires a beneficiary, a victim, and active enforcement.

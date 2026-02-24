@@ -96,7 +96,7 @@ narrative_ontology:coordination_vitality(citation_collapse_dynamics, dead).
 % The researcher is trapped: they must use automated tools to manage the
 % volume of literature, but those tools provide a "hallucinated map"
 % that liquidates their primary investigative agency.
-constraint_indexing:constraint_classification(citation_collapse_dynamics, snare,
+constraint_indexing:constraint_classification(citation_collapse_dynamics, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(citation_collapse_dynamics, snare,
 % The aggregator views the collapse as a Rope—a highly efficient way to
 % coordinate "consensus" and generate "synthetic authority" without the
 % friction of human peer review or primary source verification.
-constraint_indexing:constraint_classification(citation_collapse_dynamics, rope,
+constraint_indexing:constraint_classification(citation_collapse_dynamics, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
@@ -128,7 +128,7 @@ constraint_indexing:constraint_classification(citation_collapse_dynamics, piton,
 % (though degraded) coordination function and the asymmetric extraction,
 % classifying it as a Tangled Rope. This view captures the system in its
 % state of active decay, before it becomes purely theatrical (Piton).
-constraint_indexing:constraint_classification(citation_collapse_dynamics, tangled_rope,
+constraint_indexing:constraint_classification(citation_collapse_dynamics, piton,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -142,9 +142,9 @@ constraint_indexing:constraint_classification(citation_collapse_dynamics, tangle
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless researcher vs Rope for the institutional aggregator.
-    constraint_indexing:constraint_classification(citation_collapse_dynamics, snare,
+    constraint_indexing:constraint_classification(citation_collapse_dynamics, piton,
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(citation_collapse_dynamics, rope,
+    constraint_indexing:constraint_classification(citation_collapse_dynamics, piton,
         context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(citation_collapse_dynamics, piton,
         context(agent_power(analytical), _, _, _)).

@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(lcdm_hubble_tension, tangled_rope,
 % definitively resolve the measurement discrepancy. For them, the tension is a
 % career-threatening Snare, forcing them to align with one camp or the other
 % under high uncertainty.
-constraint_indexing:constraint_classification(lcdm_hubble_tension, snare,
+constraint_indexing:constraint_classification(lcdm_hubble_tension, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

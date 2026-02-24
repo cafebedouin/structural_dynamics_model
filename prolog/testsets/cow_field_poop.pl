@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(cow_field_poop, the_unwary_walker).
 
 % PERSPECTIVE 1: THE VICTIM (THE STEPPER) - SNARE
 % Agent who bears the most extraction.
-constraint_indexing:constraint_classification(cow_field_poop, snare,
+constraint_indexing:constraint_classification(cow_field_poop, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(cow_field_poop, snare,
 
 % PERSPECTIVE 2: THE INSTITUTIONAL MANAGER (PUBLIC WORKS) - TANGLED ROPE
 % Agent who manages the system.
-constraint_indexing:constraint_classification(cow_field_poop, tangled_rope,
+constraint_indexing:constraint_classification(cow_field_poop, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(cow_field_poop, tangled_rope,
 
 % PERSPECTIVE 3: THE PRACTICAL WALKER - ROPE
 % Agent with sufficient agency to navigate successfully.
-constraint_indexing:constraint_classification(cow_field_poop, rope,
+constraint_indexing:constraint_classification(cow_field_poop, tangled_rope,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(mobile),

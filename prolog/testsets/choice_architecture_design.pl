@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(choice_architecture_design, individuals_wit
 % An individual whose preferences run counter to the default. They must exert
 % cognitive effort to overcome the nudge. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(choice_architecture_design, snare,
+constraint_indexing:constraint_classification(choice_architecture_design, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

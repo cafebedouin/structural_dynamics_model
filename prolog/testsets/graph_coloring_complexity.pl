@@ -125,7 +125,7 @@ narrative_ontology:constraint_victim(graph_coloring_complexity, compiler_optimiz
 % available physical registers (colors) become insufficient. The optimizer is
 % trapped by the complexity, forced to "spill" variables to slow memory,
 % strangling performance.
-constraint_indexing:constraint_classification(graph_coloring_complexity, snare,
+constraint_indexing:constraint_classification(graph_coloring_complexity, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(graph_coloring_complexity, tangled
 
 test(perspectival_gap) :-
     % Verify that the target, beneficiary, and analyst all see different types.
-    constraint_indexing:constraint_classification(graph_coloring_complexity, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(graph_coloring_complexity, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(graph_coloring_complexity, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(graph_coloring_complexity, tangled_rope, context(agent_power(analytical), _, _, _)).
 

@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(iron_law_of_oligarchy, rank_and_file_member
 % The hierarchy that was meant to empower the collective now strangles dissent
 % and extracts value (power, status, resources) for the leadership.
 % χ = 0.60 * 1.5 (powerless) * 0.8 (local) = 0.72.
-constraint_indexing:constraint_classification(iron_law_of_oligarchy, snare,
+constraint_indexing:constraint_classification(iron_law_of_oligarchy, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(iron_law_of_oligarchy, rope,
 % asymmetric extraction (Snare). The structure requires active enforcement to
 % maintain the leadership's position, making it a canonical Tangled Rope.
 % χ = 0.60 * 1.15 (analytical) * 1.2 (global) = 0.828.
-constraint_indexing:constraint_classification(iron_law_of_oligarchy, tangled_rope,
+constraint_indexing:constraint_classification(iron_law_of_oligarchy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,7 +138,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(iron_law_of_oligarchy, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(iron_law_of_oligarchy, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify base metrics meet the criteria for a high-extraction constraint.

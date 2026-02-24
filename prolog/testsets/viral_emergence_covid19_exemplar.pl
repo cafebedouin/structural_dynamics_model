@@ -97,7 +97,7 @@ narrative_ontology:constraint_victim(viral_emergence_covid19_exemplar, long_covi
 % The "return to normal" for the majority suppresses alternatives (e.g., clean
 % air standards, widespread masking) that would allow their safe participation
 % in society, trapping them in a state of heightened risk.
-constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, snare,
+constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, 
 % PERSPECTIVE 2: A CITIZEN DURING THE INITIAL LOCKDOWN (SCAFFOLD)
 % The early, coordinated response is seen as a necessary, temporary Scaffold
 % to "flatten the curve" and prevent hospital collapse.
-constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, scaffold,
+constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, 
 % The analytical observer sees the entire arc as a Tangled Rope: a necessary
 % coordination effort that became inextricably tangled with political extraction,
 % misinformation, and permanent social costs.
-constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, tangled_rope,
+constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -142,10 +142,10 @@ constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, 
 
 test(perspectival_shift_over_time) :-
     % This test confirms the logic for different phases/perspectives exists.
-    constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, scaffold, context(agent_power(moderate), _, _, _)),
+    constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, rope, context(agent_power(moderate), _, _, _)),
     constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, piton, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(viral_emergence_covid19_exemplar, rope, context(agent_power(analytical), _, _, _)).
 
 test(final_state_is_piton) :-
     narrative_ontology:constraint_metric(viral_emergence_covid19_exemplar, theater_ratio, TR),

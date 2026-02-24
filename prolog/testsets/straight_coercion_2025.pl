@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(strait_coercion_2025, taiwanese_citizenry).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The constant, high-suppression military presence is an inescapable trap,
 % draining resources and creating psychological pressure.
-constraint_indexing:constraint_classification(strait_coercion_2025, snare,
+constraint_indexing:constraint_classification(strait_coercion_2025, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(strait_coercion_2025, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the asymmetric extraction of security resources from Taiwan while
 % acknowledging the genuine internal coordination function for the PLA.
-constraint_indexing:constraint_classification(strait_coercion_2025, tangled_rope,
+constraint_indexing:constraint_classification(strait_coercion_2025, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(strait_coercion_2025, tangled_rope
 % PERSPECTIVE 4: DIPLOMATIC ACTORS (SNARE)
 % Traditional signaling is retroactively framed (opportunistic justification)
 % to trap external actors into a reactive loop, forcing responses.
-constraint_indexing:constraint_classification(strait_coercion_2025, snare,
+constraint_indexing:constraint_classification(strait_coercion_2025, tangled_rope,
     context(agent_power(moderate),
             time_horizon(immediate),
             exit_options(constrained),
@@ -143,7 +143,7 @@ test(perspectival_gap) :-
 
 test(analytical_is_tangled_rope) :-
     % The analytical view must resolve the conflict as a Tangled Rope.
-    constraint_indexing:constraint_classification(strait_coercion_2025, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(strait_coercion_2025, snare, context(agent_power(analytical), _, _, _)).
 
 test(extraction_threshold) :-
     domain_priors:base_extractiveness(strait_coercion_2025, E),

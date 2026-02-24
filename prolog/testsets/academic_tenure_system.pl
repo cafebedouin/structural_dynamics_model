@@ -95,7 +95,7 @@ constraint_indexing:constraint_classification(academic_tenure_system, rope,
             spatial_scope(national))). %
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-constraint_indexing:constraint_classification(academic_tenure_system, tangled_rope,
+constraint_indexing:constraint_classification(academic_tenure_system, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

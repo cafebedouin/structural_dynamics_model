@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(cognitive_energy_budget, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The default analytical context, which sees the full system. It recognizes
 % both the coordination function and the severe asymmetric extraction.
-constraint_indexing:constraint_classification(cognitive_energy_budget, tangled_rope,
+constraint_indexing:constraint_classification(cognitive_energy_budget, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(cognitive_energy_budget, tangled_r
 % From a narrow neuro-biological perspective, the finite nature of ATP
 % in the prefrontal cortex is an immutable Mountain, separate from the
 % socio-technical system built upon it.
-constraint_indexing:constraint_classification(cognitive_energy_budget, mountain,
+constraint_indexing:constraint_classification(cognitive_energy_budget, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -132,7 +132,7 @@ test(perspectival_gap) :-
     % Verify Snare for the powerless worker vs Rope for the institutional platform.
     constraint_indexing:constraint_classification(cognitive_energy_budget, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(cognitive_energy_budget, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(cognitive_energy_budget, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(cognitive_energy_budget, snare, context(agent_power(analytical), _, _, _)).
 
 test(analytical_distinction) :-
     % Verify that analytical observers can distinguish the biological Mountain

@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(ape_cognition_framework, non_human_great_ap
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
 % Agent who bears the most extraction. Engine derives d from:
 %   victim membership (non_human_great_apes) + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(ape_cognition_framework, snare,
+constraint_indexing:constraint_classification(ape_cognition_framework, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(ape_cognition_framework, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context. Sees both coordination and extraction.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for this perspective.
-constraint_indexing:constraint_classification(ape_cognition_framework, tangled_rope,
+constraint_indexing:constraint_classification(ape_cognition_framework, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -153,7 +153,7 @@ test(perspectival_gap_is_snare_vs_rope) :-
 
 test(analytical_view_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(ape_cognition_framework, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ape_cognition_framework, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % Verify that all three structural requirements for a Tangled Rope are declared.

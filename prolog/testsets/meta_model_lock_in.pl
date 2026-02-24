@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(meta_model_lock_in, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature: a genuine coordination function (beneficiaries exist)
 % coupled with severe asymmetric extraction (victims exist) and active enforcement.
-constraint_indexing:constraint_classification(meta_model_lock_in, tangled_rope,
+constraint_indexing:constraint_classification(meta_model_lock_in, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

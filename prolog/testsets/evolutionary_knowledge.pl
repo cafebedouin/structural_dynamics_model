@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(evolutionary_knowledge, students_and_resear
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For the organism or student, the mandatory "struggle" is an inescapable trap.
 % With ε=0.55, χ = 0.55 * 1.5 (powerless) * 0.8 (local) = 0.66. This is a Snare.
-constraint_indexing:constraint_classification(evolutionary_knowledge, snare,
+constraint_indexing:constraint_classification(evolutionary_knowledge, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(evolutionary_knowledge, rope,
 % A holistic view reveals a system that both coordinates knowledge production
 % (beneficiary exists) and asymmetrically extracts labor (victim exists)
 % through active enforcement.
-constraint_indexing:constraint_classification(evolutionary_knowledge, tangled_rope,
+constraint_indexing:constraint_classification(evolutionary_knowledge, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(evolutionary_knowledge, piton,
 
 test(perspectival_gap_snare_rope) :-
     % Verify the constraint is a Snare for the powerless but a Rope for the institutional.
-    constraint_indexing:constraint_classification(evolutionary_knowledge, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(evolutionary_knowledge, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(evolutionary_knowledge, rope, context(agent_power(institutional), _, _, _)),
     \+ constraint_indexing:constraint_classification(evolutionary_knowledge, mountain, context(agent_power(powerless), _, _, _)).
 

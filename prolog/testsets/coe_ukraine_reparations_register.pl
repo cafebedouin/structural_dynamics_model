@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(coe_ukraine_reparations_register, russian_f
 % As the target of extraction with no ability to opt-out, Russia perceives
 % a purely coercive mechanism. The engine derives d from its victim status and
 % trapped exit options, resulting in d ≈ 0.95 and high effective extraction (χ).
-constraint_indexing:constraint_classification(coe_ukraine_reparations_register, snare,
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(trapped),
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(coe_ukraine_reparations_register, 
 % and the massive, coercive extraction function (reparations). High ε and high
 % suppression, combined with both beneficiary and victim groups, results
 % in a Tangled Rope classification.
-constraint_indexing:constraint_classification(coe_ukraine_reparations_register, tangled_rope,
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(coe_ukraine_reparations_register, 
 % pure coordination mechanism (a Rope) to formalize their claim for future
 % compensation. They are trapped by the circumstances of the war, making this
 % register their only viable path to restitution.
-constraint_indexing:constraint_classification(coe_ukraine_reparations_register, rope,
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -84,7 +84,7 @@ narrative_ontology:coordination_vitality(anticipatory_capacity_failure, degradin
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The planner is trapped: they see the approaching shock but cannot divert 
 % resources because the system's "efficiency" logic prohibits redundancy.
-constraint_indexing:constraint_classification(anticipatory_capacity_failure, snare, 
+constraint_indexing:constraint_classification(anticipatory_capacity_failure, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(anticipatory_capacity_failure, sna
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % The institution views the lean optimization as a Rope—the only way to 
 % coordinate global-scale logistics and remain competitive in a low-margin world.
-constraint_indexing:constraint_classification(anticipatory_capacity_failure, rope, 
+constraint_indexing:constraint_classification(anticipatory_capacity_failure, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -126,9 +126,9 @@ constraint_indexing:constraint_classification(anticipatory_capacity_failure, tan
 
 test(perspectival_gap) :-
     % Verify Snare for the powerless planner vs Rope for the institutional system.
-    constraint_indexing:constraint_classification(anticipatory_capacity_failure, snare, 
+    constraint_indexing:constraint_classification(anticipatory_capacity_failure, piton, 
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(anticipatory_capacity_failure, rope, 
+    constraint_indexing:constraint_classification(anticipatory_capacity_failure, piton, 
         context(agent_power(institutional), _, _, _)).
 
 test(piton_trigger) :-

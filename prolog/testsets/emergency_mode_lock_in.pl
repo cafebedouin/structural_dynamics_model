@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(emergency_mode_lock_in, rope,
 % Detects high extraction (0.91) and suppression (0.85) masking as essential
 % coordination. The presence of both beneficiaries and victims, plus active
 % enforcement, confirms the Tangled Rope classification.
-constraint_indexing:constraint_classification(emergency_mode_lock_in, tangled_rope,
+constraint_indexing:constraint_classification(emergency_mode_lock_in, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -140,7 +140,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(emergency_mode_lock_in, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(emergency_mode_lock_in, tangled_rope,
+    constraint_indexing:constraint_classification(emergency_mode_lock_in, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-

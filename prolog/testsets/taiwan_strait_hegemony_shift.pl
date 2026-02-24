@@ -103,7 +103,7 @@ narrative_ontology:constraint_victim(taiwan_strait_hegemony_shift, south_korean_
 % For Japan, the hegemon's control of Taiwan is an unchangeable feature of
 % geography. They cannot negotiate with a blockade at their doorstep; they
 % must accept the new terrain. The extraction is felt as a natural law.
-constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, mountain,
+constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, rope
 % The analyst sees a system that has a genuine coordination function (for the
 % hegemon) but also imposes severe asymmetric extraction on its victims. It
 % requires active enforcement to maintain. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, tangled_rope,
+constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -145,7 +145,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the conflict into a Tangled Rope.
-    constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     narrative_ontology:constraint_metric(taiwan_strait_hegemony_shift, extractiveness, E),

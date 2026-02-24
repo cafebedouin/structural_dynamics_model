@@ -106,7 +106,7 @@ narrative_ontology:coordination_vitality(mco_unit_system_discontinuity, degradin
 % They assume the "Force" value provided is in the standard SI units
 % required by their system. There is no "choice" to interpret the number
 % differently; the data is presented as an immutable fact.
-constraint_indexing:constraint_classification(mco_unit_system_discontinuity, mountain,
+constraint_indexing:constraint_classification(mco_unit_system_discontinuity, piton,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(mco_unit_system_discontinuity, mou
 % functional coordination mechanism that allows two different
 % organizations to work on the same hardware. They believe the
 % "system" is coordinating the teams effectively through these documents.
-constraint_indexing:constraint_classification(mco_unit_system_discontinuity, rope,
+constraint_indexing:constraint_classification(mco_unit_system_discontinuity, piton,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(mobile),

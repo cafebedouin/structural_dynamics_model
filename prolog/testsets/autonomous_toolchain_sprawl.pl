@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The default analytical view, detecting both the coordination function and
 % the severe asymmetric extraction (0.84).
-constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, tangled_rope,
+constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, tangl
 % A different analytical view focusing on inertia. The high theater ratio (0.79)
 % triggers a Piton classification: the "Efficiency Metrics" are performative,
 % and the toolchain is maintained out of habit, not current utility.
-constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, piton,
+constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),

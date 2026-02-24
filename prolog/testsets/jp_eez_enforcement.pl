@@ -128,7 +128,7 @@ narrative_ontology:constraint_victim(jp_eez_enforcement, chinese_state).
 % PERSPECTIVE 1: THE PRIMARY TARGET (CHINESE FISHING CREW)
 % Experiences this as pure, coercive extraction.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(jp_eez_enforcement, snare,
+constraint_indexing:constraint_classification(jp_eez_enforcement, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(jp_eez_enforcement, rope,
 % Recognizes the dual nature: a genuine coordination function (for Japan)
 % combined with high coercive extraction (against others).
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-constraint_indexing:constraint_classification(jp_eez_enforcement, tangled_rope,
+constraint_indexing:constraint_classification(jp_eez_enforcement, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(jp_eez_enforcement, tangled_rope,
 % Views the constraint as an illegitimate Snare. It's a victim, but with far
 % more power and different exit options than the fishing crews.
 % Engine derives d from: victim membership + constrained exit → d ≈ 0.70.
-constraint_indexing:constraint_classification(jp_eez_enforcement, snare,
+constraint_indexing:constraint_classification(jp_eez_enforcement, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -184,7 +184,7 @@ test(inter_institutional_gap) :-
     constraint_indexing:constraint_classification(jp_eez_enforcement, snare, context(agent_power(institutional), _, exit_options(constrained), _)).
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(jp_eez_enforcement, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(jp_eez_enforcement, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_compliance) :-
     narrative_ontology:constraint_beneficiary(jp_eez_enforcement, _),

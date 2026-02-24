@@ -119,7 +119,7 @@ narrative_ontology:constraint_victim(raac_school_maintenance, uk_local_education
 % Agent who bears the most extraction. For them, this is a trap with no easy exit,
 % imposing immense costs and risks.
 % Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(raac_school_maintenance, snare,
+constraint_indexing:constraint_classification(raac_school_maintenance, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(raac_school_maintenance, rope,
 % Sees both the genuine coordination need and the severe asymmetric extraction.
 % This perspective identifies the structure as a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(raac_school_maintenance, tangled_rope,
+constraint_indexing:constraint_classification(raac_school_maintenance, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(raac_school_maintenance, tangled_r
 % both the coordination pressure and the extraction, but have more agency than
 % a single school. Their exit options are highly constrained.
 % Engine derives d from victim membership + constrained exit -> d ~0.90 -> f(d) ~1.35
-constraint_indexing:constraint_classification(raac_school_maintenance, snare,
+constraint_indexing:constraint_classification(raac_school_maintenance, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -182,7 +182,7 @@ test(perspectival_gap_inter_institutional) :-
 
 test(tangled_rope_conditions_met) :-
     % The analytical observer must see a tangled_rope.
-    constraint_indexing:constraint_classification(raac_school_maintenance, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(raac_school_maintenance, snare, context(agent_power(analytical), _, _, _)),
     % And the structural conditions must be met.
     narrative_ontology:constraint_beneficiary(raac_school_maintenance, _),
     narrative_ontology:constraint_victim(raac_school_maintenance, _),

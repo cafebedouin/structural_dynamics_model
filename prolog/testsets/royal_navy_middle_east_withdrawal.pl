@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(royal_navy_middle_east_withdrawal, regional
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % A merchant captain in the Gulf loses a security guarantee they rely on.
-constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, snare,
+constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal,
 
 test(perspectival_gap_is_resolved) :-
     % Verify the gap between powerless (Snare), institutional (Rope), and analytical (Mountain).
-    constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, snare,
+    constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, tangled_rope,
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, rope,
         context(agent_power(institutional), _, _, _)),

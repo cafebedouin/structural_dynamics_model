@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(constraint_interaction_explosion, 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid signature where coordination intent (Ropes) leads to
 % emergent predatory extraction (Snare).
-constraint_indexing:constraint_classification(constraint_interaction_explosion, tangled_rope,
+constraint_indexing:constraint_classification(constraint_interaction_explosion, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -125,7 +125,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(constraint_interaction_explosion, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(constraint_interaction_explosion, tangled_rope,
+    constraint_indexing:constraint_classification(constraint_interaction_explosion, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-

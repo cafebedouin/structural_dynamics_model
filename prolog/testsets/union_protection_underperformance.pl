@@ -92,7 +92,7 @@ narrative_ontology:constraint_victim(union_protection_underperformance, high_per
 % PERSPECTIVE 1: THE SUBJECT (FRONT-LINE SUPERVISOR)
 % The supervisor is powerless, trapped by rules that create a high coercive
 % burden (document everything) and extract productivity. This feels like a Snare.
-constraint_indexing:constraint_classification(union_protection_underperformance, snare,
+constraint_indexing:constraint_classification(union_protection_underperformance, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

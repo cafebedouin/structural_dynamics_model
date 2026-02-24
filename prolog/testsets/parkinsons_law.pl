@@ -83,7 +83,7 @@ narrative_ontology:constraint_victim(parkinsons_law, productive_contributors).
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The productive worker sees their time and energy consumed by non-productive tasks.
-constraint_indexing:constraint_classification(parkinsons_law, snare,
+constraint_indexing:constraint_classification(parkinsons_law, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

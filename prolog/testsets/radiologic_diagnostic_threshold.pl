@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(radiologic_diagnostic_threshold, r
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The system auditor sees both the coordination function and the asymmetric
 % extraction, classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(radiologic_diagnostic_threshold, tangled_rope,
+constraint_indexing:constraint_classification(radiologic_diagnostic_threshold, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -134,7 +134,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % Verify the analytical observer correctly identifies the Tangled Rope.
-    constraint_indexing:constraint_classification(radiologic_diagnostic_threshold, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(radiologic_diagnostic_threshold, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     % Verify the base extractiveness is in the Snare/Tangled Rope range.

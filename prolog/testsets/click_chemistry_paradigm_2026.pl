@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(click_chemistry_paradigm_2026, mou
 % rapid, efficient synthesis, solving a collective action problem in drug
 % discovery. As a beneficiary with arbitrage exit, their effective
 % extraction (χ) is negative.
-constraint_indexing:constraint_classification(click_chemistry_paradigm_2026, rope,
+constraint_indexing:constraint_classification(click_chemistry_paradigm_2026, scaffold,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(arbitrage),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(click_chemistry_paradigm_2026, rop
 % The default analytical context, which informs the constraint_claim.
 % The observer sees a highly efficient coordination mechanism with low
 % extraction and suppression, classifying it as a Rope.
-constraint_indexing:constraint_classification(click_chemistry_paradigm_2026, rope,
+constraint_indexing:constraint_classification(click_chemistry_paradigm_2026, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

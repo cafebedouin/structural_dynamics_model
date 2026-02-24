@@ -82,7 +82,7 @@ narrative_ontology:constraint_beneficiary(milano_cortina_2026, global_civilizati
 % Effective Extraction: 0.12 * 1.5 (powerless) * 1.2 (global) = 0.216.
 % Despite the theater, the low base extraction keeps this in the Rope/Scaffold 
 % range for the public.
-constraint_indexing:constraint_classification(milano_cortina_2026, rope, 
+constraint_indexing:constraint_classification(milano_cortina_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(mobile), 
@@ -91,14 +91,14 @@ constraint_indexing:constraint_classification(milano_cortina_2026, rope,
 % PERSPECTIVE 2: THE INSTITUTIONAL SPONSOR (PITON)
 % Effective Extraction: 0.12 * -0.2 (institutional) * 1.2 = -0.028.
 % Low extraction + extreme Theater Ratio (0.98) = Pure Piton.
-constraint_indexing:constraint_classification(milano_cortina_2026, piton, 
+constraint_indexing:constraint_classification(milano_cortina_2026, rope, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
             spatial_scope(global))).
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-constraint_indexing:constraint_classification(milano_cortina_2026, piton,
+constraint_indexing:constraint_classification(milano_cortina_2026, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -117,8 +117,8 @@ test(piton_theater_check) :-
 
 test(perspectival_shift) :-
     % Verify the transition from logistical Rope to institutional Piton.
-    constraint_indexing:constraint_classification(milano_cortina_2026, rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(milano_cortina_2026, piton, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(milano_cortina_2026, piton, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(milano_cortina_2026, rope, context(agent_power(institutional), _, _, _)).
 
 :- end_tests(milano_cortina_2026_tests).
 

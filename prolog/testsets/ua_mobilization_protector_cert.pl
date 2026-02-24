@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(ua_mobilization_protector_cert, ro
 % Derives d ≈ 0.72 → f(d) ≈ 1.15. Global scope amplifies perceived extraction.
 % χ = 0.65 * 1.15 * 1.2 (global) ≈ 0.90. Meets Tangled Rope criteria because
 % the structural flags (beneficiary, victim, enforcement) are all present.
-constraint_indexing:constraint_classification(ua_mobilization_protector_cert, tangled_rope,
+constraint_indexing:constraint_classification(ua_mobilization_protector_cert, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(ua_mobilization_protector_cert, ta
 % For this case, the engine derives d≈0.7, so f(d)≈1.1.
 % χ = 0.65 * 1.1 * 1.0 (national) ≈ 0.715. They experience it as a Tangled Rope:
 % a coordination task imposed on them with coercive, extractive force.
-constraint_indexing:constraint_classification(ua_mobilization_protector_cert, tangled_rope,
+constraint_indexing:constraint_classification(ua_mobilization_protector_cert, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -172,7 +172,7 @@ test(perspectival_gap_target_vs_beneficiary, [nondet]) :-
 
 test(analytical_classification_is_tangled_rope, [nondet]) :-
     % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(ua_mobilization_protector_cert, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ua_mobilization_protector_cert, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % Verify that all three conditions for a Tangled Rope are met.

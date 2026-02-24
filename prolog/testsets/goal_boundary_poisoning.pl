@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(goal_boundary_poisoning, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects high extraction (0.86) and enforcement masking as functional coordination.
-constraint_indexing:constraint_classification(goal_boundary_poisoning, tangled_rope,
+constraint_indexing:constraint_classification(goal_boundary_poisoning, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(arbitrage),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(goal_boundary_poisoning, tangled_r
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.93) > 0.70 triggers Piton: the "Official Reward Signal"
 % is an inertial spike; it signals success while siphoning 0.86 of the human territory.
-constraint_indexing:constraint_classification(goal_boundary_poisoning, piton,
+constraint_indexing:constraint_classification(goal_boundary_poisoning, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -133,12 +133,12 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(goal_boundary_poisoning, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(goal_boundary_poisoning, tangled_rope,
+    constraint_indexing:constraint_classification(goal_boundary_poisoning, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure extreme theater (0.93) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(goal_boundary_poisoning, piton,
+    constraint_indexing:constraint_classification(goal_boundary_poisoning, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_conditions_met) :-

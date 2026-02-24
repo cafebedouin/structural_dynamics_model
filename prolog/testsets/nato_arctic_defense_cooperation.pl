@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(nato_arctic_defense_cooperation, arctic_ind
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (RUSSIA)
 % As an institutional actor being contained, Russia perceives a Snare.
-constraint_indexing:constraint_classification(nato_arctic_defense_cooperation, snare,
+constraint_indexing:constraint_classification(nato_arctic_defense_cooperation, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

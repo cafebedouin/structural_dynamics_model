@@ -123,7 +123,7 @@ narrative_ontology:constraint_victim(french_ag_land_concentration, french_state_
 % function is irrelevant to their experience of being priced out.
 % Engine derives d from: victim + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
 %   χ = 0.55 * 1.42 * 1.0 (national) ≈ 0.78 (Snare: χ >= 0.66)
-constraint_indexing:constraint_classification(french_ag_land_concentration, snare,
+constraint_indexing:constraint_classification(french_ag_land_concentration, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(french_ag_land_concentration, rope
 % The INSEE analyst sees both the coordination function and the severe
 % asymmetric extraction it produces.
 % Engine derives canonical d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(french_ag_land_concentration, tangled_rope,
+constraint_indexing:constraint_classification(french_ag_land_concentration, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -176,7 +176,7 @@ test(perspectival_gap_target_beneficiary) :-
     format('... Perspectival gap validated: Target sees Snare, Beneficiary sees Rope~n').
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(french_ag_land_concentration, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(french_ag_land_concentration, snare, context(agent_power(analytical), _, _, _)),
     format('... Analytical view validated: Tangled Rope~n').
 
 test(tangled_rope_structural_gates_pass) :-

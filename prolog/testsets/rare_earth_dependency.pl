@@ -91,7 +91,7 @@ narrative_ontology:constraint_victim(rare_earth_dependency, dependent_nations_in
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % High extraction felt as a predatory trap with no immediate escape.
-constraint_indexing:constraint_classification(rare_earth_dependency, snare,
+constraint_indexing:constraint_classification(rare_earth_dependency, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(rare_earth_dependency, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context (civilizational/analytical/global).
 % Recognizes both the coordination function (trade) and the asymmetric extraction (geopolitical leverage).
-constraint_indexing:constraint_classification(rare_earth_dependency, tangled_rope,
+constraint_indexing:constraint_classification(rare_earth_dependency, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,7 +128,7 @@ test(perspectival_gap) :-
 
 test(tangled_rope_conditions) :-
     % The analytical observer must see this as a tangled_rope.
-    constraint_indexing:constraint_classification(rare_earth_dependency, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(rare_earth_dependency, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Ensures it's a high-extraction constraint.

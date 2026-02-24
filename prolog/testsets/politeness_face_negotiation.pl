@@ -88,7 +88,7 @@ narrative_ontology:constraint_victim(politeness_face_negotiation, individual_dis
 % For those whose identity is misread or suppressed, politeness is a Snare. The social
 % requirement to "not impose" is used to silence their identity and enforce a harmful
 % status quo. The extraction of their self-image is immediate and coercive.
-constraint_indexing:constraint_classification(politeness_face_negotiation, snare,
+constraint_indexing:constraint_classification(politeness_face_negotiation, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),

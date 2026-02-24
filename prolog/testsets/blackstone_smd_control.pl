@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(blackstone_smd_control, rope,
 % The auditor sees both functions. It's a 'Rope' for the SMDs (coordination)
 % tangled with a 'Snare' for unitholders (asymmetric extraction). It requires
 % active legal enforcement and has clear beneficiaries and victims.
-constraint_indexing:constraint_classification(blackstone_smd_control, tangled_rope,
+constraint_indexing:constraint_classification(blackstone_smd_control, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,7 +128,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the gap as a Tangled Rope.
-    constraint_indexing:constraint_classification(blackstone_smd_control, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(blackstone_smd_control, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     narrative_ontology:constraint_metric(blackstone_smd_control, extractiveness, E),

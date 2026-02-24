@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(omega1_patching_process, original_story_aut
 % The original story authors whose work is programmatically altered. Their
 % interpretive authority is extracted, and their original data is suppressed.
 % Engine derives d from: victim membership + constrained exit -> d ≈ 0.90 -> high χ
-constraint_indexing:constraint_classification(omega1_patching_process, snare,
+constraint_indexing:constraint_classification(omega1_patching_process, tangled_rope,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(constrained),

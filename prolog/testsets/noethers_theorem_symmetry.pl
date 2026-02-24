@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountai
 % For a researcher, the theorem is a pure coordination tool. It allows them to
 % deduce a conservation law from an observed symmetry, coordinating theory with
 % observation. The negative effective extraction reflects this enabling function.
-constraint_indexing:constraint_classification(noethers_theorem_symmetry, rope,
+constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(noethers_theorem_symmetry, rope,
 % The programmer experiences the theorem as a coercive Snare that punishes
 % simple numerical methods with unphysical energy drift. It extracts massive
 % engineering effort to implement symplectic integrators that satisfy the law.
-constraint_indexing:constraint_classification(noethers_theorem_symmetry, snare,
+constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),
@@ -179,7 +179,7 @@ constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountai
 
 test(perspectival_gap_rope_snare) :-
     % Verify the gap between the physicist (beneficiary) and programmer (victim).
-    constraint_indexing:constraint_classification(noethers_theorem_symmetry, rope,
+    constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
         context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(noethers_theorem_symmetry, snare,
         context(agent_power(powerless), _, exit_options(constrained), _)),

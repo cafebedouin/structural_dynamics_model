@@ -130,7 +130,7 @@ narrative_ontology:constraint_victim(strategic_deep_sea_rare_earth_mining, japan
 % and view the initiative as pure, destructive extraction.
 % Engine derives d from victim + trapped → d ≈ 0.95 → f(d) ≈ 1.42.
 % χ = 0.55 * 1.42 * 1.2 (global scope) ≈ 0.94, which is a clear Snare.
-constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, snare,
+constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, tangled_rope,
     context(agent_power(powerless),
             time_horizon(civilizational),
             exit_options(trapped),
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mini
 % and the severe, asymmetric extraction (environmental/financial costs).
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
 % χ = 0.55 * 1.15 * 1.2 (global scope) ≈ 0.76, classifying as Tangled Rope.
-constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, tangled_rope,
+constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -177,13 +177,13 @@ constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mini
 
 test(perspectival_gap_target_beneficiary) :-
     % Verify the core perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, tangled_rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, rope, context(agent_power(institutional), _, arbitrage, _)),
     format('... Perspectival gap validated (Snare vs Rope).~n').
 
 test(analytical_observer_sees_tangled_rope) :-
     % The analytical view must resolve the gap to Tangled Rope.
-    constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(strategic_deep_sea_rare_earth_mining, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_compliance) :-
     % Verify all three structural conditions for a Tangled Rope are met.

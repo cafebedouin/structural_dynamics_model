@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(regulatory_capture, general_consumers).
 % solution, but the "safety" regulations (written by their competitors)
 % make it illegal to operate. The harder they try to compete, the more
 % the legal trap tightens.
-constraint_indexing:constraint_classification(regulatory_capture, snare,
+constraint_indexing:constraint_classification(regulatory_capture, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(constrained),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(regulatory_capture, piton,
 
 test(perspectival_gap) :-
     % Verify the core gap between the powerless (Snare) and institutional (Rope).
-    constraint_indexing:constraint_classification(regulatory_capture, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(regulatory_capture, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(regulatory_capture, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-

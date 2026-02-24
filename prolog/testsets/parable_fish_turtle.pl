@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(parable_fish_turtle, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The analyst sees both the pedagogical function (coordination) and the
 % severe cognitive extraction imposed on the subject.
-constraint_indexing:constraint_classification(parable_fish_turtle, tangled_rope,
+constraint_indexing:constraint_classification(parable_fish_turtle, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(parable_fish_turtle, tangled_rope,
 % PERSPECTIVE 4: THE TURTLE (ROPE)
 % The turtle, able to move between worlds, experiences the boundary as a simple
 % coordination problem, not a trap.
-constraint_indexing:constraint_classification(parable_fish_turtle, rope,
+constraint_indexing:constraint_classification(parable_fish_turtle, snare,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),

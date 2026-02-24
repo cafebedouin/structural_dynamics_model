@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(happiness_of_others, enmeshed_family_member
 % PERSPECTIVE 1: THE SUBJECT ("THE CRUCIFIED") - MOUNTAIN
 % For someone in extreme suffering, the unavailability of happiness is an immutable law.
 % χ = 0.75 * π(powerless:1.5) * σ(local:0.8) = 0.90
-constraint_indexing:constraint_classification(happiness_of_others, mountain,
+constraint_indexing:constraint_classification(happiness_of_others, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(happiness_of_others, rope,
 % The analyst sees both the coordination function (maintaining boundaries) and the
 % asymmetric extraction from those who don't respect them.
 % χ = 0.75 * π(analytical:1.15) * σ(global:1.2) = 1.035
-constraint_indexing:constraint_classification(happiness_of_others, tangled_rope,
+constraint_indexing:constraint_classification(happiness_of_others, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -135,7 +135,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the conflict into a Tangled Rope.
-    constraint_indexing:constraint_classification(happiness_of_others, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(happiness_of_others, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-
     % Verify this is a high-extraction constraint.

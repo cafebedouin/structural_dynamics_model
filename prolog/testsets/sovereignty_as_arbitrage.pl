@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(sovereignty_as_arbitrage, rope,
 % PERSPECTIVE 2: THE CANADIAN FEDERALIST (SNARE)
 % Viewed as a high-extraction mechanism that threatens to "break up the
 % country" and strip common social investments.
-constraint_indexing:constraint_classification(sovereignty_as_arbitrage, snare,
+constraint_indexing:constraint_classification(sovereignty_as_arbitrage, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(trapped),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(sovereignty_as_arbitrage, snare,
 % PERSPECTIVE 3: THE LOW-INCOME VOTER (SNARE)
 % The promise of low taxes is seen as a high-risk gamble that could lead to
 % cuts in essential public services, trapping them in a less resilient state.
-constraint_indexing:constraint_classification(sovereignty_as_arbitrage, snare,
+constraint_indexing:constraint_classification(sovereignty_as_arbitrage, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

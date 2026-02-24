@@ -104,7 +104,7 @@ narrative_ontology:constraint_victim(gita_kurukshetra, individual_ego).
 % households and leads to "Hell." It is a moral weight that paralyzes him,
 % strangling his will to fight due to overwhelming grief and confusion.
 % The high suppression and perceived cost make it a Snare.
-constraint_indexing:constraint_classification(gita_kurukshetra, snare,
+constraint_indexing:constraint_classification(gita_kurukshetra, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(gita_kurukshetra, rope,
 % just the "play of visible things" and "Nature's way," an immutable truth of
 % existence. This is a classic "false natural law" perception, where a highly
 % coercive social system is perceived as a natural, unchangeable reality.
-constraint_indexing:constraint_classification(gita_kurukshetra, mountain,
+constraint_indexing:constraint_classification(gita_kurukshetra, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

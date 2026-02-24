@@ -89,7 +89,7 @@ narrative_ontology:coordination_vitality(world_factbook_sunset_2026, dead).
 % PERSPECTIVE 1: THE ACADEMIC/JOURNALIST (SNARE)
 % For the researcher, the sunset is a Snare: a trap of information poverty 
 % where a reliable, free resource is unilaterally removed.
-constraint_indexing:constraint_classification(world_factbook_sunset_2026, snare, 
+constraint_indexing:constraint_classification(world_factbook_sunset_2026, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -98,7 +98,7 @@ constraint_indexing:constraint_classification(world_factbook_sunset_2026, snare,
 % PERSPECTIVE 2: THE CIA DIRECTOR (ROPE)
 % Leadership views the termination as a Rope: a coordination tool to 
 % focus limited staff on "core missions" and AI-driven intelligence.
-constraint_indexing:constraint_classification(world_factbook_sunset_2026, rope, 
+constraint_indexing:constraint_classification(world_factbook_sunset_2026, piton, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 

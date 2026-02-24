@@ -104,7 +104,7 @@ narrative_ontology:constraint_victim(genetic_predisposition, economically_disadv
 % For the individual, the system is a Snare. Their genetic code, a biological
 % fact, is used to create a trap of high premiums and limited choices.
 % χ = 0.6 * π(powerless=1.5) * σ(local=0.8) = 0.72.
-constraint_indexing:constraint_classification(genetic_predisposition, snare,
+constraint_indexing:constraint_classification(genetic_predisposition, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(genetic_predisposition, tangled_ro
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless (Snare), institutional (Rope), and analytical (Tangled Rope) views.
-    constraint_indexing:constraint_classification(genetic_predisposition, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(genetic_predisposition, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(genetic_predisposition, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(genetic_predisposition, tangled_rope, context(agent_power(analytical), _, _, _)).
 

@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(innovators_dilemma, incumbent_firms).
 % PERSPECTIVE 1: THE INCUMBENT MANAGER (SNARE)
 % Trapped by KPIs and resource allocation systems that prevent investment in
 % the firm's long-term survival.
-constraint_indexing:constraint_classification(innovators_dilemma, snare,
+constraint_indexing:constraint_classification(innovators_dilemma, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(innovators_dilemma, rope,
 % function (focusing resources) but also produces asymmetric extraction
 % (transferring market value from incumbents to disruptors) and requires
 % active enforcement (budgeting processes that kill innovation).
-constraint_indexing:constraint_classification(innovators_dilemma, tangled_rope,
+constraint_indexing:constraint_classification(innovators_dilemma, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -129,7 +129,7 @@ test(perspectival_gap) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical view must resolve the conflict as a Tangled Rope.
-    constraint_indexing:constraint_classification(innovators_dilemma, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(innovators_dilemma, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_for_tangled_rope) :-
     config:param(extractiveness_metric_name, ExtMetricName),

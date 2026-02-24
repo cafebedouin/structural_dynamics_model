@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(hidden_interdependency_risk, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % The auditor sees both the coordination function and the asymmetric extraction.
 % The three required properties are present: beneficiary, victim, and enforcement.
-constraint_indexing:constraint_classification(hidden_interdependency_risk, tangled_rope,
+constraint_indexing:constraint_classification(hidden_interdependency_risk, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(hidden_interdependency_risk, tangl
 % PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
 % Theater ratio (0.75) > 0.70 triggers Piton: the "diversity" of the market
 % is a performative facade for a singular, brittle dependency.
-constraint_indexing:constraint_classification(hidden_interdependency_risk, piton,
+constraint_indexing:constraint_classification(hidden_interdependency_risk, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -137,11 +137,11 @@ test(perspectival_gap) :-
     % Verify Snare for the subject vs Rope for the institutional provider.
     constraint_indexing:constraint_classification(hidden_interdependency_risk, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hidden_interdependency_risk, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(hidden_interdependency_risk, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(hidden_interdependency_risk, snare, context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.75) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(hidden_interdependency_risk, piton, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(hidden_interdependency_risk, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify the structural properties for Tangled Rope are present.

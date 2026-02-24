@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(public_domain_commons, rope,
 % intellectual property, the public domain is not a Snare that extracts from
 % them, but an unchangeable feature of the legal landscape that limits their
 % ability to extract. It is a boundary condition, a Mountain.
-constraint_indexing:constraint_classification(public_domain_commons, mountain,
+constraint_indexing:constraint_classification(public_domain_commons, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

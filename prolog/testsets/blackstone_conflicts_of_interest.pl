@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, 
 % (aligning the firm with its primary clients, the LPs) but achieves this via
 % asymmetric extraction (stripping public unitholders of standard protections)
 % and requires active enforcement through the partnership agreement.
-constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, tangled_rope,
+constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -127,7 +127,7 @@ test(perspectival_gap_snare_vs_rope) :-
     % Verify the core perspectival gap between the public unitholder and the fund LPs.
     constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, snare, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     % Verify that the base extractiveness meets the threshold for a Snare/Tangled Rope.

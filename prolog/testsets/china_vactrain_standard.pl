@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(china_vactrain_standard, competing_transpor
 % For a person whose land is expropriated for the project, the system is
 % purely extractive with no recourse. Engine derives d from:
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(china_vactrain_standard, snare,
+constraint_indexing:constraint_classification(china_vactrain_standard, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(china_vactrain_standard, rope,
 % asymmetric extraction required to achieve it. This dual nature is the
 % definition of a Tangled Rope.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(china_vactrain_standard, tangled_rope,
+constraint_indexing:constraint_classification(china_vactrain_standard, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -171,7 +171,7 @@ test(perspectival_gap) :-
     % Verify the core perspectival gap between target and beneficiary.
     constraint_indexing:constraint_classification(china_vactrain_standard, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
     constraint_indexing:constraint_classification(china_vactrain_standard, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(china_vactrain_standard, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(china_vactrain_standard, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_conditions_met) :-
     % A constraint can only be a Tangled Rope if it has both coordination

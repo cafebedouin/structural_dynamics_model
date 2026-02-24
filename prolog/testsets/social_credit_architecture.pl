@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(social_credit_architecture, rope,
 % An analyst sees both the coordination function and the severe, asymmetric
 % extraction. It is a hybrid system, not a pure snare or pure rope.
 % The analytical perspective has a canonical d ≈ 0.72.
-constraint_indexing:constraint_classification(social_credit_architecture, tangled_rope,
+constraint_indexing:constraint_classification(social_credit_architecture, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

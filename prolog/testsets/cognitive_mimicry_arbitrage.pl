@@ -87,7 +87,7 @@ narrative_ontology:constraint_victim(cma, traditional_linguists).
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % For traditional linguists, whose rule-based theories are suppressed and made
 % irrelevant, the paradigm is a Snare that extracts the legitimacy from their work.
-constraint_indexing:constraint_classification(cma, snare,
+constraint_indexing:constraint_classification(cma, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

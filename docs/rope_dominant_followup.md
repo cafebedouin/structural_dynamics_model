@@ -342,20 +342,17 @@ Do NOT re-run yet. Wait until:
 Then:
 
 ```bash
-# 1. Regenerate Prolog pipeline output (includes all spec changes)
-make pipeline_output
+# 1. Regenerate full pipeline (Prolog analyses + enrichment)
+python3 python/run_pipeline.py
 
-# 2. Regenerate enriched pipeline
-make enriched_pipeline
+# 2. Re-run tangled gradient analysis (new constraint count)
+python3 python/tangled_gradient.py
 
-# 3. Re-run tangled gradient analysis (new constraint count)
-python python/tangled_gradient.py
+# 3. Re-run chi variance decomposition
+python3 python/chi_variance_decomposition.py
 
-# 4. Re-run chi variance decomposition
-python python/chi_variance_decomposition.py
-
-# 5. Re-run rope-dominant spot check (validate reclassifications)
-python python/rope_dominant_spot_check.py
+# 4. Re-run rope-dominant spot check (validate reclassifications)
+python3 python/rope_dominant_spot_check.py
 ```
 
 The tangled_rope count in the corpus drops from 752 (claimed) to 749 with these 3 reclassifications. If the batch reconciliation in Part 2a is approved, the corpus type distribution would shift significantly (752 tangled_rope → ~509, 78 snare → ~357).

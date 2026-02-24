@@ -120,7 +120,7 @@ narrative_ontology:constraint_victim(boe_base_rate_policy_2024, uk_variable_rate
 % PERSPECTIVE 1: THE MORTGAGE HOLDER (PRIMARY TARGET)
 % Engine derives d from victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 % χ = 0.48 * 1.42 * 1.0 (national) ≈ 0.68. This meets the snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(boe_base_rate_policy_2024, snare,
+constraint_indexing:constraint_classification(boe_base_rate_policy_2024, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(boe_base_rate_policy_2024, snare,
 % PERSPECTIVE 2: THE SAVER (PRIMARY BENEFICIARY)
 % Engine derives d from beneficiary membership + mobile exit -> d ≈ 0.15 -> f(d) ≈ -0.01 -> low/negative χ.
 % χ = 0.48 * -0.01 * 1.0 (national) ≈ -0.005. This is a clear Rope.
-constraint_indexing:constraint_classification(boe_base_rate_policy_2024, rope,
+constraint_indexing:constraint_classification(boe_base_rate_policy_2024, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(boe_base_rate_policy_2024, tangled
 % Constrained exit reflects their mandate. They are not a direct beneficiary and
 % experience political pressure. Derived d is higher than a beneficiary.
 % d ~ 0.6 -> f(d) ~ 0.85 -> χ ~ 0.41. This is a Tangled Rope.
-constraint_indexing:constraint_classification(boe_base_rate_policy_2024, tangled_rope,
+constraint_indexing:constraint_classification(boe_base_rate_policy_2024, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

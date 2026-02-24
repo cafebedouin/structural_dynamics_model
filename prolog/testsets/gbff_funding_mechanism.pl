@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(gbff_funding_mechanism, indigenous_peoples_
 % entry. They are trapped within national systems that may not represent them.
 % Engine derives: victim + trapped -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ
 % χ ≈ 0.48 * 1.42 * 1.2 (global scope) ≈ 0.82 -> Snare
-constraint_indexing:constraint_classification(gbff_funding_mechanism, snare,
+constraint_indexing:constraint_classification(gbff_funding_mechanism, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(rent_seeking_equilibrium, rope,
 % The default analytical view detects both a coordination function (for
 % incumbents) and asymmetric extraction (from entrants), requiring active
 % enforcement. This is the canonical Tangled Rope signature.
-constraint_indexing:constraint_classification(rent_seeking_equilibrium, tangled_rope,
+constraint_indexing:constraint_classification(rent_seeking_equilibrium, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(rent_seeking_equilibrium, tangled_
 % A different analytical view, focused on functional utility, sees the high
 % theater ratio (0.88 > 0.70) and classifies it as a Piton: the "market safety"
 % regulations are an inert spike of logic masking pure wealth transfer.
-constraint_indexing:constraint_classification(rent_seeking_equilibrium, piton,
+constraint_indexing:constraint_classification(rent_seeking_equilibrium, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -142,14 +142,14 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(rent_seeking_equilibrium, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(rent_seeking_equilibrium, tangled_rope,
+    constraint_indexing:constraint_classification(rent_seeking_equilibrium, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.88) correctly triggers the Piton classification.
     domain_priors:theater_ratio(rent_seeking_equilibrium, TR),
     TR > 0.70,
-    constraint_indexing:constraint_classification(rent_seeking_equilibrium, piton,
+    constraint_indexing:constraint_classification(rent_seeking_equilibrium, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation) :-

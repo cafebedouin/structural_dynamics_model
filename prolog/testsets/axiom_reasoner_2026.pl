@@ -89,7 +89,7 @@ narrative_ontology:constraint_victim(axiom_reasoner_2026, unverified_probabilist
 % PERSPECTIVE 1: THE RESEARCHER (ROPE)
 % For the mathematician, the self-improving reasoner is a Rope: a coordination 
 % tool that amplifies the scale and speed of discoveries at exponential scale.
-constraint_indexing:constraint_classification(axiom_reasoner_2026, rope, 
+constraint_indexing:constraint_classification(axiom_reasoner_2026, scaffold, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(axiom_reasoner_2026, snare,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % From a civilizational view, the mission identifies the "Reasoning Gap" as 
 % a Mountain: a foundational limit that can only be scaled via symbolic logic.
-constraint_indexing:constraint_classification(axiom_reasoner_2026, tangled_rope,
+constraint_indexing:constraint_classification(axiom_reasoner_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

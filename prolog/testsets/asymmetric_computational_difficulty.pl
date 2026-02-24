@@ -81,7 +81,7 @@ narrative_ontology:has_sunset_clause(asymmetric_computational_difficulty).
 
 % PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
 % The average user sees the math as an immutable, unchangeable law of the universe.
-constraint_indexing:constraint_classification(asymmetric_computational_difficulty, mountain, 
+constraint_indexing:constraint_classification(asymmetric_computational_difficulty, piton, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -89,7 +89,7 @@ constraint_indexing:constraint_classification(asymmetric_computational_difficult
 
 % PERSPECTIVE 2: THE BENEFICIARY (SNARE)
 % For the actor with the secret key/exploit, the "difficulty" is a predatory trap for others.
-constraint_indexing:constraint_classification(asymmetric_computational_difficulty, snare, 
+constraint_indexing:constraint_classification(asymmetric_computational_difficulty, piton, 
     context(agent_power(institutional), 
             time_horizon(immediate), 
             exit_options(mobile), 
@@ -121,9 +121,9 @@ constraint_indexing:constraint_classification(asymmetric_computational_difficult
 
 test(perspectival_gap) :-
     % Verify it is a Mountain for the powerless and a Snare for the institutional beneficiary.
-    constraint_indexing:constraint_classification(asymmetric_computational_difficulty, mountain, 
+    constraint_indexing:constraint_classification(asymmetric_computational_difficulty, piton, 
         context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(asymmetric_computational_difficulty, snare, 
+    constraint_indexing:constraint_classification(asymmetric_computational_difficulty, piton, 
         context(agent_power(institutional), _, _, _)).
 
 test(piton_detection) :-

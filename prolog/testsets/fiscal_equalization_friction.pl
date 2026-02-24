@@ -96,7 +96,7 @@ narrative_ontology:constraint_victim(fiscal_equalization_friction, net_contribut
 % An individual taxpayer in a net contributor province. They are a victim of the
 % extraction and trapped within the federal system. The engine derives a high
 % d value, leading to high effective extraction (χ) and a Snare classification.
-constraint_indexing:constraint_classification(fiscal_equalization_friction, snare,
+constraint_indexing:constraint_classification(fiscal_equalization_friction, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(fiscal_equalization_friction, snar
 % The federal government, which uses the system to maintain national standards.
 % As a beneficiary with arbitrage exit (policy control), the engine derives a
 % low/negative d value, resulting in low/negative χ and a Rope classification.
-constraint_indexing:constraint_classification(fiscal_equalization_friction, rope,
+constraint_indexing:constraint_classification(fiscal_equalization_friction, tangled_rope,
     context(agent_power(institutional),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(fiscal_equalization_friction, rope
 % A political actor in a contributor province. From this perspective, the lack
 % of an exit option from federal transfers makes the coordination function
 % appear as pure extraction, a tool to justify sovereignty claims.
-constraint_indexing:constraint_classification(fiscal_equalization_friction, snare,
+constraint_indexing:constraint_classification(fiscal_equalization_friction, tangled_rope,
     context(agent_power(moderate),
             time_horizon(generational),
             exit_options(trapped),
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(fiscal_equalization_friction, snar
 % Recognizes a Rope with high friction due to asymmetric wealth distribution.
 % The coordination function is real, but the large-scale transfers create
 % significant political and economic tension.
-constraint_indexing:constraint_classification(fiscal_equalization_friction, rope,
+constraint_indexing:constraint_classification(fiscal_equalization_friction, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -147,7 +147,7 @@ test(perspectival_gap) :-
     TypeBeneficiary == rope.
 
 test(analytical_claim_matches_rope) :-
-    constraint_indexing:constraint_classification(fiscal_equalization_friction, rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(fiscal_equalization_friction, tangled_rope, context(agent_power(analytical), _, _, _)),
     narrative_ontology:constraint_claim(fiscal_equalization_friction, rope).
 
 :- end_tests(fiscal_equalization_friction_tests).

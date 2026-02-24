@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(tail_risk_compression, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature of providing current coordination while
 % engineering a future extraction event.
-constraint_indexing:constraint_classification(tail_risk_compression, tangled_rope,
+constraint_indexing:constraint_classification(tail_risk_compression, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

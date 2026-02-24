@@ -72,7 +72,7 @@ constraint_indexing:constraint_classification(rogue_wave_control_2026, tangled_r
 
 % PERSPECTIVE 2: THE ENGINEER (ROPE)
 % For cryptography, deterministic control is a Rope of pure coordination.
-constraint_indexing:constraint_classification(rogue_wave_control_2026, rope, 
+constraint_indexing:constraint_classification(rogue_wave_control_2026, tangled_rope, 
     context(agent_power(institutional), 
             time_horizon(generational), 
             exit_options(mobile), 
@@ -117,7 +117,7 @@ narrative_ontology:constraint_victim(rogue_wave_control_2026, none).
 % --- Analytical perspective classification ---
 % chi = 0.15 * 1.15 (analytical) * 1.2 (global) = 0.207
 % Classification: scaffold
-constraint_indexing:constraint_classification(rogue_wave_control_2026, scaffold,
+constraint_indexing:constraint_classification(rogue_wave_control_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

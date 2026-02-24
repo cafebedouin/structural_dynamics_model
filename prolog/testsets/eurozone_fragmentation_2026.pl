@@ -105,7 +105,7 @@ narrative_ontology:constraint_victim(eurozone_fragmentation_2026, cross_border_i
 % inability to use local monetary policy is a Snare. They are trapped by a
 % system that extracts purchasing power and suppresses local adaptation.
 % χ = 0.48 * π(powerless:1.5) * σ(continental:1.1) = 0.792
-constraint_indexing:constraint_classification(eurozone_fragmentation_2026, snare,
+constraint_indexing:constraint_classification(eurozone_fragmentation_2026, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(eurozone_fragmentation_2026, tangl
 
 test(perspectival_gap) :-
     % Verify the core perspectival gap between the powerless subject and the institutional beneficiary.
-    constraint_indexing:constraint_classification(eurozone_fragmentation_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(eurozone_fragmentation_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(eurozone_fragmentation_2026, rope, context(agent_power(institutional), _, _, _)).
 
 test(analytical_classification_is_tangled_rope) :-

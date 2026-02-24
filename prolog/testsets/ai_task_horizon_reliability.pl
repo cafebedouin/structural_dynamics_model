@@ -93,7 +93,7 @@ narrative_ontology:constraint_victim(ai_task_horizon_reliability, white_collar_p
 % PERSPECTIVE 1: THE SUBJECT (POWERLESS USER) -> MOUNTAIN
 % For the individual web user, the AI's limitations are an immutable fact of the
 % technology they are using. They have no power to change it and must work around it.
-constraint_indexing:constraint_classification(ai_task_horizon_reliability, mountain,
+constraint_indexing:constraint_classification(ai_task_horizon_reliability, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(ai_task_horizon_reliability, rope,
 % For the professional whose expertise falls within the AI's capability, the
 % system is a Snare. It automates their valuable skills, extracting their
 % professional autonomy and depressing wages, forcing them to adapt or be marginalized.
-constraint_indexing:constraint_classification(ai_task_horizon_reliability, snare,
+constraint_indexing:constraint_classification(ai_task_horizon_reliability, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),

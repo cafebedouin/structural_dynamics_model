@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(norm_erosion_threshold, rope,
 % The default analytical view detects the hybrid nature: a coordination
 % function (beneficiary exists) with asymmetric extraction (victim exists)
 % that requires active enforcement to maintain its degraded state.
-constraint_indexing:constraint_classification(norm_erosion_threshold, tangled_rope,
+constraint_indexing:constraint_classification(norm_erosion_threshold, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(norm_erosion_threshold, tangled_ro
 % An alternative analytical view focusing on function vs performance.
 % Theater ratio (0.78) > 0.70 triggers Piton: the outward symbols of the
 % norm remain, but they no longer coordinate actual behavior.
-constraint_indexing:constraint_classification(norm_erosion_threshold, piton,
+constraint_indexing:constraint_classification(norm_erosion_threshold, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -142,13 +142,13 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(norm_erosion_threshold, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(norm_erosion_threshold, tangled_rope,
+    constraint_indexing:constraint_classification(norm_erosion_threshold, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_detection) :-
     % Ensure high theater ratio (0.78) triggers Piton classification.
     domain_priors:theater_ratio(norm_erosion_threshold, TR), TR > 0.7,
-    constraint_indexing:constraint_classification(norm_erosion_threshold, piton,
+    constraint_indexing:constraint_classification(norm_erosion_threshold, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_for_tangled_rope) :-

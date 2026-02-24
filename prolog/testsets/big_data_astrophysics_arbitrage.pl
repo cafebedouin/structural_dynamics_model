@@ -112,7 +112,7 @@ narrative_ontology:constraint_victim(big_data_astrophysics_arbitrage, resource_l
 % The resource-limited astronomer who relies on serendipity. The "conveyor belt" of data
 % is a Snare that extracts the legitimacy of their discovery method. They are trapped,
 % unable to process the 1.6 petabyte "blizzard".
-constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, snare,
+constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, t
 % A researcher with sufficient resources to use the data stream. For them, it is a
 % powerful Rope that enables systematic discovery, moving beyond "happy accidents".
 % Their exit is mobile, as they can choose which data sets or projects to work on.
-constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, rope,
+constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(mobile),
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, r
 
 test(perspectival_gap) :-
     % Verify the gap between the target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, snare, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, tangled_rope, context(agent_power(powerless), _, trapped, _)),
     constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, rope, context(agent_power(institutional), _, arbitrage, _)),
     constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, tangled_rope, context(agent_power(analytical), _, _, _)).
 

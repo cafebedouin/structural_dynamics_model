@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(ua_wartime_mobilization, rope,
 % This χ is very high, but the constraint has a genuine coordination function
 % (national survival), asymmetric extraction, and requires enforcement,
 % meeting the structural definition of a Tangled Rope.
-constraint_indexing:constraint_classification(ua_wartime_mobilization, tangled_rope,
+constraint_indexing:constraint_classification(ua_wartime_mobilization, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -185,7 +185,7 @@ test(perspectival_gap_snare_vs_rope) :-
 
 test(analytical_classification_is_tangled_rope) :-
     % The analytical observer must see the hybrid nature.
-    constraint_indexing:constraint_classification(ua_wartime_mobilization, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(ua_wartime_mobilization, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_compliance) :-
     % Verify that all three structural requirements for a Tangled Rope are met.

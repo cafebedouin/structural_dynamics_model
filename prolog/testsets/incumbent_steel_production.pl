@@ -126,7 +126,7 @@ narrative_ontology:constraint_victim(incumbent_steel_production, general_public_
 % cost and integrated supply chains form a barrier that extracts all potential
 % surplus from innovation, functioning as a snare.
 % Engine derives d from: victim + trapped → d≈0.95 → f(d)≈1.42 → high χ
-constraint_indexing:constraint_classification(incumbent_steel_production, snare,
+constraint_indexing:constraint_classification(incumbent_steel_production, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(incumbent_steel_production, rope,
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 % χ = 0.55 * 1.15 * 1.2 (global scope) = 0.76. This high effective extraction
 % combined with a coordination function and high suppression confirms Tangled Rope.
-constraint_indexing:constraint_classification(incumbent_steel_production, tangled_rope,
+constraint_indexing:constraint_classification(incumbent_steel_production, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(incumbent_steel_production, tangle
 % Engine derives d from: (partial) victim + constrained → d≈0.6 → f(d)≈0.85
 % χ = 0.55 * 0.85 * 1.0 (national scope) = 0.47. This is on the cusp, but
 % still seen as a high-friction Rope or a low-grade Tangled Rope.
-constraint_indexing:constraint_classification(incumbent_steel_production, tangled_rope,
+constraint_indexing:constraint_classification(incumbent_steel_production, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
@@ -183,7 +183,7 @@ test(perspectival_gap_target_vs_beneficiary) :-
     format('... Perspectival gap verified: powerless sees snare, institutional sees rope.~n').
 
 test(tangled_rope_analytical_view) :-
-    constraint_indexing:constraint_classification(incumbent_steel_production, tangled_rope, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(incumbent_steel_production, snare, context(agent_power(analytical), _, _, _)),
     format('... Analytical classification as Tangled Rope verified.~n').
 
 test(tangled_rope_structural_gates) :-

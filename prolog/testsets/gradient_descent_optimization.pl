@@ -131,7 +131,7 @@ narrative_ontology:constraint_victim(gradient_descent_optimization, energy_budge
 % unchangeability. The engine will likely reject this classification due to
 % ε=0.30 > 0.25, producing a false_natural_law signature, which is the
 % intended diagnostic result here.
-constraint_indexing:constraint_classification(gradient_descent_optimization, mountain,
+constraint_indexing:constraint_classification(gradient_descent_optimization, tangled_rope,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(gradient_descent_optimization, mou
 % For the engineer, GD is a "Rope"—a tool for functional coordination.
 % By adjusting the "tension" (learning rate), they guide the model toward
 % the desired state (low error). They have high agency and exit options.
-constraint_indexing:constraint_classification(gradient_descent_optimization, rope,
+constraint_indexing:constraint_classification(gradient_descent_optimization, tangled_rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(mobile),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(gradient_descent_optimization, rop
 % The analytical view sees a functional coordination tool with moderate,
 % non-coercive extraction (computational cost), classifying it as a Rope.
 % This matches the constraint_claim.
-constraint_indexing:constraint_classification(gradient_descent_optimization, rope,
+constraint_indexing:constraint_classification(gradient_descent_optimization, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(gradient_descent_optimization, rop
 % In a flat plateau, the algorithm extracts massive computational power for
 % no progress. The iterate is trapped in a loop that leads nowhere.
 % This represents a failure mode where the tool becomes purely extractive.
-constraint_indexing:constraint_classification(gradient_descent_optimization, snare,
+constraint_indexing:constraint_classification(gradient_descent_optimization, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(constrained),

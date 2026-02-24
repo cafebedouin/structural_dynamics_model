@@ -124,7 +124,7 @@ narrative_ontology:constraint_victim(taiwan_university_application_system, less_
 % cannot afford. From their perspective, it is a coercive trap that extracts
 % opportunity. Engine derives d from victim membership + trapped exit → d ≈ 0.95
 % → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(taiwan_university_application_system, snare,
+constraint_indexing:constraint_classification(taiwan_university_application_system, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(taiwan_university_application_syst
 % An analyst sees both the stated coordination goal (holistic assessment) and the
 % severe, asymmetric extraction. The system is a hybrid that coordinates for some
 % while extracting from others. This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(taiwan_university_application_system, tangled_rope,
+constraint_indexing:constraint_classification(taiwan_university_application_system, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -188,7 +188,7 @@ test(perspectival_gap) :-
     TypeTarget \= TypeBeneficiary.
 
 test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(taiwan_university_application_system, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(taiwan_university_application_system, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_gate_requirements_met) :-
     % A Tangled Rope must have beneficiaries, victims, and active enforcement.

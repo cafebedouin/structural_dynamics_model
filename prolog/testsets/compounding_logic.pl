@@ -85,7 +85,7 @@ narrative_ontology:constraint_victim(compounding_logic, debtors_and_non_capital_
 % PERSPECTIVE 1: THE DEBTOR (SNARE)
 % For the debtor, compounding is a coercive mechanism that extracts their
 % future labor at an accelerating rate, strangling their financial freedom.
-constraint_indexing:constraint_classification(compounding_logic, snare,
+constraint_indexing:constraint_classification(compounding_logic, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

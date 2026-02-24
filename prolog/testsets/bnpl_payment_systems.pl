@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(bnpl_payment_systems, young_consumers).
 %   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 % Calculation: χ = 0.48 * f(0.95) * σ(national) ≈ 0.48 * 1.42 * 1.0 ≈ 0.68
 % This meets the Snare criteria (χ ≥ 0.66, ε ≥ 0.46, suppression ≥ 0.60).
-constraint_indexing:constraint_classification(bnpl_payment_systems, snare,
+constraint_indexing:constraint_classification(bnpl_payment_systems, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),

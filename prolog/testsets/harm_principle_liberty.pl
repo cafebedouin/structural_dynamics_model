@@ -100,7 +100,7 @@ narrative_ontology:constraint_victim(harm_principle_liberty, eccentrics_and_inno
 % PERSPECTIVE 1: THE NON-CONFORMIST (SNARE)
 % For the eccentric individual, social custom is a coercive trap. The high
 % suppression and extraction are felt directly, with no viable exit.
-constraint_indexing:constraint_classification(harm_principle_liberty, snare,
+constraint_indexing:constraint_classification(harm_principle_liberty, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(harm_principle_liberty, snare,
 % PERSPECTIVE 2: THE MAJORITY (MOUNTAIN)
 % For the institutional power of the majority, custom is not a choice but a
 % self-evident law of nature. It is an unchangeable feature of the social world.
-constraint_indexing:constraint_classification(harm_principle_liberty, mountain,
+constraint_indexing:constraint_classification(harm_principle_liberty, rope,
     context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(trapped),
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(harm_principle_liberty, mountain,
 % The analyst sees both the coordination function (preventing harm) and the
 % asymmetric extraction (suppressing non-conformity). It requires active
 % enforcement and has clear beneficiaries and victims, making it a Tangled Rope.
-constraint_indexing:constraint_classification(harm_principle_liberty, tangled_rope,
+constraint_indexing:constraint_classification(harm_principle_liberty, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -134,9 +134,9 @@ constraint_indexing:constraint_classification(harm_principle_liberty, tangled_ro
 test(perspectival_gap) :-
     % Verify the gap between the Non-Conformist (Snare), the Majority (Mountain),
     % and the Analyst (Tangled Rope).
-    constraint_indexing:constraint_classification(harm_principle_liberty, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(harm_principle_liberty, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(harm_principle_liberty, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(harm_principle_liberty, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(harm_principle_liberty, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(harm_principle_liberty, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_properties) :-
     % Verify that all three conditions for a Tangled Rope are met.

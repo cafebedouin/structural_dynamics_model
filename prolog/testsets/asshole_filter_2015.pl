@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(asshole_filter_2015, rope,
    concentrated entitlement and disrespect.
    -------------------------------------------------------------------------- */
 
-constraint_indexing:constraint_classification(asshole_filter_2015, snare, 
+constraint_indexing:constraint_classification(asshole_filter_2015, rope, 
     context(agent_power(institutional), time_horizon(biographical), exit_options(constrained), spatial_scope(national))).
 
 /* --------------------------------------------------------------------------
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(asshole_filter_2015, snare,
    populations.
    -------------------------------------------------------------------------- */
 
-constraint_indexing:constraint_classification(asshole_filter_2015, mountain, 
+constraint_indexing:constraint_classification(asshole_filter_2015, snare, 
     context(agent_power(analytical), time_horizon(civilizational), exit_options(analytical), spatial_scope(global))).
 
 /* ==========================================================================

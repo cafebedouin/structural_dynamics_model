@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(endocrine_disruption_society, rope
 % The default analytical context reveals a Tangled Rope: a system with a
 % genuine coordination function (industrial standards) that also produces
 % severe, asymmetric extraction (public health damage).
-constraint_indexing:constraint_classification(endocrine_disruption_society, tangled_rope,
+constraint_indexing:constraint_classification(endocrine_disruption_society, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -159,7 +159,7 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(endocrine_disruption_society, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(endocrine_disruption_society, tangled_rope,
+    constraint_indexing:constraint_classification(endocrine_disruption_society, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_properties_present) :-

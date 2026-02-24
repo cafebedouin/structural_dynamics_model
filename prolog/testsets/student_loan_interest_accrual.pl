@@ -149,7 +149,7 @@ narrative_ontology:constraint_victim(student_loan_interest_accrual, low_income_b
 % coordination constraints (rope-only), perspectives 1 and 2 may use any power
 % atoms — the classification is the same from all perspectives. Include at
 % least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(student_loan_interest_accrual, snare,
+constraint_indexing:constraint_classification(student_loan_interest_accrual, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(student_loan_interest_accrual, rop
 % Default analytical context (civilizational/analytical/global).
 % Used by the bridge to derive constraint_claim.
 % Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(student_loan_interest_accrual, tangled_rope,
+constraint_indexing:constraint_classification(student_loan_interest_accrual, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

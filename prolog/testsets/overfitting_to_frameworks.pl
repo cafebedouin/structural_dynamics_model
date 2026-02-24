@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(overfitting_to_frameworks, rope,
 % The default analytical view detects both a genuine coordination function
 % (beneficiaries exist) and asymmetric extraction (victims exist), along with
 % active enforcement. This is the canonical signature of a Tangled Rope.
-constraint_indexing:constraint_classification(overfitting_to_frameworks, tangled_rope,
+constraint_indexing:constraint_classification(overfitting_to_frameworks, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

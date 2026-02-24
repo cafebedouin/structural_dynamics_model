@@ -94,7 +94,7 @@ narrative_ontology:constraint_victim(emergency_bridge_scaffold, regional_commute
 % checkpoints feel like a trap, despite its utility. The high suppression and
 % extraction are unavoidable.
 % χ = 0.49 * π(powerless, 1.5) * σ(regional, 0.9) = 0.66
-constraint_indexing:constraint_classification(emergency_bridge_scaffold, snare,
+constraint_indexing:constraint_classification(emergency_bridge_scaffold, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(emergency_bridge_scaffold, snare,
 % The regional government, focused on economic recovery, sees only the restored
 % flow of commerce and labor. The extraction is an acceptable operational cost.
 % χ = 0.49 * π(institutional, -0.2) * σ(national, 1.0) = -0.098 (felt as a benefit)
-constraint_indexing:constraint_classification(emergency_bridge_scaffold, rope,
+constraint_indexing:constraint_classification(emergency_bridge_scaffold, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),

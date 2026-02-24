@@ -127,7 +127,7 @@ narrative_ontology:constraint_victim(nds_2022_pacing_challenge, designated_rival
 % Bears the full financial burden with no exit. High ε, high suppression, and a
 % derived d≈0.95 (victim + trapped) lead to a very high effective extraction χ,
 % classifying the constraint as a Snare.
-constraint_indexing:constraint_classification(nds_2022_pacing_challenge, snare,
+constraint_indexing:constraint_classification(nds_2022_pacing_challenge, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -186,7 +186,7 @@ constraint_indexing:constraint_classification(nds_2022_pacing_challenge, snare,
 :- begin_tests(nds_2022_pacing_challenge_tests).
 
 test(perspectival_gap_target_beneficiary) :-
-    constraint_indexing:constraint_classification(nds_2022_pacing_challenge, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(nds_2022_pacing_challenge, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(nds_2022_pacing_challenge, rope, context(agent_power(institutional), _, _, _)),
     format('Passed: Taxpayer (Snare) vs. Industry (Rope) gap confirmed.~n').
 

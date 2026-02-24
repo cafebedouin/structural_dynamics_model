@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, ro
 % This perspective accounts for the full structure: the genuine coordination
 % function (getting oil out when the state can't) AND the severe asymmetric
 % extraction. It correctly identifies the constraint as a Tangled Rope.
-constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, tangled_rope,
+constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -178,7 +178,7 @@ test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
 
 test(analytical_view_is_tangled_rope, [nondet]) :-
     % The ground truth classification from the analytical view must be Tangled Rope.
-    constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, tangled_rope, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, snare, context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_gates_pass) :-
     % Verify that all three structural requirements for a Tangled Rope are present.

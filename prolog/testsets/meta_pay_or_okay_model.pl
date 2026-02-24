@@ -116,7 +116,7 @@ narrative_ontology:constraint_victim(meta_pay_or_okay_model, eu_courts_and_regul
 % PERSPECTIVE 1: THE PRIMARY TARGET (EU PLATFORM USERS)
 % Individually powerless and trapped by network effects, they face a coercive
 % choice. Engine derives d from victim + trapped → d≈0.95 → high f(d) → high χ.
-constraint_indexing:constraint_classification(meta_pay_or_okay_model, snare,
+constraint_indexing:constraint_classification(meta_pay_or_okay_model, naturalized,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(meta_pay_or_okay_model, snare,
 % By listing it as a 'victim', we model its structural opposition; the engine
 % derives a higher d than for Meta, correctly classifying the model as a Snare
 % from the regulatory viewpoint.
-constraint_indexing:constraint_classification(meta_pay_or_okay_model, snare,
+constraint_indexing:constraint_classification(meta_pay_or_okay_model, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),

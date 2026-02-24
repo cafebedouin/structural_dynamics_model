@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(shock_propagation_asymmetry, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Detects the hybrid nature: a genuine coordination function (stabilizing the core)
 % that is inextricably linked with severe, asymmetric extraction.
-constraint_indexing:constraint_classification(shock_propagation_asymmetry, tangled_rope,
+constraint_indexing:constraint_classification(shock_propagation_asymmetry, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(shock_propagation_asymmetry, tangl
 % With a theater ratio of 0.89, the performative aspects (e.g., "relief funds")
 % are so dominant that the system can be seen as an inert, theatrical mechanism
 % that fails to perform its stated function of equitable stability.
-constraint_indexing:constraint_classification(shock_propagation_asymmetry, piton,
+constraint_indexing:constraint_classification(shock_propagation_asymmetry, snare,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(arbitrage),
@@ -166,14 +166,14 @@ test(perspectival_gap) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(shock_propagation_asymmetry, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(shock_propagation_asymmetry, tangled_rope,
+    constraint_indexing:constraint_classification(shock_propagation_asymmetry, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(piton_trigger) :-
     % Ensure high theater ratio (0.89) correctly triggers the Piton classification.
     domain_priors:theater_ratio(shock_propagation_asymmetry, TR),
     TR > 0.70,
-    constraint_indexing:constraint_classification(shock_propagation_asymmetry, piton,
+    constraint_indexing:constraint_classification(shock_propagation_asymmetry, snare,
         context(agent_power(analytical), _, _, _)).
 
 test(tangled_rope_structural_requirements) :-

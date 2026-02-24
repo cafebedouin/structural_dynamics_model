@@ -80,7 +80,7 @@ narrative_ontology:topic_domain(hegemonic_entropy_2026, "economic/political").
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE)
 % The powerless middle class experiences the "King Dollar" siege as a predatory trap.
-constraint_indexing:constraint_classification(hegemonic_entropy_2026, snare, 
+constraint_indexing:constraint_classification(hegemonic_entropy_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(hegemonic_entropy_2026, piton,
 
 test(perspectival_gap) :-
     % Verify the gap between the victim (Snare) and the insider (Rope).
-    constraint_indexing:constraint_classification(hegemonic_entropy_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hegemonic_entropy_2026, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(hegemonic_entropy_2026, rope, context(agent_power(institutional), _, _, _)).
 
 test(piton_verification) :-
