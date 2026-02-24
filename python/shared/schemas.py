@@ -146,6 +146,7 @@ PIPELINE_FIELDS = [
     # --- Always present, never null ---
     ("id",                          str,          False),
     ("perspectives",                dict,         False),
+    ("perspective_chi",             dict,         False),
     ("suppression",                 (int, float), False),
     ("signature",                   str,          False),
     ("coupling",                    dict,         False),
@@ -242,6 +243,13 @@ def _check_structure(entry, cid):
         missing = _PERSPECTIVE_KEYS - set(persp.keys())
         if missing:
             errors.append(f"[{cid}] perspectives missing keys: {sorted(missing)}")
+
+    # perspective_chi must have the 4 expected keys, each a dict
+    pchi = entry.get("perspective_chi")
+    if isinstance(pchi, dict):
+        missing = _PERSPECTIVE_KEYS - set(pchi.keys())
+        if missing:
+            errors.append(f"[{cid}] perspective_chi missing keys: {sorted(missing)}")
 
     # maxent_probs / raw_maxent_probs must have the 6 type keys summing to ~1.0
     for fname in ("maxent_probs", "raw_maxent_probs"):
