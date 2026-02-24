@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ narrative_ontology:topic_domain(epstein_espionage_2026, "political/espionage").
 % High-extraction stakeholders
 narrative_ontology:constraint_beneficiary(epstein_espionage_2026, state_intelligence_services).
 narrative_ontology:constraint_victim(epstein_espionage_2026, public_trust_in_leadership).
+narrative_ontology:coordination_vitality(epstein_espionage_2026, degrading).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

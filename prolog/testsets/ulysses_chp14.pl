@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:topic_domain(ulysses_oxen_1904, "biological/linguistic/medica
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_oxen_1904, biological_continuance).
 narrative_ontology:constraint_victim(ulysses_oxen_1904, mina_purefoy).
+narrative_ontology:coordination_vitality(ulysses_oxen_1904, degrading).
 domain_priors:requires_active_enforcement(ulysses_oxen_1904). % The "Horhorn" quickening.
 
 /* ==========================================================================

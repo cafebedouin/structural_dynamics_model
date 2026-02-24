@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ domain_priors:requires_active_enforcement(maintenance_capacity_shortfall). % Req
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(maintenance_capacity_shortfall, expansionist_developer).
 narrative_ontology:constraint_victim(maintenance_capacity_shortfall, systems_operator).
+narrative_ontology:coordination_vitality(maintenance_capacity_shortfall, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

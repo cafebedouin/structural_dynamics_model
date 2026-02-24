@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -149,6 +150,7 @@ test(tangled_rope_structural_properties) :-
     % Verify that all three required properties for Tangled Rope are present.
     narrative_ontology:constraint_beneficiary(prestige_signal_inflation, _),
     narrative_ontology:constraint_victim(prestige_signal_inflation, _),
+narrative_ontology:coordination_vitality(prestige_signal_inflation, dead).
     domain_priors:requires_active_enforcement(prestige_signal_inflation).
 
 :- end_tests(prestige_signal_inflation_tests).

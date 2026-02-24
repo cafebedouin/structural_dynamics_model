@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:topic_domain(ulysses_scylla_1904, "social/religious/philosoph
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_scylla_1904, dublin_intelligentsia). % Coordination of culture[cite: 7948].
 narrative_ontology:constraint_victim(ulysses_scylla_1904, stephen_dedalus).           % The rejected "bard"[cite: 6480].
+narrative_ontology:coordination_vitality(ulysses_scylla_1904, dead).
 domain_priors:requires_active_enforcement(ulysses_scylla_1904). % The "gall" of John Eglinton[cite: 7948].
 narrative_ontology:has_sunset_clause(ulysses_scylla_1904).     % Stephen's theory is a temporary "movement".
 

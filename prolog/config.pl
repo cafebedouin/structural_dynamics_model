@@ -192,11 +192,17 @@ param(tangled_rope_chi_ceil, 0.90).
 param(tangled_rope_epsilon_floor, 0.30).
 
 % --- Scaffold Boundaries ---
-% Temporary supports must remain below this coordination ceiling
-param(scaffold_extraction_ceil, 0.30).
+% Temporary supports must remain below this extraction ceiling.
+% v7.0: Raised from 0.30 to 0.45 — accommodates costly transitional support
+% (scaffold mean ε = 0.25, max 0.64) without overlapping snare floor (0.46).
+% Temporality check (sunset clause / no active enforcement) is the real discriminator.
+param(scaffold_extraction_ceil, 0.45).
 
 % --- Piton Boundaries ---
-param(piton_extraction_ceiling,     0.25).
+% v7.0: Raised from 0.25 to 0.45 — catches undeclared low-extraction pitons.
+% Dead-coordination pitons with higher extraction are caught by the piton
+% pre-check gate (coordination_dead/1) which fires before snare.
+param(piton_extraction_ceiling,     0.45).
 param(piton_theater_floor,          0.70).
 param(piton_epsilon_floor,          0.10).   % Rule Z: ε(C) > 0.10
 

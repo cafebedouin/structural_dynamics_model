@@ -42,6 +42,9 @@
     coordination_type/2,
     boltzmann_floor_override/2,
 
+    % Coordination vitality (v7.0 — piton gate revision)
+    coordination_vitality/2,
+
     % Validation entry point
     validate_ontology/0
 ]).
@@ -61,7 +64,8 @@
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, theater_ratio/2,
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
-    coupling_profile/2, coordination_type/2, boltzmann_floor_override/2.
+    coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
+    coordination_vitality/2.
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
@@ -74,7 +78,8 @@
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, constraint_claim/3,
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
-    coupling_profile/2, coordination_type/2, boltzmann_floor_override/2.
+    coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
+    coordination_vitality/2.
 
 /* ============================================================
    2. VALIDATION LOGIC
@@ -324,6 +329,12 @@ is_indexical_resolution_declared(ID) :-
 % Add-ons
 
 has_sunset_clause(_) :- fail. % Default fail if not explicitly defined in instance
+
+% v7.0: Coordination vitality for piton gate revision.
+% Status is one of: dead, degrading, active.
+% Default: fail (coordination presumed alive unless declared otherwise).
+% Declared in testset .pl files for pitons with dead/degrading coordination.
+coordination_vitality(_, _) :- fail.
 
 % Maps claim/2 into claim/3 for context-indexed lookups
 constraint_claim(ID, Type, _Context) :- 

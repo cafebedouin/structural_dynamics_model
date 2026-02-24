@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:topic_domain(ulysses_aeolus_1904, "technological/social/polit
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_aeolus_1904, press_institution). % Daily circulation.
 narrative_ontology:constraint_victim(ulysses_aeolus_1904, leopold_bloom).          % The rejected canvasser.
+narrative_ontology:coordination_vitality(ulysses_aeolus_1904, dead).
 domain_priors:requires_active_enforcement(ulysses_aeolus_1904). % The editor's "Begone!" and yelling newsboys.
 
 /* ==========================================================================

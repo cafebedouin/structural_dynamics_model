@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -192,6 +193,7 @@ narrative_ontology:measurement(af_ex_t10, academic_fashion_modernism_2026, base_
 % while individual scholars must consent to "current fashion" to remain relevant.
 narrative_ontology:constraint_beneficiary(academic_fashion_modernism_2026, academic_institutions).
 narrative_ontology:constraint_victim(academic_fashion_modernism_2026, individual_scholars).
+narrative_ontology:coordination_vitality(academic_fashion_modernism_2026, dead).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ domain_priors:requires_active_enforcement(asymmetric_burden_distribution). % Req
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
 narrative_ontology:constraint_beneficiary(asymmetric_burden_distribution, central_beneficiary).
 narrative_ontology:constraint_victim(asymmetric_burden_distribution, peripheral_resident).
+narrative_ontology:coordination_vitality(asymmetric_burden_distribution, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:topic_domain(ulysses_lotus_1904, "social/religious/technologi
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_lotus_1904, holy_roman_church).
 narrative_ontology:constraint_victim(ulysses_lotus_1904, leopold_bloom).
+narrative_ontology:coordination_vitality(ulysses_lotus_1904, dead).
 domain_priors:requires_active_enforcement(ulysses_lotus_1904). % Social etiquette and the secret correspondence.
 
 /* ==========================================================================

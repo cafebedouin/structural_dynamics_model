@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:topic_domain(ulysses_school_1904, "economic/social/political"
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_school_1904, english_empire). % History moving toward a manifest goal[cite: 558].
 narrative_ontology:constraint_victim(ulysses_school_1904, stephen_dedalus).
+narrative_ontology:coordination_vitality(ulysses_school_1904, dead).
 domain_priors:requires_active_enforcement(ulysses_school_1904). % Deasy's prodding and strict "rules"[cite: 374, 512].
 
 /* ==========================================================================

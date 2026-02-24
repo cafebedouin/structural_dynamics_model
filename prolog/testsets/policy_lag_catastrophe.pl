@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -141,6 +142,7 @@ test(tangled_rope_structural_properties) :-
     % extraction (victim), and active enforcement.
     narrative_ontology:constraint_beneficiary(policy_lag_catastrophe, _),
     narrative_ontology:constraint_victim(policy_lag_catastrophe, _),
+narrative_ontology:coordination_vitality(policy_lag_catastrophe, dead).
     domain_priors:requires_active_enforcement(policy_lag_catastrophe).
 
 test(piton_threshold_validation) :-

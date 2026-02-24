@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:topic_domain(ulysses_eumaeus_1904, "social/economic/linguisti
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_eumaeus_1904, social_charity).
 narrative_ontology:constraint_victim(ulysses_eumaeus_1904, stephen_dedalus).
+narrative_ontology:coordination_vitality(ulysses_eumaeus_1904, dead).
 domain_priors:requires_active_enforcement(ulysses_eumaeus_1904). % Bloom's "duty" to take measures.
 
 /* ==========================================================================

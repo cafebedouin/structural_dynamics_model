@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:topic_domain(ulysses_sirens_1904, "social/artistic/biological
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_sirens_1904, the_sirens). % Lydia and Mina trilling.
 narrative_ontology:constraint_victim(ulysses_sirens_1904, leopold_bloom).   % Trapped in sad blooming.
+narrative_ontology:coordination_vitality(ulysses_sirens_1904, dead).
 domain_priors:requires_active_enforcement(ulysses_sirens_1904). % The piano's "War! War!". 
 
 /* ==========================================================================

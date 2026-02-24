@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ narrative_ontology:topic_domain(juvenile_underclass_2026, "social/political").
 % Stakeholder declarations
 narrative_ontology:constraint_beneficiary(juvenile_underclass_2026, adult_institutional_hegemony).
 narrative_ontology:constraint_victim(juvenile_underclass_2026, juvenile_autonomy).
+narrative_ontology:coordination_vitality(juvenile_underclass_2026, dead).
 
 % Active enforcement is the norm (Guardianship laws)
 domain_priors:requires_active_enforcement(juvenile_underclass_2026).

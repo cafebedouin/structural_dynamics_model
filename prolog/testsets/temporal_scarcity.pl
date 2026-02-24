@@ -33,7 +33,8 @@
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_beneficiary(temporal_scarcity, digital_platforms).
 %
 % Who bears disproportionate cost?
 narrative_ontology:constraint_victim(temporal_scarcity, news_consumers).
+narrative_ontology:coordination_vitality(temporal_scarcity, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

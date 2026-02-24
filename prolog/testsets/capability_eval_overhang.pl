@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -147,6 +148,7 @@ test(tangled_rope_structural_properties) :-
     % Verify all three required properties for Tangled Rope are present.
     narrative_ontology:constraint_beneficiary(capability_eval_overhang, _),
     narrative_ontology:constraint_victim(capability_eval_overhang, _),
+narrative_ontology:coordination_vitality(capability_eval_overhang, dead).
     domain_priors:requires_active_enforcement(capability_eval_overhang).
 
 :- end_tests(capability_eval_overhang_tests).

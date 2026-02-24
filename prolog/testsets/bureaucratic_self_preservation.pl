@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ domain_priors:requires_active_enforcement(bureaucratic_self_preservation).
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(bureaucratic_self_preservation, senior_bureaucrats).
 narrative_ontology:constraint_victim(bureaucratic_self_preservation, public_applicants).
+narrative_ontology:coordination_vitality(bureaucratic_self_preservation, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

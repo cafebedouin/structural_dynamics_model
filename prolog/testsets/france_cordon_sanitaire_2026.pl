@@ -23,7 +23,8 @@ narrative_ontology:has_sunset_clause/1,
 constraint_indexing:constraint_classification/3,
 narrative_ontology:interval/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
 
@@ -195,3 +196,4 @@ END OF CONSTRAINT STORY
 % ============================================================================
 narrative_ontology:constraint_beneficiary(france_cordon_sanitaire_2026, establishment_parties).
 narrative_ontology:constraint_victim(france_cordon_sanitaire_2026, excluded_populist_voters).
+narrative_ontology:coordination_vitality(france_cordon_sanitaire_2026, dead).

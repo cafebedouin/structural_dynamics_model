@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:topic_domain(clawderberg_recursive_slop, "technological").
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(clawderberg_recursive_slop, current_ai_training_algorithms).
 narrative_ontology:constraint_victim(clawderberg_recursive_slop, future_ai_models).
+narrative_ontology:coordination_vitality(clawderberg_recursive_slop, degrading).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

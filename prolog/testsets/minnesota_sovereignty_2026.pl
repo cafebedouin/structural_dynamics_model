@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ domain_priors:requires_active_enforcement(minnesota_sovereignty_2026).
 % Beneficiaries and Victims for high-extraction (E > 0.46)
 narrative_ontology:constraint_beneficiary(minnesota_sovereignty_2026, federal_executive_branch).
 narrative_ontology:constraint_victim(minnesota_sovereignty_2026, minnesota_civic_order).
+narrative_ontology:coordination_vitality(minnesota_sovereignty_2026, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ domain_priors:requires_active_enforcement(legitimacy_without_effectiveness).
 % Structural property derivation hooks (required for high-extraction constraints)
 narrative_ontology:constraint_beneficiary(legitimacy_without_effectiveness, bureaucrat_class).
 narrative_ontology:constraint_victim(legitimacy_without_effectiveness, citizen).
+narrative_ontology:coordination_vitality(legitimacy_without_effectiveness, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

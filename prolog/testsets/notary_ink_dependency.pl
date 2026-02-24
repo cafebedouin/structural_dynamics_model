@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -144,6 +145,7 @@ test(scaffold_conditions_met) :-
     % Verify scaffold classification is possible because its conditions are met.
     narrative_ontology:has_sunset_clause(notary_ink_dependency),
     narrative_ontology:constraint_beneficiary(notary_ink_dependency, _).
+narrative_ontology:coordination_vitality(notary_ink_dependency, dead).
 
 :- end_tests(notary_ink_dependency_tests).
 

@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -177,3 +178,4 @@ narrative_ontology:measurement(nem_ex_t10, narcissistic_ego_maintenance, base_ex
 % ============================================================================
 narrative_ontology:constraint_beneficiary(narcissistic_ego_maintenance, narcissists_self_image).
 narrative_ontology:constraint_victim(narcissistic_ego_maintenance, emotional_labor_providers).
+narrative_ontology:coordination_vitality(narcissistic_ego_maintenance, degrading).

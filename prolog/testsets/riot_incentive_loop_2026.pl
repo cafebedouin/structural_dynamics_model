@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -193,3 +194,4 @@ narrative_ontology:measurement(riot_ex_t10, riot_incentive_loop_2026, base_extra
 % ============================================================================
 narrative_ontology:constraint_beneficiary(riot_incentive_loop_2026, security_apparatus).
 narrative_ontology:constraint_victim(riot_incentive_loop_2026, civilian_protesters).
+narrative_ontology:coordination_vitality(riot_incentive_loop_2026, dead).

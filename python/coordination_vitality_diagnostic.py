@@ -1644,9 +1644,9 @@ def generate_json(s1, s2, s3, s4, s5, s6, s7, prolog_meta, timestamp):
         "step4_scaffold_assessment": s4,
         "step5_degradation_assessment": {
             k: v for k, v in s5.items() if k != "per_piton"
-        } | {"sample_pitons": [
+        } | {"all_pitons": [
             {k: v for k, v in p.items() if k != "human_readable"}
-            for p in s5["per_piton"][:15]
+            for p in s5["per_piton"]
         ]},
         "step6_scaffold_lifecycle": s6,
         "step7_verdict": s7,

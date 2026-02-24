@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:topic_domain(legal_formalism_overhang, "political/legal/socia
 domain_priors:requires_active_enforcement(legal_formalism_overhang).
 narrative_ontology:constraint_beneficiary(legal_formalism_overhang, judicial_formalists).
 narrative_ontology:constraint_victim(legal_formalism_overhang, modern_litigants).
+narrative_ontology:coordination_vitality(legal_formalism_overhang, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

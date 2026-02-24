@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:topic_domain(fiscal_dominance_trap, "economic/political").
 domain_priors:requires_active_enforcement(fiscal_dominance_trap).
 narrative_ontology:constraint_beneficiary(fiscal_dominance_trap, treasury_department).
 narrative_ontology:constraint_victim(fiscal_dominance_trap, fixed_income_savers).
+narrative_ontology:coordination_vitality(fiscal_dominance_trap, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

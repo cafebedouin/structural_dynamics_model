@@ -24,7 +24,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ domain_priors:requires_active_enforcement(anticipatory_capacity_failure).
 % Multifile declarations for Beneficiaries & Victims (Required for extraction > 0.46)
 narrative_ontology:constraint_beneficiary(anticipatory_capacity_failure, efficiency_optimized_systems).
 narrative_ontology:constraint_victim(anticipatory_capacity_failure, strategic_planners).
+narrative_ontology:coordination_vitality(anticipatory_capacity_failure, degrading).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

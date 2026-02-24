@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ narrative_ontology:topic_domain(infrastructure_interoperability_decay, "technolo
 domain_priors:requires_active_enforcement(infrastructure_interoperability_decay).
 narrative_ontology:constraint_beneficiary(infrastructure_interoperability_decay, platform_ecosystem_provider).
 narrative_ontology:constraint_victim(infrastructure_interoperability_decay, independent_logistics_operator).
+narrative_ontology:coordination_vitality(infrastructure_interoperability_decay, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

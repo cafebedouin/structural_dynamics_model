@@ -45,7 +45,8 @@
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -116,6 +117,7 @@ narrative_ontology:constraint_beneficiary(corporate_social_responsibility_theate
 %
 % Who bears disproportionate cost?
 narrative_ontology:constraint_victim(corporate_social_responsibility_theater, low_income_borrowers).
+narrative_ontology:coordination_vitality(corporate_social_responsibility_theater, dead).
 %
 % Gate requirements:
 %   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)

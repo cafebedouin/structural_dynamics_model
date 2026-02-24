@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -178,3 +179,4 @@ narrative_ontology:measurement(eh_ex_t10, epstein_honeytrap, base_extractiveness
 % ============================================================================
 narrative_ontology:constraint_beneficiary(epstein_honeytrap, intelligence_operators).
 narrative_ontology:constraint_victim(epstein_honeytrap, compromised_associates).
+narrative_ontology:coordination_vitality(epstein_honeytrap, dead).

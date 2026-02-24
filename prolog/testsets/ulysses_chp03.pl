@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:topic_domain(ulysses_proteus_1904, "philosophical/social/tech
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_proteus_1904, physical_reality).
 narrative_ontology:constraint_victim(ulysses_proteus_1904, stephen_dedalus).
+narrative_ontology:coordination_vitality(ulysses_proteus_1904, dead).
 domain_priors:requires_active_enforcement(ulysses_proteus_1904). % Memory and guilt as active "tyrants"[cite: 443].
 
 /* ==========================================================================

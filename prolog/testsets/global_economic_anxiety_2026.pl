@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ narrative_ontology:topic_domain(global_economic_anxiety_2026, "economic/social")
 % High-extraction stakeholders
 narrative_ontology:constraint_beneficiary(global_economic_anxiety_2026, asset_holders).
 narrative_ontology:constraint_victim(global_economic_anxiety_2026, youth_economic_mobility).
+narrative_ontology:coordination_vitality(global_economic_anxiety_2026, degrading).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

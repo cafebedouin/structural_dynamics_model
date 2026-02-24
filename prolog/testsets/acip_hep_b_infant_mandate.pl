@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -107,6 +108,7 @@ narrative_ontology:constraint_beneficiary(acip_hep_b_infant_mandate, vaccine_man
 %
 % Who bears disproportionate cost?
 narrative_ontology:constraint_victim(acip_hep_b_infant_mandate, low_risk_infants_and_parents).
+narrative_ontology:coordination_vitality(acip_hep_b_infant_mandate, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

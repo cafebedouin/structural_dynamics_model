@@ -25,7 +25,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -193,3 +194,4 @@ narrative_ontology:constraint_beneficiary(communal_narcissism_social_trap, chari
 % Victim: "The Disciple" — bound by moral debt and social shaming,
 % unable to exit the extraction loop (Section 1: "Bound by moral debt").
 narrative_ontology:constraint_victim(communal_narcissism_social_trap, morally_indebted_followers).
+narrative_ontology:coordination_vitality(communal_narcissism_social_trap, dead).

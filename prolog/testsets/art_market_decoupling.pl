@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -177,6 +178,7 @@ narrative_ontology:measurement(art_ex_t10, art_market_decoupling, base_extractiv
 % lose creative autonomy to the "obscene" decoupling of value from creation.
 narrative_ontology:constraint_beneficiary(art_market_decoupling, art_market_investors).
 narrative_ontology:constraint_victim(art_market_decoupling, working_artists).
+narrative_ontology:coordination_vitality(art_market_decoupling, dead).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

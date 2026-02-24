@@ -167,7 +167,8 @@ is_piton(_C, _Context, fail).
 % This is the CANONICAL threshold logic — all modules delegate here.
 % C needed for structural property lookups (coordination, enforcement, theater).
 %
-% Priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > unknown
+% Priority: Mountain > Piton(dead-coordination) > Snare > Scaffold > Rope >
+%           Tangled Rope > Piton(fallback) > Naturalized > unknown
 %
 % TWO-HUB ARCHITECTURE:
 %   Classification variation across observers originates from TWO independent hubs:
@@ -285,6 +286,17 @@ natural_law_without_beneficiary(C) :-
     \+ requires_active_enforcement(C),
     \+ narrative_ontology:constraint_beneficiary(C, _).
 
+%% coordination_dead(+C)
+%  True when coordination vitality is declared dead or degrading.
+%  Degrading pitons behave like terminal pitons (diagnostic evidence:
+%  mean epsilon 0.66 for both, vs 0.39 for transitional).
+%  Default (no declaration): coordination assumed alive — falls through
+%  to normal priority chain.
+coordination_dead(C) :-
+    narrative_ontology:coordination_vitality(C, dead).
+coordination_dead(C) :-
+    narrative_ontology:coordination_vitality(C, degrading).
+
 classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
     config:param(mountain_suppression_ceiling, SuppCeil),
     Supp =< SuppCeil,
@@ -292,6 +304,21 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
     BaseEps =< MaxX,
     emerges_naturally(C),
     constraint_indexing:effective_immutability_for_context(Context, mountain), !.
+
+% v7.0: Piton pre-check — dead coordination + high theater overrides extraction-based
+% classification.  Fires before snare gate when coordination vitality is explicitly
+% declared dead/degrading.  Without declaration, falls through to normal priority chain.
+% Does NOT check Chi or suppression: a dead-coordination constraint with high theater
+% is a piton regardless of extraction level.  Epsilon > 0.10 floor retained to prevent
+% zero-extraction mountains from misclassifying.
+classify_from_metrics(C, BaseEps, _Chi, _Supp, _Context, piton) :-
+    coordination_dead(C),
+    config:param(piton_epsilon_floor, EpsFloor),
+    BaseEps > EpsFloor,
+    config:param(theater_metric_name, TheaterMetricName),
+    narrative_ontology:constraint_metric(C, TheaterMetricName, TR),
+    config:param(piton_theater_floor, TRFloor),
+    TR >= TRFloor, !.
 
 classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare) :-
     \+ natural_law_without_beneficiary(C),            % Block snare for natural laws

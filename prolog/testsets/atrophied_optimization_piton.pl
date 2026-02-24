@@ -22,7 +22,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ domain_priors:requires_active_enforcement(atrophied_optimization_piton).
 % Beneficiaries & Victims (Required for extraction > 0.46)
 narrative_ontology:constraint_beneficiary(atrophied_optimization_piton, legacy_manager).
 narrative_ontology:constraint_victim(atrophied_optimization_piton, habitual_user).
+narrative_ontology:coordination_vitality(atrophied_optimization_piton, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

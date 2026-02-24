@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ domain_priors:requires_active_enforcement(hoa_covenants). % Fines and liens are 
 narrative_ontology:constraint_beneficiary(hoa_covenants, property_developers).
 narrative_ontology:constraint_beneficiary(hoa_covenants, hoa_management_companies).
 narrative_ontology:constraint_victim(hoa_covenants, individual_homeowners).
+narrative_ontology:coordination_vitality(hoa_covenants, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

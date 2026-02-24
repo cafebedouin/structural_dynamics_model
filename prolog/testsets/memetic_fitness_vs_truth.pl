@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -148,6 +149,7 @@ test(tangled_rope_structural_properties) :-
     domain_priors:requires_active_enforcement(memetic_fitness_vs_truth),
     narrative_ontology:constraint_beneficiary(memetic_fitness_vs_truth, _),
     narrative_ontology:constraint_victim(memetic_fitness_vs_truth, _).
+narrative_ontology:coordination_vitality(memetic_fitness_vs_truth, dead).
 
 :- end_tests(memetic_fitness_vs_truth_tests).
 

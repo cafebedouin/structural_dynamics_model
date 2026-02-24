@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ narrative_ontology:topic_domain(adversarial_truth_decay, "social/technological/p
 domain_priors:requires_active_enforcement(adversarial_truth_decay). % The information flood is an active enforcement mechanism.
 narrative_ontology:constraint_beneficiary(adversarial_truth_decay, influence_architects).
 narrative_ontology:constraint_victim(adversarial_truth_decay, information_consumers).
+narrative_ontology:coordination_vitality(adversarial_truth_decay, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

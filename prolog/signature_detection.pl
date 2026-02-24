@@ -620,6 +620,13 @@ integrate_signature_with_modal(C, ModalType, AdjustedType) :-
 %  Exception: never preserve "unknown" — it is an absence of classification,
 %  not a valid perspectival result. Variance between a real type and unknown
 %  is evidence the metric layer partially failed, not that indexing works.
+%  Dead-coordination pitons classify uniformly — this is correct structural
+%  behavior, not FCR evidence.  The piton pre-check (drl_core.pl) fires
+%  context-independently because dead coordination is a structural fact,
+%  not a perspectival one.  Uniform piton classification is expected, not
+%  suspicious.  Exempt from the perspectival variance gate.
+resolve_with_perspectival_check(C, piton, false_ci_rope, piton) :-
+    drl_core:coordination_dead(C), !.
 resolve_with_perspectival_check(C, ModalType, false_ci_rope, AdjustedType) :-
     !,
     (   ModalType \= unknown,

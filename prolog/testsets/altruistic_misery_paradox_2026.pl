@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -190,6 +191,7 @@ narrative_ontology:measurement(am_ex_t10, altruistic_misery_paradox_2026, base_e
 % while the self-sacrificing individual is trapped in performative altruism.
 narrative_ontology:constraint_beneficiary(altruistic_misery_paradox_2026, social_circle).
 narrative_ontology:constraint_victim(altruistic_misery_paradox_2026, self_sacrificing_individual).
+narrative_ontology:coordination_vitality(altruistic_misery_paradox_2026, dead).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

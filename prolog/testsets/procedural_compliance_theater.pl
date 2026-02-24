@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -142,6 +143,7 @@ test(high_extraction_metrics_present) :-
     % High extraction requires victim/beneficiary declarations.
     narrative_ontology:constraint_beneficiary(procedural_compliance_theater, _),
     narrative_ontology:constraint_victim(procedural_compliance_theater, _).
+narrative_ontology:coordination_vitality(procedural_compliance_theater, dead).
 
 :- end_tests(procedural_compliance_theater_tests).
 

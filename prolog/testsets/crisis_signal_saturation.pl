@@ -27,7 +27,8 @@
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:topic_domain(crisis_signal_saturation, "informational/psychol
 domain_priors:requires_active_enforcement(crisis_signal_saturation).
 narrative_ontology:constraint_beneficiary(crisis_signal_saturation, risk_management_aggregator).
 narrative_ontology:constraint_victim(crisis_signal_saturation, saturated_citizen).
+narrative_ontology:coordination_vitality(crisis_signal_saturation, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

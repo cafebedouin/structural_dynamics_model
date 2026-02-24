@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_beneficiary(womens_sizing_chaos, apparel_brands).
 %
 % Who bears disproportionate cost?
 narrative_ontology:constraint_victim(womens_sizing_chaos, womens_consumers).
+narrative_ontology:coordination_vitality(womens_sizing_chaos, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

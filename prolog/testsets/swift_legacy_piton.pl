@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ domain_priors:requires_active_enforcement(swift_legacy_piton). % Sanctions and c
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(swift_legacy_piton, legacy_financial_institutions).
 narrative_ontology:constraint_victim(swift_legacy_piton, global_remitters_and_merchants).
+narrative_ontology:coordination_vitality(swift_legacy_piton, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

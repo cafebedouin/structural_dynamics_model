@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:topic_domain(gold_piton_2026, "economic/fiscal").
 % Identification of extraction asymmetry during "Flash Crashes"
 narrative_ontology:constraint_beneficiary(gold_piton_2026, institutional_wealth).
 narrative_ontology:constraint_victim(gold_piton_2026, retail_speculators).
+narrative_ontology:coordination_vitality(gold_piton_2026, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

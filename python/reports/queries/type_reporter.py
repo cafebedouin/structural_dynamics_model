@@ -32,6 +32,7 @@ TYPE_CONFIGS = {
     'piton': {
         'family': 'diagnostic',
         'filter_type': 'piton',
+        'custom_filter': 'any_perspective',
         'require_unanimity': False,
         'report_title': 'Piton Diagnostic Report',
         'entity_label': 'Piton',

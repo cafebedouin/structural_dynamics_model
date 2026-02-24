@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:topic_domain(ulysses_ithaca_1904, "technological/scientific/s
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_ithaca_1904, scientific_determinism).
 narrative_ontology:constraint_victim(ulysses_ithaca_1904, human_emotion).
+narrative_ontology:coordination_vitality(ulysses_ithaca_1904, degrading).
 domain_priors:requires_active_enforcement(ulysses_ithaca_1904). % The "proper perpetual motion of the earth".
 
 /* ==========================================================================

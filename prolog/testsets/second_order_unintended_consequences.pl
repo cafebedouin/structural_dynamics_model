@@ -27,7 +27,8 @@
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:topic_domain(second_order_unintended_consequences, "social/ec
 domain_priors:requires_active_enforcement(second_order_unintended_consequences).
 narrative_ontology:constraint_beneficiary(second_order_unintended_consequences, system_optimizer).
 narrative_ontology:constraint_victim(second_order_unintended_consequences, policy_participant).
+narrative_ontology:coordination_vitality(second_order_unintended_consequences, degrading).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

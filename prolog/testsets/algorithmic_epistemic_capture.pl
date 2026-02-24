@@ -24,7 +24,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ domain_priors:requires_active_enforcement(algorithmic_epistemic_capture).
 % Multifile declarations for Beneficiaries & Victims (Required for extraction > 0.46)
 narrative_ontology:constraint_beneficiary(algorithmic_epistemic_capture, attention_platforms).
 narrative_ontology:constraint_victim(algorithmic_epistemic_capture, digital_consumers).
+narrative_ontology:coordination_vitality(algorithmic_epistemic_capture, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

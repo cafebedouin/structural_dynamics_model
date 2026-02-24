@@ -24,7 +24,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:topic_domain(asymmetric_computational_difficulty, "technologi
 % Required for extraction > 0.46
 narrative_ontology:constraint_beneficiary(asymmetric_computational_difficulty, secret_adversary).
 narrative_ontology:constraint_victim(asymmetric_computational_difficulty, network_participant).
+narrative_ontology:coordination_vitality(asymmetric_computational_difficulty, degrading).
 
 % This is classified as a Scaffold in the transition phase.
 narrative_ontology:has_sunset_clause(asymmetric_computational_difficulty).

@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:topic_domain(huang_expectation_resilience_2026, "social/techn
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(huang_expectation_resilience_2026, industry_requiring_resilience).
 narrative_ontology:constraint_victim(huang_expectation_resilience_2026, elite_graduates).
+narrative_ontology:coordination_vitality(huang_expectation_resilience_2026, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

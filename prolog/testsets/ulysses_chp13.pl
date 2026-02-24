@@ -27,7 +27,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:topic_domain(ulysses_nausicaa_1904, "social/artistic/psycholo
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_nausicaa_1904, sentimental_press). % Novelettes and magazines.
 narrative_ontology:constraint_victim(ulysses_nausicaa_1904, gerty_macdowell).        % The "girl friend" in the "favourite nook".
+narrative_ontology:coordination_vitality(ulysses_nausicaa_1904, degrading).
 domain_priors:requires_active_enforcement(ulysses_nausicaa_1904). % The "cuckoo" clock and social shame.
 
 /* ==========================================================================

@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ domain_priors:requires_active_enforcement(litchfield_sensitive_locations_2026).
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 narrative_ontology:constraint_beneficiary(litchfield_sensitive_locations_2026, federal_enforcement_agencies).
 narrative_ontology:constraint_victim(litchfield_sensitive_locations_2026, litchfield_students).
+narrative_ontology:coordination_vitality(litchfield_sensitive_locations_2026, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

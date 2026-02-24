@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:topic_domain(railway_gauge_standard, "technological/economic"
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(railway_gauge_standard, interconnected_logistics_operators).
 narrative_ontology:constraint_victim(railway_gauge_standard, high_speed_rail_engineers).
+narrative_ontology:coordination_vitality(railway_gauge_standard, degrading).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

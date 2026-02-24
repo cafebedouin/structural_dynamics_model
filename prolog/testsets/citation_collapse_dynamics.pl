@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -84,6 +85,7 @@ domain_priors:requires_active_enforcement(citation_collapse_dynamics).
 % Structural property derivation hooks for Tangled Rope.
 narrative_ontology:constraint_beneficiary(citation_collapse_dynamics, automated_knowledge_aggregators).
 narrative_ontology:constraint_victim(citation_collapse_dynamics, academic_researchers).
+narrative_ontology:coordination_vitality(citation_collapse_dynamics, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

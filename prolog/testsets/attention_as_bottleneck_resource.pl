@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -151,6 +152,7 @@ test(tangled_rope_structural_requirements) :-
     % Ensure all three structural requirements for Tangled Rope are met.
     narrative_ontology:constraint_beneficiary(attention_as_bottleneck_resource, _),
     narrative_ontology:constraint_victim(attention_as_bottleneck_resource, _),
+narrative_ontology:coordination_vitality(attention_as_bottleneck_resource, dead).
     domain_priors:requires_active_enforcement(attention_as_bottleneck_resource).
 
 :- end_tests(attention_as_bottleneck_resource_tests).

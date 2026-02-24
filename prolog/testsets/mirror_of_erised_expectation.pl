@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -149,6 +150,7 @@ test(tangled_rope_structural_requirements_met) :-
     % Verify that all three structural requirements for Tangled Rope are present.
     narrative_ontology:constraint_beneficiary(erised_expectation, _),
     narrative_ontology:constraint_victim(erised_expectation, _),
+narrative_ontology:coordination_vitality(erised_expectation, dead).
     domain_priors:requires_active_enforcement(erised_expectation).
 
 :- end_tests(erised_expectation_tests).

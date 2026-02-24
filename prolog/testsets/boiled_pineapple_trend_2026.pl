@@ -27,7 +27,8 @@
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -192,6 +193,7 @@ narrative_ontology:measurement(pine_ex_t10, boiled_pineapple_trend_2026, base_ex
 % while wellness seekers invest effort in a ritual whose core function is atrophied.
 narrative_ontology:constraint_beneficiary(boiled_pineapple_trend_2026, social_media_influencers).
 narrative_ontology:constraint_victim(boiled_pineapple_trend_2026, wellness_seekers).
+narrative_ontology:coordination_vitality(boiled_pineapple_trend_2026, dead).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

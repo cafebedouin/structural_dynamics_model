@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ domain_priors:requires_active_enforcement(structural_extraction_without_actor). 
 % These are required for the Tangled Rope classification.
 narrative_ontology:constraint_beneficiary(structural_extraction_without_actor, legacy_system_accounts).
 narrative_ontology:constraint_victim(structural_extraction_without_actor, current_payers).
+narrative_ontology:coordination_vitality(structural_extraction_without_actor, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

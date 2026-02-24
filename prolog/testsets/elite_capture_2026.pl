@@ -30,7 +30,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:topic_domain(elite_capture_2026, "social/political").
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(elite_capture_2026, institutional_finance_capital).
 narrative_ontology:constraint_victim(elite_capture_2026, organic_social_coordination).
+narrative_ontology:coordination_vitality(elite_capture_2026, degrading).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

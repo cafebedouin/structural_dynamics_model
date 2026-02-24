@@ -25,7 +25,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -204,6 +205,7 @@ narrative_ontology:constraint_beneficiary(other_peoples_troubles_2026, detached_
 % Victim: The sufferer whose crisis signal is suppressed by the observer's
 % performative stoicism (Section 1: "Experiencing the actual trouble").
 narrative_ontology:constraint_victim(other_peoples_troubles_2026, isolated_sufferers).
+narrative_ontology:coordination_vitality(other_peoples_troubles_2026, dead).
 
 % NOTE: requires_active_enforcement is NOT declared because this constraint
 % emerges naturally from cognitive distance and empathy limits — it does not
