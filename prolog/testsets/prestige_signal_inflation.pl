@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(prestige_signal_inflation, suppression_requ
 narrative_ontology:constraint_metric(prestige_signal_inflation, theater_ratio, 0.85).
 
 % Constraint self-claim: The system claims to be a pure coordination mechanism.
-narrative_ontology:constraint_claim(prestige_signal_inflation, piton).
+narrative_ontology:constraint_claim(prestige_signal_inflation, snare).
 narrative_ontology:human_readable(prestige_signal_inflation, "The Credential Red Queen").
 narrative_ontology:topic_domain(prestige_signal_inflation, "social/economic/educational").
 

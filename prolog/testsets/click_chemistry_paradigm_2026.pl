@@ -95,7 +95,7 @@ narrative_ontology:constraint_metric(click_chemistry_paradigm_2026, accessibilit
 narrative_ontology:constraint_metric(click_chemistry_paradigm_2026, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(click_chemistry_paradigm_2026, rope).
+narrative_ontology:constraint_claim(click_chemistry_paradigm_2026, scaffold).
 narrative_ontology:human_readable(click_chemistry_paradigm_2026, "Click Chemistry Paradigm").
 narrative_ontology:topic_domain(click_chemistry_paradigm_2026, "scientific/technological").
 

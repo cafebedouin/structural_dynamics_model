@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(the_calm_protocol_suppression, suppression_
 narrative_ontology:constraint_metric(the_calm_protocol_suppression, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(the_calm_protocol_suppression, tangled_rope).
+narrative_ontology:constraint_claim(the_calm_protocol_suppression, snare).
 narrative_ontology:topic_domain(the_calm_protocol_suppression, "social/psychological").
 narrative_ontology:human_readable(the_calm_protocol_suppression, "The \"Calm\" of Antarctic Protocol").
 

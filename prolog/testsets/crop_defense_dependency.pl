@@ -85,7 +85,7 @@ narrative_ontology:constraint_metric(crop_defense_dependency, suppression_requir
 narrative_ontology:constraint_metric(crop_defense_dependency, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(crop_defense_dependency, tangled_rope).
+narrative_ontology:constraint_claim(crop_defense_dependency, snare).
 narrative_ontology:human_readable(crop_defense_dependency, "Dependency on External Pesticides due to Crop Biological Limitations").
 narrative_ontology:topic_domain(crop_defense_dependency, "technological").
 

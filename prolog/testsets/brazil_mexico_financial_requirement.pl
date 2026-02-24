@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(brazil_mexico_financial_requirement, suppre
 narrative_ontology:constraint_metric(brazil_mexico_financial_requirement, theater_ratio, 0.40).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(brazil_mexico_financial_requirement, tangled_rope).
+narrative_ontology:constraint_claim(brazil_mexico_financial_requirement, snare).
 narrative_ontology:human_readable(brazil_mexico_financial_requirement, "Mexican Financial Proof Requirement for Brazilian Travelers").
 narrative_ontology:topic_domain(brazil_mexico_financial_requirement, "geopolitical").
 

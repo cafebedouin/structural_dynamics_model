@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(medieval_church_hegemony, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It presented itself as divine, unchangeable law.
-narrative_ontology:constraint_claim(medieval_church_hegemony, tangled_rope).
+narrative_ontology:constraint_claim(medieval_church_hegemony, snare).
 narrative_ontology:human_readable(medieval_church_hegemony, "The Medieval Ecclesiastical Hegemony").
 narrative_ontology:topic_domain(medieval_church_hegemony, "religious/economic/political").
 

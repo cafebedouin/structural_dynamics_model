@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(ibm_shield_2026, theater_ratio, 0.20).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be an enforcement mechanism for national security.
-narrative_ontology:constraint_claim(ibm_shield_2026, tangled_rope).
+narrative_ontology:constraint_claim(ibm_shield_2026, snare).
 narrative_ontology:human_readable(ibm_shield_2026, "IBM SHIELD Program (MDA Contract)").
 narrative_ontology:topic_domain(ibm_shield_2026, "political/technological").
 

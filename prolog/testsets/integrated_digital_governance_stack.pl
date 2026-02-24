@@ -74,7 +74,7 @@ narrative_ontology:constraint_metric(integrated_digital_governance_stack, suppre
 narrative_ontology:constraint_metric(integrated_digital_governance_stack, theater_ratio, 0.05).
 
 % Constraint self-claim: It is presented as a necessary coordination mechanism for a complex global society.
-narrative_ontology:constraint_claim(integrated_digital_governance_stack, tangled_rope).
+narrative_ontology:constraint_claim(integrated_digital_governance_stack, snare).
 narrative_ontology:human_readable(integrated_digital_governance_stack, "The Integrated Digital Governance Stack").
 narrative_ontology:topic_domain(integrated_digital_governance_stack, "technological/political").
 

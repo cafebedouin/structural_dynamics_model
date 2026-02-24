@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(nsw_transmission_bottleneck, extractiveness
 narrative_ontology:constraint_metric(nsw_transmission_bottleneck, suppression_requirement, 0.72).
 narrative_ontology:constraint_metric(nsw_transmission_bottleneck, theater_ratio, 0.20).
 
-narrative_ontology:constraint_claim(nsw_transmission_bottleneck, snare).
+narrative_ontology:constraint_claim(nsw_transmission_bottleneck, tangled_rope).
 narrative_ontology:human_readable(nsw_transmission_bottleneck, "NSW Regional Transmission Congestion").
 narrative_ontology:topic_domain(nsw_transmission_bottleneck, "technological/political").
 

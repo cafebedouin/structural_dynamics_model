@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(gig_economy_algorithmic_management, theater
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The platform claims the algorithm is a neutral, efficient coordination tool.
-narrative_ontology:constraint_claim(gig_economy_algorithmic_management, tangled_rope).
+narrative_ontology:constraint_claim(gig_economy_algorithmic_management, snare).
 narrative_ontology:human_readable(gig_economy_algorithmic_management, "Algorithmic Management in the Gig Economy").
 narrative_ontology:topic_domain(gig_economy_algorithmic_management, "economic/technological").
 

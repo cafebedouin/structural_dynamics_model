@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(sleep_debt_externality, suppression_require
 narrative_ontology:constraint_metric(sleep_debt_externality, theater_ratio, 0.38).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(sleep_debt_externality, tangled_rope).
+narrative_ontology:constraint_claim(sleep_debt_externality, snare).
 narrative_ontology:human_readable(sleep_debt_externality, "The Circadian Siphon").
 narrative_ontology:topic_domain(sleep_debt_externality, "biological/economic/social").
 

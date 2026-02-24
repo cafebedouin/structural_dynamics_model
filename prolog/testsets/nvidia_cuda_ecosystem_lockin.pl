@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, suppression_r
 narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(nvidia_cuda_ecosystem_lockin, tangled_rope).
+narrative_ontology:constraint_claim(nvidia_cuda_ecosystem_lockin, snare).
 narrative_ontology:human_readable(nvidia_cuda_ecosystem_lockin, "Nvidia CUDA Ecosystem Lock-in").
 narrative_ontology:topic_domain(nvidia_cuda_ecosystem_lockin, "technological").
 

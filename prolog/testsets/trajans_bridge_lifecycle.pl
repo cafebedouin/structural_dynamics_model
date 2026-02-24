@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(trajans_bridge_lifecycle, theater_ratio, 0.
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(trajans_bridge_lifecycle, piton).
+narrative_ontology:constraint_claim(trajans_bridge_lifecycle, rope).
 
 % --- Binary flags ---
 % N/A

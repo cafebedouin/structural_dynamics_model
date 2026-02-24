@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(family_succession_system, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system presents itself as a natural, unchangeable part of the social order.
-narrative_ontology:constraint_claim(family_succession_system, tangled_rope).
+narrative_ontology:constraint_claim(family_succession_system, snare).
 narrative_ontology:topic_domain(family_succession_system, "social/familial").
 narrative_ontology:human_readable(family_succession_system, "Meiji-Taisho Family Succession and the \"Ie\" System").
 

@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(roc_african_exarchate, suppression_requirem
 narrative_ontology:constraint_metric(roc_african_exarchate, theater_ratio, 0.55).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(roc_african_exarchate, tangled_rope).
+narrative_ontology:constraint_claim(roc_african_exarchate, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(roc_african_exarchate). % Required for Tangled Rope. Needs active funding and political support.

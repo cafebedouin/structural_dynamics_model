@@ -83,7 +83,7 @@ narrative_ontology:constraint_metric(coe_ukraine_reparations_register, suppressi
 narrative_ontology:constraint_metric(coe_ukraine_reparations_register, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(coe_ukraine_reparations_register, tangled_rope).
+narrative_ontology:constraint_claim(coe_ukraine_reparations_register, snare).
 narrative_ontology:human_readable(coe_ukraine_reparations_register, "Council of Europe's Register of Damage for Ukraine").
 narrative_ontology:topic_domain(coe_ukraine_reparations_register, "geopolitical/legal").
 

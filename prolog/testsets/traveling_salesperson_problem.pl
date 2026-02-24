@@ -98,7 +98,7 @@ narrative_ontology:constraint_metric(traveling_salesperson_problem, suppression_
 narrative_ontology:constraint_metric(traveling_salesperson_problem, theater_ratio, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(traveling_salesperson_problem, tangled_rope).
+narrative_ontology:constraint_claim(traveling_salesperson_problem, snare).
 narrative_ontology:human_readable(traveling_salesperson_problem, "Applied Logistics Optimization (based on TSP)").
 narrative_ontology:topic_domain(traveling_salesperson_problem, "economic/technological").
 

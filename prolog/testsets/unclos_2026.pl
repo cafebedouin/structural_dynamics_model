@@ -60,7 +60,7 @@
 
 % Structural Anchor for Audit Suite
 narrative_ontology:interval(unclos_era, 1982, 2026).
-narrative_ontology:constraint_claim(unclos_2026, rope).
+narrative_ontology:constraint_claim(unclos_2026, tangled_rope).
 narrative_ontology:human_readable(unclos_2026, "UN Convention on the Law of the Sea (2026 Context)").
 narrative_ontology:topic_domain(unclos_2026, "legal/geopolitical/environmental").
 

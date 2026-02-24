@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric(indonesia_penal_code_2023, suppression_requ
 narrative_ontology:constraint_metric(indonesia_penal_code_2023, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(indonesia_penal_code_2023, tangled_rope).
+narrative_ontology:constraint_claim(indonesia_penal_code_2023, snare).
 narrative_ontology:human_readable(indonesia_penal_code_2023, "Indonesia's 2023 Penal Code (KUHP) Criminalizing Personal Liberties").
 narrative_ontology:topic_domain(indonesia_penal_code_2023, "political/social").
 

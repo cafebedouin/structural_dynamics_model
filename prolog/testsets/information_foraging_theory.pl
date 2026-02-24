@@ -104,7 +104,7 @@ narrative_ontology:constraint_metric(information_foraging_theory, accessibility_
 narrative_ontology:constraint_metric(information_foraging_theory, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(information_foraging_theory, rope).
+narrative_ontology:constraint_claim(information_foraging_theory, scaffold).
 narrative_ontology:human_readable(information_foraging_theory, "Information Foraging Theory (IFT)").
 narrative_ontology:topic_domain(information_foraging_theory, "technological/cognitive").
 

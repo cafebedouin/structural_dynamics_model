@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(burali_forti_paradox, accessibility_collaps
 narrative_ontology:constraint_metric(burali_forti_paradox, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(burali_forti_paradox, mountain).
+narrative_ontology:constraint_claim(burali_forti_paradox, scaffold).
 narrative_ontology:human_readable(burali_forti_paradox, "Burali-Forti Paradox").
 narrative_ontology:topic_domain(burali_forti_paradox, "technological/mathematics").
 

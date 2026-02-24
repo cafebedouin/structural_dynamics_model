@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(us_greenland_envoy, suppression_requirement
 narrative_ontology:constraint_metric(us_greenland_envoy, theater_ratio, 0.40).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_greenland_envoy, tangled_rope).
+narrative_ontology:constraint_claim(us_greenland_envoy, snare).
 narrative_ontology:human_readable(us_greenland_envoy, "US Special Envoy for Greenlandic Affairs").
 narrative_ontology:topic_domain(us_greenland_envoy, "geopolitical/economic").
 

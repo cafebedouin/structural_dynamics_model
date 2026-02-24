@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(us_usmca_china_leverage, suppression_requir
 narrative_ontology:constraint_metric(us_usmca_china_leverage, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_usmca_china_leverage, tangled_rope).
+narrative_ontology:constraint_claim(us_usmca_china_leverage, snare).
 narrative_ontology:human_readable(us_usmca_china_leverage, "US leveraging of USMCA ratification to constrain Canadian foreign policy on China").
 narrative_ontology:topic_domain(us_usmca_china_leverage, "geopolitical").
 

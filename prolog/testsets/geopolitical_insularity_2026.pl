@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(geopolitical_insularity_2026, suppression_r
 narrative_ontology:constraint_metric(geopolitical_insularity_2026, theater_ratio, 0.55).
 
 % Constraint self-claim: The system claims to be an enforcement mechanism for national values and security.
-narrative_ontology:constraint_claim(geopolitical_insularity_2026, tangled_rope).
+narrative_ontology:constraint_claim(geopolitical_insularity_2026, snare).
 narrative_ontology:human_readable(geopolitical_insularity_2026, "Geopolitical Nationalist Insularity").
 narrative_ontology:topic_domain(geopolitical_insularity_2026, "geopolitical/economic").
 

@@ -95,7 +95,7 @@ narrative_ontology:constraint_metric(lindy_effect, suppression_requirement, 0.50
 narrative_ontology:constraint_metric(lindy_effect, theater_ratio, 0.11).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(lindy_effect, tangled_rope).
+narrative_ontology:constraint_claim(lindy_effect, rope).
 narrative_ontology:human_readable(lindy_effect, "The Lindy Effect").
 narrative_ontology:topic_domain(lindy_effect, "social/intellectual").
 

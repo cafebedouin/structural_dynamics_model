@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(cognitive_induction_gap, theater_ratio, 0.1
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(cognitive_induction_gap, tangled_rope).
+narrative_ontology:constraint_claim(cognitive_induction_gap, snare).
 narrative_ontology:human_readable(cognitive_induction_gap, "The Induction Gap (Cognitive Compromise)").
 narrative_ontology:topic_domain(cognitive_induction_gap, "psychological/social").
 

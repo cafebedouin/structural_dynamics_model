@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(endocrine_disruption_society, suppression_r
 narrative_ontology:constraint_metric(endocrine_disruption_society, theater_ratio, 0.50).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(endocrine_disruption_society, tangled_rope).
+narrative_ontology:constraint_claim(endocrine_disruption_society, snare).
 narrative_ontology:human_readable(endocrine_disruption_society, "Systemic Endocrine Disruption via Industrial Chemicals").
 narrative_ontology:topic_domain(endocrine_disruption_society, "social/environmental/biological").
 

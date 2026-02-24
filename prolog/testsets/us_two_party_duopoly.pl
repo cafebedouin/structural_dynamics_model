@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(us_two_party_duopoly, theater_ratio, 0.15).
 
 % Constraint self-claim: The system is presented as a necessary mechanism for
 % stable governance and preventing fragmentation.
-narrative_ontology:constraint_claim(us_two_party_duopoly, tangled_rope).
+narrative_ontology:constraint_claim(us_two_party_duopoly, snare).
 narrative_ontology:human_readable(us_two_party_duopoly, "The U.S. Two-Party Political Duopoly").
 narrative_ontology:topic_domain(us_two_party_duopoly, "political").
 

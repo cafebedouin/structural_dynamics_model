@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(nursery_social_hierarchy, suppression_requi
 narrative_ontology:constraint_metric(nursery_social_hierarchy, theater_ratio, 0.65).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(nursery_social_hierarchy, snare).
+narrative_ontology:constraint_claim(nursery_social_hierarchy, tangled_rope).
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % These feed the directionality derivation chain.

@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(emergency_mode_lock_in, theater_ratio, 0.94
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a necessary coordination mechanism for public safety.
-narrative_ontology:constraint_claim(emergency_mode_lock_in, tangled_rope).
+narrative_ontology:constraint_claim(emergency_mode_lock_in, snare).
 narrative_ontology:human_readable(emergency_mode_lock_in, "The Perpetual Crisis Mandate").
 narrative_ontology:topic_domain(emergency_mode_lock_in, "political/organizational").
 

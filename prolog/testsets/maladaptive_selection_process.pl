@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(maladaptive_selection_process, suppression_
 narrative_ontology:constraint_metric(maladaptive_selection_process, theater_ratio, 0.90).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(maladaptive_selection_process, tangled_rope).
+narrative_ontology:constraint_claim(maladaptive_selection_process, snare).
 narrative_ontology:human_readable(maladaptive_selection_process, "The Evolutionary Dead-End").
 narrative_ontology:topic_domain(maladaptive_selection_process, "organizational/technological").
 

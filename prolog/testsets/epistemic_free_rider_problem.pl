@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(epistemic_free_rider_problem, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system of content aggregation and synthesis claims to be a coordination mechanism.
-narrative_ontology:constraint_claim(epistemic_free_rider_problem, tangled_rope).
+narrative_ontology:constraint_claim(epistemic_free_rider_problem, snare).
 narrative_ontology:human_readable(epistemic_free_rider_problem, "The Truth-Mining Exhaustion").
 narrative_ontology:topic_domain(epistemic_free_rider_problem, "informational/social/economic").
 

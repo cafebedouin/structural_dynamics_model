@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(debt_trap_microfinance, theater_ratio, 0.30
 % Not applicable for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(debt_trap_microfinance, snare).
+narrative_ontology:constraint_claim(debt_trap_microfinance, tangled_rope).
 narrative_ontology:human_readable(debt_trap_microfinance, "Microfinance Debt Trap").
 narrative_ontology:topic_domain(debt_trap_microfinance, "economic").
 

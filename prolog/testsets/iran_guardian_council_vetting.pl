@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(iran_guardian_council_vetting, theater_rati
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(iran_guardian_council_vetting, tangled_rope).
+narrative_ontology:constraint_claim(iran_guardian_council_vetting, snare).
 narrative_ontology:human_readable(iran_guardian_council_vetting, "Iranian Guardian Council's Candidate Vetting System").
 narrative_ontology:topic_domain(iran_guardian_council_vetting, "political").
 

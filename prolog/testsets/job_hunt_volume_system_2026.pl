@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(job_hunt_volume_system_2026, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a necessary mechanism for enforcing quality and managing volume.
-narrative_ontology:constraint_claim(job_hunt_volume_system_2026, tangled_rope).
+narrative_ontology:constraint_claim(job_hunt_volume_system_2026, snare).
 narrative_ontology:human_readable(job_hunt_volume_system_2026, "The Algorithmic Volume Filter in Modern Recruitment").
 narrative_ontology:topic_domain(job_hunt_volume_system_2026, "economic").
 

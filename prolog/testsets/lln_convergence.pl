@@ -93,7 +93,7 @@ narrative_ontology:constraint_metric(lln_convergence, accessibility_collapse, 1.
 narrative_ontology:constraint_metric(lln_convergence, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(lln_convergence, mountain).
+narrative_ontology:constraint_claim(lln_convergence, scaffold).
 narrative_ontology:human_readable(lln_convergence, "Law of Large Numbers (LLN)").
 narrative_ontology:topic_domain(lln_convergence, "mathematical").
 

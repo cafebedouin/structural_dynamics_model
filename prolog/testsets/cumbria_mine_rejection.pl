@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(cumbria_mine_rejection, theater_ratio, 0.40
 % Not a mountain constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(cumbria_mine_rejection, tangled_rope).
+narrative_ontology:constraint_claim(cumbria_mine_rejection, snare).
 narrative_ontology:human_readable(cumbria_mine_rejection, "UK government rejection of the Woodhouse Colliery coal mine").
 narrative_ontology:topic_domain(cumbria_mine_rejection, "economic/political").
 

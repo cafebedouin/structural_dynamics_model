@@ -75,7 +75,7 @@ narrative_ontology:constraint_metric(ontological_friction_resolution, suppressio
 narrative_ontology:constraint_metric(ontological_friction_resolution, theater_ratio, 0.30).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(ontological_friction_resolution, tangled_rope).
+narrative_ontology:constraint_claim(ontological_friction_resolution, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ontological_friction_resolution). % Enforced by the "fire of pain".

@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(utopia_apocalypse_fragility, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Analytically, the stochastic nature of existence is claimed as an unchangeable law.
-narrative_ontology:constraint_claim(utopia_apocalypse_fragility, tangled_rope).
+narrative_ontology:constraint_claim(utopia_apocalypse_fragility, snare).
 narrative_ontology:human_readable(utopia_apocalypse_fragility, "The Utopia-Apocalypse Cliff-Edge").
 narrative_ontology:topic_domain(utopia_apocalypse_fragility, "social/political/philosophical").
 

@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(rational_inertia_trap, theater_ratio, 0.72)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The incumbent claims the legacy protocol is just a coordination standard.
-narrative_ontology:constraint_claim(rational_inertia_trap, tangled_rope).
+narrative_ontology:constraint_claim(rational_inertia_trap, snare).
 narrative_ontology:human_readable(rational_inertia_trap, "The Legacy Protocol Lock-in").
 narrative_ontology:topic_domain(rational_inertia_trap, "technological/economic").
 

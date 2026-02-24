@@ -105,7 +105,7 @@ narrative_ontology:constraint_metric(sig_usd_protocol, accessibility_collapse, 0
 narrative_ontology:constraint_metric(sig_usd_protocol, resistance, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(sig_usd_protocol, rope).
+narrative_ontology:constraint_claim(sig_usd_protocol, tangled_rope).
 narrative_ontology:human_readable(sig_usd_protocol, "SigUSD Stability Mechanism").
 narrative_ontology:topic_domain(sig_usd_protocol, "economic/technological").
 

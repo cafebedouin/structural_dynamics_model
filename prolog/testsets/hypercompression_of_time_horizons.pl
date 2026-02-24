@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(hypercompression_of_time_horizons, suppress
 narrative_ontology:constraint_metric(hypercompression_of_time_horizons, theater_ratio, 0.85).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(hypercompression_of_time_horizons, tangled_rope).
+narrative_ontology:constraint_claim(hypercompression_of_time_horizons, snare).
 narrative_ontology:human_readable(hypercompression_of_time_horizons, "The Infinite Now Trap").
 narrative_ontology:topic_domain(hypercompression_of_time_horizons, "economic/technological").
 

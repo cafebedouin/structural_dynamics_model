@@ -106,7 +106,7 @@ narrative_ontology:constraint_metric(quine_self_replication, accessibility_colla
 narrative_ontology:constraint_metric(quine_self_replication, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(quine_self_replication, tangled_rope).
+narrative_ontology:constraint_claim(quine_self_replication, rope).
 narrative_ontology:human_readable(quine_self_replication, "Quines (Computational Self-Replication)").
 narrative_ontology:topic_domain(quine_self_replication, "technological/mathematical").
 

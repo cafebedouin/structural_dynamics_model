@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(mit_tfus_2026, suppression_requirement, 0.8
 narrative_ontology:constraint_metric(mit_tfus_2026, theater_ratio, 0.12).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(mit_tfus_2026, scaffold).
+narrative_ontology:constraint_claim(mit_tfus_2026, tangled_rope).
 narrative_ontology:human_readable(mit_tfus_2026, "MIT tFUS Causal Consciousness Roadmap").
 narrative_ontology:topic_domain(mit_tfus_2026, "technological/biological").
 

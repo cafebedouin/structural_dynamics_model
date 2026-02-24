@@ -64,7 +64,7 @@ narrative_ontology:constraint_metric(ad_fus_coordination, suppression_requiremen
 narrative_ontology:constraint_metric(ad_fus_coordination, theater_ratio, 0.15).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(ad_fus_coordination, tangled_rope).
+narrative_ontology:constraint_claim(ad_fus_coordination, snare).
 narrative_ontology:human_readable(ad_fus_coordination, "The Focused Ultrasound Alzheimer's Intervention").
 narrative_ontology:topic_domain(ad_fus_coordination, "medical/neurological").
 

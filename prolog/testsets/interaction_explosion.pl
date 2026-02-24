@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(constraint_interaction_explosion, suppressi
 narrative_ontology:constraint_metric(constraint_interaction_explosion, theater_ratio, 0.40).
 
 % The architects claim the system is for coordination, but the emergent result is different.
-narrative_ontology:constraint_claim(constraint_interaction_explosion, tangled_rope).
+narrative_ontology:constraint_claim(constraint_interaction_explosion, snare).
 narrative_ontology:human_readable(constraint_interaction_explosion, "The Combinatorial Complexity Trap").
 narrative_ontology:topic_domain(constraint_interaction_explosion, "technological/social").
 

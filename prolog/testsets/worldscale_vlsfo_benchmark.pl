@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(worldscale_vlsfo_benchmark, suppression_req
 narrative_ontology:constraint_metric(worldscale_vlsfo_benchmark, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(worldscale_vlsfo_benchmark, tangled_rope).
+narrative_ontology:constraint_claim(worldscale_vlsfo_benchmark, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(worldscale_vlsfo_benchmark). % Required for Tangled Rope

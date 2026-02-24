@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(dexy_gold_protocol, suppression_requirement
 narrative_ontology:constraint_metric(dexy_gold_protocol, theater_ratio, 0.11).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(dexy_gold_protocol, tangled_rope).
+narrative_ontology:constraint_claim(dexy_gold_protocol, rope).
 narrative_ontology:human_readable(dexy_gold_protocol, "DexyGold Seigniorage Mechanism").
 narrative_ontology:topic_domain(dexy_gold_protocol, "economic/technological").
 

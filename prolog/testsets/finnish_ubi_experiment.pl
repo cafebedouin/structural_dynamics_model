@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(finnish_ubi_experiment, theater_ratio, 0.15
 % N/A for this constraint type.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(finnish_ubi_experiment, scaffold).
+narrative_ontology:constraint_claim(finnish_ubi_experiment, tangled_rope).
 narrative_ontology:human_readable(finnish_ubi_experiment, "Finnish Basic Income Experiment (2017-2018)").
 narrative_ontology:topic_domain(finnish_ubi_experiment, "economic/social").
 

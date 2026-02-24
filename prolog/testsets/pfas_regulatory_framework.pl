@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(pfas_regulatory_framework, suppression_requ
 narrative_ontology:constraint_metric(pfas_regulatory_framework, theater_ratio, 0.40).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(pfas_regulatory_framework, tangled_rope).
+narrative_ontology:constraint_claim(pfas_regulatory_framework, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(pfas_regulatory_framework). % Required for Tangled Rope. The *failure* to regulate more strictly is the active enforcement mechanism.

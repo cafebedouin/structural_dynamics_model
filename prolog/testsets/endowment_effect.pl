@@ -106,7 +106,7 @@ narrative_ontology:constraint_metric(endowment_effect, accessibility_collapse, 0
 narrative_ontology:constraint_metric(endowment_effect, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(endowment_effect, mountain).
+narrative_ontology:constraint_claim(endowment_effect, scaffold).
 narrative_ontology:human_readable(endowment_effect, "The Endowment Effect").
 narrative_ontology:topic_domain(endowment_effect, "economic/cognitive").
 

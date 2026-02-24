@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(pla_loyalty_purge, theater_ratio, 0.30).
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(pla_loyalty_purge, tangled_rope).
+narrative_ontology:constraint_claim(pla_loyalty_purge, snare).
 narrative_ontology:human_readable(pla_loyalty_purge, "PLA Loyalty Purge Mechanism").
 narrative_ontology:topic_domain(pla_loyalty_purge, "political").
 

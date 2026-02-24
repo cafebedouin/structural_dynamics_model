@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(opioid_political_realignment_2026, theater_
 
 % Constraint self-claim: Beneficiaries frame the political shift as a natural
 % coordination around shared values, masking the extractive origins.
-narrative_ontology:constraint_claim(opioid_political_realignment_2026, tangled_rope).
+narrative_ontology:constraint_claim(opioid_political_realignment_2026, snare).
 narrative_ontology:human_readable(opioid_political_realignment_2026, "Opioid-Induced Political Capture").
 narrative_ontology:topic_domain(opioid_political_realignment_2026, "political/economic/social").
 

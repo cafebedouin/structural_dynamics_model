@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(cholesterol_pill_cost, theater_ratio, 0.2).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(cholesterol_pill_cost, tangled_rope).
+narrative_ontology:constraint_claim(cholesterol_pill_cost, snare).
 narrative_ontology:human_readable(cholesterol_pill_cost, "Cost of Patented Cholesterol Medication").
 narrative_ontology:topic_domain(cholesterol_pill_cost, "economic").
 

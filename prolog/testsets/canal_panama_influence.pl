@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(canal_panama_influence, suppression_require
 narrative_ontology:constraint_metric(canal_panama_influence, theater_ratio, 0.3).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(canal_panama_influence, tangled_rope).
+narrative_ontology:constraint_claim(canal_panama_influence, snare).
 narrative_ontology:human_readable(canal_panama_influence, "Geopolitical Influence over Panama Canal").
 narrative_ontology:topic_domain(canal_panama_influence, "political").
 

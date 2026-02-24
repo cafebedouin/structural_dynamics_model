@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(debt_service_squeeze, theater_ratio, 0.15).
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(debt_service_squeeze, tangled_rope).
+narrative_ontology:constraint_claim(debt_service_squeeze, snare).
 narrative_ontology:human_readable(debt_service_squeeze, "Consumer Debt Service Squeeze on Higher-Income Households").
 narrative_ontology:topic_domain(debt_service_squeeze, "economic").
 

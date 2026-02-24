@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(complexity_debt, suppression_requirement, 0
 narrative_ontology:constraint_metric(complexity_debt, theater_ratio, 0.45).
 
 % Constraint self-claim: The system claims to be essential for coordination.
-narrative_ontology:constraint_claim(complexity_debt, tangled_rope).
+narrative_ontology:constraint_claim(complexity_debt, snare).
 narrative_ontology:human_readable(complexity_debt, "The Cumulative Fragility Surcharge").
 narrative_ontology:topic_domain(complexity_debt, "technological/organizational").
 

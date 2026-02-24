@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(dead_sea_effect, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 % Management often frames this as a natural, unavoidable process.
-narrative_ontology:constraint_claim(dead_sea_effect, snare).
+narrative_ontology:constraint_claim(dead_sea_effect, tangled_rope).
 narrative_ontology:human_readable(dead_sea_effect, "The Dead Sea Effect (Talent Evaporation)").
 narrative_ontology:topic_domain(dead_sea_effect, "social/economic").
 

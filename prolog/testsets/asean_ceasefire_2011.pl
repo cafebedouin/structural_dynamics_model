@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(asean_ceasefire_2011, suppression_requireme
 narrative_ontology:constraint_metric(asean_ceasefire_2011, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(asean_ceasefire_2011, scaffold).
+narrative_ontology:constraint_claim(asean_ceasefire_2011, rope).
 narrative_ontology:human_readable(asean_ceasefire_2011, "2011 ASEAN-mediated Thai-Cambodian Ceasefire Agreement").
 narrative_ontology:topic_domain(asean_ceasefire_2011, "geopolitical").
 

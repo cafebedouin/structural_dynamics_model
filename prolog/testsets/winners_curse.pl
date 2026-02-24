@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(winners_curse, suppression_requirement, 0.6
 narrative_ontology:constraint_metric(winners_curse, theater_ratio, 0.65).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(winners_curse, tangled_rope).
+narrative_ontology:constraint_claim(winners_curse, snare).
 narrative_ontology:human_readable(winners_curse, "The Winner's Curse in Common Value Auctions").
 narrative_ontology:topic_domain(winners_curse, "economic/social").
 

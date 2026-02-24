@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(eu_irgc_terrorist_designation, suppression_
 narrative_ontology:constraint_metric(eu_irgc_terrorist_designation, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(eu_irgc_terrorist_designation, tangled_rope).
+narrative_ontology:constraint_claim(eu_irgc_terrorist_designation, snare).
 narrative_ontology:human_readable(eu_irgc_terrorist_designation, "EU Terrorist Designation of Iran's IRGC").
 narrative_ontology:topic_domain(eu_irgc_terrorist_designation, "geopolitical").
 

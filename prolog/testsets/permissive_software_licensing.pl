@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(permissive_software_licensing, 0, 10).
-narrative_ontology:constraint_claim(permissive_software_licensing, rope).
+narrative_ontology:constraint_claim(permissive_software_licensing, tangled_rope).
 narrative_ontology:human_readable(permissive_software_licensing, "Permissive Software Licenses (e.g., MIT, Apache)").
 narrative_ontology:topic_domain(permissive_software_licensing, "technological/legal/economic").
 

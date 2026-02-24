@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(appropriations_brinkmanship, suppression_re
 narrative_ontology:constraint_metric(appropriations_brinkmanship, theater_ratio, 0.60).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(appropriations_brinkmanship, tangled_rope).
+narrative_ontology:constraint_claim(appropriations_brinkmanship, snare).
 narrative_ontology:human_readable(appropriations_brinkmanship, "Government Shutdown Threat via Appropriations Process").
 narrative_ontology:topic_domain(appropriations_brinkmanship, "political").
 

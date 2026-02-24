@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(suanne_coup_of_peace, theater_ratio, 0.05).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The heckling is framed as a legitimate part of "home court advantage."
-narrative_ontology:constraint_claim(suanne_coup_of_peace, tangled_rope).
+narrative_ontology:constraint_claim(suanne_coup_of_peace, snare).
 narrative_ontology:human_readable(suanne_coup_of_peace, "The Hostile Social Environment at the Lead Basketball Game").
 narrative_ontology:topic_domain(suanne_coup_of_peace, "social/cultural").
 

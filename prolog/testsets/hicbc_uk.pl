@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(hicbc_uk, theater_ratio, 0.20).
 % Not a mountain constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(hicbc_uk, tangled_rope).
+narrative_ontology:constraint_claim(hicbc_uk, snare).
 narrative_ontology:human_readable(hicbc_uk, "UK High Income Child Benefit Charge (HICBC)").
 narrative_ontology:topic_domain(hicbc_uk, "economic").
 

@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(metamorphosis_samsa, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % The firm presents the debt as a standard business arrangement (coordination),
 % but its function is pure coercive extraction (enforcement).
-narrative_ontology:constraint_claim(metamorphosis_samsa, snare).
+narrative_ontology:constraint_claim(metamorphosis_samsa, tangled_rope).
 narrative_ontology:human_readable(metamorphosis_samsa, "The Samsa Family's Debt Bondage").
 narrative_ontology:topic_domain(metamorphosis_samsa, "economic/social/biological").
 

@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(risk_socialization_threshold, suppression_r
 narrative_ontology:constraint_metric(risk_socialization_threshold, theater_ratio, 0.85).
 
 % Constraint self-claim: It claims to be a coordination mechanism for stability.
-narrative_ontology:constraint_claim(risk_socialization_threshold, tangled_rope).
+narrative_ontology:constraint_claim(risk_socialization_threshold, snare).
 narrative_ontology:human_readable(risk_socialization_threshold, "The Asymmetric Liability Trap").
 narrative_ontology:topic_domain(risk_socialization_threshold, "economic/political").
 

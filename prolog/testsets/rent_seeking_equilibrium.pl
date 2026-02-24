@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(rent_seeking_equilibrium, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination mechanism for market stability.
-narrative_ontology:constraint_claim(rent_seeking_equilibrium, tangled_rope).
+narrative_ontology:constraint_claim(rent_seeking_equilibrium, snare).
 narrative_ontology:human_readable(rent_seeking_equilibrium, "The Toll-Bridge Stagnation").
 narrative_ontology:topic_domain(rent_seeking_equilibrium, "economic/political").
 

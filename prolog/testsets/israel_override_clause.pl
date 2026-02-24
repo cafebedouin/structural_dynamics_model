@@ -78,7 +78,7 @@ narrative_ontology:constraint_metric(israel_override_clause, theater_ratio, 0.35
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Proponents frame it as a tool for enacting the democratic will of the majority.
-narrative_ontology:constraint_claim(israel_override_clause, tangled_rope).
+narrative_ontology:constraint_claim(israel_override_clause, snare).
 narrative_ontology:human_readable(israel_override_clause, "The 61-Member Judicial Override Clause").
 narrative_ontology:topic_domain(israel_override_clause, "political").
 

@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(trillion_bond_rush_2026, suppression_requir
 narrative_ontology:constraint_metric(trillion_bond_rush_2026, theater_ratio, 0.10).
 
 % Constraint self-claim (analytical classification)
-narrative_ontology:constraint_claim(trillion_bond_rush_2026, snare).
+narrative_ontology:constraint_claim(trillion_bond_rush_2026, tangled_rope).
 narrative_ontology:human_readable(trillion_bond_rush_2026, "Global $1 Trillion Bond Issuance Record").
 narrative_ontology:topic_domain(trillion_bond_rush_2026, "economic/financial").
 

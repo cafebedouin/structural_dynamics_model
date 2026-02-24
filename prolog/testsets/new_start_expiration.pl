@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(new_start_expiration, theater_ratio, 0.2).
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 % The new dynamic is a constructed reality based on strategic decisions.
-narrative_ontology:constraint_claim(new_start_expiration, tangled_rope).
+narrative_ontology:constraint_claim(new_start_expiration, snare).
 narrative_ontology:human_readable(new_start_expiration, "New START Treaty Expiration").
 narrative_ontology:topic_domain(new_start_expiration, "political").
 

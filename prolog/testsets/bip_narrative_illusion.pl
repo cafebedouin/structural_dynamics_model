@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(bip_narrative_illusion, theater_ratio, 0.10
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a necessary structure for getting things done.
-narrative_ontology:constraint_claim(bip_narrative_illusion, tangled_rope).
+narrative_ontology:constraint_claim(bip_narrative_illusion, snare).
 narrative_ontology:human_readable(bip_narrative_illusion, "The Black Iron Prison (BIP) and Sensory Optimization").
 narrative_ontology:topic_domain(bip_narrative_illusion, "philosophical/social/technological").
 

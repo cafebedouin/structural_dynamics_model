@@ -109,7 +109,7 @@ narrative_ontology:constraint_metric(galois_theory_symmetry, accessibility_colla
 narrative_ontology:constraint_metric(galois_theory_symmetry, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(galois_theory_symmetry, mountain).
+narrative_ontology:constraint_claim(galois_theory_symmetry, scaffold).
 narrative_ontology:human_readable(galois_theory_symmetry, "Galois Theory (Symmetry of Roots)").
 narrative_ontology:topic_domain(galois_theory_symmetry, "mathematical").
 

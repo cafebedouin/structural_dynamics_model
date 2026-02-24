@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(model_of_models_regression, suppression_req
 narrative_ontology:constraint_metric(model_of_models_regression, theater_ratio, 0.88).
 
 % Constraint self-claim: The system claims to be a necessary coordination mechanism for ensuring model accuracy.
-narrative_ontology:constraint_claim(model_of_models_regression, tangled_rope).
+narrative_ontology:constraint_claim(model_of_models_regression, snare).
 narrative_ontology:human_readable(model_of_models_regression, "The Infinite Analytical Regression").
 narrative_ontology:topic_domain(model_of_models_regression, "technological/analytical").
 

@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(evidence_half_life, theater_ratio, 0.81).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system claims to be a necessary coordination mechanism for a high-velocity market.
-narrative_ontology:constraint_claim(evidence_half_life, tangled_rope).
+narrative_ontology:constraint_claim(evidence_half_life, snare).
 narrative_ontology:human_readable(evidence_half_life, "The Epistemic Decay Constant").
 narrative_ontology:topic_domain(evidence_half_life, "technological/scientific/legal").
 

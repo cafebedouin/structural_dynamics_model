@@ -101,7 +101,7 @@ narrative_ontology:constraint_metric(hawthorne_effect, theater_ratio, 0.19).
 % psychological tendency. The 'emerges_naturally' flag is not set.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(hawthorne_effect, tangled_rope).
+narrative_ontology:constraint_claim(hawthorne_effect, snare).
 narrative_ontology:human_readable(hawthorne_effect, "The Hawthorne Effect (Observer Effect)").
 narrative_ontology:topic_domain(hawthorne_effect, "social/economic").
 

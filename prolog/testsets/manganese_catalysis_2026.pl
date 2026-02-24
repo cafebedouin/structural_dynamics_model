@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(manganese_catalysis_2026, suppression_requi
 narrative_ontology:constraint_metric(manganese_catalysis_2026, theater_ratio, 0.08).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(manganese_catalysis_2026, scaffold).
+narrative_ontology:constraint_claim(manganese_catalysis_2026, tangled_rope).
 narrative_ontology:human_readable(manganese_catalysis_2026, "Manganese-Formate Fuel Pathway").
 narrative_ontology:topic_domain(manganese_catalysis_2026, "technological/economic").
 

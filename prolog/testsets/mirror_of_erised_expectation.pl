@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(erised_expectation, theater_ratio, 0.85).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordinating principle for achieving success.
-narrative_ontology:constraint_claim(erised_expectation, piton).
+narrative_ontology:constraint_claim(erised_expectation, snare).
 narrative_ontology:human_readable(erised_expectation, "The Erised Career/Stability Mirror").
 narrative_ontology:topic_domain(erised_expectation, "psychological/economic").
 

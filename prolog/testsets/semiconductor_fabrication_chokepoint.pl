@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(semiconductor_fabrication_chokepoint, suppr
 narrative_ontology:constraint_metric(semiconductor_fabrication_chokepoint, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(semiconductor_fabrication_chokepoint, tangled_rope).
+narrative_ontology:constraint_claim(semiconductor_fabrication_chokepoint, snare).
 narrative_ontology:human_readable(semiconductor_fabrication_chokepoint, "The geopolitical and capital chokepoint of leading-edge semiconductor manufacturing (e.g., TSMC 2nm node)").
 narrative_ontology:topic_domain(semiconductor_fabrication_chokepoint, "technological").
 

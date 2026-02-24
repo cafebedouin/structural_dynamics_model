@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(vision_of_the_cross, theater_ratio, 0.15).
 % This constraint is not a mountain; it is a human-enforced political/religious mandate.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(vision_of_the_cross, tangled_rope).
+narrative_ontology:constraint_claim(vision_of_the_cross, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(vision_of_the_cross). % Required for Tangled Rope

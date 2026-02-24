@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(internet_evolution_lifecycle, suppression_r
 narrative_ontology:constraint_metric(internet_evolution_lifecycle, theater_ratio, 0.60).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(internet_evolution_lifecycle, tangled_rope).
+narrative_ontology:constraint_claim(internet_evolution_lifecycle, snare).
 narrative_ontology:human_readable(internet_evolution_lifecycle, "The Lifecycle of the Open Internet").
 narrative_ontology:topic_domain(internet_evolution_lifecycle, "technological/social").
 

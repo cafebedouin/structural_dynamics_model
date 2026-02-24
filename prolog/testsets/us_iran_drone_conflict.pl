@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(us_iran_drone_conflict, suppression_require
 narrative_ontology:constraint_metric(us_iran_drone_conflict, theater_ratio, 0.2).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(us_iran_drone_conflict, tangled_rope).
+narrative_ontology:constraint_claim(us_iran_drone_conflict, snare).
 narrative_ontology:human_readable(us_iran_drone_conflict, "US-Iran Drone Conflict and Escalation").
 narrative_ontology:topic_domain(us_iran_drone_conflict, "political").
 

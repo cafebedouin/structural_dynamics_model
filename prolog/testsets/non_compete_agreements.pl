@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(non_compete_agreements, theater_ratio, 0.10
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination tool to protect intellectual property.
-narrative_ontology:constraint_claim(non_compete_agreements, tangled_rope).
+narrative_ontology:constraint_claim(non_compete_agreements, snare).
 narrative_ontology:human_readable(non_compete_agreements, "Non-Compete Agreements (Post-Employment Restraint)").
 narrative_ontology:topic_domain(non_compete_agreements, "economic/political").
 

@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(us_sanctions_belarus_2022, suppression_requ
 narrative_ontology:constraint_metric(us_sanctions_belarus_2022, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_sanctions_belarus_2022, tangled_rope).
+narrative_ontology:constraint_claim(us_sanctions_belarus_2022, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_sanctions_belarus_2022). % Required for Tangled Rope

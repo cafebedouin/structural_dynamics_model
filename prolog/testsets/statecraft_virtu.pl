@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(statecraft_virtu, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system is presented as a necessary mechanism for order and security.
-narrative_ontology:constraint_claim(statecraft_virtu, tangled_rope).
+narrative_ontology:constraint_claim(statecraft_virtu, snare).
 narrative_ontology:human_readable(statecraft_virtu, "Machiavellian Virtù and State Maintenance").
 narrative_ontology:topic_domain(statecraft_virtu, "political").
 

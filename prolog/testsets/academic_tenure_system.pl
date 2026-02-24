@@ -63,7 +63,7 @@ narrative_ontology:constraint_metric(academic_tenure_system, suppression_require
 narrative_ontology:constraint_metric(academic_tenure_system, theater_ratio, 0.52).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(academic_tenure_system, tangled_rope).
+narrative_ontology:constraint_claim(academic_tenure_system, snare).
 narrative_ontology:human_readable(academic_tenure_system, "Academic Tenure System").
 narrative_ontology:topic_domain(academic_tenure_system, "economic/social").
 

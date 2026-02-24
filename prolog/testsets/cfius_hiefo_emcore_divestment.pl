@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(cfius_hiefo_emcore_divestment, suppression_
 narrative_ontology:constraint_metric(cfius_hiefo_emcore_divestment, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(cfius_hiefo_emcore_divestment, tangled_rope).
+narrative_ontology:constraint_claim(cfius_hiefo_emcore_divestment, snare).
 narrative_ontology:human_readable(cfius_hiefo_emcore_divestment, "CFIUS authority to force divestment of strategic assets").
 narrative_ontology:topic_domain(cfius_hiefo_emcore_divestment, "geopolitical/economic").
 

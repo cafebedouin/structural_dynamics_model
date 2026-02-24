@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(family_estrangement_ratio, theater_ratio, 0
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a mechanism for social cohesion and support.
-narrative_ontology:constraint_claim(family_estrangement_ratio, tangled_rope).
+narrative_ontology:constraint_claim(family_estrangement_ratio, snare).
 narrative_ontology:topic_domain(family_estrangement_ratio, "social").
 narrative_ontology:human_readable(family_estrangement_ratio, "The \"Family is Forever\" Dogma").
 

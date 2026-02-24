@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(irreversible_policy_commitment, suppression
 narrative_ontology:constraint_metric(irreversible_policy_commitment, theater_ratio, 0.35).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(irreversible_policy_commitment, tangled_rope).
+narrative_ontology:constraint_claim(irreversible_policy_commitment, snare).
 narrative_ontology:human_readable(irreversible_policy_commitment, "The Burned Bridge Protocol").
 narrative_ontology:topic_domain(irreversible_policy_commitment, "political/economic").
 

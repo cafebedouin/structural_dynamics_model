@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(pe_fund_level_leverage, suppression_require
 narrative_ontology:constraint_metric(pe_fund_level_leverage, theater_ratio, 0.40).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(pe_fund_level_leverage, tangled_rope).
+narrative_ontology:constraint_claim(pe_fund_level_leverage, snare).
 narrative_ontology:topic_domain(pe_fund_level_leverage, "economic").
 narrative_ontology:human_readable(pe_fund_level_leverage, "\"Shadow Leverage\" via fund-level debt in Private Equity").
 

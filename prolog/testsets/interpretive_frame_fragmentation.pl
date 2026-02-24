@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(interpretive_frame_fragmentation, suppressi
 narrative_ontology:constraint_metric(interpretive_frame_fragmentation, theater_ratio, 0.95).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(interpretive_frame_fragmentation, tangled_rope).
+narrative_ontology:constraint_claim(interpretive_frame_fragmentation, snare).
 narrative_ontology:human_readable(interpretive_frame_fragmentation, "The Tower of Babel Feedback Loop").
 narrative_ontology:topic_domain(interpretive_frame_fragmentation, "social/informational/technological").
 

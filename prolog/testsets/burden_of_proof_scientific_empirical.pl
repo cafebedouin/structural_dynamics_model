@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric(burden_of_proof_scientific, suppression_req
 narrative_ontology:constraint_metric(burden_of_proof_scientific, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(burden_of_proof_scientific, snare).
+narrative_ontology:constraint_claim(burden_of_proof_scientific, tangled_rope).
 narrative_ontology:human_readable(burden_of_proof_scientific, "Statistical Significance Threshold (p < 0.05)").
 narrative_ontology:topic_domain(burden_of_proof_scientific, "technological/social").
 

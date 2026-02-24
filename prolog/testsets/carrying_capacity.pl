@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(carrying_capacity, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Claims to be a natural law, but its management is a constructed enforcement mechanism.
-narrative_ontology:constraint_claim(carrying_capacity, tangled_rope).
+narrative_ontology:constraint_claim(carrying_capacity, snare).
 narrative_ontology:human_readable(carrying_capacity, "Management of Ecological Carrying Capacity (K)").
 narrative_ontology:topic_domain(carrying_capacity, "economic/technological/social").
 

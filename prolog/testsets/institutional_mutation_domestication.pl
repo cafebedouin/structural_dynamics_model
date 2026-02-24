@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(institutional_mutation_domestication, suppr
 narrative_ontology:constraint_metric(institutional_mutation_domestication, theater_ratio, 0.40).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(institutional_mutation_domestication, tangled_rope).
+narrative_ontology:constraint_claim(institutional_mutation_domestication, snare).
 narrative_ontology:human_readable(institutional_mutation_domestication, "The Jedi Bureaucratic Capture").
 narrative_ontology:topic_domain(institutional_mutation_domestication, "political/social").
 

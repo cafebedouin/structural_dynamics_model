@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(silklink_2026, theater_ratio, 0.15).
 
 narrative_ontology:has_sunset_clause(silklink_2026).
 % Constraint self-claim (analytical classification)
-narrative_ontology:constraint_claim(silklink_2026, scaffold).
+narrative_ontology:constraint_claim(silklink_2026, tangled_rope).
 narrative_ontology:human_readable(silklink_2026, "SilkLink Syria-Saudi Telecom Project").
 narrative_ontology:topic_domain(silklink_2026, "technological/economic").
 

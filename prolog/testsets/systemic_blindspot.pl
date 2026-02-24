@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(systemic_blindspot, theater_ratio, 0.82).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The institution claims its framework is for coordination and safety.
-narrative_ontology:constraint_claim(systemic_blindspot, tangled_rope).
+narrative_ontology:constraint_claim(systemic_blindspot, snare).
 narrative_ontology:human_readable(systemic_blindspot, "The Incalculable Tail-Risk").
 narrative_ontology:topic_domain(systemic_blindspot, "cognitive/organizational/economic").
 

@@ -103,7 +103,7 @@ narrative_ontology:constraint_metric(damped_harmonics, accessibility_collapse, 1
 narrative_ontology:constraint_metric(damped_harmonics, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(damped_harmonics, mountain).
+narrative_ontology:constraint_claim(damped_harmonics, scaffold).
 narrative_ontology:human_readable(damped_harmonics, "Damped Harmonic Motion").
 narrative_ontology:topic_domain(damped_harmonics, "technological").
 

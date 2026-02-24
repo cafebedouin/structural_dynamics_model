@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(model_collapse_feedback_loop, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The labs claim this is a necessary coordination mechanism for scaling.
-narrative_ontology:constraint_claim(model_collapse_feedback_loop, tangled_rope).
+narrative_ontology:constraint_claim(model_collapse_feedback_loop, snare).
 narrative_ontology:human_readable(model_collapse_feedback_loop, "The Autophagous Intelligence Trap").
 narrative_ontology:topic_domain(model_collapse_feedback_loop, "technological/AI/informational").
 

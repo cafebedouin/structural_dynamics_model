@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric(indo_russian_submarine_lease_2025, suppress
 narrative_ontology:constraint_metric(indo_russian_submarine_lease_2025, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(indo_russian_submarine_lease_2025, tangled_rope).
+narrative_ontology:constraint_claim(indo_russian_submarine_lease_2025, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(indo_russian_submarine_lease_2025). % Required for Tangled Rope

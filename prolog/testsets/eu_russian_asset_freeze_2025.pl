@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric(eu_russian_asset_freeze_2025, suppression_r
 narrative_ontology:constraint_metric(eu_russian_asset_freeze_2025, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(eu_russian_asset_freeze_2025, tangled_rope).
+narrative_ontology:constraint_claim(eu_russian_asset_freeze_2025, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(eu_russian_asset_freeze_2025). % Required for Tangled Rope

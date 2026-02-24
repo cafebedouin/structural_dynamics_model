@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(epstein_document_release_2026, theater_rati
 % Not a mountain constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(epstein_document_release_2026, tangled_rope).
+narrative_ontology:constraint_claim(epstein_document_release_2026, snare).
 narrative_ontology:human_readable(epstein_document_release_2026, "The 2026 Unsealing of Jeffrey Epstein-Related Documents").
 narrative_ontology:topic_domain(epstein_document_release_2026, "political/social/legal").
 

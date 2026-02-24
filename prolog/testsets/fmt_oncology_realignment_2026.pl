@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(fmt_oncology_2026, suppression_requirement,
 narrative_ontology:constraint_metric(fmt_oncology_2026, theater_ratio, 0.12).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(fmt_oncology_2026, scaffold).
+narrative_ontology:constraint_claim(fmt_oncology_2026, tangled_rope).
 narrative_ontology:human_readable(fmt_oncology_2026, "FMT Immunotherapy Realignment").
 narrative_ontology:topic_domain(fmt_oncology_2026, "health/medical").
 

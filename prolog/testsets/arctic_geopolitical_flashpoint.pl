@@ -62,7 +62,7 @@
 
 % ID Binding for DR-Audit Suite
 narrative_ontology:interval(arctic_geopolitical_flashpoint, 0, 10).
-narrative_ontology:constraint_claim(arctic_geopolitical_flashpoint, snare).
+narrative_ontology:constraint_claim(arctic_geopolitical_flashpoint, tangled_rope).
 narrative_ontology:human_readable(arctic_geopolitical_flashpoint, "The Melting Ice and the Scramble for Greenland").
 narrative_ontology:topic_domain(arctic_geopolitical_flashpoint, "geopolitical/economic").
 

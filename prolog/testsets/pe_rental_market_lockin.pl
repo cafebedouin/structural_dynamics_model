@@ -94,7 +94,7 @@ narrative_ontology:constraint_metric(pe_rental_market_lockin, theater_ratio, 0.2
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(pe_rental_market_lockin, tangled_rope).
+narrative_ontology:constraint_claim(pe_rental_market_lockin, snare).
 narrative_ontology:human_readable(pe_rental_market_lockin, "Private Equity Lock-in of Single-Family Rental Market").
 narrative_ontology:topic_domain(pe_rental_market_lockin, "economic").
 

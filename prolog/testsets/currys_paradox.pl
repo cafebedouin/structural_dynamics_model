@@ -96,7 +96,7 @@ narrative_ontology:constraint_metric(currys_paradox, accessibility_collapse, 0.9
 narrative_ontology:constraint_metric(currys_paradox, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(currys_paradox, mountain).
+narrative_ontology:constraint_claim(currys_paradox, scaffold).
 narrative_ontology:human_readable(currys_paradox, "Curry's Paradox").
 narrative_ontology:topic_domain(currys_paradox, "analytical/logic").
 

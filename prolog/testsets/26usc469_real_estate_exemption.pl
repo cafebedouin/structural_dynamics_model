@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric('26usc469_real_estate_exemption', suppressi
 narrative_ontology:constraint_metric('26usc469_real_estate_exemption', theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim('26usc469_real_estate_exemption', tangled_rope).
+narrative_ontology:constraint_claim('26usc469_real_estate_exemption', snare).
 narrative_ontology:human_readable('26usc469_real_estate_exemption', "The Real Estate Professional Exemption (Passive Activity Loss Rules)").
 narrative_ontology:topic_domain('26usc469_real_estate_exemption', "economic/legal").
 

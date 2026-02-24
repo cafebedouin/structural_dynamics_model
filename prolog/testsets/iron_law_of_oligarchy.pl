@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(iron_law_of_oligarchy, theater_ratio, 0.15)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(iron_law_of_oligarchy, tangled_rope).
+narrative_ontology:constraint_claim(iron_law_of_oligarchy, snare).
 narrative_ontology:human_readable(iron_law_of_oligarchy, "The Iron Law of Oligarchy").
 narrative_ontology:topic_domain(iron_law_of_oligarchy, "political/social").
 

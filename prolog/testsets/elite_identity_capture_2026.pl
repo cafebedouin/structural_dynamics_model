@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(elite_identity_capture_2026, suppression_re
 narrative_ontology:constraint_metric(elite_identity_capture_2026, theater_ratio, 0.94).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(elite_identity_capture_2026, tangled_rope).
+narrative_ontology:constraint_claim(elite_identity_capture_2026, snare).
 narrative_ontology:human_readable(elite_identity_capture_2026, "Elite Identity Capture (Staley-Bagg Synthesis)").
 narrative_ontology:topic_domain(elite_identity_capture_2026, "political/social").
 

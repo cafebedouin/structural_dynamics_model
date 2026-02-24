@@ -61,7 +61,7 @@ narrative_ontology:constraint_metric(cb_far_beyond_human, suppression_requiremen
 narrative_ontology:constraint_metric(cb_far_beyond_human, theater_ratio, 0.20).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(cb_far_beyond_human, tangled_rope).
+narrative_ontology:constraint_claim(cb_far_beyond_human, snare).
 narrative_ontology:human_readable(cb_far_beyond_human, "AI Alignment Problem").
 narrative_ontology:topic_domain(cb_far_beyond_human, "technological").
 

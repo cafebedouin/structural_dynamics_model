@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(algeria_france_colonial_legacy, theater_rat
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(algeria_france_colonial_legacy, tangled_rope).
+narrative_ontology:constraint_claim(algeria_france_colonial_legacy, snare).
 narrative_ontology:human_readable(algeria_france_colonial_legacy, "The persistent structural legacy of French colonization in Algeria").
 narrative_ontology:topic_domain(algeria_france_colonial_legacy, "geopolitical/economic").
 

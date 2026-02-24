@@ -52,7 +52,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ai_driven_surveillance_sensor_layer, 2020, 2026).
-narrative_ontology:constraint_claim(ai_driven_surveillance_sensor_layer, tangled_rope).
+narrative_ontology:constraint_claim(ai_driven_surveillance_sensor_layer, snare).
 narrative_ontology:human_readable(ai_driven_surveillance_sensor_layer, "AI-Driven Real-Time Surveillance").
 narrative_ontology:topic_domain(ai_driven_surveillance_sensor_layer, "technological/security/political").
 

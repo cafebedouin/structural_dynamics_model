@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(openai_prism_development, suppression_requi
 narrative_ontology:constraint_metric(openai_prism_development, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(openai_prism_development, tangled_rope).
+narrative_ontology:constraint_claim(openai_prism_development, snare).
 narrative_ontology:topic_domain(openai_prism_development, "technological").
 narrative_ontology:human_readable(openai_prism_development, "Information Asymmetry in Frontier AI Model Development (OpenAI's \"Prism\"/GPT-5)").
 

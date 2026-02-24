@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(adaptive_lag_trap, theater_ratio, 0.89).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination mechanism for stability and safety.
-narrative_ontology:constraint_claim(adaptive_lag_trap, tangled_rope).
+narrative_ontology:constraint_claim(adaptive_lag_trap, snare).
 narrative_ontology:human_readable(adaptive_lag_trap, "The Velocity Mismatch Anchor").
 narrative_ontology:topic_domain(adaptive_lag_trap, "economic/technological/regulatory").
 

@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(electrification_scale_2026, 0, 10).
-narrative_ontology:constraint_claim(electrification_scale_2026, tangled_rope).
+narrative_ontology:constraint_claim(electrification_scale_2026, rope).
 narrative_ontology:human_readable(electrification_scale_2026, "Industrial Scale Electrification").
 narrative_ontology:topic_domain(electrification_scale_2026, "technological/economic/environmental").
 

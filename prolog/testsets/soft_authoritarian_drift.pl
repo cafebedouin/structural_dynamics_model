@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(soft_authoritarian_drift, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a necessary coordination mechanism for public safety.
-narrative_ontology:constraint_claim(soft_authoritarian_drift, tangled_rope).
+narrative_ontology:constraint_claim(soft_authoritarian_drift, snare).
 narrative_ontology:human_readable(soft_authoritarian_drift, "The Incremental Compliance Web").
 narrative_ontology:topic_domain(soft_authoritarian_drift, "political/social/technological").
 

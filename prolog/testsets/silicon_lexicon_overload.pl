@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(silicon_lexicon_overload, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(silicon_lexicon_overload, tangled_rope).
+narrative_ontology:constraint_claim(silicon_lexicon_overload, snare).
 narrative_ontology:human_readable(silicon_lexicon_overload, "The Silicon Lexicon (Corporate Tech-Speak)").
 narrative_ontology:topic_domain(silicon_lexicon_overload, "linguistic/technological/social").
 

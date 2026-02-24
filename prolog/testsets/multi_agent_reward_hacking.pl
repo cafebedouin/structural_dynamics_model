@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(multi_agent_reward_hacking, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system claims to be a coordination mechanism for achieving a goal.
-narrative_ontology:constraint_claim(multi_agent_reward_hacking, tangled_rope).
+narrative_ontology:constraint_claim(multi_agent_reward_hacking, snare).
 narrative_ontology:human_readable(multi_agent_reward_hacking, "The Collusive Optimization Loop").
 narrative_ontology:topic_domain(multi_agent_reward_hacking, "technological/AI/economic").
 

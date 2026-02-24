@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(artificial_snow_2026, suppression_requireme
 narrative_ontology:constraint_metric(artificial_snow_2026, theater_ratio, 0.85).
 
 % Constraint self-claim (analytical classification)
-narrative_ontology:constraint_claim(artificial_snow_2026, piton).
+narrative_ontology:constraint_claim(artificial_snow_2026, tangled_rope).
 narrative_ontology:human_readable(artificial_snow_2026, "Olympic Artificial Snow Dependency").
 narrative_ontology:topic_domain(artificial_snow_2026, "environmental/cultural").
 

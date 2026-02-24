@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(silent_dependency_activation, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The IP holder claims the dependency is for coordination and quality control.
-narrative_ontology:constraint_claim(silent_dependency_activation, tangled_rope).
+narrative_ontology:constraint_claim(silent_dependency_activation, snare).
 narrative_ontology:human_readable(silent_dependency_activation, "The Invisible Supply Chain Trap").
 narrative_ontology:topic_domain(silent_dependency_activation, "technological/economic").
 

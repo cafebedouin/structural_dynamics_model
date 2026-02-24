@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(legitimacy_without_capacity, suppression_re
 narrative_ontology:constraint_metric(legitimacy_without_capacity, theater_ratio, 0.91).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(legitimacy_without_capacity, tangled_rope).
+narrative_ontology:constraint_claim(legitimacy_without_capacity, snare).
 narrative_ontology:human_readable(legitimacy_without_capacity, "The Sovereign Ghost").
 narrative_ontology:topic_domain(legitimacy_without_capacity, "political/organizational").
 

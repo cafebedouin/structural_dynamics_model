@@ -82,7 +82,7 @@ narrative_ontology:constraint_metric(us_sanctions_moex_2024, suppression_require
 narrative_ontology:constraint_metric(us_sanctions_moex_2024, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_sanctions_moex_2024, tangled_rope).
+narrative_ontology:constraint_claim(us_sanctions_moex_2024, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_sanctions_moex_2024). % Required for Tangled Rope. Sanctions are actively enforced by OFAC.

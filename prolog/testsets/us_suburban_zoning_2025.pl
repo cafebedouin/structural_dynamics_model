@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(us_suburban_zoning_2025, suppression_requir
 narrative_ontology:constraint_metric(us_suburban_zoning_2025, theater_ratio, 0.15).
 
 % Constraint self-claim: Zoning laws claim to be a coordination mechanism for orderly development.
-narrative_ontology:constraint_claim(us_suburban_zoning_2025, tangled_rope).
+narrative_ontology:constraint_claim(us_suburban_zoning_2025, snare).
 narrative_ontology:human_readable(us_suburban_zoning_2025, "Single-Family Suburban Zoning Codes").
 narrative_ontology:topic_domain(us_suburban_zoning_2025, "political/legal/economic").
 

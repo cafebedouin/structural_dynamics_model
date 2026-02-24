@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(governance_latency_gap, theater_ratio, 0.75
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a necessary condition for innovation, a form of coordination.
-narrative_ontology:constraint_claim(governance_latency_gap, tangled_rope).
+narrative_ontology:constraint_claim(governance_latency_gap, snare).
 narrative_ontology:human_readable(governance_latency_gap, "The Velocity Mismatch").
 narrative_ontology:topic_domain(governance_latency_gap, "political/technological").
 

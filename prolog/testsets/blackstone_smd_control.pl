@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(blackstone_smd_control, theater_ratio, 0.10
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as a necessary structure for long-term stability (coordination),
 % but its function is pure enforcement of founder control.
-narrative_ontology:constraint_claim(blackstone_smd_control, tangled_rope).
+narrative_ontology:constraint_claim(blackstone_smd_control, snare).
 narrative_ontology:human_readable(blackstone_smd_control, "Blackstone Senior Managing Director Voting Control").
 narrative_ontology:topic_domain(blackstone_smd_control, "economic").
 

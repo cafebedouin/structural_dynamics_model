@@ -77,7 +77,7 @@ narrative_ontology:constraint_metric(tear_gas_repression_2026, suppression_requi
 narrative_ontology:constraint_metric(tear_gas_repression_2026, theater_ratio, 0.78).
 
 % The state claims this is a coordination tool for crowd control.
-narrative_ontology:constraint_claim(tear_gas_repression_2026, tangled_rope).
+narrative_ontology:constraint_claim(tear_gas_repression_2026, snare).
 narrative_ontology:human_readable(tear_gas_repression_2026, "The Tear Gas Riot-Incentive Loop").
 narrative_ontology:topic_domain(tear_gas_repression_2026, "political/technological/social").
 

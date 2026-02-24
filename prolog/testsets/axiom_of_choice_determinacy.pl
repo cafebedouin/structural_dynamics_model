@@ -114,7 +114,7 @@ narrative_ontology:constraint_metric(axiom_of_choice, accessibility_collapse, 1.
 narrative_ontology:constraint_metric(axiom_of_choice, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(axiom_of_choice, mountain).
+narrative_ontology:constraint_claim(axiom_of_choice, scaffold).
 narrative_ontology:human_readable(axiom_of_choice, "The Axiom of Choice (AC)").
 narrative_ontology:topic_domain(axiom_of_choice, "mathematical/logical").
 

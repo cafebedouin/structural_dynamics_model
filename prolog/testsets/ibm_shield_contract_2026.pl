@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(ibm_shield_contract_2026, suppression_requi
 narrative_ontology:constraint_metric(ibm_shield_contract_2026, theater_ratio, 0.18).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(ibm_shield_contract_2026, tangled_rope).
+narrative_ontology:constraint_claim(ibm_shield_contract_2026, snare).
 narrative_ontology:human_readable(ibm_shield_contract_2026, "IBM SHIELD IDIQ Program Contract").
 narrative_ontology:topic_domain(ibm_shield_contract_2026, "technological/political").
 

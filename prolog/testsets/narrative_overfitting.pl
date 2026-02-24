@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(narrative_overfitting, theater_ratio, 0.94)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination tool for making sense of the world.
-narrative_ontology:constraint_claim(narrative_overfitting, tangled_rope).
+narrative_ontology:constraint_claim(narrative_overfitting, snare).
 narrative_ontology:human_readable(narrative_overfitting, "The Procrustean Plot").
 narrative_ontology:topic_domain(narrative_overfitting, "social/technological").
 

@@ -108,7 +108,7 @@ narrative_ontology:constraint_metric(peano_curve_mapping, accessibility_collapse
 narrative_ontology:constraint_metric(peano_curve_mapping, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(peano_curve_mapping, mountain).
+narrative_ontology:constraint_claim(peano_curve_mapping, scaffold).
 narrative_ontology:human_readable(peano_curve_mapping, "Peano Space-Filling Curve").
 narrative_ontology:topic_domain(peano_curve_mapping, "mathematical/technological").
 

@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(alternative_sovereignty_scaffold, suppressi
 narrative_ontology:constraint_metric(alternative_sovereignty_scaffold, theater_ratio, 0.1).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(alternative_sovereignty_scaffold, scaffold).
+narrative_ontology:constraint_claim(alternative_sovereignty_scaffold, rope).
 narrative_ontology:human_readable(alternative_sovereignty_scaffold, "The Decentralized Parallel").
 narrative_ontology:topic_domain(alternative_sovereignty_scaffold, "technological/social").
 

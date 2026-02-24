@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(dk_us_alliance_espionage, suppression_requi
 narrative_ontology:constraint_metric(dk_us_alliance_espionage, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(dk_us_alliance_espionage, tangled_rope).
+narrative_ontology:constraint_claim(dk_us_alliance_espionage, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(dk_us_alliance_espionage). % Both the espionage and counter-espionage require active effort.

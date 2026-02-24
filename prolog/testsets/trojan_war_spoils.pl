@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(trojan_war_spoils, suppression_requirement,
 narrative_ontology:constraint_metric(trojan_war_spoils, theater_ratio, 0.0).
 
 % Constraint self-claim: The Greeks claim this is merely the enforcement of military custom.
-narrative_ontology:constraint_claim(trojan_war_spoils, snare).
+narrative_ontology:constraint_claim(trojan_war_spoils, tangled_rope).
 narrative_ontology:human_readable(trojan_war_spoils, "The Allocation of Captives after the Fall of Troy").
 narrative_ontology:topic_domain(trojan_war_spoils, "military/social").
 

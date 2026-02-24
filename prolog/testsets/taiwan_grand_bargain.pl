@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(taiwan_grand_bargain, suppression_requireme
 narrative_ontology:constraint_metric(taiwan_grand_bargain, theater_ratio, 0.50).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(taiwan_grand_bargain, tangled_rope).
+narrative_ontology:constraint_claim(taiwan_grand_bargain, snare).
 narrative_ontology:human_readable(taiwan_grand_bargain, "The U.S.-China Taiwan Grand Bargain").
 narrative_ontology:topic_domain(taiwan_grand_bargain, "economic/geopolitical").
 

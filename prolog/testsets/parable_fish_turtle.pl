@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(parable_fish_turtle, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The parable presents itself as a constructed lesson about natural limits.
-narrative_ontology:constraint_claim(parable_fish_turtle, tangled_rope).
+narrative_ontology:constraint_claim(parable_fish_turtle, snare).
 narrative_ontology:human_readable(parable_fish_turtle, "The Ontological Lake (Fish and Turtle Parable)").
 narrative_ontology:topic_domain(parable_fish_turtle, "philosophical/social").
 

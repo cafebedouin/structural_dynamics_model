@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(protocol_drift_accumulation, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination mechanism, but the reality is extractive.
-narrative_ontology:constraint_claim(protocol_drift_accumulation, tangled_rope).
+narrative_ontology:constraint_claim(protocol_drift_accumulation, snare).
 narrative_ontology:human_readable(protocol_drift_accumulation, "The Entropic Standard Decay").
 narrative_ontology:topic_domain(protocol_drift_accumulation, "technological").
 

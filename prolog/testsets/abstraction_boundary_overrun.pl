@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(abstraction_boundary_overrun, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The abstraction claims to be a pure coordination mechanism (a clean API).
-narrative_ontology:constraint_claim(abstraction_boundary_overrun, tangled_rope).
+narrative_ontology:constraint_claim(abstraction_boundary_overrun, snare).
 narrative_ontology:human_readable(abstraction_boundary_overrun, "The Leaky Black-Box Collapse").
 narrative_ontology:topic_domain(abstraction_boundary_overrun, "technological/computational").
 

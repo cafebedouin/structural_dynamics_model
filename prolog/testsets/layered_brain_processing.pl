@@ -102,7 +102,7 @@ narrative_ontology:constraint_metric(layered_brain_processing, resistance, 0.05)
 
 % --- Constraint claim (must match analytical perspective type) ---
 % The analytical perspective (neuroscientist) sees a functional coordination mechanism.
-narrative_ontology:constraint_claim(layered_brain_processing, rope).
+narrative_ontology:constraint_claim(layered_brain_processing, tangled_rope).
 narrative_ontology:human_readable(layered_brain_processing, "Layered Contextual Meaning Construction").
 narrative_ontology:topic_domain(layered_brain_processing, "technological/biological").
 

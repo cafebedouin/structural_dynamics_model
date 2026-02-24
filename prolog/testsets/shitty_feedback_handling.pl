@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(shitty_feedback_handling, 0, 10).
-narrative_ontology:constraint_claim(shitty_feedback_handling, rope).
+narrative_ontology:constraint_claim(shitty_feedback_handling, tangled_rope).
 narrative_ontology:human_readable(shitty_feedback_handling, "The Protocol for Handling Shitty Feedback").
 narrative_ontology:topic_domain(shitty_feedback_handling, "social/professional").
 

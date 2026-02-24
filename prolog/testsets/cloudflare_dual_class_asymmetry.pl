@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(cloudflare_dual_class_asymmetry, theater_ra
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as a necessary legal structure for long-term stability.
-narrative_ontology:constraint_claim(cloudflare_dual_class_asymmetry, tangled_rope).
+narrative_ontology:constraint_claim(cloudflare_dual_class_asymmetry, snare).
 narrative_ontology:human_readable(cloudflare_dual_class_asymmetry, "Cloudflare Dual-Class Voting Control").
 narrative_ontology:topic_domain(cloudflare_dual_class_asymmetry, "economic").
 

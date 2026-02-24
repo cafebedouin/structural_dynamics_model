@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(cross_domain_coupling_spiral, suppression_r
 narrative_ontology:constraint_metric(cross_domain_coupling_spiral, theater_ratio, 0.91).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(cross_domain_coupling_spiral, tangled_rope).
+narrative_ontology:constraint_claim(cross_domain_coupling_spiral, snare).
 narrative_ontology:human_readable(cross_domain_coupling_spiral, "The Entangled Dependency Vortex").
 narrative_ontology:topic_domain(cross_domain_coupling_spiral, "technological/economic/cybernetic").
 

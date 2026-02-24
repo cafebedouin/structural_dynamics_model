@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(rules_based_international_order, theater_ra
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(rules_based_international_order, tangled_rope).
+narrative_ontology:constraint_claim(rules_based_international_order, snare).
 narrative_ontology:human_readable(rules_based_international_order, "The Rules-Based International Order").
 narrative_ontology:topic_domain(rules_based_international_order, "political/economic").
 

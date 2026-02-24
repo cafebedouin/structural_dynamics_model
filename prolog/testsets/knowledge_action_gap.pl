@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(knowledge_action_gap, theater_ratio, 0.25).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It presents as an immutable fact of human nature ("people are just lazy/irrational").
-narrative_ontology:constraint_claim(knowledge_action_gap, snare).
+narrative_ontology:constraint_claim(knowledge_action_gap, tangled_rope).
 narrative_ontology:human_readable(knowledge_action_gap, "The Informational Friction Barrier").
 narrative_ontology:topic_domain(knowledge_action_gap, "social/technological").
 

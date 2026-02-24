@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(gold_fomo_cycle, theater_ratio, 0.40).
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(gold_fomo_cycle, tangled_rope).
+narrative_ontology:constraint_claim(gold_fomo_cycle, snare).
 narrative_ontology:human_readable(gold_fomo_cycle, "The Gold Price 'Fear of Missing Out' Cycle").
 narrative_ontology:topic_domain(gold_fomo_cycle, "economic").
 

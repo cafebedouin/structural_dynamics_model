@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(procedural_legitimacy_decay, suppression_re
 narrative_ontology:constraint_metric(procedural_legitimacy_decay, theater_ratio, 0.88).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(procedural_legitimacy_decay, tangled_rope).
+narrative_ontology:constraint_claim(procedural_legitimacy_decay, snare).
 narrative_ontology:human_readable(procedural_legitimacy_decay, "The Hollow Formality Trap").
 narrative_ontology:topic_domain(procedural_legitimacy_decay, "social/political").
 

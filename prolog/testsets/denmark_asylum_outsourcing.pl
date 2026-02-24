@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(denmark_asylum_outsourcing, theater_ratio, 
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(denmark_asylum_outsourcing, tangled_rope).
+narrative_ontology:constraint_claim(denmark_asylum_outsourcing, snare).
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(denmark_asylum_outsourcing).

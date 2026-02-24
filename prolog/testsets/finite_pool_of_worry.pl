@@ -77,7 +77,7 @@ narrative_ontology:constraint_metric(finite_pool_of_worry, theater_ratio, 0.15).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as a fundamental, unchangeable aspect of human psychology.
-narrative_ontology:constraint_claim(finite_pool_of_worry, tangled_rope).
+narrative_ontology:constraint_claim(finite_pool_of_worry, snare).
 narrative_ontology:human_readable(finite_pool_of_worry, "The Finite Pool of Worry Hypothesis").
 narrative_ontology:topic_domain(finite_pool_of_worry, "psychological/social").
 

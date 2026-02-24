@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(data_laundering_pipeline, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The aggregators claim this is a necessary coordination tool for progress.
-narrative_ontology:constraint_claim(data_laundering_pipeline, tangled_rope).
+narrative_ontology:constraint_claim(data_laundering_pipeline, snare).
 narrative_ontology:human_readable(data_laundering_pipeline, "The Provenance Eraser").
 narrative_ontology:topic_domain(data_laundering_pipeline, "technological/legal/economic").
 

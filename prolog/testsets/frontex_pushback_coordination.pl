@@ -85,7 +85,7 @@ narrative_ontology:constraint_metric(frontex_pushback_coordination, suppression_
 narrative_ontology:constraint_metric(frontex_pushback_coordination, theater_ratio, 0.60).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(frontex_pushback_coordination, tangled_rope).
+narrative_ontology:constraint_claim(frontex_pushback_coordination, snare).
 narrative_ontology:human_readable(frontex_pushback_coordination, "Frontex-Coordinated Asylum Suppression at EU Maritime Borders").
 narrative_ontology:topic_domain(frontex_pushback_coordination, "political").
 

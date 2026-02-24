@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(cbdc_implementation, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It is framed as a public good for coordinating economic activity.
-narrative_ontology:constraint_claim(cbdc_implementation, tangled_rope).
+narrative_ontology:constraint_claim(cbdc_implementation, snare).
 narrative_ontology:human_readable(cbdc_implementation, "Central Bank Digital Currency (CBDC) Implementation").
 narrative_ontology:topic_domain(cbdc_implementation, "economic/technological").
 

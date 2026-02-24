@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(inference_cost_scaling_law, theater_ratio, 
 
 % Constraint self-claim: The providers claim this is a necessary coordination
 % mechanism to fund and organize the massive capital required for progress.
-narrative_ontology:constraint_claim(inference_cost_scaling_law, tangled_rope).
+narrative_ontology:constraint_claim(inference_cost_scaling_law, snare).
 narrative_ontology:human_readable(inference_cost_scaling_law, "The Computational Tollgate").
 narrative_ontology:topic_domain(inference_cost_scaling_law, "technological/economic").
 

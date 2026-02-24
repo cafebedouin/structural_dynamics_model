@@ -93,7 +93,7 @@ narrative_ontology:constraint_metric(ergo_nipopows, accessibility_collapse, 0.95
 narrative_ontology:constraint_metric(ergo_nipopows, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ergo_nipopows, mountain).
+narrative_ontology:constraint_claim(ergo_nipopows, scaffold).
 narrative_ontology:human_readable(ergo_nipopows, "Non-Interactive Proofs of Proof-of-Work (NiPoPoWs)").
 narrative_ontology:topic_domain(ergo_nipopows, "technological/cryptographic").
 

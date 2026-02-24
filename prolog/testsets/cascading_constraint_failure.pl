@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(cascading_constraint_failure, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system is presented as a pure coordination mechanism for efficiency.
-narrative_ontology:constraint_claim(cascading_constraint_failure, tangled_rope).
+narrative_ontology:constraint_claim(cascading_constraint_failure, snare).
 narrative_ontology:human_readable(cascading_constraint_failure, "The Dominos of Systemic Collapse").
 narrative_ontology:topic_domain(cascading_constraint_failure, "technological/infrastructural/economic").
 

@@ -100,7 +100,7 @@ narrative_ontology:constraint_metric(ice_memory_archive, theater_ratio, 0.05).
 % Not a mountain from the analytical perspective.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ice_memory_archive, scaffold).
+narrative_ontology:constraint_claim(ice_memory_archive, rope).
 narrative_ontology:human_readable(ice_memory_archive, "The imperative to create a global ice core archive before glaciers melt.").
 narrative_ontology:topic_domain(ice_memory_archive, "technological/environmental").
 

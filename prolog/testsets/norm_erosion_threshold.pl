@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(norm_erosion_threshold, theater_ratio, 0.78
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be the original coordination norm, but its function has degraded.
-narrative_ontology:constraint_claim(norm_erosion_threshold, tangled_rope).
+narrative_ontology:constraint_claim(norm_erosion_threshold, snare).
 narrative_ontology:human_readable(norm_erosion_threshold, "The Social Fabric Breach").
 narrative_ontology:topic_domain(norm_erosion_threshold, "social/political").
 

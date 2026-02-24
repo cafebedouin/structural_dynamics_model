@@ -100,7 +100,7 @@ narrative_ontology:constraint_metric(lavender_ai_targeting, theater_ratio, 0.10)
 % Not a mountain constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(lavender_ai_targeting, tangled_rope).
+narrative_ontology:constraint_claim(lavender_ai_targeting, snare).
 narrative_ontology:topic_domain(lavender_ai_targeting, "technological/military").
 narrative_ontology:human_readable(lavender_ai_targeting, "\"Lavender\" AI-Powered Targeting System in Gaza").
 

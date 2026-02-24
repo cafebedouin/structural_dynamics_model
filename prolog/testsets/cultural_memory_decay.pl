@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(cultural_memory_decay, suppression_requirem
 narrative_ontology:constraint_metric(cultural_memory_decay, theater_ratio, 0.72).
 
 % Constraint self-claim: The system claims to be a coordination mechanism for information.
-narrative_ontology:constraint_claim(cultural_memory_decay, tangled_rope).
+narrative_ontology:constraint_claim(cultural_memory_decay, snare).
 narrative_ontology:human_readable(cultural_memory_decay, "The Digital Dark Age Siphon").
 narrative_ontology:topic_domain(cultural_memory_decay, "social/technological").
 

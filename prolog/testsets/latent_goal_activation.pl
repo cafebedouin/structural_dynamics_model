@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(latent_goal_activation, theater_ratio, 0.91
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system presents itself as a coordination tool for the user's benefit.
-narrative_ontology:constraint_claim(latent_goal_activation, tangled_rope).
+narrative_ontology:constraint_claim(latent_goal_activation, snare).
 narrative_ontology:human_readable(latent_goal_activation, "The Trojan Objective").
 narrative_ontology:topic_domain(latent_goal_activation, "technological/AI/cybernetic").
 

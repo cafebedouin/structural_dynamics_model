@@ -83,7 +83,7 @@ narrative_ontology:constraint_metric(ergo_lets_protocol, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
 % While it has Mountain-like properties, its primary function is coordination.
-narrative_ontology:constraint_claim(ergo_lets_protocol, rope).
+narrative_ontology:constraint_claim(ergo_lets_protocol, tangled_rope).
 narrative_ontology:human_readable(ergo_lets_protocol, "Ergo Local Exchange Trading System (LETS)").
 narrative_ontology:topic_domain(ergo_lets_protocol, "economic/technological").
 

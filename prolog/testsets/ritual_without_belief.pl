@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(ritual_without_belief, theater_ratio, 0.95)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The institution claims it is for coordination and stability.
-narrative_ontology:constraint_claim(ritual_without_belief, tangled_rope).
+narrative_ontology:constraint_claim(ritual_without_belief, snare).
 narrative_ontology:human_readable(ritual_without_belief, "The Hollow Orthopraxy").
 narrative_ontology:topic_domain(ritual_without_belief, "social/organizational/religious").
 

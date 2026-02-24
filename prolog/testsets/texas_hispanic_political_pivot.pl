@@ -74,7 +74,7 @@ narrative_ontology:constraint_metric(tx_hispanic_pivot, theater_ratio, 0.15).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(tx_hispanic_pivot, tangled_rope).
+narrative_ontology:constraint_claim(tx_hispanic_pivot, snare).
 narrative_ontology:human_readable(tx_hispanic_pivot, "The Texas Hispanic Voting Block Volatility (2024-2026)").
 narrative_ontology:topic_domain(tx_hispanic_pivot, "political").
 

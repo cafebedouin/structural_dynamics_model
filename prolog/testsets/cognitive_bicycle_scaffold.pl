@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(cognitive_bicycle_scaffold, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(cognitive_bicycle_scaffold, rope).
+narrative_ontology:constraint_claim(cognitive_bicycle_scaffold, tangled_rope).
 narrative_ontology:human_readable(cognitive_bicycle_scaffold, "The Bicycle of the Mind").
 narrative_ontology:topic_domain(cognitive_bicycle_scaffold, "technological/cognitive").
 

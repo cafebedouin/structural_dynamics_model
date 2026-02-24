@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(ancestral_pueblo_hydrology, suppression_req
 narrative_ontology:constraint_metric(ancestral_pueblo_hydrology, theater_ratio, 0.15).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(ancestral_pueblo_hydrology, tangled_rope).
+narrative_ontology:constraint_claim(ancestral_pueblo_hydrology, snare).
 narrative_ontology:human_readable(ancestral_pueblo_hydrology, "Ancestral Puebloan Hydrological Debt").
 narrative_ontology:topic_domain(ancestral_pueblo_hydrology, "environmental/social").
 

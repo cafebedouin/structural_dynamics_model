@@ -58,7 +58,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ai_cognitive_diversity_arbitrage, 0, 10).
-narrative_ontology:constraint_claim(ai_cognitive_diversity_arbitrage, snare).
+narrative_ontology:constraint_claim(ai_cognitive_diversity_arbitrage, tangled_rope).
 narrative_ontology:human_readable(ai_cognitive_diversity_arbitrage, "AI Cognitive Diversity Arbitrage").
 narrative_ontology:topic_domain(ai_cognitive_diversity_arbitrage, "technological/economic").
 

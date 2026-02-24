@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(dark_patterns_manipulation, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Claims to be a constructed feature for optimization or better user flow.
-narrative_ontology:constraint_claim(dark_patterns_manipulation, tangled_rope).
+narrative_ontology:constraint_claim(dark_patterns_manipulation, snare).
 narrative_ontology:human_readable(dark_patterns_manipulation, "Dark Patterns (Interface Coercion)").
 narrative_ontology:topic_domain(dark_patterns_manipulation, "technological/economic").
 

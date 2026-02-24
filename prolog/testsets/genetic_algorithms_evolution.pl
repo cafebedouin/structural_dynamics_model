@@ -100,7 +100,7 @@ narrative_ontology:constraint_metric(genetic_algorithms_evolution, accessibility
 narrative_ontology:constraint_metric(genetic_algorithms_evolution, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(genetic_algorithms_evolution, mountain).
+narrative_ontology:constraint_claim(genetic_algorithms_evolution, scaffold).
 narrative_ontology:human_readable(genetic_algorithms_evolution, "Genetic Algorithms (Search by Selection)").
 narrative_ontology:topic_domain(genetic_algorithms_evolution, "technological/computational").
 

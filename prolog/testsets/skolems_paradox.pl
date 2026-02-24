@@ -99,7 +99,7 @@ narrative_ontology:constraint_metric(skolems_paradox, accessibility_collapse, 0.
 narrative_ontology:constraint_metric(skolems_paradox, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(skolems_paradox, mountain).
+narrative_ontology:constraint_claim(skolems_paradox, scaffold).
 narrative_ontology:human_readable(skolems_paradox, "Skolem's Paradox (The Relativity of Cardinality)").
 narrative_ontology:topic_domain(skolems_paradox, "technological/logic").
 

@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(jp_nativist_politics, suppression_requireme
 narrative_ontology:constraint_metric(jp_nativist_politics, theater_ratio, 0.30).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(jp_nativist_politics, tangled_rope).
+narrative_ontology:constraint_claim(jp_nativist_politics, snare).
 narrative_ontology:human_readable(jp_nativist_politics, "Nativist Online Rhetoric as a Pathway to Political Power in Japan").
 narrative_ontology:topic_domain(jp_nativist_politics, "political").
 

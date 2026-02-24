@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(misunderstanding_as_mismatch, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The group claims this pressure is for beneficial coordination and cohesion.
-narrative_ontology:constraint_claim(misunderstanding_as_mismatch, tangled_rope).
+narrative_ontology:constraint_claim(misunderstanding_as_mismatch, snare).
 narrative_ontology:human_readable(misunderstanding_as_mismatch, "Social Pressure for Worldview Assimilation").
 narrative_ontology:topic_domain(misunderstanding_as_mismatch, "social/psychological").
 

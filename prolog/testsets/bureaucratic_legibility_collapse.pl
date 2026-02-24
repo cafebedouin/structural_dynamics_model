@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(bureaucratic_legibility_collapse, suppressi
 narrative_ontology:constraint_metric(bureaucratic_legibility_collapse, theater_ratio, 0.92).
 
 % Constraint self-claim: The institution claims this is a necessary coordination tool.
-narrative_ontology:constraint_claim(bureaucratic_legibility_collapse, tangled_rope).
+narrative_ontology:constraint_claim(bureaucratic_legibility_collapse, snare).
 narrative_ontology:human_readable(bureaucratic_legibility_collapse, "The Administrative Whiteout").
 narrative_ontology:topic_domain(bureaucratic_legibility_collapse, "political/organizational/informational").
 

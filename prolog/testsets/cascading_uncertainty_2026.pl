@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(cascading_uncertainty_2026, suppression_req
 narrative_ontology:constraint_metric(cascading_uncertainty_2026, theater_ratio, 0.80).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(cascading_uncertainty_2026, tangled_rope).
+narrative_ontology:constraint_claim(cascading_uncertainty_2026, snare).
 narrative_ontology:human_readable(cascading_uncertainty_2026, "The Sovereignty Gap (Cascading Uncertainty)").
 narrative_ontology:topic_domain(cascading_uncertainty_2026, "political/social/geopolitical").
 

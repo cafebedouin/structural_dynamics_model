@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(us_sanctions_icc_israel_case, theater_ratio
 % --- NL Profile Metrics are not applicable for this constraint type ---
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_sanctions_icc_israel_case, tangled_rope).
+narrative_ontology:constraint_claim(us_sanctions_icc_israel_case, snare).
 narrative_ontology:human_readable(us_sanctions_icc_israel_case, "US Sanctions Threat Against ICC Officials Investigating Israel").
 narrative_ontology:topic_domain(us_sanctions_icc_israel_case, "political").
 

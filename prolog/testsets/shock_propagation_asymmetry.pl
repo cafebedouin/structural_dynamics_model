@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(shock_propagation_asymmetry, theater_ratio,
 % --- Constraint claim (must match analytical perspective type) ---
 % It claims to be a coordination mechanism, but its structural reality is a
 % hybrid of coordination and extraction.
-narrative_ontology:constraint_claim(shock_propagation_asymmetry, tangled_rope).
+narrative_ontology:constraint_claim(shock_propagation_asymmetry, snare).
 narrative_ontology:human_readable(shock_propagation_asymmetry, "The One-Way Crisis Valve").
 narrative_ontology:topic_domain(shock_propagation_asymmetry, "economic/logistical").
 

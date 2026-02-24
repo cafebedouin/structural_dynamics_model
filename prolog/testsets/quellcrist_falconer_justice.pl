@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(quellcrist_falconer_justice, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(quellcrist_falconer_justice, tangled_rope).
+narrative_ontology:constraint_claim(quellcrist_falconer_justice, snare).
 narrative_ontology:human_readable(quellcrist_falconer_justice, "The Machinery of Justice (Quellist)").
 narrative_ontology:topic_domain(quellcrist_falconer_justice, "political").
 

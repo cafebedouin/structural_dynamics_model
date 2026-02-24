@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(semantic_attack_surface, theater_ratio, 0.9
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination layer for information, but functions as an enforcement mechanism.
-narrative_ontology:constraint_claim(semantic_attack_surface, tangled_rope).
+narrative_ontology:constraint_claim(semantic_attack_surface, snare).
 narrative_ontology:human_readable(semantic_attack_surface, "The Meaning Manipulation Horizon").
 narrative_ontology:topic_domain(semantic_attack_surface, "technological/informational/cognitive").
 

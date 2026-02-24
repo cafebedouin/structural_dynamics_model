@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(ritual_transition_scaffold, suppression_req
 narrative_ontology:constraint_metric(ritual_transition_scaffold, theater_ratio, 0.72).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(ritual_transition_scaffold, tangled_rope).
+narrative_ontology:constraint_claim(ritual_transition_scaffold, piton).
 narrative_ontology:human_readable(ritual_transition_scaffold, "The Habit-Building Scaffold").
 narrative_ontology:topic_domain(ritual_transition_scaffold, "social/institutional").
 

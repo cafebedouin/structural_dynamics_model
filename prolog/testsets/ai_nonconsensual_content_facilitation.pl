@@ -82,7 +82,7 @@ narrative_ontology:constraint_metric(ai_nonconsensual_content_facilitation, supp
 narrative_ontology:constraint_metric(ai_nonconsensual_content_facilitation, theater_ratio, 0.40).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ai_nonconsensual_content_facilitation, tangled_rope).
+narrative_ontology:constraint_claim(ai_nonconsensual_content_facilitation, snare).
 narrative_ontology:human_readable(ai_nonconsensual_content_facilitation, "Facilitation of AI-Generated Non-Consensual Sexual Content on Social Media Platforms").
 narrative_ontology:topic_domain(ai_nonconsensual_content_facilitation, "technological").
 

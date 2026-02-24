@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(regional_military_deterrence_mideast, theat
 % N/A for this constraint type.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(regional_military_deterrence_mideast, tangled_rope).
+narrative_ontology:constraint_claim(regional_military_deterrence_mideast, snare).
 narrative_ontology:human_readable(regional_military_deterrence_mideast, "US/Israeli Military Deterrence Posture against Iran").
 narrative_ontology:topic_domain(regional_military_deterrence_mideast, "geopolitical").
 

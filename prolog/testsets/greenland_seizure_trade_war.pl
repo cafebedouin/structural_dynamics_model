@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(greenland_seizure_trade_war, suppression_re
 narrative_ontology:constraint_metric(greenland_seizure_trade_war, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(greenland_seizure_trade_war, tangled_rope).
+narrative_ontology:constraint_claim(greenland_seizure_trade_war, snare).
 narrative_ontology:human_readable(greenland_seizure_trade_war, "The Greenland Seizure Threat and Transatlantic Strife").
 narrative_ontology:topic_domain(greenland_seizure_trade_war, "geopolitical/economic").
 

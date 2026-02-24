@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(boundary_dissolution_risk, suppression_requ
 narrative_ontology:constraint_metric(boundary_dissolution_risk, theater_ratio, 0.89).
 
 % The platform claims its system is for coordination.
-narrative_ontology:constraint_claim(boundary_dissolution_risk, tangled_rope).
+narrative_ontology:constraint_claim(boundary_dissolution_risk, snare).
 narrative_ontology:human_readable(boundary_dissolution_risk, "The Infinite Porosity Trap").
 narrative_ontology:topic_domain(boundary_dissolution_risk, "technological/labor").
 

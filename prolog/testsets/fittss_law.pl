@@ -96,7 +96,7 @@ narrative_ontology:constraint_metric(fitts_law_industrial_application, suppressi
 narrative_ontology:constraint_metric(fitts_law_industrial_application, theater_ratio, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(fitts_law_industrial_application, tangled_rope).
+narrative_ontology:constraint_claim(fitts_law_industrial_application, snare).
 narrative_ontology:human_readable(fitts_law_industrial_application, "Fitts’s Law (Industrial Application)").
 narrative_ontology:topic_domain(fitts_law_industrial_application, "technological/economic").
 

@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(naming_as_control, theater_ratio, 0.55).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The authority claims this is a necessary tool for social order.
-narrative_ontology:constraint_claim(naming_as_control, tangled_rope).
+narrative_ontology:constraint_claim(naming_as_control, snare).
 narrative_ontology:human_readable(naming_as_control, "The Ontological Hegemony").
 narrative_ontology:topic_domain(naming_as_control, "social/political/linguistic").
 

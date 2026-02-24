@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(technocratic_overreach, suppression_require
 narrative_ontology:constraint_metric(technocratic_overreach, theater_ratio, 0.35).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(technocratic_overreach, tangled_rope).
+narrative_ontology:constraint_claim(technocratic_overreach, snare).
 narrative_ontology:human_readable(technocratic_overreach, "The Rule of the Expert").
 narrative_ontology:topic_domain(technocratic_overreach, "political/technological").
 

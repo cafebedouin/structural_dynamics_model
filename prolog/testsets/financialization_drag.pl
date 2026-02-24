@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(financial_drag, suppression_requirement, 0.
 narrative_ontology:constraint_metric(financial_drag, theater_ratio, 0.78).
 
 % Constraint self-claim: It presents itself as a pure coordination mechanism.
-narrative_ontology:constraint_claim(financial_drag, tangled_rope).
+narrative_ontology:constraint_claim(financial_drag, snare).
 narrative_ontology:human_readable(financial_drag, "The Financialization Gravity Well").
 narrative_ontology:topic_domain(financial_drag, "economic/technological").
 

@@ -55,7 +55,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(planetary_diet_constraint_2026, 0, 10).
-narrative_ontology:constraint_claim(planetary_diet_constraint_2026, tangled_rope).
+narrative_ontology:constraint_claim(planetary_diet_constraint_2026, rope).
 narrative_ontology:human_readable(planetary_diet_constraint_2026, "Planetary Boundary Dietary Alignment").
 narrative_ontology:topic_domain(planetary_diet_constraint_2026, "ecological/economic/social").
 

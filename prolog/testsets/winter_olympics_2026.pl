@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(milano_cortina_2026, suppression_requiremen
 narrative_ontology:constraint_metric(milano_cortina_2026, theater_ratio, 0.98).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(milano_cortina_2026, piton).
+narrative_ontology:constraint_claim(milano_cortina_2026, rope).
 narrative_ontology:human_readable(milano_cortina_2026, "Milano Cortina 2026 Winter Olympics").
 narrative_ontology:topic_domain(milano_cortina_2026, "social/political/technological").
 

@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(incentive_surface_warping, theater_ratio, 0
 
 % --- Constraint claim (must match analytical perspective type) ---
 % The system's true nature is a hybrid of coordination and extraction.
-narrative_ontology:constraint_claim(incentive_surface_warping, tangled_rope).
+narrative_ontology:constraint_claim(incentive_surface_warping, snare).
 narrative_ontology:human_readable(incentive_surface_warping, "The Perverse Optimization Trap (Goodhart's Law)").
 narrative_ontology:topic_domain(incentive_surface_warping, "economic/organizational/technological").
 

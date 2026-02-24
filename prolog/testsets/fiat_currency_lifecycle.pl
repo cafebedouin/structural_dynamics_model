@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(fiat_currency_lifecycle, suppression_requir
 narrative_ontology:constraint_metric(fiat_currency_lifecycle, theater_ratio, 0.75).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(fiat_currency_lifecycle, tangled_rope).
+narrative_ontology:constraint_claim(fiat_currency_lifecycle, snare).
 narrative_ontology:human_readable(fiat_currency_lifecycle, "The Lifecycle of a Fiat Currency").
 narrative_ontology:topic_domain(fiat_currency_lifecycle, "economic/political").
 

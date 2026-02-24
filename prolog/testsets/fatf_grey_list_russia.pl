@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(fatf_grey_list_russia, suppression_requirem
 narrative_ontology:constraint_metric(fatf_grey_list_russia, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(fatf_grey_list_russia, tangled_rope).
+narrative_ontology:constraint_claim(fatf_grey_list_russia, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(fatf_grey_list_russia). % Required for Tangled Rope

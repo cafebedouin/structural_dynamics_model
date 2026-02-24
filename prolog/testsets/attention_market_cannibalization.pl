@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(attention_market_cannibalization, theater_r
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(attention_market_cannibalization, tangled_rope).
+narrative_ontology:constraint_claim(attention_market_cannibalization, snare).
 narrative_ontology:human_readable(attention_market_cannibalization, "The Cognitive Exhaustion Loop").
 narrative_ontology:topic_domain(attention_market_cannibalization, "economic/psychological/technological").
 

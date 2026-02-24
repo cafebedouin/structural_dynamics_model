@@ -77,7 +77,7 @@ narrative_ontology:constraint_metric(iran_mandatrophic_collapse, theater_ratio, 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 % The regime frames its actions as necessary enforcement for national survival.
-narrative_ontology:constraint_claim(iran_mandatrophic_collapse, tangled_rope).
+narrative_ontology:constraint_claim(iran_mandatrophic_collapse, snare).
 narrative_ontology:human_readable(iran_mandatrophic_collapse, "Iranian Mandatrophy (The Water-Economic Choke)").
 narrative_ontology:topic_domain(iran_mandatrophic_collapse, "political/economic/technological").
 

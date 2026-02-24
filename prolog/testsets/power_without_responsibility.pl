@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(power_without_responsibility, suppression_r
 narrative_ontology:constraint_metric(power_without_responsibility, theater_ratio, 0.94).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(power_without_responsibility, tangled_rope).
+narrative_ontology:constraint_claim(power_without_responsibility, snare).
 narrative_ontology:human_readable(power_without_responsibility, "The Asymmetric Mandate").
 narrative_ontology:topic_domain(power_without_responsibility, "political/organizational/legal").
 

@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(dionysiac_frenzy, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(dionysiac_frenzy, tangled_rope).
+narrative_ontology:constraint_claim(dionysiac_frenzy, snare).
 narrative_ontology:human_readable(dionysiac_frenzy, "Dionysiac Religious Possession").
 narrative_ontology:topic_domain(dionysiac_frenzy, "religious/social").
 

@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(grievance_stack_overflow, suppression_requi
 narrative_ontology:constraint_metric(grievance_stack_overflow, theater_ratio, 0.91).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(grievance_stack_overflow, tangled_rope).
+narrative_ontology:constraint_claim(grievance_stack_overflow, snare).
 narrative_ontology:human_readable(grievance_stack_overflow, "The Bureaucratic Saturation Point").
 narrative_ontology:topic_domain(grievance_stack_overflow, "social/political/organizational").
 

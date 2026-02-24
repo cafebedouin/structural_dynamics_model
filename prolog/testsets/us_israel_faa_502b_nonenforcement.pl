@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(us_israel_faa_502b_nonenforcement, suppress
 narrative_ontology:constraint_metric(us_israel_faa_502b_nonenforcement, theater_ratio, 0.60).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_israel_faa_502b_nonenforcement, tangled_rope).
+narrative_ontology:constraint_claim(us_israel_faa_502b_nonenforcement, snare).
 narrative_ontology:human_readable(us_israel_faa_502b_nonenforcement, "Non-enforcement of US Foreign Assistance Act Section 502B for Israel").
 narrative_ontology:topic_domain(us_israel_faa_502b_nonenforcement, "geopolitical").
 

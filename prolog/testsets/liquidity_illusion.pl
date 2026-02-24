@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(liquidity_illusion, suppression_requirement
 narrative_ontology:constraint_metric(liquidity_illusion, theater_ratio, 0.92).
 
 % The constraint claims to be a coordination mechanism for efficient markets.
-narrative_ontology:constraint_claim(liquidity_illusion, tangled_rope).
+narrative_ontology:constraint_claim(liquidity_illusion, snare).
 narrative_ontology:human_readable(liquidity_illusion, "The Exit Door Mirage").
 narrative_ontology:topic_domain(liquidity_illusion, "economic/technological").
 

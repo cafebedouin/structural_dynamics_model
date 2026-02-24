@@ -102,7 +102,7 @@ narrative_ontology:constraint_metric(solar_system_weirdness, accessibility_colla
 narrative_ontology:constraint_metric(solar_system_weirdness, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(solar_system_weirdness, rope).
+narrative_ontology:constraint_claim(solar_system_weirdness, tangled_rope).
 narrative_ontology:human_readable(solar_system_weirdness, "The Solar System Configuration Anomaly").
 narrative_ontology:topic_domain(solar_system_weirdness, "technological/scientific").
 

@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(erasmus_rejoining_scaffold, suppression_req
 narrative_ontology:constraint_metric(erasmus_rejoining_scaffold, theater_ratio, 0.25).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(erasmus_rejoining_scaffold, scaffold).
+narrative_ontology:constraint_claim(erasmus_rejoining_scaffold, tangled_rope).
 narrative_ontology:human_readable(erasmus_rejoining_scaffold, "UK's potential re-entry into the EU Erasmus+ student exchange program").
 narrative_ontology:topic_domain(erasmus_rejoining_scaffold, "political").
 

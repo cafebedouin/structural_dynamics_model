@@ -96,7 +96,7 @@ narrative_ontology:constraint_metric(spv_variations_us_cold, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 % The claim is 'rope', reflecting that the primary human-interaction layer is the
 % coordination model built on top of the physical law.
-narrative_ontology:constraint_claim(spv_variations_us_cold, rope).
+narrative_ontology:constraint_claim(spv_variations_us_cold, mountain).
 
 % --- Emergence flag (required for mountain constraints) ---
 % The stratospheric polar vortex is a natural atmospheric phenomenon

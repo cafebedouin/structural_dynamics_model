@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(price_signal_corruption, theater_ratio, 0.8
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The beneficiaries claim it is a necessary tool for stability.
-narrative_ontology:constraint_claim(price_signal_corruption, tangled_rope).
+narrative_ontology:constraint_claim(price_signal_corruption, snare).
 narrative_ontology:human_readable(price_signal_corruption, "The Hall of Economic Mirrors").
 narrative_ontology:topic_domain(price_signal_corruption, "economic/technological").
 

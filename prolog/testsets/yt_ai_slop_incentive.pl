@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(yt_ai_slop_incentive, theater_ratio, 0.20).
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(yt_ai_slop_incentive, tangled_rope).
+narrative_ontology:constraint_claim(yt_ai_slop_incentive, snare).
 narrative_ontology:human_readable(yt_ai_slop_incentive, "YouTube Algorithmic Incentivization of AI-Generated 'Slop' Content").
 narrative_ontology:topic_domain(yt_ai_slop_incentive, "technological/economic").
 

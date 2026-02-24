@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(tail_risk_compression, theater_ratio, 0.65)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination mechanism for market stability.
-narrative_ontology:constraint_claim(tail_risk_compression, tangled_rope).
+narrative_ontology:constraint_claim(tail_risk_compression, snare).
 narrative_ontology:human_readable(tail_risk_compression, "The Volatility Suppression Trap").
 narrative_ontology:topic_domain(tail_risk_compression, "economic/technological").
 

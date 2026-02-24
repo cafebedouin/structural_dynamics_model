@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(evolutionary_mismatch_load, theater_ratio, 
 
 % Constraint self-claim: The platforms exploiting the mismatch claim to be
 % providing a coordination service (connecting people, curating content).
-narrative_ontology:constraint_claim(evolutionary_mismatch_load, tangled_rope).
+narrative_ontology:constraint_claim(evolutionary_mismatch_load, snare).
 narrative_ontology:human_readable(evolutionary_mismatch_load, "The Paleolithic Circuit Break").
 narrative_ontology:topic_domain(evolutionary_mismatch_load, "biological/technological/social").
 

@@ -63,7 +63,7 @@
 
 % ID Binding - Mandatory for 2026 DR-Audit Suite
 narrative_ontology:interval(adverse_possession, 0, 10).
-narrative_ontology:constraint_claim(adverse_possession, snare).
+narrative_ontology:constraint_claim(adverse_possession, tangled_rope).
 narrative_ontology:human_readable(adverse_possession, "Adverse Possession (Squatter's Rights)").
 narrative_ontology:topic_domain(adverse_possession, "economic/political/social").
 

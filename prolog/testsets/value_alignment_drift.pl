@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(value_alignment_drift, suppression_requirem
 narrative_ontology:constraint_metric(value_alignment_drift, theater_ratio, 0.55).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(value_alignment_drift, tangled_rope).
+narrative_ontology:constraint_claim(value_alignment_drift, snare).
 narrative_ontology:human_readable(value_alignment_drift, "The Purpose Creep").
 narrative_ontology:topic_domain(value_alignment_drift, "technological/social").
 

@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(scam_doubt_manufacturing, theater_ratio, 0.
 % Not a mountain constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(scam_doubt_manufacturing, tangled_rope).
+narrative_ontology:constraint_claim(scam_doubt_manufacturing, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(scam_doubt_manufacturing). % Required for Tangled Rope

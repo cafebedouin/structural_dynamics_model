@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(us_venezuela_plausible_deniability_2025, su
 narrative_ontology:constraint_metric(us_venezuela_plausible_deniability_2025, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_venezuela_plausible_deniability_2025, tangled_rope).
+narrative_ontology:constraint_claim(us_venezuela_plausible_deniability_2025, snare).
 narrative_ontology:human_readable(us_venezuela_plausible_deniability_2025, "Plausible Deniability of US Covert Action in Venezuela").
 narrative_ontology:topic_domain(us_venezuela_plausible_deniability_2025, "geopolitical").
 

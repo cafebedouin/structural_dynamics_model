@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(fiscal_equalization_friction, suppression_r
 narrative_ontology:constraint_metric(fiscal_equalization_friction, theater_ratio, 0.45).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(fiscal_equalization_friction, rope).
+narrative_ontology:constraint_claim(fiscal_equalization_friction, tangled_rope).
 narrative_ontology:human_readable(fiscal_equalization_friction, "The Equalization Conflict (Net Transfer Friction)").
 narrative_ontology:topic_domain(fiscal_equalization_friction, "economic/political").
 

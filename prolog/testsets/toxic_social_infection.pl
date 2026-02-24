@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(toxic_social_infection, theater_ratio, 0.10
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(toxic_social_infection, tangled_rope).
+narrative_ontology:constraint_claim(toxic_social_infection, snare).
 narrative_ontology:human_readable(toxic_social_infection, "The Infecting Character (Psychic Vampire)").
 narrative_ontology:topic_domain(toxic_social_infection, "social/psychological").
 

@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(ua_wartime_mobilization, theater_ratio, 0.1
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ua_wartime_mobilization, tangled_rope).
+narrative_ontology:constraint_claim(ua_wartime_mobilization, snare).
 narrative_ontology:human_readable(ua_wartime_mobilization, "Wartime Mobilization Law in Ukraine").
 narrative_ontology:topic_domain(ua_wartime_mobilization, "political/military").
 

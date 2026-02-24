@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(interface_contract_breakdown, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The platform claims the API is for coordination, masking the extraction.
-narrative_ontology:constraint_claim(interface_contract_breakdown, tangled_rope).
+narrative_ontology:constraint_claim(interface_contract_breakdown, snare).
 narrative_ontology:human_readable(interface_contract_breakdown, "The Protocol Dissolution").
 narrative_ontology:topic_domain(interface_contract_breakdown, "technological").
 

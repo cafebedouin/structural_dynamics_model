@@ -48,8 +48,8 @@ DATA_PATH = OUTPUT_DIR / "scaffold_piton_gate_audit_data.json"
 # Priority order: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton
 # ---------------------------------------------------------------------------
 
-SCAFFOLD_EXTRACTION_CEIL = 0.30          # config.pl: scaffold_extraction_ceil
-PITON_EXTRACTION_CEILING = 0.25          # config.pl: piton_extraction_ceiling
+SCAFFOLD_EXTRACTION_CEIL = 0.45  # Must match config.pl param: scaffold_extraction_ceil -- updated 2026-02-24
+PITON_EXTRACTION_CEILING = 0.45  # Must match config.pl param: piton_extraction_ceiling -- updated 2026-02-24
 PITON_EPSILON_FLOOR = 0.10              # config.pl: piton_epsilon_floor
 PITON_THEATER_FLOOR = 0.70             # config.pl: piton_theater_floor
 SNARE_CHI_FLOOR = 0.66                 # config.pl: snare_chi_floor

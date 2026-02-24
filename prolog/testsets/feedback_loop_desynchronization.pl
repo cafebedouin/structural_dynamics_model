@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(feedback_loop_desynchronization, suppressio
 narrative_ontology:constraint_metric(feedback_loop_desynchronization, theater_ratio, 0.40).
 
 % Constraint self-claim: It presents itself as a necessary buffer for market stability.
-narrative_ontology:constraint_claim(feedback_loop_desynchronization, tangled_rope).
+narrative_ontology:constraint_claim(feedback_loop_desynchronization, snare).
 narrative_ontology:human_readable(feedback_loop_desynchronization, "Decoupled Ecological-Economic Signaling").
 narrative_ontology:topic_domain(feedback_loop_desynchronization, "economic/technological").
 

@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(cultural_refragmentation_2026, suppression_
 narrative_ontology:constraint_metric(cultural_refragmentation_2026, theater_ratio, 0.78).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(cultural_refragmentation_2026, piton).
+narrative_ontology:constraint_claim(cultural_refragmentation_2026, snare).
 narrative_ontology:human_readable(cultural_refragmentation_2026, "The Re-Fragmentation Snare (Interesting Times)").
 narrative_ontology:topic_domain(cultural_refragmentation_2026, "social/political").
 

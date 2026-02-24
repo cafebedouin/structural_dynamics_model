@@ -68,7 +68,7 @@
 narrative_ontology:interval(private_identity_integration, 0, 10).
 
 % Updated to valid v3.1 ontology pillar: [rope]
-narrative_ontology:constraint_claim(private_identity_integration, rope).
+narrative_ontology:constraint_claim(private_identity_integration, tangled_rope).
 narrative_ontology:human_readable(private_identity_integration, "The Closed-Door Identity Protocol").
 narrative_ontology:topic_domain(private_identity_integration, "social/psychological").
 

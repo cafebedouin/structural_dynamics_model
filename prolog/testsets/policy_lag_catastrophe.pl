@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(policy_lag_catastrophe, suppression_require
 narrative_ontology:constraint_metric(policy_lag_catastrophe, theater_ratio, 0.82).
 
 % The constraint claims to be a necessary coordination mechanism for social stability.
-narrative_ontology:constraint_claim(policy_lag_catastrophe, piton).
+narrative_ontology:constraint_claim(policy_lag_catastrophe, snare).
 narrative_ontology:human_readable(policy_lag_catastrophe, "The Inertial Collision").
 narrative_ontology:topic_domain(policy_lag_catastrophe, "political/environmental/technological").
 

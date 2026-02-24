@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(floating_wall_2026, suppression_requirement
 narrative_ontology:constraint_metric(floating_wall_2026, theater_ratio, 0.30).
 
 % Constraint self-claim (analytical classification)
-narrative_ontology:constraint_claim(floating_wall_2026, tangled_rope).
+narrative_ontology:constraint_claim(floating_wall_2026, snare).
 narrative_ontology:human_readable(floating_wall_2026, "The East China Sea Maritime Militia Barrier").
 narrative_ontology:topic_domain(floating_wall_2026, "geopolitical/maritime").
 

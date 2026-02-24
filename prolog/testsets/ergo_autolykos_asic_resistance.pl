@@ -60,7 +60,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ergo_autolykos_asic_resistance, 0, 10).
-narrative_ontology:constraint_claim(ergo_autolykos_asic_resistance, snare).
+narrative_ontology:constraint_claim(ergo_autolykos_asic_resistance, tangled_rope).
 narrative_ontology:human_readable(ergo_autolykos_asic_resistance, "Autolykos PoW Algorithm (ASIC Resistance)").
 narrative_ontology:topic_domain(ergo_autolykos_asic_resistance, "technological/economic").
 

@@ -80,7 +80,7 @@ narrative_ontology:constraint_metric(sunk_cost_fallacy, theater_ratio, 0.1).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The fallacy presents itself as a trap of prior commitment.
-narrative_ontology:constraint_claim(sunk_cost_fallacy, snare).
+narrative_ontology:constraint_claim(sunk_cost_fallacy, tangled_rope).
 narrative_ontology:human_readable(sunk_cost_fallacy, "The Sunk Cost Fallacy").
 narrative_ontology:topic_domain(sunk_cost_fallacy, "economic/social/cognitive").
 

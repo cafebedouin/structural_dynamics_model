@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(poetic_verse_and_past, theater_ratio, 0.15)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The institution claims its rules are for coordination towards a successful future.
-narrative_ontology:constraint_claim(poetic_verse_and_past, tangled_rope).
+narrative_ontology:constraint_claim(poetic_verse_and_past, snare).
 narrative_ontology:human_readable(poetic_verse_and_past, "The Inescapable Tale of Institutional Expectation").
 narrative_ontology:topic_domain(poetic_verse_and_past, "social/cultural").
 

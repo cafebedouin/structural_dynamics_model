@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(isa_education_scaffold, suppression_require
 narrative_ontology:constraint_metric(isa_education_scaffold, theater_ratio, 0.20).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(isa_education_scaffold, scaffold).
+narrative_ontology:constraint_claim(isa_education_scaffold, tangled_rope).
 narrative_ontology:human_readable(isa_education_scaffold, "Income Share Agreement (ISA) Funding for Education").
 narrative_ontology:topic_domain(isa_education_scaffold, "economic/educational").
 

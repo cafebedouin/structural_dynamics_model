@@ -64,7 +64,7 @@ narrative_ontology:constraint_metric(china_critical_mineral_chokepoint, suppress
 narrative_ontology:constraint_metric(china_critical_mineral_chokepoint, theater_ratio, 0.10).
 
 % Constraint self-claim: It is framed as a tool of national industrial strategy and enforcement of trade rules.
-narrative_ontology:constraint_claim(china_critical_mineral_chokepoint, tangled_rope).
+narrative_ontology:constraint_claim(china_critical_mineral_chokepoint, snare).
 narrative_ontology:human_readable(china_critical_mineral_chokepoint, "China's Strategic Chokepoint in Critical Mineral Processing").
 narrative_ontology:topic_domain(china_critical_mineral_chokepoint, "economic/political/technological").
 

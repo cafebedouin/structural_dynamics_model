@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(expert_disempowerment, suppression_requirem
 narrative_ontology:constraint_metric(expert_disempowerment, theater_ratio, 0.82).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(expert_disempowerment, tangled_rope).
+narrative_ontology:constraint_claim(expert_disempowerment, snare).
 narrative_ontology:human_readable(expert_disempowerment, "Algorithmic Oversight Erosion").
 narrative_ontology:topic_domain(expert_disempowerment, "technological/social").
 

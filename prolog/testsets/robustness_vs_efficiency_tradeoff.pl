@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(robustness_vs_efficiency_tradeoff, theater_
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a pure coordination mechanism for efficiency.
-narrative_ontology:constraint_claim(robustness_vs_efficiency_tradeoff, tangled_rope).
+narrative_ontology:constraint_claim(robustness_vs_efficiency_tradeoff, snare).
 narrative_ontology:human_readable(robustness_vs_efficiency_tradeoff, "The Lean Systems Fragility").
 narrative_ontology:topic_domain(robustness_vs_efficiency_tradeoff, "technological/economic").
 

@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(ai_banal_capture, theater_ratio, 0.58).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % AI is marketed as a coordination/productivity tool.
-narrative_ontology:constraint_claim(ai_banal_capture, tangled_rope).
+narrative_ontology:constraint_claim(ai_banal_capture, snare).
 narrative_ontology:human_readable(ai_banal_capture, "The Banal Cognitive Engine").
 narrative_ontology:topic_domain(ai_banal_capture, "technological/social").
 

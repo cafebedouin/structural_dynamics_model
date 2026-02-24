@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(gale_shapley, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Proponents frame it as a pure, fair coordination mechanism to prevent chaos.
-narrative_ontology:constraint_claim(gale_shapley, tangled_rope).
+narrative_ontology:constraint_claim(gale_shapley, snare).
 narrative_ontology:human_readable(gale_shapley, "Gale-Shapley Stable Matching Algorithm (as applied in markets)").
 narrative_ontology:topic_domain(gale_shapley, "economic/technological").
 

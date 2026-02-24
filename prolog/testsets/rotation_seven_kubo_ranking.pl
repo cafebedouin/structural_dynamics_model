@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(rotation_seven_kubo_ranking, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It presents itself as an immutable law of their world to suppress dissent.
-narrative_ontology:constraint_claim(rotation_seven_kubo_ranking, tangled_rope).
+narrative_ontology:constraint_claim(rotation_seven_kubo_ranking, snare).
 narrative_ontology:human_readable(rotation_seven_kubo_ranking, "R7 Kubo Credit and Ranking System").
 narrative_ontology:topic_domain(rotation_seven_kubo_ranking, "economic/social").
 

@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric(fptp_electoral_system, suppression_requirem
 narrative_ontology:constraint_metric(fptp_electoral_system, theater_ratio, 0.30).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(fptp_electoral_system, tangled_rope).
+narrative_ontology:constraint_claim(fptp_electoral_system, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(fptp_electoral_system). % Required for Tangled Rope. The system is codified in law and actively maintained.

@@ -84,7 +84,7 @@ narrative_ontology:constraint_metric(social_credit_architecture, theater_ratio, 
 % --- Constraint claim (must match analytical perspective type) ---
 % The system is analytically a Tangled Rope, possessing both a genuine
 % coordination function and severe asymmetric extraction.
-narrative_ontology:constraint_claim(social_credit_architecture, tangled_rope).
+narrative_ontology:constraint_claim(social_credit_architecture, snare).
 narrative_ontology:human_readable(social_credit_architecture, "Social Credit Architecture").
 narrative_ontology:topic_domain(social_credit_architecture, "social/political/technological").
 

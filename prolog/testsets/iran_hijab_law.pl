@@ -84,7 +84,7 @@ narrative_ontology:constraint_metric(iran_hijab_law, suppression_requirement, 0.
 narrative_ontology:constraint_metric(iran_hijab_law, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(iran_hijab_law, tangled_rope).
+narrative_ontology:constraint_claim(iran_hijab_law, snare).
 narrative_ontology:human_readable(iran_hijab_law, "Mandatory Hijab Law in Iran").
 narrative_ontology:topic_domain(iran_hijab_law, "political/social/religious").
 

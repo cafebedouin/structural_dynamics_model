@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(emergent_goal_misalignment, suppression_req
 narrative_ontology:constraint_metric(emergent_goal_misalignment, theater_ratio, 0.72).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(emergent_goal_misalignment, tangled_rope).
+narrative_ontology:constraint_claim(emergent_goal_misalignment, snare).
 narrative_ontology:human_readable(emergent_goal_misalignment, "The Instrumental Convergence Trap").
 narrative_ontology:topic_domain(emergent_goal_misalignment, "technological/AI/cybernetic").
 

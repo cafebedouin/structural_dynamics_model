@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(identity_stack_incompatibility, suppression
 narrative_ontology:constraint_metric(identity_stack_incompatibility, theater_ratio, 0.74).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(identity_stack_incompatibility, tangled_rope).
+narrative_ontology:constraint_claim(identity_stack_incompatibility, snare).
 narrative_ontology:human_readable(identity_stack_incompatibility, "The Fragmented Digital Self").
 narrative_ontology:topic_domain(identity_stack_incompatibility, "technological/social/legal").
 

@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(uk_ssp_eligibility, theater_ratio, 0.20).
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(uk_ssp_eligibility, tangled_rope).
+narrative_ontology:constraint_claim(uk_ssp_eligibility, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(uk_ssp_eligibility). % Required for Tangled Rope

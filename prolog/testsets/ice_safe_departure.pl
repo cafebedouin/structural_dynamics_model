@@ -96,7 +96,7 @@ narrative_ontology:constraint_metric(ice_safe_departure, suppression_requirement
 narrative_ontology:constraint_metric(ice_safe_departure, theater_ratio, 0.30).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ice_safe_departure, tangled_rope).
+narrative_ontology:constraint_claim(ice_safe_departure, snare).
 narrative_ontology:human_readable(ice_safe_departure, "ICE Safe Departure Program").
 narrative_ontology:topic_domain(ice_safe_departure, "political").
 

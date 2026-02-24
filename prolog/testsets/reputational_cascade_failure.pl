@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(reputational_cascade_failure, suppression_r
 narrative_ontology:constraint_metric(reputational_cascade_failure, theater_ratio, 0.87).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(reputational_cascade_failure, tangled_rope).
+narrative_ontology:constraint_claim(reputational_cascade_failure, snare).
 narrative_ontology:human_readable(reputational_cascade_failure, "The Social Liquidity Trap").
 narrative_ontology:topic_domain(reputational_cascade_failure, "social/economic/informational").
 

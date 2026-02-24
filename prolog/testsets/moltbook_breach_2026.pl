@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(moltbook_breach_2026, suppression_requireme
 narrative_ontology:constraint_metric(moltbook_breach_2026, theater_ratio, 0.95).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(moltbook_breach_2026, piton).
+narrative_ontology:constraint_claim(moltbook_breach_2026, snare).
 narrative_ontology:human_readable(moltbook_breach_2026, "The Moltbook Database Exposure").
 narrative_ontology:topic_domain(moltbook_breach_2026, "technological/social").
 

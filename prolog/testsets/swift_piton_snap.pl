@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(swift_piton_snap, suppression_requirement, 
 narrative_ontology:constraint_metric(swift_piton_snap, theater_ratio, 0.05).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(swift_piton_snap, scaffold).
+narrative_ontology:constraint_claim(swift_piton_snap, rope).
 narrative_ontology:human_readable(swift_piton_snap, "The Great Decoupling").
 narrative_ontology:topic_domain(swift_piton_snap, "technological/economic").
 

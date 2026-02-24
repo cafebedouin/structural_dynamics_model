@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(vienna_quantum_superposition_2026, suppress
 narrative_ontology:constraint_metric(vienna_quantum_superposition_2026, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(vienna_quantum_superposition_2026, tangled_rope).
+narrative_ontology:constraint_claim(vienna_quantum_superposition_2026, snare).
 narrative_ontology:human_readable(vienna_quantum_superposition_2026, "The Macroscopicity Record (Schrödinger’s Nanoparticles)").
 narrative_ontology:topic_domain(vienna_quantum_superposition_2026, "technological").
 

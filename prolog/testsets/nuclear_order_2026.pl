@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(nuclear_order_2026, theater_ratio, 0.72).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a mechanism of enforcement (deterrence).
-narrative_ontology:constraint_claim(nuclear_order_2026, piton).
+narrative_ontology:constraint_claim(nuclear_order_2026, tangled_rope).
 narrative_ontology:human_readable(nuclear_order_2026, "Post-New START Strategic Ambiguity").
 narrative_ontology:topic_domain(nuclear_order_2026, "geopolitical/technological").
 

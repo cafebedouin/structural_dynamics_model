@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(colorado_sbe_decentralization_friction, the
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The SBE claims its regulations are for coordination (ensuring quality standards).
-narrative_ontology:constraint_claim(colorado_sbe_decentralization_friction, tangled_rope).
+narrative_ontology:constraint_claim(colorado_sbe_decentralization_friction, snare).
 narrative_ontology:human_readable(colorado_sbe_decentralization_friction, "Colorado SBE Institutional Preservation (Educational Decentralization Friction)").
 narrative_ontology:topic_domain(colorado_sbe_decentralization_friction, "political/regulatory").
 

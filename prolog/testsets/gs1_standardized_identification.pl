@@ -61,7 +61,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(gs1_spec_v25, 0, 10).
-narrative_ontology:constraint_claim(gs1_standardized_identification, rope).
+narrative_ontology:constraint_claim(gs1_standardized_identification, tangled_rope).
 narrative_ontology:human_readable(gs1_standardized_identification, "GS1 Global Identification Standard (GTIN/GLN)").
 narrative_ontology:topic_domain(gs1_standardized_identification, "technological/economic").
 

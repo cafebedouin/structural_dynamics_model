@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(coordination_threshold_failure, theater_rat
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The foundation claims it's a coordination mechanism.
-narrative_ontology:constraint_claim(coordination_threshold_failure, tangled_rope).
+narrative_ontology:constraint_claim(coordination_threshold_failure, snare).
 narrative_ontology:human_readable(coordination_threshold_failure, "The Critical Mass Chasm").
 narrative_ontology:topic_domain(coordination_threshold_failure, "social/technological").
 

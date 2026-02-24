@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(deferred_risk_realization, suppression_requ
 narrative_ontology:constraint_metric(deferred_risk_realization, theater_ratio, 0.45).
 
 % Constraint self-claim: The system claims to be a necessary coordination mechanism.
-narrative_ontology:constraint_claim(deferred_risk_realization, tangled_rope).
+narrative_ontology:constraint_claim(deferred_risk_realization, snare).
 narrative_ontology:human_readable(deferred_risk_realization, "The Debt-Entropy Cliff").
 narrative_ontology:topic_domain(deferred_risk_realization, "economic/environmental").
 

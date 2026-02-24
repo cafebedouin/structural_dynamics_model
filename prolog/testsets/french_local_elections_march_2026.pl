@@ -81,7 +81,7 @@ narrative_ontology:constraint_metric(france_local_elections_march_2026, theater_
 
 % Constraint self-claim: The system is presented as a necessary constructed
 % framework for democratic representation.
-narrative_ontology:constraint_claim(france_local_elections_march_2026, tangled_rope).
+narrative_ontology:constraint_claim(france_local_elections_march_2026, scaffold).
 narrative_ontology:human_readable(france_local_elections_march_2026, "March 2026 French Municipal Elections").
 narrative_ontology:topic_domain(france_local_elections_march_2026, "political").
 

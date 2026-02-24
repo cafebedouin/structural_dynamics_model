@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(capability_eval_overhang, suppression_requi
 narrative_ontology:constraint_metric(capability_eval_overhang, theater_ratio, 0.86).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(capability_eval_overhang, piton).
+narrative_ontology:constraint_claim(capability_eval_overhang, snare).
 narrative_ontology:human_readable(capability_eval_overhang, "The Blind Spot of Power").
 narrative_ontology:topic_domain(capability_eval_overhang, "technological/AI/governance").
 

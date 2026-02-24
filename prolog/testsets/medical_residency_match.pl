@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(medical_residency_match, theater_ratio, 0.1
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a fair coordination mechanism to solve a market failure.
-narrative_ontology:constraint_claim(medical_residency_match, tangled_rope).
+narrative_ontology:constraint_claim(medical_residency_match, snare).
 narrative_ontology:human_readable(medical_residency_match, "The NRMP Medical Residency Match").
 narrative_ontology:topic_domain(medical_residency_match, "economic/social").
 

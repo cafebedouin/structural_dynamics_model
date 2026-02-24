@@ -54,7 +54,7 @@
 
 % Required for structural identification
 narrative_ontology:interval(ai_edu_decentralization, 0, 10).
-narrative_ontology:constraint_claim(ai_edu_decentralization, rope).
+narrative_ontology:constraint_claim(ai_edu_decentralization, tangled_rope).
 narrative_ontology:human_readable(ai_edu_decentralization, "The AI-Education Decoupling").
 narrative_ontology:topic_domain(ai_edu_decentralization, "technological/educational/economic").
 

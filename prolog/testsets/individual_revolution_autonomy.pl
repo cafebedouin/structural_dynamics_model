@@ -64,7 +64,7 @@ narrative_ontology:constraint_metric(individual_revolution_autonomy, suppression
 narrative_ontology:constraint_metric(individual_revolution_autonomy, theater_ratio, 0.45).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(individual_revolution_autonomy, tangled_rope).
+narrative_ontology:constraint_claim(individual_revolution_autonomy, snare).
 narrative_ontology:human_readable(individual_revolution_autonomy, "The One-Man Revolution").
 narrative_ontology:topic_domain(individual_revolution_autonomy, "political/social").
 

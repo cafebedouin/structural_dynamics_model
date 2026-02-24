@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(epistemic_overload_collapse, suppression_re
 narrative_ontology:constraint_metric(epistemic_overload_collapse, theater_ratio, 0.92).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(epistemic_overload_collapse, tangled_rope).
+narrative_ontology:constraint_claim(epistemic_overload_collapse, snare).
 narrative_ontology:human_readable(epistemic_overload_collapse, "The Signal-Drowning Vortex").
 narrative_ontology:topic_domain(epistemic_overload_collapse, "cognitive/informational/technological").
 

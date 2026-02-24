@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(uk_hicbc_2024, theater_ratio, 0.10).
 % --- NL Profile Metrics --- N/A. This is a human-designed policy.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(uk_hicbc_2024, tangled_rope).
+narrative_ontology:constraint_claim(uk_hicbc_2024, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(uk_hicbc_2024). % Required for Tangled Rope

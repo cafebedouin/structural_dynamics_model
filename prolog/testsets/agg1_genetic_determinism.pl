@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(agg1_genetic_determinism, theater_ratio, 0.
 % N/A. This is a human-constructed constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(agg1_genetic_determinism, tangled_rope).
+narrative_ontology:constraint_claim(agg1_genetic_determinism, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(agg1_genetic_determinism). % Required for Tangled Rope. System needs testing, databases, and legal frameworks.

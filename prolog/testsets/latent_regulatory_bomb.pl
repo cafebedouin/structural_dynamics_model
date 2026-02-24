@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(latent_regulatory_bomb, theater_ratio, 0.10
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The agency claims it's a necessary tool for maintaining order.
-narrative_ontology:constraint_claim(latent_regulatory_bomb, tangled_rope).
+narrative_ontology:constraint_claim(latent_regulatory_bomb, snare).
 narrative_ontology:human_readable(latent_regulatory_bomb, "The Compliance Time-Trigger").
 narrative_ontology:topic_domain(latent_regulatory_bomb, "political/technological").
 

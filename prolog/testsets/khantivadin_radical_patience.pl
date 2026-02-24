@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(khantivadin_radical_patience, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The teaching derived from the event claims to be a natural law of enlightenment.
-narrative_ontology:constraint_claim(khantivadin_radical_patience, tangled_rope).
+narrative_ontology:constraint_claim(khantivadin_radical_patience, snare).
 narrative_ontology:human_readable(khantivadin_radical_patience, "The Teacher of Patience (Khantivadin)").
 narrative_ontology:topic_domain(khantivadin_radical_patience, "religious/ethical").
 

@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(consumer_debt_slavery, theater_ratio, 0.45)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system is framed as a necessary tool for economic liquidity and growth.
-narrative_ontology:constraint_claim(consumer_debt_slavery, tangled_rope).
+narrative_ontology:constraint_claim(consumer_debt_slavery, snare).
 narrative_ontology:human_readable(consumer_debt_slavery, "The Interest Trap (Act Your Wage)").
 narrative_ontology:topic_domain(consumer_debt_slavery, "economic").
 

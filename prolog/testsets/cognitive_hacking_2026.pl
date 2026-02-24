@@ -77,7 +77,7 @@ narrative_ontology:constraint_metric(cognitive_hacking_2026, theater_ratio, 0.1)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Beneficiaries frame it as a necessary coordination mechanism for human-AI integration.
-narrative_ontology:constraint_claim(cognitive_hacking_2026, tangled_rope).
+narrative_ontology:constraint_claim(cognitive_hacking_2026, snare).
 narrative_ontology:human_readable(cognitive_hacking_2026, "The Cognitive Hacking Paradox").
 narrative_ontology:topic_domain(cognitive_hacking_2026, "technological/security/biological").
 

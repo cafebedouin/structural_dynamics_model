@@ -102,7 +102,7 @@ narrative_ontology:constraint_metric(climate_attribution_2026, accessibility_col
 narrative_ontology:constraint_metric(climate_attribution_2026, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(climate_attribution_2026, rope).
+narrative_ontology:constraint_claim(climate_attribution_2026, scaffold).
 narrative_ontology:human_readable(climate_attribution_2026, "Extreme Weather Attribution Science").
 narrative_ontology:topic_domain(climate_attribution_2026, "scientific/political/economic").
 

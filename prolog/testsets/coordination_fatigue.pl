@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(coordination_fatigue, suppression_requireme
 narrative_ontology:constraint_metric(coordination_fatigue, theater_ratio, 0.74).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(coordination_fatigue, tangled_rope).
+narrative_ontology:constraint_claim(coordination_fatigue, snare).
 narrative_ontology:human_readable(coordination_fatigue, "The Consensus Exhaustion Loop").
 narrative_ontology:topic_domain(coordination_fatigue, "social/organizational/technological").
 

@@ -78,7 +78,7 @@ narrative_ontology:constraint_metric(starwars_evolutionary_mutation, theater_rat
 
 % The system presents itself as a Snare from an analytical view, extracting
 % potential for the sake of conformity.
-narrative_ontology:constraint_claim(starwars_evolutionary_mutation, snare).
+narrative_ontology:constraint_claim(starwars_evolutionary_mutation, tangled_rope).
 narrative_ontology:human_readable(starwars_evolutionary_mutation, "Jedi as Systemic Evolutionary Outliers").
 narrative_ontology:topic_domain(starwars_evolutionary_mutation, "social/political/biological").
 

@@ -74,7 +74,7 @@ narrative_ontology:constraint_metric(viral_emergence_covid19_exemplar, suppressi
 narrative_ontology:constraint_metric(viral_emergence_covid19_exemplar, theater_ratio, 0.85).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(viral_emergence_covid19_exemplar, tangled_rope).
+narrative_ontology:constraint_claim(viral_emergence_covid19_exemplar, rope).
 narrative_ontology:human_readable(viral_emergence_covid19_exemplar, "Societal Response to SARS-CoV-2 Emergence").
 narrative_ontology:topic_domain(viral_emergence_covid19_exemplar, "social/political/health").
 

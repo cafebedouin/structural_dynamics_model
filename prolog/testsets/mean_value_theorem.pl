@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(mvt_theorem_constraint, accessibility_colla
 narrative_ontology:constraint_metric(mvt_theorem_constraint, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(mvt_theorem_constraint, rope).
+narrative_ontology:constraint_claim(mvt_theorem_constraint, scaffold).
 narrative_ontology:human_readable(mvt_theorem_constraint, "Application of the Mean Value Theorem").
 narrative_ontology:topic_domain(mvt_theorem_constraint, "technological").
 

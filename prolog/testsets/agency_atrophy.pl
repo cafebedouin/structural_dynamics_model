@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(agency_atrophy, theater_ratio, 0.92).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination tool for efficiency.
-narrative_ontology:constraint_claim(agency_atrophy, tangled_rope).
+narrative_ontology:constraint_claim(agency_atrophy, snare).
 narrative_ontology:human_readable(agency_atrophy, "The Outsourced Cognition Trap").
 narrative_ontology:topic_domain(agency_atrophy, "technological/cognitive").
 

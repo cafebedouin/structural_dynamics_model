@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(multi_planetary_latency_lock, suppression_r
 narrative_ontology:constraint_metric(multi_planetary_latency_lock, theater_ratio, 0.15).
 
 % The system claims to be a necessary coordination mechanism for interplanetary stability.
-narrative_ontology:constraint_claim(multi_planetary_latency_lock, tangled_rope).
+narrative_ontology:constraint_claim(multi_planetary_latency_lock, snare).
 narrative_ontology:human_readable(multi_planetary_latency_lock, "Earth-Centric Interplanetary Clearing").
 narrative_ontology:topic_domain(multi_planetary_latency_lock, "technological/economic").
 

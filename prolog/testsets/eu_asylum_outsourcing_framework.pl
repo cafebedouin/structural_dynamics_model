@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(eu_asylum_outsourcing_framework, theater_ra
 % N/A for this human-constructed political constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(eu_asylum_outsourcing_framework, tangled_rope).
+narrative_ontology:constraint_claim(eu_asylum_outsourcing_framework, snare).
 narrative_ontology:human_readable(eu_asylum_outsourcing_framework, "EU framework for outsourcing asylum procedures to third countries").
 narrative_ontology:topic_domain(eu_asylum_outsourcing_framework, "political").
 

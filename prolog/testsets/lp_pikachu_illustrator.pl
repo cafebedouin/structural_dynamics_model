@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(lp_pikachu_illustrator, suppression_require
 narrative_ontology:constraint_metric(lp_pikachu_illustrator, theater_ratio, 0.80).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(lp_pikachu_illustrator, tangled_rope).
+narrative_ontology:constraint_claim(lp_pikachu_illustrator, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(lp_pikachu_illustrator). % Required for Tangled Rope

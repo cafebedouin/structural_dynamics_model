@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(intertemporal_responsibility_gap, suppressi
 narrative_ontology:constraint_metric(intertemporal_responsibility_gap, theater_ratio, 0.88).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(intertemporal_responsibility_gap, tangled_rope).
+narrative_ontology:constraint_claim(intertemporal_responsibility_gap, snare).
 narrative_ontology:human_readable(intertemporal_responsibility_gap, "The Generational Accountability Void").
 narrative_ontology:topic_domain(intertemporal_responsibility_gap, "environmental/economic/technological").
 

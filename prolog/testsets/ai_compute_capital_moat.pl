@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(ai_compute_capital_moat, suppression_requir
 narrative_ontology:constraint_metric(ai_compute_capital_moat, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ai_compute_capital_moat, tangled_rope).
+narrative_ontology:constraint_claim(ai_compute_capital_moat, snare).
 narrative_ontology:human_readable(ai_compute_capital_moat, "The AI Compute & Capital Moat").
 narrative_ontology:topic_domain(ai_compute_capital_moat, "technological/economic").
 

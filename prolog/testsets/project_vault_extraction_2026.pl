@@ -78,7 +78,7 @@ narrative_ontology:constraint_metric(project_vault_extraction_2026, suppression_
 narrative_ontology:constraint_metric(project_vault_extraction_2026, theater_ratio, 0.65).
 
 % Constraint self-claim: It claims to be a coordination mechanism for national security.
-narrative_ontology:constraint_claim(project_vault_extraction_2026, tangled_rope).
+narrative_ontology:constraint_claim(project_vault_extraction_2026, snare).
 narrative_ontology:human_readable(project_vault_extraction_2026, "Project Vault: Debt-Financed Strategic Extraction").
 narrative_ontology:topic_domain(project_vault_extraction_2026, "economic/political").
 

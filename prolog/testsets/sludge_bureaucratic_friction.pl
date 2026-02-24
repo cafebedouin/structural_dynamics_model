@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(sludge_bureaucratic_friction, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a necessary process for due diligence and fraud prevention.
-narrative_ontology:constraint_claim(sludge_bureaucratic_friction, tangled_rope).
+narrative_ontology:constraint_claim(sludge_bureaucratic_friction, snare).
 narrative_ontology:human_readable(sludge_bureaucratic_friction, "Sludge (Intentional Administrative Friction)").
 narrative_ontology:topic_domain(sludge_bureaucratic_friction, "political/economic").
 

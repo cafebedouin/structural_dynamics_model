@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(artificial_scarcity_scaffold, suppression_r
 narrative_ontology:constraint_metric(artificial_scarcity_scaffold, theater_ratio, 0.20).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(artificial_scarcity_scaffold, scaffold).
+narrative_ontology:constraint_claim(artificial_scarcity_scaffold, tangled_rope).
 narrative_ontology:human_readable(artificial_scarcity_scaffold, "The Resource-Migration Scaffold").
 narrative_ontology:topic_domain(artificial_scarcity_scaffold, "technological/economic").
 

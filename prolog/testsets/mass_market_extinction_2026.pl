@@ -78,7 +78,7 @@ narrative_ontology:constraint_metric(mass_market_extinction_2026, suppression_re
 narrative_ontology:constraint_metric(mass_market_extinction_2026, theater_ratio, 0.45).
 
 % The system's collapse is presented as a constructed market outcome ("the consumer has spoken").
-narrative_ontology:constraint_claim(mass_market_extinction_2026, tangled_rope).
+narrative_ontology:constraint_claim(mass_market_extinction_2026, snare).
 narrative_ontology:human_readable(mass_market_extinction_2026, "The Mass Market Paperback Sunset").
 narrative_ontology:topic_domain(mass_market_extinction_2026, "economic/cultural").
 

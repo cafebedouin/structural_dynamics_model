@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(responsibility_dilution, suppression_requir
 narrative_ontology:constraint_metric(responsibility_dilution, theater_ratio, 0.91).
 
 % Constraint self-claim: The system claims to be a necessary coordination mechanism.
-narrative_ontology:constraint_claim(responsibility_dilution, tangled_rope).
+narrative_ontology:constraint_claim(responsibility_dilution, snare).
 narrative_ontology:human_readable(responsibility_dilution, "The Accountability Fog").
 narrative_ontology:topic_domain(responsibility_dilution, "organizational/legal/technological").
 

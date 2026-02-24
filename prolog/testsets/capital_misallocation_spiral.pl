@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(capital_misallocation_spiral, suppression_r
 narrative_ontology:constraint_metric(capital_misallocation_spiral, theater_ratio, 0.89).
 
 % The constraint claims to be a coordination mechanism for market stability.
-narrative_ontology:constraint_claim(capital_misallocation_spiral, tangled_rope).
+narrative_ontology:constraint_claim(capital_misallocation_spiral, snare).
 narrative_ontology:human_readable(capital_misallocation_spiral, "The Zombie Asset Loop").
 narrative_ontology:topic_domain(capital_misallocation_spiral, "economic/technological").
 

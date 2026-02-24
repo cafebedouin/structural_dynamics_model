@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(e2ee_digital_privacy_2026, 0, 10).
-narrative_ontology:constraint_claim(e2ee_digital_privacy_2026, rope).
+narrative_ontology:constraint_claim(e2ee_digital_privacy_2026, tangled_rope).
 narrative_ontology:human_readable(e2ee_digital_privacy_2026, "End-to-End Encryption (E2EE)").
 narrative_ontology:topic_domain(e2ee_digital_privacy_2026, "technological/political/social").
 

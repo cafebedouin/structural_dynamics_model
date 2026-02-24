@@ -83,7 +83,7 @@ narrative_ontology:constraint_metric(dwp_carers_allowance_cliff, suppression_req
 narrative_ontology:constraint_metric(dwp_carers_allowance_cliff, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(dwp_carers_allowance_cliff, tangled_rope).
+narrative_ontology:constraint_claim(dwp_carers_allowance_cliff, snare).
 narrative_ontology:human_readable(dwp_carers_allowance_cliff, "UK DWP Carer's Allowance Earnings Cliff").
 narrative_ontology:topic_domain(dwp_carers_allowance_cliff, "economic/political").
 

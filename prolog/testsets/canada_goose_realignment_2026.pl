@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(canada_goose_realignment_2026, suppression_
 narrative_ontology:constraint_metric(canada_goose_realignment_2026, theater_ratio, 0.60).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(canada_goose_realignment_2026, scaffold).
+narrative_ontology:constraint_claim(canada_goose_realignment_2026, tangled_rope).
 narrative_ontology:human_readable(canada_goose_realignment_2026, "Canada Goose Strategic Realignment Under New Leadership (2026)").
 narrative_ontology:topic_domain(canada_goose_realignment_2026, "economic").
 

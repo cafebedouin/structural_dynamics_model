@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric(ai_performance_watermark, suppression_requi
 narrative_ontology:constraint_metric(ai_performance_watermark, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ai_performance_watermark, tangled_rope).
+narrative_ontology:constraint_claim(ai_performance_watermark, snare).
 narrative_ontology:human_readable(ai_performance_watermark, "Mandatory Watermarking for Synthetic Media").
 narrative_ontology:topic_domain(ai_performance_watermark, "technological/economic").
 

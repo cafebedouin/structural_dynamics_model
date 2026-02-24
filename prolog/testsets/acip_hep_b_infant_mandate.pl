@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(acip_hep_b_infant_mandate, theater_ratio, 0
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(acip_hep_b_infant_mandate, piton).
+narrative_ontology:constraint_claim(acip_hep_b_infant_mandate, rope).
 
 % --- Binary flags ---
 % N/A

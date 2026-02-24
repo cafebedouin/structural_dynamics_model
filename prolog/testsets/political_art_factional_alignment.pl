@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(political_art_factional_alignment, theater_
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(political_art_factional_alignment, tangled_rope).
+narrative_ontology:constraint_claim(political_art_factional_alignment, snare).
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(political_art_factional_alignment).      % Mandatory if Scaffold

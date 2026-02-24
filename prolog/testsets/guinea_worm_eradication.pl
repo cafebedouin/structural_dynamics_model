@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(guinea_worm_eradication, suppression_requir
 narrative_ontology:constraint_metric(guinea_worm_eradication, theater_ratio, 0.10).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(guinea_worm_eradication, tangled_rope).
+narrative_ontology:constraint_claim(guinea_worm_eradication, rope).
 narrative_ontology:human_readable(guinea_worm_eradication, "Global Guinea Worm Eradication Program").
 narrative_ontology:topic_domain(guinea_worm_eradication, "social").
 

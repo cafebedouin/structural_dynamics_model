@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(coffee_cardiovascular_2026, suppression_req
 narrative_ontology:constraint_metric(coffee_cardiovascular_2026, theater_ratio, 0.1).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(coffee_cardiovascular_2026, scaffold).
+narrative_ontology:constraint_claim(coffee_cardiovascular_2026, tangled_rope).
 narrative_ontology:human_readable(coffee_cardiovascular_2026, "The Caffeine Paradox Realignment").
 narrative_ontology:topic_domain(coffee_cardiovascular_2026, "medical/health").
 

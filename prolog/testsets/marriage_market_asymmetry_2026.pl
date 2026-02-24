@@ -77,7 +77,7 @@ narrative_ontology:constraint_metric(marriage_market_asymmetry_2026, suppression
 narrative_ontology:constraint_metric(marriage_market_asymmetry_2026, theater_ratio, 0.50).
 
 % Constraint self-claim: The norms are presented as social constructs, not natural law.
-narrative_ontology:constraint_claim(marriage_market_asymmetry_2026, tangled_rope).
+narrative_ontology:constraint_claim(marriage_market_asymmetry_2026, snare).
 narrative_ontology:human_readable(marriage_market_asymmetry_2026, "The Asymmetric Information Snare (Women Asking Out)").
 narrative_ontology:topic_domain(marriage_market_asymmetry_2026, "social/psychological/economic").
 

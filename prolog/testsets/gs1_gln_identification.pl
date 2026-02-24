@@ -60,7 +60,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(gln_standard_lifecycle, 0, 10).
-narrative_ontology:constraint_claim(gs1_gln_identification, rope).
+narrative_ontology:constraint_claim(gs1_gln_identification, tangled_rope).
 narrative_ontology:human_readable(gs1_gln_identification, "Global Location Number (GLN) Standard").
 narrative_ontology:topic_domain(gs1_gln_identification, "technological/economic").
 

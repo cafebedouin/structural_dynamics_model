@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(container_capacity_mismatch, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system claims to be a necessary coordination mechanism for managing scarce resources.
-narrative_ontology:constraint_claim(container_capacity_mismatch, tangled_rope).
+narrative_ontology:constraint_claim(container_capacity_mismatch, snare).
 narrative_ontology:human_readable(container_capacity_mismatch, "The Volume-Infrastructure Paradox").
 narrative_ontology:topic_domain(container_capacity_mismatch, "logistics/physical_infrastructure/economic").
 

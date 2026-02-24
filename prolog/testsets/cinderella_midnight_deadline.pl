@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(cinderella_midnight_deadline, theater_ratio
 % Not a mountain; the constraint is artificially imposed by a magical agent.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(cinderella_midnight_deadline, scaffold).
+narrative_ontology:constraint_claim(cinderella_midnight_deadline, rope).
 narrative_ontology:human_readable(cinderella_midnight_deadline, "The Fairy Godmother's Midnight Deadline").
 narrative_ontology:topic_domain(cinderella_midnight_deadline, "magical/social").
 

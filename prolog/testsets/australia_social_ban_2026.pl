@@ -74,7 +74,7 @@ narrative_ontology:constraint_metric(australia_social_ban_2026, suppression_requ
 narrative_ontology:constraint_metric(australia_social_ban_2026, theater_ratio, 0.55).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(australia_social_ban_2026, tangled_rope).
+narrative_ontology:constraint_claim(australia_social_ban_2026, snare).
 narrative_ontology:human_readable(australia_social_ban_2026, "Australian Under-16 Social Media Ban").
 narrative_ontology:topic_domain(australia_social_ban_2026, "political/technological").
 

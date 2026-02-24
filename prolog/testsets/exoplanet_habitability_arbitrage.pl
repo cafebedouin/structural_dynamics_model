@@ -96,7 +96,7 @@ narrative_ontology:constraint_metric(exoplanetary_habitability_arbitrage, suppre
 narrative_ontology:constraint_metric(exoplanetary_habitability_arbitrage, theater_ratio, 0.08).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(exoplanetary_habitability_arbitrage, rope).
+narrative_ontology:constraint_claim(exoplanetary_habitability_arbitrage, tangled_rope).
 narrative_ontology:human_readable(exoplanetary_habitability_arbitrage, "Exoplanetary Habitability Arbitrage Strategy").
 narrative_ontology:topic_domain(exoplanetary_habitability_arbitrage, "technological/scientific").
 

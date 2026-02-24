@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(finnish_debt_adjustment, theater_ratio, 0.1
 % Not a mountain constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(finnish_debt_adjustment, tangled_rope).
+narrative_ontology:constraint_claim(finnish_debt_adjustment, snare).
 narrative_ontology:human_readable(finnish_debt_adjustment, "Finnish Private Debt Adjustment System").
 narrative_ontology:topic_domain(finnish_debt_adjustment, "economic/political").
 

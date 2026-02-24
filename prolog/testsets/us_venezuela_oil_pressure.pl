@@ -94,7 +94,7 @@ narrative_ontology:constraint_metric(us_venezuela_oil_pressure, theater_ratio, 0
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_venezuela_oil_pressure, tangled_rope).
+narrative_ontology:constraint_claim(us_venezuela_oil_pressure, snare).
 narrative_ontology:human_readable(us_venezuela_oil_pressure, "US Geopolitical & Economic Pressure on Venezuela's Oil Sector").
 narrative_ontology:topic_domain(us_venezuela_oil_pressure, "geopolitical/economic").
 

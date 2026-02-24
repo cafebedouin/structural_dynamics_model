@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(ai_superpowers_2026, suppression_requiremen
 narrative_ontology:constraint_metric(ai_superpowers_2026, theater_ratio, 0.45).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(ai_superpowers_2026, scaffold).
+narrative_ontology:constraint_claim(ai_superpowers_2026, snare).
 narrative_ontology:human_readable(ai_superpowers_2026, "The Sino-American AI Implementation Gap").
 narrative_ontology:topic_domain(ai_superpowers_2026, "technological/geopolitical").
 

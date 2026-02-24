@@ -55,8 +55,8 @@ TARGET_TYPES = {"scaffold", "piton"}
 # Prolog gate thresholds (from prolog/config.pl)
 # ---------------------------------------------------------------------------
 
-PITON_EXTRACTION_CEILING = 0.25
-SCAFFOLD_EXTRACTION_CEIL = 0.30
+PITON_EXTRACTION_CEILING = 0.45  # Must match config.pl param: piton_extraction_ceiling -- updated 2026-02-24
+SCAFFOLD_EXTRACTION_CEIL = 0.45  # Must match config.pl param: scaffold_extraction_ceil -- updated 2026-02-24
 PITON_THEATER_FLOOR = 0.70
 SNARE_EPSILON_FLOOR = 0.46
 TANGLED_ROPE_EPSILON_FLOOR = 0.30

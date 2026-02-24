@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(emergency_bridge_scaffold, suppression_requ
 narrative_ontology:constraint_metric(emergency_bridge_scaffold, theater_ratio, 0.05).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(emergency_bridge_scaffold, snare).
+narrative_ontology:constraint_claim(emergency_bridge_scaffold, tangled_rope).
 narrative_ontology:human_readable(emergency_bridge_scaffold, "The Tactical Crossing").
 narrative_ontology:topic_domain(emergency_bridge_scaffold, "technological/political").
 

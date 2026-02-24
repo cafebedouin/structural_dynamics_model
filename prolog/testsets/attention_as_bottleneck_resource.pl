@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(attention_as_bottleneck_resource, theater_r
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The platforms claim this is a coordination mechanism for value.
-narrative_ontology:constraint_claim(attention_as_bottleneck_resource, piton).
+narrative_ontology:constraint_claim(attention_as_bottleneck_resource, snare).
 narrative_ontology:human_readable(attention_as_bottleneck_resource, "The Finite Cognitive Aperture").
 narrative_ontology:topic_domain(attention_as_bottleneck_resource, "social/technological/economic").
 

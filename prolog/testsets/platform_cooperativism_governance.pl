@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(platform_cooperativism_governance, 0, 10).
-narrative_ontology:constraint_claim(platform_cooperativism_governance, rope).
+narrative_ontology:constraint_claim(platform_cooperativism_governance, tangled_rope).
 narrative_ontology:human_readable(platform_cooperativism_governance, "Democratic Worker Governance in Platform Cooperativism").
 narrative_ontology:topic_domain(platform_cooperativism_governance, "economic/social/technological").
 

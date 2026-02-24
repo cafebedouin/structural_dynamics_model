@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(blackstone_tra, theater_ratio, 0.05).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a constructed financial agreement for sharing tax benefits.
-narrative_ontology:constraint_claim(blackstone_tra, tangled_rope).
+narrative_ontology:constraint_claim(blackstone_tra, snare).
 narrative_ontology:human_readable(blackstone_tra, "Blackstone Tax Receivable Agreement (TRA)").
 narrative_ontology:topic_domain(blackstone_tra, "economic").
 

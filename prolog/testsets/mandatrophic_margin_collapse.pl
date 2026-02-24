@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(mandatrophic_margin_collapse, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(mandatrophic_margin_collapse, tangled_rope).
+narrative_ontology:constraint_claim(mandatrophic_margin_collapse, snare).
 narrative_ontology:human_readable(mandatrophic_margin_collapse, "Mandatrophy (The Extraction of Margin for Mandate)").
 narrative_ontology:topic_domain(mandatrophic_margin_collapse, "institutional/technological").
 

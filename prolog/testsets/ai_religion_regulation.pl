@@ -85,7 +85,7 @@ narrative_ontology:constraint_metric(ai_religion_regulation, suppression_require
 narrative_ontology:constraint_metric(ai_religion_regulation, theater_ratio, 0.30).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ai_religion_regulation, tangled_rope).
+narrative_ontology:constraint_claim(ai_religion_regulation, snare).
 narrative_ontology:human_readable(ai_religion_regulation, "Regulation of AI-Generated Religions and Digital Drugs").
 narrative_ontology:topic_domain(ai_religion_regulation, "technological").
 

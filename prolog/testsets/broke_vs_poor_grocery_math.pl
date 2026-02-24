@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(broke_vs_poor_grocery_math, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as a necessary consequence of scarcity, enforced by the checkout.
-narrative_ontology:constraint_claim(broke_vs_poor_grocery_math, tangled_rope).
+narrative_ontology:constraint_claim(broke_vs_poor_grocery_math, snare).
 narrative_ontology:human_readable(broke_vs_poor_grocery_math, "The Cognitive Load of Poverty (Grocery Math)").
 narrative_ontology:topic_domain(broke_vs_poor_grocery_math, "economic/social").
 

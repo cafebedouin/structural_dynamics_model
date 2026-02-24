@@ -63,7 +63,7 @@ narrative_ontology:constraint_metric(constitutional_consecration, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The speech frames the sacrifice as necessary for a coordination goal ("government of the people... shall not perish").
-narrative_ontology:constraint_claim(constitutional_consecration, tangled_rope).
+narrative_ontology:constraint_claim(constitutional_consecration, snare).
 narrative_ontology:human_readable(constitutional_consecration, "The Proposition of Equality as a Binding Sacrifice").
 narrative_ontology:topic_domain(constitutional_consecration, "political/legal").
 

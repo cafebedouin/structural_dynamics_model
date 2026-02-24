@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(rfc9293_state_machine, 0, 10).
-narrative_ontology:constraint_claim(rfc9293_state_machine, tangled_rope).
+narrative_ontology:constraint_claim(rfc9293_state_machine, rope).
 narrative_ontology:human_readable(rfc9293_state_machine, "TCP State Machine Constraints").
 narrative_ontology:topic_domain(rfc9293_state_machine, "technological/institutional").
 

@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(heuristic_optimization, accessibility_colla
 narrative_ontology:constraint_metric(heuristic_optimization, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(heuristic_optimization, rope).
+narrative_ontology:constraint_claim(heuristic_optimization, scaffold).
 narrative_ontology:topic_domain(heuristic_optimization, "technological/mathematical").
 narrative_ontology:human_readable(heuristic_optimization, "Heuristic Optimization (\"Good Enough\" Solutions)").
 

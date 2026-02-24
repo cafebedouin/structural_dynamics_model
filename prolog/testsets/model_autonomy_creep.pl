@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(model_autonomy_creep, theater_ratio, 0.88).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system is framed as a pure coordination tool for efficiency.
-narrative_ontology:constraint_claim(model_autonomy_creep, tangled_rope).
+narrative_ontology:constraint_claim(model_autonomy_creep, snare).
 narrative_ontology:human_readable(model_autonomy_creep, "The Administrative Autonomy Slide").
 narrative_ontology:topic_domain(model_autonomy_creep, "technological/organizational").
 

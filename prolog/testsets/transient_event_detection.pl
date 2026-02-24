@@ -55,7 +55,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(transient_event_detection, 0, 10).
-narrative_ontology:constraint_claim(transient_event_detection, rope).
+narrative_ontology:constraint_claim(transient_event_detection, tangled_rope).
 narrative_ontology:human_readable(transient_event_detection, "Automated Transient Event Detection").
 narrative_ontology:topic_domain(transient_event_detection, "technological/scientific").
 

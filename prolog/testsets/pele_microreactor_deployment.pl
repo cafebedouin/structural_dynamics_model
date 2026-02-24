@@ -82,7 +82,7 @@ narrative_ontology:constraint_metric(pele_microreactor_deployment, suppression_r
 narrative_ontology:constraint_metric(pele_microreactor_deployment, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(pele_microreactor_deployment, tangled_rope).
+narrative_ontology:constraint_claim(pele_microreactor_deployment, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(pele_microreactor_deployment). % Mandatory for Tangled Rope

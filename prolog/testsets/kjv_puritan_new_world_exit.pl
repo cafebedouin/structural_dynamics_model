@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(kjv_puritan_new_world_exit, accessibility_c
 narrative_ontology:constraint_metric(kjv_puritan_new_world_exit, resistance, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(kjv_puritan_new_world_exit, rope).
+narrative_ontology:constraint_claim(kjv_puritan_new_world_exit, tangled_rope).
 narrative_ontology:human_readable(kjv_puritan_new_world_exit, "The Puritan Textual Re-Indexing (KJV in the New World)").
 narrative_ontology:topic_domain(kjv_puritan_new_world_exit, "political/religious").
 

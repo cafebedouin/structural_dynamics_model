@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(optimization_fragility, theater_ratio, 0.40
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a pure coordination mechanism for efficiency.
-narrative_ontology:constraint_claim(optimization_fragility, tangled_rope).
+narrative_ontology:constraint_claim(optimization_fragility, snare).
 narrative_ontology:human_readable(optimization_fragility, "The Efficiency-Resilience Tradeoff").
 narrative_ontology:topic_domain(optimization_fragility, "economic/technological/infrastructural").
 

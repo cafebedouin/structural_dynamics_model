@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(lula_hemisphere_2026, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The hegemonic power claims its action is a necessary enforcement of justice.
-narrative_ontology:constraint_claim(lula_hemisphere_2026, snare).
+narrative_ontology:constraint_claim(lula_hemisphere_2026, tangled_rope).
 narrative_ontology:human_readable(lula_hemisphere_2026, "The Monroe Doctrine Revival (Unilateral US Hegemony)").
 narrative_ontology:topic_domain(lula_hemisphere_2026, "political").
 

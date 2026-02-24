@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(collective_action_deadlock, suppression_req
 narrative_ontology:constraint_metric(collective_action_deadlock, theater_ratio, 0.72).
 
 % Constraint self-claim: The system claims to be a fair coordination mechanism.
-narrative_ontology:constraint_claim(collective_action_deadlock, tangled_rope).
+narrative_ontology:constraint_claim(collective_action_deadlock, snare).
 narrative_ontology:human_readable(collective_action_deadlock, "The Infinite Deliberation Loop").
 narrative_ontology:topic_domain(collective_action_deadlock, "political/social").
 

@@ -78,7 +78,7 @@ narrative_ontology:constraint_metric(delta_force_selection_2026, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination mechanism (a filter) but operates via pure enforcement.
-narrative_ontology:constraint_claim(delta_force_selection_2026, tangled_rope).
+narrative_ontology:constraint_claim(delta_force_selection_2026, snare).
 narrative_ontology:human_readable(delta_force_selection_2026, "Delta Force (1st SFOD-D) Selection & Assessment").
 narrative_ontology:topic_domain(delta_force_selection_2026, "military/special_operations").
 

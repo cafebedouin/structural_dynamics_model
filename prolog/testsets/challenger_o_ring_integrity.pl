@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(challenger_o_ring_integrity, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Management framed the decision as a manageable risk (coordination), but it was pure enforcement of schedule.
-narrative_ontology:constraint_claim(challenger_o_ring_integrity, tangled_rope).
+narrative_ontology:constraint_claim(challenger_o_ring_integrity, snare).
 narrative_ontology:human_readable(challenger_o_ring_integrity, "Challenger SRB O-Ring Integrity Failure").
 narrative_ontology:topic_domain(challenger_o_ring_integrity, "technological").
 

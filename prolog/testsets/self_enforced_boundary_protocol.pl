@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(boundary_protocol, theater_ratio, 0.05).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(boundary_protocol, scaffold).
+narrative_ontology:constraint_claim(boundary_protocol, rope).
 narrative_ontology:human_readable(boundary_protocol, "The Self-Enforced Boundary Protocol").
 narrative_ontology:topic_domain(boundary_protocol, "psychological/social").
 

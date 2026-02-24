@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(cg_israelgaza_20231012, theater_ratio, 0.20
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(cg_israelgaza_20231012, tangled_rope).
+narrative_ontology:constraint_claim(cg_israelgaza_20231012, snare).
 narrative_ontology:human_readable(cg_israelgaza_20231012, "Israeli Blockade of Gaza Strip").
 narrative_ontology:topic_domain(cg_israelgaza_20231012, "political").
 

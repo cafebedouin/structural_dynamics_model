@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(jordan_microfinance, theater_ratio, 0.40).
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(jordan_microfinance, tangled_rope).
+narrative_ontology:constraint_claim(jordan_microfinance, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(jordan_microfinance). % Required for Tangled Rope

@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(hidden_interdependency_risk, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a healthy, competitive market, which is a coordination mechanism.
-narrative_ontology:constraint_claim(hidden_interdependency_risk, tangled_rope).
+narrative_ontology:constraint_claim(hidden_interdependency_risk, snare).
 narrative_ontology:human_readable(hidden_interdependency_risk, "The Shadow Foundation Trap").
 narrative_ontology:topic_domain(hidden_interdependency_risk, "technological/economic").
 

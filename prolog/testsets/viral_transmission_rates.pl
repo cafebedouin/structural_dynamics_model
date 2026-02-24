@@ -93,7 +93,7 @@ narrative_ontology:constraint_metric(viral_transmission_rates, theater_ratio, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 % The analytical view sees the entire system (policy + biology) which has a
 % coordination function but also massive, asymmetric extraction. This is a Tangled Rope.
-narrative_ontology:constraint_claim(viral_transmission_rates, tangled_rope).
+narrative_ontology:constraint_claim(viral_transmission_rates, snare).
 narrative_ontology:human_readable(viral_transmission_rates, "Socio-Political Response to Viral Transmission").
 narrative_ontology:topic_domain(viral_transmission_rates, "political/technological").
 

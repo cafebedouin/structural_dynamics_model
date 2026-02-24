@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(perseverance_ai_drive, suppression_requirem
 narrative_ontology:constraint_metric(perseverance_ai_drive, theater_ratio, 0.05).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(perseverance_ai_drive, rope).
+narrative_ontology:constraint_claim(perseverance_ai_drive, tangled_rope).
 narrative_ontology:human_readable(perseverance_ai_drive, "AI-Driven Martian Rover Autonomy").
 narrative_ontology:topic_domain(perseverance_ai_drive, "technological").
 

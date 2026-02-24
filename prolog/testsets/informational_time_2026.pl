@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(informational_time_2026, suppression_requir
 narrative_ontology:constraint_metric(informational_time_2026, theater_ratio, 0.45).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(informational_time_2026, tangled_rope).
+narrative_ontology:constraint_claim(informational_time_2026, snare).
 narrative_ontology:human_readable(informational_time_2026, "The Emergent Time/Information Constraint").
 narrative_ontology:topic_domain(informational_time_2026, "scientific/physical").
 domain_priors:requires_active_enforcement(informational_time_2026).

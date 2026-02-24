@@ -93,7 +93,7 @@ narrative_ontology:constraint_metric(chrome_imagen2_integration, theater_ratio, 
 % This is a human-constructed system, not a natural law.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(chrome_imagen2_integration, tangled_rope).
+narrative_ontology:constraint_claim(chrome_imagen2_integration, snare).
 narrative_ontology:topic_domain(chrome_imagen2_integration, "technological/economic").
 narrative_ontology:human_readable(chrome_imagen2_integration, "Integration of \"free\" AI image generation (Imagen 2) into Google Chrome").
 

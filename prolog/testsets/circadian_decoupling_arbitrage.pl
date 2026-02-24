@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(circadian_decoupling_arbitrage, suppression
 narrative_ontology:constraint_metric(circadian_decoupling_arbitrage, theater_ratio, 0.15).
 
 % Constraint self-claim: The system is presented as a necessary coordination tool.
-narrative_ontology:constraint_claim(circadian_decoupling_arbitrage, tangled_rope).
+narrative_ontology:constraint_claim(circadian_decoupling_arbitrage, snare).
 narrative_ontology:human_readable(circadian_decoupling_arbitrage, "The Circadian Decoupling Arbitrage").
 narrative_ontology:topic_domain(circadian_decoupling_arbitrage, "bio_industrial").
 

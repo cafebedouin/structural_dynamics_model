@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(nasa_faster_better_cheaper, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % FBC was presented as a pure coordination mechanism for efficiency.
-narrative_ontology:constraint_claim(nasa_faster_better_cheaper, snare).
+narrative_ontology:constraint_claim(nasa_faster_better_cheaper, tangled_rope).
 narrative_ontology:topic_domain(nasa_faster_better_cheaper, "political/economic/technological").
 narrative_ontology:human_readable(nasa_faster_better_cheaper, "The \"Faster, Better, Cheaper\" (FBC) Management Paradigm").
 

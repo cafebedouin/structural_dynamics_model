@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(necessary_day_job, theater_ratio, 0.10).
 
 % Constraint self-claim: The system presents this as a constructed necessity,
 % an unfortunate but unavoidable feature of a market economy.
-narrative_ontology:constraint_claim(necessary_day_job, tangled_rope).
+narrative_ontology:constraint_claim(necessary_day_job, snare).
 narrative_ontology:human_readable(necessary_day_job, "The Necessary Day Job for Creatives").
 narrative_ontology:topic_domain(necessary_day_job, "economic/social").
 

@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(global_water_bankruptcy, theater_ratio, 0.4
 
 % Constraint self-claim (what the constraint's proponents claim it is)
 % The UN and member states frame their interventions as coordination.
-narrative_ontology:constraint_claim(global_water_bankruptcy, tangled_rope).
+narrative_ontology:constraint_claim(global_water_bankruptcy, snare).
 narrative_ontology:human_readable(global_water_bankruptcy, "The Global Water Bankruptcy Constraint").
 narrative_ontology:topic_domain(global_water_bankruptcy, "environmental/economic").
 

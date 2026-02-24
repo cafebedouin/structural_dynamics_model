@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(planetary_boundaries, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be an objective, unchangeable feature of reality.
-narrative_ontology:constraint_claim(planetary_boundaries, tangled_rope).
+narrative_ontology:constraint_claim(planetary_boundaries, snare).
 narrative_ontology:human_readable(planetary_boundaries, "Planetary Boundaries Framework").
 narrative_ontology:topic_domain(planetary_boundaries, "environmental/economic").
 

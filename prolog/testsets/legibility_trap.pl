@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(legibility_trap, theater_ratio, 0.92).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system claims to be a necessary tool for coordination and governance.
-narrative_ontology:constraint_claim(legibility_trap, tangled_rope).
+narrative_ontology:constraint_claim(legibility_trap, snare).
 narrative_ontology:human_readable(legibility_trap, "The Grid-Map Displacement").
 narrative_ontology:topic_domain(legibility_trap, "political/social/economic").
 

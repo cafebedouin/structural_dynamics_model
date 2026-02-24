@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(ukr_mobilization, suppression_requirement, 
 narrative_ontology:constraint_metric(ukr_mobilization, theater_ratio, 0.20).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(ukr_mobilization, tangled_rope).
+narrative_ontology:constraint_claim(ukr_mobilization, snare).
 narrative_ontology:human_readable(ukr_mobilization, "Ukrainian Mobilization Law").
 narrative_ontology:topic_domain(ukr_mobilization, "political").
 

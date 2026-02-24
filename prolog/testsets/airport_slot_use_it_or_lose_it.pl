@@ -94,7 +94,7 @@ narrative_ontology:constraint_metric(airport_slot_use_it_or_lose_it, suppression
 narrative_ontology:constraint_metric(airport_slot_use_it_or_lose_it, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(airport_slot_use_it_or_lose_it, tangled_rope).
+narrative_ontology:constraint_claim(airport_slot_use_it_or_lose_it, snare).
 narrative_ontology:topic_domain(airport_slot_use_it_or_lose_it, "economic").
 narrative_ontology:human_readable(airport_slot_use_it_or_lose_it, "\"Use-it-or-lose-it\" rule for airport landing slots").
 

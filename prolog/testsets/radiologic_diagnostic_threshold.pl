@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(radiologic_diagnostic_threshold, theater_ra
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be an objective, scientific fact (a Mountain).
-narrative_ontology:constraint_claim(radiologic_diagnostic_threshold, tangled_rope).
+narrative_ontology:constraint_claim(radiologic_diagnostic_threshold, snare).
 narrative_ontology:human_readable(radiologic_diagnostic_threshold, "The Radiologic Diagnostic Threshold").
 narrative_ontology:topic_domain(radiologic_diagnostic_threshold, "medical/technological/legal").
 

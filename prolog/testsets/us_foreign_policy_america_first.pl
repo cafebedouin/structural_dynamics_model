@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(us_foreign_policy_america_first, theater_ra
 % Not a mountain constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_foreign_policy_america_first, tangled_rope).
+narrative_ontology:constraint_claim(us_foreign_policy_america_first, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_foreign_policy_america_first). % Required for Tangled Rope. Enforced via tariffs, sanctions, treaty withdrawals.

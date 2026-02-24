@@ -80,7 +80,7 @@ narrative_ontology:constraint_metric(average_is_over_2026, theater_ratio, 0.42).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a pure meritocratic coordination mechanism.
-narrative_ontology:constraint_claim(average_is_over_2026, tangled_rope).
+narrative_ontology:constraint_claim(average_is_over_2026, snare).
 narrative_ontology:human_readable(average_is_over_2026, "The AI-Talent Barbell Economy").
 narrative_ontology:topic_domain(average_is_over_2026, "economic/technological").
 

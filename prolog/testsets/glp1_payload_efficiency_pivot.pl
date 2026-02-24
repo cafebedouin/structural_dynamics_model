@@ -61,7 +61,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(glp1_market_impact_2026, 2024, 2030).
-narrative_ontology:constraint_claim(glp1_payload_efficiency_pivot, rope).
+narrative_ontology:constraint_claim(glp1_payload_efficiency_pivot, scaffold).
 narrative_ontology:human_readable(glp1_payload_efficiency_pivot, "GLP-1 Adoption and the Airline Fuel-Weight Constraint").
 narrative_ontology:topic_domain(glp1_payload_efficiency_pivot, "economic/technological").
 

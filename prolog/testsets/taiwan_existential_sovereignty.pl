@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(taiwan_existential_sovereignty, theater_rat
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The geopolitical arrangement is maintained by active pressure and deterrence.
-narrative_ontology:constraint_claim(taiwan_existential_sovereignty, tangled_rope).
+narrative_ontology:constraint_claim(taiwan_existential_sovereignty, snare).
 narrative_ontology:human_readable(taiwan_existential_sovereignty, "The Taiwan Existential Sovereignty Constraint").
 narrative_ontology:topic_domain(taiwan_existential_sovereignty, "political/economic/technological").
 

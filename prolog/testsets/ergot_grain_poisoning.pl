@@ -63,7 +63,7 @@ narrative_ontology:constraint_metric(ergot_grain_poisoning, theater_ratio, 0.10)
 % Constraint self-claim (what does the constraint claim to be?)
 % It was framed as a natural, unavoidable tragedy (natural_law), but the
 % distribution system was a human construction.
-narrative_ontology:constraint_claim(ergot_grain_poisoning, tangled_rope).
+narrative_ontology:constraint_claim(ergot_grain_poisoning, snare).
 narrative_ontology:human_readable(ergot_grain_poisoning, "The Ergot/Famine Dilemma").
 narrative_ontology:topic_domain(ergot_grain_poisoning, "social/technological/biological").
 

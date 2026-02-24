@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(suanne_face_restoration, theater_ratio, 0.1
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The dynamic is a constructed social enforcement mechanism, not a natural state.
-narrative_ontology:constraint_claim(suanne_face_restoration, tangled_rope).
+narrative_ontology:constraint_claim(suanne_face_restoration, snare).
 narrative_ontology:human_readable(suanne_face_restoration, "The Coup of Positive Politeness").
 narrative_ontology:topic_domain(suanne_face_restoration, "social").
 

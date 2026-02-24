@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(meta_governance_overload, suppression_requi
 narrative_ontology:constraint_metric(meta_governance_overload, theater_ratio, 0.94).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(meta_governance_overload, piton).
+narrative_ontology:constraint_claim(meta_governance_overload, snare).
 narrative_ontology:human_readable(meta_governance_overload, "The Infinite Red-Tape Recursive").
 narrative_ontology:topic_domain(meta_governance_overload, "organizational/political/technological").
 

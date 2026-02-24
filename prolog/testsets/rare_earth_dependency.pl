@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(rare_earth_dependency, theater_ratio, 0.20)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(rare_earth_dependency, tangled_rope).
+narrative_ontology:constraint_claim(rare_earth_dependency, snare).
 narrative_ontology:human_readable(rare_earth_dependency, "Strategic Rare Earth Element Dependency").
 narrative_ontology:topic_domain(rare_earth_dependency, "economic/geopolitical").
 

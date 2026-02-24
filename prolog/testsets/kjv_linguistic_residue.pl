@@ -83,7 +83,7 @@ narrative_ontology:constraint_metric(kjv_linguistic_residue, suppression_require
 narrative_ontology:constraint_metric(kjv_linguistic_residue, theater_ratio, 0.85).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(kjv_linguistic_residue, piton).
+narrative_ontology:constraint_claim(kjv_linguistic_residue, rope).
 narrative_ontology:human_readable(kjv_linguistic_residue, "The KJV Aesthetic as a Cognitive Constraint").
 narrative_ontology:topic_domain(kjv_linguistic_residue, "linguistic/cultural").
 

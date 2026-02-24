@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(consensus_without_truth, suppression_requir
 narrative_ontology:constraint_metric(consensus_without_truth, theater_ratio, 0.65).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(consensus_without_truth, tangled_rope).
+narrative_ontology:constraint_claim(consensus_without_truth, snare).
 narrative_ontology:human_readable(consensus_without_truth, "The Social Cohesion Mirage").
 narrative_ontology:topic_domain(consensus_without_truth, "social/political/informational").
 

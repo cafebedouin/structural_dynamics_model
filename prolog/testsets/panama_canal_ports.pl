@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(panama_canal_ports, theater_ratio, 0.20).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(panama_canal_ports, tangled_rope).
+narrative_ontology:constraint_claim(panama_canal_ports, snare).
 narrative_ontology:human_readable(panama_canal_ports, "Panama Canal Port Control").
 narrative_ontology:topic_domain(panama_canal_ports, "political/economic").
 

@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(guinea_junta_legitimization_2024, suppressi
 narrative_ontology:constraint_metric(guinea_junta_legitimization_2024, theater_ratio, 0.35).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(guinea_junta_legitimization_2024, tangled_rope).
+narrative_ontology:constraint_claim(guinea_junta_legitimization_2024, snare).
 narrative_ontology:human_readable(guinea_junta_legitimization_2024, "Legitimization of Guinea's 2021 Military Coup").
 narrative_ontology:topic_domain(guinea_junta_legitimization_2024, "political").
 

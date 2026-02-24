@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(nero_imperial_expropriation, suppression_re
 narrative_ontology:constraint_metric(nero_imperial_expropriation, theater_ratio, 0.55).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(nero_imperial_expropriation, tangled_rope).
+narrative_ontology:constraint_claim(nero_imperial_expropriation, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(nero_imperial_expropriation). % Required for Tangled Rope

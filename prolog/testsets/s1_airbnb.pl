@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(airbnb_str_regulation, theater_ratio, 0.15)
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(airbnb_str_regulation, tangled_rope).
+narrative_ontology:constraint_claim(airbnb_str_regulation, snare).
 narrative_ontology:human_readable(airbnb_str_regulation, "Short-Term Rental (STR) Regulatory Framework").
 narrative_ontology:topic_domain(airbnb_str_regulation, "economic/political").
 

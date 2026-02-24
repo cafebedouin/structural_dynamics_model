@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(critical_actor_overcentralization, suppress
 narrative_ontology:constraint_metric(critical_actor_overcentralization, theater_ratio, 0.93).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(critical_actor_overcentralization, tangled_rope).
+narrative_ontology:constraint_claim(critical_actor_overcentralization, snare).
 narrative_ontology:human_readable(critical_actor_overcentralization, "The Single Point of Failure").
 narrative_ontology:topic_domain(critical_actor_overcentralization, "logistical/technological/economic").
 

@@ -80,7 +80,7 @@ narrative_ontology:constraint_metric(fb_creator_monetization_indonesia, suppress
 narrative_ontology:constraint_metric(fb_creator_monetization_indonesia, theater_ratio, 0.40).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(fb_creator_monetization_indonesia, tangled_rope).
+narrative_ontology:constraint_claim(fb_creator_monetization_indonesia, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(fb_creator_monetization_indonesia). % Algorithmic management, policy updates, payment processing.

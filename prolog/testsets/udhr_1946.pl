@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(udhr_1948, suppression_requirement, 0.20).
 narrative_ontology:constraint_metric(udhr_1948, theater_ratio, 0.16).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(udhr_1948, rope).
+narrative_ontology:constraint_claim(udhr_1948, tangled_rope).
 narrative_ontology:human_readable(udhr_1948, "Universal Declaration of Human Rights (1948)").
 narrative_ontology:topic_domain(udhr_1948, "political/legal").
 

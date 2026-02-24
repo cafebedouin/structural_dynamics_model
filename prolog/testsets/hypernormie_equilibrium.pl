@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(hypernormie_equilibrium, theater_ratio, 0.8
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination tool for "discovery" and "personalization".
-narrative_ontology:constraint_claim(hypernormie_equilibrium, tangled_rope).
+narrative_ontology:constraint_claim(hypernormie_equilibrium, snare).
 narrative_ontology:human_readable(hypernormie_equilibrium, "The Algorithmic Mean Trap").
 narrative_ontology:topic_domain(hypernormie_equilibrium, "social/technological").
 

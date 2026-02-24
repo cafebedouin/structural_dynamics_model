@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(institutional_mutation_without_selection, t
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The institution claims to be a coordination mechanism for public good.
-narrative_ontology:constraint_claim(institutional_mutation_without_selection, tangled_rope).
+narrative_ontology:constraint_claim(institutional_mutation_without_selection, snare).
 narrative_ontology:human_readable(institutional_mutation_without_selection, "The Zombie Bureaucracy Drift").
 narrative_ontology:topic_domain(institutional_mutation_without_selection, "organizational/political").
 

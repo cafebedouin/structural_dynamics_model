@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(trump_second_term_authoritarianism_2026, th
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The regime claims its actions are necessary for law and order.
-narrative_ontology:constraint_claim(trump_second_term_authoritarianism_2026, tangled_rope).
+narrative_ontology:constraint_claim(trump_second_term_authoritarianism_2026, snare).
 narrative_ontology:human_readable(trump_second_term_authoritarianism_2026, "Electoral Authoritarianism (Trump II, Year One)").
 narrative_ontology:topic_domain(trump_second_term_authoritarianism_2026, "political").
 

@@ -75,7 +75,7 @@ narrative_ontology:constraint_metric(cz_plea_agreement_2026, suppression_require
 narrative_ontology:constraint_metric(cz_plea_agreement_2026, theater_ratio, 0.25).
 
 % Constraint self-claim: The plea deal is an enforcement action claiming to coordinate AML standards.
-narrative_ontology:constraint_claim(cz_plea_agreement_2026, tangled_rope).
+narrative_ontology:constraint_claim(cz_plea_agreement_2026, snare).
 narrative_ontology:human_readable(cz_plea_agreement_2026, "CZ and Binance Global Regulatory Settlement").
 narrative_ontology:topic_domain(cz_plea_agreement_2026, "economic/political/legal").
 

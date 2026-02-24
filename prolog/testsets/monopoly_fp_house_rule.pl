@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric(monopoly_fp_house_rule, suppression_require
 narrative_ontology:constraint_metric(monopoly_fp_house_rule, theater_ratio, 0.30).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(monopoly_fp_house_rule, snare).
+narrative_ontology:constraint_claim(monopoly_fp_house_rule, tangled_rope).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(monopoly_fp_house_rule). % Required for Tangled Rope

@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(dk_foreign_convict_expulsion, theater_ratio
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(dk_foreign_convict_expulsion, tangled_rope).
+narrative_ontology:constraint_claim(dk_foreign_convict_expulsion, snare).
 narrative_ontology:human_readable(dk_foreign_convict_expulsion, "Denmark's Foreign Convict Expulsion Law").
 narrative_ontology:topic_domain(dk_foreign_convict_expulsion, "political/social").
 

@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(individual_vs_systemic_causation, suppressi
 narrative_ontology:constraint_metric(individual_vs_systemic_causation, theater_ratio, 0.4).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(individual_vs_systemic_causation, tangled_rope).
+narrative_ontology:constraint_claim(individual_vs_systemic_causation, snare).
 narrative_ontology:human_readable(individual_vs_systemic_causation, "Individual vs. Systemic Causation in Public Health").
 narrative_ontology:topic_domain(individual_vs_systemic_causation, "public_health/policy").
 

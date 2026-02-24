@@ -61,7 +61,7 @@ narrative_ontology:constraint_metric(decentralized_infrastructure_rope, suppress
 narrative_ontology:constraint_metric(decentralized_infrastructure_rope, theater_ratio, 0.02).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(decentralized_infrastructure_rope, tangled_rope).
+narrative_ontology:constraint_claim(decentralized_infrastructure_rope, rope).
 narrative_ontology:human_readable(decentralized_infrastructure_rope, "The Auditable Bridge").
 narrative_ontology:topic_domain(decentralized_infrastructure_rope, "technological/social").
 

@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(governance_overfitting, suppression_require
 narrative_ontology:constraint_metric(governance_overfitting, theater_ratio, 0.45).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(governance_overfitting, tangled_rope).
+narrative_ontology:constraint_claim(governance_overfitting, snare).
 narrative_ontology:human_readable(governance_overfitting, "Hyper-Specific Compliance Lock-in").
 narrative_ontology:topic_domain(governance_overfitting, "political/technological").
 

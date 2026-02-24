@@ -95,7 +95,7 @@ narrative_ontology:constraint_metric(openbsd_netiquette_protocol, suppression_re
 narrative_ontology:constraint_metric(openbsd_netiquette_protocol, theater_ratio, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(openbsd_netiquette_protocol, tangled_rope).
+narrative_ontology:constraint_claim(openbsd_netiquette_protocol, snare).
 narrative_ontology:human_readable(openbsd_netiquette_protocol, "OpenBSD Mailing List Netiquette Protocol").
 narrative_ontology:topic_domain(openbsd_netiquette_protocol, "technological/social").
 

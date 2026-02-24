@@ -58,7 +58,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(magna_carta_liberties, 0, 10).
-narrative_ontology:constraint_claim(magna_carta_liberties, rope).
+narrative_ontology:constraint_claim(magna_carta_liberties, tangled_rope).
 narrative_ontology:human_readable(magna_carta_liberties, "The Great Charter of Liberties").
 narrative_ontology:topic_domain(magna_carta_liberties, "political/legal").
 

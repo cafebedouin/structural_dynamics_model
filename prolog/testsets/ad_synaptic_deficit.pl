@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(ad_synaptic_deficit, suppression_requiremen
 narrative_ontology:constraint_metric(ad_synaptic_deficit, theater_ratio, 0.1).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(ad_synaptic_deficit, tangled_rope).
+narrative_ontology:constraint_claim(ad_synaptic_deficit, snare).
 narrative_ontology:human_readable(ad_synaptic_deficit, "Synaptic Liquidation (Neuro-Degenerative Debt)").
 narrative_ontology:topic_domain(ad_synaptic_deficit, "biological/technological").
 

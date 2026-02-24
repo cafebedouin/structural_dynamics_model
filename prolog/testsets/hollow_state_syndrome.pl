@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(hollow_state_syndrome, suppression_requirem
 narrative_ontology:constraint_metric(hollow_state_syndrome, theater_ratio, 0.94).
 
 % Constraint self-claim: It claims to be a more efficient coordination mechanism.
-narrative_ontology:constraint_claim(hollow_state_syndrome, piton).
+narrative_ontology:constraint_claim(hollow_state_syndrome, snare).
 narrative_ontology:human_readable(hollow_state_syndrome, "The Shell Governance Mirage").
 narrative_ontology:topic_domain(hollow_state_syndrome, "political/organizational").
 

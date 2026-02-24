@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(value_extraction_plateau, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The platform claims to be providing essential coordination infrastructure.
-narrative_ontology:constraint_claim(value_extraction_plateau, tangled_rope).
+narrative_ontology:constraint_claim(value_extraction_plateau, snare).
 narrative_ontology:human_readable(value_extraction_plateau, "The Law of Diminishing Predation").
 narrative_ontology:topic_domain(value_extraction_plateau, "economic/technological").
 

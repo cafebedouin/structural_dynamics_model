@@ -81,7 +81,7 @@ narrative_ontology:constraint_metric(orbital_data_center_2026, suppression_requi
 narrative_ontology:constraint_metric(orbital_data_center_2026, theater_ratio, 0.45).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(orbital_data_center_2026, tangled_rope).
+narrative_ontology:constraint_claim(orbital_data_center_2026, snare).
 narrative_ontology:human_readable(orbital_data_center_2026, "SpaceX Million-Satellite Orbital Compute Network").
 narrative_ontology:topic_domain(orbital_data_center_2026, "technological/geopolitical").
 

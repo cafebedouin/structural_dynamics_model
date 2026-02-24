@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(moral_outsourcing, suppression_requirement,
 narrative_ontology:constraint_metric(moral_outsourcing, theater_ratio, 0.88).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(moral_outsourcing, tangled_rope).
+narrative_ontology:constraint_claim(moral_outsourcing, snare).
 narrative_ontology:human_readable(moral_outsourcing, "The Ethical Externalization Loop").
 narrative_ontology:topic_domain(moral_outsourcing, "social/economic/technological").
 

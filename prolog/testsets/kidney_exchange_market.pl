@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(kidney_exchange_market, 0, 10).
-narrative_ontology:constraint_claim(kidney_exchange_market, rope).
+narrative_ontology:constraint_claim(kidney_exchange_market, tangled_rope).
 narrative_ontology:human_readable(kidney_exchange_market, "Kidney Exchange Cycles/Chains").
 narrative_ontology:topic_domain(kidney_exchange_market, "social/technological/biological").
 

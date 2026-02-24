@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(overfitting_to_frameworks, suppression_requ
 narrative_ontology:constraint_metric(overfitting_to_frameworks, theater_ratio, 0.82).
 
 % Constraint self-claim: The framework claims to be a coordination tool for quality.
-narrative_ontology:constraint_claim(overfitting_to_frameworks, tangled_rope).
+narrative_ontology:constraint_claim(overfitting_to_frameworks, snare).
 narrative_ontology:human_readable(overfitting_to_frameworks, "The Rigidity of the Map").
 narrative_ontology:topic_domain(overfitting_to_frameworks, "technological/cognitive/organizational").
 

@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(delayed_feedback_instability, theater_ratio
 
 % Constraint self-claim: The system presents its dynamics as an unavoidable
 % consequence of complex interactions, a natural law of feedback.
-narrative_ontology:constraint_claim(delayed_feedback_instability, tangled_rope).
+narrative_ontology:constraint_claim(delayed_feedback_instability, snare).
 narrative_ontology:human_readable(delayed_feedback_instability, "The Oscillation Trap").
 narrative_ontology:topic_domain(delayed_feedback_instability, "systems_engineering/economics/ecology").
 

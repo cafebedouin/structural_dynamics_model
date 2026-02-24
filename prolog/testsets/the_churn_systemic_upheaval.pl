@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(the_churn_systemic_upheaval, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Rationale: It is presented as an inevitable force of nature ("Like water's wet. Sky's up").
-narrative_ontology:constraint_claim(the_churn_systemic_upheaval, snare).
+narrative_ontology:constraint_claim(the_churn_systemic_upheaval, tangled_rope).
 narrative_ontology:human_readable(the_churn_systemic_upheaval, "The Churn (Systemic Collapse and Rebirth)").
 narrative_ontology:topic_domain(the_churn_systemic_upheaval, "political/social/economic").
 

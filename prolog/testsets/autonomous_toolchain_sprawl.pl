@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(autonomous_toolchain_sprawl, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The toolchain is presented as an essential coordination mechanism.
-narrative_ontology:constraint_claim(autonomous_toolchain_sprawl, piton).
+narrative_ontology:constraint_claim(autonomous_toolchain_sprawl, snare).
 narrative_ontology:human_readable(autonomous_toolchain_sprawl, "The Recursive Maintenance Trap").
 narrative_ontology:topic_domain(autonomous_toolchain_sprawl, "technological").
 

@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(russells_paradox_self_reference, theater_ra
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The paradox doesn't "claim" anything, but its discovery reveals a fundamental, unchangeable feature of logic.
-narrative_ontology:constraint_claim(russells_paradox_self_reference, snare).
+narrative_ontology:constraint_claim(russells_paradox_self_reference, tangled_rope).
 narrative_ontology:human_readable(russells_paradox_self_reference, "Russell's Paradox (Naive Set Theory Collapse)").
 narrative_ontology:topic_domain(russells_paradox_self_reference, "mathematical/logical").
 

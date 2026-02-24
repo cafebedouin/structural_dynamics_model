@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(adversarial_surface_inflation, suppression_
 narrative_ontology:constraint_metric(adversarial_surface_inflation, theater_ratio, 0.89).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(adversarial_surface_inflation, tangled_rope).
+narrative_ontology:constraint_claim(adversarial_surface_inflation, snare).
 narrative_ontology:human_readable(adversarial_surface_inflation, "The Infinite Vulnerability Horizon").
 narrative_ontology:topic_domain(adversarial_surface_inflation, "technological/cybernetic/security").
 

@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(bor_tax_exemption_nl, suppression_requireme
 narrative_ontology:constraint_metric(bor_tax_exemption_nl, theater_ratio, 0.40).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(bor_tax_exemption_nl, tangled_rope).
+narrative_ontology:constraint_claim(bor_tax_exemption_nl, snare).
 narrative_ontology:human_readable(bor_tax_exemption_nl, "Dutch Business Succession Scheme (BOR)").
 narrative_ontology:topic_domain(bor_tax_exemption_nl, "economic/political").
 

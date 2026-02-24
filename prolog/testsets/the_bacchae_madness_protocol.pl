@@ -77,7 +77,7 @@ narrative_ontology:constraint_metric(the_bacchae_madness_protocol, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Dionysus presents his power not as a choice but as a fundamental, divine law of nature.
-narrative_ontology:constraint_claim(the_bacchae_madness_protocol, tangled_rope).
+narrative_ontology:constraint_claim(the_bacchae_madness_protocol, snare).
 narrative_ontology:human_readable(the_bacchae_madness_protocol, "The Dionysian Mandate of Ecstasy").
 narrative_ontology:topic_domain(the_bacchae_madness_protocol, "religious/political/social").
 

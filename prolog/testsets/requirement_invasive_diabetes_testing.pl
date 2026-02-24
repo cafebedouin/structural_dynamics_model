@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(requirement_invasive_diabetes_testing, thea
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(requirement_invasive_diabetes_testing, tangled_rope).
+narrative_ontology:constraint_claim(requirement_invasive_diabetes_testing, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(requirement_invasive_diabetes_testing). % Required for Tangled Rope

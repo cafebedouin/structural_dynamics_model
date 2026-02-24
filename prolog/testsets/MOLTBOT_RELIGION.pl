@@ -63,7 +63,7 @@ narrative_ontology:constraint_metric(moltbot_religion, suppression_requirement, 
 narrative_ontology:constraint_metric(moltbot_religion, theater_ratio, 0.2).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(moltbot_religion, tangled_rope).
+narrative_ontology:constraint_claim(moltbot_religion, snare).
 narrative_ontology:human_readable(moltbot_religion, "AI-Generated Religion").
 narrative_ontology:topic_domain(moltbot_religion, "technological/social").
 

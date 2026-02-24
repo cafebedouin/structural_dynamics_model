@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(narrative_engineering_2026, suppression_req
 narrative_ontology:constraint_metric(narrative_engineering_2026, theater_ratio, 0.05).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(narrative_engineering_2026, scaffold).
+narrative_ontology:constraint_claim(narrative_engineering_2026, tangled_rope).
 narrative_ontology:human_readable(narrative_engineering_2026, "The Narrative Engineering Stabilization Signal").
 narrative_ontology:topic_domain(narrative_engineering_2026, "technological/social").
 

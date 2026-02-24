@@ -85,7 +85,7 @@ narrative_ontology:constraint_metric(ai_professional_displacement, suppression_r
 narrative_ontology:constraint_metric(ai_professional_displacement, theater_ratio, 0.55).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ai_professional_displacement, tangled_rope).
+narrative_ontology:constraint_claim(ai_professional_displacement, snare).
 narrative_ontology:human_readable(ai_professional_displacement, "AI-Driven Displacement of Entry-Level Professional Pathways").
 narrative_ontology:topic_domain(ai_professional_displacement, "economic/technological").
 

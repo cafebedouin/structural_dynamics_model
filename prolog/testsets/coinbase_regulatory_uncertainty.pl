@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(coinbase_regulatory_uncertainty, suppressio
 narrative_ontology:constraint_metric(coinbase_regulatory_uncertainty, theater_ratio, 0.10).
 
 % The regulatory framework claims to be a mechanism for investor protection and market stability.
-narrative_ontology:constraint_claim(coinbase_regulatory_uncertainty, tangled_rope).
+narrative_ontology:constraint_claim(coinbase_regulatory_uncertainty, snare).
 narrative_ontology:human_readable(coinbase_regulatory_uncertainty, "Crypto-Regulatory Ambiguity (Howey Test Application)").
 narrative_ontology:topic_domain(coinbase_regulatory_uncertainty, "political/economic").
 

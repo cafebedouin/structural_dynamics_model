@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(invisible_infrastructure_dependency, suppre
 narrative_ontology:constraint_metric(invisible_infrastructure_dependency, theater_ratio, 0.91).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(invisible_infrastructure_dependency, piton).
+narrative_ontology:constraint_claim(invisible_infrastructure_dependency, snare).
 narrative_ontology:human_readable(invisible_infrastructure_dependency, "The Submerged Substrate Trap").
 narrative_ontology:topic_domain(invisible_infrastructure_dependency, "technological/logistical/economic").
 

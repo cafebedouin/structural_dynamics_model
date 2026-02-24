@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(status_flattening_effect, suppression_requi
 narrative_ontology:constraint_metric(status_flattening_effect, theater_ratio, 0.68).
 
 % The platform claims this is a necessary coordination tool for legibility.
-narrative_ontology:constraint_claim(status_flattening_effect, tangled_rope).
+narrative_ontology:constraint_claim(status_flattening_effect, snare).
 narrative_ontology:human_readable(status_flattening_effect, "The Algorithmic Leveler").
 narrative_ontology:topic_domain(status_flattening_effect, "social/technological/economic").
 

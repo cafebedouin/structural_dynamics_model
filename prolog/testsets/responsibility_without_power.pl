@@ -74,7 +74,7 @@ narrative_ontology:constraint_metric(responsibility_without_power, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be an enforcement mechanism for compliance, but is a constructed trap.
-narrative_ontology:constraint_claim(responsibility_without_power, tangled_rope).
+narrative_ontology:constraint_claim(responsibility_without_power, snare).
 narrative_ontology:human_readable(responsibility_without_power, "The Scapegoat Architecture").
 narrative_ontology:topic_domain(responsibility_without_power, "organizational/legal/socio-economic").
 

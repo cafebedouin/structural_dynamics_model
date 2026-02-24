@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(civilizational_lifecycle_solara, suppressio
 narrative_ontology:constraint_metric(civilizational_lifecycle_solara, theater_ratio, 0.80).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(civilizational_lifecycle_solara, tangled_rope).
+narrative_ontology:constraint_claim(civilizational_lifecycle_solara, snare).
 narrative_ontology:human_readable(civilizational_lifecycle_solara, "The Lifecycle of Solaran Civilization").
 narrative_ontology:topic_domain(civilizational_lifecycle_solara, "social/political").
 

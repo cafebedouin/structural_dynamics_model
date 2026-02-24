@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(maha_recovery_2026, suppression_requirement
 narrative_ontology:constraint_metric(maha_recovery_2026, theater_ratio, 0.65).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(maha_recovery_2026, scaffold).
+narrative_ontology:constraint_claim(maha_recovery_2026, tangled_rope).
 narrative_ontology:human_readable(maha_recovery_2026, "The MAHA Initiative (Great American Recovery)").
 narrative_ontology:topic_domain(maha_recovery_2026, "health/agriculture").
 

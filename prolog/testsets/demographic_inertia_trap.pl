@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(demographic_inertia_trap, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a social contract for elder care.
-narrative_ontology:constraint_claim(demographic_inertia_trap, tangled_rope).
+narrative_ontology:constraint_claim(demographic_inertia_trap, snare).
 narrative_ontology:human_readable(demographic_inertia_trap, "The Generational Wealth Siphon").
 narrative_ontology:topic_domain(demographic_inertia_trap, "social/economic").
 

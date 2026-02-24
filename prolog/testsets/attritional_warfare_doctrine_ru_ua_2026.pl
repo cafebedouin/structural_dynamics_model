@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(attritional_warfare_doctrine_ru_ua_2026, su
 narrative_ontology:constraint_metric(attritional_warfare_doctrine_ru_ua_2026, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(attritional_warfare_doctrine_ru_ua_2026, tangled_rope).
+narrative_ontology:constraint_claim(attritional_warfare_doctrine_ru_ua_2026, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(attritional_warfare_doctrine_ru_ua_2026). % Required for Tangled Rope

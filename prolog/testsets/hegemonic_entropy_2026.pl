@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(hegemonic_entropy_2026, suppression_require
 narrative_ontology:constraint_metric(hegemonic_entropy_2026, theater_ratio, 0.78).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(hegemonic_entropy_2026, piton).
+narrative_ontology:constraint_claim(hegemonic_entropy_2026, tangled_rope).
 narrative_ontology:human_readable(hegemonic_entropy_2026, "The Asymmetry of Hegemonic Decay").
 narrative_ontology:topic_domain(hegemonic_entropy_2026, "economic/political").
 

@@ -109,7 +109,7 @@ narrative_ontology:constraint_metric(nonstandard_arithmetic_models, accessibilit
 narrative_ontology:constraint_metric(nonstandard_arithmetic_models, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(nonstandard_arithmetic_models, mountain).
+narrative_ontology:constraint_claim(nonstandard_arithmetic_models, scaffold).
 narrative_ontology:human_readable(nonstandard_arithmetic_models, "Existence of Nonstandard Models of Arithmetic").
 narrative_ontology:topic_domain(nonstandard_arithmetic_models, "mathematical/logical").
 

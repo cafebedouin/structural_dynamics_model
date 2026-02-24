@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(signal_without_control, suppression_require
 narrative_ontology:constraint_metric(signal_without_control, theater_ratio, 0.85).
 
 % The platform claims this is a coordination tool for providing information.
-narrative_ontology:constraint_claim(signal_without_control, tangled_rope).
+narrative_ontology:constraint_claim(signal_without_control, snare).
 narrative_ontology:human_readable(signal_without_control, "The Passive Observational Trap").
 narrative_ontology:topic_domain(signal_without_control, "technological/social").
 

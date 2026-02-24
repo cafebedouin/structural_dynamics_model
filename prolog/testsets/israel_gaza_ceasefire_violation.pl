@@ -62,7 +62,7 @@ narrative_ontology:constraint_metric(israel_gaza_ceasefire_violation, suppressio
 narrative_ontology:constraint_metric(israel_gaza_ceasefire_violation, theater_ratio, 0.2).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(israel_gaza_ceasefire_violation, tangled_rope).
+narrative_ontology:constraint_claim(israel_gaza_ceasefire_violation, snare).
 narrative_ontology:human_readable(israel_gaza_ceasefire_violation, "Israel-Gaza Ceasefire Violation").
 narrative_ontology:topic_domain(israel_gaza_ceasefire_violation, "political").
 

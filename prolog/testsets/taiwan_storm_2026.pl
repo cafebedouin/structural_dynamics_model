@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(taiwan_storm_2026, theater_ratio, 0.45).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Beijing frames the pressure as necessary "coordination" for national reunification.
-narrative_ontology:constraint_claim(taiwan_storm_2026, tangled_rope).
+narrative_ontology:constraint_claim(taiwan_storm_2026, snare).
 narrative_ontology:topic_domain(taiwan_storm_2026, "geopolitical/political").
 narrative_ontology:human_readable(taiwan_storm_2026, "The 2026 Taiwan \"Perfect Storm\" Geopolitical Convergence").
 

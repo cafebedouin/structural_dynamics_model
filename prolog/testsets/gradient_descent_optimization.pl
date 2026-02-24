@@ -101,7 +101,7 @@ narrative_ontology:constraint_metric(gradient_descent_optimization, accessibilit
 narrative_ontology:constraint_metric(gradient_descent_optimization, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(gradient_descent_optimization, rope).
+narrative_ontology:constraint_claim(gradient_descent_optimization, tangled_rope).
 narrative_ontology:human_readable(gradient_descent_optimization, "Gradient Descent Iterative Optimization").
 narrative_ontology:topic_domain(gradient_descent_optimization, "technological/mathematical").
 

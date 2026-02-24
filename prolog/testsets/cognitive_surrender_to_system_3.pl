@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(cognitive_surrender_to_system_3, theater_ra
 % Constraint self-claim (what does the constraint claim to be?)
 % The system is presented as a coordination/efficiency tool, but its effect is
 % enforcement of a new cognitive pattern.
-narrative_ontology:constraint_claim(cognitive_surrender_to_system_3, tangled_rope).
+narrative_ontology:constraint_claim(cognitive_surrender_to_system_3, snare).
 narrative_ontology:human_readable(cognitive_surrender_to_system_3, "Cognitive Surrender to External AI Reasoning Systems").
 narrative_ontology:topic_domain(cognitive_surrender_to_system_3, "technological/cognitive").
 

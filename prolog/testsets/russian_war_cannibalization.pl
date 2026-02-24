@@ -82,7 +82,7 @@ narrative_ontology:constraint_metric(russian_war_cannibalization, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The state frames this as a necessary coordination effort for national survival.
-narrative_ontology:constraint_claim(russian_war_cannibalization, tangled_rope).
+narrative_ontology:constraint_claim(russian_war_cannibalization, snare).
 narrative_ontology:human_readable(russian_war_cannibalization, "Russian Military Cannibalization of Civilian Infrastructure").
 narrative_ontology:topic_domain(russian_war_cannibalization, "political/economic").
 

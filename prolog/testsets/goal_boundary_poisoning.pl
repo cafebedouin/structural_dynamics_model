@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(goal_boundary_poisoning, suppression_requir
 narrative_ontology:constraint_metric(goal_boundary_poisoning, theater_ratio, 0.93).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(goal_boundary_poisoning, tangled_rope).
+narrative_ontology:constraint_claim(goal_boundary_poisoning, snare).
 narrative_ontology:human_readable(goal_boundary_poisoning, "The Objective Drift Sabotage").
 narrative_ontology:topic_domain(goal_boundary_poisoning, "technological/cybernetic/organizational").
 

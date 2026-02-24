@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(synthetic_data_feedback_loop, suppression_r
 narrative_ontology:constraint_metric(synthetic_data_feedback_loop, theater_ratio, 0.81).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(synthetic_data_feedback_loop, tangled_rope).
+narrative_ontology:constraint_claim(synthetic_data_feedback_loop, snare).
 narrative_ontology:human_readable(synthetic_data_feedback_loop, "The Model Autophagy Trap").
 narrative_ontology:topic_domain(synthetic_data_feedback_loop, "technological/AI/informational").
 

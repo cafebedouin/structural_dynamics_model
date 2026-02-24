@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(venezuela_oil_privatization_v1, theater_rat
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(venezuela_oil_privatization_v1, tangled_rope).
+narrative_ontology:constraint_claim(venezuela_oil_privatization_v1, snare).
 narrative_ontology:human_readable(venezuela_oil_privatization_v1, "Shadow Privatization of Venezuela's Oil Sector").
 narrative_ontology:topic_domain(venezuela_oil_privatization_v1, "geopolitical/economic").
 

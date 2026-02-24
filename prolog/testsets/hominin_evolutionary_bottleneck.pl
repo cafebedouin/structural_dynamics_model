@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(hominin_evolutionary_bottleneck, theater_ra
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The scientific consensus is a constructed framework based on evidence.
-narrative_ontology:constraint_claim(hominin_evolutionary_bottleneck, rope).
+narrative_ontology:constraint_claim(hominin_evolutionary_bottleneck, tangled_rope).
 narrative_ontology:human_readable(hominin_evolutionary_bottleneck, "The Hominin Evolutionary Bottleneck & Replacement Event").
 narrative_ontology:topic_domain(hominin_evolutionary_bottleneck, "scientific/biological").
 

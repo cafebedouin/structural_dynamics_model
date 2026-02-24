@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(absorbing_markov_chain_trap, theater_ratio,
 % narrative_ontology:constraint_metric(absorbing_markov_chain_trap, resistance, [0.0-0.15]).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(absorbing_markov_chain_trap, snare).
+narrative_ontology:constraint_claim(absorbing_markov_chain_trap, tangled_rope).
 narrative_ontology:human_readable(absorbing_markov_chain_trap, "State Space Trap in Absorbing Markov Chain").
 narrative_ontology:topic_domain(absorbing_markov_chain_trap, "technological").
 

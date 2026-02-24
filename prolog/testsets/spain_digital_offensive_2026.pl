@@ -74,7 +74,7 @@ narrative_ontology:constraint_metric(spain_digital_offensive_2026, suppression_r
 narrative_ontology:constraint_metric(spain_digital_offensive_2026, theater_ratio, 0.40).
 
 % Constraint self-claim: The state frames this as a necessary act of enforcement.
-narrative_ontology:constraint_claim(spain_digital_offensive_2026, tangled_rope).
+narrative_ontology:constraint_claim(spain_digital_offensive_2026, snare).
 narrative_ontology:human_readable(spain_digital_offensive_2026, "Spanish Five-Point Digital Offensive").
 narrative_ontology:topic_domain(spain_digital_offensive_2026, "political/technological/legal").
 

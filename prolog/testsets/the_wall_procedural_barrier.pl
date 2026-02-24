@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(the_wall_procedural_barrier, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claimed to be a necessary coordination mechanism to protect legal purity.
-narrative_ontology:constraint_claim(the_wall_procedural_barrier, snare).
+narrative_ontology:constraint_claim(the_wall_procedural_barrier, tangled_rope).
 narrative_ontology:topic_domain(the_wall_procedural_barrier, "legal/institutional").
 narrative_ontology:human_readable(the_wall_procedural_barrier, "The Intelligence/Law Enforcement Information Sharing Barrier (\"The Wall\")").
 

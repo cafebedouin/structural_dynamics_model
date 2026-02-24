@@ -80,7 +80,7 @@ narrative_ontology:constraint_metric(gamblers_ruin_stochastic_extinction, theate
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as an immutable law of mathematics/nature.
-narrative_ontology:constraint_claim(gamblers_ruin_stochastic_extinction, snare).
+narrative_ontology:constraint_claim(gamblers_ruin_stochastic_extinction, tangled_rope).
 narrative_ontology:human_readable(gamblers_ruin_stochastic_extinction, "Gambler's Ruin").
 narrative_ontology:topic_domain(gamblers_ruin_stochastic_extinction, "mathematical/economic").
 

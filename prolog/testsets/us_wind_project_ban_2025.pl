@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(us_wind_project_ban_2025, theater_ratio, 0.
 % This is a human-constructed policy, not a natural law. These are not applicable.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_wind_project_ban_2025, tangled_rope).
+narrative_ontology:constraint_claim(us_wind_project_ban_2025, snare).
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_wind_project_ban_2025). % Required for Tangled Rope

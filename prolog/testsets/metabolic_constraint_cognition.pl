@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(metabolic_constraint_cognition, theater_rat
 
 % The system claims the limit is a natural law, masking the constructed
 % nature of its exploitation.
-narrative_ontology:constraint_claim(metabolic_constraint_cognition, tangled_rope).
+narrative_ontology:constraint_claim(metabolic_constraint_cognition, snare).
 narrative_ontology:human_readable(metabolic_constraint_cognition, "The ATP Ceiling as an Exploitable Limit").
 narrative_ontology:topic_domain(metabolic_constraint_cognition, "biological/technological/economic").
 

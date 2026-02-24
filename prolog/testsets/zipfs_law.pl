@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(zipfs_law, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(zipfs_law, theater_ratio, 0.65).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(zipfs_law, tangled_rope).
+narrative_ontology:constraint_claim(zipfs_law, snare).
 narrative_ontology:human_readable(zipfs_law, "Zipf's Law (The Power Law of Information)").
 narrative_ontology:topic_domain(zipfs_law, "technological").
 

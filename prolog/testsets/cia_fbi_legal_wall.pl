@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(cia_fbi_legal_wall, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The institutional justification was that it was a necessary coordination rule.
-narrative_ontology:constraint_claim(cia_fbi_legal_wall, tangled_rope).
+narrative_ontology:constraint_claim(cia_fbi_legal_wall, snare).
 narrative_ontology:topic_domain(cia_fbi_legal_wall, "political/legal").
 narrative_ontology:human_readable(cia_fbi_legal_wall, "The CIA/FBI Intelligence-Criminal \"Wall\" (pre-PATRIOT Act)").
 

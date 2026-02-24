@@ -82,7 +82,7 @@ narrative_ontology:constraint_metric(p_g_golden_pear_surveillance, suppression_r
 narrative_ontology:constraint_metric(p_g_golden_pear_surveillance, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(p_g_golden_pear_surveillance, snare).
+narrative_ontology:constraint_claim(p_g_golden_pear_surveillance, tangled_rope).
 narrative_ontology:human_readable(p_g_golden_pear_surveillance, "Procter & Gamble's Golden Pear Microcontent Surveillance").
 narrative_ontology:topic_domain(p_g_golden_pear_surveillance, "economic").
 

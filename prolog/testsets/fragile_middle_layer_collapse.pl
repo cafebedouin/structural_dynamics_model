@@ -74,7 +74,7 @@ narrative_ontology:constraint_metric(fragile_middle_layer_collapse, theater_rati
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The platform claims this is a necessary coordination mechanism for efficiency.
-narrative_ontology:constraint_claim(fragile_middle_layer_collapse, tangled_rope).
+narrative_ontology:constraint_claim(fragile_middle_layer_collapse, snare).
 narrative_ontology:human_readable(fragile_middle_layer_collapse, "The Intermediary Decay").
 narrative_ontology:topic_domain(fragile_middle_layer_collapse, "economic/technological/logistical").
 

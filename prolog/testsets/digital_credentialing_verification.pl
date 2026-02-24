@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(digital_credentialing_verification, theater
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It is marketed as a solution to a coordination problem (slow verification).
-narrative_ontology:constraint_claim(digital_credentialing_verification, tangled_rope).
+narrative_ontology:constraint_claim(digital_credentialing_verification, snare).
 narrative_ontology:human_readable(digital_credentialing_verification, "Digital Credentialing and Identity Verification").
 narrative_ontology:topic_domain(digital_credentialing_verification, "technological/social").
 

@@ -69,7 +69,7 @@ narrative_ontology:constraint_metric(awareness_without_leverage, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(awareness_without_leverage, tangled_rope).
+narrative_ontology:constraint_claim(awareness_without_leverage, snare).
 narrative_ontology:human_readable(awareness_without_leverage, "The Cassandra Paradox").
 narrative_ontology:topic_domain(awareness_without_leverage, "social/political").
 

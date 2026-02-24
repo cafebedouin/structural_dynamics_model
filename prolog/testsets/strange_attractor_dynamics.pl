@@ -109,7 +109,7 @@ narrative_ontology:constraint_metric(strange_attractor_dynamics, suppression_req
 narrative_ontology:constraint_metric(strange_attractor_dynamics, theater_ratio, 0.01).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(strange_attractor_dynamics, snare).
+narrative_ontology:constraint_claim(strange_attractor_dynamics, tangled_rope).
 narrative_ontology:human_readable(strange_attractor_dynamics, "Strange Attractor Dynamics (Sensitive Dependence)").
 narrative_ontology:topic_domain(strange_attractor_dynamics, "mathematical/physical").
 

@@ -45,7 +45,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ai_evaluators_matching, 0, 10).
-narrative_ontology:constraint_claim(ai_evaluators_matching, tangled_rope).
+narrative_ontology:constraint_claim(ai_evaluators_matching, snare).
 narrative_ontology:human_readable(ai_evaluators_matching, "AI Talent Evaluators: Efficiency vs. Opacity in Automated Hiring").
 
 % Base Properties

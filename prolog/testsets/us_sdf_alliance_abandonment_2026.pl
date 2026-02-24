@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(us_sdf_alliance_abandonment_2026, theater_r
 % N/A for this constraint.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_sdf_alliance_abandonment_2026, tangled_rope).
+narrative_ontology:constraint_claim(us_sdf_alliance_abandonment_2026, snare).
 narrative_ontology:human_readable(us_sdf_alliance_abandonment_2026, "US Strategic Alliance Abandonment (Syria 2026)").
 narrative_ontology:topic_domain(us_sdf_alliance_abandonment_2026, "geopolitical").
 

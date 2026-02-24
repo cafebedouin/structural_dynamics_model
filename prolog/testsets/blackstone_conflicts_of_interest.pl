@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(blackstone_conflicts_of_interest, theater_r
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a necessary enforcement mechanism to resolve inherent conflicts.
-narrative_ontology:constraint_claim(blackstone_conflicts_of_interest, tangled_rope).
+narrative_ontology:constraint_claim(blackstone_conflicts_of_interest, snare).
 narrative_ontology:human_readable(blackstone_conflicts_of_interest, "Fiduciary Conflict Allocation in Blackstone S-1").
 narrative_ontology:topic_domain(blackstone_conflicts_of_interest, "corporate_governance").
 

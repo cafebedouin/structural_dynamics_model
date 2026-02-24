@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(lehman_repo_105, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It was presented as a legitimate financial coordination tool.
-narrative_ontology:constraint_claim(lehman_repo_105, tangled_rope).
+narrative_ontology:constraint_claim(lehman_repo_105, snare).
 narrative_ontology:human_readable(lehman_repo_105, "Lehman Brothers Repo 105 Accounting Maneuver").
 narrative_ontology:topic_domain(lehman_repo_105, "economic").
 

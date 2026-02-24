@@ -95,7 +95,7 @@ narrative_ontology:constraint_metric(social_narrative_casting, accessibility_col
 narrative_ontology:constraint_metric(social_narrative_casting, resistance, 0.70).             % Fails NL gate (<= 0.15). Resistance (therapy, self-awareness) is common.
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(social_narrative_casting, tangled_rope).
+narrative_ontology:constraint_claim(social_narrative_casting, rope).
 narrative_ontology:human_readable(social_narrative_casting, "Social Narrative Casting (Criticism-as-Projection)").
 narrative_ontology:topic_domain(social_narrative_casting, "social/psychological").
 

@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(credibility_inflation, suppression_requirem
 narrative_ontology:constraint_metric(credibility_inflation, theater_ratio, 0.89).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(credibility_inflation, tangled_rope).
+narrative_ontology:constraint_claim(credibility_inflation, snare).
 narrative_ontology:human_readable(credibility_inflation, "The Meritocratic Dilution").
 narrative_ontology:topic_domain(credibility_inflation, "social/academic/economic").
 

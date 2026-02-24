@@ -92,7 +92,7 @@ narrative_ontology:constraint_metric(boom_bust_path_dependency, suppression_requ
 narrative_ontology:constraint_metric(boom_bust_path_dependency, theater_ratio, 0.78).
 
 % --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(boom_bust_path_dependency, piton).
+narrative_ontology:constraint_claim(boom_bust_path_dependency, rope).
 narrative_ontology:human_readable(boom_bust_path_dependency, "The Heritage Fund Piton (Fiscal Volatility Path)").
 narrative_ontology:topic_domain(boom_bust_path_dependency, "economic/policy").
 

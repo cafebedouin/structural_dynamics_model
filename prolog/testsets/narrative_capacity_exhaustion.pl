@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(narrative_capacity_exhaustion, suppression_
 narrative_ontology:constraint_metric(narrative_capacity_exhaustion, theater_ratio, 0.91).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(narrative_capacity_exhaustion, tangled_rope).
+narrative_ontology:constraint_claim(narrative_capacity_exhaustion, snare).
 narrative_ontology:human_readable(narrative_capacity_exhaustion, "The Storytelling Burnout").
 narrative_ontology:topic_domain(narrative_capacity_exhaustion, "social/technological").
 
