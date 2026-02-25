@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "asymmetric_computational_difficulty",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.95,
+    "claimed_type": "snare",
+    "human_readable": "Proof-of-Work Zero-Day",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "advanced_adversary"
+    ],
+    "victims": [
+      "legitimate_miners",
+      "network_users",
+      "network_security_guarantees"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Legitimate Miner",
+      "comment": "PERSPECTIVE 1: LEGITIMATE MINER (SNARE) — Trapped by massive capital investment in specialized hardware (ASICs) and energy contracts. Their computational work is rendered meaningless by the adversary's exploit, turning their effort into pure cost extracted by the adversary. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.45 (capped at 1.0)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Advanced Adversary",
+      "comment": "PERSPECTIVE 2: ADVANCED ADVERSARY (ROPE) — The adversary possesses a zero-day exploit that breaks the computational asymmetry. For them, the network is a perfect coordination mechanism that subsidizes their activity. They expend minimal effort to solve blocks, extracting the entire security budget. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.12. Negative effective extraction signifies a net subsidy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Unaware Protocol Foundation",
+      "comment": "PERSPECTIVE 3: UNAWARE PROTOCOL FOUNDATION (ROPE) — The institution maintaining the protocol is unaware of the compromise. They perceive the system as functioning according to its design specification: a fair, decentralized coordination mechanism (Rope). Their classification is based on the intended, not the actual, structure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Casual Network User",
+      "comment": "PERSPECTIVE 4: CASUAL USER (PITON) — From the user's perspective, transactions are still being processed and blocks are being added. The core function *appears* to work. However, the underlying security guarantee is completely gone. The massive expenditure of energy by legitimate miners is pure theater. With theater_ratio=0.95, this classifies as a Piton: a system maintained by inertia and performance, whose primary function has failed."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (SNARE) — The analyst sees the complete structure: a system designed as a Rope has been structurally transformed into a Snare by a secret asymmetry. The high base extractiveness (0.85) and suppression (0.90) confirm the classification. The analytical view pierces the veil of the system's claims."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "adversary_identity_and_motive",
+      "question": "Is the adversary a state actor seeking control, a rational economic actor maximizing profit, or a nihilistic actor seeking to destroy the network?",
+      "resolution_mechanism": "Attribution of the exploit through forensic analysis or intelligence gathering.",
+      "impact": "A state actor might maintain the illusion for surveillance, while an economic actor might cash out, revealing the flaw. This determines the system's lifespan and failure mode.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Determining the identity and goals of the compromising adversary."
+    },
+    {
+      "id": "exploit_discoverability",
+      "question": "Is the exploit statistically invisible, or does it leave subtle traces on the blockchain (e.g., non-uniform nonce distribution) that could be detected?",
+      "resolution_mechanism": "Advanced statistical analysis of the blockchain history by independent security researchers.",
+      "impact": "If discoverable, the Snare has a finite lifespan. If not, it could persist indefinitely, making it a 'perfect' crime.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the zero-day exploit is theoretically detectable post-facto."
+    },
+    {
+      "id": "community_fork_coordination",
+      "question": "If the exploit is revealed, can the community successfully coordinate a hard fork to a new, secure algorithm, or will the revelation cause a catastrophic collapse in trust and value?",
+      "resolution_mechanism": "Observing the community's response to the revelation, including developer consensus, miner signaling, and market reaction.",
+      "impact": "Successful coordination would transform the Snare into a Scaffold (the fork is a temporary measure). Failure means the entire ecosystem collapses.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The capacity of the decentralized community to respond to a fundamental security breach."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.95
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.85
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models a Proof-of-Work (PoW) based coordination system (e.g., a cryptocurrency) that has been compromised by a secret zero-day exploit. The exploit breaks the foundational 'asymmetric computational difficulty,' allowing a single advanced adversary to solve the computational puzzle with trivial effort. While the system was designed as a Rope—a fair mechanism for achieving decentralized consensus—the secret compromise has transformed it into a pure Snare. Legitimate participants continue to expend vast resources on 'mining,' but this activity is now pure theater, serving only to maintain the illusion of security while the adversary extracts the system's entire value.",
+    "key_agents": [
+      "Advanced Adversary: Primary beneficiary (institutional/arbitrage) — Possesses the exploit and can generate valid proofs with near-zero cost.",
+      "Legitimate Miners: Primary victims (powerless/trapped) — Invested heavily in specialized hardware and are locked into a competition they cannot win.",
+      "Network Users: Secondary victims (moderate/mobile) — Rely on the network's security guarantees, which are now void.",
+      "Unaware Protocol Foundation: Institutional actor (institutional/constrained) — Maintains the protocol under the false belief that it is secure.",
+      "Analytical Observer: Security researcher/cryptographer (analytical/analytical) — Can model and identify the structural failure."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.85): Extremely high. The adversary captures the entire security budget (block rewards and transaction fees) that is supposed to incentivize honest participation from a distributed network of miners. Suppression (0.90): Extremely high. The secrecy of the exploit prevents any counter-strategy. Legitimate miners are suppressed not by overt force, but by information asymmetry; they cannot opt-out of the rigged game without abandoning their sunk costs. Theater Ratio (0.95): Near total. All the energy and computation expended by legitimate miners is functionally useless for securing the network. It is a massive, performative ritual that serves only to conceal the underlying extraction.",
+    "perspectival_gap": "The gap is maximal. The adversary experiences a perfect subsidy (Rope), while the miners experience a perfect trap (Snare). The unaware maintainers see the system's blueprint (Rope), while casual users see a degraded but seemingly functional utility (Piton). This gap between the claimed function and the operational reality for different agents is the core pathology the constraint reveals.",
+    "directionality_logic": "The directionality is derived directly from the structural positions. The 'advanced_adversary' is the sole beneficiary with arbitrage exit, yielding a low 'd' value and negative effective extraction (a subsidy). The 'legitimate_miners' are victims with trapped exit, yielding a maximal 'd' value and extreme effective extraction. The unaware foundation, while institutional, is constrained and perceives itself as a symmetric participant, leading to a Rope classification from its flawed viewpoint.",
+    "mandatrophy_analysis": "This case is a classic resolution of the Mandatrophy. The system's public claim is that of a Rope (fair coordination). An analysis that only considered this claim would be dangerously wrong. By indexing to the powerless, trapped victim (the legitimate miner), the framework correctly classifies the operational reality as a Snare. The system is not a coordination mechanism with a flaw; it is an extraction mechanism disguised as a coordination mechanism. The high 'mandatrophy_resolved' flag is required because the extractiveness (0.85) is so severe that this distinction is critical."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  }
+}

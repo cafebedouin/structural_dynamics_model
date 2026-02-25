@@ -1,0 +1,158 @@
+{
+  "header": {
+    "constraint_id": "cascading_uncertainty_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-05",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.8,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Sovereignty Gap (Cascading Uncertainty)",
+    "topic_domain": "political/social/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "geopolitical_revisionists",
+      "defense_contractors",
+      "authoritarian_regimes"
+    ],
+    "victims": [
+      "global_civil_society",
+      "allied_nations_under_nuclear_umbrella",
+      "domestic_rule_of_law"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global Civil Society",
+      "comment": "PERSPECTIVE 1: GLOBAL CIVIL SOCIETY (SNARE) — Trapped in a new, more dangerous global environment. The extraction of security, stability, and predictability is total, with no recourse or exit. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.16. This is a clear Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Geopolitical Revisionist",
+      "comment": "PERSPECTIVE 2: GEOPOLITICAL REVISIONIST (ROPE) — Experiences the collapse of the rules-based order as liberation. The absence of treaties is a coordination good, enabling greater freedom of action to reshape the global order. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.098. The constraint is a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Allied Nation",
+      "comment": "PERSPECTIVE 3: ALLIED NATION (TANGLED ROPE) — Experiences both the loss of a global coordination good (strategic stability) and the direct extraction of its own security. It is constrained by alliance structures and geography but retains some agency. d≈0.65, f(d)≈1.00, σ=0.9 → χ≈0.61. This falls squarely in the Tangled Rope category."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full structure: the collapse of a prior coordination mechanism (arms control) has created a new reality defined by high, asymmetric extraction of security. The system has both coordination-failure and extraction components. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.94. This is a high-chi Tangled Rope, bordering on Snare."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Realist / Natural Law View",
+      "comment": "PERSPECTIVE 5: THE REALIST VIEW (MOUNTAIN) — This perspective naturalizes the constraint, viewing the collapse of rules as a return to the inevitable, anarchic state of great power competition. It frames a contingent political failure as a fixed law of geopolitics. The engine will identify this as a false summit, as the base properties (ε=0.68, suppression=0.80) are inconsistent with a Mountain classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "china_participation_calculus",
+      "question": "Is China's refusal to join trilateral arms control a structural feature of its rise, or a contingent policy choice that could be reversed by diplomatic or economic pressure?",
+      "resolution_mechanism": "Analysis of Chinese strategic documents; backchannel diplomatic engagement; observing reactions to US/Russian arsenal changes.",
+      "impact": "If structural, the sovereignty gap is a long-term Mountain-like feature. If contingent, a new Rope or Tangled Rope (a new treaty) is possible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether China's arms control stance is a fixed or flexible policy."
+    },
+    {
+      "id": "domestic_crisis_linkage",
+      "question": "Is the domestic enforcement crisis an independent phenomenon, or is it causally linked to geopolitical instability (e.g., leaders manufacturing a crisis to consolidate power)?",
+      "resolution_mechanism": "Correlational analysis between geopolitical tension indicators and domestic policy shifts; tracing funding and rhetoric from external actors.",
+      "impact": "If linked, the constraint is a more coherent, intentional Snare. If independent, it's a confluence of two separate system failures, making it a more chaotic Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal link between the domestic and international crises."
+    },
+    {
+      "id": "escalation_pathway_inevitability",
+      "question": "Does the absence of formal treaties inevitably lead to an arms race and conflict, or can informal norms and deterrence provide a stable (if risky) new equilibrium?",
+      "resolution_mechanism": "Game-theoretic modeling of multi-polar deterrence; historical analysis of pre-treaty eras; monitoring of arsenal development and deployment postures.",
+      "impact": "If inevitable, the Snare perspective is the most accurate long-term description. If a stable equilibrium is possible, the situation may evolve into a high-tension Rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the absence of treaties guarantees conflict."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "As of February 2026, the simultaneous expiration of the New START treaty and the intensification of a domestic enforcement crisis have created a 'sovereignty gap.' This gap is a structural condition where the erosion of both international arms control norms and domestic rule of law creates cascading uncertainty. The constraint is not a specific rule, but the *enforced absence of rules*, which fundamentally alters the risk calculus for all actors, from individuals to nation-states.",
+    "key_agents": [
+      "Global Civil Society: Primary victim (powerless/trapped) — bears the cost of decreased global security and stability.",
+      "Geopolitical Revisionists: Primary beneficiary (institutional/arbitrage) — exploits the lack of rules to advance strategic goals.",
+      "Allied Nations: Secondary victim (organized/constrained) — security is degraded, but retains some policy agency.",
+      "Defense Contractors: Secondary beneficiary (organized/mobile) — profits from the resulting arms race and instability.",
+      "Analytical Observer: Sees the full structure of collapsed coordination and asymmetric extraction."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.68) is high because the constraint extracts the public good of 'security' and 'predictability' from the global commons and transfers strategic advantage to a few actors. Suppression (0.80) is very high, as the political will and trust required to build a new treaty regime (the alternative) have been systematically dismantled. Theater (0.35) is moderate; diplomatic rituals continue, but they are increasingly decoupled from the reality of unconstrained military competition.",
+    "perspectival_gap": "The gap is profound. For revisionist powers, the lack of constraints is a liberating coordination good (Rope). For the global populace and nations reliant on the old order, it is a coercive trap that extracts their security (Snare). For allies caught in the middle, it is a dysfunctional system with remnants of coordination but dominated by extraction (Tangled Rope). The 'Realist' perspective attempts to naturalize this situation as an immutable law of physics (Mountain), but the high extraction and suppression metrics reveal this to be a false summit—a political choice, not an inevitability.",
+    "directionality_logic": "Directionality is derived from structural position. Geopolitical revisionists are beneficiaries with arbitrage exit, yielding a low 'd' and negative effective extraction (χ < 0). Global civil society is a victim with trapped exit, yielding a high 'd' and extremely high positive χ, classifying as a Snare. Allied nations are victims but with constrained exit options, placing their derived 'd' and resulting χ in the Tangled Rope category. The analytical observer's canonical 'd' also results in a Tangled Rope classification, which serves as the system's overall claim.",
+    "mandatrophy_analysis": "This constraint resolves a key mandatrophy. A naive analysis might label the situation simply as 'anarchy' (a Mountain) or 'great power competition' (a neutral framing). The DR framework disambiguates this by quantifying the immense, asymmetric extraction of security from the powerless. It demonstrates that the 'freedom of action' for the powerful (a Rope from their perspective) is structurally identical to the coercive extraction experienced by the trapped (a Snare from theirs). The system is not neutral; it is a highly extractive Tangled Rope."
+  },
+  "network": {
+    "affects_constraints": [
+      "global_economic_stability"
+    ]
+  }
+}

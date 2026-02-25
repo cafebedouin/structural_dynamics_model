@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "ad_fus_coordination",
+    "version": "1.0",
+    "generated_date": "2024-07-16",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Focused Ultrasound Alzheimer's Intervention",
+    "topic_domain": "medical/neurological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_companies",
+      "medical_device_manufacturers",
+      "research_institutions"
+    ],
+    "victims": [
+      "alzheimers_patients",
+      "healthcare_payers",
+      "competing_research_programs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Alzheimer's Patient",
+      "comment": "PERSPECTIVE 1: PATIENT (SNARE) — Facing a terminal diagnosis with few effective alternatives, the patient is structurally trapped. The high cost, unknown long-term risks of BBB opening, and reliance on a proprietary system constitute severe extraction, despite the therapeutic promise. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Technology Developer",
+      "comment": "PERSPECTIVE 2: PHARMA/DEVICE CO. (ROPE) — For the developer, FUS is a pure coordination solution. It solves the problem of delivering drugs across the blood-brain barrier, creating new markets for previously failed therapeutics. From this position of arbitrage, the system is a net benefit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Clinical Researcher",
+      "comment": "PERSPECTIVE 3: CLINICAL RESEARCHER (TANGLED ROPE) — Researchers are constrained by funding and career incentives tied to the technology. They see both the coordination function (a new tool to fight AD) and the extractive pressures (reliance on proprietary tech, pressure for positive results, ethical burden). d≈0.60, f(d)≈0.87, σ=1.0 → χ≈0.48."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes the dual nature of the constraint: a genuine coordination mechanism for therapy delivery that is structurally coupled with a high-extraction system benefiting developers at the expense of patients and payers. This is the canonical Tangled Rope. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "interval": {
+    "start": 2015,
+    "end": 2030
+  },
+  "omegas": [
+    {
+      "id": "long_term_safety",
+      "question": "What are the neurological consequences of repeated, targeted blood-brain barrier openings over a patient's remaining lifespan?",
+      "resolution_mechanism": "Longitudinal studies (10+ years) tracking cognitive decline, brain atrophy, and incidence of opportunistic infections or other pathologies in treated vs. control cohorts.",
+      "impact": "If long-term effects are negligible, the constraint's extractiveness (ε) decreases, shifting classifications toward Rope. If significant negative effects emerge, ε increases, reinforcing the Snare perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Uncertainty over long-term safety of repeated BBB opening"
+    },
+    {
+      "id": "efficacy_generalizability",
+      "question": "Is the observed plaque reduction and cognitive improvement a robust, generalizable effect, or an artifact of specific patient subgroups and trial conditions?",
+      "resolution_mechanism": "Large-scale, multi-center, double-blind, placebo-controlled trials with diverse patient populations.",
+      "impact": "High generalizability confirms a strong coordination function (Rope/Tangled Rope). Low generalizability suggests the system is more extractive, functioning as a high-cost intervention with limited benefit (Snare/Piton).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether therapeutic effects are robust and generalizable"
+    },
+    {
+      "id": "cost_benefit_threshold",
+      "question": "At what price point does the intervention shift from a justifiable therapeutic cost to an extractive burden on public and private healthcare systems?",
+      "resolution_mechanism": "Health economic analysis (QALY calculations) combined with policy debate on acceptable cost ceilings for end-of-life care.",
+      "impact": "This defines the boundary between Tangled Rope and Snare for the 'healthcare_payers' victim group. There is no single empirical answer; it depends on societal preference.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Price point at which the intervention becomes unacceptably extractive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-intensity Focused Ultrasound (FUS) for Alzheimer's Disease represents a novel therapeutic pathway that coordinates ultrasonic energy to temporarily open the blood-brain barrier (BBB), enabling enhanced drug delivery and potential plaque clearance. While promising, this intervention creates a new structural constraint system. The system has a genuine coordination function (solving the BBB delivery problem) but is coupled with significant extraction (high costs, unknown long-term risks for patients, and large profits for patent holders). The classification of this constraint is therefore highly dependent on the observer's structural position.",
+    "key_agents": [
+      "Alzheimer's Patients: Primary victims (powerless/trapped) — bear the physical risks and financial costs with few alternative treatments.",
+      "Pharmaceutical/Device Companies: Primary beneficiaries (institutional/arbitrage) — gain new markets for drugs and proprietary FUS systems.",
+      "Clinical Researchers: Secondary beneficiaries/victims (organized/constrained) — advance science and careers but are dependent on proprietary technology and funding cycles.",
+      "Healthcare Payers (Insurers/Governments): Secondary victims (institutional/constrained) — must bear the high cost of a new standard of care."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55): High. This reflects the significant financial cost of a cutting-edge procedure, the value captured by patent-holding technology developers, and the physical risks (pathogen entry, long-term effects) borne by the patient. Suppression (0.65): High. For patients with progressing Alzheimer's, effective therapeutic alternatives are scarce, creating a situation of low effective choice. Access to the technology is also suppressed by its proprietary nature and high cost, limiting it to specialized centers. Theater Ratio (0.20): Low. The mechanism is largely functional, with measurable BBB opening and plaque reduction. The theater component is minor, related to marketing and hype cycles rather than core function.",
+    "perspectival_gap": "The perspectival gap is stark. For the technology developer with arbitrage options, FUS is a Rope that solves a technical problem and creates value. For the patient trapped by their diagnosis, the same system is a Snare, offering hope at a potentially devastating cost and unknown risk. The analytical observer and clinical researcher, who can see both the coordination benefits and the extractive costs, classify it as a Tangled Rope. This divergence is not a contradiction but the core analytical output of the DR system, revealing how the same constraint is experienced differently from different structural positions.",
+    "directionality_logic": "Beneficiaries (Pharma/Device Co.) with arbitrage exit options have a very low directionality (d≈0.05), resulting in negative effective extraction (χ<0) and a Rope classification. Victims (Patients) who are trapped have the highest possible directionality (d≈0.95), leading to amplified effective extraction (χ>0.66) and a Snare classification. Agents in the middle, like researchers, have moderate directionality, leading to a Tangled Rope classification. The final classification depends entirely on which agent's perspective is adopted.",
+    "mandatrophy_analysis": "This case resolves a potential mandatrophy by refusing to label the FUS intervention as simply 'good' (Rope) or 'bad' (Snare). The Tangled Rope classification from the analytical perspective correctly identifies the dual nature of the system. It acknowledges the genuine coordination function (it helps patients) while simultaneously accounting for the asymmetric distribution of risk and reward (it helps corporations more). This prevents the mislabeling of a high-extraction medical system as a pure coordination good, while also avoiding the cynical dismissal of its real therapeutic potential."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "alzheimers_drug_approval_pipeline"
+    ]
+  }
+}

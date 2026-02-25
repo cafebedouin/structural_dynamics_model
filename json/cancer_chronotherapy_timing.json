@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "cancer_chronotherapy_timing",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Circadian Lifeline",
+    "topic_domain": "health/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "informed_patients",
+      "adopting_clinics",
+      "pharmaceutical_companies"
+    ],
+    "victims": [
+      "uninformed_patients",
+      "rigid_healthcare_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninformed Patient",
+      "comment": "PERSPECTIVE 1: UNINFORMED PATIENT (SNARE) — Trapped by the scheduling logic of their provider, they receive less effective treatment without knowing an alternative exists. The system extracts potential months or years of life due to institutional inertia. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Informed Patient",
+      "comment": "PERSPECTIVE 2: INFORMED PATIENT (ROPE) — Aware of the research, they can advocate for a morning appointment or switch providers. For them, the biological fact is a pure coordination tool to improve their own outcome. As a beneficiary with exit options, d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.005."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full structure: a genuine coordination function (timing improves efficacy) combined with severe asymmetric extraction (uninformed patients suffer). The high suppression from rigid scheduling and high extraction from lost life-years define it as a hybrid system. This is the system's claimed type."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Research Scientist",
+      "comment": "PERSPECTIVE 4: RESEARCH SCIENTIST (MOUNTAIN) — Focuses on the underlying biological mechanism. The circadian rhythm of T-cell activity is a fixed, unchangeable feature of human physiology, a 'law of nature'. The engine will flag this as a false summit, as the base properties (ε=0.55) reflect the human system's interaction with the law, not the law itself."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Overburdened Public Hospital",
+      "comment": "PERSPECTIVE 5: OVERBURDENED HOSPITAL (PITON) — Lacking the resources to reschedule all oncology patients to morning slots, the 'best practice' of chronotherapy becomes an inert, aspirational goal. It is discussed in meetings but not implemented, making it a high-theater, low-functionality constraint. theater_ratio=0.75 satisfies the piton gate (≥0.70)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Health Insurance Provider",
+      "comment": "PERSPECTIVE 6: INSURANCE PROVIDER (SCAFFOLD) — May implement a temporary incentive program for clinics to adopt chronotherapy, aiming to reduce long-term costs from less effective treatments. This program is a temporary support with a sunset clause: once chronotherapy is standard practice, the incentives are withdrawn."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "individual_chronotype_variance",
+      "question": "Is the optimal treatment window universal, or does it vary significantly based on an individual's chronotype (e.g., 'morning larks' vs. 'night owls')?",
+      "resolution_mechanism": "Personalized monitoring of patient circadian markers (e.g., cortisol, body temperature) correlated with treatment outcomes.",
+      "impact": "If universal, the constraint is a simple Rope/Snare. If individual, it becomes a far more complex Tangled Rope requiring expensive diagnostics, potentially increasing extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the optimal treatment window is universal or requires personalization."
+    },
+    {
+      "id": "systemic_reorganization_cost",
+      "question": "Is the aggregate cost of reorganizing national oncology scheduling greater than the aggregate benefit in life-years gained?",
+      "resolution_mechanism": "Large-scale health economic modeling comparing implementation costs (staffing, facilities) against long-term treatment cost savings and quality-adjusted life years (QALYs).",
+      "impact": "If benefits outweigh costs, the current system is a Snare (needless extraction). If costs outweigh benefits, the system is a tragic Mountain (an unavoidable, costly trade-off).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost-benefit analysis of systemic scheduling reorganization."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 2015,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "Cancer chronotherapy leverages a biological reality: the body's circadian rhythms modulate the immune system, causing T-cells to congregate around tumors more effectively at certain times of day (e.g., before 3 pm). This constraint story models the human healthcare system's interaction with this biological fact. While the underlying biology is a Mountain, the implementation creates a complex system of coordination and extraction. The failure to align clinical practice with this knowledge leads to measurably worse patient outcomes, turning institutional inertia into a mechanism of extraction.",
+    "key_agents": [
+      "Uninformed/Disempowered Patients: Primary victims (powerless/trapped) — bear the full cost of suboptimal timing through reduced treatment efficacy.",
+      "Informed Patients: Primary beneficiaries (moderate/mobile) — use the knowledge as a coordination tool to improve their health outcomes.",
+      "Healthcare Providers/Hospitals: Institutional actors (organized/trapped or institutional/arbitrage) — face a conflict between clinical best practices and logistical/financial constraints.",
+      "Research Scientists: Analytical observers (analytical/analytical) — view the underlying biological rhythm as a natural law (Mountain).",
+      "Insurers: Institutional actors (institutional/arbitrage) — may see it as a cost-saving measure to be temporarily incentivized (Scaffold)."
+    ],
+    "logic_rationale": "Extractiveness (0.55): High. This value represents the significant, quantifiable cost of ignoring the constraint, measured in reduced progression-free survival and overall survival. It is a direct extraction of potential life-years from patients scheduled suboptimally. Suppression (0.65): High. Patients face significant institutional friction in trying to alter prescribed treatment times, which are often dictated by rigid scheduling systems, staff availability, and resource allocation. Theater Ratio (0.75): High. As awareness of chronotherapy grows faster than its implementation, it becomes a topic of performative discussion in under-resourced institutions. They acknowledge the 'best practice' without having the capacity to enact it, turning the principle into institutional theater.",
+    "perspectival_gap": "The gap is profound. A research scientist sees an elegant, unchangeable Mountain of biology. An informed patient sees a simple, life-saving Rope. An uninformed patient is caught in a deadly Snare created by systemic inertia. An overburdened hospital sees an aspirational but inert Piton. This divergence highlights a core DR principle: a single set of facts can generate the full spectrum of constraint types depending on the observer's power, knowledge, and exit options relative to the system built upon those facts.",
+    "directionality_logic": "The directionality is driven by access to information and institutional flexibility. Beneficiaries are those who can act on the knowledge (informed patients, agile clinics). Victims are those trapped by systems that have not adapted to the knowledge (uninformed patients, rigid hospitals). The system extracts health outcomes from the latter to subsidize the convenience and operational status quo of the institution.",
+    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that a 'natural law' (the Mountain of biology) is not the same as the human system that interacts with it. Labeling the situation a 'Mountain' (i.e., 'it's just a tragic, unavoidable reality') would be a misclassification that masks the severe, contingent extraction occurring within the healthcare system (the Snare/Tangled Rope). The framework correctly identifies that the object of analysis is the *implementation*, and its high ε and suppression values reveal its true, non-Mountain nature."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hospital_staffing_shortages",
+      "clinical_trial_recruitment_bias"
+    ]
+  }
+}

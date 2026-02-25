@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: biological_curiosity
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_biological_curiosity, []).
@@ -40,10 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -59,17 +57,25 @@
  *   domain: biological/technological/social
  *
  * SUMMARY:
- *   Curiosity is the innate biological drive to seek out new information and reduce
- *   uncertainty in the environment. It acts as the "Intrinsic Motivation" that
- *   offsets the high costs of exploration, ensuring an agent does not settle
- *   for a suboptimal local peak. From an analytical perspective, it is a
- *   fundamental, unchangeable feature of mammalian neurobiology.
+ *   Curiosity is the innate biological drive to seek information and resolve
+ *   uncertainty. While fundamentally a tool for learning and survival, its
+ *   compulsive nature can be harnessed, exploited, or suppressed. This
+ *   constraint story models the drive itself as a high-cost, high-reward
+ *   mechanism. Its classification varies dramatically depending on the
+ *   agent's structural relationship to the drive: whether they are its master
+ *   (a scientist), its victim (an algorithmically-captured user), its
+ *   cultivator (an educator), or its beneficiary (an attention merchant). The
+ *   high base metrics reflect the 'Pandora Effect': the drive compels
+ *   information-seeking even when the outcome may be costly or harmful,
+ *   making it a powerful source of both progress and vulnerability.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Explorer (moderate/mobile): Primary beneficiary — uses curiosity to discover new resources.
- *   - The Trapped Subject (powerless/trapped): Primary victim — curiosity leads to discovering unattainable alternatives, causing psychological distress.
- *   - The Institution (institutional/arbitrage): Secondary beneficiary — harnesses curiosity for education and innovation.
- *   - The Neuroscientist (analytical/analytical): Analytical observer — views the drive as a fixed biological law.
+ * KEY AGENTS:
+ *   - Exploited Media Consumer: Primary victim (powerless/trapped) — their attention is extracted by systems hijacking their innate drive.
+ *   - Attention Merchant: Primary beneficiary (institutional/arbitrage) — treats curiosity as a natural resource to be harvested for profit.
+ *   - Scientist/Explorer: Mixed role (powerful/mobile) — uses the drive for discovery but also bears its high costs and risks.
+ *   - Educator: Cultivator (organized/constrained) — channels the drive toward productive ends via temporary support structures.
+ *   - Corporate 'Innovator': Performative actor (institutional/constrained) — engages in the theater of curiosity while suppressing its function.
+ *   - Analytical Observer: Sees the full structure, including the 'false summit' of framing a costly drive as a neutral natural law.
  */
 
 /* ==========================================================================
@@ -77,98 +83,74 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(biological_curiosity, 0.15).
-domain_priors:suppression_score(biological_curiosity, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(biological_curiosity, 0.05).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(biological_curiosity, 0.6).
+domain_priors:suppression_score(biological_curiosity, 0.65).
+domain_priors:theater_ratio(biological_curiosity, 0.75).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(biological_curiosity, extractiveness, 0.15).
-narrative_ontology:constraint_metric(biological_curiosity, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(biological_curiosity, theater_ratio, 0.05).
+narrative_ontology:constraint_metric(biological_curiosity, extractiveness, 0.6).
+narrative_ontology:constraint_metric(biological_curiosity, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(biological_curiosity, theater_ratio, 0.75).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-narrative_ontology:constraint_metric(biological_curiosity, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(biological_curiosity, resistance, 0.05).
-
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(biological_curiosity, scaffold).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(biological_curiosity, tangled_rope).
 narrative_ontology:human_readable(biological_curiosity, "Curiosity (The Information-Seeking Drive)").
 narrative_ontology:topic_domain(biological_curiosity, "biological/technological/social").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(biological_curiosity).
-% domain_priors:requires_active_enforcement(biological_curiosity).
+domain_priors:requires_active_enforcement(biological_curiosity).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-domain_priors:emerges_naturally(biological_curiosity).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(biological_curiosity, explorers).
-narrative_ontology:constraint_beneficiary(biological_curiosity, scientific_endeavors).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(biological_curiosity, subjects_in_total_institutions).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(biological_curiosity, attention_merchants).
+narrative_ontology:constraint_beneficiary(biological_curiosity, scientists_and_explorers).
+narrative_ontology:constraint_beneficiary(biological_curiosity, educators).
+narrative_ontology:constraint_victim(biological_curiosity, exploited_media_consumers).
+narrative_ontology:constraint_victim(biological_curiosity, risk_taking_explorers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE TRAPPED SUBJECT (SNARE)
-% In a highly restrictive environment (like a prison or a rigid bureaucracy),
-% curiosity is a "Snare." Seeking out information leads to punishment or
-% psychological despair, as the agent discovers alternatives they are legally
-% or physically unable to reach.
-constraint_indexing:constraint_classification(biological_curiosity, mountain,
+% PERSPECTIVE 1: EXPLOITED CONSUMER (SNARE) — The innate drive to fill information gaps is hijacked by algorithms designed to maximize engagement. The user feels a compulsion they cannot resist, extracting their time and attention for corporate profit. They are trapped by their own biology. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.68.
+constraint_indexing:constraint_classification(biological_curiosity, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
             spatial_scope(local))).
 
-% PERSPECTIVE 2: THE EDUCATIONAL SYSTEM (ROPE)
-% For an educational system, curiosity is a "Rope." It is a fundamental
-% biological drive that, when properly channeled, can be used as a powerful
-% coordination mechanism for learning, exploration, and the transmission of
-% knowledge.
-constraint_indexing:constraint_classification(biological_curiosity, scaffold,
+% PERSPECTIVE 2: ATTENTION MERCHANT (ROPE) — For a social media platform or publisher, curiosity is a vast, self-renewing natural resource. They experience it as a pure coordination mechanism to direct user behavior toward monetizable ends. As a full beneficiary with arbitrage, their effective extraction is negative. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09.
+constraint_indexing:constraint_classification(biological_curiosity, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE SCIENTIST (TANGLED ROPE) — Experiences curiosity as a powerful engine for discovery (coordination) but also as a demanding force that requires immense sacrifice of time, resources, and safety (extraction). The drive produces knowledge but extracts a high cost from the individual. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.47.
+constraint_indexing:constraint_classification(biological_curiosity, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: THE EDUCATOR (SCAFFOLD) — Views curiosity as the fundamental substrate upon which to build knowledge. The educational system is a temporary structure designed to channel this innate drive until the student achieves intellectual autonomy. χ is low because the educator is a beneficiary. The classification is scaffold due to the implicit sunset clause. d≈0.40, f(d)≈0.40, σ=1.0 → χ≈0.24. Sunset Rationale: The goal of education is to make the educator obsolete; the scaffold is removed when the student can learn independently.
+constraint_indexing:constraint_classification(biological_curiosity, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE NEUROSCIENTIST (MOUNTAIN)
-% The observer sees the "Dopaminergic System" as a "Mountain." The reward for
-% information-seeking is a hard-coded feature of the mammalian brain. It is an
-% immutable law of behavioral biology designed to solve the
-% Exploration/Exploitation trade-off.
+% PERSPECTIVE 5: CORPORATE 'INNOVATOR' (PITON) — In a corporate culture that performatively values 'curiosity' but punishes the risk-taking it entails, the drive's function is degraded. It persists as a theatrical value ('innovation workshops', posters) while its true purpose—unpredictable discovery—is suppressed. The high theater_ratio (0.75) and low effective extraction for this beneficiary (χ≈-0.01) trigger the Piton classification.
+constraint_indexing:constraint_classification(biological_curiosity, piton,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 6: PRIMAL ORGANISM (MOUNTAIN) — From the perspective of basic survival, curiosity is not a choice but an immutable law of existence, like gravity. It is a fixed, unchangeable drive to map the environment. This perspective frames the drive as a natural law. However, the high base metrics (ε=0.60, S=0.65) mean the engine will flag this as a 'false summit'—a mischaracterization of a high-cost biological compulsion as a zero-cost natural law.
 constraint_indexing:constraint_classification(biological_curiosity, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE DISCOVERER (ROPE)
-% For the agent with surplus energy, curiosity is a "Rope." It coordinates
-% their internal resources to engage with the unknown. It allows them
-% to climb out of stagnant environments and discover new opportunities.
-constraint_indexing:constraint_classification(biological_curiosity, scaffold,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,22 +159,17 @@ constraint_indexing:constraint_classification(biological_curiosity, scaffold,
 :- begin_tests(biological_curiosity_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target, beneficiary, and analyst.
-    constraint_indexing:constraint_classification(biological_curiosity, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(biological_curiosity, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(biological_curiosity, TypeAnalyst, context(agent_power(analytical), _, _, _)),
-    TypeTarget = snare,
-    TypeBeneficiary = rope,
-    TypeAnalyst = mountain,
-    TypeTarget \= TypeBeneficiary,
-    TypeBeneficiary \= TypeAnalyst.
+    constraint_indexing:constraint_classification(biological_curiosity, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(biological_curiosity, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    % The analytical view is Mountain, so metrics must comply.
-    narrative_ontology:constraint_metric(biological_curiosity, extractiveness, E),
-    narrative_ontology:constraint_metric(biological_curiosity, suppression_requirement, S),
-    E =< 0.25,
-    S =< 0.05.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(biological_curiosity, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(biological_curiosity, TR),
+    TR >= 0.70.
 
 :- end_tests(biological_curiosity_tests).
 
@@ -202,93 +179,76 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The core idea is that curiosity is a fundamental, non-extractive biological
- *   drive (ε=0.15, S=0.05), making it a Mountain from an analytical view.
- *   However, its *effect* is highly context-dependent. For those with agency
- *   (explorers, institutions), it's a Rope for coordination and discovery.
- *   For those without agency (trapped subjects), the drive persists but only
- *   reveals painful, inaccessible truths, making it function as a Snare of
- *   psychological extraction. The low base metrics reflect the drive itself,
- *   while the perspectival classifications reflect its experienced outcome.
+ *   Extractiveness (ε=0.60): High. The drive is not neutral; it compels the expenditure of energy, time, and safety resources to close information gaps, regardless of the information's ultimate utility. This represents the biological cost of the 'explore' algorithm. Suppression (S=0.65): High. The internal compulsion to resolve uncertainty is extremely difficult to resist, suppressing other cognitive priorities. This is the mechanism hijacked by clickbait and algorithmic feeds. Theater Ratio (T=0.75): High. In modern social and corporate contexts, the *expression* of curiosity is often performative ('innovation culture') and decoupled from its functional purpose of genuine, risky exploration, which is often penalized.
  *
  * PERSPECTIVAL GAP:
- *   - The Trapped Subject (powerless) sees a Snare because the drive to know,
- *     combined with an inability to act, creates suffering.
- *   - The Institution (institutional) sees a Rope, a natural resource to be
- *     harnessed for coordination (education, R&D).
- *   - The Neuroscientist (analytical) sees a Mountain, an immutable feature
- *     of neurobiology that cannot be altered, only understood or channeled.
+ *   This story is a diagnostic exemplar, showing how a single constraint with fixed properties can manifest as all six types. For the Attention Merchant, it's a beneficial Rope. For the user they exploit, it's a Snare. For the scientist who wrestles with it, it's a Tangled Rope. For the educator who channels it, it's a Scaffold. For the corporation that pays it lip service, it's a Piton. For a primal view of survival, it's a Mountain. The gap is not in the constraint's properties but in the agent's structural position relative to its costs and benefits.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries are agents who can act on the information curiosity provides
- *     (explorers, scientists). They benefit from the coordination function.
- *   - Victims are those for whom the information provides no agency and only
- *     highlights their constraints, leading to psychological cost.
+ *   Beneficiaries (attention merchants, educators) experience the drive as a resource that enables their function, leading to low or negative effective extraction (Rope, Scaffold). Victims (exploited users) experience the drive as an irresistible compulsion that extracts their resources, leading to high effective extraction (Snare). Agents with a mixed relationship (scientists) experience both the coordinative benefits and extractive costs (Tangled Rope). The directionality `d` is derived from this structural relationship, determining the final classification for each perspective.
  *
  * MANDATROPHY ANALYSIS:
- *   This story shows how a single, low-extraction phenomenon can be perceived
- *   as a Snare. The classification system correctly identifies the base
- *   constraint as non-extractive (Mountain/Rope) while still capturing the
- *   Snare experience of the powerless agent. This prevents mislabeling the
- *   fundamental drive as extractive, while acknowledging its harmful effects
- *   in coercive environments.
+ *   This constraint resolves the mandatrophy by demonstrating that 'type' is not an intrinsic property of a constraint but an emergent feature of the interaction between a constraint's base properties and an observer's indexed position. The question 'What type is curiosity?' is ill-posed. The correct question is 'From which structural position are you observing curiosity?' The ability to derive all six classifications from a single set of metrics validates the indexical approach and shows that perspectival disagreement is a predictable outcome of structural asymmetry, not a sign of analytical failure.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_biological_curiosity,
-    "At what point does the search for information (Curiosity) stop being a Rope and start being a 'Snare of Distraction' due to information overload?",
-    "Long-term studies on focus-depletion in high-entropy digital environments",
-    "If overload threshold is low, the Rope of Curiosity snaps easily, and agents fall into a Snare of paralysis. If high, it remains a robust coordination tool.",
+    drive_teleology,
+    'Is curiosity fundamentally a drive to reduce the aversion of an ''information gap'' (deprivation) or a drive to seek the pleasure of discovery (exploration)?',
+    'Neurochemical studies differentiating dopamine pathway activation in response to uncertainty reduction vs. novel stimulus presentation.',
+    'If deprivation-based, its nature is more extractive (ε is high). If exploration-based, it is more coordinative (ε is lower). This would shift the analytical classification between Tangled Rope and Rope.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_biological_curiosity, empirical, "Determining the cognitive threshold where information-seeking yields negative returns.").
+narrative_ontology:omega_variable(drive_teleology, empirical, 'Whether curiosity''s primary driver is aversion-reduction or pleasure-seeking.').
+
+omega_variable(
+    supernormal_stimuli_capture,
+    'Can technological systems create ''supernormal stimuli'' for curiosity (e.g., algorithmically generated information gaps) that permanently override biological self-regulation?',
+    'Longitudinal studies on cognitive function and attention regulation in populations with high vs. low exposure to algorithmic content feeds.',
+    'If capture is possible, the ''Snare'' perspective becomes the dominant social reality, and the base suppression metric may be understated. If self-regulation adapts, the ''Snare'' is a temporary state.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(supernormal_stimuli_capture, empirical, 'The capacity of technology to permanently capture the curiosity drive.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(biological_curiosity, 0, 10).
+narrative_ontology:interval(biological_curiosity, 1970, 2020).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. Not required for this constraint as
-% base_extractiveness (0.15) is below the 0.46 threshold. The biological
-% drive is assumed to be stable over the interval.
+% Theater ratio over time
+narrative_ontology:measurement(biol_tr_t0, biological_curiosity, theater_ratio, 0, 0.3).
+narrative_ontology:measurement(biol_tr_t25, biological_curiosity, theater_ratio, 25, 0.6).
+narrative_ontology:measurement(biol_tr_t50, biological_curiosity, theater_ratio, 50, 0.75).
 
-/*
-narrative_ontology:measurement(biological_curiosity_tr_t0, biological_curiosity, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(biological_curiosity_tr_t5, biological_curiosity, theater_ratio, 5, 0.05).
-narrative_ontology:measurement(biological_curiosity_tr_t10, biological_curiosity, theater_ratio, 10, 0.05).
+% Extraction over time
+narrative_ontology:measurement(biol_be_t0, biological_curiosity, base_extractiveness, 0, 0.4).
+narrative_ontology:measurement(biol_be_t25, biological_curiosity, base_extractiveness, 25, 0.5).
+narrative_ontology:measurement(biol_be_t50, biological_curiosity, base_extractiveness, 50, 0.6).
 
-narrative_ontology:measurement(biological_curiosity_ex_t0, biological_curiosity, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(biological_curiosity_ex_t5, biological_curiosity, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(biological_curiosity_ex_t10, biological_curiosity, base_extractiveness, 10, 0.15).
-*/
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No specific coordination type or network relationships declared for this fundamental drive.
+narrative_ontology:coordination_type(biological_curiosity, information_standard).
+narrative_ontology:affects_constraint(biological_curiosity, algorithmic_attention_capture).
+narrative_ontology:affects_constraint(biological_curiosity, scientific_method).
+narrative_ontology:affects_constraint(biological_curiosity, pedagogical_models).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed; the structural derivation from beneficiary/victim
-% declarations and exit options is sufficient.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

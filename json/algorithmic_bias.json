@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_bias",
+    "version": "1.0",
+    "generated_date": "2024-07-28",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Algorithmic Bias",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "system_deployers",
+      "historically_privileged_demographics"
+    ],
+    "victims": [
+      "historically_marginalized_demographics",
+      "societal_fairness"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginalized Applicant",
+      "comment": "PERSPECTIVE 1: THE MARGINALIZED APPLICANT (SNARE) — Cannot opt-out of biased automated systems for loans, housing, or employment. Experiences the system as an opaque, inescapable mechanism of pure extraction that denies opportunity based on group identity. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.97."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The System Deployer",
+      "comment": "PERSPECTIVE 2: THE SYSTEM DEPLOYER (ROPE) — Experiences the algorithm as a pure coordination tool for efficiency, risk management, and profit maximization. The costs (bias) are externalized, while the benefits (cost savings, speed) are internalized. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. Negative effective extraction signifies a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Data Scientist",
+      "comment": "PERSPECTIVE 3: THE DATA SCIENTIST (TANGLED ROPE) — Directly engages with both the coordination function (building a predictive model) and the extractive reality (witnessing bias in the training data and outcomes). They are caught between professional incentives for 'accuracy' and ethical concerns about fairness. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.78."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The AI Ethics Regulator",
+      "comment": "PERSPECTIVE 4: THE AI ETHICS REGULATOR (SCAFFOLD) — Views algorithmic bias as a temporary market failure to be corrected by new standards, auditing requirements, and legislation (e.g., EU AI Act). These interventions act as a scaffold, intended to support the transition to a fairer technological ecosystem, with an implicit sunset clause as norms and technologies mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Corporate PR Department",
+      "comment": "PERSPECTIVE 5: THE CORPORATE PR DEPARTMENT (PITON) — Engages in 'ethics-washing' by publishing vague AI principles and commissioning favorable audits. The function is almost entirely performative, designed to maintain public trust and preempt regulation, while the underlying extractive systems remain unchanged. The high theater_ratio (0.72) satisfies the piton gate (≥0.70)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Techno-Determinist",
+      "comment": "PERSPECTIVE 6: THE TECHNO-DETERMINIST (MOUNTAIN) — Frames bias as an unfortunate but unavoidable reflection of 'ground truth' in the data. From this viewpoint, the algorithm is merely a mirror to society's existing inequalities, making the resulting bias a natural, immutable law of data-driven systems. The engine will flag this as a false summit, as the high ε and suppression are products of contingent design choices, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_remediability",
+      "question": "Can algorithmic bias be technically 'de-biased' through fairness-aware ML techniques, or is it an inherent feature of statistical optimization on historical data?",
+      "resolution_mechanism": "Longitudinal studies of deployed 'fair' models to measure if bias re-emerges or if fairness metrics successfully prevent harm over time.",
+      "impact": "If technically remediable, the constraint is closer to a Scaffold (a temporary problem). If inherent, it is a more permanent Snare/Tangled Rope structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bias is technically correctable or inherent to the paradigm"
+    },
+    {
+      "id": "fairness_definition_conflict",
+      "question": "Which definition of fairness (e.g., demographic parity, equal opportunity, equalized odds) is appropriate, given that they are often mutually exclusive?",
+      "resolution_mechanism": "Legal and philosophical consensus-building, likely codified in sector-specific regulation.",
+      "impact": "The choice of fairness metric fundamentally alters the beneficiary/victim structure, protecting one group often at the expense of another's statistical outcomes.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Conflict between mutually exclusive mathematical definitions of fairness"
+    },
+    {
+      "id": "opacity_vs_accountability",
+      "question": "Is the 'black box' nature of complex models a necessary trade-off for accuracy, or is it a deliberate mechanism to evade accountability?",
+      "resolution_mechanism": "Breakthroughs in explainable AI (XAI) or regulatory mandates for model transparency and auditability.",
+      "impact": "If opacity is a necessary evil, suppression remains high. If it is a choice, suppression could be lowered via regulation, shifting the classification away from Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether model opacity is a necessary feature or a choice to evade accountability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 2010,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic bias occurs when automated systems create systematically prejudiced outcomes, typically by encoding and scaling historical inequities found in training data. This constraint is a diagnostic exemplar, demonstrating how a single technological phenomenon can be classified as all six DR types depending on the observer's structural position. The core conflict is between the system deployers, who see an efficient coordination tool, and the marginalized populations, who experience an opaque mechanism of extraction that denies them opportunities in critical areas like employment, finance, and justice.",
+    "key_agents": [
+      "Historically Marginalized Demographics: Primary victims (powerless/trapped) — Systematically disadvantaged by biased outputs.",
+      "System Deployers (Corporations/Institutions): Primary beneficiaries (institutional/arbitrage) — Gain efficiency and cost savings by automating decisions.",
+      "Data Scientists: Implementers (moderate/mobile) — Caught between technical goals and ethical implications.",
+      "AI Ethics Regulators: Reformers (organized/constrained) — Attempt to build a scaffold of rules and standards to mitigate harm.",
+      "Corporate PR Departments: Performers (institutional/arbitrage) — Manage public perception through 'ethics-washing'.",
+      "Techno-Determinists: Observers (analytical/analytical) — Naturalize the bias as an unavoidable reflection of reality."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.68) is high because the constraint systematically diverts life-altering opportunities (jobs, loans, parole) away from certain groups. Suppression (0.75) is high due to the opacity of 'black box' models and the lack of alternatives when systems are deployed at scale. Theater Ratio (0.72) is high, reflecting the widespread corporate practice of 'ethics-washing'—publishing vague principles and performing superficial audits that serve a PR function without altering the underlying extractive dynamics. Both extractiveness and theater have increased significantly since 2010 as systems became more powerful and public scrutiny grew.",
+    "perspectival_gap": "The gap is maximal. For a marginalized applicant (powerless/trapped), the system is a Snare. For the corporation deploying it (institutional/arbitrage), it's a Rope. For the regulator trying to fix it (organized/constrained), it's a Scaffold. For the PR team spinning it (institutional/arbitrage), it's a Piton. For the data scientist building it (moderate/mobile), it's a Tangled Rope. For the determinist who naturalizes it (analytical/analytical), it's a Mountain. This diversity reveals that 'algorithmic bias' is not a monolithic object but a structural relationship, and its classification is an indexical fact.",
+    "directionality_logic": "Beneficiaries (system deployers, privileged demographics) have low directionality (d), resulting in low or negative effective extraction (χ), hence they perceive a Rope. Victims (marginalized demographics) are trapped, giving them maximum directionality (d≈0.95) and thus maximum effective extraction (χ), making the system a Snare from their perspective. Other agents fall in between, their derived `d` value shaping their view of the constraint as a Tangled Rope, Scaffold, etc.",
+    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that no single classification is sufficient. To label algorithmic bias as only a 'Snare' would be to ignore the genuine (if problematic) coordination function it serves for its deployers. To label it only a 'Rope' would be to erase the severe extraction experienced by its victims. The Deferential Realism framework shows that all perspectives are structurally valid readings from different positions. The complete description is the full set of indexed classifications, not a single 'correct' one."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "credit_scoring_systems",
+      "predictive_policing",
+      "automated_hiring_filters"
+    ]
+  }
+}

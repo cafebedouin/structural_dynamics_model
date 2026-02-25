@@ -1,0 +1,142 @@
+{
+  "header": {
+    "constraint_id": "china_japan_watchlist_2026",
+    "version": "1.0",
+    "generated_date": "2024-07-31",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "China's Economic Security Watch List for Japanese Companies (2026)",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_state_agencies",
+      "chinese_domestic_competitors"
+    ],
+    "victims": [
+      "listed_japanese_companies",
+      "japanese_government_meti"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Listed Japanese Corporation",
+      "comment": "PERSPECTIVE 1: THE TARGET (SNARE) \u2014 A multinational Japanese tech or manufacturing firm with significant investment in China. From its perspective, the watch list is a coercive, extractive tool. Exit is prohibitively expensive, and compliance imposes significant costs, IP risks, and operational uncertainty. The coordination function is invisible; only the extraction is felt. d is derived high from victim status + constrained exit, making \u03c7 > 0.66, classifying as Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Chinese State Agency",
+      "comment": "PERSPECTIVE 2: THE ENFORCER (ROPE) \u2014 The Chinese Ministry of State Security or NDRC. This agent created the constraint and sees it as a legitimate policy instrument to coordinate corporate behavior with national security objectives and industrial policy. The extraction is framed as a necessary cost of doing business. d is derived very low from beneficiary status + arbitrage exit, resulting in negative \u03c7. This is a pure coordination tool from their viewpoint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: THE ANALYST (TANGLED ROPE) \u2014 An observer who sees both the stated coordination goal (protecting national security) and the asymmetric extraction (punishing geopolitical rivals, subsidizing domestic firms). The base properties (\u03b5=0.62, suppression=0.75) clearly indicate a hybrid function. The analytical power atom's canonical directionality places \u03c7 in the Tangled Rope range."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Japanese Government (METI)",
+      "comment": "PERSPECTIVE 4: THE COUNTERPART (TANGLED ROPE) \u2014 Japan's Ministry of Economy, Trade and Industry. As an institutional actor, it understands the geopolitical signaling and coercive coordination game. However, as a victim of the constraint (its national champions are targeted), it is constrained and must react. It perceives the hybrid nature of the tool\u2014a mix of policy enforcement and raw economic pressure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intent_vs_effect",
+      "question": "Is the list's primary function punitive retribution for geopolitical alignment, or is it a preemptive de-risking strategy based on genuine security concerns?",
+      "resolution_mechanism": "Empirical analysis of listed companies' profiles. A high correlation with defense-adjacent sectors or technology transfers would support the security claim. A correlation with firms whose home governments recently enacted policies unfavorable to China would support the punitive claim.",
+      "impact": "If primarily punitive, the constraint is functionally closer to a pure Snare, with the coordination aspect being mere pretext. If primarily security-driven, the Tangled Rope classification is more robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the watchlist is primarily punitive or a genuine security measure"
+    },
+    {
+      "id": "long_term_efficacy",
+      "question": "Will this policy successfully coerce Japanese corporate and state behavior, or will it accelerate supply chain decoupling, ultimately harming China's access to advanced technology and capital?",
+      "resolution_mechanism": "Longitudinal tracking of foreign direct investment flows, supply chain diversification initiatives by Japanese firms (e.g., 'China plus one'), and shifts in Japanese foreign policy.",
+      "impact": "If the policy backfires and accelerates decoupling, its extractive capacity will diminish over time, potentially degrading it into a Piton (an enforced but ineffective policy).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the watchlist will achieve its goals or accelerate decoupling"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 2024,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "In a near-future scenario, China establishes an 'Economic Security Watch List' targeting Japanese corporations. Firms placed on this list are subjected to unpredictable audits, regulatory hurdles, and potential exclusion from the Chinese market, ostensibly to mitigate national security risks. In practice, the list functions as a tool of economic statecraft, allowing Beijing to exert pressure on Japan's government and create advantages for domestic Chinese firms by selectively disadvantaging foreign competitors.",
+    "key_agents": [
+      "Chinese State Agencies: Primary beneficiary (institutional/arbitrage) \u2014 Creates and enforces the constraint to achieve geopolitical and industrial policy goals.",
+      "Listed Japanese Companies: Primary victim (powerful/constrained) \u2014 Bear the direct costs of extraction through compliance burdens, lost revenue, and strategic uncertainty.",
+      "Chinese Domestic Competitors: Secondary beneficiary (organized/mobile) \u2014 Gain market share and competitive advantages from the constraints placed on their Japanese rivals.",
+      "Japanese Government (METI): Secondary victim (institutional/constrained) \u2014 Forced into a reactive posture to defend its national champions, with limited options for retaliation."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.62) is high, representing the substantial economic value extracted from targeted firms. Suppression (0.75) is also high, as the targeted firms have deep investments in the Chinese market and cannot easily exit without incurring massive losses. The theater ratio (0.20) is low because the list has tangible, severe consequences, though its public justification serves a performative signaling function. The measurements show extractiveness rising and theater falling as the policy solidifies from a threat into an active enforcement mechanism.",
+    "perspectival_gap": "The fundamental gap is between the Chinese state's self-perception of implementing a legitimate security policy (Rope) and the targeted Japanese firm's experience of being trapped in a punitive, extractive system (Snare). This gap highlights the dual nature of economic statecraft. The analytical observer and the Japanese government counterpart both perceive the hybrid reality of the situation, classifying it as a Tangled Rope that combines a real (though coercive) coordination function with asymmetric extraction.",
+    "directionality_logic": "Directionality is driven by the clear beneficiary/victim structure. The Chinese state and its domestic firms benefit directly from the leverage and market distortion created by the list. Their low derived 'd' values lead to Rope classifications. The Japanese firms bear the full cost, and their high derived 'd' values (from being victims with constrained exit options) lead to Snare classifications. The framework correctly models this asymmetrical relationship.",
+    "mandatrophy_analysis": "This story resolves a common mandatrophy in international relations: mischaracterizing economic coercion as either pure coordination ('legitimate trade policy') or pure malice ('economic warfare'). The Tangled Rope classification correctly identifies that the constraint has both a genuine strategic coordination function for the enforcer and a highly extractive, snare-like effect on the target. It avoids collapsing the analysis into a simplistic binary and instead quantifies the perspectival gap between the actors."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain",
+      "rare_earth_mineral_access"
+    ]
+  }
+}

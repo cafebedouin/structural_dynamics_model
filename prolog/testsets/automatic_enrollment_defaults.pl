@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: automatic_enrollment_defaults
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2024-07-29
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_automatic_enrollment_defaults, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,6 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -54,18 +57,22 @@
  *   domain: economic/social
  *
  * SUMMARY:
- *   Automatic enrollment is a choice architecture where individuals are placed
- *   into a program (like a 401k retirement plan) by default, rather than
- *   requiring them to actively opt-in. It utilizes the cognitive "status quo
- *   bias" to dramatically increase participation rates, aiming to improve
- *   long-term financial outcomes for employees. This file models the policy
- *   itself, which is a human-designed system.
+ *   Automatic enrollment in retirement plans is a choice architecture
+ *   designed to increase participation by making saving the default option.
+ *   It leverages behavioral inertia to overcome procrastination. While highly
+ *   effective at boosting enrollment rates, it creates a structural tension.
+ *   It serves a genuine coordination function by helping people save who
+ *   otherwise wouldn't. Simultaneously, it creates an extractive potential
+ *   for financial service providers (via fees on default funds) and employers
+ *   (who may benefit from sticky, low default contribution rates that
+ *   minimize their matching costs).
  *
- * KEY AGENTS (by structural relationship):
- *   - Employees with inertia: Primary beneficiary (powerless/trapped) — benefits from overcoming cognitive friction to save for retirement.
- *   - Choice Architects (Employers/Policymakers): Primary beneficiary (institutional/arbitrage) — benefits by fulfilling fiduciary duties and improving workforce financial health.
- *   - Employees preferring active choice: Primary target (powerless/trapped) — bears the cost of having a decision made for them, even if easily reversible.
- *   - Analytical Observer: Sees the full structure as a low-extraction coordination mechanism.
+ * KEY AGENTS:
+ *   - Financially Strained Employee: Primary target (powerless/trapped) — bears cost of contributions and fees with little perceived agency.
+ *   - Financial Services Provider: Primary beneficiary (institutional/arbitrage) — benefits from increased assets under management.
+ *   - The Employer: Secondary beneficiary (organized/constrained) — benefits from offering a modern plan and potentially lower matching costs.
+ *   - The Procrastinating Professional: Beneficiary (moderate/mobile) — benefits from the nudge to overcome personal inertia.
+ *   - The Social Policy Architect: Institutional actor (institutional/constrained) — sees the system as a tool to solve a national savings crisis.
  */
 
 /* ==========================================================================
@@ -73,80 +80,68 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Extremely low; the policy is designed to retain value for the individual
-% by overcoming their own cognitive friction. The "extraction" is of pure
-% autonomy, not financial value.
-domain_priors:base_extractiveness(automatic_enrollment_defaults, 0.05).
-% Low; while the default is passive, the opt-out mechanism is usually simple
-% and clearly communicated, imposing a low barrier to exit.
-domain_priors:suppression_score(automatic_enrollment_defaults, 0.10).
-% Very low; the system is functional, not performative. Its success is measured
-% by participation rates and savings balances, not theatrical compliance.
-domain_priors:theater_ratio(automatic_enrollment_defaults, 0.05).
+domain_priors:base_extractiveness(automatic_enrollment_defaults, 0.48).
+domain_priors:suppression_score(automatic_enrollment_defaults, 0.62).
+domain_priors:theater_ratio(automatic_enrollment_defaults, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(automatic_enrollment_defaults, extractiveness, 0.05).
-narrative_ontology:constraint_metric(automatic_enrollment_defaults, suppression_requirement, 0.10).
-narrative_ontology:constraint_metric(automatic_enrollment_defaults, theater_ratio, 0.05).
+narrative_ontology:constraint_metric(automatic_enrollment_defaults, extractiveness, 0.48).
+narrative_ontology:constraint_metric(automatic_enrollment_defaults, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(automatic_enrollment_defaults, theater_ratio, 0.15).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(automatic_enrollment_defaults, rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(automatic_enrollment_defaults, tangled_rope).
 narrative_ontology:human_readable(automatic_enrollment_defaults, "Automatic Enrollment Defaults in Retirement Plans").
 narrative_ontology:topic_domain(automatic_enrollment_defaults, "economic/social").
 
-% --- Binary flags ---
-% The policy requires active, ongoing implementation by payroll systems for each
-% new employee. This constitutes active enforcement, which prevents the engine
-% from misclassifying this Rope as a Scaffold (see Mandatrophy Analysis).
 domain_priors:requires_active_enforcement(automatic_enrollment_defaults).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(automatic_enrollment_defaults, employees_with_inertia).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(automatic_enrollment_defaults, employees_with_high_inertia).
+narrative_ontology:constraint_beneficiary(automatic_enrollment_defaults, financial_service_providers).
 narrative_ontology:constraint_beneficiary(automatic_enrollment_defaults, employers).
-
-% Who bears disproportionate cost? (The cost is loss of active choice, not money)
-narrative_ontology:constraint_victim(automatic_enrollment_defaults, employees_preferring_active_choice).
+narrative_ontology:constraint_victim(automatic_enrollment_defaults, employees_stuck_at_low_defaults).
+narrative_ontology:constraint_victim(automatic_enrollment_defaults, employees_unaware_of_fees).
+narrative_ontology:constraint_victim(automatic_enrollment_defaults, low_income_employees).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% This is a uniform-type constraint (Rope-only). The classification is stable
-% across all perspectives because the base extractiveness is extremely low.
-% The perspectival gap is reflected in the sign of effective extraction (χ):
-% negative for beneficiaries (a subsidy), positive but tiny for victims.
-
-% PERSPECTIVE 1: THE EMPLOYEE (TARGET/BENEFICIARY)
-% For an employee with inertia, this is a helpful Rope that coordinates their
-% future self's interest. For one who prefers active choice, it's still a Rope
-% due to low extraction and easy exit, but one with a small positive χ.
-constraint_indexing:constraint_classification(automatic_enrollment_defaults, rope,
+% PERSPECTIVE 1: THE FINANCIALLY STRAINED EMPLOYEE (SNARE) — Trapped by behavioral inertia and lack of financial literacy. The default contribution, however small, represents immediate financial hardship, while the fees on default funds are a form of pure extraction. Opting out requires overcoming a significant activation energy barrier. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.68.
+constraint_indexing:constraint_classification(automatic_enrollment_defaults, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(national))).
 
-% PERSPECTIVE 2: THE EMPLOYER / CHOICE ARCHITECT (BENEFICIARY)
-% For the employer, this is a classic Rope. It is a powerful, low-cost tool
-% to coordinate employee behavior toward a beneficial outcome (higher retirement
-% savings), increasing employee well-being and fulfilling fiduciary duties.
+% PERSPECTIVE 2: THE FINANCIAL SERVICES PROVIDER (ROPE) — Benefits from a larger pool of assets under management. From this perspective, the constraint is a pure coordination mechanism that solves the market failure of under-saving, creating a win-win. Exit via arbitrage is high (can offer plans to thousands of employers). d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.06.
 constraint_indexing:constraint_classification(automatic_enrollment_defaults, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(biographical),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The observer sees a pure coordination mechanism with negligible extraction,
-% classifying it as a Rope. The underlying cognitive bias is a Mountain, but
-% the policy built upon it is a Rope.
-constraint_indexing:constraint_classification(automatic_enrollment_defaults, rope,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (overcoming procrastination to increase savings rates) and the asymmetric extraction (management fees, employers benefiting from low default rates). The system requires active enforcement by plan administrators and is not a simple convention. This matches the claimed type.
+constraint_indexing:constraint_classification(automatic_enrollment_defaults, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% PERSPECTIVE 4: THE PROCRASTINATING PROFESSIONAL (ROPE) — A median employee who knows they should save but lacks the initiative. For them, the default is a welcome nudge that solves a personal time-inconsistency problem. They have the agency and knowledge to change the default but benefit from the initial push. They perceive no extraction, only coordination. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.36.
+constraint_indexing:constraint_classification(automatic_enrollment_defaults, rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: THE SOCIAL POLICY ARCHITECT (SCAFFOLD) — Views auto-enrollment as a temporary support to build a culture of saving. The policy is designed to overcome a specific behavioral failure, with the implicit 'sunset' being the point at which an individual becomes an engaged saver or the social norm of saving is established. The goal is to build a structure that eventually becomes unnecessary.
+constraint_indexing:constraint_classification(automatic_enrollment_defaults, scaffold,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -154,18 +149,14 @@ constraint_indexing:constraint_classification(automatic_enrollment_defaults, rop
 
 :- begin_tests(automatic_enrollment_defaults_tests).
 
-test(uniform_rope_classification) :-
-    % Verify that this is a uniform-type constraint, classifying as Rope
-    % from multiple key perspectives.
-    constraint_indexing:constraint_classification(automatic_enrollment_defaults, rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(automatic_enrollment_defaults, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(automatic_enrollment_defaults, rope, context(agent_power(analytical), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(automatic_enrollment_defaults, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(automatic_enrollment_defaults, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(low_extraction_and_suppression) :-
-    narrative_ontology:constraint_metric(automatic_enrollment_defaults, extractiveness, E),
-    narrative_ontology:constraint_metric(automatic_enrollment_defaults, suppression_requirement, S),
-    E < 0.1,
-    S < 0.2.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(automatic_enrollment_defaults, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(automatic_enrollment_defaults_tests).
 
@@ -175,95 +166,85 @@ test(low_extraction_and_suppression) :-
 
 /**
  * LOGIC RATIONALE:
- *   The metrics (ε=0.05, suppression=0.10) reflect a "libertarian paternalistic"
- *   constraint designed to be beneficial while preserving choice (via opt-out).
- *   The core function is coordination—aligning present actions with future
- *   well-being—making it a canonical Rope.
+ *   Extractiveness (ε=0.48): This reflects the value extracted through management fees on default investment vehicles and the potential for employers to suppress wage growth or matching contributions by relying on low, sticky default rates. Suppression (0.62): This score is high not because of physical coercion, but because of the powerful force of behavioral inertia. The alternative (opting out) is simple in theory but requires overcoming a significant psychological barrier, making the default highly coercive in practice. Theater Ratio (0.15): The mechanism is highly functional and does exactly what it is designed to do—increase enrollment. There is very little performative action; the structure itself does the work.
  *
  * PERSPECTIVAL GAP:
- *   This is a uniform-type constraint (Rope-only). The perspectival gap is not
- *   in the classification type but in the computed value of effective extraction (χ).
- *   - For beneficiaries (employees with inertia), d is low, f(d) is negative, and χ is negative, representing a subsidy against their own cognitive friction.
- *   - For victims (employees preferring active choice), d is high, f(d) is positive, and χ is positive but extremely small.
- *   Both scenarios fall well within the Rope classification thresholds.
+ *   The gap is stark. For a financial firm, this is a Rope that efficiently gathers assets and solves a social problem. For a low-income employee, it's a Snare that siphons money from their paycheck without clear consent or understanding. For a policy maker, it's a Scaffold to build better savings habits. The analytical view must hold both the coordination and extraction in tension, leading to a Tangled Rope classification. The system's character is fundamentally dependent on the observer's position within it.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries are employees who would not have saved otherwise, and employers
- *   who fulfill their fiduciary duty. The "victim" is the abstract principle of
- *   active choice, or any employee who is defaulted into a suboptimal fund and
- *   fails to opt-out. The structural data reflects this by naming both groups.
+ *   Beneficiaries include financial providers (institutional/arbitrage, d≈0.05) and employees who need the nudge (moderate/mobile, d≈0.55). Victims are those trapped by inertia at sub-optimal rates or for whom the contribution is a hardship (powerless/trapped, d≈0.95). This wide spread in directionality (d) across the agent population is what generates the diverse classifications from a single set of base properties.
  *
  * MANDATROPHY ANALYSIS:
- *   The extremely low base extractiveness (ε=0.05) and clear coordination function
- *   (increasing retirement savings) robustly defend against misclassification as
- *   a Snare. Even from the perspective of a 'trapped' powerless agent, the
- *   effective extraction χ is far too low to meet the Snare threshold (χ ≥ 0.66).
- *   This demonstrates how the framework's quantitative approach distinguishes
- *   between benevolent nudges (Ropes) and coercive traps (Snares).
- *
- *   This constraint is a canonical example of the "Scaffold Danger Zone": its
- *   low extraction, lack of a sunset clause, and coordination function could
- *   lead the engine to misclassify it as a Scaffold. The declaration of
- *   `requires_active_enforcement/1` resolves this ambiguity. The ongoing
- *   action by payroll systems to enroll new employees is a form of active
- *   enforcement, which correctly disables the engine's Scaffold classification
- *   gate, ensuring it is classified as a Rope.
- *
- *   NOTE ON DECOMPOSITION: This policy (a Rope) is constructed upon the
- *   `cognitive_status_quo_bias` (a Mountain). A complete analysis would involve
- *   a separate story for the cognitive bias, linked via `affects_constraint`.
+ *   This constraint is a classic case where a simple classification would fail. Labeling it a 'Rope' (as behavioral economists might) ignores the extractive fee structure. Labeling it a 'Snare' (as a libertarian might) ignores the genuine, welfare-enhancing coordination it provides for many. The Tangled Rope classification, from the analytical perspective, correctly identifies that it is BOTH a coordination mechanism and an extractive one, resolving the mandatrophy by refusing a simplistic label.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_auto_enroll,
-    'Is the default option chosen for the user''s best interest (Rope) or for the benefit of the provider (e.g., defaulting into a high-fee fund, making it a Tangled Rope)?',
-    'Auditing the financial incentives of the choice architect vs. the long-term outcomes for the user across different default funds.',
-    'If for user: A benevolent Rope. If for provider: An extractive Tangled Rope.',
+    savings_vs_fees,
+    'Is the primary structural effect of auto-enrollment the increase in aggregate savings (coordination) or the generation of fees from managed assets (extraction)?',
+    'Comparative analysis of net wealth accumulation in auto-enrolled vs. actively-enrolled cohorts, controlling for income and factoring in lifetime fees.',
+    'If net wealth is significantly higher, it strengthens the Rope/Scaffold case. If fees consume a large fraction of the gains, it strengthens the Snare/Tangled Rope case.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(savings_vs_fees, empirical, 'Whether increased savings outweigh lifetime fees from default funds.').
+
+omega_variable(
+    default_rate_suppression,
+    'Does the ''stickiness'' of the default contribution rate lead to lower lifetime savings for employees who would have otherwise chosen a higher rate?',
+    'Longitudinal study comparing savings trajectories of employees in opt-in vs. opt-out systems with similar demographics.',
+    'If auto-enrolled employees cluster at low defaults and save less overall, the system functions as a Snare for a larger population. If it serves as a floor that most exceed, it''s a Rope.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_auto_enroll, empirical, 'Is the default option truly in the employee''s best interest, or does it benefit the provider via high fees?').
+narrative_ontology:omega_variable(default_rate_suppression, empirical, 'Whether default rates anchor employees at sub-optimal savings levels.').
+
+omega_variable(
+    paternalism_vs_exploitation,
+    'Is leveraging behavioral inertia a legitimate paternalistic intervention (Scaffold) or a subtle form of exploitation (Snare)?',
+    'This is a conceptual ambiguity, resolvable only by defining a clear ethical boundary for ''nudges'' in public policy.',
+    'The classification depends on the ethical framework. A framework prioritizing autonomy would view it as a Snare; one prioritizing welfare outcomes would view it as a Scaffold or Rope.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(paternalism_vs_exploitation, conceptual, 'The ethical framing of using behavioral inertia in policy.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(automatic_enrollment_defaults, 0, 10).
+narrative_ontology:interval(automatic_enrollment_defaults, 2006, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a stable Rope, so metrics are flat. Data is included for completeness
-% as extraction is below the 0.46 threshold.
-% Theater ratio over time:
-narrative_ontology:measurement(auto_enroll_tr_t0, automatic_enrollment_defaults, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(auto_enroll_tr_t5, automatic_enrollment_defaults, theater_ratio, 5, 0.05).
-narrative_ontology:measurement(auto_enroll_tr_t10, automatic_enrollment_defaults, theater_ratio, 10, 0.05).
+% Theater ratio over time
+narrative_ontology:measurement(auto_tr_t2006, automatic_enrollment_defaults, theater_ratio, 2006, 0.15).
+narrative_ontology:measurement(auto_tr_t2016, automatic_enrollment_defaults, theater_ratio, 2016, 0.15).
+narrative_ontology:measurement(auto_tr_t2026, automatic_enrollment_defaults, theater_ratio, 2026, 0.15).
 
-% Extraction over time:
-narrative_ontology:measurement(auto_enroll_ex_t0, automatic_enrollment_defaults, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(auto_enroll_ex_t5, automatic_enrollment_defaults, base_extractiveness, 5, 0.05).
-narrative_ontology:measurement(auto_enroll_ex_t10, automatic_enrollment_defaults, base_extractiveness, 10, 0.05).
+% Extraction over time
+narrative_ontology:measurement(auto_be_t2006, automatic_enrollment_defaults, base_extractiveness, 2006, 0.35).
+narrative_ontology:measurement(auto_be_t2016, automatic_enrollment_defaults, base_extractiveness, 2016, 0.42).
+narrative_ontology:measurement(auto_be_t2026, automatic_enrollment_defaults, base_extractiveness, 2026, 0.48).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This policy coordinates the allocation of future resources (income) to savings.
 narrative_ontology:coordination_type(automatic_enrollment_defaults, resource_allocation).
+narrative_ontology:affects_constraint(automatic_enrollment_defaults, consumer_debt_levels).
+narrative_ontology:affects_constraint(automatic_enrollment_defaults, social_security_solvency).
 
-% Network relationships (structural influence edges)
-% This policy is built upon a fundamental aspect of human psychology.
-% narrative_ontology:affects_constraint(cognitive_status_quo_bias, automatic_enrollment_defaults).
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,94 @@
+{
+  "header": {
+    "constraint_id": "asce_7_22_seismic_design",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.85,
+    "theater_ratio": 0.1,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ASCE 7-22 Seismic Design Requirements",
+    "topic_domain": "technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "general_public_safety",
+      "asce_sei_standard_setters",
+      "structural_engineering_profession"
+    ],
+    "victims": [
+      "building_developers_and_owners",
+      "low_income_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Low-Income Resident",
+      "comment": "PERSPECTIVE 1: LOW-INCOME RESIDENT (SNARE) — Experiences the downstream effects as pure extraction. Higher construction costs for new buildings increase overall housing prices, while older, non-compliant housing in their communities remains un-retrofitted, leaving them bearing both the costs and the risks. They are trapped by economic circumstance. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.40."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Building Developer",
+      "comment": "PERSPECTIVE 2: BUILDING DEVELOPER (TANGLED ROPE) — Experiences the standard as a significant cost driver that constrains projects, but also as a coordination mechanism that standardizes liability and ensures a level playing field. They have mobility to pass costs to consumers or choose different projects. d≈0.85, f(d)≈1.15, σ=0.9 → χ≈0.36."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Structural Engineer",
+      "comment": "PERSPECTIVE 3: STRUCTURAL ENGINEER (ROPE) — For the practicing engineer, the standard is a pure coordination tool. It provides a common language, a defensible methodology, and a liability shield. While it constrains design freedom, its primary function from this perspective is to solve a complex coordination problem. d≈0.50, f(d)≈0.65, σ=1.0 → χ≈0.23."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The ASCE Standard-Setting Body",
+      "comment": "PERSPECTIVE 4: ASCE STANDARD-SETTING BODY (ROPE) — As the author of the constraint, the institution sees it as a pure public good and coordination mechanism. They benefit from the institutional prestige and control over the profession, experiencing no extraction. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.04. Negative effective extraction indicates a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full structure: a necessary coordination function for public safety that is coupled with high compliance costs borne asymmetrically by developers and low-income groups, all enforced by law (high suppression). The combination of a genuine coordination function and asymmetric extraction defines a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.48."
+    }
+  ],
+  "interval": {
+    "start": 1962,
+    "end": 2022
+  },
+  "commentary": {
+    "narrative_context": "ASCE 7-22 is a building code standard from the American Society of Civil Engineers that dictates the minimum loads, including seismic forces, that structures in the United States must be designed to withstand. Its primary purpose is to ensure public safety by preventing structural collapse during earthquakes. While it serves a critical coordination function for engineers, architects, and regulators, it also imposes significant financial costs on construction, which are asymmetrically distributed throughout society. This dual nature makes it a classic example of a Tangled Rope.",
+    "key_agents": [
+      "General Public Safety: The abstract primary beneficiary, whose physical safety is the goal of the standard.",
+      "ASCE/SEI Standard Setters: Institutional beneficiary (institutional/arbitrage) — controls the standard, gaining prestige and professional authority.",
+      "Building Developers/Owners: Primary cost-bearers (powerful/mobile) — must fund the expensive compliance measures.",
+      "Low-Income Communities: Primary victims (powerless/trapped) — bear passed-down costs via higher housing prices and are often concentrated in older, non-compliant buildings.",
+      "Structural Engineers: Users of the standard (organized/constrained) — rely on it as a coordination tool and liability shield."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.35) is moderate. The value represents the mandatory 'over-design' cost imposed for safety, which, while providing a public good, is extracted from project budgets. It is not pure rent-seeking, but a real cost with asymmetric beneficiaries. Suppression (0.85) is high because the standard is legally mandated via adoption into building codes; there is no legal way to build a major structure in the US without complying. Theater Ratio (0.10) is very low, as the standard is highly functional, based on extensive seismic science and engineering practice, and directly impacts structural integrity.",
+    "perspectival_gap": "The gap is stark. The standard's authors (ASCE) and users (engineers) perceive a pure coordination mechanism (Rope) that solves a complex safety and liability problem. However, those who bear the costs see extraction. For a developer with agency, it's a manageable but costly regulation (Tangled Rope). For a low-income resident trapped in a high-cost housing market and potentially unsafe older building, the system is purely extractive (Snare), raising costs without delivering proportional benefits to them.",
+    "directionality_logic": "Beneficiaries are the abstract concept of public safety and the institutions (ASCE) that create and maintain the standard. Victims are those who pay the direct costs (developers) and the indirect, passed-down costs (low-income communities). The structural engineer is modeled as a neutral user who sees it as a coordination tool. This distribution of costs and benefits, combined with varying exit options (arbitrage for ASCE, mobile for developers, trapped for residents), drives the wide perspectival gap from Rope to Snare.",
+    "mandatrophy_analysis": "This case resolves a potential mandatrophy where a public safety standard might be uncritically labeled a 'Rope'. The framework demonstrates that even a well-intentioned, scientifically grounded constraint can function as a Snare from the perspective of the powerless and trapped. It correctly identifies the structure as a Tangled Rope from an analytical view, acknowledging both its vital coordination role and its extractive consequences, preventing a simplistic 'good' or 'bad' classification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "header": {
+    "constraint_id": "choice_architecture_design",
+    "version": "1.0",
+    "generated_date": "2023-10-27",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.5,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Libertarian Paternalist Nudges",
+    "topic_domain": "psychological/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "policy_designers",
+      "society_at_large"
+    ],
+    "victims": [
+      "nudged_individuals_autonomy",
+      "individuals_with_atypical_preferences"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Nudged Individual",
+      "comment": "PERSPECTIVE 1: THE NUDGED INDIVIDUAL (SNARE) — Trapped by cognitive biases (e.g., status quo bias) that the choice architecture is designed to exploit. The 'freedom to choose' is illusory when significant cognitive cost is required to overcome the default. This perspective experiences the extraction of autonomy directly. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.54. While not meeting the snare threshold of χ≥0.66, this is the closest classification for an agent experiencing pure, uncompensated extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Policy Designer",
+      "comment": "PERSPECTIVE 2: THE POLICY DESIGNER (ROPE) — The 'libertarian paternalist' who designs the system. They see it as a pure coordination mechanism for achieving socially beneficial outcomes (e.g., higher savings rates, organ donation). From this position of power and control (arbitrage exit), the extractive component is invisible or justified as a net good. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.05. Negative effective extraction signifies a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — This perspective sees both the genuine coordination function (steering towards better outcomes) and the asymmetric extraction of autonomy and cognitive effort. It recognizes that the system requires active design and enforcement and benefits designers while costing individuals who dissent. This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.53."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Emergency Health Official",
+      "comment": "PERSPECTIVE 4: THE EMERGENCY HEALTH OFFICIAL (SCAFFOLD) — During a public health crisis, nudges (e.g., default vaccination appointments) are implemented as temporary measures to achieve a critical public good. These have an implicit or explicit sunset clause tied to the end of the emergency. The coercion is tolerated because it is temporary and serves a vital coordination function. This perspective requires adding `has_sunset_clause: true` to the base properties for this context."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Corporate 'Dark Pattern' User",
+      "comment": "PERSPECTIVE 5: THE CORPORATE 'DARK PATTERN' USER (PITON) — This perspective sees nudges that have degraded into 'dark patterns' (e.g., confusing unsubscribe processes). The original justification (coordination) has atrophied, and the primary function is now inertial extraction, maintained through performative compliance with vague regulations. The theater_ratio of 0.40 is low for a Piton, but this perspective experiences the theatrical claim of 'user choice' as the dominant feature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Cognitive Realist",
+      "comment": "PERSPECTIVE 6: THE COGNITIVE REALIST (MOUNTAIN) — This perspective frames human cognitive biases as an unchangeable feature of reality. Therefore, *any* choice environment is inherently a 'nudge'. Designing them intentionally is simply acknowledging this natural law. This view naturalizes a contingent design choice into an inescapable feature of the world, a 'false summit' that the engine would flag because the base properties (ε=0.38, suppression=0.50) do not meet the Mountain classification thresholds."
+    }
+  ],
+  "interval": {
+    "start": 2008,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "Libertarian Paternalism proposes designing 'choice architectures' to nudge individuals towards outcomes deemed beneficial by the designer, while preserving the formal freedom to choose otherwise. This is commonly implemented via defaults, such as opt-out retirement savings plans or organ donation registries. The constraint lies in the cognitive cost imposed on individuals who wish to deviate from the paternalistically-chosen path, exploiting well-documented cognitive biases like status quo bias and inertia.",
+    "key_agents": [
+      "Policy Designers (e.g., governments, corporations): Primary beneficiaries (institutional/arbitrage) — achieve policy or commercial goals with high compliance.",
+      "Nudged Individuals' Autonomy: Primary victim (powerless/trapped) — bears the cost of cognitive effort to dissent or has their choice made for them by default.",
+      "Individuals with Atypical Preferences: Secondary victims (moderate/constrained) — must actively fight the default to achieve their desired, non-standard outcome.",
+      "Society at Large: Secondary beneficiary — benefits from aggregate positive outcomes (e.g., higher national savings rate, more available organs for transplant)."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The system doesn't extract money directly, but it extracts cognitive resources and autonomy. The cost is the effort required to understand the options and override the default. Suppression (0.50): Moderate. While 'libertarian' in name, the effectiveness of nudges relies on the fact that most people will *not* exit the default path. The suppression is soft and psychological, not physical. Theater Ratio (0.40): The 'libertarian' label is a key piece of theater, framing a paternalistic intervention as one that preserves freedom. It masks the coercive, albeit soft, nature of the design.",
+    "perspectival_gap": "The gap is profound. The designer (e.g., Cass Sunstein) sees a benevolent Rope, a tool for helping people help themselves. The individual who is harmed by the default (e.g., someone who needs ready cash and is auto-enrolled in a savings plan) experiences a Snare that traps them in a costly default. The analytical observer sees the synthesis: a Tangled Rope that combines a genuine coordination function with a non-trivial, asymmetrically applied extraction of autonomy.",
+    "directionality_logic": "Beneficiaries are the policy designers who achieve their goals and, arguably, the societal aggregate that benefits from the nudged behavior. They have low directionality (d). Victims are the individuals whose autonomy is bypassed and especially those for whom the default choice is suboptimal. They bear the cognitive costs and have high directionality (d). The entire mechanism functions by creating a gradient of cognitive effort, which is the source of the extraction.",
+    "mandatrophy_analysis": "This constraint is a classic case where misclassification leads to mandatrophy. Labeling it a pure Rope (the designer's view) ignores the extraction of autonomy and the costs imposed on dissenters. Labeling it a pure Snare (the dissenter's view) ignores the genuine, often widespread, benefits that result from the coordination function. The Tangled Rope classification, from the analytical perspective, correctly identifies and holds in tension both the coordination and extraction elements, preventing the collapse into a simplistic moral judgment and allowing for a structural analysis of its costs and benefits."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  }
+}

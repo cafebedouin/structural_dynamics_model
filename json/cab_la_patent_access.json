@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "cab_la_patent_access",
+    "version": "1.0",
+    "generated_date": "2024-07-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.85,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Patent-Constrained Access to Long-Acting HIV PrEP (Cabotegravir)",
+    "topic_domain": "healthcare/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "viiv_healthcare",
+      "medicines_patent_pool"
+    ],
+    "victims": [
+      "at_risk_populations_excluded_countries",
+      "at_risk_populations_eligible_countries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The At-Risk Individual (Excluded Country)",
+      "comment": "PERSPECTIVE 1: EXCLUDED PATIENT (SNARE) \u2014 An individual in a middle-income country not covered by the voluntary license. The drug exists and is life-saving, but is made inaccessible by patent law and prohibitive pricing. The coordination function is null; it is pure extraction of potential life-years. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Patent Holder (ViiV Healthcare)",
+      "comment": "PERSPECTIVE 2: PATENT HOLDER (ROPE) \u2014 ViiV and its shareholders see the tiered licensing system as a pure coordination mechanism. It balances humanitarian access in the poorest markets with the need to recoup R&D investment and profit from high-income markets, thereby funding future innovation. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.10. The negative extraction represents the perceived subsidy to low-income countries."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Implementing Health Agency (Zimbabwe)",
+      "comment": "PERSPECTIVE 3: IMPLEMENTING AGENCY (TANGLED ROPE) \u2014 A donor agency like PEPFAR or a national ministry of health. They experience the genuine coordination benefit of the superior drug but are severely limited by the artificial supply constraints and donor-dependency created by the licensing terms. They navigate a system that both helps and hinders. d\u22480.55 (as victim proxy), f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.51."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 This view sees the full structure: a genuine coordination advance (the drug's efficacy) is inextricably linked to an extractive legal framework (the patent and restrictive license). The system simultaneously solves one problem (adherence) while creating another (inequitable access). The base properties (\u03b5=0.68, suppression=0.85) confirm the Tangled Rope classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "generic_production_viability",
+      "question": "Can generic manufacturers actually produce CAB-LA at scale and at a very low cost, or are there undisclosed technical hurdles that justify some of ViiV's market control?",
+      "resolution_mechanism": "Independent technical audits of generic manufacturing processes and supply chains for the required active pharmaceutical ingredients.",
+      "impact": "If production is intrinsically difficult and expensive, the base extractiveness (\u03b5) would be lower. If it is simple, the current \u03b5 is confirmed or even underestimated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical and economic feasibility of low-cost generic CAB-LA production"
+    },
+    {
+      "id": "compulsory_licensing_threat",
+      "question": "Was ViiV's voluntary license a pre-emptive action to neutralize the growing political threat of countries issuing compulsory licenses to manufacture the drug anyway?",
+      "resolution_mechanism": "Analysis of diplomatic and corporate communications; tracking political statements from key middle-income countries prior to the MPP agreement.",
+      "impact": "If the license was a strategic concession to avoid a worse outcome (widespread compulsory licensing), it reinforces the view of the system as a contested terrain of extraction, not just a top-down coordination effort.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the voluntary license was a strategic response to political pressure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 2021,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Cabotegravir (CAB-LA) is a long-acting injectable drug for HIV prevention (PrEP), offering a significant adherence advantage over daily pills (6 injections vs. 365 pills per year). However, its developer, ViiV Healthcare, holds the patent, creating a state-enforced monopoly. While ViiV has provided voluntary licenses through the Medicines Patent Pool (MPP) to allow for cheaper generic production, these licenses are geographically restricted to 90 low- and middle-income countries. This structure deliberately excludes numerous countries with significant HIV burdens to protect ViiV's high-price markets, creating a system of tiered access and artificial scarcity. Even in eligible countries like Zimbabwe, initial rollout is minimal and donor-dependent, leaving vast populations unprotected.",
+    "key_agents": [
+      "ViiV Healthcare: Primary beneficiary (institutional/arbitrage) \u2014 Holds the patent and controls licensing terms to maximize global profit.",
+      "At-Risk Populations (Excluded Countries): Primary victim (powerless/trapped) \u2014 Cannot access the drug due to patent barriers and high prices.",
+      "At-Risk Populations (Eligible Countries): Secondary victim (powerless/trapped) \u2014 Face severe rationing and supply delays due to slow generic ramp-up and limited funding.",
+      "Medicines Patent Pool & Donors (PEPFAR): Implementing agents (institutional/constrained) \u2014 Facilitate access but operate within the restrictive framework set by the patent holder."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.68) is very high, representing the immense value captured by denying a life-saving, cheaply producible drug to entire populations to protect pricing power elsewhere. The extraction is measured in preventable infections and lost life-years. Suppression (0.85) is extremely high, as patents are a form of state-enforced monopoly that legally suppresses all alternatives except with the owner's permission. Theater Ratio (0.35) is moderate; the voluntary licensing scheme is a genuine (if limited) act of access, but it also serves a significant public relations function to deflect criticism.",
+    "perspectival_gap": "The gap is stark. ViiV (the beneficiary) sees a Rope, a responsible coordination of market access that balances profit and philanthropy. The individual in Brazil or Thailand who is excluded by the license experiences a brutal Snare where a life-saving technology is deliberately withheld by a legal fiction. The public health agency in Zimbabwe sees a Tangled Rope\u2014a useful tool they can't deploy at scale due to externally imposed constraints. The analytical view confirms the structure is a Tangled Rope, as the undeniable coordination benefit is fundamentally tied to an extractive and coercive legal scaffolding.",
+    "directionality_logic": "ViiV, as the beneficiary with arbitrage exit, has a directionality d\u22480.05, leading to a negative effective extraction (\u03c7 < 0); from their perspective, they are subsidizing the system. The at-risk individual, as a victim with trapped exit, has d\u22480.95, yielding a very high positive \u03c7; for them, the system is almost purely extractive. This vast difference in \u03c7, derived from their structural positions, is the core of the perspectival gap.",
+    "mandatrophy_analysis": "This constraint story avoids mandatrophy by refusing to classify the system as a pure Rope, despite the existence of the voluntary license. It correctly identifies that the *terms* of the license are the primary mechanism of extraction. The framework's ability to model a system as both coordinating and extractive (Tangled Rope) is essential here, preventing the positive framing ('access to medicines initiative') from obscuring the underlying extractive structure that leaves millions behind."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_patent_system",
+      "global_hiv_response"
+    ]
+  }
+}

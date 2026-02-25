@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "blackstone_smd_control",
+    "version": "1.0",
+    "generated_date": "2024-07-28",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.8,
+    "theater_ratio": 0.15,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blackstone Senior Managing Director Voting Control",
+    "topic_domain": "economic/corporate_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_managing_directors",
+      "founding_partners"
+    ],
+    "victims": [
+      "public_unitholders",
+      "market_governance_norms"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Public Unitholder",
+      "comment": "PERSPECTIVE 1: PUBLIC UNITHOLDER (SNARE) — Provides capital but is stripped of voting rights. The only exit is selling units; there is no 'voice' to influence management or elect the general partner. The structure extracts agency completely. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Senior Managing Director",
+      "comment": "PERSPECTIVE 2: SENIOR MANAGING DIRECTOR (ROPE) — Experiences the structure as a pure coordination mechanism. It insulates long-term strategy from the pressures of public markets and activist investors, enabling decisive management. For this group, it is a tool for effective governance. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (enabling stable, long-term management) and the severe asymmetric extraction of voting power from capital providers. The structure is functional but highly coercive. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Market Governance Advocate",
+      "comment": "PERSPECTIVE 4: MARKET GOVERNANCE ADVOCATE (SNARE) — Groups like the Council of Institutional Investors see this as a violation of governance norms that disenfranchises shareholders. They are organized but constrained, unable to force change directly, viewing the structure as pure extraction of rights. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.49. This is on the border of Tangled Rope and Snare, but from their normative position, the coordination function is illegitimate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "performance_vs_extraction",
+      "question": "Is the absolute voting control by SMDs a necessary component for Blackstone's long-term outperformance, or is it an extractive feature that benefits insiders at the expense of public unitholders?",
+      "resolution_mechanism": "Comparative analysis of performance between dual-class/limited-partnership firms and single-class firms in the same sector over multiple economic cycles. Analysis of capital allocation decisions to see if they systematically favor SMD interests over unitholder returns.",
+      "impact": "If necessary for performance, the constraint has a stronger Rope character from more perspectives. If not, it is more clearly a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether SMD control is essential for performance or primarily extractive."
+    },
+    {
+      "id": "cost_of_disenfranchisement",
+      "question": "What is the quantifiable economic cost (e.g., lower returns, higher fees, value destruction from insider-led decisions) to public unitholders from their lack of voting rights?",
+      "resolution_mechanism": "Event studies around governance challenges, fee structure analysis compared to publicly-controlled peers, and quantification of any 'governance discount' in the unit price.",
+      "impact": "A high quantifiable cost would increase the base extractiveness (ε) and solidify the Snare classification from victim perspectives. A low or negligible cost would weaken it.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Quantifying the economic cost to unitholders from lack of voting rights."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 2007,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Established during Blackstone's 2007 IPO, this corporate governance structure uses a multi-class unit system to grant Senior Managing Directors (SMDs) and founders absolute voting control over the firm's general partner. Public unitholders, who provide the majority of the firm's public capital, have no voting rights concerning the election of the general partner or its directors. This creates a permanent disconnect between economic ownership and control, a hallmark of a Tangled Rope structure.",
+    "key_agents": [
+      "Senior Managing Directors (SMDs): Primary beneficiaries (institutional/arbitrage) who wield absolute voting control.",
+      "Public Unitholders: Primary victims (powerless/trapped) who provide capital but are denied agency or 'voice'.",
+      "Market Governance Advocates: Organized victims (organized/constrained) who challenge the structure based on normative principles of shareholder democracy.",
+      "Analytical Observer: Sees the dual function of coordination and extraction (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65) is high because the structure extracts the fundamental right of agency from capital providers. This control allows SMDs to dictate strategy, compensation, and fee structures that may not align with public unitholder interests. Suppression (0.80) is very high; the partnership agreement legally forecloses any possibility of unitholders exerting control. Their only option is to sell their stake. Theater (0.15) is low, as the structure does not pretend to be democratic; its control function is explicit.",
+    "perspectival_gap": "The gap is profound. For the SMDs, the constraint is a Rope, a necessary tool to shield the firm from short-term market pressures and execute a long-term vision. For public unitholders, it is a Snare, trapping their capital in a vehicle where they have no say and their interests may be subordinated. The analytical view acknowledges both realities, classifying it as a Tangled Rope—a structure with a legitimate coordination purpose that is inextricably linked to a coercive extraction of power.",
+    "directionality_logic": "The directionality is derived directly from the structural roles. SMDs are declared beneficiaries with arbitrage exit, yielding a negative effective extraction (χ < 0) and a Rope classification. Public unitholders are victims with trapped exit options (within the governance system), yielding a very high positive χ and a Snare classification. The analytical observer's default parameters correctly identify the mixed nature of the constraint, resulting in the Tangled Rope classification.",
+    "mandatrophy_analysis": "This case avoids mandatrophy by refusing to label the structure as either purely 'good governance' (Rope) or purely 'investor abuse' (Snare). The framework demonstrates that both are valid, indexed perspectives. The Tangled Rope classification from the analytical viewpoint correctly identifies the core tension: a mechanism that is simultaneously a tool for effective coordination for insiders and a means of coercive extraction for outsiders."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_class_share_prevalence"
+    ]
+  }
+}

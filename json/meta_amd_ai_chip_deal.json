@@ -1,0 +1,142 @@
+{
+  "header": {
+    "constraint_id": "meta_amd_ai_chip_deal",
+    "version": "1.0",
+    "generated_date": "2024-07-28",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.8,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Meta-AMD Strategic AI Chip Supply Agreement",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hyperscalers",
+      "dominant_chipmakers"
+    ],
+    "victims": [
+      "ai_startups_and_researchers",
+      "non_partnered_enterprises"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Innovator",
+      "comment": "PERSPECTIVE 1: EXCLUDED INNOVATOR (SNARE) \u2014 A small AI startup or academic lab that cannot secure cutting-edge compute. They are priced out of the market, forced to use inferior hardware, or abandon research directions, effectively suppressing their ability to compete. The supply constraint is an insurmountable barrier. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22481.16. This is well into Snare territory."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Strategic Partner (Meta/AMD)",
+      "comment": "PERSPECTIVE 2: STRATEGIC PARTNER (ROPE) \u2014 From the perspective of Meta or AMD, this deal is a pure coordination mechanism to solve an immense supply chain and R&D challenge. It de-risks multi-billion dollar fab investments for AMD and secures a critical resource for Meta's future. The deal creates value for both. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.10."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Concerned Regulator",
+      "comment": "PERSPECTIVE 3: CONCERNED REGULATOR (TANGLED ROPE) \u2014 A national or international regulatory body sees both sides. They recognize the legitimate coordination required for such a complex market, but are also acutely aware of the market concentration and anticompetitive effects on smaller players. Their constrained exit options reflect their limited ability to alter the fundamental capital-intensive nature of the industry. d\u22480.50 (derived from being an observer of both beneficiary/victim, but with constrained exit), f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 This view synthesizes the others, acknowledging the genuine coordination function while quantifying the high levels of extraction and suppression imposed on those outside the partnership. The structure simultaneously solves a problem for the powerful and creates a barrier for the powerless, which is the definition of a Tangled Rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "in_house_viability",
+      "question": "Can in-house chip design by other major tech firms or open-source hardware efforts meaningfully break the AMD/Nvidia oligopoly?",
+      "resolution_mechanism": "Tracking market share of non-oligopoly hardware in large-scale AI training deployments over a 5-year period. Success would be >15% market share captured by alternative designs.",
+      "impact": "If viable alternatives emerge, suppression would decrease significantly, potentially shifting the constraint from a Tangled Rope towards a Rope as competition increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether in-house or open-source chips can break the supply oligopoly"
+    },
+    {
+      "id": "software_optimization_impact",
+      "question": "To what extent can advances in algorithmic efficiency and software optimization reduce the raw demand for cutting-edge hardware?",
+      "resolution_mechanism": "Comparing performance gains on benchmark tasks from hardware upgrades versus software improvements (e.g., quantization, sparse models, efficient architectures).",
+      "impact": "If software can provide a >5x efficiency gain, it would lower the barrier to entry, reducing the extractiveness and suppressive power of the hardware suppliers.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether software efficiency can outpace hardware demand"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 2020,
+    "end": 2030
+  },
+  "commentary": {
+    "narrative_context": "The frontier of artificial intelligence is critically dependent on access to vast amounts of specialized computing hardware, primarily high-end GPUs and accelerators. This supply is dominated by an oligopoly of chipmakers. This constraint story models the structural effects of large-scale, strategic sourcing deals, such as the one between Meta and AMD, where a hyperscaler secures a significant portion of future chip supply. While solving a critical coordination problem for the partners, these deals invariably concentrate market power and raise the barriers to entry for smaller companies, startups, and academic researchers, creating a system of immense extraction.",
+    "key_agents": [
+      "Hyperscalers (Meta, Google, etc.): Primary beneficiary (institutional/arbitrage) - Secure compute supply to maintain their competitive moat.",
+      "Dominant Chipmakers (AMD, Nvidia): Primary beneficiary (institutional/arbitrage) - Gain predictable, massive revenue streams and de-risk capital expenditures.",
+      "AI Startups and Researchers: Primary victim (powerless/trapped) - Are priced out of the market for cutting-edge hardware, suppressing innovation.",
+      "Non-Partnered Enterprises: Secondary victim (organized/constrained) - Face higher prices and limited supply for their own AI initiatives.",
+      "Regulators: Institutional actor (institutional/constrained) - Attempt to balance innovation with concerns about market concentration."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.68) is high, reflecting the massive premiums and competitive disadvantage imposed on those who cannot secure these deals. Suppression (0.80) is very high because there are few, if any, viable alternatives to the hardware produced by the chipmaking oligopoly for training state-of-the-art models. The theater ratio (0.30) is moderate; while the deals are functional, their public announcements are highly performative, designed to signal market power and technological leadership to investors, contributing to 'AI bubble' narratives.",
+    "perspectival_gap": "The gap is stark: Meta and AMD perceive a mutually beneficial coordination mechanism (Rope) that enables innovation. For an AI startup, the same deal functions as a market-closing Snare, locking them out of the key resource they need to survive. A regulator sees the difficult hybrid reality of a system that is both functional for its participants and harmful to the broader ecosystem (Tangled Rope). This gap between a Rope and a Snare is a classic signature of a Tangled Rope structure.",
+    "directionality_logic": "The directionality 'd' is derived from structural position. Beneficiaries like Meta, with institutional power and arbitrage exit options (they could partner with Nvidia, or accelerate in-house designs), have a very low 'd', leading to a Rope classification. Victims like startups, who are trapped with no viable alternatives, have a very high 'd', resulting in a Snare. The system correctly computes these divergent realities from the same base properties by indexing to the agent's position.",
+    "mandatrophy_analysis": "This case prevents the mandatrophy of mislabeling a highly extractive system as pure coordination. An analysis that only considered the partners (Meta and AMD) would incorrectly classify this as a Rope. By requiring the declaration of victims, the framework forces an accounting of the suppressive and extractive externalities of the deal. The final classification of Tangled Rope correctly identifies that a genuine coordination function is being leveraged to create and sustain an extractive power dynamic."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain",
+      "large_language_model_market"
+    ]
+  }
+}

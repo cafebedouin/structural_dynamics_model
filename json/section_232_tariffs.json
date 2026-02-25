@@ -1,0 +1,154 @@
+{
+  "header": {
+    "constraint_id": "section_232_tariffs",
+    "version": "1.0",
+    "generated_date": "2024-07-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Section 232 National Security Tariffs",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_steel_producers",
+      "us_aluminum_producers",
+      "associated_labor_unions"
+    ],
+    "victims": [
+      "downstream_manufacturers",
+      "us_consumers",
+      "foreign_exporters"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Downstream Manufacturer",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM MANUFACTURER (SNARE) \u2014 An automobile or appliance maker now forced to buy more expensive domestic steel. Their input costs rise, making them less competitive globally. Exit options are constrained; moving factories is a massive undertaking. From this view, the tariff is a pure extractive trap. d derived from victim + constrained, \u03c7 is high."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Protected Domestic Producer",
+      "comment": "PERSPECTIVE 2: PROTECTED PRODUCER (ROPE) \u2014 A domestic steel mill that can now charge higher prices due to suppressed foreign competition. They see the tariff as a fair and necessary coordination mechanism to ensure national security and a level playing field. Their institutional power and arbitrage exit (lobbying) gives them a low d, resulting in negative effective extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Executive Branch Enforcer",
+      "comment": "PERSPECTIVE 3: EXECUTIVE ENFORCER (SCAFFOLD) \u2014 The government publicly frames the tariffs as a temporary support structure needed to rebuild a vital domestic industry for national defense. The policy is presented with an implicit sunset clause: it's only necessary until the industry is secure again. This perspective captures the official justification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 An economist or trade lawyer sees the dual function. There is a claimed (if weak) coordination purpose (national security) alongside a very strong, asymmetric extraction of wealth from consumers and downstream industries to protected producers. The high \u03b5, high suppression, and active enforcement make it a textbook Tangled Rope."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The End Consumer",
+      "comment": "PERSPECTIVE 5: END CONSUMER (SNARE) - The individual buying a car or washing machine faces a higher price due to the increased cost of steel. They are powerless to avoid this cost and are trapped by the national scope of the policy. The national security justification is abstract and provides no direct benefit, making the price increase feel purely extractive."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_pretext",
+      "question": "Is the national security justification a genuine strategic necessity or a pretext for economic protectionism?",
+      "resolution_mechanism": "Declassified defense assessments of domestic steel/aluminum production capacity versus actual, quantified military procurement needs during a major conflict.",
+      "impact": "If genuine, the constraint has a stronger coordination component, validating the Tangled Rope classification. If a pretext, it is structurally a Snare disguised as a Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the national security claim is genuine or a pretext for protectionism"
+    },
+    {
+      "id": "net_economic_effect",
+      "question": "Do the economic benefits to the protected industries (jobs, profits) outweigh the costs to downstream industries and consumers (higher prices, job losses)?",
+      "resolution_mechanism": "Comprehensive macroeconomic modeling of job gains/losses, price effects, and GDP impact across all affected sectors over the policy's lifecycle.",
+      "impact": "A net-negative economic effect reinforces the Snare classification from a societal perspective. A net-positive effect (which most economic studies dispute) would bolster the Tangled Rope/Scaffold case.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The net economic impact of the tariffs on the overall US economy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 2018,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the tariffs on steel and aluminum imports imposed by the U.S. under Section 232 of the Trade Expansion Act of 1962. The official justification for these tariffs was national security, arguing that a robust domestic metals industry is essential for defense capabilities. However, the policy functions primarily as a protectionist measure, shielding domestic producers from foreign competition. This creates a structural conflict between the protected industries, which benefit from higher prices, and the downstream manufacturers and end consumers, who bear the increased costs.",
+    "key_agents": [
+      "U.S. Steel/Aluminum Producers: Primary beneficiaries (institutional/arbitrage) who gain market share and pricing power.",
+      "Downstream Manufacturers: Primary victims (organized/constrained) such as automakers and appliance companies, who face higher input costs.",
+      "U.S. Consumers: Secondary victims (powerless/trapped) who pay higher prices for finished goods.",
+      "The U.S. Executive Branch: The institutional enforcer of the policy, which claims a national security coordination function.",
+      "Foreign Exporters: Victims who are priced out of the U.S. market."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.65) is high because the tariffs engineer a direct transfer of wealth from a broad base of consumers and industries to a concentrated group of producers. Suppression (0.70) is high, as the explicit purpose is to suppress the alternative of importing cheaper materials. The Theater Ratio (0.60) reflects the widespread view among economists that the 'national security' justification is a pretext for economic protectionism, making a significant portion of the policy's rationale performative.",
+    "perspectival_gap": "The perspectival gap is extreme. The protected domestic producer experiences a beneficial Rope, a simple rule that helps them. The downstream manufacturer, whose business is harmed by inflated costs, experiences an inescapable Snare. The government frames its own action as a temporary Scaffold for a vital industry. The analytical observer, weighing the claimed coordination function against the obvious extraction, classifies it as a Tangled Rope. This highlights how a single policy can be perceived as helpful, harmful, or a complex hybrid depending on one's structural position.",
+    "directionality_logic": "The directionality derivation is driven by the clear beneficiary/victim structure. Beneficiaries ('us_steel_producers') are institutional actors with arbitrage exit (they can lobby to maintain or alter the rules), which yields a low 'd' value and a Rope classification. Victims ('downstream_manufacturers') are organized but have constrained exit (they cannot easily move production), which yields a high 'd' and a Snare classification. The system correctly models that the same policy can be simultaneously a subsidy and a tax depending on the agent's relationship to it.",
+    "mandatrophy_analysis": "This case is a classic example of potential mandatrophy, where a policy claimed to serve the collective good (national security) is structurally an extractive mechanism for a select few. The framework resolves this by distinguishing between the claimed function and the analytical reality. While the executive claims a Scaffold, the high, asymmetric extraction (\u03b5=0.65) and lack of a formal sunset clause lead the analytical observer to correctly identify it as a Tangled Rope, while acknowledging the Snare experienced by its targets."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wto_dispute_settlement_system",
+      "global_supply_chain_fragility"
+    ]
+  }
+}

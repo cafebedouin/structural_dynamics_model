@@ -3,7 +3,7 @@ import time
 import random
 import feedparser
 from datetime import datetime
-from agent.story_generator_base import (
+from story_generator_base import (
     EXCLUSION_PATTERNS, PROLOG_DIR, generate_story, load_processed_log,
 )
 

@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "broke_vs_poor_grocery_math",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.1,
+    "claimed_type": "snare",
+    "human_readable": "The Cognitive Load of Poverty (Grocery Math)",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_holders_and_employers"
+    ],
+    "victims": [
+      "low_income_individuals"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Individual in Poverty",
+      "comment": "PERSPECTIVE 1: THE INDIVIDUAL (SNARE) — Experiences the constraint as a constant, coercive extraction of cognitive resources. There is no option to not perform the calculation; failure results in immediate material lack and social humiliation. Exit is impossible without a fundamental change in economic status. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.85."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Middle-Class Observer",
+      "comment": "PERSPECTIVE 2: THE MIDDLE-CLASS OBSERVER (MOUNTAIN) — Lacking direct experience, this observer naturalizes the constraint as an unfortunate but fixed feature of the economic landscape ('the poor will always be with us'). The coercive mechanism is invisible, appearing as an immutable law rather than a contingent state. The engine will flag this as a false summit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Systemic Beneficiary",
+      "comment": "PERSPECTIVE 3: THE SYSTEMIC BENEFICIARY (ROPE) — From the perspective of capital, this cognitive tax is a feature, not a bug. It appears as a coordination mechanism that ensures labor discipline and reduces the capacity for long-term planning or collective action among the workforce. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.11. The negative extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Social Worker or Activist",
+      "comment": "PERSPECTIVE 4: THE ACTIVIST (TANGLED ROPE) — Sees both the severe extraction (the Snare aspect) and attempts to build coordination solutions (the Rope aspect) like benefits counseling, financial literacy programs, and mutual aid. They are entangled in a system that has both coercive and (potentially) cooperative elements. d≈0.55, f(d)≈0.75, σ=0.9 → χ≈0.51."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (SNARE) — The analyst sees the full structure: high base extraction of a non-financial resource (attention), high suppression of alternatives, and an asymmetric distribution of costs and benefits. The lack of a genuine coordination function for the victim confirms the Snare classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.04."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "systemic_benefit_vs_emergent_property",
+      "question": "Is the cognitive tax a functional component that benefits capital by suppressing worker agency, or a non-functional, emergent property of economic inequality?",
+      "resolution_mechanism": "Comparative economic analysis of societies with different welfare and wage structures, correlating cognitive load metrics with rates of labor organization and political participation.",
+      "impact": "If functional, it's a highly stable Snare. If emergent, it's a Snare that could potentially be resolved through targeted policy without threatening the core economic structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the cognitive tax is a functional feature or an emergent bug of the economic system."
+    },
+    {
+      "id": "cognitive_vs_financial_extraction",
+      "question": "Is the primary harm the direct cognitive load itself, or the poor financial decisions made as a result of decision fatigue?",
+      "resolution_mechanism": "Longitudinal studies of low-income cohorts, measuring cognitive load against financial outcomes and decision quality over time.",
+      "impact": "If the harm is direct cognitive load, solutions must focus on reducing complexity (e.g., UBI). If the harm is poor decisions, solutions might focus on decision support tools (which could be another Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing the direct harm of cognitive load from the indirect harm of poor decision-making."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 1974,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the severe cognitive load imposed by poverty, using 'grocery math' as a key example. Individuals with highly constrained budgets must maintain a running mental tally of their purchases to avoid the high cost of failure (inability to pay) at checkout. This is not a choice but a mandatory, attention-consuming task. The constraint extracts a non-financial resource—cognitive bandwidth—which has cascading effects on long-term planning, education, and civic engagement.",
+    "key_agents": [
+      "Low-Income Individuals: Primary target (powerless/trapped) — bear the full cognitive cost.",
+      "Capital Holders and Employers: Indirect beneficiary (institutional/arbitrage) — benefit from a workforce that is too cognitively taxed for long-term planning or collective action.",
+      "Middle-Class Observer: Unaffected observer (moderate/mobile) — tends to naturalize the constraint as a 'Mountain'.",
+      "Social Worker/Activist: Organized agent (organized/constrained) — attempts to mitigate the extraction while being constrained by the system."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.75) is very high, representing the constant drain on finite cognitive resources, not a direct financial transfer. Suppression (0.80) is also very high because the alternative—not performing the mental calculation—is not viable and leads to immediate, severe consequences. The enforcement mechanism is the hard budget limit at the point of sale. Theater Ratio (0.10) is extremely low; this is a brutally functional and non-performative activity.",
+    "perspectival_gap": "The gap is profound. The individual experiencing the constraint lives inside a Snare. An outside observer with economic security sees a Mountain, naturalizing a social condition as an immutable law. The systemic beneficiary, who profits from a cognitively taxed populace, perceives a Rope—a market 'discipline' that coordinates behavior for their benefit. The analyst, seeing the full structure, confirms the Snare classification.",
+    "directionality_logic": "The directionality is clear. 'Low_income_individuals' are declared victims with 'trapped' exit options, leading to a derived directionality `d` near 1.0 and maximizing effective extraction (χ). 'Capital_holders_and_employers' are declared beneficiaries with 'arbitrage' exit options, leading to a `d` near 0.0 and a negative χ, indicating they receive a net subsidy from the constraint's existence.",
+    "mandatrophy_analysis": "This constraint is a classic example of a Snare that is frequently misidentified as a Mountain ('that's just life for poor people') or a matter of personal virtue/failure. By quantifying the extraction of a non-monetary resource (attention) and the high degree of coercion (suppression), the DR framework correctly identifies it as a Snare. It avoids the mandatrophy of blaming the victim by locating the coercive structure in the economic environment, not the individual's character."
+  },
+  "network": {
+    "affects_constraints": [
+      "payday_lending_debt_cycle",
+      "food_deserts_and_nutrition"
+    ]
+  }
+}

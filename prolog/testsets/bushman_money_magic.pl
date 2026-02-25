@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: bushman_money_magic
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-05-22
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2023-10-27
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_bushman_money_magic, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -25,10 +39,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,87 +50,77 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: bushman_money_magic
- * human_readable: The Trickster's Asymmetric Scam
- * domain: economic/social
- * * SUMMARY:
- * This constraint represents a "magic scam" where a trickster figure (Jackal) utilizes
- * deception and temporary narrative control to extract wealth from victims (cattle ranchers).
- * It functions by hiding physical causality (fire under sand, money in a donkey) to present
- * a "magic" alternative that appears highly beneficial but is functionally empty. The
- * constraint is the temporary information asymmetry that enables the fraudulent exchange.
- * * KEY AGENTS:
- * - Jackal (The Trickster): Beneficiary; constructs the "magic" constraint to extract wealth.
- * - Cattle Ranchers (The Victims): Subjects who "agree" to the asymmetric exchange due to greed and suppressed context.
- * - Anthropologist: Analytical observer viewing the event as an archetype.
+ *   constraint_id: bushman_money_magic
+ *   human_readable: The Trickster's Asymmetric Scam
+ *   domain: economic/social
+ *
+ * SUMMARY:
+ *   This constraint models a classic asymmetric scam, often found in
+ *   folklore, where a trickster figure uses a 'money magic' narrative to
+ *   induce a victim to hand over their wealth (e.g., cattle), promising it
+ *   will be magically multiplied. The trickster then absconds with the
+ *   original stake. The core mechanism is the temporary creation of a
+ *   narrative reality that suppresses the victim's rational assessment of
+ *   risk and alternatives.
+ *
+ * KEY AGENTS:
+ *   - Trickster Figure: Primary beneficiary (powerful/arbitrage) — controls the narrative and extracts all value.
+ *   - Deceived Ranchers: Primary victim (powerless/trapped) — loses their wealth by buying into the false narrative.
+ *   - Skeptical Community: Observers (moderate/mobile) — witness the performative aspect of the scam without being trapped by it.
+ *   - Analytical Observer: Analyst (analytical/analytical) — deconstructs the scam into its structural components.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-% Rationale: High (0.9). The exchange is entirely one-sided; Jackal extracts wealth
-% in exchange for zero functional value.
-domain_priors:base_extractiveness(bushman_money_magic, 0.90).
-% Rationale: High (0.8). The physical reality (the fire under the sand) is
-% actively hidden to maintain the "magic" narrative. The truth is suppressed.
-domain_priors:suppression_score(bushman_money_magic, 0.80).
-% Rationale: Low (0.1). The performance is the function of the scam, not a
-% substitute for a decayed function. There is no institutional theater here.
-domain_priors:theater_ratio(bushman_money_magic, 0.10).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(bushman_money_magic, 0.85).
+domain_priors:suppression_score(bushman_money_magic, 0.75).
+domain_priors:theater_ratio(bushman_money_magic, 0.9).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(bushman_money_magic, extractiveness, 0.90).
-narrative_ontology:constraint_metric(bushman_money_magic, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(bushman_money_magic, theater_ratio, 0.10).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(bushman_money_magic, extractiveness, 0.85).
+narrative_ontology:constraint_metric(bushman_money_magic, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(bushman_money_magic, theater_ratio, 0.9).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% The scam is a constructed reality, not a natural law or a coordination tool.
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(bushman_money_magic, snare).
 narrative_ontology:human_readable(bushman_money_magic, "The Trickster's Asymmetric Scam").
 narrative_ontology:topic_domain(bushman_money_magic, "economic/social").
 
-% Binary flags
-% The scam requires Jackal's active performance to maintain the illusion.
 domain_priors:requires_active_enforcement(bushman_money_magic).
 
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(bushman_money_magic, jackal_the_trickster).
-narrative_ontology:constraint_victim(bushman_money_magic, cattle_ranchers).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(bushman_money_magic, trickster_figure).
+narrative_ontology:constraint_victim(bushman_money_magic, deceived_ranchers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE VICTIMS (CATTLE RANCHERS) - SNARE
-% The scam is a Snare. The ranchers "agree" to the rules, but those rules
-% systematically extract their wealth while providing a "magic" illusion that
-% tightens their loss. They are trapped by the trickster's narrative control.
+% PERSPECTIVE 1: THE VICTIM (SNARE) — Psychologically trapped by a narrative of greed and magic, the rancher has no exit. They experience the interaction as pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.97.
 constraint_indexing:constraint_classification(bushman_money_magic, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
             spatial_scope(local))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (JACKAL) - ROPE
-% For Jackal, the "magic" items are a "Rope"—a functional coordination mechanism
-% he uses to pull resources from the ranchers to himself. It is a tool of agency
-% to achieve a "full belly" in the desert.
+% PERSPECTIVE 2: THE TRICKSTER (ROPE) — The perpetrator experiences the scam as a well-coordinated plan. They hold all informational power and can exit at any time. The 'coordination' is with their own deception. d≈0.15, f(d)≈-0.01, σ=0.8 → χ≈-0.01. The negative effective extraction signifies a pure beneficiary.
 constraint_indexing:constraint_classification(bushman_money_magic, rope,
-    context(agent_power(institutional),
+    context(agent_power(powerful),
             time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE OBSERVER (PITON) — A community member who is not a target sees the 'magic' for what it is: pure theater. The constraint's function is entirely performative, maintained by the trickster's narrative. The high theater_ratio (0.90) triggers the Piton classification, as the observer sees a ritual with no real function.
+constraint_indexing:constraint_classification(bushman_money_magic, piton,
+    context(agent_power(moderate),
+            time_horizon(biographical),
             exit_options(mobile),
             spatial_scope(local))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ANTHROPOLOGIST) - MOUNTAIN
-% To the observer, the "scam" is a "Mountain"—an immutable feature of human
-% social systems where information asymmetry and greed inevitably produce
-% asymmetric extraction. It is a natural law of social interaction.
+% PERSPECTIVE 4: THE ANALYST (SNARE) — The analytical view cuts through all narrative and theater to see the raw structure: a high-extraction, high-suppression mechanism with no coordination function. This matches the system's claimed_type.
 constraint_indexing:constraint_classification(bushman_money_magic, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -132,23 +134,17 @@ constraint_indexing:constraint_classification(bushman_money_magic, snare,
 :- begin_tests(bushman_money_magic_tests).
 
 test(perspectival_gap) :-
-    % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(bushman_money_magic, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(bushman_money_magic, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeInstitutional,
-    TypePowerless == snare,
-    TypeInstitutional == rope.
+    constraint_indexing:constraint_classification(bushman_money_magic, TypeOther, context(agent_power(powerful), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_perspective) :-
-    % Verify the analytical observer sees a Mountain.
-    constraint_indexing:constraint_classification(bushman_money_magic, snare, context(agent_power(analytical), _, _, _)).
-
-test(threshold_validation_snare) :-
-    % Verify the base metrics align with a high-extraction constraint.
+test(extraction_signature) :-
     domain_priors:base_extractiveness(bushman_money_magic, E),
-    domain_priors:suppression_score(bushman_money_magic, S),
-    E >= 0.46,
-    S >= 0.60.
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(bushman_money_magic, TR),
+    TR >= 0.70.
 
 :- end_tests(bushman_money_magic_tests).
 
@@ -158,83 +154,72 @@ test(threshold_validation_snare) :-
 
 /**
  * LOGIC RATIONALE:
- * The scores reflect a classic predatory scam. Base extractiveness is 0.90 because the
- * exchange is entirely one-sided, with the ranchers losing all their investment for
- * zero functional value. Suppression is 0.80 because the scam's existence depends
- * entirely on actively hiding the physical truth (the fire, the hidden money). Theater
- * ratio is low (0.10) because the performance *is* the function; it is not a decayed
- * ritual replacing a lost function.
+ *   Extractiveness (0.85) is very high, as the scam's sole purpose is the complete transfer of the victim's assets. Suppression (0.75) is high because the trickster's narrative is designed to eliminate alternatives and create a sense of magical inevitability, trapping the victim psychologically. Theater Ratio (0.90) is extremely high, as the entire 'magic' process is a performance designed to obscure the simple act of theft. The scam has no real function beyond its theatricality.
  *
- * The Perspectival Gap is stark:
- * - For the Ranchers (powerless, trapped), it's a Snare. They are caught by a promise
- *   that extracts their resources.
- * - For Jackal (institutional, mobile), it's a Rope. He is the rule-maker of this
- *   micro-system, and the scam is his tool for survival/extraction.
- * - For the Analyst (analytical, civilizational), the specific event is an instance of
- *   a timeless pattern of deception, an immutable feature of social dynamics, hence a Mountain.
+ * PERSPECTIVAL GAP:
+ *   The perspectival gap is extreme and illustrative. The victim experiences a coercive Snare, feeling trapped and losing everything. The trickster, in contrast, experiences a perfect Rope—a plan executed flawlessly with no extraction *from their perspective*. They are the pure beneficiary. An outside observer who isn't fooled sees a Piton: a hollow, performative ritual that accomplishes nothing tangible. The analytical view confirms the victim's experience, classifying the structure as a Snare.
  *
- * * MANDATROPHY ANALYSIS:
- * [RESOLVED MANDATROPHY] This is a clear case of a Snare, not a Tangled Rope. While Jackal
- * benefits, there is no genuine coordination function for a wider group. The system
- * correctly identifies the perspectival gap where the beneficiary sees a tool (Rope)
- * and the victim sees a trap (Snare), while the analytical view classifies it based on
- * its high-extraction, high-suppression metrics. The Mountain classification from the
- * analytical perspective is an interesting edge case, reflecting the view that "there will
- * always be tricksters," treating the archetype itself as a natural law.
+ * DIRECTIONALITY LOGIC:
+ *   The directionality is unambiguous. The 'trickster_figure' is the sole beneficiary and has arbitrage exit, deriving a very low 'd' value and seeing the constraint as a net subsidy (Rope). The 'deceived_ranchers' are the sole victims and are trapped, deriving a very high 'd' value and experiencing maximal extraction (Snare). This clean separation of roles is characteristic of pure extraction mechanisms.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This case presents no mandatrophy. The analytical classification is clearly a Snare. The trickster's self-serving 'Rope' perspective is a textbook example of a perspectival illusion that the Deferential Realism system is designed to capture and contextualize. It correctly identifies that the perpetrator does not experience their own scheme as extractive, while simultaneously affirming that the underlying structure is, in fact, purely extractive for the target. The system does not average these views but holds them in tension.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Mandatory Omega for high-extraction constraints:
 omega_variable(
-    omega_bushman_money_magic_1,
-    "Is Jackal's scam a functional necessity for survival in a hyper-arid 'Empty Quarter' or an intentional predatory choice?",
-    "Audit of Jackal's resource alternatives vs. the frequency of the 'trickster' behavior in the folklore.",
-    "If necessity: Survival Mountain. If predatory choice: Mandatrophy Snare.",
+    victim_culpability,
+    'Is the victim''s participation driven by pure deception, or by a form of willful ignorance fueled by greed?',
+    'Psychological profiling of victims; analysis of prior warnings or community skepticism they ignored.',
+    'If pure deception, the Snare is absolute. If willful ignorance, the victim has more agency than the ''trapped'' exit implies, potentially shifting the classification for their perspective toward Tangled Rope (as they are coordinating with their own downfall).',
     confidence_without_resolution(medium)
 ).
 
+narrative_ontology:omega_variable(victim_culpability, conceptual, 'Degree of victim agency vs. pure deception').
+
 omega_variable(
-    omega_bushman_money_magic_2,
-    "Do the ranchers learn to bypass the trickster in the next encounter, or is their greed a fixed trait that can always be exploited?",
-    "Follow-up on 'successive occasions' of ranchers meeting Jackal in the narrative corpus.",
-    "If they learn: Trickery is a temporary Snare. If not: It is a systemic Mountain of human behavior.",
+    social_enforcement,
+    'To what extent does the surrounding community''s silence or tacit encouragement enable the trickster''s scam?',
+    'Ethnographic study of community responses to known trickster figures and scams.',
+    'If the community is a passive enabler, the suppression metric is accurate. If the community actively ostracizes those who question the trickster, the suppression is even higher and is socially distributed, not just perpetrator-driven.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(social_enforcement, empirical, 'Role of community silence in enabling the scam').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(bushman_money_magic, 0, 10).
+narrative_ontology:interval(bushman_money_magic, 0, 2).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data for high-extraction constraints (E > 0.46).
-% The scam is a singular, stable event. The metrics do not drift over its short lifecycle.
-%
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(bmm_tr_t0, bushman_money_magic, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(bmm_tr_t5, bushman_money_magic, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(bmm_tr_t10, bushman_money_magic, theater_ratio, 10, 0.10).
+% Theater ratio over time
+narrative_ontology:measurement(bush_tr_t0, bushman_money_magic, theater_ratio, 0, 0.9).
+narrative_ontology:measurement(bush_tr_t1, bushman_money_magic, theater_ratio, 1, 0.9).
+narrative_ontology:measurement(bush_tr_t2, bushman_money_magic, theater_ratio, 2, 0.9).
 
-% Extraction over time (stable and high):
-narrative_ontology:measurement(bmm_ex_t0, bushman_money_magic, base_extractiveness, 0, 0.90).
-narrative_ontology:measurement(bmm_ex_t5, bushman_money_magic, base_extractiveness, 5, 0.90).
-narrative_ontology:measurement(bmm_ex_t10, bushman_money_magic, base_extractiveness, 10, 0.90).
+% Extraction over time
+narrative_ontology:measurement(bush_be_t0, bushman_money_magic, base_extractiveness, 0, 0.85).
+narrative_ontology:measurement(bush_be_t1, bushman_money_magic, base_extractiveness, 1, 0.85).
+narrative_ontology:measurement(bush_be_t2, bushman_money_magic, base_extractiveness, 2, 0.85).
+
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This constraint is a pure extraction mechanism with no genuine coordination
-% function, so Boltzmann data is not applicable. It is a standalone narrative
-% with no specified network relationships.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "authoritarian_power_paradox",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.85,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Paradox of Authoritarian Centralization",
+    "topic_domain": "political/social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_ruling_elite"
+    ],
+    "victims": [
+      "general_populace",
+      "suppressed_opposition",
+      "regional_administrators"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Suppressed Dissident",
+      "comment": "PERSPECTIVE 1: THE DISSIDENT (SNARE) — Experiences the full coercive force of the state. Information control, surveillance, and suppression of dissent create a high-extraction, high-suppression environment with no exit. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.97."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Authoritarian Leader",
+      "comment": "PERSPECTIVE 2: THE LEADER (ROPE) — Experiences the system as a pure coordination mechanism for ensuring stability and executing a national vision. The costs (suppressed feedback, popular discontent) are externalized and invisible. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08. Negative effective extraction signifies a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Administrator",
+      "comment": "PERSPECTIVE 3: THE REGIONAL ADMINISTRATOR (TANGLED ROPE) — Experiences both the coordination benefits (implementing central directives) and the extractive costs (inability to report bad news, risk of purges, policy misaligned with local reality). d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.75."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Late-Stage Sycophant",
+      "comment": "PERSPECTIVE 4: THE SYCOPHANT (PITON) — In a mature, isolated regime, the primary function of governance is replaced by performative loyalty. The system persists through institutional inertia and ritual, not effective administration. The base theater_ratio of 0.75 meets the Piton gate (≥0.70)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Rival Geopolitical Power",
+      "comment": "PERSPECTIVE 5: THE RIVAL POWER (SCAFFOLD) — Views the authoritarian state's self-inflicted blindness as a temporary, unstable structure. The paradox creates a strategic opportunity that will resolve upon the regime's eventual collapse. The 'sunset clause' is the predicted failure of the brittle state."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The 'Iron Law' Ideologue",
+      "comment": "PERSPECTIVE 6: THE IDEOLOGUE (MOUNTAIN) — Believes that centralization and elite rule are an immutable, natural law of human social organization ('The Iron Law of Oligarchy'). This perspective naturalizes the constraint. The engine will detect this as a false summit, as the base properties (ε=0.68, suppression=0.85) violate the Mountain classification criteria."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The default analytical view, which recognizes the system's dual function: it performs genuine coordination (stability, infrastructure) while simultaneously relying on severe extraction (suppression of feedback and dissent) to maintain itself. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.94."
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.75
+    }
+  ],
+  "omegas": [
+    {
+      "id": "feedback_suppression_intent",
+      "question": "Is the suppression of diagnostic feedback an unintended bug of centralization, or an intended feature to maintain ideological purity and control, even at the cost of long-term stability?",
+      "resolution_mechanism": "Analysis of internal party documents, speeches, and decision-making patterns regarding dissent and negative reporting.",
+      "impact": "If a bug, the system is a tragic Tangled Rope. If a feature, it is a pure Snare where stability is secondary to ideological control.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether suppression of feedback is a bug or feature of the system."
+    },
+    {
+      "id": "digital_technology_accelerant",
+      "question": "Does digital surveillance and censorship technology fundamentally alter the paradox by making total control possible, or does it accelerate the paradox by making the regime more brittle and blind to non-digital threats?",
+      "resolution_mechanism": "Comparative analysis of collapse scenarios in pre-digital vs. digital authoritarian states; measuring the speed of information shocks leading to instability.",
+      "impact": "If it alters the paradox, digital authoritarianism may be a stable new form of governance. If it accelerates it, such regimes are more fragile than they appear.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Impact of digital technology on the stability of centralized regimes."
+    },
+    {
+      "id": "collapse_threshold",
+      "question": "What is the critical threshold of information suppression and leadership isolation beyond which regime collapse becomes statistically inevitable?",
+      "resolution_mechanism": "Historical data modeling of failed states, correlating metrics like media freedom, elite purges, and economic misallocation with subsequent collapse.",
+      "impact": "Defines the point at which the system transitions from a stable Tangled Rope to a terminal Piton or a collapsing Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The information suppression threshold for inevitable regime collapse."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The paradox of authoritarian centralization describes how a regime's attempt to secure its power by centralizing control and suppressing dissent paradoxically undermines its stability. By eliminating negative feedback loops and independent 'diagnostic sensors' (free press, opposition parties, academic freedom), the leadership becomes increasingly isolated from reality, unable to accurately perceive and respond to threats. This creates a brittle system that appears strong but is vulnerable to sudden shocks, as seen in historical and contemporary authoritarian states.",
+    "key_agents": [
+      "Central Ruling Elite: Primary beneficiary (institutional/arbitrage) — Perceives centralization as a necessary tool for stability and control (Rope).",
+      "General Populace / Dissidents: Primary victim (powerless/trapped) — Experiences the full coercive and extractive nature of the state (Snare).",
+      "Regional Administrators: Secondary victim/beneficiary (powerful/constrained) — Must navigate the demands of the central power while dealing with local realities they cannot report upwards (Tangled Rope).",
+      "Rival Geopolitical Powers: External actors (organized/mobile) — View the regime's internal fragility as a temporary state to be exploited (Scaffold).",
+      "Late-Stage Sycophants: Internal actors (institutional/constrained) — Engage in the performative rituals of a system whose functional purpose has atrophied (Piton)."
+    ],
+    "logic_rationale": "Extractiveness (0.68) is high, representing the extraction of resources, loyalty, and, crucially, the right to provide negative feedback. Suppression (0.85) is very high, as the system's existence depends on actively crushing alternative power centers and information sources. Theater Ratio (0.75) is high, reflecting the tendency of such regimes to devolve into performative loyalty tests and propaganda as their connection to reality weakens. The temporal measurements show both extractiveness and theater increasing as the regime matures and becomes more isolated.",
+    "perspectival_gap": "This constraint is a diagnostic exemplar, producing six different classifications from a single set of base properties. The Leader sees a Rope, a tool for national coordination. The Dissident sees a Snare, a trap of pure coercion. The Bureaucrat sees a Tangled Rope, a mix of function and extraction. The Sycophant sees a Piton, a hollowed-out ritual. The Rival Power sees a Scaffold, a temporary structure doomed to fail. The Ideologue sees a Mountain, a natural law of power. The gap is not a disagreement about facts, but a direct consequence of each agent's structural position relative to the flow of power and information.",
+    "directionality_logic": "The directionality `d` is derived from structural relationships. The Leader (beneficiary, arbitrage exit) has a very low `d`, resulting in negative effective extraction (Rope). The Dissident (victim, trapped exit) has a very high `d`, resulting in maximum effective extraction (Snare). The Regional Administrator (victim, constrained exit) has a high but not maximal `d`, leading to the Tangled Rope classification. Other perspectives are derived from their respective power and exit options, demonstrating how the χ formula maps structural position to classification.",
+    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that 'Rope', 'Snare', and 'Tangled Rope' are not mutually exclusive labels for a system, but perspectival facets of a single, complex structure. The error is to ask 'Which type is it?' The correct question is 'From which structural position are you observing?' The system *is* the presheaf of all its perspectival classifications. The analytical observer's classification of Tangled Rope is the most complete, but the Leader's experience of it as a Rope and the Dissident's experience of it as a Snare are equally valid structural realities."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "economic_stagnation",
+      "technological_adoption_lag",
+      "information_censorship_models"
+    ]
+  }
+}

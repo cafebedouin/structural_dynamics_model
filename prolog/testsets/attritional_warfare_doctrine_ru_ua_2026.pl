@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: attritional_warfare_doctrine_ru_ua_2026
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_attritional_warfare_doctrine_ru_ua_2026, []).
@@ -40,11 +41,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,23 +54,25 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: attritional_warfare_doctrine_ru_ua_2026
  *   human_readable: Russian Attritional Warfare Doctrine in Ukraine (2026)
- *   domain: political
+ *   domain: political/military
  *
  * SUMMARY:
  *   This constraint models the Russian military's doctrine of attritional
- *   warfare, exemplified by "meat grinder" tactics using Storm-Z convict units
- *   in Ukraine as of early 2026. The doctrine accepts massive casualties and
- *   materiel expenditure to achieve incremental territorial gains, aiming to
- *   exhaust Ukrainian forces and Western support over a long time horizon.
- *   This system constrains the options of frontline soldiers, commanders on
- *   both sides, and international actors.
+ *   warfare as practiced in Ukraine, particularly through the use of
+ *   'Storm-Z' units composed of convicts. These units are used in human-wave
+ *   style assaults, often with little equipment or support, to probe
+ *   Ukrainian defenses, force the expenditure of ammunition, and achieve
+ *   incremental territorial gains. The doctrine's logic is a grim calculus:
+ *   trading the lives of a disposable, coerced population for strategic
+ *   advantage against a more limited, professional military force. The system
+ *   relies on extreme coercion, including the use of barrier troops to
+ *   prevent retreat.
  *
- * KEY AGENTS (by structural relationship):
- *   - Frontline Conscripts & Convicts: Primary target (powerless/trapped) — bears the ultimate cost of extraction (their lives).
- *   - Russian General Staff: Primary beneficiary (institutional/arbitrage) — utilizes the doctrine as a tool to achieve strategic aims, leveraging manpower as an expendable resource.
- *   - Ukrainian High Command: Inter-institutional victim (institutional/constrained) — forced to engage within the terms of the attritional dynamic set by Russia, expending limited resources.
- *   - Western Defense Contractors: Secondary beneficiary (institutional/arbitrage) — the high burn rate of materiel creates sustained demand for their products.
- *   - Military Analysts: Analytical observer — sees the full structure, including the coordination function for one side and the extreme extraction for the other.
+ * KEY AGENTS:
+ *   - Storm-Z Convict Soldiers: Primary victims (powerless/trapped) — their lives are the primary resource being extracted.
+ *   - Russian High Command: Primary beneficiaries (institutional/arbitrage) — they design and implement the doctrine to achieve strategic goals.
+ *   - Ukrainian Military Personnel: Secondary victims (organized/constrained) — forced to expend resources and bear casualties to counter the assaults.
+ *   - Russian State Leadership: Primary beneficiaries (institutional/arbitrage) — the ultimate architects and beneficiaries of the war strategy.
  */
 
 /* ==========================================================================
@@ -78,92 +80,66 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(attritional_warfare_doctrine_ru_ua_2026, 0.75).
-domain_priors:suppression_score(attritional_warfare_doctrine_ru_ua_2026, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(attritional_warfare_doctrine_ru_ua_2026, 0.15).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(attritional_warfare_doctrine_ru_ua_2026, 0.85).
+domain_priors:suppression_score(attritional_warfare_doctrine_ru_ua_2026, 0.9).
+domain_priors:theater_ratio(attritional_warfare_doctrine_ru_ua_2026, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(attritional_warfare_doctrine_ru_ua_2026, extractiveness, 0.75).
-narrative_ontology:constraint_metric(attritional_warfare_doctrine_ru_ua_2026, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(attritional_warfare_doctrine_ru_ua_2026, extractiveness, 0.85).
+narrative_ontology:constraint_metric(attritional_warfare_doctrine_ru_ua_2026, suppression_requirement, 0.9).
 narrative_ontology:constraint_metric(attritional_warfare_doctrine_ru_ua_2026, theater_ratio, 0.15).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(attritional_warfare_doctrine_ru_ua_2026, snare).
+narrative_ontology:human_readable(attritional_warfare_doctrine_ru_ua_2026, "Russian Attritional Warfare Doctrine in Ukraine (2026)").
+narrative_ontology:topic_domain(attritional_warfare_doctrine_ru_ua_2026, "political/military").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(attritional_warfare_doctrine_ru_ua_2026). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(attritional_warfare_doctrine_ru_ua_2026).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(attritional_warfare_doctrine_ru_ua_2026, russian_general_staff).
-narrative_ontology:constraint_beneficiary(attritional_warfare_doctrine_ru_ua_2026, western_defense_contractors).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(attritional_warfare_doctrine_ru_ua_2026, frontline_conscripts_and_convicts).
-narrative_ontology:constraint_victim(attritional_warfare_doctrine_ru_ua_2026, ukrainian_high_command).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(attritional_warfare_doctrine_ru_ua_2026, russian_high_command).
+narrative_ontology:constraint_beneficiary(attritional_warfare_doctrine_ru_ua_2026, russian_state_leadership).
+narrative_ontology:constraint_victim(attritional_warfare_doctrine_ru_ua_2026, storm_z_convict_soldiers).
+narrative_ontology:constraint_victim(attritional_warfare_doctrine_ru_ua_2026, ukrainian_military_personnel).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% The convict/conscript soldier on the front line.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
+% PERSPECTIVE 1: THE STORM-Z SOLDIER (SNARE) — Coerced into service with no escape, their life is the resource being extracted. Retreat or refusal is met with execution. From this view, the doctrine is a pure death trap. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.97.
 constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, snare,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(immediate),
             exit_options(trapped),
-            spatial_scope(regional))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The Russian General Staff planning the operations.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+% PERSPECTIVE 2: THE RUSSIAN HIGH COMMAND (ROPE) — From the perspective of strategic planners, the doctrine is a coordination mechanism for achieving military objectives. It solves the problem of generating offensive momentum by treating manpower as an expendable resource. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.09. Negative effective extraction signifies a net beneficiary.
 constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(biographical),
             exit_options(arbitrage),
-            spatial_scope(national))).
+            spatial_scope(regional))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Default analytical context. Sees the coordination and the extraction.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% PERSPECTIVE 3: THE UKRAINIAN FIELD COMMANDER (TANGLED ROPE) — Experiences the doctrine as both a coherent enemy strategy (coordination) and a brutal, extractive assault that forces the expenditure of ammunition and personnel (extraction). They are constrained to respond. d≈0.55, f(d)≈0.75, σ=0.9 → χ≈0.57.
+constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SNARE) — The analyst sees the full structure: a state-level strategy whose functional core is the pure, coercive extraction of life from a trapped population. The coordination function is entirely parasitic on this extraction. The high base extraction and suppression, amplified by global scope, classify it as a Snare. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.17. This exceeds the Snare threshold.
 constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-
-% Perspective 4A: Ukrainian High Command (TANGLED ROPE)
-% An institutional actor, but structurally a victim forced to operate within
-% a system they did not choose.
-% Engine derives d from: victim membership + constrained exit → d ≈ 0.7-0.8 → high χ
-constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% Perspective 4B: Western Defense Contractors (ROPE)
-% An institutional beneficiary whose business model profits from the high
-% rate of materiel consumption.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → low/negative χ
-constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, rope,
+% PERSPECTIVE 5: THE STATE PROPAGANDIST (SCAFFOLD) — This perspective frames the brutal tactics as a temporary, heroic, and necessary sacrifice to achieve a permanent national victory. The 'sunset clause' is the end of the war, making the extreme measures a scaffold for a future peace. This is a narrative framing, not a structural reality.
+constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
-            spatial_scope(global))).
+            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -171,22 +147,14 @@ constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua
 
 :- begin_tests(attritional_warfare_doctrine_ru_ua_2026_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify the core perspectival gap between the soldier and the general.
-    constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, TypeTarget, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    TypeTarget \= TypeBeneficiary.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(inter_institutional_gap) :-
-    % Verify the gap between the two institutional victims/beneficiaries.
-    constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, TypeVictim, context(agent_power(institutional), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(attritional_warfare_doctrine_ru_ua_2026, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    TypeVictim \= TypeBeneficiary.
-
-test(tangled_rope_structural_requirements_met) :-
-    narrative_ontology:constraint_beneficiary(attritional_warfare_doctrine_ru_ua_2026, _),
-    narrative_ontology:constraint_victim(attritional_warfare_doctrine_ru_ua_2026, _),
-    domain_priors:requires_active_enforcement(attritional_warfare_doctrine_ru_ua_2026).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(attritional_warfare_doctrine_ru_ua_2026, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(attritional_warfare_doctrine_ru_ua_2026_tests).
 
@@ -196,116 +164,75 @@ test(tangled_rope_structural_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): Extremely high, representing the massive waste
- *     of human lives and materiel for minimal tactical or strategic gain. This
- *     is the defining feature of "meat grinder" warfare.
- *   - Suppression (s=0.80): Very high. For frontline soldiers, alternatives like
- *     retreat or surrender are suppressed by barrier troops and command policy.
- *     For the Ukrainian command, the alternative of ceding territory without a
- *     fight is politically and strategically unacceptable.
- *   - Theater Ratio (t=0.15): Low. While propaganda is a factor, the core
- *     function of this doctrine is brutally kinetic and functional, not performative.
+ *   Extractiveness (0.85) is extremely high, as the doctrine directly converts human lives into tactical progress. Suppression (0.90) is also extremely high, reflecting the use of convicts who have no alternative and the presence of barrier troops to enforce compliance with lethal force. The Theater Ratio (0.15) is low because the doctrine is brutally functional and largely devoid of performative elements; it is a straightforward, grim application of force.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the Russian General Staff, the doctrine is a Rope: a
- *   tool that coordinates their primary resource (manpower) to achieve a
- *   strategic goal (exhaustion of the enemy). The immense cost is an accepted
- *   input. For the frontline soldier, the same system is a Snare: a trap with
- *   no exit that extracts their life for objectives they may not understand or
- *   support.
+ *   The gap is stark. For the convict soldier, it is an inescapable death trap (Snare). For the Russian High Command, it is a rational, if brutal, tool for winning a war (Rope). For the opposing Ukrainian commander, it is a complex threat that is both strategic and extractive (Tangled Rope). The analytical observer, weighing the extreme coercion and extraction against the claimed coordination function, concludes that the system is fundamentally a Snare, where the coordination is entirely parasitic on the extraction.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality is critical here. The `constraint_beneficiary` and
- *   `constraint_victim` declarations map directly to the military hierarchy.
- *   - Beneficiaries (`russian_general_staff`, `western_defense_contractors`)
- *     are those who can leverage the system from a distance with `arbitrage`
- *     exit options, leading to low/negative effective extraction (χ).
- *   - Victims (`frontline_conscripts`, `ukrainian_high_command`) are those
- *     directly subjected to the doctrine's violence with `trapped` or
- *     `constrained` exit, leading to high χ.
+ *   The directionality is driven by the clear division of beneficiaries and victims. The Storm-Z soldiers are victims with trapped exit options, leading to a maximal directionality value (d≈0.95) and a classification as a Snare. The Russian High Command are beneficiaries with arbitrage exit options (they could choose other strategies), leading to a negative directionality value (d≈0.05) and a Rope classification. The Ukrainian forces are victims but are organized and constrained, placing them in the middle, where they perceive the mixed nature of the constraint as a Tangled Rope.
  *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The model captures the asymmetric positions of institutional actors. The
- *   Russian and Ukrainian high commands are both 'institutional', but their
- *   relationship to the constraint is opposite. Russia is a beneficiary with
- *   agency (`arbitrage` exit). Ukraine is a victim forced to react (`constrained`
- *   exit). This difference in exit options, combined with their victim/beneficiary
- *   status, correctly derives a different directionality `d` and thus a
- *   different classification (Rope vs. Tangled Rope) for institutions of the
- *   same power level.
- *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- *   This is a canonical Tangled Rope, preventing a simplistic analysis. Calling
- *   it a pure Snare would ignore that, for its architects, it has a genuine
- *   (if brutal) coordination function. Calling it a Rope would ignore the
- *   astronomical and asymmetric extraction. The Tangled Rope classification
- *   correctly identifies it as a system with both properties, which is key to
- *   understanding its persistence.
+ * MANDATROPHY ANALYSIS:
+ *   This constraint demonstrates how the DR framework avoids the mandatrophy of mislabeling state violence. A conventional analysis might simply call this 'strategy' (a Rope) or 'war' (a Mountain). By indexing to the powerless, trapped agent (the convict soldier), the framework correctly identifies the core of the doctrine as a high-coercion, high-extraction Snare. It reveals that the 'coordination' function experienced by the beneficiaries is built upon a foundation of pure extraction from the victims, preventing the sanitization of the doctrine's true nature.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_attritional_warfare_doctrine,
-    'Is the doctrine a calculated, effective strategy for a long war of exhaustion, or a symptom of institutional decay and an inability to conduct modern maneuver warfare?',
-    'Access to internal Russian General Staff strategic assessments and planning documents from 2024-2026.',
-    'If it is a calculated strategy, it remains a stable Tangled Rope. If it is a symptom of decay, its base_extractiveness is even higher than estimated and it may degrade into a Piton as Russian command structures lose coherence.',
+    doctrine_strategic_efficacy,
+    'Is the attritional doctrine achieving its strategic goals (e.g., depleting Ukrainian forces faster than Russian forces, gaining key territory) at a sustainable cost?',
+    'Post-conflict analysis of casualty ratios, ammunition expenditure rates, and territorial control changes, compared against stated Russian strategic objectives.',
+    'If found to be ineffective and unsustainable, the doctrine is not just a Snare but a failed one, bordering on a Piton of state-level strategic incompetence. If effective, it is a grimly functional Snare.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_attritional_warfare_doctrine, empirical, 'Whether the doctrine is a calculated strategy or a symptom of institutional decay, resolvable with internal planning documents.').
+narrative_ontology:omega_variable(doctrine_strategic_efficacy, empirical, 'Whether the doctrine is achieving its strategic goals effectively.').
+
+omega_variable(
+    convict_soldier_agency,
+    'To what degree do convict soldiers act purely from coercion versus internalizing state narratives of patriotism or redemption?',
+    'Systematic interviews with captured or surviving Storm-Z soldiers; analysis of internal communications and battlefield conduct.',
+    'If action is almost entirely coerced, the Snare classification is absolute. If a significant degree of ideological buy-in exists, the system has elements of a Tangled Rope even for its victims, as they perceive a (coercively offered) coordination benefit.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(convict_soldier_agency, empirical, 'The degree of agency versus pure coercion for convict soldiers.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(attritional_warfare_doctrine_ru_ua_2026, 0, 10).
+narrative_ontology:interval(attritional_warfare_doctrine_ru_ua_2026, 2022, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.75 > 0.46), so temporal data is required.
-% The data models the doctrine's intensification as the war shifted from
-% initial maneuver attempts (2022) to a more static, attritional phase.
+% Theater ratio over time
+narrative_ontology:measurement(attr_tr_t0, attritional_warfare_doctrine_ru_ua_2026, theater_ratio, 0, 0.4).
+narrative_ontology:measurement(attr_tr_t2, attritional_warfare_doctrine_ru_ua_2026, theater_ratio, 2, 0.25).
+narrative_ontology:measurement(attr_tr_t4, attritional_warfare_doctrine_ru_ua_2026, theater_ratio, 4, 0.15).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(awd_tr_t0, attritional_warfare_doctrine_ru_ua_2026, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(awd_tr_t5, attritional_warfare_doctrine_ru_ua_2026, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(awd_tr_t10, attritional_warfare_doctrine_ru_ua_2026, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(attr_be_t0, attritional_warfare_doctrine_ru_ua_2026, base_extractiveness, 0, 0.65).
+narrative_ontology:measurement(attr_be_t2, attritional_warfare_doctrine_ru_ua_2026, base_extractiveness, 2, 0.78).
+narrative_ontology:measurement(attr_be_t4, attritional_warfare_doctrine_ru_ua_2026, base_extractiveness, 4, 0.85).
 
-% Extraction over time (extraction_accumulation drift):
-narrative_ontology:measurement(awd_ex_t0, attritional_warfare_doctrine_ru_ua_2026, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(awd_ex_t5, attritional_warfare_doctrine_ru_ua_2026, base_extractiveness, 5, 0.65).
-narrative_ontology:measurement(awd_ex_t10, attritional_warfare_doctrine_ru_ua_2026, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The doctrine is a mechanism for allocating resources (lives, shells) to front sectors.
 narrative_ontology:coordination_type(attritional_warfare_doctrine_ru_ua_2026, resource_allocation).
-
-% Network relationships (structural influence edges)
-% This doctrine directly drives the demand placed on Western supply chains.
-narrative_ontology:affects_constraint(attritional_warfare_doctrine_ru_ua_2026, western_munitions_supply_chain).
-narrative_ontology:affects_constraint(attritional_warfare_doctrine_ru_ua_2026, ukrainian_manpower_mobilization).
+narrative_ontology:affects_constraint(attritional_warfare_doctrine_ru_ua_2026, russian_demographic_stability).
+narrative_ontology:affects_constraint(attritional_warfare_doctrine_ru_ua_2026, global_ammunition_supply_chains).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for this constraint. The automatic derivation chain,
-% using the declared beneficiary/victim groups and the specified exit_options
-% for each perspective, accurately models the directionality of the system.
-% The stark differences in exit options (trapped vs. constrained vs. arbitrage)
-% are sufficient for the engine to compute appropriate d values.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,170 @@
+{
+  "header": {
+    "constraint_id": "china_taiwan_reunification_mandate",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Mandate of National Rejuvenation (PRC Perspective)",
+    "topic_domain": "political/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_communist_party_leadership",
+      "prc_nationalist_identity"
+    ],
+    "victims": [
+      "taiwanese_sovereignty_and_autonomy",
+      "prc_citizens_bearing_costs",
+      "regional_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Taiwanese Citizen",
+      "comment": "PERSPECTIVE 1: TAIWANESE CITIZEN (SNARE) — Trapped by geography and geopolitics, the individual citizen faces the direct threat of coercion and the extraction of their political autonomy. The mandate offers no coordination benefit, only existential risk. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.74. This high effective extraction firmly classifies the constraint as a Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The CCP Leadership",
+      "comment": "PERSPECTIVE 2: CCP LEADERSHIP (ROPE) — As the primary beneficiary with arbitrage over the timing and intensity of enforcement, the leadership experiences the mandate as a pure coordination device. It aligns state resources, legitimizes power, and solves the 'problem' of national division. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08. The negative effective extraction signifies a net subsidy to this agent's power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees the full structure: a genuine internal coordination function for the PRC (Rope-like) combined with a highly coercive, extractive function targeting Taiwan (Snare-like). This duality is the definition of a Tangled Rope. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90. The classification holds at the upper bound of the Tangled Rope range."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Old Guard KMT Veteran",
+      "comment": "PERSPECTIVE 4: OLD GUARD KMT VETERAN (PITON) — For a traditionalist who believes in 'One China' under the ROC, the CCP's mandate is a degraded form of a once-functional goal. The original purpose (a unified, free China) has atrophied, leaving only the performative shell of nationalist rhetoric. The high theater_ratio (0.75) and inertial nature of the claim satisfy the Piton classification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The 'Mandate of Heaven' Historian",
+      "comment": "PERSPECTIVE 5: 'MANDATE OF HEAVEN' HISTORIAN (MOUNTAIN) — This perspective naturalizes the political mandate as an immutable law of Chinese history, a recurring cycle of unification and fragmentation. It frames the constraint as a Mountain. The engine will identify this as a 'false summit,' as the base properties (ε=0.65, suppression=0.80) are antithetical to a natural law."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Multinational Corporation",
+      "comment": "PERSPECTIVE 6: MULTINATIONAL CORPORATION (SCAFFOLD) — A corporation with operations in both markets sees the tension as a temporary business risk to be managed via redundant supply chains and political hedging. This risk structure (scaffold) has a de-facto sunset clause defined by their own investment horizons (e.g., 10-15 years). They extract value from both sides (coordination) while managing the costs of instability. d≈0.25, f(d)≈0.15, σ=1.2 → χ≈0.12. This low effective extraction classifies as a Scaffold."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "leadership_intent",
+      "question": "Is the 'rejuvenation' mandate a deeply held ideological belief or a pragmatic instrument for maintaining CCP legitimacy?",
+      "resolution_mechanism": "Access to internal party documents and un-curated statements from leadership (currently impossible).",
+      "impact": "If ideological, the constraint is less responsive to off-ramps or economic costs (more Mountain-like). If instrumental, it is more susceptible to cost-benefit analysis (more Tangled Rope-like).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Distinguishing ideological conviction from instrumental legitimacy tool"
+    },
+    {
+      "id": "popular_support_uncoerced",
+      "question": "What is the true level of popular support within the PRC for a military invasion of Taiwan, absent state censorship and propaganda?",
+      "resolution_mechanism": "Large-scale, methodologically sound, uncensored polling within the PRC.",
+      "impact": "High organic support would make the constraint more rigid, as the CCP would be responding to a real mandate. Low support would imply the constraint is primarily a top-down imposition, making it more brittle.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "True level of popular support for military action absent propaganda"
+    },
+    {
+      "id": "economic_cost_tolerance",
+      "question": "What is the CCP leadership's tolerance for economic damage (from sanctions, war costs) in pursuit of reunification?",
+      "resolution_mechanism": "Revealed preferences during crises; internal economic modeling and wargaming results.",
+      "impact": "A high tolerance for economic pain makes the Snare aspect more severe and likely. A low tolerance suggests the theatrical and diplomatic aspects are primary, and the military threat is a bargaining tool.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Leadership's tolerance for economic self-harm to achieve reunification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 2012,
+    "end": 2049
+  },
+  "commentary": {
+    "narrative_context": "The PRC's mandate for reunification with Taiwan, framed as essential to the 'Great Rejuvenation of the Chinese Nation,' is a powerful political constraint. It functions as a core legitimizing narrative for the CCP, demanding immense state resources and suppressing alternative political futures. For Taiwan, it represents an existential threat to its sovereignty. This story serves as a diagnostic exemplar, demonstrating how a single, high-stakes political constraint can manifest as all six DR types depending on the observer's structural relationship to it.",
+    "key_agents": [
+      "CCP Leadership: Primary beneficiary (institutional/arbitrage) — uses the mandate to legitimize rule and direct national policy.",
+      "Taiwanese Sovereignty & Autonomy: Primary victim (powerless/trapped) — the direct target of extraction and coercion.",
+      "PRC Citizens: Secondary victims (moderate/constrained) — bear the economic and social costs of the mandate.",
+      "Multinational Corporations: Powerful actors (powerful/arbitrage) — navigate the risk as a temporary business condition.",
+      "Analytical Observers: External analysts (analytical/analytical) — risk mischaracterizing a political project as a historical inevitability."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Reflects the immense diversion of PRC state resources to military and diplomatic efforts, and the intended extraction of political sovereignty from 23 million people in Taiwan. Suppression (0.80): Very High. Internally, dissent on this 'core interest' is nonexistent in public discourse. Externally, Taiwan's international space is actively and systematically suppressed. Theater Ratio (0.75): High. The narrative is built on historical claims, nationalist sentiment, and performative military displays, which are crucial for maintaining domestic consensus and signaling intent abroad. The functional aspect (actual invasion planning) is real but shrouded by the vast theatrical production.",
+    "perspectival_gap": "The gap is maximal. The CCP sees a noble coordination project (Rope). A Taiwanese citizen sees a coercive trap (Snare). An old-school nationalist sees a degraded ideal (Piton). A historian sees an eternal cycle (Mountain). A corporation sees a manageable risk (Scaffold). The analytical observer sees the synthesis of coordination and extraction (Tangled Rope). The profound disagreement is not about the facts on the ground, but about the structural interpretation of those facts from different positions of power, exit, and vulnerability.",
+    "directionality_logic": "Beneficiaries (CCP) with arbitrage have a low 'd' value, experiencing the constraint as a net benefit (negative chi). Victims (Taiwan) who are trapped have a maximal 'd' value, experiencing it as pure extraction (high chi). Other actors fall in between based on their ability to exit or re-frame the constraint (e.g., the MNC's ability to treat it as a temporary scaffold). The model correctly derives these varied experiences from the declared structural relationships.",
+    "mandatrophy_analysis": "This case is a powerful resolution to mandatrophy. It demonstrates that arguing whether the mandate is 'really' a Rope or 'really' a Snare is a category error. It is structurally both, and more. The full character of the constraint is the collection of all its perspectival classifications. The system avoids mislabeling a coercive Snare as a benign Rope by requiring classification from the victim's perspective, while also acknowledging the genuine (internal) coordination function perceived by the beneficiary."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain",
+      "us_china_strategic_competition"
+    ]
+  }
+}

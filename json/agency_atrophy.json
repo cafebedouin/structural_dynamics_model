@@ -1,0 +1,159 @@
+{
+  "header": {
+    "constraint_id": "agency_atrophy",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Outsourced Cognition Trap",
+    "topic_domain": "technological/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_providers"
+    ],
+    "victims": [
+      "dependent_users",
+      "cognitive_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent User",
+      "comment": "PERSPECTIVE 1: THE DEPENDENT USER (SNARE) — Having lost the underlying skill (e.g., navigation, scheduling), the user is trapped. Exiting the system imposes a significant cognitive and practical cost. The system extracts data, attention, and subscription fees in exchange for a now-essential function. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Provider",
+      "comment": "PERSPECTIVE 2: THE PLATFORM PROVIDER (ROPE) — From the provider's view, the system is a pure coordination tool that efficiently matches user needs with information and services, creating immense value. User dependency is seen as a measure of product-market fit, not extraction. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08. Negative effective extraction indicates a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Power User",
+      "comment": "PERSPECTIVE 3: THE POWER USER (TANGLED ROPE) — This user leverages the tool for productivity gains but consciously maintains their underlying skills, retaining the ability to switch to alternatives. They experience both the coordination benefits and the extractive pressures (e.g., data collection, addictive design). d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Digital Wellness Advocate",
+      "comment": "PERSPECTIVE 4: THE DIGITAL WELLNESS ADVOCATE (SCAFFOLD) — Organized groups promoting digital minimalism and cognitive sovereignty see the trap as a temporary state. They are actively building and promoting alternatives (e.g., privacy-focused tools, skill-building apps) that serve as a scaffold to help users exit dependency. d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.26. The sunset clause is the successful adoption of these alternative cognitive habits and tools."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The analyst sees the full lifecycle: an initial coordination function (Rope) that, through active design and user adaptation, creates dependency and enables asymmetric extraction (Snare). The constraint possesses both a genuine coordination function and a powerful extractive mechanism. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "atrophy_inevitability",
+      "question": "Is cognitive skill atrophy an unavoidable side-effect of efficient tools, or a designed outcome to create dependency?",
+      "resolution_mechanism": "Comparative analysis of tool designs (skill-preserving vs. skill-replacing UIs); review of internal platform design documents and patents.",
+      "impact": "If atrophy is an unavoidable byproduct of efficiency, the constraint is a tragic Rope. If it is a designed feature to increase switching costs, it is a pure Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether skill atrophy is an inevitable side-effect or a designed outcome"
+    },
+    {
+      "id": "skill_reversibility",
+      "question": "Is the cognitive atrophy caused by reliance on these systems reversible, and at what cost?",
+      "resolution_mechanism": "Longitudinal studies of users who cease using automated tools and attempt to regain native skills.",
+      "impact": "If skills are easily regained, the 'trapped' exit condition is weakened, and the constraint is a less severe Tangled Rope. If atrophy is permanent or costly to reverse, it is a hard Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The cost and possibility of reversing cognitive atrophy after dependency"
+    },
+    {
+      "id": "net_cognitive_impact",
+      "question": "Does outsourcing low-level cognitive tasks lead to a net increase in higher-order cognitive capacity, or does it erode the foundational skills required for complex thought?",
+      "resolution_mechanism": "Neuro-cognitive studies comparing problem-solving abilities on novel tasks between long-term dependent users and non-users.",
+      "impact": "A net positive impact would re-classify the constraint as a beneficial Scaffold for humanity. A net negative impact confirms its classification as a Snare from the perspective of the cognitive commons.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Net effect on human capability from outsourcing mundane cognition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 2005,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the dynamic where initially helpful decision-support technologies (e.g., GPS navigation, AI assistants) lead to the atrophy of the user's underlying cognitive skills. What begins as a pure coordination tool (a Rope) for convenience gradually becomes a dependency. As the user's ability to perform the task without the tool diminishes, their exit options become constrained, allowing platform providers to extract value (data, attention, fees) asymmetrically. The system's design often accelerates this process by maximizing ease-of-use and discouraging the practice of the underlying skill.",
+    "key_agents": [
+      "Platform Providers: Primary beneficiary (institutional/arbitrage) - Gain a locked-in user base, data, and revenue streams.",
+      "Dependent Users: Primary victim (powerless/trapped) - Lose cognitive skills and agency, making exit costly or impossible.",
+      "Cognitive Commons: Secondary victim (powerless/trapped) - The collective pool of human skill and resilience is degraded.",
+      "Power Users: Moderate actors (moderate/mobile) - Utilize the tools while consciously preserving their skills, navigating the trade-offs.",
+      "Digital Wellness Advocates: Organized resistance (organized/mobile) - Promote alternatives and strategies to escape or avoid the trap."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55): Represents the significant value extracted from dependent users, measured in lost agency, atrophied skills (a long-term cost), personal data, and direct monetary fees. Suppression (0.65): High. Once a skill like navigation is atrophied, the cost of relearning it is a powerful barrier to exit. This is compounded by network effects and ecosystem lock-in, making non-participation difficult. Theater Ratio (0.30): Moderate. While the core function is real, many features evolve to maximize engagement and create a perception of indispensability rather than pure utility.",
+    "perspectival_gap": "The gap is stark. The platform provider experiences the system as a highly effective Rope, solving a coordination problem for users and creating value. The dependent user, however, experiences it as a Snare, where the initial convenience has given way to a coercive dependency. The analytical observer recognizes both functions are present simultaneously, classifying it as a Tangled Rope—a system that provides real coordination while also creating the conditions for its own extractive necessity.",
+    "directionality_logic": "The directionality derivation correctly captures the perspectival differences. The platform provider, as a beneficiary with arbitrage exit, has a negative effective extraction (χ < 0), seeing a Rope. The dependent user, as a victim with trapped exit, experiences maximum positive effective extraction (χ > 0.66), seeing a Snare. The power user and advocate, with more agency and better exit options, fall in between, perceiving a Tangled Rope or Scaffold. The system's classification is thus a function of the agent's dependency and ability to exit.",
+    "mandatrophy_analysis": "This case is a classic example of lifecycle drift, resolving a potential mandatrophy. To label the system only as a 'Rope' (its initial state and the provider's claim) would be to ignore the emergent extractive structure. To label it only as a 'Snare' (the end-state for a dependent user) would be to ignore its genuine, ongoing coordination function. The Tangled Rope classification from the analytical perspective correctly identifies the hybrid nature of the constraint, preventing misclassification by acknowledging both its function and its cost."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "individual_resilience",
+      "civic_discourse_quality"
+    ]
+  }
+}

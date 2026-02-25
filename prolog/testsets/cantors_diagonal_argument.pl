@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: cantors_diagonal_argument
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_cantors_diagonal_argument, []).
@@ -39,10 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -55,16 +53,23 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: cantors_diagonal_argument
  *   human_readable: Cantor's Diagonal Argument
- *   domain: technological
+ *   domain: mathematics/logic
  *
  * SUMMARY:
- *   Cantor's Diagonal Argument demonstrates that the set of real numbers is "uncountable," meaning it cannot be put into a one-to-one correspondence with the set of natural numbers. This result has profound implications for computation and the limits of formal systems, akin to Gödel's incompleteness theorems. It acts as a fundamental constraint on what can be computed or enumerated in a finite system.
+ *   Cantor's Diagonal Argument is a mathematical proof demonstrating that the
+ *   set of real numbers is uncountably infinite, meaning it cannot be put
+ *   into a one-to-one correspondence with the set of natural numbers. This
+ *   establishes that there are different 'sizes' of infinity. The argument
+ *   functions as a fundamental logical limit, with profound implications for
+ *   mathematics, logic, and computer science, most notably in proving the
+ *   existence of uncomputable numbers and forming the basis for proofs like
+ *   the Halting Problem's undecidability.
  *
- * KEY AGENTS (by structural relationship):
- *   - Formal Systems: Primary target (powerless/trapped) — limited by the argument's conclusion.
- *   - Mathematicians: Primary beneficiary (analytical/analytical) — gain understanding of fundamental limits.
- *   - Computer Scientists: Secondary actor (analytical/analytical) — understand limitations on computation.
- *   - Philosophical Logicians: Analytical observer (analytical/analytical) — sees full structure.
+ * KEY AGENTS:
+ *   - Mathematicians/Logicians: Analytical observers who work with the consequences of the proof as a foundational principle.
+ *   - Computer Scientists: Institutional and analytical agents who treat the consequences of diagonalization (e.g., the Halting Problem) as a hard limit on computability.
+ *   - Students: Powerless agents who encounter the proof as an immutable logical fact they must accept.
+ *   - Mathematical Pluralists (e.g., Intuitionists): Analytical observers who may work in alternative logical systems but still recognize the argument's validity within classical mathematics.
  */
 
 /* ==========================================================================
@@ -72,80 +77,56 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(cantors_diagonal_argument, 0.10).
-domain_priors:suppression_score(cantors_diagonal_argument, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(cantors_diagonal_argument, 0.0).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(cantors_diagonal_argument, 0.01).
+domain_priors:suppression_score(cantors_diagonal_argument, 0.02).
+domain_priors:theater_ratio(cantors_diagonal_argument, 0.0).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(cantors_diagonal_argument, extractiveness, 0.10).
-narrative_ontology:constraint_metric(cantors_diagonal_argument, suppression_requirement, 0.05).
+narrative_ontology:constraint_metric(cantors_diagonal_argument, extractiveness, 0.01).
+narrative_ontology:constraint_metric(cantors_diagonal_argument, suppression_requirement, 0.02).
 narrative_ontology:constraint_metric(cantors_diagonal_argument, theater_ratio, 0.0).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-narrative_ontology:constraint_metric(cantors_diagonal_argument, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(cantors_diagonal_argument, resistance, 0.01).
+narrative_ontology:constraint_metric(cantors_diagonal_argument, accessibility_collapse, 0.98).
+narrative_ontology:constraint_metric(cantors_diagonal_argument, resistance, 0.05).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(cantors_diagonal_argument, mountain).
 narrative_ontology:human_readable(cantors_diagonal_argument, "Cantor's Diagonal Argument").
-narrative_ontology:topic_domain(cantors_diagonal_argument, "technological").
+narrative_ontology:topic_domain(cantors_diagonal_argument, "mathematics/logic").
 
-% --- Binary flags ---
-% This is a mathematical proof; no enforcement or sunset clauses apply.
-
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this, the classify_from_metrics
-% mountain clause will not fire.
 domain_priors:emerges_naturally(cantors_diagonal_argument).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Not strictly required for mountain constraints, but included for narrative
-% clarity to explain the structural roles.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(cantors_diagonal_argument, mathematicians).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(cantors_diagonal_argument, formal_systems).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT: This is a natural law (mountain-only), so the
-% classification is invariant across all perspectives. We include multiple
-% perspectives to demonstrate this invariance.
-
-% PERSPECTIVE 1: THE PRIMARY TARGET (FORMAL SYSTEMS)
-% The abstract concept of a formal system is "trapped" by this logical limit.
+% The canonical perspective. The argument is a fundamental, unchangeable feature of the mathematical landscape, a law of logic. Its consequences are inescapable within standard axiomatic systems.
 constraint_indexing:constraint_classification(cantors_diagonal_argument, mountain,
-    context(agent_power(powerless),
+    context(agent_power(analytical),
             time_horizon(civilizational),
-            exit_options(trapped),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (MATHEMATICIANS)
-% The community of mathematicians who use this result.
-constraint_indexing:constraint_classification(cantors_diagonal_argument, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The default analytical context, which confirms the mountain classification.
+% For a student encountering the proof, it is an inescapable logical conclusion. There is no 'exit' from its truth once the steps are understood; one is trapped by the force of the logic.
+constraint_indexing:constraint_classification(cantors_diagonal_argument, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% For an institution, the argument's consequences (e.g., the uncountability of functions, the Halting Problem) are fixed constraints around which curricula and research programs must be built. The institution cannot change the constraint, only adapt to it.
+constraint_indexing:constraint_classification(cantors_diagonal_argument, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% Even from a perspective that rejects the underlying axioms (like the Law of Excluded Middle), the diagonal argument is recognized as a valid, unchangeable theorem *within* classical mathematics. The 'exit' is to a different mathematical universe (a different axiomatic system), not a change to this one.
 constraint_indexing:constraint_classification(cantors_diagonal_argument, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -158,24 +139,26 @@ constraint_indexing:constraint_classification(cantors_diagonal_argument, mountai
 
 :- begin_tests(cantors_diagonal_argument_tests).
 
-test(classification_is_uniform) :-
-    % For a mountain, all perspectives should yield the same classification.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
     constraint_indexing:constraint_classification(cantors_diagonal_argument, TypeTarget, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(cantors_diagonal_argument, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget == mountain,
-    TypeBeneficiary == mountain.
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(cantors_diagonal_argument, ExtMetricName, E),
-    E =< 0.25. % Mountain threshold.
+    domain_priors:suppression_score(cantors_diagonal_argument, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_law_profile) :-
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(cantors_diagonal_argument),
     narrative_ontology:constraint_metric(cantors_diagonal_argument, accessibility_collapse, AC),
-    AC >= 0.85,
     narrative_ontology:constraint_metric(cantors_diagonal_argument, resistance, R),
-    R =< 0.15,
-    domain_priors:emerges_naturally(cantors_diagonal_argument).
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(cantors_diagonal_argument_tests).
 
@@ -185,62 +168,47 @@ test(natural_law_profile) :-
 
 /**
  * LOGIC RATIONALE:
- *   Cantor's Diagonal Argument is a canonical Mountain. It represents a fundamental, unchangeable limitation in formal systems and set theory. Its base extractiveness is low (0.10) as it does not actively extract value, but rather reveals an inherent structural property of infinite sets. The suppression score (0.05) is minimal; it doesn't suppress alternatives but proves certain mappings are impossible. The accessibility collapse is very high (0.95) as the proof is logically airtight, foreclosing any attempt to enumerate the reals. Resistance is negligible (0.01), as the proof is universally accepted within mathematics.
+ *   This constraint is a canonical example of a Mountain. Extractiveness (ε=0.01) and Suppression (0.02) are near zero, as a mathematical proof does not extract value or coerce behavior; it merely describes a logical reality. The NL-profile metrics confirm this: it 'emerges_naturally' (true) from the axioms of set theory, has extremely high 'accessibility_collapse' (0.98) as its logic is compelling once understood, and very low 'resistance' (0.05) as challenging it requires rejecting fundamental mathematics. The theater ratio is zero, as the proof is pure function.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a mathematical truth, its status as a Mountain is recognized from all coherent perspectives, from the abstract "formal systems" it constrains to the mathematicians who use it and the observers who analyze it.
+ *   A key feature of this constraint is the *absence* of a perspectival gap. It classifies as a Mountain from all perspectives, regardless of power, time horizon, or exit options. This invariance is the hallmark of a true natural law or logical limit. The power of the constraint lies in its universal applicability and the fact that all rational observers are forced into the same classification. It serves as a 'true summit' against which socially constructed 'false summits' can be measured.
  *
  * DIRECTIONALITY LOGIC:
- *   While not strictly necessary for a Mountain, defining beneficiaries and victims clarifies the structural roles. "Formal systems" are the abstract victim, as their capabilities are bounded by the argument's conclusion. "Mathematicians" are the beneficiaries, as the knowledge of this limit is a foundational tool for research in logic, computer science, and analysis.
+ *   As a Mountain constraint representing a logical truth, there are no structural beneficiaries or victims. The concept does not apply. The engine will use canonical directionality values for each power atom, but with an ε of 0.01, the effective extraction (χ) will be negligible for all observers, reinforcing the universal Mountain classification.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification as a Mountain prevents mislabeling this fundamental limitation as a Snare or Piton. It is not a human-imposed rule that extracts value or is maintained through inertia; it is a property of the logical universe. The low extractiveness and suppression scores, combined with the `emerges_naturally` flag and high NL profile metrics, secure this classification against misinterpretation.
+ *   This constraint represents a baseline case where no mandatrophy exists. It is unambiguously a Mountain. It cannot be mistaken for a Snare or Rope because it lacks the necessary properties of extraction, suppression, or coordination. It provides a grounding example of a constraint whose structure is entirely independent of social or political construction, making it a crucial calibration point for the entire classification system.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_cantor_1,
-    'Could alternative, non-classical logics or set theories (e.g., intuitionistic) alter the implications of the diagonal argument?',
-    'Further research into non-standard foundations of mathematics.',
-    'If True: The "uncountability" constraint might be reframed as specific to classical systems. If False: The constraint is fundamental across all known logical frameworks.',
-    confidence_without_resolution(low)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(cantors_diagonal_argument, 0, 10).
+narrative_ontology:interval(cantors_diagonal_argument, 1891, 9999).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not applicable. As a mathematical proof, its properties are static.
-% Base extractiveness is low (< 0.46), so temporal data is not required.
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This is a proof, not a coordination mechanism.
-% narrative_ontology:coordination_type(cantors_diagonal_argument, information_standard).
+narrative_ontology:affects_constraint(cantors_diagonal_argument, halting_problem).
+narrative_ontology:affects_constraint(cantors_diagonal_argument, goedels_incompleteness_theorems).
 
-% Network relationships (structural influence edges)
-% The diagonal method is a precursor to and influences Gödel's work.
-narrative_ontology:affects_constraint(cantors_diagonal_argument, godel_incompleteness).
+% DUAL FORMULATION NOTE:
+% Cantor's argument is a foundational proof technique. Its structure is reused to establish other 'Mountain' constraints in logic and computer science, such as the undecidability of the Halting Problem and Gödel's Incompleteness Theorems. It is the upstream source of the diagonalization method.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. The standard derivation chain is sufficient for this constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

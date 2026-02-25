@@ -1,0 +1,162 @@
+{
+  "header": {
+    "constraint_id": "child_marriage",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.4,
+    "claimed_type": "snare",
+    "human_readable": "Child Marriage as a Social Constraint",
+    "topic_domain": "social/religious",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "family_of_the_child",
+      "groom_and_his_family",
+      "community_elders"
+    ],
+    "victims": [
+      "the_child_bride",
+      "societal_development"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Child Bride",
+      "comment": "PERSPECTIVE 1: THE CHILD BRIDE (SNARE) — The primary victim. Experiences total loss of autonomy, education, and future prospects. With no legal or social power and no exit, the constraint is pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.97."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Child's Family",
+      "comment": "PERSPECTIVE 2: THE CHILD'S FAMILY (TANGLED ROPE) — Experiences the constraint as a tragic necessity for economic survival and social cohesion. They are beneficiaries (bride price, reduced costs) but also victims of a larger system of poverty and tradition that constrains their choices. They see both the coordination function and the extraction. d≈0.70, f(d)≈1.05, σ=0.8 → χ≈0.71."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Community Elders",
+      "comment": "PERSPECTIVE 3: THE COMMUNITY ELDERS (ROPE) — As enforcers of tradition, they view the practice as a pure coordination mechanism for maintaining social order, family alliances, and religious purity. From their position of power, the extractive costs are invisible or justified. d≈0.15, f(d)≈-0.01, σ=0.9 → χ≈-0.01. Negative effective extraction signifies a net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The International NGO",
+      "comment": "PERSPECTIVE 4: THE INTERNATIONAL NGO (SCAFFOLD) — Views child marriage as a temporary problem to be dismantled through legal reform, education, and economic empowerment. Their actions are a scaffold intended to create a society where the practice is no longer necessary or tolerated, implying a sunset clause on the constraint's legitimacy. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.77."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (SNARE) — The system's default classification. The extremely high base extractiveness (ε=0.85) and suppression (0.90) overwhelmingly define the constraint's structure as a snare, regardless of the justifications offered by its beneficiaries. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.17."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_vs_cultural_driver",
+      "question": "Is child marriage primarily a response to economic desperation (a 'poverty trap') or a deeply embedded cultural/religious practice independent of economic status?",
+      "resolution_mechanism": "Correlational studies between rates of child marriage and changes in local GDP, female education levels, and access to economic opportunities.",
+      "impact": "If primarily economic, the constraint is more of a Tangled Rope that can be unwound with development aid (Scaffold). If primarily cultural, it is a more resilient Snare requiring normative intervention.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing between economic and cultural drivers of the practice."
+    },
+    {
+      "id": "parental_agency",
+      "question": "To what degree do parents, particularly mothers, act as willing enforcers versus coerced participants in the marriage of their children?",
+      "resolution_mechanism": "Qualitative sociological research, interviews with families, and analysis of social power dynamics within households.",
+      "impact": "If parents have low agency, they are better modeled as co-victims, shifting the beneficiary/victim balance. If they have high agency, they are primary beneficiaries, reinforcing the Snare classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Assessing the level of agency and coercion experienced by parents."
+    },
+    {
+      "id": "legal_prohibition_effectiveness",
+      "question": "Do top-down legal bans on child marriage reduce its prevalence, or merely drive the practice underground and remove what little protection exists?",
+      "resolution_mechanism": "Comparative analysis of regions with and without legal bans, controlling for other socioeconomic factors. Tracking changes in reported vs. estimated incidence post-legislation.",
+      "impact": "If effective, legal bans are a valid Scaffold. If ineffective or counterproductive, they represent a Piton (performative but non-functional) and the underlying Snare remains untouched.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluating the real-world impact of legal prohibitions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.95
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2030
+  },
+  "commentary": {
+    "narrative_context": "Child marriage is a social constraint primarily affecting girls in impoverished and traditional societies. It functions as an economic and social mechanism for families and communities, but at the cost of the child's autonomy, health, education, and life opportunities. The practice is enforced through a combination of intense social pressure, economic necessity, and traditional or religious norms, creating a high-suppression environment for its primary victims.",
+    "key_agents": [
+      "The Child Bride: Primary victim (powerless/trapped) — bears the full extractive cost.",
+      "The Child's Family: Beneficiary and enforcer, but also victim of systemic poverty (moderate/constrained).",
+      "Community Elders: Institutional beneficiaries (institutional/arbitrage) — uphold the system and derive social power from it.",
+      "International NGOs: Organized opposition (organized/mobile) — seek to dismantle the constraint through external intervention.",
+      "Analytical Observer: System-level view (analytical/analytical) — classifies the constraint based on its objective properties."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.85) is extremely high, representing the near-total appropriation of the child's life-path and potential. Suppression (0.90) is also extremely high due to the combination of economic dependency, family coercion, and powerful social norms, leaving the victim with virtually no alternatives. The theater ratio (0.40) is moderate; while the practice is wrapped in the theater of tradition and ceremony, it serves a very real and brutal economic and social function for the beneficiaries. It is not primarily performative.",
+    "perspectival_gap": "The gap is stark. For the child, it is an inescapable Snare. For the family, it is a Tangled Rope—a terrible choice that provides a genuine (if tragic) coordination benefit for family survival while extracting horribly from one member. For community elders, it is a Rope—a tool for social order whose extractive nature is rendered invisible by their ideology and structural position. For outside activists, it is a Scaffold—a temporary social ill to be dismantled. The analytical view confirms the victim's perspective: the objective metrics classify this as a Snare.",
+    "directionality_logic": "The directionality is derived from the clear victim/beneficiary structure. The child bride is a trapped victim (d≈0.95), experiencing maximum extraction. The community elders are beneficiaries with arbitrage power (d≈0.15), experiencing the system as a net subsidy. The family is a constrained victim/beneficiary (d≈0.70), experiencing high but not maximal extraction, reflecting their dual role. This differentiation in 'd' values is what drives the different classifications from the same base properties.",
+    "mandatrophy_analysis": "This constraint is a classic case where mandatrophy occurs. Beneficiaries (community elders) frame the Snare as a Rope ('our sacred tradition,' 'a mechanism for social stability'). This mislabeling serves to naturalize extreme extraction and suppress dissent. The Deferential Realism framework resolves this by holding both perspectives simultaneously: it validates the elders' classification *as their perspective* (Rope) while using the objective metrics and the victim's perspective to establish the analytical ground truth of the constraint as a Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "poverty_cycle",
+      "lack_of_female_education"
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "header": {
+    "constraint_id": "ai_training_data_dependency",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Training Data Dependency",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_tech_firms",
+      "proprietary_data_aggregators"
+    ],
+    "victims": [
+      "new_entrants",
+      "open_source_community"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Startup / New Entrant",
+      "comment": "PERSPECTIVE 1: NEW ENTRANT (SNARE) — Lacking access to proprietary petabyte-scale datasets, a new entrant is trapped. The dependency is a pure barrier to entry, extracting the opportunity for innovation and competition. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Tech Firm",
+      "comment": "PERSPECTIVE 2: INCUMBENT FIRM (ROPE) — For a firm that owns a massive dataset, the dependency is a powerful coordination mechanism. It structures the market, defines the state-of-the-art, and reinforces their competitive advantage (a 'data moat'). d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08. The negative extraction signifies a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — This view sees both sides: the dependency coordinates the field around scaling laws, enabling rapid progress (Rope function), but it also creates immense barriers to entry and concentrates power (Snare function). The high suppression and extraction are undeniable. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Coalition",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE COALITION (SCAFFOLD) — Organized efforts to create public datasets (e.g., LAION, The Pile) or develop data-efficient methods see the dependency as a temporary, surmountable problem. They are building a scaffold (public data infrastructure) to bypass the proprietary data walls, with an implicit sunset clause: once the scaffold is built, the dependency on private data is broken. d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.26."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Scaling Law Absolutist",
+      "comment": "PERSPECTIVE 5: SCALING LAW ABSOLUTIST (MOUNTAIN) — This perspective frames the dependency as an immutable law of nature for current AI paradigms ('scaling laws'). It posits that model performance is inextricably linked to data volume, making the dependency an unchangeable feature of the technological landscape. The engine will flag this as a false summit, as the base properties (ε=0.55, suppression=0.70) are inconsistent with a natural law."
+    }
+  ],
+  "interval": {
+    "start": 2017,
+    "end": 2027
+  },
+  "omegas": [
+    {
+      "id": "synthetic_data_viability",
+      "question": "Can high-quality synthetic data fully substitute for real-world data at scale, thus breaking the dependency?",
+      "resolution_mechanism": "Empirical testing of models trained on synthetic vs. real data across diverse, complex domains. Analysis of failure modes unique to synthetic data (e.g., mode collapse, lack of long-tail coverage).",
+      "impact": "If viable, the constraint becomes a Scaffold (a temporary technical problem). If not, it remains a Tangled Rope or Snare (a structural economic barrier).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of synthetic data as a substitute for real-world training data."
+    },
+    {
+      "id": "scaling_law_universality",
+      "question": "Are the current scaling laws a fundamental property of intelligence, or an artifact of the current transformer-based architecture?",
+      "resolution_mechanism": "Discovery of novel AI architectures that achieve state-of-the-art performance with significantly less data.",
+      "impact": "If laws are fundamental, the 'Mountain' perspective gains credence. If they are an architectural artifact, the dependency is a contingent technical choice, reinforcing the 'Tangled Rope' classification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether scaling laws are fundamental or an artifact of current architectures."
+    },
+    {
+      "id": "data_as_public_utility",
+      "question": "Should foundational datasets be regulated as a public utility to ensure fair access and promote competition?",
+      "resolution_mechanism": "Political and legislative debate, followed by policy implementation and observation of market effects.",
+      "impact": "If regulated, the constraint could transform into a Rope (a managed public resource). If not, it remains a Tangled Rope dominated by private interests.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Policy question of regulating foundational datasets as a public utility."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2027,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2027,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The performance of state-of-the-art AI models is critically dependent on access to massive, high-quality training datasets. This creates a structural constraint where entities controlling such data (typically large, incumbent tech firms) gain a significant and durable competitive advantage. This 'data moat' functions as both a coordination mechanism for the field (advancing the SOTA through scaling) and a powerful extraction mechanism (locking out new entrants and concentrating market power). The constraint is actively enforced through legal (copyright, ToS) and economic (cost of acquisition) barriers.",
+    "key_agents": [
+      "Incumbent Tech Firms: Primary beneficiary (institutional/arbitrage) — Owns or controls proprietary datasets, creating a competitive 'moat'.",
+      "New Entrants / Startups: Primary victim (powerless/trapped) — Cannot acquire or generate comparable data, creating an insurmountable barrier to entry.",
+      "Open Source Community: Organized victim (organized/constrained) — Attempts to build public alternative datasets but faces resource and legal constraints.",
+      "Analytical Observer: Sees the dual nature of coordination and extraction."
+    ],
+    "logic_rationale": "Extractiveness (0.55): High. The constraint extracts competitive opportunity from the market. The value that could be generated by startups is instead captured by incumbents who control the data resource. Suppression (0.70): High. The combination of legal protections (copyright), high cost of data acquisition, and the sheer technical challenge of managing petabyte-scale data strongly suppresses the emergence of alternatives. Theater (0.30): Low-to-moderate. While the 'data moat' narrative can be performative, the underlying technical requirement for data is very real and functional for current AI architectures.",
+    "perspectival_gap": "The gap is stark. For an incumbent, the data dependency is a beneficial Rope that organizes the market to their advantage. For a startup, it's a deadly Snare that prevents them from competing. For the open-source community, it's a temporary Scaffold they are actively trying to build their way over. An observer focused on scaling laws might mistake this contingent, market-driven structure for a Mountain, a law of nature. The analytical view must hold all these truths at once to see the full Tangled Rope structure.",
+    "directionality_logic": "Beneficiaries (incumbents) have arbitrage exit options, leading to a low 'd' value and a Rope classification. Victims (startups) are trapped, leading to a high 'd' value and a Snare classification. Organized actors (open source) are constrained but have agency, leading to a moderate 'd' value and a Scaffold classification. The analytical perspective synthesizes these to arrive at Tangled Rope.",
+    "mandatrophy_analysis": "This case avoids mandatrophy by demonstrating how a single technological reality can be correctly classified in multiple ways depending on the observer's structural position. Mistaking the incumbent's 'Rope' view or the absolutist's 'Mountain' view for the complete picture would be a classic mandatrophy error. The framework correctly identifies the analytical view as a Tangled Rope, acknowledging both the genuine coordination function (scaling enables progress) and the severe, asymmetric extraction (market concentration and barriers to entry)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_model_monoculture",
+      "computational_hardware_arms_race"
+    ]
+  }
+}

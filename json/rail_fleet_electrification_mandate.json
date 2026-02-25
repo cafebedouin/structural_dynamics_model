@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "rail_fleet_electrification_mandate",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandated Electrification of National Rail Fleet",
+    "topic_domain": "technological/economic/environmental",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "electric_locomotive_manufacturers",
+      "national_rail_operators",
+      "state_regulators",
+      "electricity_grid_operators"
+    ],
+    "victims": [
+      "diesel_locomotive_workforce",
+      "diesel_engine_manufacturers",
+      "fossil_fuel_suppliers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Displaced Diesel Mechanic",
+      "comment": "PERSPECTIVE 1: THE DISPLACED WORKER (SNARE) \u2014 A skilled mechanic whose expertise in diesel engines is rendered obsolete by the mandated transition. They face unemployment or costly retraining with no guarantee of equivalent work. From this view, the policy is a pure extractive act that destroys their livelihood for a societal goal from which they may not benefit. d\u22480.95, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.70."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Environmental Regulator",
+      "comment": "PERSPECTIVE 2: THE REGULATOR (ROPE) \u2014 An agency tasked with meeting national or international emissions targets. They see the mandate as a pure coordination tool to align industrial and public interests towards a common good (cleaner air, climate stability). The costs borne by the legacy industry are viewed as necessary externalities for progress. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 This observer recognizes both the genuine coordination function (decarbonization) and the asymmetric extraction from the legacy diesel sector. The constraint simultaneously solves a collective action problem while imposing uncompensated costs on a specific, politically weaker group. This dual nature is the hallmark of a Tangled Rope. d\u22480.73, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Electric Locomotive Manufacturer",
+      "comment": "PERSPECTIVE 4: THE NEW MANUFACTURER (ROPE) \u2014 The company building the new electric locomotives. They are a primary beneficiary, seeing the mandate as a coordination mechanism that creates a guaranteed market for their product. Their mobility allows them to sell to any country adopting these standards. d\u22480.15 (beneficiary, mobile) f(d)\u2248-0.01, \u03c3=1.1 \u2192 \u03c7\u2248-0.006."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "just_transition_feasibility",
+      "question": "Could the transition have been structured to fully compensate the displaced workforce and industries, effectively turning the constraint into a pure Rope?",
+      "resolution_mechanism": "Comparative analysis of industrial transition policies, contrasting outcomes in regions with and without comprehensive 'Just Transition' funds, retraining programs, and early retirement packages.",
+      "impact": "If full compensation is feasible and implemented, the base extractiveness (\u03b5) would approach zero, reclassifying the constraint to Rope. If it's structurally impossible, the Tangled Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether a 'Just Transition' could eliminate the extractive component."
+    },
+    {
+      "id": "net_lifecycle_impact",
+      "question": "Does the full lifecycle environmental cost of the new electric fleet (including mining for battery minerals, grid upgrades, and manufacturing) offer a significant net benefit over maintaining and upgrading the existing diesel fleet?",
+      "resolution_mechanism": "Comprehensive, independent lifecycle assessment (LCA) studies comparing the two technological paths, including energy return on investment (EROI) and carbon accounting.",
+      "impact": "If the net benefit is marginal or negative, the constraint's coordination function is weakened, revealing it to be more of an industrial policy Snare benefiting specific manufacturers rather than a genuine environmental Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the new technology's full lifecycle cost is a true improvement."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2040,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2040,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 2020,
+    "end": 2040
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the mandated, large-scale transition of a national railway from diesel to electric locomotives, framed as an environmental and modernization initiative. While it serves a genuine coordination purpose\u2014aligning a major industry with national decarbonization goals\u2014it also imposes severe, uncompensated costs on the incumbent diesel-focused workforce and supply chain. This creates a structural conflict where a societal benefit is achieved through targeted extraction from a politically and economically weaker group.",
+    "key_agents": [
+      "State Regulators & National Rail Operator: Primary beneficiary (institutional/arbitrage) - achieve climate targets and operational efficiencies.",
+      "Electric Locomotive Manufacturers: Primary beneficiary (organized/mobile) - gain a protected market for new technology.",
+      "Diesel Locomotive Workforce: Primary victim (powerless/trapped) - skills are devalued, leading to job insecurity and displacement.",
+      "Diesel Industry Incumbents: Secondary victim (organized/constrained) - lose market share and existing capital assets are stranded."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.55) reflects the significant economic value (jobs, capital, expertise) lost by the displaced diesel sector. Suppression (0.68) is high because regulatory mandates and network effects make it nearly impossible for the legacy technology to persist or compete once the transition is underway. The theater ratio (0.35) is moderate, acknowledging the real functional benefits of electrification while accounting for the 'green' marketing used to obscure the extractive consequences for losers.",
+    "perspectival_gap": "The gap is stark. For the state regulator, the mandate is a clean and efficient Rope solving a collective action problem. For the diesel mechanic whose career is erased, it is an inescapable Snare. The manufacturer of the new technology also sees a Rope, one that conveniently creates a captive market. The analytical observer, weighing both the coordination benefits and the asymmetric costs, must classify it as a Tangled Rope.",
+    "directionality_logic": "Beneficiaries are institutional and organized actors who shape the rules of the transition, giving them low directionality ('d') values and perceiving the constraint as a subsidy (negative \u03c7). Victims are the powerless or trapped workforce and industries subject to these rules, resulting in high 'd' values and experiencing severe extraction (high positive \u03c7). The system extracts value from the latter to deliver policy wins and profits to the former.",
+    "mandatrophy_analysis": "This story is a clear case for Mandatrophy resolution. A naive analysis might label this transition a pure Rope, focusing only on the positive environmental outcome. This would be a mandatrophy error, ignoring the severe extraction imposed on the displaced workers. The framework, by requiring perspectives from the victims and calculating the high effective extraction they face, correctly identifies the full structure as a Tangled Rope, preventing the misclassification of targeted industrial policy as a purely benevolent coordination act."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "fossil_fuel_phase_out",
+      "critical_mineral_supply_chains"
+    ]
+  }
+}

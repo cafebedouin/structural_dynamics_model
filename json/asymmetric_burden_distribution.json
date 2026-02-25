@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "asymmetric_burden_distribution",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Externalization Lever",
+    "topic_domain": "economic/social/logistical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "global_consumers",
+      "corporate_shareholders"
+    ],
+    "victims": [
+      "peripheral_communities",
+      "gig_economy_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Peripheral Community",
+      "comment": "PERSPECTIVE 1: PERIPHERAL COMMUNITY (SNARE) — Trapped by economic circumstance and zoning, this group bears the full cost of noise, pollution, and stress with no recourse or proportional benefit. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.74. This high effective extraction, combined with high suppression, meets the Snare classification."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Global Consumer",
+      "comment": "PERSPECTIVE 2: GLOBAL CONSUMER (ROPE) — Experiences the system as pure coordination for convenience and low prices. Can switch between providers at will (arbitrage exit). As a primary beneficiary, directionality is low. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (efficient supply chains) and the severe, asymmetric extraction it imposes. This balanced view recognizes the hybrid nature of the constraint. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90. This high χ value falls within the Tangled Rope range."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Urban Planner / Regulator",
+      "comment": "PERSPECTIVE 4: URBAN PLANNER (SCAFFOLD) — Views the current system of externalized costs as a temporary, undesirable state to be superseded by better policy (e.g., green zones, fair wage laws). This implies a sunset clause on the current arrangement. d≈0.40, f(d)≈0.40, σ=0.9 → χ≈0.23. Low effective extraction meets the Scaffold gate (χ ≤ 0.30)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Corporate Sustainability Office",
+      "comment": "PERSPECTIVE 5: CORPORATE SUSTAINABILITY OFFICE (PITON) — Engages in performative mitigation (CSR reports, greenwashing) that has little functional impact on the core extractive model. The high theater_ratio (0.75) and low effective extraction for a beneficiary (χ≈-0.09) satisfy the Piton classification gates. The function is inertial, maintained for appearances."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Market Fundamentalist",
+      "comment": "PERSPECTIVE 6: MARKET FUNDAMENTALIST (MOUNTAIN) — Frames externalities as the unavoidable, natural 'price of progress' or an efficient outcome of market forces. This perspective naturalizes a contingent social arrangement. The engine will identify this as a false summit, as the base properties (ε=0.65, suppression=0.75) fail the Mountain gates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cost_quantification",
+      "question": "How can the non-monetary costs (health impacts, stress, environmental decay) be accurately quantified and compared to the monetary benefits of the system?",
+      "resolution_mechanism": "Development of comprehensive social and environmental accounting metrics; longitudinal public health studies in affected vs. unaffected communities.",
+      "impact": "Accurate quantification could shift the analytical classification from Tangled Rope to Snare by revealing a higher true extractiveness, or justify regulatory intervention (Scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantification of non-monetary externalities"
+    },
+    {
+      "id": "causal_attribution",
+      "question": "Are the negative externalities a direct result of deliberate corporate policy (a Snare) or an unavoidable emergent property of complex logistical systems (a Mountain)?",
+      "resolution_mechanism": "Comparative analysis of firms with different externality-management policies; internal corporate document review; agent-based modeling of supply chains.",
+      "impact": "Resolving this determines whether the solution is policy enforcement against specific actors or a fundamental redesign of the system.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishing deliberate policy from emergent properties"
+    },
+    {
+      "id": "regulatory_effectiveness",
+      "question": "Are regulatory bodies genuinely attempting to mitigate harm (Scaffold perspective) or are their efforts largely performative due to regulatory capture (Piton perspective)?",
+      "resolution_mechanism": "Analysis of enforcement actions versus policy statements; tracking lobbying expenditures and their correlation with weakened regulations.",
+      "impact": "Determines whether the 'Scaffold' view held by regulators is structurally sound or merely aspirational, collapsing into a Piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness and intent of regulatory bodies"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The 'Externalization Lever' is a structural pattern where the benefits of a system (e.g., global logistics, digital platforms, urban economies) are concentrated among a core group, while the operational costs (pollution, noise, stress, precarious labor) are systematically displaced onto a peripheral population. This creates a fundamental asymmetry in who benefits and who pays. The constraint is not merely an unfortunate byproduct but an active mechanism that enhances the efficiency and profitability of the core system by treating the periphery's environment and well-being as a free or low-cost resource.",
+    "key_agents": [
+      "Peripheral Communities: Primary victims (powerless/trapped) — Residents near ports, warehouses, and freeways who bear health and quality-of-life costs.",
+      "Gig Economy Workers: Secondary victims (powerless/trapped) — Bear the costs of vehicle maintenance, lack of benefits, and algorithmic precarity.",
+      "Global Consumers: Primary beneficiaries (institutional/arbitrage) — Receive the benefits of low prices and fast delivery without directly experiencing the externalized costs.",
+      "Corporate Shareholders: Primary beneficiaries (institutional/arbitrage) — Profit from business models that minimize operational costs by externalizing them.",
+      "Regulators / Planners: Organized agents (organized/constrained) — Attempt to mitigate the harms through policy, viewing the current state as a temporary problem to be solved.",
+      "Corporate PR/Sustainability Offices: Institutional actors (institutional/arbitrage) — Manage the public perception of externalities, often through performative actions."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65) is high, reflecting the severe, uncompensated health, environmental, and social costs imposed on victims. Suppression (0.75) is high because victims are structurally trapped; they lack the economic mobility to move away from infrastructure hubs or the political power to change zoning and labor laws. Theater Ratio (0.75) is high, representing the significant corporate and political effort spent on 'greenwashing' and CSR initiatives that perform concern without altering the fundamental extractive logic of the business model.",
+    "perspectival_gap": "This constraint is a diagnostic exemplar, producing all six classifications from a single set of metrics. For the trapped victim, it is a Snare. For the consumer who only sees the benefits, it is a Rope. For the analyst who sees both sides, it is a Tangled Rope. For the regulator aiming for future improvements, it is a Scaffold. For the corporate PR department managing appearances, it is a Piton. For the ideologue who sees this as a natural law of economics, it is a Mountain. The gap is total, revealing that the 'type' of a constraint is a function of the observer's structural relationship to it.",
+    "directionality_logic": "Beneficiaries (consumers, shareholders) have arbitrage exit options, leading to a low directionality (d) and negative effective extraction (χ), making the system appear as a pure coordination 'Rope'. Victims (peripheral communities, gig workers) are trapped, leading to a high directionality (d) and extremely high effective extraction (χ), making the system a coercive 'Snare'. The analytical observer's position results in a high χ that correctly identifies the mixed coordination/extraction nature of a 'Tangled Rope'.",
+    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating its premise: a single structural reality can be correctly perceived as multiple constraint types. The error is not in any single classification but in the attempt to assign one exclusive type to the entire system. The Deferential Realism framework's purpose is to hold all these valid, indexed perspectives simultaneously, with the analytical 'Tangled Rope' classification serving as the system's overall claim while acknowledging the legitimacy of the other views."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "fast_fashion_labor_practices",
+      "amazon_warehouse_conditions",
+      "urban_food_deserts"
+    ]
+  }
+}

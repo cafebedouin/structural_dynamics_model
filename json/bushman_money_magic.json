@@ -1,0 +1,131 @@
+{
+  "header": {
+    "constraint_id": "bushman_money_magic",
+    "version": "1.0",
+    "generated_date": "2023-10-27",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.9,
+    "claimed_type": "snare",
+    "human_readable": "The Trickster's Asymmetric Scam",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "trickster_figure"
+    ],
+    "victims": [
+      "deceived_ranchers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Deceived Rancher",
+      "comment": "PERSPECTIVE 1: THE VICTIM (SNARE) — Psychologically trapped by a narrative of greed and magic, the rancher has no exit. They experience the interaction as pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.97."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Trickster Figure",
+      "comment": "PERSPECTIVE 2: THE TRICKSTER (ROPE) — The perpetrator experiences the scam as a well-coordinated plan. They hold all informational power and can exit at any time. The 'coordination' is with their own deception. d≈0.15, f(d)≈-0.01, σ=0.8 → χ≈-0.01. The negative effective extraction signifies a pure beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Skeptical Community Observer",
+      "comment": "PERSPECTIVE 3: THE OBSERVER (PITON) — A community member who is not a target sees the 'magic' for what it is: pure theater. The constraint's function is entirely performative, maintained by the trickster's narrative. The high theater_ratio (0.90) triggers the Piton classification, as the observer sees a ritual with no real function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: THE ANALYST (SNARE) — The analytical view cuts through all narrative and theater to see the raw structure: a high-extraction, high-suppression mechanism with no coordination function. This matches the system's claimed_type."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "omegas": [
+    {
+      "id": "victim_culpability",
+      "question": "Is the victim's participation driven by pure deception, or by a form of willful ignorance fueled by greed?",
+      "resolution_mechanism": "Psychological profiling of victims; analysis of prior warnings or community skepticism they ignored.",
+      "impact": "If pure deception, the Snare is absolute. If willful ignorance, the victim has more agency than the 'trapped' exit implies, potentially shifting the classification for their perspective toward Tangled Rope (as they are coordinating with their own downfall).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree of victim agency vs. pure deception"
+    },
+    {
+      "id": "social_enforcement",
+      "question": "To what extent does the surrounding community's silence or tacit encouragement enable the trickster's scam?",
+      "resolution_mechanism": "Ethnographic study of community responses to known trickster figures and scams.",
+      "impact": "If the community is a passive enabler, the suppression metric is accurate. If the community actively ostracizes those who question the trickster, the suppression is even higher and is socially distributed, not just perpetrator-driven.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Role of community silence in enabling the scam"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.85
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models a classic asymmetric scam, often found in folklore, where a trickster figure uses a 'money magic' narrative to induce a victim to hand over their wealth (e.g., cattle), promising it will be magically multiplied. The trickster then absconds with the original stake. The core mechanism is the temporary creation of a narrative reality that suppresses the victim's rational assessment of risk and alternatives.",
+    "key_agents": [
+      "Trickster Figure: Primary beneficiary (powerful/arbitrage) — controls the narrative and extracts all value.",
+      "Deceived Ranchers: Primary victim (powerless/trapped) — loses their wealth by buying into the false narrative.",
+      "Skeptical Community: Observers (moderate/mobile) — witness the performative aspect of the scam without being trapped by it.",
+      "Analytical Observer: Analyst (analytical/analytical) — deconstructs the scam into its structural components."
+    ],
+    "logic_rationale": "Extractiveness (0.85) is very high, as the scam's sole purpose is the complete transfer of the victim's assets. Suppression (0.75) is high because the trickster's narrative is designed to eliminate alternatives and create a sense of magical inevitability, trapping the victim psychologically. Theater Ratio (0.90) is extremely high, as the entire 'magic' process is a performance designed to obscure the simple act of theft. The scam has no real function beyond its theatricality.",
+    "perspectival_gap": "The perspectival gap is extreme and illustrative. The victim experiences a coercive Snare, feeling trapped and losing everything. The trickster, in contrast, experiences a perfect Rope—a plan executed flawlessly with no extraction *from their perspective*. They are the pure beneficiary. An outside observer who isn't fooled sees a Piton: a hollow, performative ritual that accomplishes nothing tangible. The analytical view confirms the victim's experience, classifying the structure as a Snare.",
+    "directionality_logic": "The directionality is unambiguous. The 'trickster_figure' is the sole beneficiary and has arbitrage exit, deriving a very low 'd' value and seeing the constraint as a net subsidy (Rope). The 'deceived_ranchers' are the sole victims and are trapped, deriving a very high 'd' value and experiencing maximal extraction (Snare). This clean separation of roles is characteristic of pure extraction mechanisms.",
+    "mandatrophy_analysis": "This case presents no mandatrophy. The analytical classification is clearly a Snare. The trickster's self-serving 'Rope' perspective is a textbook example of a perspectival illusion that the Deferential Realism system is designed to capture and contextualize. It correctly identifies that the perpetrator does not experience their own scheme as extractive, while simultaneously affirming that the underlying structure is, in fact, purely extractive for the target. The system does not average these views but holds them in tension."
+  }
+}

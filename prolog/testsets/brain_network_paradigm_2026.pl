@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: brain_network_paradigm_2026
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2024-07-28
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_brain_network_paradigm_2026, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -40,6 +42,7 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,17 +57,24 @@
  *   domain: technological/scientific
  *
  * SUMMARY:
- *   This constraint represents the dominant scientific paradigm in neuroscience (c. 2026) that
- *   views the brain as a series of interconnected, overlapping networks rather than a collection
- *   of discrete, specialized modules. This paradigm coordinates research and funding, but also
- *   extracts career opportunities and prestige from scientists invested in the older, modular
- *   view. Behaviors are seen as emergent from synchronized activity across systems.
+ *   The Distributed Brain Network Paradigm posits that cognitive functions
+ *   emerge from the coordinated activity of large-scale brain networks,
+ *   rather than discrete, localized regions. This framework, enabled by
+ *   technologies like fMRI, has become dominant in neuroscience since the
+ *   mid-2000s. While it provides a powerful coordination language for the
+ *   field, it also creates significant structural pressures. High equipment
+ *   costs, complex analytical methods, and institutional incentives create a
+ *   high barrier to entry, suppressing alternative scientific approaches and
+ *   channeling funding and career opportunities towards adherents. This
+ *   creates a classic Tangled Rope structure: a genuine coordination function
+ *   is intertwined with asymmetric extraction of career capital.
  *
- * KEY AGENTS (by structural relationship):
- *   - Legacy Modularist Neuroscientists: Primary target (moderate/constrained) — Their research paradigm is suppressed, and professional resources are redirected away from them.
- *   - Network Neuroscientists: Primary beneficiary (institutional/arbitrage) — The paradigm coordinates their research and funnels funding and prestige to their work.
- *   - Patients with Brain Injuries: Secondary beneficiary (powerless/trapped) — The paradigm provides a better framework for understanding their condition, coordinating treatment.
- *   - Analytical Observer: Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Established Neuroscience Labs: Primary beneficiaries (institutional/arbitrage) - Leverage the paradigm to secure large grants and high-impact publications.
+ *   - Early Career Researchers: Primary victims (powerless/trapped) - Must adopt the paradigm for career progression, bearing the costs of training and the pressure to generate publishable results from noisy data.
+ *   - Researchers Using Alternative Methods: Secondary victims (moderate/constrained) - Their work is often devalued or considered less 'systems-level', facing funding and publication hurdles.
+ *   - Funding Agencies: Institutional actors (institutional/constrained) - Enforce the paradigm through grant allocation but are also constrained by the scientific consensus.
+ *   - Field Epistemic Reliability: Abstract victim (powerless/trapped) - Suffers from non-reproducible findings stemming from analytical flexibility and publication bias.
  */
 
 /* ==========================================================================
@@ -72,72 +82,67 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(brain_network_paradigm_2026, 0.50).
-domain_priors:suppression_score(brain_network_paradigm_2026, 0.70).
-domain_priors:theater_ratio(brain_network_paradigm_2026, 0.10).
+domain_priors:base_extractiveness(brain_network_paradigm_2026, 0.55).
+domain_priors:suppression_score(brain_network_paradigm_2026, 0.65).
+domain_priors:theater_ratio(brain_network_paradigm_2026, 0.6).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(brain_network_paradigm_2026, extractiveness, 0.50).
-narrative_ontology:constraint_metric(brain_network_paradigm_2026, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(brain_network_paradigm_2026, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(brain_network_paradigm_2026, extractiveness, 0.55).
+narrative_ontology:constraint_metric(brain_network_paradigm_2026, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(brain_network_paradigm_2026, theater_ratio, 0.6).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(brain_network_paradigm_2026, tangled_rope).
 narrative_ontology:human_readable(brain_network_paradigm_2026, "Distributed Brain Network Scientific Paradigm").
 narrative_ontology:topic_domain(brain_network_paradigm_2026, "technological/scientific").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(brain_network_paradigm_2026). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(brain_network_paradigm_2026).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(brain_network_paradigm_2026, network_neuroscientists).
-narrative_ontology:constraint_beneficiary(brain_network_paradigm_2026, patients_with_brain_injuries).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(brain_network_paradigm_2026, legacy_modularist_neuroscientists).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(brain_network_paradigm_2026, established_neuroscience_labs).
+narrative_ontology:constraint_beneficiary(brain_network_paradigm_2026, neuroimaging_equipment_vendors).
+narrative_ontology:constraint_beneficiary(brain_network_paradigm_2026, high_impact_journals).
+narrative_ontology:constraint_victim(brain_network_paradigm_2026, early_career_researchers).
+narrative_ontology:constraint_victim(brain_network_paradigm_2026, researchers_using_alternative_methods).
+narrative_ontology:constraint_victim(brain_network_paradigm_2026, field_epistemic_reliability).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Agent whose career and research paradigm is suppressed by the new model.
-% Engine derives d from: victim membership + constrained exit -> high d -> high χ
-constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(global))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent whose research is coordinated and amplified by the paradigm.
-% Engine derives d from: beneficiary membership + arbitrage exit -> low d -> low/negative χ
-constraint_indexing:constraint_classification(brain_network_paradigm_2026, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE SECONDARY BENEFICIARY (ROPE)
-% The patient, for whom the paradigm is a coordination tool for understanding their
-% condition, even if they are trapped by their biological reality.
-constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope,
+% PERSPECTIVE 1: EARLY CAREER RESEARCHER (SNARE) — Must adopt the paradigm to secure a postdoctoral position or faculty job. Trapped by career incentives and the high cost of entry. Bears the cost of a steep learning curve and pressure to produce 'clean' network stories from noisy data. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94.
+constraint_indexing:constraint_classification(brain_network_paradigm_2026, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Sees both the genuine coordination function for neuroscience and the asymmetric
-% extraction of professional resources from the old guard.
-constraint_indexing:constraint_classification(brain_network_paradigm_2026, snare,
+% PERSPECTIVE 2: ESTABLISHED PI (ROPE) — Benefits from the paradigm as a powerful coordination tool for attracting grants, recruiting talent, and publishing in high-impact journals. Can arbitrage between different research questions within the paradigm. Experiences the costs as necessary overhead for cutting-edge science. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08.
+constraint_indexing:constraint_classification(brain_network_paradigm_2026, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (providing a common language for systems neuroscience) and the significant extraction (channeling career and funding resources) and suppression (sidelining alternative methods). This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76.
+constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: RESEARCHER USING ALTERNATIVE METHODS (TANGLED ROPE) — Not trapped, but constrained. Their work (e.g., cellular, lesion studies) is de-prioritized for funding and prestige. They see the paradigm's utility but also feel its suppressive effect on methodological diversity. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.76.
+constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: FUNDING AGENCY (PITON) — The paradigm's function is partially degraded. While it generates high-profile publications, the officer is aware of the reproducibility issues and the high theater_ratio (0.60). The agency continues to fund it due to institutional inertia and lack of a clear successor paradigm, making it a Piton from their constrained perspective. The classification is marginal, as theater is not > 0.7, but reflects the view of a system maintained by inertia.
+constraint_indexing:constraint_classification(brain_network_paradigm_2026, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(global))).
 
 /* ==========================================================================
@@ -147,15 +152,17 @@ constraint_indexing:constraint_classification(brain_network_paradigm_2026, snare
 :- begin_tests(brain_network_paradigm_2026_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(brain_network_paradigm_2026, tangled_rope, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(brain_network_paradigm_2026, rope, context(agent_power(institutional), _, _, _)),
-    true. % Test passes if both clauses unify.
+    constraint_indexing:constraint_classification(brain_network_paradigm_2026, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(brain_network_paradigm_2026, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    % Verify that the base extractiveness is in the high-extraction range required for Snare/Tangled Rope.
-    narrative_ontology:constraint_metric(brain_network_paradigm_2026, extractiveness, E),
-    E >= 0.46.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(brain_network_paradigm_2026, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(brain_network_paradigm_2026, TR),
+    TR >= 0.70.
 
 :- end_tests(brain_network_paradigm_2026_tests).
 
@@ -165,97 +172,74 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The original file's base_extractiveness of 0.0 was logically inconsistent with its
- *   claim of a 'Snare' perspective, as χ = ε * f(d) * σ(S) would always be zero.
- *   I have set base_extractiveness (ε) to 0.50 to model the tangible redirection of
- *   professional resources (funding, prestige, career paths) from the old paradigm to the new.
- *   Suppression is high (0.70) because a dominant scientific paradigm actively suppresses
- *   alternatives through peer review, funding allocation, and educational focus.
- *   The constraint requires active enforcement (via these institutional mechanisms) to maintain its dominance.
+ *   Extractiveness (0.55): Represents the significant channeling of career capital, funding, and publication prestige towards researchers who adopt the paradigm. The 'researcher degrees of freedom' in complex data analysis pipelines allow for the 'extraction' of statistically significant results that may not be robust, benefiting individual careers at the expense of the field's epistemic health. Suppression (0.65): High. The immense cost of fMRI scanners and supporting infrastructure, coupled with the specialized expertise required for data analysis, creates a formidable barrier to entry and suppresses methodological diversity. Grant and hiring committees reinforce this. Theater Ratio (0.60): The visually compelling nature of brain network diagrams often obscures the profound statistical uncertainty and analytical choices underlying them, leading to a performative presentation of findings that can overstate their certainty.
  *
  * PERSPECTIVAL GAP:
- *   - Network Neuroscientists (Beneficiaries) see a Rope: The paradigm is a powerful coordination
- *     tool that organizes research, standardizes terminology, and focuses inquiry, yielding
- *     significant scientific progress. The extractive component is invisible or seen as a necessary
- *     byproduct of progress.
- *   - Legacy Modularists (Victims) see a Snare: The paradigm invalidates their life's work,
- *     restricts their access to funding, and makes it difficult to publish dissenting views.
- *     For them, it is a coercive system that extracts their professional standing.
- *   - The Analytical Observer sees a Tangled Rope: It recognizes both the valid, powerful
- *     coordination function and the simultaneous, asymmetric extraction from a specific group.
+ *   The gap is stark between the established PI, who sees a powerful tool for scientific coordination (Rope), and the early-career researcher, who experiences a coercive career filter (Snare). The PI has arbitrage; they can choose which network to study. The trainee is trapped; they must study networks to get a job. This difference in exit options and structural position explains the radically different classifications of the same underlying scientific framework.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `network_neuroscientists` and `patients_with_brain_injuries` are explicitly
- *     declared. The former have `arbitrage` exit (they can propose new models), leading to very low
- *     directionality (d). The latter have `trapped` exit, but their beneficiary status still
- *     results in a low d, classifying the paradigm as a helpful Rope.
- *   - Victims: `legacy_modularist_neuroscientists` are declared. Their `constrained` exit options
- *     and victim status result in a high d, amplifying the base extraction into a Snare.
+ *   Beneficiaries (Established Labs, Vendors) have arbitrage and institutional power, leading to a low 'd' value and a perception of the paradigm as a low-extraction coordination tool (Rope). Victims (ECRs, alternative methodologists) are trapped or constrained, leading to a high 'd' value and experiencing the paradigm as highly extractive (Snare or Tangled Rope). The system's active enforcement by funding bodies and journals solidifies its Tangled Rope nature from an analytical view.
  *
  * MANDATROPHY ANALYSIS:
- *   By assigning a non-zero ε, this model avoids mislabeling the paradigm as a pure coordination
- *   Rope. It correctly identifies that even beneficial scientific progress involves extraction,
- *   whereby resources and influence are taken from one group and given to another. The Tangled
- *   Rope classification prevents the system from seeing this as either pure, benign coordination
- *   or pure, malicious extraction, capturing the dual nature of paradigm shifts.
+ *   This case prevents mandatrophy by correctly identifying a system with a dual function. Labeling the paradigm as a pure Snare would ignore its genuine, field-defining coordination benefits. Labeling it as a pure Rope would ignore the coercive career pressures and suppression of methodological diversity it imposes. The Tangled Rope classification acknowledges that a constraint can be both a valuable coordination standard and a mechanism for asymmetric extraction, depending entirely on the agent's structural relationship to it.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_network_individuality,
-    "Is every individual's brain network map unique (a 'Snare' for generalized treatments) or does a standard template exist (a 'Rope' for universal protocols)?",
-    "Longitudinal high-resolution connectivity mapping of diverse populations; personalized medicine trials based on individual connectomes.",
-    "If unique: Standardized medicine may fail. If template: Universal protocols remain viable.",
+    causality_vs_correlation,
+    'Is the observed functional connectivity causally responsible for cognitive functions, or is it merely a downstream correlation or epiphenomenon?',
+    'Multi-modal experiments combining fMRI with causal manipulation techniques like transcranial magnetic stimulation (TMS) or optogenetics in animal models.',
+    'Strong evidence for causality would shift the paradigm towards a Rope, validating its coordination function. Strong evidence for it being epiphenomenal would shift it towards a Piton, revealing its function as largely inertial.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(causality_vs_correlation, empirical, 'Distinguishing causal role from correlation in brain network activity').
+
+omega_variable(
+    reproducibility_crisis,
+    'To what extent are findings within the paradigm reproducible, versus being artifacts of ''researcher degrees of freedom'' in data preprocessing and analysis?',
+    'Large-scale, pre-registered replication projects using standardized analysis pipelines on shared datasets (e.g., ABCD, UK Biobank).',
+    'High reproducibility would strengthen the Rope classification. Pervasive non-reproducibility would confirm the Snare perspective for junior researchers and push the analytical view towards a high-theater Piton.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(reproducibility_crisis, empirical, 'Quantifying the impact of analytical flexibility on the reproducibility of findings').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(brain_network_paradigm_2026, 0, 10).
+narrative_ontology:interval(brain_network_paradigm_2026, 2005, 2025).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data models the rise of the network paradigm from 2001-2026.
-% As the paradigm gained acceptance, its ability to extract resources from the
-% old paradigm increased.
+% Theater ratio over time
+narrative_ontology:measurement(brai_tr_t0, brain_network_paradigm_2026, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(brai_tr_t10, brain_network_paradigm_2026, theater_ratio, 10, 0.5).
+narrative_ontology:measurement(brai_tr_t20, brain_network_paradigm_2026, theater_ratio, 20, 0.6).
 
-% Theater ratio over time (remains low as it's a functional scientific model):
-narrative_ontology:measurement(brain_network_paradigm_2026_tr_t0, brain_network_paradigm_2026, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(brain_network_paradigm_2026_tr_t5, brain_network_paradigm_2026, theater_ratio, 5, 0.08).
-narrative_ontology:measurement(brain_network_paradigm_2026_tr_t10, brain_network_paradigm_2026, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(brai_be_t0, brain_network_paradigm_2026, base_extractiveness, 0, 0.3).
+narrative_ontology:measurement(brai_be_t10, brain_network_paradigm_2026, base_extractiveness, 10, 0.45).
+narrative_ontology:measurement(brai_be_t20, brain_network_paradigm_2026, base_extractiveness, 20, 0.55).
 
-% Extraction over time (grows as the paradigm becomes dominant):
-narrative_ontology:measurement(brain_network_paradigm_2026_ex_t0, brain_network_paradigm_2026, base_extractiveness, 0, 0.10).
-narrative_ontology:measurement(brain_network_paradigm_2026_ex_t5, brain_network_paradigm_2026, base_extractiveness, 5, 0.30).
-narrative_ontology:measurement(brain_network_paradigm_2026_ex_t10, brain_network_paradigm_2026, base_extractiveness, 10, 0.50).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
 narrative_ontology:coordination_type(brain_network_paradigm_2026, information_standard).
-
-% Network relationships: The scientific paradigm is enabled by and attempts to
-% describe the underlying physical reality of the brain's network structure.
-narrative_ontology:affects_constraint(brain_network_physical_structure, brain_network_paradigm_2026).
+narrative_ontology:affects_constraint(brain_network_paradigm_2026, network_models_of_psychopathology).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations and exit options accurately models the dynamics of this
-% scientific paradigm shift.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

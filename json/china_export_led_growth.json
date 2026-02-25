@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "china_export_led_growth",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "China's State-Directed Export-Led Growth Model",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_state_and_soes",
+      "global_consumers"
+    ],
+    "victims": [
+      "chinese_households_and_labor",
+      "foreign_competitors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Chinese Household/Worker",
+      "comment": "PERSPECTIVE 1: CHINESE HOUSEHOLD (SNARE) — Trapped by capital controls and the Hukou system, this agent experiences the model as pure extraction. Wage growth is suppressed relative to productivity, and low interest rates on savings transfer wealth to state-owned enterprises. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92. This is a clear Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Chinese State (CCP)",
+      "comment": "PERSPECTIVE 2: THE CHINESE STATE (ROPE) — As the architect and primary beneficiary, the state perceives the model as a pure coordination mechanism for national development, geopolitical influence, and social stability. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. The negative effective extraction indicates a net subsidy from the state's perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Foreign Competitor",
+      "comment": "PERSPECTIVE 3: FOREIGN COMPETITOR (TANGLED ROPE) — An organized industrial sector in another country experiences this as a hybrid. It recognizes the coordination function but is a direct target of the extraction (loss of market share to subsidized competition). Exit is constrained, as it cannot easily abandon global markets. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.59."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Global Consumer",
+      "comment": "PERSPECTIVE 4: GLOBAL CONSUMER (ROPE) — This agent is an indirect beneficiary, experiencing the system as a pure coordination benefit that delivers low-cost goods. They have mobile exit options (can buy other products) but are incentivized to participate. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.01. Effectively zero extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes both the historically successful coordination function (lifting millions from poverty, rapid industrialization) and the severe, systemic extraction from domestic households and foreign industries required to fuel it. This matches the claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2025
+  },
+  "omegas": [
+    {
+      "id": "internal_rebalancing_capacity",
+      "question": "Can the Chinese state successfully pivot from an export/investment-led model to a domestic consumption-led model?",
+      "resolution_mechanism": "Tracking the ratio of household consumption to GDP, growth in real wages, and reforms to the financial system over the next decade.",
+      "impact": "Successful pivot would lower base extractiveness (ε), shifting the constraint towards a Rope. Failure would risk stagnation, increasing theater and turning it into a Piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The state's capacity to shift from export-led to consumption-led growth."
+    },
+    {
+      "id": "geopolitical_blowback_threshold",
+      "question": "At what point does international backlash (tariffs, trade blocs, sanctions) become severe enough to force a structural change in the model?",
+      "resolution_mechanism": "Monitoring the scale and scope of trade restrictions imposed by major trading partners and their impact on Chinese export volumes and GDP.",
+      "impact": "High blowback would reduce the effectiveness of the export subsidy, potentially lowering suppression and extractiveness. Low blowback allows the model to persist.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The threshold of international trade pressure required to alter the model."
+    },
+    {
+      "id": "demographic_drag",
+      "question": "Is the model structurally resilient to China's shrinking working-age population and the erosion of its low-cost labor advantage?",
+      "resolution_mechanism": "Analysis of productivity growth in high-tech manufacturing vs. the decline in labor supply and rising wage pressures.",
+      "impact": "If productivity cannot outpace demographic decline, the model's core advantage erodes, potentially making it a Mountain (an unavoidable economic limit) from a future perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The model's resilience to demographic decline and shrinking labor surplus."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "China's state-directed, export-led growth model is a form of industrial policy that systematically prioritizes manufacturing investment and exports over domestic consumption. It achieves this through a combination of direct subsidies, an undervalued currency, and financial repression (artificially low interest rates on household savings, which provides cheap capital for state-favored industries). This has been extraordinarily successful at driving GDP growth and industrialization but has created massive internal and external imbalances.",
+    "key_agents": [
+      "Chinese State/CCP: Primary beneficiary (institutional/arbitrage) - Gains geopolitical power, revenue, and social stability.",
+      "Chinese Households/Labor: Primary victim (powerless/trapped) - Experiences wage suppression and wealth transfer via financial repression.",
+      "Foreign Competitors: Secondary victim (organized/constrained) - Loses market share to subsidized Chinese firms.",
+      "Global Consumers: Indirect beneficiary (moderate/mobile) - Benefits from access to low-cost manufactured goods.",
+      "Analytical Observer: Sees the full structure (analytical/analytical) - Recognizes both the coordination and extraction functions."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65) is high because the transfer of wealth from the household sector to the industrial/state sector is a core, intentional feature of the policy, not a side effect. Suppression (0.75) is high due to the state's active enforcement through capital controls, state-controlled labor unions, and industrial policy that picks winners and suppresses market-based alternatives. Theater Ratio (0.30) is moderate; while there is significant state propaganda, the underlying economic mechanism is highly functional and effective at achieving its goals.",
+    "perspectival_gap": "The profound perspectival gap is central to this constraint. The Chinese state views it as a Rope, a successful national coordination project. The Chinese worker, whose savings are devalued and wages suppressed, experiences it as a Snare. Foreign industries, outcompeted by subsidized players, see a Tangled Rope. Global consumers, enjoying cheap goods, see a beneficial Rope. This divergence highlights how an agent's structural position determines their classification of the same underlying economic reality.",
+    "directionality_logic": "The directionality is derived directly from the structural relationships. The State, as a beneficiary with arbitrage, has a low 'd' value, resulting in a negative effective extraction (Rope). The trapped household victim has a very high 'd', leading to high effective extraction (Snare). The constrained foreign competitor has a moderate-high 'd' (Tangled Rope). The mobile consumer beneficiary has a low 'd' (Rope). The analytical perspective's canonical 'd' value correctly identifies the hybrid Tangled Rope nature.",
+    "mandatrophy_analysis": "This case is a powerful resolution of mandatrophy. To label the model a pure 'Rope' (as its proponents do) is to ignore the systemic extraction from households. To label it a pure 'Snare' (as its victims experience it) is to ignore the genuine coordination function that lifted hundreds of millions from poverty. The analytical classification of Tangled Rope correctly holds both truths in tension, identifying the structure as a hybrid of coordination and asymmetric extraction, which is precisely what it is."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_supply_chains",
+      "us_deindustrialization",
+      "rare_earth_monopoly"
+    ]
+  }
+}

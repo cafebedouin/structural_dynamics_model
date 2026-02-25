@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "asml_high_na_euv_access",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.9,
+    "theater_ratio": 0.1,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Access to High-NA EUV Lithography",
+    "topic_domain": "geopolitical/technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "asml",
+      "leading_edge_foundries",
+      "allied_nations"
+    ],
+    "victims": [
+      "aspiring_competitor_foundries",
+      "nations_under_export_controls",
+      "downstream_consumers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Nation-State",
+      "comment": "PERSPECTIVE 1: EXCLUDED NATION (SNARE) \u2014 A nation-state subject to export controls (e.g., China) views this constraint as a pure geopolitical weapon. Despite being a 'powerful' actor globally, its exit options are 'trapped' as developing this technology indigenously is a multi-generational challenge. The coordination function is irrelevant as they are denied participation. d is derived from victim status + trapped exit, leading to a high \u03c7, hence Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Monopolist (ASML)",
+      "comment": "PERSPECTIVE 2: THE MONOPOLIST (ROPE) \u2014 ASML, the sole supplier, frames its technology as a pure coordination good that enables the continuation of Moore's Law for the entire industry. The enormous price is justified as a return on massive R&D investment. As the primary beneficiary with arbitrage exit (they set the terms), their derived 'd' is very low, producing negative effective extraction (\u03c7 < 0)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Leading-Edge Foundry (TSMC, Intel)",
+      "comment": "PERSPECTIVE 3: THE KEY CUSTOMER (TANGLED ROPE) \u2014 A foundry like TSMC or Intel is both a beneficiary and a victim. They gain a massive competitive advantage by having access, but are also subject to monopoly pricing and have no alternative supplier ('constrained' exit). They experience both the coordination benefit and the severe extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Aspiring Market Entrant",
+      "comment": "PERSPECTIVE 4: THE STARTUP (MOUNTAIN) \u2014 For a new company trying to enter the fabrication market, the capital and technological barrier posed by High-NA EUV is absolute and insurmountable. It appears as an unchangeable law of the economic environment. The engine will flag this as a false summit, as the constraint's high \u03b5 (0.75) and suppression (0.90) are inconsistent with a true Mountain."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The analyst recognizes the dual nature of the constraint. It serves a critical coordination function (advancing semiconductor technology globally) while simultaneously enabling massive, asymmetric extraction due to its monopoly status, enforced by both market power and state-level export controls. This matches the claimed type."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "indigenous_development_feasibility",
+      "question": "Can a nation under export controls successfully develop a comparable lithography technology indigenously within a strategic timeframe (e.g., 10-15 years)?",
+      "resolution_mechanism": "Monitoring of patent filings, R&D spending, and demonstrated results from state-backed programs in areas like novel light sources, advanced optics, and precision mechanics.",
+      "impact": "If indigenous development is successful, the 'suppression' metric would fall significantly, and the constraint would weaken from a hard Snare to a more competitive Tangled Rope from the perspective of the excluded nation. If it fails, the Snare classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of a sanctioned nation developing an indigenous alternative to EUV."
+    },
+    {
+      "id": "paradigm_shift_obsolescence",
+      "question": "Will a future computing paradigm (e.g., optical computing, 3D chip stacking, advanced packaging) reduce the centrality of cutting-edge photolithography for performance gains?",
+      "resolution_mechanism": "Tracking the performance-per-watt and cost-per-transistor curves of alternative technologies relative to monolithic silicon chips produced with EUV.",
+      "impact": "If an alternative paradigm becomes economically viable, this entire constraint could degrade into a Piton, where nations compete over a technology that is no longer the primary driver of computing power.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether a future paradigm shift will make EUV lithography obsolete."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 2020,
+    "end": 2030
+  },
+  "commentary": {
+    "narrative_context": "The Dutch company ASML holds a global monopoly on extreme ultraviolet (EUV) lithography machines, the technology essential for producing the world's most advanced semiconductor chips. The next generation, High-NA EUV, represents an even more critical chokepoint. Access to this technology, which is controlled by both its extreme cost and by geopolitical export controls (chiefly from the US to China), dictates which nations and corporations can compete at the technological frontier. This constraint is not just a piece of hardware; it is a primary mechanism for enforcing technological and economic hierarchy in the 21st century.",
+    "key_agents": [
+      "ASML: Primary beneficiary (institutional/arbitrage) \u2014 The monopolist controlling the technology.",
+      "Leading-Edge Foundries (TSMC, Intel, Samsung): Secondary beneficiaries (institutional/constrained) \u2014 They rely on the tech to maintain their market lead, but are also subject to monopoly pricing.",
+      "Allied Nations (USA, Netherlands, etc.): Tertiary beneficiaries (institutional/mobile) \u2014 Use export controls on the technology as a tool of foreign policy.",
+      "Nations Under Export Controls (e.g., China): Primary victim (powerful/trapped) \u2014 State-level actors locked out of the technological frontier.",
+      "Aspiring Competitor Foundries: Secondary victims (powerless/trapped) \u2014 Cannot enter the market due to insurmountable capital and technology barriers."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.75) is extremely high, reflecting monopoly pricing on a technology with inelastic demand. Suppression (0.90) is near-total; there are no commercial alternatives to ASML's machines for leading-edge nodes, and this market failure is reinforced by active state-level export controls. Theater Ratio (0.10) is low because the machine is a purely functional, non-performative piece of capital equipment. The `requires_active_enforcement` flag is true due to the government-enforced export restrictions.",
+    "perspectival_gap": "The gap is stark. ASML views its technology as a pure coordination mechanism (Rope) enabling Moore's Law. For a sanctioned nation like China, it is an unambiguous instrument of economic warfare (Snare). For a key customer like TSMC, it is a necessary evil they both benefit from and are exploited by (Tangled Rope). For a would-be startup, the barrier is so absolute it seems like a law of nature (Mountain). The framework exposes how these perspectives are all rational responses to different structural positions relative to the same constraint.",
+    "directionality_logic": "Beneficiaries (ASML, allied nations) have arbitrage or mobile exit options, giving them very low 'd' values and thus seeing the constraint as a subsidy or pure coordination (negative or low \u03c7). Victims (excluded nations, competitor foundries) are targets with trapped exit options, giving them very high 'd' values and experiencing the constraint as maximally extractive (high \u03c7). Key customers (TSMC) are beneficiaries but with constrained exit, placing them in the middle, correctly identifying the Tangled Rope structure.",
+    "mandatrophy_analysis": "This story resolves the potential mandatrophy of mislabeling a strategic chokepoint. A simplistic analysis might see it as just a Rope ('it enables progress') or just a Snare ('it's a tool of imperialism'). The framework, by requiring the declaration of both beneficiaries and victims, and by modeling the perspectives of actors with different exit options, correctly identifies the dual nature of the constraint. It has a genuine and critical coordination function, but this function is fused to a severe, actively enforced, asymmetric extraction mechanism. It is the canonical example of a Tangled Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain",
+      "ai_hardware_sovereignty",
+      "us_china_tech_decoupling"
+    ]
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "academic_predatory_publishing",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE, MANDATROPHY RESOLVED"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.8,
+    "theater_ratio": 0.9,
+    "claimed_type": "snare",
+    "human_readable": "Academic Predatory Publishing Model",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "predatory_publishing_operators"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "global_south_academics",
+      "scientific_record"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early-Career Researcher",
+      "comment": "PERSPECTIVE 1: THE TARGET (SNARE) \u2014 An early-career researcher, often in a developing nation, faces immense 'publish or perish' pressure. Lacking funds, guidance, and time, they are susceptible to deceptive journals offering rapid publication for a fee (APC). The resulting publication is worthless or damaging, and the fee is lost. Their career progression is trapped by publication metrics. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22481.45. This is a pure extractive trap."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Predatory Publisher",
+      "comment": "PERSPECTIVE 2: THE BENEFICIARY (ROPE) \u2014 The operator of the predatory journal sees their business as a simple market transaction. They provide a service (a publication line-item) that researchers demand, for a price. From this perspective, it's a coordination mechanism between supply and demand with zero coercion. They can easily shut down journals and create new ones to evade blacklists. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. The negative extraction signifies a pure subsidy to them."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The University Tenure Committee",
+      "comment": "PERSPECTIVE 3: THE ENFORCER (PITON) \u2014 University promotion and tenure committees enforce the 'publish or perish' norm, often relying on publication quantity as a proxy for research productivity. This inertial metric, detached from its original purpose of ensuring quality, creates the demand that predatory publishers exploit. Their function is largely theatrical compliance with an outdated standard. The high theater_ratio (0.90) secures the Piton classification."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: THE OBSERVER (SNARE) \u2014 An analyst at a journal indexing service (like DOAJ or Cabell's) sees the full structure: high extraction of fees for no value, high suppression of alternatives due to career pressure, and active deception. The system is unambiguously a Snare that damages the integrity of the scientific record. This aligns with the system's claimed_type. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22481.17."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "responsibility_locus",
+      "question": "Is the primary driver of this constraint the supply of predatory journals or the institutional demand for publication volume?",
+      "resolution_mechanism": "Empirical studies analyzing researcher behavior in institutions that shift evaluation criteria from publication quantity to quality, assessing if this reduces submissions to predatory outlets.",
+      "impact": "If demand-side incentives are the primary driver, the root constraint is 'academic_tenure_process' (likely a Tangled Rope), making this Snare a downstream effect. If it's purely supply-side opportunism, this is a standalone Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the root cause is supply-side predation or demand-side academic incentives"
+    },
+    {
+      "id": "open_access_culpability",
+      "question": "To what extent did the well-intentioned shift to author-pays 'Gold Open Access' models create the economic niche for this form of predation?",
+      "resolution_mechanism": "Comparative historical analysis of predatory publishing rates pre- and post- a wide adoption of the APC model, controlling for other factors like the growth of online publishing.",
+      "impact": "If the APC model is a strong causal factor, then the 'gold_open_access' constraint itself might be classifiable as a Tangled Rope, with this Snare being a predictable, extractive consequence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Causality between the Gold Open Access model and the rise of predatory publishing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.9
+    }
+  ],
+  "interval": {
+    "start": 2005,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The 'predatory publishing' model is a parasitic system that exploits the 'publish or perish' culture in modern academia. These entities create journals, often with deceptive titles mimicking legitimate publications, and charge authors Article Processing Charges (APCs) for publication. However, they provide little to no genuine peer review or editorial services, effectively selling a worthless line on a CV. This primarily targets early-career researchers and academics in the Global South, who are under the most intense pressure to publish in international journals to secure tenure and career advancement.",
+    "key_agents": [
+      "Early-Career Researchers / Global South Academics: Primary victims (powerless/trapped) who pay APCs under career duress.",
+      "Predatory Publishing Operators: Primary beneficiaries (organized/arbitrage) who collect APCs with minimal operating costs.",
+      "University Tenure Committees: Institutional enforcers (institutional/constrained) who perpetuate the 'publish or perish' metric.",
+      "The Scientific Record: Abstract victim, polluted with unvetted research.",
+      "Journal Indexing Services: Analytical observers attempting to create whitelists/blacklists."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.85) is extremely high, as the APC is almost pure profit, with no value returned in the form of legitimate peer review, editing, or prestige. Suppression (0.80) is high because for many researchers, the alternative to publishing (even in a dubious journal) is career stagnation or termination. Theater Ratio (0.90) is also extremely high, as the entire enterprise is a performance of academic publishing\u2014fake editorial boards, sham peer review\u2014without any of the actual substance.",
+    "perspectival_gap": "The gap is stark. The trapped researcher experiences a high-cost, high-coercion Snare. The publisher, operating with arbitrage-level freedom, views their activity as a simple, voluntary Rope that coordinates a researcher's need with their service. Meanwhile, the university committee that creates the demand for this 'service' perceives their role through the lens of a Piton\u2014an inertial, performative adherence to a degraded institutional norm (publication volume as a proxy for quality).",
+    "directionality_logic": "The directionality is driven by the extreme asymmetry in power and exit options. The victims ('early_career_researchers') are trapped, leading to a maximal directionality value (d\u22480.95) and thus very high effective extraction (\u03c7). The beneficiaries ('predatory_publishing_operators') have arbitrage exit, leading to a minimal directionality value (d\u22480.15) and thus a negative effective extraction from their perspective, classifying it as a Rope.",
+    "mandatrophy_analysis": "This constraint is a textbook resolution of mandatrophy. A surface-level analysis might see a 'market' where a 'service' is purchased. However, the framework's focus on structural properties\u2014the extreme suppression (coercion) and near-total lack of value delivery (high \u03b5)\u2014correctly pierces this veil to classify the structure as a Snare. It demonstrates how a Rope-like appearance (a voluntary transaction) can mask a fundamentally extractive and coercive reality."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_tenure_process",
+      "global_research_inequality"
+    ]
+  }
+}

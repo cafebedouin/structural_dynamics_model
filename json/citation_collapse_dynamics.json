@@ -1,0 +1,170 @@
+{
+  "header": {
+    "constraint_id": "citation_collapse_dynamics",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Recursive Grounding Decay",
+    "topic_domain": "technological/academic/informational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "llm_deployers"
+    ],
+    "victims": [
+      "primary_source_producers",
+      "information_consumers",
+      "epistemic_commons"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Information Consumer",
+      "comment": "PERSPECTIVE 1: INFORMATION CONSUMER (SNARE) — Trapped in an information ecosystem flooded with synthetic, ungrounded content. The cost of verifying information becomes prohibitive, and the consumer bears the full epistemic cost of model collapse. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The LLM Deployer",
+      "comment": "PERSPECTIVE 2: LLM DEPLOYER (ROPE) — Experiences the constraint as a large-scale coordination challenge: managing data quality to produce useful outputs. The decay is a negative externality or technical bug to be engineered away, not a primary feature. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative extraction indicates a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Primary Source Producer",
+      "comment": "PERSPECTIVE 3: PRIMARY SOURCE PRODUCER (TANGLED ROPE) — Their original work provides the grounding for early models (coordination), but is then devalued and replaced by synthetic derivatives (extraction). Exit is constrained as they cannot abandon their profession, but they retain some agency through legal and public pressure. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.75."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Digital Archivist Coalition",
+      "comment": "PERSPECTIVE 4: DIGITAL ARCHIVIST COALITION (SCAFFOLD) — Views the decay as a temporary crisis requiring new infrastructure for content provenance and verification. They are building technical and social scaffolds (e.g., C2PA standard, archival of pre-LLM datasets) with the explicit goal of creating a future state where information is grounded again. This represents a sunset clause on the current chaos. d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.31."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Search Engine Interface",
+      "comment": "PERSPECTIVE 5: SEARCH ENGINE INTERFACE (PITON) — The original function of indexing and ranking human-generated knowledge has degraded. The interface now performs the ritual of providing citations and answers, but the underlying content is increasingly self-referential and ungrounded. The high theater_ratio (0.80) triggers the Piton classification, reflecting a system maintained by inertia despite its core function atrophying."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's claimed type. This view recognizes both the genuine coordination function (organizing vast amounts of information in a new way) and the severe, asymmetric extraction from the epistemic commons. The feedback loop is a structural feature, not just a bug. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_vs_economic_drivers",
+      "question": "Is recursive decay primarily a technical problem solvable with better architectures and data hygiene, or an economic inevitability driven by the low cost of synthetic content?",
+      "resolution_mechanism": "Analysis of model performance with certified 'clean' data vs. performance with data scraped from the open, polluted web. Compare costs of both approaches.",
+      "impact": "If technical, the constraint is a Scaffold that will be dismantled by innovation. If economic, it is a durable Snare or Tangled Rope requiring regulation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing technical from economic drivers of recursive decay"
+    },
+    {
+      "id": "collapse_threshold",
+      "question": "What is the critical percentage of synthetic data in a training corpus that triggers irreversible knowledge collapse?",
+      "resolution_mechanism": "Controlled experiments training models on datasets with varying percentages of synthetic content, measuring diversity and factual accuracy.",
+      "impact": "A low threshold suggests the current ecosystem is highly unstable. A high threshold suggests there is more time to build mitigating scaffolds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The threshold of synthetic data that triggers irreversible model collapse"
+    },
+    {
+      "id": "provenance_standard_adoption",
+      "question": "Will content provenance standards (like C2PA) be widely adopted, or will they be ignored in favor of un-credentialed, low-cost content generation?",
+      "resolution_mechanism": "Tracking adoption rates of provenance standards by major platforms, content creators, and consumer-facing applications over a 3-5 year period.",
+      "impact": "High adoption confirms the Scaffold perspective and provides a path to resolving the decay. Low adoption reinforces the Snare/Piton perspectives.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Likelihood of wide adoption for content provenance standards"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 2022,
+    "end": 2032
+  },
+  "commentary": {
+    "narrative_context": "Recursive Grounding Decay describes a feedback loop where Large Language Models (LLMs), trained on internet data, generate content that is subsequently scraped and used to train future models. This process progressively dilutes the proportion of original, human-generated source material in training sets, causing models to learn from their own outputs. This leads to 'model collapse,' a degradation of knowledge, diversity, and factual accuracy, where the link to primary sources is severed. The system creates a structural conflict between the economic incentive to produce vast quantities of low-cost synthetic content and the need to maintain a grounded, reliable information commons.",
+    "key_agents": [
+      "LLM Deployers: Primary beneficiaries (institutional/arbitrage) — Profit from the low-cost generation of content for products and services.",
+      "Information Consumers: Primary victims (powerless/trapped) — Face a degraded information environment and bear the costs of misinformation.",
+      "Primary Source Producers: Secondary victims (moderate/constrained) — Journalists, academics, and artists whose work is devalued and replaced.",
+      "Digital Archivist Coalition: Organized agents (organized/constrained) — Attempt to build technical and social scaffolds to preserve information integrity.",
+      "The Epistemic Commons: Abstract victim (powerless/trapped) — The collective body of reliable knowledge that is being polluted."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The system extracts value from the entire corpus of human knowledge, replacing it with a lower-fidelity, self-referential substitute. This appropriation of the epistemic commons for private gain is highly extractive. Suppression (0.75): High. As synthetic content floods information channels (search, social media), it becomes increasingly difficult and costly for users to find and verify primary sources, effectively suppressing alternatives. Theater Ratio (0.80): Very High. LLMs are designed to perform authoritativeness and fluency, regardless of the factual grounding of their statements. Fabricated citations and confident-sounding falsehoods are a core part of the phenomenon, making the ratio of performative knowledge to functional knowledge extremely high.",
+    "perspectival_gap": "The gap is profound. For LLM deployers, this is a technical coordination problem (Rope). For consumers, it's an inescapable trap of misinformation (Snare). For creators, it's a hybrid system that both uses their work and devalues it (Tangled Rope). For archivists, it's a temporary crisis to be solved with new infrastructure (Scaffold). For the search interface that mediates access, it's a ritual that has lost its original function (Piton). This diversity of perspectives on a single, well-defined technical phenomenon is a canonical example of Deferential Realism.",
+    "directionality_logic": "Beneficiaries (LLM Deployers) have arbitrage exit and institutional power, leading to a low 'd' value and a Rope classification. Victims (Consumers) are trapped and powerless, leading to a high 'd' value and a Snare classification. Other agents fall in between. The structural relationships defined in `base_properties` directly generate the perspectival classifications via the chi formula without needing overrides.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by demonstrating that a single set of structural properties can be simultaneously perceived as all six constraint types. The error would be to declare one perspective (e.g., the deployer's Rope or the consumer's Snare) as the single 'true' classification. The reality is the entire presheaf of perspectives. The analytical observer's classification of Tangled Rope is the system's 'claimed_type' because it acknowledges both the coordination function and the asymmetric extraction, providing the most complete single description."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "scientific_replication_crisis",
+      "public_trust_in_media"
+    ]
+  }
+}

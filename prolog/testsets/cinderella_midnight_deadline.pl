@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: cinderella_midnight_deadline
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2024-07-29
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_cinderella_midnight_deadline, []).
@@ -38,12 +39,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -59,17 +56,18 @@
  *   domain: magical/social
  *
  * SUMMARY:
- *   A Fairy Godmother grants Cinderella a temporary, high-status transformation
- *   (coach, gown, etc.) to attend a royal ball. This magical support is subject
- *   to a rigid temporal constraint: it expires precisely at midnight, at which
- *   point all magical effects revert to their mundane origins (pumpkin, rags).
- *   The constraint is a temporary enabler with a hard, non-negotiable sunset clause.
+ *   A Fairy Godmother grants Cinderella a temporary, high-status
+ *   transformation (coach, gown, glass slippers) to attend a royal ball,
+ *   enabling a brief circumvention of her oppressive social reality. The
+ *   transformation is bound by a single, absolute constraint: it will expire
+ *   at the stroke of midnight, at which point all magical items will revert
+ *   to their mundane original forms. This constraint serves as the central
+ *   tension of the narrative's climax.
  *
- * KEY AGENTS (by structural relationship):
- *   - Cinderella: Primary beneficiary and victim (powerless/trapped) — receives temporary social access but is subject to the absolute deadline.
- *   - The Prince: Secondary beneficiary (institutional/arbitrage) — the event enabled by the magic allows him to meet his future bride.
- *   - Fairy Godmother: Architect (analytical/arbitrage) — the source and enforcer of the magical rule.
- *   - Analytical Observer: Sees the full structure as a temporary support system.
+ * KEY AGENTS:
+ *   - Cinderella: Primary beneficiary and victim (moderate/constrained) — receives the benefit of the transformation but bears the risk of the deadline.
+ *   - Fairy Godmother: The constraint's author and enforcer (institutional/arbitrage) — provides the magical 'scaffolding' and sets its terms.
+ *   - The Prince: Unaware observer (powerful/trapped) — interacts with the *effect* of the constraint (Cinderella's presence and sudden departure) but is ignorant of its cause, perceiving it as an absolute, inexplicable event.
  */
 
 /* ==========================================================================
@@ -77,84 +75,55 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(cinderella_midnight_deadline, 0.10).
-domain_priors:suppression_score(cinderella_midnight_deadline, 0.90).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(cinderella_midnight_deadline, 0.12).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(cinderella_midnight_deadline, 0.28).
+domain_priors:suppression_score(cinderella_midnight_deadline, 0.9).
+domain_priors:theater_ratio(cinderella_midnight_deadline, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(cinderella_midnight_deadline, extractiveness, 0.10).
-narrative_ontology:constraint_metric(cinderella_midnight_deadline, suppression_requirement, 0.90).
-narrative_ontology:constraint_metric(cinderella_midnight_deadline, theater_ratio, 0.12).
+narrative_ontology:constraint_metric(cinderella_midnight_deadline, extractiveness, 0.28).
+narrative_ontology:constraint_metric(cinderella_midnight_deadline, suppression_requirement, 0.9).
+narrative_ontology:constraint_metric(cinderella_midnight_deadline, theater_ratio, 0.15).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% Not a mountain; the constraint is artificially imposed by a magical agent.
-
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(cinderella_midnight_deadline, rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(cinderella_midnight_deadline, scaffold).
 narrative_ontology:human_readable(cinderella_midnight_deadline, "The Fairy Godmother's Midnight Deadline").
 narrative_ontology:topic_domain(cinderella_midnight_deadline, "magical/social").
 
-% --- Binary flags ---
-narrative_ontology:has_sunset_clause(cinderella_midnight_deadline).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(cinderella_midnight_deadline). % The magic is self-enforcing.
+domain_priors:requires_active_enforcement(cinderella_midnight_deadline).
+narrative_ontology:has_sunset_clause(cinderella_midnight_deadline).
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint is explicitly constructed by an agent (Fairy Godmother),
-% so it does not emerge naturally.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(cinderella_midnight_deadline, cinderella).
-narrative_ontology:constraint_beneficiary(cinderella_midnight_deadline, the_prince).
-%
-% Who bears disproportionate cost?
+narrative_ontology:constraint_beneficiary(cinderella_midnight_deadline, fairy_godmother).
 narrative_ontology:constraint_victim(cinderella_midnight_deadline, cinderella).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: CINDERELLA (THE PRIMARY TARGET/BENEFICIARY)
-% For Cinderella, the deadline is an absolute limit on a temporary gift.
-% It enables her attendance (coordination) but has a hard, inescapable
-% endpoint. This is the classic structure of a Scaffold.
-constraint_indexing:constraint_classification(cinderella_midnight_deadline, rope,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(regional))).
+% PERSPECTIVE 1: CINDERELLA (SCAFFOLD) — For Cinderella, the magic is a temporary support structure enabling her to achieve a specific goal (attend the ball, meet the Prince). The deadline is the explicit sunset clause. She is both beneficiary (gains access) and victim (bears the risk of humiliating reversion). Her exit is constrained; she cannot alter the terms. The low effective extraction (χ ≈ 0.19) reflects the net positive utility despite the risk.
+constraint_indexing:constraint_classification(cinderella_midnight_deadline, scaffold,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(local))).
 
-% PERSPECTIVE 2: THE PRINCE (THE SECONDARY BENEFICIARY)
-% From the Prince's perspective, the magical event is a pure coordination
-% mechanism that brings his ideal partner to him. The deadline's consequence
-% (the lost slipper) becomes a tool for finding her. He experiences only the
-% upside of the coordination function, making it a Rope.
+% PERSPECTIVE 2: FAIRY GODMOTHER (ROPE) — As the provider of the magic, the Fairy Godmother perceives the constraint as a pure coordination mechanism. She sets the terms (arbitrage) to solve a problem for her beneficiary. The deadline is simply a parameter of the solution. Her directionality is that of a pure beneficiary (d≈0.05), resulting in negative effective extraction (χ≈-0.03), the signature of a subsidy or gift.
 constraint_indexing:constraint_classification(cinderella_midnight_deadline, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(arbitrage),
-            spatial_scope(national))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Analytically, the constraint is a temporary support structure with a defined
-% end point, designed to solve a specific problem (Cinderella's exclusion).
-% This is the definition of a Scaffold.
-constraint_indexing:constraint_classification(cinderella_midnight_deadline, rope,
+% PERSPECTIVE 3: THE PRINCE (MOUNTAIN) — From the Prince's perspective, Cinderella's sudden departure is an inexplicable, absolute event. He is powerful within his domain but trapped by his ignorance of the constraint's nature. He cannot negotiate with it, prevent it, or understand it. It appears as an immutable law of this specific situation. The engine will flag this as a false summit, as the constraint's base properties (ε=0.28, suppression=0.90, emerges_naturally=false) are inconsistent with a true Mountain.
+constraint_indexing:constraint_classification(cinderella_midnight_deadline, mountain,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 4: ANALYTICAL OBSERVER (SCAFFOLD) — The analytical view confirms the constraint's structural identity as a Scaffold. It is a temporary, enabling structure with a defined, non-negotiable end point, designed to facilitate a change in state for a specific agent. The combination of a clear coordination function, an explicit sunset clause, and low effective extraction confirms this classification.
+constraint_indexing:constraint_classification(cinderella_midnight_deadline, scaffold,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -165,25 +134,6 @@ constraint_indexing:constraint_classification(cinderella_midnight_deadline, rope
    ========================================================================== */
 
 :- begin_tests(cinderella_midnight_deadline_tests).
-
-test(perspectival_gap) :-
-    % Verify perspectival gap between Cinderella (Scaffold) and the Prince (Rope).
-    constraint_indexing:constraint_classification(cinderella_midnight_deadline, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(cinderella_midnight_deadline, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary,
-    TypeTarget == scaffold,
-    TypeBeneficiary == rope.
-
-test(scaffold_properties_validated) :-
-    % A scaffold requires a sunset clause and a beneficiary.
-    narrative_ontology:has_sunset_clause(cinderella_midnight_deadline),
-    narrative_ontology:constraint_beneficiary(cinderella_midnight_deadline, _).
-
-test(analytical_claim_matches) :-
-    % The analytical perspective must match the constraint_claim.
-    narrative_ontology:constraint_claim(cinderella_midnight_deadline, ClaimType),
-    constraint_indexing:constraint_classification(cinderella_midnight_deadline, ClaimType, context(agent_power(analytical), _, _, _)).
-
 :- end_tests(cinderella_midnight_deadline_tests).
 
 /* ==========================================================================
@@ -192,77 +142,53 @@ test(analytical_claim_matches) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (0.10): The magic is a gift, not extractive. The cost is the reversion, not an ongoing extraction of value.
- *   - Suppression (0.90): The magical law is absolute and non-negotiable, overriding any alternative actions Cinderella might take to prolong her time.
- *   - Theater Ratio (0.12): The magic is highly functional, not performative.
- *   - The constraint is classified as a Scaffold because it is a temporary support structure (enabling ball attendance) with a hard sunset clause (midnight). It is not a Mountain because it is artificially created by an agent, not a natural law.
+ *   Extractiveness (ε=0.28): Low. The constraint is fundamentally a gift. The 'extraction' represents the potential social cost and humiliation Cinderella faces if she fails to adhere to the deadline. It's a risk, not a direct transfer of value. Suppression (0.90): High. The deadline is absolute and non-negotiable. There are no alternative magical providers or ways to extend the time. Cinderella's only option is compliance. Theater Ratio (0.15): Low. While the transformation itself is high-theater, the *deadline* is a brutally functional, non-performative rule. Its enforcement is automatic and devoid of ritual.
  *
  * PERSPECTIVAL GAP:
- *   - Cinderella experiences the constraint as a Scaffold. She directly benefits from the temporary support but is also directly subject to its harsh, inescapable deadline.
- *   - The Prince experiences the event enabled by the magic as a Rope. For him, it's a pure coordination mechanism that solves his problem of finding a suitable bride, with the slipper acting as the coordinating device. He sees none of the costs of the deadline, only the benefits of the encounter.
+ *   The gap is driven by information asymmetry. Cinderella, knowing the terms, sees a temporary support structure (Scaffold). The Fairy Godmother, setting the terms, sees a coordination tool (Rope). The Prince, knowing nothing of the terms, experiences the consequence as an unchangeable fact of his reality (Mountain). This demonstrates how an artificial, contingent rule can appear as a natural law to those outside its operational context.
  *
  * DIRECTIONALITY LOGIC:
- *   - Cinderella is both beneficiary (gets to go to the ball) and victim (is trapped by the deadline). This dual role is characteristic of agents interacting with Scaffolds.
- *   - The Prince is a pure beneficiary, using the outcome of the constraint to his advantage.
+ *   Cinderella is declared as both beneficiary and victim. She gains the opportunity but also carries the entire risk of the spell's collapse. This dual role is characteristic of agents using temporary, high-stakes support systems. The Fairy Godmother is a beneficiary, as her goal (Cinderella's happiness) is advanced. This structural relationship correctly derives a low-to-moderate directionality (d) for Cinderella and a very low d for the Godmother, producing the Scaffold and Rope classifications respectively.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification correctly identifies the temporary and enabling nature of the constraint. Labeling it a Mountain would be a mistake, as it has a clear author and purpose. Labeling it a pure Rope would ignore the coercive, non-negotiable deadline that Cinderella faces. The Scaffold classification captures both the enabling function and the temporary, rigid limitation.
+ *   This constraint is a canonical example of a Scaffold. It avoids mandatrophy by correctly identifying the structure as temporary and enabling, rather than purely extractive (Snare) or permanent (Mountain). The Prince's 'Mountain' perspective highlights a common failure mode: mistaking the local, observable effects of a contingent, man-made rule for an immutable law of nature. The DR system correctly identifies this as a 'false summit' by checking the constraint's underlying structural properties, which lack the signature of a natural law.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_cinderella_midnight_deadline,
-    'Is the magic a gift or a test?',
-    'Analysis of the Fairy Godmother''s intent and other instances of her magic. If the deadline is intentionally engineered to produce the slipper outcome, the constraint has a stronger element of manipulation.',
-    'If a gift, it is a pure Scaffold. If a test, it borders on a Tangled Rope, with a hidden extractive purpose (proving worthiness).',
-    confidence_without_resolution(medium)
+    magical_law_vs_arbitrary_rule,
+    'Is the midnight deadline an inherent, immutable limitation of the Fairy Godmother''s magic, or is it an arbitrary rule she imposed for pedagogical or narrative reasons?',
+    'Comparative analysis of magical systems in the story''s universe; direct testimony from the Fairy Godmother.',
+    'If it''s an inherent limitation, the constraint has Mountain-like properties, and the Fairy Godmother''s power is less absolute. If it''s an arbitrary rule, it is purely a Scaffold, and the suppression is a feature of her choice, not a necessity.',
+    confidence_without_resolution(low)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_cinderella_midnight_deadline, conceptual, 'Uncertainty over whether the deadline is a simple limitation (gift) or an engineered test of character (manipulation).').
+narrative_ontology:omega_variable(magical_law_vs_arbitrary_rule, conceptual, 'Whether the deadline is a fundamental limit of magic or an imposed rule.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(cinderella_midnight_deadline, 0, 10).
+narrative_ontology:interval(cinderella_midnight_deadline, 2000, 2400).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required as base_extractiveness (0.10) is below the 0.46 threshold.
-% If this were a high-extraction constraint, data points would be added here.
-%
-% narrative_ontology:measurement(cinderella_midnight_deadline_tr_t0, cinderella_midnight_deadline, theater_ratio, 0, 0.12).
-% narrative_ontology:measurement(cinderella_midnight_deadline_tr_t5, cinderella_midnight_deadline, theater_ratio, 5, 0.12).
-% narrative_ontology:measurement(cinderella_midnight_deadline_tr_t10, cinderella_midnight_deadline, theater_ratio, 10, 0.12).
-%
-% narrative_ontology:measurement(cinderella_midnight_deadline_ex_t0, cinderella_midnight_deadline, base_extractiveness, 0, 0.10).
-% narrative_ontology:measurement(cinderella_midnight_deadline_ex_t5, cinderella_midnight_deadline, base_extractiveness, 5, 0.10).
-% narrative_ontology:measurement(cinderella_midnight_deadline_ex_t10, cinderella_midnight_deadline, base_extractiveness, 10, 0.10).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The magic provides access to a social event, a form of resource allocation.
 narrative_ontology:coordination_type(cinderella_midnight_deadline, resource_allocation).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed. The structural derivation from beneficiary/victim
-% status and exit options accurately models the relationships.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

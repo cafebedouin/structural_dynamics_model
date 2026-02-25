@@ -1,0 +1,170 @@
+{
+  "header": {
+    "constraint_id": "challenger_o_ring_integrity",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Challenger SRB O-Ring Integrity Failure (Institutional)",
+    "topic_domain": "technological/organizational_failure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nasa_management",
+      "thiokol_management"
+    ],
+    "victims": [
+      "challenger_crew",
+      "thiokol_engineers",
+      "us_taxpayer"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Challenger Crew",
+      "comment": "PERSPECTIVE 1: THE CHALLENGER CREW (SNARE) — The ultimate victims, with no knowledge of the specific last-minute risk and no ability to exit. The system extracted their lives to meet a launch schedule. d≈0.95, f(d)≈1.42, σ=0.8 -> χ≈0.97."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Morton Thiokol Engineers",
+      "comment": "PERSPECTIVE 2: THE ENGINEERS (SNARE) — As an organized group, they understood and communicated the risk but were institutionally constrained from stopping the launch. Their professional judgment was suppressed and extracted. d≈0.7, f(d)≈1.07, σ=1.0 -> χ≈0.91."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NASA & Thiokol Management",
+      "comment": "PERSPECTIVE 3: MANAGEMENT (ROPE) — Beneficiaries of maintaining the launch schedule. They experienced the constraint as a pure coordination problem: getting engineers to 'sign off' and align with program goals. From this perspective, the pressure was a tool for coordination, not extraction. d≈0.05, f(d)≈-0.12, σ=1.0 -> χ≈-0.10 (net beneficiary)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Flight Readiness Review Process",
+      "comment": "PERSPECTIVE 4: THE REVIEW PROCESS (PITON) — The formal safety review process had become a degraded ritual. Its function was no longer genuine risk assessment but performative approval. The high theater_ratio (0.75) and institutional inertia satisfy the Piton classification. The process was maintained despite its failure to function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Rogers Commission (Analytical Observer)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (SNARE) — With full access to information post-disaster, the analytical view sees the system's structure clearly: a high-extraction, high-suppression mechanism that coerced compliance and suppressed vital safety data. The classification is unambiguously Snare. d≈0.73, f(d)≈1.15, σ=1.2 -> χ≈1.17."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The 'Inherent Risk' Narrative",
+      "comment": "PERSPECTIVE 6: 'INHERENT RISK' NARRATIVE (MOUNTAIN) — This perspective frames the disaster as an unavoidable consequence of the inherent dangers of spaceflight, a 'Mountain' of physics. The engine will identify this as a false summit: the constraint's properties (ε=0.85, suppression=0.90, requires_active_enforcement=true) are those of a man-made Snare, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "institutional_vs_individual_failure",
+      "question": "Was the failure a systemic property of NASA's 1980s culture, or was it contingent on the decisions of a few specific managers?",
+      "resolution_mechanism": "Analysis of decision-making patterns in other shuttle missions from the same era to determine if the Challenger decision was an outlier or the norm.",
+      "impact": "If systemic, the constraint is a stable Snare. If individual, it was a contingent event more akin to a catastrophic failure of a Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing systemic cultural failure from individual error"
+    },
+    {
+      "id": "acceptable_risk_threshold",
+      "question": "What was the actual, versus stated, threshold for acceptable risk within NASA management at the time?",
+      "resolution_mechanism": "This is a non-empirical question of values and policy. It can only be resolved by examining internal communications to infer the de facto policy, as the de jure policy failed.",
+      "impact": "A low de facto threshold confirms the Snare classification (deliberate risk acceptance). A high but miscalibrated threshold would suggest a Tangled Rope (a coordination system that failed catastrophically).",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "The de facto vs de jure acceptable risk policy"
+    },
+    {
+      "id": "go_fever_inevitability",
+      "question": "Is 'go fever' an inevitable emergent property of high-stakes, schedule-driven projects, or a contingent cultural flaw?",
+      "resolution_mechanism": "Comparative analysis of management culture in other successful and unsuccessful large-scale technological projects (e.g., Apollo program, Manhattan Project).",
+      "impact": "If inevitable, it suggests a Mountain-like property of human organizations under pressure. If contingent, it confirms the Snare is a correctable institutional design flaw.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether 'go fever' is an inevitable or contingent feature"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1983,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1983,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 1986
+  },
+  "commentary": {
+    "narrative_context": "The 1986 Challenger disaster resulted from an institutional failure to respect a physical one. This constraint story models the institutional system of management pressure, suppressed engineering dissent, and 'go fever' that led to the launch. It is structurally downstream of a separate, Mountain-type constraint: the physical properties of Viton rubber at low temperatures. The institutional system leveraged the unforgiving nature of the physical constraint to produce a catastrophe. The high extractiveness (0.85) and suppression (0.90) reflect management actively overruling engineers' explicit 'do not launch' warnings.",
+    "key_agents": [
+      "NASA & Thiokol Management: Primary beneficiaries (institutional/arbitrage) — sought to maintain launch schedules and contractual relationships.",
+      "Challenger Crew: Primary victims (powerless/trapped) — bore the ultimate cost of the decision.",
+      "Morton Thiokol Engineers: Secondary victims (organized/constrained) — understood the risk but were institutionally overruled.",
+      "The Rogers Commission: Analytical observer (analytical/analytical) — post-hoc investigation that revealed the full institutional failure."
+    ],
+    "logic_rationale": "Extractiveness (0.85): Extremely high. The system extracted professional silence from engineers and, ultimately, the lives of the seven crew members in service of a schedule. Suppression (0.90): Near-total. The alternative—delaying the launch—was explicitly presented by engineers and actively rejected by multiple layers of management. Theater Ratio (0.75): High. The formal 'Flight Readiness Review' process proved to be performative. It served as a ritual to manufacture consent rather than a functional mechanism for assessing safety, as evidenced by the decision to launch over strenuous, data-backed objections.",
+    "perspectival_gap": "The gap is stark. For management, the situation was a Rope: a coordination challenge to get all parties to agree to the goal of launching on time. For the engineers and crew, it was a Snare: a coercive system where safety concerns were suppressed and from which there was no escape. The analytical perspective of the Rogers Commission confirms the Snare classification, revealing the 'coordination' narrative to be a catastrophic fiction.",
+    "directionality_logic": "Beneficiaries (NASA/Thiokol Management) with arbitrage exit options see the system as a net benefit (negative extraction), classifying it as a Rope. Victims with no escape (Challenger Crew, trapped) or limited recourse (Engineers, constrained) experience maximum or near-maximum extraction, classifying it as a Snare. The analytical observer, using a canonical directionality, also arrives at the Snare classification, confirming it as the objective structural assessment.",
+    "mandatrophy_analysis": "This case is a canonical example of resolving mandatrophy. A system that presented itself as a coordination mechanism (Rope) for achieving a collective good (space exploration) was revealed to be a lethal Snare that extracted human life for the sake of institutional goals like schedule adherence and budget justification. The perspectival gap between the Rope (management's view) and the Snare (the victims' reality and the analytical conclusion) is the core of the tragedy and what this framework is designed to detect."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "space_shuttle_return_to_flight_protocols"
+    ],
+    "dual_formulation_note": "This constraint, 'challenger_o_ring_integrity', models the institutional decision-making failure. It is structurally downstream of a separate, unmodeled Mountain constraint, 'o_ring_thermal_limits', which represents the immutable physics of the O-rings' loss of resiliency at low temperatures. The Snare leveraged the Mountain."
+  }
+}

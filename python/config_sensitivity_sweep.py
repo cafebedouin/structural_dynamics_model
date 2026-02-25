@@ -31,6 +31,14 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
+# 0. Parameters excluded from sweep
+# ---------------------------------------------------------------------------
+
+EXCLUDE_PARAMS = {
+    'network_contamination_risk_threshold',  # DOCS-ONLY dead code, never referenced in engine
+}
+
+# ---------------------------------------------------------------------------
 # 1. Parse config.pl for numeric param/2 facts
 # ---------------------------------------------------------------------------
 
@@ -68,6 +76,7 @@ PROLOG_OVERLAY_TEMPLATE = """\
    ),
    asserta(config:param({name}, {perturbed})).
 
+:- [stack].
 :- [validation_suite].
 :- run_dynamic_suite, halt.
 """
@@ -180,6 +189,10 @@ def run_sweep(config_path: str, prolog_dir: str, param_filter: str = None,
               workers: int = 1, timeout_sec: int = 600) -> list[dict]:
     """Run the full sensitivity sweep."""
     params = parse_config_params(config_path)
+    excluded = [p for p in params if p["name"] in EXCLUDE_PARAMS]
+    params = [p for p in params if p["name"] not in EXCLUDE_PARAMS]
+    if excluded:
+        print(f"Excluded {len(excluded)} dead-code params: {[p['name'] for p in excluded]}")
     if param_filter:
         regex = re.compile(param_filter)
         params = [p for p in params if regex.search(p["name"])]
@@ -191,7 +204,7 @@ def run_sweep(config_path: str, prolog_dir: str, param_filter: str = None,
 
     # First, get baseline pass count
     print("Running baseline suite...")
-    baseline_cmd = ["swipl", "-g", "[validation_suite], run_dynamic_suite, halt."]
+    baseline_cmd = ["swipl", "-g", "[stack], [validation_suite], run_dynamic_suite, halt."]
     try:
         proc = subprocess.run(
             baseline_cmd,

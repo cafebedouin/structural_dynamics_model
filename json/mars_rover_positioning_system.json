@@ -1,0 +1,77 @@
+{
+  "header": {
+    "constraint_id": "mars_rover_positioning_system",
+    "version": "1.0",
+    "generated_date": "2024-05-22",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "NavCam Frame Tie Rover Positioning System on Mars",
+    "topic_domain": "space_exploration/robotics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "nasa_jpl_mission_planners",
+      "future_mars_explorers",
+      "planetary_scientists"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mission Planner",
+      "comment": "PERSPECTIVE 1: MISSION PLANNER (ROPE) \u2014 For NASA/JPL, this system is a pure coordination good. It solves the critical problem of locational uncertainty, increasing navigational precision and scientific return. The cost is in development, not ongoing extraction. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.007. The negative extraction indicates a net subsidy (gain in efficiency)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Future Martian Field Scientist",
+      "comment": "PERSPECTIVE 2: FIELD SCIENTIST (ROPE) \u2014 For a future human or robotic agent on Mars dependent on this grid, it functions as a vital utility. Despite being 'trapped' with no alternative, the system enables their work and survival rather than extracting from it. It's a foundational piece of infrastructure, not a coercive constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Systems Analyst",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (ROPE) \u2014 This system is a canonical example of a coordination Rope. It creates a shared, high-fidelity information standard (a coordinate system) that reduces entropy and enables more complex, coordinated actions. Its low base extractiveness and suppression scores confirm its classification as a non-extractive public good."
+    }
+  ],
+  "interval": {
+    "start": 2022,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "NASA's Perseverance rover on Mars has been equipped with a new navigation system, 'NavCam Frame Tie', which functions as a planetary GPS. By correlating images taken by the rover's cameras with high-resolution orbital maps from the Mars Reconnaissance Orbiter, the system can determine the rover's absolute position on the planet to within a few centimeters. This solves a long-standing problem of cumulative positioning errors that afflicted previous missions, which only knew their location relative to their landing site (whose absolute position was uncertain by several kilometers). The constraint is the imposition of a shared, high-precision coordinate grid on Martian exploration.",
+    "key_agents": [
+      "NASA/JPL Mission Planners: Primary beneficiary (institutional/arbitrage) \u2014 Gains operational efficiency, scientific accuracy, and enhanced mapping capabilities.",
+      "Future Mars Explorers: Secondary beneficiary (powerless/trapped) \u2014 Will rely on the established grid for navigation and safety.",
+      "Planetary Scientists: Beneficiary (analytical/mobile) \u2014 Use the precise data to create accurate geological maps of Mars."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.05) is minimal, representing the computational and energy cost to the rover, not a social or economic extraction from a victim. Suppression (0.10) is low because the system supersedes older methods through superior performance, not coercion. Theater Ratio (0.05) is extremely low, as this is a purely functional engineering solution to a concrete problem. The constraint is a classic technological public good.",
+    "perspectival_gap": "There is no significant perspectival gap. This is a uniform-type constraint where all relevant viewpoints classify it as a Rope. From the institutional planner to the hypothetical dependent user, the system is perceived as an enabling utility. This uniformity is characteristic of pure coordination mechanisms and technological infrastructure that lack an extractive dimension.",
+    "directionality_logic": "The system has clearly defined beneficiaries (mission planners, future explorers) and no victims. The structural relationship for all agents is that of a user benefiting from a utility. This results in a consistently low directionality value ('d') across all perspectives, ensuring the effective extraction (\u03c7) remains low or negative, which is the signature of a Rope.",
+    "mandatrophy_analysis": "This case poses no risk of mandatrophy. The system's function as a coordination mechanism is transparent and unambiguous. There is no plausible way to frame this as a Snare (no victims), a Mountain (it's engineered, not natural), or a Piton (it's brand new and highly functional). It serves as a clear baseline example of a pure Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "mars_sample_return_logistics",
+      "future_manned_mars_mission_planning"
+    ]
+  }
+}

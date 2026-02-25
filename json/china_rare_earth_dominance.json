@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "china_rare_earth_dominance",
+    "version": "1.0",
+    "generated_date": "2024-08-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "China's Strategic Dominance of the Rare Earth Element Market",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_state_owned_enterprises",
+      "chinese_strategic_planners"
+    ],
+    "victims": [
+      "aspiring_producer_nations",
+      "western_consumer_nations",
+      "global_tech_manufacturers",
+      "local_mining_communities"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Aspiring Producer (Brazil/India)",
+      "comment": "PERSPECTIVE 1: ASPIRING PRODUCER (SNARE) \u2014 From the perspective of a nation with REE reserves but lacking processing capacity, the market is a trap. China's ability to manipulate prices and control the complex processing supply chain makes any new large-scale investment economically non-viable, suppressing competition. Despite being an institutional actor, their exit option is 'constrained' by these high barriers. d from victim+constrained exit -> high d -> high \u03c7."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Dominator (China)",
+      "comment": "PERSPECTIVE 2: MARKET DOMINATOR (ROPE) \u2014 From China's perspective, its control of the REE market is a massive coordination success, providing a stable, integrated supply chain for global manufacturing. The strategic pricing and export controls are seen as prudent management of a critical resource, not extraction. As the primary beneficiary with arbitrage options, they experience negative effective extraction (\u03c7 < 0)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Dependent Consumer (US/EU)",
+      "comment": "PERSPECTIVE 3: DEPENDENT CONSUMER (TANGLED ROPE) \u2014 For Western nations and companies reliant on REEs, the situation is a hybrid. They benefit from the current coordinated supply but are victims of the strategic vulnerability and price volatility it creates. Their 'mobile' exit option represents their ongoing efforts to diversify the supply chain by funding projects in Brazil and elsewhere, acknowledging both the coordination and extraction aspects."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Local Mining Community",
+      "comment": "PERSPECTIVE 4: LOCAL COMMUNITY (SNARE) \u2014 For local populations where new REE mines might be developed (e.g., in Brazil), the constraint is a pure extractive threat. They face the severe environmental costs of mining (radioactive waste, water pollution) for geopolitical benefits they will likely never see. They are trapped by economic circumstance and bear uncompensated costs. d\u22480.95, f(d)\u22481.42 -> high \u03c7."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The observer sees the full structure: a system that performs a genuine coordination function (integrating a complex supply chain) but is coupled with extremely high, actively enforced extraction (monopoly pricing, geopolitical leverage, suppression of alternatives). The base metrics (\u03b5=0.62, suppression=0.75) confirm this is not a pure Rope or Snare, but a hybrid."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "viability_of_alternatives",
+      "question": "Can new producers like Brazil and India realistically achieve the scale and technological capacity to break China's monopoly, or will they always be vulnerable to strategic price dumping?",
+      "resolution_mechanism": "Economic modeling of market entry costs vs. China's production costs; empirical results from the first few years of operation of new processing plants funded by Western nations.",
+      "impact": "If alternatives are viable, the constraint's suppression and extractiveness will decrease, potentially shifting it towards a Rope. If not, it remains a durable Snare for new entrants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-Chinese REE supply chains can become economically viable at scale"
+    },
+    {
+      "id": "technological_substitution",
+      "question": "Will technological innovation create viable, scalable alternatives to rare-earth magnets and other REE-dependent components, thereby collapsing demand?",
+      "resolution_mechanism": "Tracking materials science research and development in permanent magnets and catalysts. Monitoring adoption rates of REE-free technologies in EV motors and wind turbines.",
+      "impact": "A breakthrough would fundamentally reduce the constraint's power, making it a Piton as nations compete over a less critical resource. Failure to find substitutes solidifies its power.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The potential for technology to engineer-out the dependency on rare earth elements"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes China's strategic control over the global supply of rare earth elements (REEs), which are critical for renewable energy and high-tech manufacturing. While having abundant reserves is one factor, China's dominance stems from its control over the entire complex and polluting processing supply chain. This creates a near-monopoly that allows for price manipulation and exerts geopolitical leverage, effectively suppressing the emergence of competitors like Brazil and India and creating strategic vulnerabilities for consumer nations.",
+    "key_agents": [
+      "Chinese State-Owned Enterprises: Primary beneficiary (institutional/arbitrage) \u2014 Control production, processing, and pricing.",
+      "Aspiring Producer Nations (Brazil, India): Primary victim (institutional/constrained) \u2014 Possess reserves but are locked out of the market by high barriers to entry.",
+      "Western Consumer Nations (US, EU): Secondary victim (powerful/mobile) \u2014 Reliant on Chinese supply, facing strategic risk.",
+      "Global Tech Manufacturers: Victim (powerful/mobile) \u2014 Require REEs for products and are exposed to supply/price shocks.",
+      "Local Mining Communities: Potential victim (powerless/trapped) \u2014 Face severe environmental damage from mining operations."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.62) is high, reflecting the significant economic rent and geopolitical power extracted through monopoly control. Suppression (0.75) is very high due to active market strategies, such as price dumping, that make it nearly impossible for new entrants to compete profitably. The Theater Ratio (0.20) is low, as this is a highly functional system of industrial and strategic control, not a performative one. The system requires active enforcement through state policy, export quotas, and strategic investments, meeting a key gate for a Tangled Rope classification.",
+    "perspectival_gap": "The perspectival gap is stark. China views its market position as a Rope \u2014 an efficient, well-managed coordination mechanism. Aspiring producers like Brazil experience it as a Snare \u2014 an inescapable economic trap that stifles their development. Dependent Western nations see a Tangled Rope \u2014 they benefit from the supply but are acutely aware of the extractive risks. This gap highlights the difference between managing a supply chain and weaponizing it.",
+    "directionality_logic": "The directionality is unambiguous. Chinese state actors are the declared beneficiaries, and their arbitrage power gives them a low 'd' value, making the constraint appear beneficial (Rope). All other actors are victims. Aspiring producer nations, despite being institutional, have constrained exit options and thus a high 'd', perceiving a Snare. Powerless local communities have the highest 'd' of all. The engine correctly derives these divergent classifications from the structural relationships.",
+    "mandatrophy_analysis": "This story resolves a potential mandatrophy by refusing to classify a strategic monopoly as simple market coordination (Rope). By identifying both the genuine coordination function (an integrated supply chain) and the severe, actively enforced extraction, the framework correctly identifies the structure as a Tangled Rope. It demonstrates that the 'Rope' classification is a beneficiary's perspective, not an objective description of the full system."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain",
+      "global_renewable_energy_transition",
+      "electric_vehicle_manufacturing"
+    ]
+  }
+}

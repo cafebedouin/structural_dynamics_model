@@ -1,0 +1,168 @@
+{
+  "header": {
+    "constraint_id": "circadian_decoupling_arbitrage",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Circadian Decoupling Arbitrage",
+    "topic_domain": "bio_industrial",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industrial_operators",
+      "global_consumers"
+    ],
+    "victims": [
+      "shift_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Shift Worker",
+      "comment": "PERSPECTIVE 1: SHIFT WORKER (SNARE) — Trapped by economic necessity and limited local alternatives. Bears the full biological and social cost of circadian disruption (metabolic, carcinogenic, psychiatric). The system extracts health and time for wages that don't cover the externality. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.74."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Industrial Operator",
+      "comment": "PERSPECTIVE 2: INDUSTRIAL OPERATOR (ROPE) — Experiences the constraint as a pure coordination problem: maximizing capital efficiency of 24/7 infrastructure. The biological cost to labor is an externality. From this perspective, shift work is the rope that pulls production and capital together continuously. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (enabling a 24/7 global economy) and the severe, asymmetric extraction of health and well-being from a specific labor class. The claimed type. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Union",
+      "comment": "PERSPECTIVE 4: LABOR UNION (TANGLED ROPE) — Engages with the constraint by negotiating its terms (shift differentials, work hour limits) rather than eliminating it. Acknowledges the coordination need for the industry to exist, but fights to mitigate the extraction. Constrained because they cannot abolish shift work without eliminating the jobs. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.49."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Automation Advocate",
+      "comment": "PERSPECTIVE 5: AUTOMATION ADVOCATE (SCAFFOLD) — Views human shift work as a temporary, inefficient bridge to a future of full automation. The constraint is a scaffold holding up 24/7 industry until cost-effective robotics can replace human labor, representing a clear sunset clause for the biological extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The 'Price of Progress' Advocate",
+      "comment": "PERSPECTIVE 6: 'PRICE OF PROGRESS' ADVOCATE (MOUNTAIN - FALSE SUMMIT) — This perspective naturalizes the constraint, framing the costs as an unavoidable, immutable law of technological society. The engine will reject this classification as a false summit, as the base properties (ε=0.65, suppression=0.75, requires_active_enforcement=true) are inconsistent with a Mountain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causality_of_health_detriments",
+      "question": "Are the negative health outcomes in shift workers caused directly by circadian disruption, or are they confounded by the socioeconomic factors (diet, stress, access to care) of the demographic that typically performs shift work?",
+      "resolution_mechanism": "Longitudinal studies with control groups matched for socioeconomic status but differing in work schedules.",
+      "impact": "If directly causal, the extraction (ε) is high. If heavily confounded, the extraction is lower and attributable to other social constraints.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing direct biological harm from socioeconomic confounders"
+    },
+    {
+      "id": "automation_viability_horizon",
+      "question": "What is the realistic time horizon for automation to replace the majority of human shift work in key industries (logistics, manufacturing, healthcare)?",
+      "resolution_mechanism": "Techno-economic analysis of robotics, AI, and capital investment cycles.",
+      "impact": "A short horizon (<15 years) validates the 'Scaffold' perspective. A long horizon (>50 years) renders the sunset clause theoretical, strengthening the 'Snare' classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for automation replacing human shift labor"
+    },
+    {
+      "id": "valuation_of_biological_cost",
+      "question": "How should society value a year of healthy life-span lost to occupational hazards versus the economic output gained from 24/7 operations?",
+      "resolution_mechanism": "Ethical and economic framework development (e.g., Quality-Adjusted Life Year valuation) and public policy debate.",
+      "impact": "This is a fundamental value judgment that determines whether the extraction is considered acceptable. It shifts the boundary between Rope (acceptable coordination cost) and Snare (unacceptable extraction).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Valuation of human health vs. economic output"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1870,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the institutionalized decoupling of human activity from the natural 24-hour solar cycle to enable continuous industrial and commercial operations. By enforcing work schedules that defy innate biological rhythms, industrial systems arbitrage the high capital efficiency of 24/7 operation against the externalized health and social costs borne by a class of 'shift workers'. This creates a fundamental conflict between biological reality and economic optimization.",
+    "key_agents": [
+      "Shift Workers: Primary victims (powerless/trapped) — bear the biological costs of circadian disruption.",
+      "Industrial Operators: Primary beneficiaries (institutional/arbitrage) — capture the economic gains from continuous capital utilization.",
+      "Global Consumers: Secondary beneficiaries (moderate/mobile) — benefit from 24/7 services and supply chains.",
+      "Labor Unions: Organized representatives (organized/constrained) — negotiate the terms of the extraction.",
+      "Automation Advocates: Powerful agents (powerful/arbitrage) — view the system as a temporary scaffold to be replaced by technology."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65) is high, reflecting the severe, well-documented negative health impacts (metabolic syndrome, cancer, mental illness) and social dislocation imposed on workers. Suppression (0.75) is high because for many workers in specific regions or skill brackets, shift work is the only viable employment, making exit options extremely limited. Theater Ratio (0.40) reflects the rise of corporate wellness programs that perform concern for employee well-being (e.g., mindfulness apps) without addressing the root cause of harm—the schedule itself.",
+    "perspectival_gap": "The gap is profound. For the industrial operator, it's a Rope—a simple, elegant solution to a coordination problem. For the worker, it's a Snare—a trap that trades their long-term health for short-term wages. The analytical observer sees the truth in both: a system with a genuine coordination function that is leveraged for severe, asymmetric extraction, which is the definition of a Tangled Rope. Other perspectives, like the union (mitigating the Tangled Rope) or the automation advocate (seeing a Scaffold), highlight different strategies for engaging with the core conflict.",
+    "directionality_logic": "Directionality is driven by the clear division of costs and benefits. Industrial Operators are beneficiaries with arbitrage exit, yielding a low 'd' value and negative effective extraction (χ < 0), hence they perceive a Rope. Shift Workers are victims with trapped exit, yielding a high 'd' value and high positive effective extraction (χ > 0.66), hence they perceive a Snare. The system's structure creates these opposing realities.",
+    "mandatrophy_analysis": "This case is a powerful resolution to mandatrophy. A naive analysis might label 24/7 industry as pure extraction (Snare) or pure coordination (Rope). The DR framework avoids this by demonstrating they are both valid, indexed perspectives. The analytical classification of Tangled Rope correctly identifies the dual nature of the constraint: it simultaneously solves a real coordination problem (how to run a hospital overnight) while imposing an extractive cost. It prevents the mislabeling of necessary coordination as pure evil, and the mislabeling of severe biological harm as a mere cost of doing business."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_supply_chain_fragility",
+      "public_health_outcomes_inequality"
+    ]
+  }
+}

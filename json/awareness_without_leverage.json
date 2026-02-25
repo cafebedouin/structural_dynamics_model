@@ -1,0 +1,163 @@
+{
+  "header": {
+    "constraint_id": "awareness_without_leverage",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cassandra Paradox",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "status_quo_stakeholders"
+    ],
+    "victims": [
+      "cassandra_agents",
+      "general_public"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The General Public",
+      "comment": "PERSPECTIVE 1: THE GENERAL PUBLIC (SNARE) — Trapped within the system, they will bear the full, unavoidable cost of the predicted crisis. From their view, the system is purely extractive, silencing necessary warnings to their detriment. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Cassandra Agent",
+      "comment": "PERSPECTIVE 2: THE CASSANDRA AGENT (SNARE) — Possesses knowledge but is structurally silenced. Their exit is constrained by professional reputation and moral commitment. They experience the system as a high-suppression trap that invalidates their primary asset (knowledge). d≈0.80, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Status Quo Leadership",
+      "comment": "PERSPECTIVE 3: STATUS QUO LEADERSHIP (ROPE) — Benefits from ignoring the warning, maximizing short-term stability, profit, or political capital. They can exit or insulate themselves before the crisis hits. For them, the system is a coordination mechanism to maintain order and suppress dissent. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Activist Coalition",
+      "comment": "PERSPECTIVE 4: ACTIVIST COALITION (SCAFFOLD) — Organized groups that believe the warning see the current institutional failure as a temporary state. They are building parallel structures (awareness campaigns, political pressure) intended to force change, after which their intense mobilization can be sunset. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.41."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Bureaucratic Process",
+      "comment": "PERSPECTIVE 5: THE BUREAUCRATIC PROCESS (PITON) — The institutional machinery itself (committees, review boards, studies) is largely performative. It gives the appearance of addressing the warning while functionally serving to delay action. Its own function has atrophied, persisting through inertia. theater_ratio=0.75 satisfies the piton gate (≥0.70)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Cynical Observer",
+      "comment": "PERSPECTIVE 6: THE CYNICAL OBSERVER (MOUNTAIN) — This perspective naturalizes the failure, claiming that large human systems are inherently deaf to prophetic warnings. It frames a contingent social structure as an immutable law of nature. The engine will detect this as a false summit, as the base properties (ε=0.55, suppression=0.75) fail the mountain classification gates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_vs_inertia",
+      "question": "Is the suppression of the warning a deliberate, coordinated act by beneficiaries, or an emergent property of uncoordinated institutional inertia?",
+      "resolution_mechanism": "Internal communications analysis (e.g., leaked documents, whistleblower testimony) to distinguish between explicit strategy and implicit bias.",
+      "impact": "If intentional, strengthens the Snare classification. If inertial, strengthens the Piton classification for the system's core.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between deliberate suppression and emergent institutional inertia."
+    },
+    {
+      "id": "critical_mass_threshold",
+      "question": "Is there a quantifiable threshold of public awareness, elite consensus, or crisis proximity at which the system's resistance collapses and the warning is heeded?",
+      "resolution_mechanism": "Comparative historical analysis of ignored warnings that were eventually acted upon, correlating action with polling data, media saturation, and proximity to disaster.",
+      "impact": "If a predictable threshold exists, the constraint is better modeled as a Scaffold with a conditional sunset clause. If not, it reinforces the Snare/Piton view of a more stable, self-perpetuating system.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Threshold for public awareness to overcome systemic resistance."
+    },
+    {
+      "id": "communication_framing_efficacy",
+      "question": "To what extent is the failure structural versus a failure of communication? Could a different rhetorical framing have overcome the resistance?",
+      "resolution_mechanism": "A/B testing of crisis messaging on policy-maker proxies; retrospective analysis of cases where similar warnings were heeded, focusing on the communication strategy used.",
+      "impact": "If framing is highly effective, the constraint's suppression value is lower than estimated. If all frames fail, the suppression is confirmed to be deeply structural.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the failure is purely structural or a matter of communication framing."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Cassandra Paradox describes the structural condition where an agent possesses accurate, often critical, foresight about a systemic risk but lacks the leverage or credibility to compel action. The constraint is not the lack of information, but the system's organized deafness to it. This deafness is maintained by institutional inertia, misaligned incentives, and active suppression by those who benefit from the status quo. The paradox creates a type-diverse landscape where the same set of facts is perceived as coordination (Rope), pure extraction (Snare), temporary dysfunction (Scaffold), or performative ritual (Piton), depending entirely on the observer's structural position.",
+    "key_agents": [
+      "The Cassandra Agent: The expert/whistleblower with foresight (moderate/constrained) - primary victim.",
+      "Status Quo Stakeholders: Institutional leadership benefiting from inaction (institutional/arbitrage) - primary beneficiary.",
+      "The General Public: The population who will suffer the eventual consequences (powerless/trapped) - secondary victim.",
+      "The Bureaucratic Process: The institutional machinery of delay (institutional/constrained) - source of theater and inertia.",
+      "The Activist Coalition: Organized opposition attempting to force change (organized/mobile) - agents of potential sunset.",
+      "The Cynical Observer: The analyst who naturalizes the failure (analytical/analytical) - source of the false mountain claim."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Represents the deferred but significant cost of the eventual crisis, which is effectively extracted from the future to maintain present stability/profit. Suppression (0.75): Extremely high. The core of the paradox is the structural silencing of a correct warning through mechanisms like groupthink, credential-assassination, and bureaucratic delay. Theater Ratio (0.75): High. The system's response to the warning is typically performative: forming committees, commissioning endless studies, and holding listening sessions that create an illusion of action while ensuring none is taken. This high theater score is crucial for the Piton perspective.",
+    "perspectival_gap": "The gap is profound and demonstrates the core of the indexical method. For leadership, maintaining the status quo is a successful coordination (Rope). For the public and the Cassandra, it's a trap (Snare). For activists, it's a temporary problem to be overcome (Scaffold). For the bureaucracy itself, it's a hollowed-out ritual (Piton). For the detached cynic, it's an unchangeable law of social physics (Mountain). The base properties are fixed; the classification shifts with the observer's relationship to power, exit, and time.",
+    "directionality_logic": "Beneficiaries (Status Quo Stakeholders) with arbitrage exit options derive a very low directionality (d), resulting in low or negative effective extraction (χ), hence they perceive a Rope. Victims (Public, Cassandra) with trapped or constrained exit options derive a very high d, leading to high χ and a Snare classification. Organized agents (Activists) have more agency, leading to a moderate d and a χ value that falls into the Scaffold or Tangled Rope range. The system's classification is driven by who benefits from the silence and who pays the price for the eventual failure.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that a single phenomenon can be correctly classified as multiple types simultaneously. The error is to insist on a single 'true' classification. The Cassandra Paradox is not *just* a Snare or *just* a Piton; it is the entire presheaf of classifications over the different structural positions. The analytical task is to map this landscape, not to pick a peak. The framework correctly identifies the 'Mountain' view as a false summit, preventing the naturalization of a contingent, and deeply political, institutional failure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  }
+}

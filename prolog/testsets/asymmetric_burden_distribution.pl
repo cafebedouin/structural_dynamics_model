@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: asymmetric_burden_distribution
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-16
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-29
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_asymmetric_burden_distribution, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,11 +41,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2,
-    narrative_ontology:coordination_vitality/2.
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -39,102 +52,102 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: asymmetric_burden_distribution
- * human_readable: The Externalization Lever
- * domain: economic/social/logistical
- * * SUMMARY:
- * A scenario where the systemic benefits of a process (e.g., global shipping,
- * digital convenience, urban density) are concentrated at the center, while
- * the operational burdens (noise, pollution, psychological stress, physical
- * maintenance) are pushed onto a peripheral population. This "Rope" for
- * achieving mass-market affordability becomes a "Snare" for the peripheral
- * subject, whose local agency and quality of life are liquidated to subsidize
- * the center's "frictionless" experience, trapping them in a territory of
- * involuntary sacrifice with no mechanism for cost-recapture.
+ *   constraint_id: asymmetric_burden_distribution
+ *   human_readable: The Externalization Lever
+ *   domain: economic/social/logistical
  *
- * * KEY AGENTS:
- * - Peripheral Resident: Subject (Powerless)
- * - Central Beneficiary: Beneficiary (Institutional)
- * - Socio-Economic Auditor: Auditor (Analytical)
+ * SUMMARY:
+ *   The 'Externalization Lever' is a structural pattern where the benefits of
+ *   a system (e.g., global logistics, digital platforms, urban economies) are
+ *   concentrated among a core group, while the operational costs (pollution,
+ *   noise, stress, precarious labor) are systematically displaced onto a
+ *   peripheral population. This creates a fundamental asymmetry in who
+ *   benefits and who pays. The constraint is not merely an unfortunate
+ *   byproduct but an active mechanism that enhances the efficiency and
+ *   profitability of the core system by treating the periphery's environment
+ *   and well-being as a free or low-cost resource.
+ *
+ * KEY AGENTS:
+ *   - Peripheral Communities: Primary victims (powerless/trapped) — Residents near ports, warehouses, and freeways who bear health and quality-of-life costs.
+ *   - Gig Economy Workers: Secondary victims (powerless/trapped) — Bear the costs of vehicle maintenance, lack of benefits, and algorithmic precarity.
+ *   - Global Consumers: Primary beneficiaries (institutional/arbitrage) — Receive the benefits of low prices and fast delivery without directly experiencing the externalized costs.
+ *   - Corporate Shareholders: Primary beneficiaries (institutional/arbitrage) — Profit from business models that minimize operational costs by externalizing them.
+ *   - Regulators / Planners: Organized agents (organized/constrained) — Attempt to mitigate the harms through policy, viewing the current state as a temporary problem to be solved.
+ *   - Corporate PR/Sustainability Offices: Institutional actors (institutional/arbitrage) — Manage the public perception of externalities, often through performative actions.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(asymmetric_burden_distribution, 0.89). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
-domain_priors:suppression_score(asymmetric_burden_distribution, 0.81).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
-domain_priors:theater_ratio(asymmetric_burden_distribution, 0.86).       % Piton detection (>= 0.70)
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(asymmetric_burden_distribution, 0.65).
+domain_priors:suppression_score(asymmetric_burden_distribution, 0.75).
+domain_priors:theater_ratio(asymmetric_burden_distribution, 0.75).
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
-narrative_ontology:constraint_metric(asymmetric_burden_distribution, extractiveness, 0.89).
-narrative_ontology:constraint_metric(asymmetric_burden_distribution, suppression_requirement, 0.81).
-narrative_ontology:constraint_metric(asymmetric_burden_distribution, theater_ratio, 0.86).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(asymmetric_burden_distribution, extractiveness, 0.65).
+narrative_ontology:constraint_metric(asymmetric_burden_distribution, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(asymmetric_burden_distribution, theater_ratio, 0.75).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(asymmetric_burden_distribution, piton).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(asymmetric_burden_distribution, tangled_rope).
 narrative_ontology:human_readable(asymmetric_burden_distribution, "The Externalization Lever").
 narrative_ontology:topic_domain(asymmetric_burden_distribution, "economic/social/logistical").
 
-% Binary flags
-domain_priors:requires_active_enforcement(asymmetric_burden_distribution). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(asymmetric_burden_distribution).
 
-% Structural property derivation hooks:
-%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
-%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-% Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(asymmetric_burden_distribution, central_beneficiary).
-narrative_ontology:constraint_victim(asymmetric_burden_distribution, peripheral_resident).
-narrative_ontology:coordination_vitality(asymmetric_burden_distribution, dead).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(asymmetric_burden_distribution, global_consumers).
+narrative_ontology:constraint_beneficiary(asymmetric_burden_distribution, corporate_shareholders).
+narrative_ontology:constraint_victim(asymmetric_burden_distribution, peripheral_communities).
+narrative_ontology:constraint_victim(asymmetric_burden_distribution, gig_economy_workers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE)
-% The resident is trapped: they cannot move due to economic constraints,
-% yet remaining liquidates their health and property value to serve the center.
-constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
+% PERSPECTIVE 1: PERIPHERAL COMMUNITY (SNARE) — Trapped by economic circumstance and zoning, this group bears the full cost of noise, pollution, and stress with no recourse or proportional benefit. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.74. This high effective extraction, combined with high suppression, meets the Snare classification.
+constraint_indexing:constraint_classification(asymmetric_burden_distribution, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% The central institution views the distribution as a Rope—the only way to
-% coordinate a competitive, low-cost service for the "greater good."
-constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
+% PERSPECTIVE 2: GLOBAL CONSUMER (ROPE) — Experiences the system as pure coordination for convenience and low prices. Can switch between providers at will (arbitrage exit). As a primary beneficiary, directionality is low. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative extraction indicates a net subsidy.
+constraint_indexing:constraint_classification(asymmetric_burden_distribution, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile),
+            time_horizon(immediate),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE SYSTEMS AUDITOR (PITON)
-% Theater ratio (0.86) > 0.70 triggers Piton: the "Environmental Mitigation Plan"
-% is an inertial spike; it performatively addresses the burden while permitting the extraction.
-constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
-    context(agent_power(analytical),
-            time_horizon(historical),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Detects high extraction (0.89) masking as essential coordination (Rope).
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (efficient supply chains) and the severe, asymmetric extraction it imposes. This balanced view recognizes the hybrid nature of the constraint. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90. This high χ value falls within the Tangled Rope range.
 constraint_indexing:constraint_classification(asymmetric_burden_distribution, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: URBAN PLANNER (SCAFFOLD) — Views the current system of externalized costs as a temporary, undesirable state to be superseded by better policy (e.g., green zones, fair wage laws). This implies a sunset clause on the current arrangement. d≈0.40, f(d)≈0.40, σ=0.9 → χ≈0.23. Low effective extraction meets the Scaffold gate (χ ≤ 0.30).
+constraint_indexing:constraint_classification(asymmetric_burden_distribution, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 5: CORPORATE SUSTAINABILITY OFFICE (PITON) — Engages in performative mitigation (CSR reports, greenwashing) that has little functional impact on the core extractive model. The high theater_ratio (0.75) and low effective extraction for a beneficiary (χ≈-0.09) satisfy the Piton classification gates. The function is inertial, maintained for appearances.
+constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
+    context(agent_power(institutional),
+            time_horizon(biographical),
             exit_options(arbitrage),
-            spatial_scope(universal))) :-
-    domain_priors:base_extractiveness(asymmetric_burden_distribution, E), E >= 0.50,
-    domain_priors:suppression_score(asymmetric_burden_distribution, S), S > 0.40,
-    domain_priors:requires_active_enforcement(asymmetric_burden_distribution).
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: MARKET FUNDAMENTALIST (MOUNTAIN) — Frames externalities as the unavoidable, natural 'price of progress' or an efficient outcome of market forces. This perspective naturalizes a contingent social arrangement. The engine will identify this as a false summit, as the base properties (ε=0.65, suppression=0.75) fail the Mountain gates.
+constraint_indexing:constraint_classification(asymmetric_burden_distribution, mountain,
+    context(agent_power(powerful),
+            time_horizon(civilizational),
+            exit_options(mobile),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -143,23 +156,17 @@ constraint_indexing:constraint_classification(asymmetric_burden_distribution, ta
 :- begin_tests(asymmetric_burden_distribution_tests).
 
 test(perspectival_gap) :-
-    % Verify Snare for the peripheral subject vs Rope for the central beneficiary.
-    constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
-        context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
-        context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(asymmetric_burden_distribution, tangled_rope,
-        context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(asymmetric_burden_distribution, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(asymmetric_burden_distribution, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(piton_trigger) :-
-    % Ensure high theater ratio (0.86) correctly triggers the Piton classification.
-    constraint_indexing:constraint_classification(asymmetric_burden_distribution, piton,
-        context(agent_power(analytical), _, _, _)).
-
-test(extraction_threshold) :-
-    % Verify that the base extraction score correctly exceeds the Mandatrophy threshold.
+test(extraction_signature) :-
     domain_priors:base_extractiveness(asymmetric_burden_distribution, E),
-    E > 0.70.
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(asymmetric_burden_distribution, TR),
+    TR >= 0.70.
 
 :- end_tests(asymmetric_burden_distribution_tests).
 
@@ -169,91 +176,86 @@ test(extraction_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- * The extreme extraction score (0.89) and suppression (0.81) model a system
- * where the survival agency and environmental quality of one group (peripheral
- * residents) are systematically liquidated to subsidize the convenience and
- * economic efficiency of another (central beneficiaries). The high theater
- * ratio (0.86) reflects performative mitigation efforts (e.g., "community
- * funds," "environmental reviews") that create a facade of fairness while
- * failing to alter the underlying extractive logic.
+ *   Extractiveness (ε=0.65) is high, reflecting the severe, uncompensated health, environmental, and social costs imposed on victims. Suppression (0.75) is high because victims are structurally trapped; they lack the economic mobility to move away from infrastructure hubs or the political power to change zoning and labor laws. Theater Ratio (0.75) is high, representing the significant corporate and political effort spent on 'greenwashing' and CSR initiatives that perform concern without altering the fundamental extractive logic of the business model.
  *
- * * PERSPECTIVAL GAP:
- * The gap is profound. For the institutional beneficiary, the system is a
- * Rope, a necessary coordination mechanism for delivering goods and services
- * at scale. For the powerless subject, it is a Snare, trapping them in a
- * degraded environment with no recourse.
+ * PERSPECTIVAL GAP:
+ *   This constraint is a diagnostic exemplar, producing all six classifications from a single set of metrics. For the trapped victim, it is a Snare. For the consumer who only sees the benefits, it is a Rope. For the analyst who sees both sides, it is a Tangled Rope. For the regulator aiming for future improvements, it is a Scaffold. For the corporate PR department managing appearances, it is a Piton. For the ideologue who sees this as a natural law of economics, it is a Mountain. The gap is total, revealing that the 'type' of a constraint is a function of the observer's structural relationship to it.
  *
- * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * The Mandatrophy (extraction > 0.70) is resolved not by a single
- * classification but by the system's ability to hold multiple, contradictory
- * classifications simultaneously. The analytical observer sees both a Piton
- * (the failed, theatrical mitigation policy) and a Tangled Rope (the overall
- * system of coercive coordination). This prevents a monolithic "Snare"
- * classification that would ignore the genuine (though deeply asymmetric)
- * coordination function that benefits the institutional agent. The system
- * correctly identifies a pathological coordination mechanism, not just simple
- * predation.
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiaries (consumers, shareholders) have arbitrage exit options, leading to a low directionality (d) and negative effective extraction (χ), making the system appear as a pure coordination 'Rope'. Victims (peripheral communities, gig workers) are trapped, leading to a high directionality (d) and extremely high effective extraction (χ), making the system a coercive 'Snare'. The analytical observer's position results in a high χ that correctly identifies the mixed coordination/extraction nature of a 'Tangled Rope'.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This story resolves the mandatrophy by demonstrating its premise: a single structural reality can be correctly perceived as multiple constraint types. The error is not in any single classification but in the attempt to assign one exclusive type to the entire system. The Deferential Realism framework's purpose is to hold all these valid, indexed perspectives simultaneously, with the analytical 'Tangled Rope' classification serving as the system's overall claim while acknowledging the legitimacy of the other views.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_burden_recapture,
-    'Can cost-internalization (e.g., Pigouvian taxes) restore the Rope, or is asymmetry a physical law of scaling (Snare vs Mountain)?',
-    'Tracking the success rate of local "sovereignty zones" in recapturing extraction value over 15 years.',
-    'If recapture succeeds: Snare of current policy. If it fails: Mountain of Logistical Entropy.',
+    cost_quantification,
+    'How can the non-monetary costs (health impacts, stress, environmental decay) be accurately quantified and compared to the monetary benefits of the system?',
+    'Development of comprehensive social and environmental accounting metrics; longitudinal public health studies in affected vs. unaffected communities.',
+    'Accurate quantification could shift the analytical classification from Tangled Rope to Snare by revealing a higher true extractiveness, or justify regulatory intervention (Scaffold).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(cost_quantification, empirical, 'Quantification of non-monetary externalities').
+
+omega_variable(
+    causal_attribution,
+    'Are the negative externalities a direct result of deliberate corporate policy (a Snare) or an unavoidable emergent property of complex logistical systems (a Mountain)?',
+    'Comparative analysis of firms with different externality-management policies; internal corporate document review; agent-based modeling of supply chains.',
+    'Resolving this determines whether the solution is policy enforcement against specific actors or a fundamental redesign of the system.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(causal_attribution, conceptual, 'Distinguishing deliberate policy from emergent properties').
+
+omega_variable(
+    regulatory_effectiveness,
+    'Are regulatory bodies genuinely attempting to mitigate harm (Scaffold perspective) or are their efforts largely performative due to regulatory capture (Piton perspective)?',
+    'Analysis of enforcement actions versus policy statements; tracking lobbying expenditures and their correlation with weakened regulations.',
+    'Determines whether the ''Scaffold'' view held by regulators is structurally sound or merely aspirational, collapsing into a Piton.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_effectiveness, empirical, 'Effectiveness and intent of regulatory bodies').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(asymmetric_burden_distribution, 0, 10).
+narrative_ontology:interval(asymmetric_burden_distribution, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-%
-% Theater ratio over time (triggers metric_substitution detection):
-% Rising from functional mitigation (0.25) to inertial "Community Grant"
-% theater (0.86) as the burden scales.
-narrative_ontology:measurement(abd_tr_t0, asymmetric_burden_distribution, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(abd_tr_t5, asymmetric_burden_distribution, theater_ratio, 5, 0.53).
-narrative_ontology:measurement(abd_tr_t10, asymmetric_burden_distribution, theater_ratio, 10, 0.86).
+% Theater ratio over time
+narrative_ontology:measurement(asym_tr_t0, asymmetric_burden_distribution, theater_ratio, 0, 0.3).
+narrative_ontology:measurement(asym_tr_t10, asymmetric_burden_distribution, theater_ratio, 10, 0.6).
+narrative_ontology:measurement(asym_tr_t20, asymmetric_burden_distribution, theater_ratio, 20, 0.75).
 
-% Extraction over time (triggers extraction_accumulation detection):
-% Progressive accumulation of environmental/social costs forced onto the
-% peripheral subject.
-narrative_ontology:measurement(abd_ex_t0, asymmetric_burden_distribution, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(abd_ex_t5, asymmetric_burden_distribution, base_extractiveness, 5, 0.67).
-narrative_ontology:measurement(abd_ex_t10, asymmetric_burden_distribution, base_extractiveness, 10, 0.89).
+% Extraction over time
+narrative_ontology:measurement(asym_be_t0, asymmetric_burden_distribution, base_extractiveness, 0, 0.4).
+narrative_ontology:measurement(asym_be_t10, asymmetric_burden_distribution, base_extractiveness, 10, 0.55).
+narrative_ontology:measurement(asym_be_t20, asymmetric_burden_distribution, base_extractiveness, 20, 0.65).
+
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
 narrative_ontology:coordination_type(asymmetric_burden_distribution, resource_allocation).
+narrative_ontology:affects_constraint(asymmetric_burden_distribution, fast_fashion_labor_practices).
+narrative_ontology:affects_constraint(asymmetric_burden_distribution, amazon_warehouse_conditions).
+narrative_ontology:affects_constraint(asymmetric_burden_distribution, urban_food_deserts).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(asymmetric_burden_distribution, 0.0).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(asymmetric_burden_distribution, [other_constraint_id]).
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

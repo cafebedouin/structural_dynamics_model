@@ -1,0 +1,93 @@
+{
+  "header": {
+    "constraint_id": "burden_of_proof_legal_criminal",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.8,
+    "theater_ratio": 0.25,
+    "claimed_type": "tangled_rope",
+    "human_readable": "\"Beyond a Reasonable Doubt\" (Criminal Legal Burden)",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "accused_individuals",
+      "civil_liberties_advocates"
+    ],
+    "victims": [
+      "victims_of_crime",
+      "society_at_large"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Accused Individual",
+      "comment": "PERSPECTIVE 1: THE ACCUSED (ROPE) — For the individual facing the power of the state, the high burden of proof is a pure coordination mechanism for their protection. It functions as a shield, with no perceived extraction. As a beneficiary with trapped exit, their derived directionality 'd' is low, resulting in a low effective extraction (χ) that classifies as Rope."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Victim of the Crime",
+      "comment": "PERSPECTIVE 2: THE VICTIM (SNARE) — For the victim of a crime, an acquittal due to the high standard of proof represents a pure extraction of justice. The system, from this view, fails to provide resolution and suppresses their claim. As a victim with constrained exit, their derived 'd' is high, leading to a high χ. Combined with high structural suppression (0.80), this classifies as a Snare."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The State (Prosecution)",
+      "comment": "PERSPECTIVE 3: THE STATE (TANGLED ROPE) — The state is constrained to operate within this rule. It benefits from the legitimacy the rule provides, but is also a 'victim' of the high operational burden it imposes. This dual role results in a moderate 'd', and the classification reflects the mixed nature of the constraint: a necessary coordination rule that also entails significant costs and limitations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The analyst sees the full structure: a genuine coordination function (protecting individuals from state power) paired with a genuine extractive function (the cost to victims and society of false negatives). It requires active enforcement and has clear beneficiaries and victims, meeting all gates for a Tangled Rope classification. This is the system's claimed type."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law Theorist",
+      "comment": "PERSPECTIVE 5: NATURAL LAW THEORIST (MOUNTAIN) — This perspective naturalizes the principle, viewing it as an immutable, universal law of justice ('better that ten guilty men go free...'). However, the engine will detect this as a false summit. The constraint's base properties (ε=0.35, suppression=0.80, requires_active_enforcement=true) are fundamentally inconsistent with the Mountain classification, revealing that what is framed as a natural law is in fact a contingent, enforced, and extractive social technology."
+    }
+  ],
+  "interval": {
+    "start": 1790,
+    "end": 2040
+  },
+  "commentary": {
+    "narrative_context": "In common law criminal systems, the burden of proof rests on the prosecution to prove guilt 'beyond a reasonable doubt.' This constraint is a foundational principle designed to protect individuals from the overwhelming power of the state by prioritizing the prevention of wrongful convictions (false positives) over the risk of wrongful acquittals (false negatives). While it serves a critical coordination function in legitimizing state power and protecting civil liberties, it simultaneously creates an extractive cost borne by the victims of crime and society at large when factually guilty individuals are not convicted.",
+    "key_agents": [
+      "Accused Individuals: Primary beneficiary (powerless/trapped) — protected from state overreach.",
+      "Victims of Crime: Primary victim (moderate/constrained) — may be denied legal resolution and justice.",
+      "Society at Large: Secondary victim (organized/mobile) — bears the risk of unconvicted criminals.",
+      "The State (Prosecution & Judiciary): Institutional actor (institutional/constrained) — must adhere to the standard, gaining legitimacy but bearing a high operational burden.",
+      "Civil Liberties Advocates: Secondary beneficiary (organized/mobile) — see the constraint as a core pillar of a just society."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.35): Moderate. This value represents the societal cost of false negatives—acquittals of factually guilty parties that would not have occurred under a lower standard. It is not a direct financial extraction but an extraction of security and legal finality from victims and society. Suppression (0.80): High. The standard is non-negotiable within the criminal legal system. Neither the accused, the victim, nor the state can opt for an alternative standard of proof in a criminal trial. Theater Ratio (0.25): Low. While courtroom proceedings can be theatrical, the constraint itself is a core, functional rule of legal procedure, not a performative ritual.",
+    "perspectival_gap": "The gap is profound. For the accused, it is a pure Rope, a protective shield. For the victim, it is a Snare, a mechanism that extracts justice and leaves them without recourse. For the state, it is a Tangled Rope, a legitimizing but burdensome rule. The analytical observer also sees a Tangled Rope, recognizing the inherent trade-off between its coordination and extraction functions. A philosophical observer might mistake it for a Mountain, but its high suppression and moderate extraction reveal its constructed, non-natural character.",
+    "directionality_logic": "The directionality 'd' is derived from the structural relationships. The 'accused_individuals' are beneficiaries, leading to a low 'd' and a Rope classification. The 'victims_of_crime' are victims, leading to a high 'd', which, combined with high suppression, results in a Snare classification. The State and analytical observers occupy intermediate positions, correctly identifying the mixed Tangled Rope nature of the constraint. The system correctly models how the same legal principle functions as a shield for one party and a weapon against another.",
+    "mandatrophy_analysis": "This constraint is a classic example of resolving mandatrophy. A naive analysis might label the standard as purely 'good' (Rope) or purely 'bad' (Snare). Deferential Realism shows both are valid, indexical truths. The system is not broken because the victim perceives a Snare; the system is *defined* by the fact that the accused's Rope *is* the victim's Snare. The Tangled Rope classification from the analytical view correctly captures this irreducible duality, preventing the mislabeling of a complex trade-off as a simple coordination problem or a simple case of extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  }
+}

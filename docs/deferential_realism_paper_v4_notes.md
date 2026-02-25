@@ -152,3 +152,10 @@ Things worth capturing in the notes file now while they're fresh — these are r
 - **33 tie-resolved constraints** sit at type boundaries. Tagged in the data. Sensitivity of headline findings to tie-breaking rule is an open verification question.
 
 Ready for the contamination_strength + dead param prompt when you are.
+
+---
+
+150/150 Inert at ±25% perturbation. Previous sensitivity was entirely stale test data.
+power_modifier_analytical (the only v2 Critical) is Inert — the 37 failures were from 93 constraints with stale "only analyst catches snare" expectations, now reconciled.
+Recommendation 5 (wider perturbation at ±50% or ±100%) is worth doing eventually to find actual stability boundaries, but it's a characterization exercise, not a prerequisite.
+The all-Inert result strengthens the functor axiom argument: the presheaf structure isn't just formally correct, it's stable under substantial parameter perturbation of the mechanisms that compute the stalks.

@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "n26usc469_real_estate_exemption",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Real Estate Professional Exemption (Passive Activity Loss Rules)",
+    "topic_domain": "economic/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "qualifying_real_estate_professionals"
+    ],
+    "victims": [
+      "us_treasury_general_taxpayer_base",
+      "non_qualifying_passive_investors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The US Treasury / General Taxpayer Base",
+      "comment": "PERSPECTIVE 1: THE GENERAL TAXPAYER (SNARE) — Experiences the exemption as a pure extraction. A specific, organized group is allowed to reduce its tax liability, shifting the burden to the general, unorganized tax base, which has no ability to opt out or access the same benefit. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Qualifying Real Estate Professional",
+      "comment": "PERSPECTIVE 2: THE QUALIFYING PROFESSIONAL (ROPE) — Experiences the rule as a pure coordination mechanism. It correctly distinguishes their active business from the passive investments of others, allowing for appropriate tax treatment. The high compliance burden is the cost of this coordination. As a beneficiary with arbitrage, d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.01. Negative effective extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The High-Income Passive Investor",
+      "comment": "PERSPECTIVE 3: THE NON-QUALIFYING INVESTOR (TANGLED ROPE) — This actor is trapped by the default Passive Activity Loss (PAL) rules. They see the exemption as a system that both coordinates (it sets a clear, if high, bar) and extracts (the benefit is inaccessible to them, forcing them to carry suspended losses). d≈0.80, f(d)≈1.25, σ=1.0 → χ≈0.81."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The IRS (Enforcement Agency)",
+      "comment": "PERSPECTIVE 4: THE IRS (TANGLED ROPE) — The agency is tasked with enforcing a rule that has both a clear coordination goal (separating active/passive) and a high potential for extractive abuse (via fraudulent time logs). Enforcement is a constant struggle to validate claims, making it a hybrid of function and costly verification. d≈0.50, f(d)≈0.65, σ=1.0 → χ≈0.42."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The analyst sees the dual function clearly. The rule coordinates by creating a bright-line test for professionalism, but this test simultaneously enables a significant, asymmetric tax expenditure (extraction) for a small, well-positioned group. This is the canonical view and matches the claimed_type. d≈0.73, f(d)≈1.15, σ=1.0 → χ≈0.75."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proxy_effectiveness",
+      "question": "Are the 750-hour and >50% time tests effective proxies for genuine professional activity, or are they arbitrary hurdles that primarily reward meticulous record-keeping?",
+      "resolution_mechanism": "Analysis of IRS audit data comparing outcomes for taxpayers with contemporaneous logs versus reconstructed logs, correlated with the economic scale of their real estate operations.",
+      "impact": "If the tests are poor proxies, the constraint is more of a Snare, rewarding performative compliance. If they are effective, it reinforces the Tangled Rope classification, where the coordination function is genuine but costly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of time-based tests as a proxy for professionalism."
+    },
+    {
+      "id": "economic_incentive_effect",
+      "question": "Does the tax benefit primarily incentivize productive economic activity (e.g., development of new housing stock) or simply tax-advantaged speculation in existing properties?",
+      "resolution_mechanism": "Econometric analysis comparing the types of real estate investments made by qualifying professionals versus non-qualifying high-income investors.",
+      "impact": "If it drives productive activity, the rule has a stronger coordination (Rope) component. If it primarily fuels speculation, it functions more as a pure extraction mechanism (Snare).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Net economic impact of the tax incentive on real estate markets."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1993,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Section 469 of the US tax code establishes the Passive Activity Loss (PAL) rules, which prevent taxpayers from deducting losses from passive investments (like most rental real estate) against active income (like a salary). This constraint story analyzes the 'Real Estate Professional' exemption, a specific carve-out that allows individuals who spend significant time in real estate trades to bypass the PAL rules. To qualify, a taxpayer must spend over 750 hours and more than 50% of their total working time in real property businesses. This creates a sharp dividing line between two classes of real estate investors, with significant financial consequences.",
+    "key_agents": [
+      "Qualifying Real Estate Professionals: Primary beneficiary (organized/arbitrage) — successfully navigate the rules to deduct rental losses against other income.",
+      "US Treasury / General Taxpayer Base: Primary victim (powerless/trapped) — bears the cost of the foregone tax revenue.",
+      "Non-Qualifying Passive Investors: Secondary victim (powerful/constrained) — high-income individuals who own real estate but are blocked by the PAL rules and cannot meet the exemption's high bar.",
+      "The IRS: Institutional enforcer (institutional/constrained) — tasked with auditing and verifying the often-subjective time-based claims of taxpayers.",
+      "Tax Policy Analyst: Analytical observer (analytical/analytical) — views the structure of the rule, its intended purpose, and its actual effects."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65) is high because the tax savings for a qualifying individual can be substantial, representing a direct wealth transfer from the public treasury. This is not a minor loophole. Suppression (0.75) is high because the default PAL rules are very restrictive, and the criteria to escape them (750 hours, >50% time, material participation) are rigid and demanding, with no alternative pathways. Theater Ratio (0.40) is moderate; while the time-logging requirement is intended to be functional, it often becomes a performative exercise in documentation, with taxpayers reconstructing logs to meet the threshold for an audit.",
+    "perspectival_gap": "The gap is stark. For the beneficiary, it's a fair 'Rope' that recognizes their active business. For the general taxpayer base, it's a 'Snare'—a loophole for a select few. For the investor who fails to qualify, it's a 'Tangled Rope'—a system of rules that constrains them while benefiting others. The analytical view confirms the 'Tangled Rope' classification, acknowledging the legitimate coordination goal (separating active from passive) is inextricably linked to an asymmetric extractive outcome.",
+    "directionality_logic": "Beneficiaries ('qualifying_real_estate_professionals') have organized power and arbitrage exit, leading to a low directionality ('d') and a perception of the rule as a subsidy (Rope). Victims ('us_treasury_general_taxpayer_base') are powerless and trapped, leading to a high 'd' and perception of pure extraction (Snare). Constrained actors ('non_qualifying_passive_investors') have high power but are constrained by the rule, leading to a high-but-not-maximal 'd' and a mixed perception (Tangled Rope).",
+    "mandatrophy_analysis": "This constraint is a classic case for resolving mandatrophy. A naive analysis might label it a 'Snare' (a tax loophole) or a 'Rope' (a fair rule for business owners). The Deferential Realism framework shows both are valid perspectival truths. The analytical classification of 'Tangled Rope' correctly identifies the core structure: a mechanism that performs a genuine coordination function (distinguishing types of investors) while simultaneously facilitating asymmetric extraction (a large tax benefit for a specific group)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "tax_code_complexity",
+      "housing_affordability_zoning"
+    ]
+  }
+}

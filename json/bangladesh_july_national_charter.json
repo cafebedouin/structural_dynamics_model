@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "bangladesh_july_national_charter",
+    "version": "1.0",
+    "generated_date": "2024-10-27",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The July National Charter Referendum",
+    "topic_domain": "political/constitutional_reform",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "interim_government",
+      "reform_proponents_coalition"
+    ],
+    "victims": [
+      "individual_voters",
+      "dissenting_political_parties",
+      "constitutional_deliberative_process"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Voter",
+      "comment": "PERSPECTIVE 1: THE INDIVIDUAL VOTER (SNARE) — Forced into a binary choice on a package of 80+ complex reforms, suppressing any nuanced preference. The voter is trapped; they cannot vote for some reforms while rejecting others. The high suppression and extraction of political choice make this a Snare. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Interim Government",
+      "comment": "PERSPECTIVE 2: THE INTERIM GOVERNMENT (ROPE) — As the architect, the government sees the referendum as a pure coordination mechanism to overcome decades of political gridlock and implement necessary reforms. As a beneficiary with arbitrage exit (their mandate ends after the election), they experience negative effective extraction. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incoming Elected Government (BNP)",
+      "comment": "PERSPECTIVE 3: THE INCOMING ELECTED GOVT (TANGLED ROPE) — The new government is constrained by the referendum's popular mandate, which it may not fully support. It benefits from the election framework but is a victim of the binding reform package. This mixed role and constrained exit result in a Tangled Rope classification. d≈0.6, f(d)≈0.87, σ=1.0 → χ≈0.48."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Pro-Reform Coalition",
+      "comment": "PERSPECTIVE 4: THE PRO-REFORM COALITION (ROPE) — The 24 parties that signed the charter see it as a necessary tool for collective action. As organized beneficiaries with mobile exit (they could have refused to sign), they perceive it as a low-extraction coordination solution. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.005."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees both the genuine coordination function (breaking deadlock) and the asymmetric extraction (bundling suppresses dissent). The high base extractiveness and suppression, combined with a clear coordination goal, define a Tangled Rope. This is the system's claimed type. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legal_vs_political_mandate",
+      "question": "Is the referendum's 'Yes' vote legally binding on the new parliament, or is it only a politically persuasive mandate?",
+      "resolution_mechanism": "A future ruling by the Bangladesh Supreme Court or the actions of the new parliament acting as a constituent assembly.",
+      "impact": "If legally binding, the constraint's suppression and extractiveness are confirmed, solidifying its Snare/Tangled Rope nature. If only political, it is a weaker constraint, potentially degrading to a Piton if ignored.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the referendum mandate is legally or merely politically binding."
+    },
+    {
+      "id": "voter_intent_granularity",
+      "question": "Did the 68% 'Yes' vote reflect specific approval for the 80+ bundled reforms, or was it a general vote for 'change' and against the previous regime?",
+      "resolution_mechanism": "Detailed post-election polling and analysis of voter motivations.",
+      "impact": "If support was specific, the coordination function (Rope element) is stronger. If it was a general protest vote, the extractive function (Snare element) of bundling unrelated issues is more pronounced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Granularity of voter intent behind the single 'Yes' vote."
+    },
+    {
+      "id": "selective_implementation_risk",
+      "question": "Will the new government with its two-thirds majority implement the charter faithfully, selectively, or not at all?",
+      "resolution_mechanism": "Observing the legislative actions of the new parliament during its first two years.",
+      "impact": "Selective implementation would reveal the true beneficiaries and victims of the charter, potentially altering the directionality calculations. Complete rejection would indicate the constraint's failure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Risk of the new government selectively implementing the charter."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 2024,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "Following the July 2024 uprising in Bangladesh, an interim government led by Muhammad Yunus proposed a 'July National Charter' to enact sweeping reforms. This charter, containing over 80 distinct constitutional amendments, was presented to the electorate as a single, binary 'Yes/No' referendum held alongside the 2026 general election. The core of this constraint is the bundling of numerous, complex issues into an indivisible package, forcing voters and political actors to accept or reject the entire reform agenda without nuance.",
+    "key_agents": [
+      "Interim Government: Primary beneficiary (institutional/arbitrage) — sees the referendum as a necessary coordination tool to enact its reform agenda.",
+      "Individual Voters: Primary victim (powerless/trapped) — their ability to express nuanced political preference is extracted by the binary choice.",
+      "Incoming Elected Government (BNP): Institutional actor (institutional/constrained) — constrained by the popular mandate of a referendum it may not fully endorse.",
+      "Pro-Reform Coalition: Beneficiary (organized/mobile) — parties that view the charter as a vehicle for desired collective action.",
+      "Constitutional Deliberative Process: Abstract victim (powerless/trapped) — the quality of constitutional change is diminished by bypassing granular debate."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55) is high because the bundling mechanism extracts political choice and nuance from voters. A voter who supports 90% of the reforms but vehemently opposes 10% has their consent for the former leveraged to pass the latter. Suppression (0.75) is very high because the all-or-nothing format completely eliminates alternative choices, such as voting on reforms individually or in smaller packages. Theater Ratio (0.20) is low, as the referendum has significant, tangible political consequences and is not primarily a performative act.",
+    "perspectival_gap": "The gap is stark. The interim government (beneficiary) sees a pure Rope, a tool to solve a national coordination problem. The individual voter (victim) experiences a Snare, trapped in a coercive choice that invalidates their specific preferences. The incoming government, caught between its own agenda and the referendum's mandate, perceives a Tangled Rope—a mix of coordination and coercion. This divergence highlights how the same political instrument can be perceived radically differently based on one's structural position.",
+    "directionality_logic": "Directionality is derived from structural relationships. The Interim Government, as a beneficiary with arbitrage exit, has a very low 'd' value, resulting in negative effective extraction (Rope). The individual voter, as a trapped victim, has a very high 'd' value, leading to high effective extraction (Snare). The incoming government, with a mixed role and constrained exit, has a moderate 'd' value, placing it in the Tangled Rope category. The analytical perspective aligns with Tangled Rope, recognizing both the stated coordination goal and the coercive extractive mechanism.",
+    "mandatrophy_analysis": "This constraint is a powerful example of resolving mandatrophy. Labeling the referendum as simply 'democratic reform' (Rope) would ignore the coercive extraction of choice from voters. Labeling it as pure 'authoritarian imposition' (Snare) would ignore the genuine coordination function it serves in a post-crisis political environment. The Tangled Rope classification correctly captures this duality: it is a mechanism that uses an extractive method (bundling) to achieve a coordinative end (reform), and its nature is fundamentally ambiguous without specifying the observer's perspective."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

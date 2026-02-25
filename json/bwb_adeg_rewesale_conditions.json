@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "bwb_adeg_rewesale_conditions",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.15,
+    "claimed_type": "tangled_rope",
+    "human_readable": "BWB Conditions on Rewe's Adeg Store Divestment",
+    "topic_domain": "economic_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "independent_merchants",
+      "austrian_consumers",
+      "bwb_regulatory_mandate"
+    ],
+    "victims": [
+      "rewe_group"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Divesting Corporation (Rewe Group)",
+      "comment": "PERSPECTIVE 1: REWE GROUP (SNARE) — As the target of the regulation, Rewe experiences the conditions as pure coercive extraction. Their freedom to transact on their preferred terms is removed by state power. The coordination benefits to the wider market are an externality they are forced to subsidize. d is high due to victim status + constrained exit, pushing χ > 0.66."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Independent Merchants",
+      "comment": "PERSPECTIVE 2: INDEPENDENT MERCHANTS (ROPE) — As beneficiaries, the merchants see the BWB's conditions as a pure coordination mechanism that creates a viable market for them to acquire stores and compete. The constraint reduces the power asymmetry with Rewe. d is low due to beneficiary status, resulting in low/negative χ."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Austrian Consumer",
+      "comment": "PERSPECTIVE 3: AUSTRIAN CONSUMERS (ROPE) — Consumers are the intended indirect beneficiaries. Despite being powerless and trapped within the market, the constraint is designed to work in their favor by preserving competition. The derivation chain prioritizes their beneficiary status, leading to a low d value and a Rope classification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes both the genuine coordination function (preserving market competition) and the coercive, asymmetric extraction from Rewe. It is a textbook example of a state-enforced hybrid constraint, correctly classified as a Tangled Rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Competition Authority (BWB)",
+      "comment": "PERSPECTIVE 5: BWB (ROPE) - The regulator itself experiences the constraint as the fulfillment of its mandate. It is a tool for coordination that it wields with full agency. As the primary institutional beneficiary with arbitrage exit (it can change the rules), it perceives no extraction."
+    }
+  ],
+  "interval": {
+    "start": 2022,
+    "end": 2025
+  },
+  "omegas": [
+    {
+      "id": "long_term_merchant_viability",
+      "question": "Will the independent merchants who acquire the stores remain competitive in the long term, or will they eventually fail or be re-acquired, rendering the intervention ineffective?",
+      "resolution_mechanism": "Longitudinal market share analysis of the divested stores over a 5-10 year period.",
+      "impact": "If merchants fail, the constraint's coordination function was illusory, and it was closer to a pure Snare on Rewe with no lasting public benefit. If they thrive, the Tangled Rope classification is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term competitive viability of merchants post-divestment"
+    },
+    {
+      "id": "consumer_price_impact",
+      "question": "Did the divestment conditions lead to demonstrably lower prices or higher quality for consumers compared to a counterfactual where the stores were closed or sold without conditions?",
+      "resolution_mechanism": "Econometric analysis of grocery price indices in the affected regions, comparing them to control regions.",
+      "impact": "A significant positive impact on consumers confirms the strength of the coordination function. No impact suggests the extraction from Rewe did not translate into public benefit, weakening the Tangled Rope case.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Measurable impact of the conditions on consumer welfare"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Austrian Federal Competition Authority (BWB) imposed binding conditions on the Rewe Group's divestment of 75 Adeg grocery stores to independent merchants. This regulatory action serves as a classic example of a state-enforced market-shaping constraint. The BWB's stated goal is to preserve competition in the Austrian food retail sector, preventing increased market concentration that could harm consumers and smaller businesses. The constraint is not a simple rule but a complex set of obligations that reallocates market power and opportunity.",
+    "key_agents": [
+      "Rewe Group: Primary target/victim (institutional/constrained) — A major retail corporation whose transactional freedom is being curtailed.",
+      "Independent Merchants: Primary beneficiaries (organized/mobile) — Smaller businesses who gain an opportunity to acquire stores under favorable conditions.",
+      "Austrian Consumers: Secondary beneficiaries (powerless/trapped) — The public group intended to benefit from maintained competition.",
+      "BWB (Federal Competition Authority): Institutional enforcer/beneficiary (institutional/arbitrage) — The state body fulfilling its regulatory mandate.",
+      "Analytical Observer: External viewpoint (analytical/analytical) — Assesses the structure of the intervention impartially."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55): Moderate. The constraint extracts significant value from Rewe, not just in monetary terms but in strategic flexibility and the freedom to dispose of assets on its own terms. Suppression (0.75): High. As a state regulator, the BWB's decision is backed by legal force. Rewe's alternatives are severely limited; non-compliance would result in legal penalties or the transaction being blocked entirely. Theater Ratio (0.15): Low. This is a functional, not performative, regulatory action with direct and intended economic consequences.",
+    "perspectival_gap": "The gap is stark and structurally determined. Rewe, the target, experiences the constraint as a Snare because the costs are direct and coercive, while the market-wide benefits are an externality. The merchants and the BWB, as beneficiaries, experience it as a Rope because it facilitates a desirable coordination outcome (market entry, mandate fulfillment). Consumers also see a Rope, as the rule is designed to protect them. The analytical observer, weighing both the coercive extraction from Rewe and the genuine coordination goal, classifies it as a Tangled Rope.",
+    "directionality_logic": "Directionality is derived from the clear structural roles. Rewe is the designated victim, and its constrained exit options lead to a high 'd' value, resulting in high effective extraction (χ) and a Snare classification. The merchants, consumers, and BWB are designated beneficiaries; their mobile or arbitrage exit options (or, for consumers, the protective intent of the law) result in low 'd' values, low/negative χ, and a Rope classification. The system correctly models how the same regulatory act is perceived differently based on one's position relative to the flow of value and coercion.",
+    "mandatrophy_analysis": "This constraint is a clear case for the necessity of the Tangled Rope category. Labeling it purely as a Snare (Rewe's view) would ignore its legitimate pro-competitive coordination function. Labeling it purely as a Rope (the BWB's view) would erase the coercive extraction imposed on a market actor. The Tangled Rope classification, adopted by the analytical perspective, correctly identifies the hybrid nature of most economic regulation: it is simultaneously a coordination mechanism for the market as a whole and an extractive mechanism against specific, targeted entities."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "adverse_possession",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.1,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Adverse Possession (Squatter's Rights)",
+    "topic_domain": "economic/political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "adverse_possessors",
+      "the_state",
+      "title_insurers"
+    ],
+    "victims": [
+      "absentee_landowners",
+      "heirs_unaware_of_property"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Absentee Landowner",
+      "comment": "PERSPECTIVE 1: ABSENTEE LANDOWNER (SNARE) — For the original title holder who is unaware or unable to contest the occupation, the law is a pure extraction mechanism. Once the statutory period expires, their property is lost with no recourse. They are powerless and trapped. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.85."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Adverse Possessor",
+      "comment": "PERSPECTIVE 2: ADVERSE POSSESSOR (ROPE) — For the person claiming the land, the law is a pure coordination mechanism. It provides a clear, albeit lengthy, process for formalizing title to land they are actively using. They are organized (must meet strict criteria) and mobile (can abandon the claim). d≈0.40, f(d)≈0.40, σ=0.8 → χ≈0.24."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State / Legal System",
+      "comment": "PERSPECTIVE 3: THE STATE (ROPE) — From the perspective of the legal system, this doctrine is a coordination tool to ensure land is used productively, resolve title uncertainties, and maintain a stable property tax base. The state benefits and can change the law at will (arbitrage). d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.09. Negative extraction indicates a net subsidy to the state's goals."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes both the coordination function (clearing title, promoting land use) and the severe, asymmetric extraction from unaware owners. The high base extraction and suppression, combined with a clear public policy goal, make it a canonical Tangled Rope. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈1.04."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The 'Use It or Lose It' Principle",
+      "comment": "PERSPECTIVE 5: NATURAL LAW VIEW (MOUNTAIN) — This perspective frames the doctrine as an inevitable consequence of property rights: that ownership entails stewardship, and failure of stewardship naturally leads to forfeiture. It naturalizes a specific legal doctrine as an immutable law. The engine will flag this as a false summit, as the high ε and suppression values are inconsistent with a true Mountain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_efficiency_gain",
+      "question": "Does adverse possession genuinely lead to more economically efficient land use, or does it primarily create legal conflict and transfer wealth without net social gain?",
+      "resolution_mechanism": "Comparative economic analysis of jurisdictions with and without strong adverse possession laws, controlling for other factors in land development.",
+      "impact": "If efficiency gains are high, the 'Rope' perspective is strengthened. If gains are low or negative, the 'Snare' perspective is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the net economic benefit of the adverse possession doctrine."
+    },
+    {
+      "id": "hostility_intent_standard",
+      "question": "What level of intent satisfies the 'hostile' possession requirement: a good-faith belief of ownership, an objective occupation without permission, or a bad-faith intent to steal?",
+      "resolution_mechanism": "Jurisprudence analysis and clarification of legal standards across states.",
+      "impact": "A good-faith standard reduces the perceived extractiveness, while a bad-faith standard increases it, shifting the classification between Tangled Rope and Snare for some observers.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The legal interpretation of 'hostile' intent in possession claims."
+    },
+    {
+      "id": "fairness_of_statutory_period",
+      "question": "What is a 'fair' statutory period to balance the interests of an absentee owner against the goal of productive land use?",
+      "resolution_mechanism": "Policy debate and legislative adjustment; there is no single empirical answer.",
+      "impact": "Shorter periods (e.g., 5 years) make the constraint feel more like a Snare, while longer periods (e.g., 20-40 years) make it feel more like a Rope, as the owner has more time to act.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The societal preference for the length of the statutory period for claims."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Adverse possession is a legal doctrine where a person in possession of land owned by someone else may acquire valid title to it after a period of time, provided certain common law requirements are met. It is often colloquially called 'squatter's rights.' The doctrine is intended to promote the productive use of land and to resolve uncertainties in property titles. However, it creates a structural conflict between the rights of legal owners (especially those who are absentee or unaware) and the interests of the possessor and the state.",
+    "key_agents": [
+      "Absentee Landowner: Primary victim (powerless/trapped) — loses their property without compensation after the statutory period.",
+      "Adverse Possessor: Primary beneficiary (organized/mobile) — gains title to property through systematic, open, and continuous use.",
+      "The State / Legal System: Institutional beneficiary (institutional/arbitrage) — benefits from clearer titles, a stable tax base, and productive land use.",
+      "Analytical Observer: Sees the dual function of coordination and extraction (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (0.75): High. When the conditions are met, the extraction is total for the victim—they lose 100% of the property's value. The base value is set high to reflect this severity, triggering the mandatrophy resolution requirement. Suppression (0.80): High. While an attentive owner has many alternatives (e.g., eviction), the law completely suppresses the rights of an inattentive owner after the statutory period. The finality of the title transfer represents a high degree of coercion. Theater Ratio (0.10): Low. The legal process for adverse possession is highly functional and procedural, based on strict evidentiary tests rather than performative rituals.",
+    "perspectival_gap": "The gap is stark. For the absentee landowner, the law is a Snare that legalizes theft. For the adverse possessor and the state, it is a Rope—a necessary and beneficial coordination mechanism for managing property. The analytical observer sees both functions simultaneously, classifying it as a Tangled Rope. This highlights how a single legal doctrine can be perceived as pure extraction or pure coordination depending on one's structural position relative to the property in question.",
+    "directionality_logic": "The beneficiaries are the adverse possessors who gain title and the state which gains a productive, tax-paying property. The victims are the original title-holders who lose their asset. The direction of extraction is clearly from the inactive owner to the active possessor, mediated and legitimized by the state. The state itself benefits from the overall system's function, making it an institutional beneficiary.",
+    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating a canonical Tangled Rope. To label adverse possession as purely a Snare ('legalized theft') ignores its genuine, state-sanctioned coordination function of clearing titles and encouraging land use. Conversely, to label it purely as a Rope ('economic efficiency tool') ignores the severe, non-consensual, and total extraction imposed upon the victim. The Tangled Rope classification correctly captures this dual nature, preventing misclassification in either direction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "property_title_certainty",
+      "land_use_zoning"
+    ]
+  }
+}

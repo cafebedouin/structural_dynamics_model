@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "boom_bust_path_dependency",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Heritage Fund Piton (Fiscal Volatility Path)",
+    "topic_domain": "economic/policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "oil_and_gas_industry",
+      "current_taxpayers_boom_times",
+      "political_incumbents"
+    ],
+    "victims": [
+      "future_generations_of_albertans",
+      "public_service_recipients"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Public Service Recipient",
+      "comment": "PERSPECTIVE 1: PUBLIC SERVICE RECIPIENT (SNARE) — Experiences budget cuts to essential services (health, education) during bust cycles. They are trapped within the provincial system and bear the direct costs of fiscal instability. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.70. This high effective extraction meets the Snare threshold."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Oil and Gas Industry",
+      "comment": "PERSPECTIVE 2: OIL AND GAS INDUSTRY (ROPE) — Benefits from a low and stable royalty regime, viewing it as a pure coordination mechanism to attract capital investment. Can exit via capital flight if the regime changes. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. The negative extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Provincial Government",
+      "comment": "PERSPECTIVE 3: PROVINCIAL GOVERNMENT (PITON) — Manages the Heritage Fund, which has become largely performative. Its original function as a powerful fiscal stabilizer has atrophied, but it persists as a political symbol of prudence. The high theater_ratio (0.80) triggers the Piton classification. The government is constrained by political path dependency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Fiscal Conservative Taxpayer",
+      "comment": "PERSPECTIVE 4: FISCAL CONSERVATIVE TAXPAYER (ROPE) — As an organized voting bloc, they benefit from and support the low-tax environment funded by resource revenues instead of broad-based taxes. They see the system as a successful coordination mechanism for their primary interest. d≈0.25, f(d)≈0.12, σ=1.0 → χ≈0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full structure: a system that coordinates benefits for some (industry, current taxpayers) while extracting heavily from others (future generations, public services). The high suppression of alternatives and active political enforcement confirm the Tangled Rope classification. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "interval": {
+    "start": 1987,
+    "end": 2027
+  },
+  "omegas": [
+    {
+      "id": "resource_curse_contingency",
+      "question": "Is Alberta's fiscal volatility an inevitable outcome of a 'resource curse' (Mountain-like), or is it the result of contingent policy choices that could be reversed (Tangled Rope)?",
+      "resolution_mechanism": "Comparative analysis with other resource-rich jurisdictions (e.g., Norway, Alaska) that have implemented different fiscal models.",
+      "impact": "If deemed inevitable, the constraint is closer to a Mountain, and policy interventions are futile. If contingent, it confirms the Tangled Rope/Snare classifications and implies that alternative policies are possible.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishing between inevitable resource curse and contingent policy choices."
+    },
+    {
+      "id": "political_will_threshold",
+      "question": "What level of sustained fiscal crisis or public pressure would be required to overcome the political path dependency and reform the royalty and savings structure?",
+      "resolution_mechanism": "Historical case studies of major policy shifts in other jurisdictions; polling data on public appetite for higher taxes or royalty reviews during economic downturns.",
+      "impact": "Defines the conditions under which the constraint could be dismantled or transition to a Scaffold. Without reaching this threshold, the Piton/Snare structure remains stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The threshold of crisis needed to break political path dependency."
+    },
+    {
+      "id": "fair_royalty_rate",
+      "question": "What constitutes a 'fair share' of resource revenue for the public versus a 'competitive' rate for industry?",
+      "resolution_mechanism": "This is not empirically resolvable, as it depends on competing economic models and normative values regarding public ownership of resources.",
+      "impact": "The perceived fairness of the royalty rate determines whether the system is viewed as a legitimate Rope (coordination) or an extractive Tangled Rope/Snare.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The normative and unresolvable question of a 'fair' royalty rate."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 1987,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2027,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1987,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2027,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models the path dependency of Alberta's fiscal policy, rooted in the management of its Heritage Fund. Established to save resource wealth and stabilize revenues, the fund's purpose was undermined by policy choices starting in the 1980s to halt contributions and prioritize low royalties. This created a boom-bust fiscal structure where resource revenue is used for current spending and tax suppression in good times, leading to severe public service cuts in bad times. The Heritage Fund now functions as a 'Piton': its original purpose has atrophied, but it persists as a powerful political symbol of fiscal prudence, masking the underlying volatility.",
+    "key_agents": [
+      "Public Service Recipients: Primary victims (powerless/trapped) who bear the cost of budget cuts.",
+      "Future Generations: Abstract victims (powerless/trapped) who inherit a depleted fund and volatile fiscal structure.",
+      "Oil and Gas Industry: Primary beneficiary (institutional/arbitrage) who profits from low royalty rates.",
+      "Current Taxpayers (Boom Times): Secondary beneficiaries (organized/mobile) who receive tax cuts funded by non-renewable revenues.",
+      "Provincial Government: Institutional actor (institutional/constrained) that maintains the inertial system for political expediency."
+    ],
+    "logic_rationale": "Extractiveness (0.55) represents the significant opportunity cost borne by the public and future generations—wealth that was not saved or invested in durable public goods. Suppression (0.75) is high due to a deeply entrenched political ideology that actively resists alternatives like higher royalties, a sales tax, or Norway-style savings discipline. Theater Ratio (0.80) is very high, as the Heritage Fund is politically celebrated as a major achievement, while its actual function as a fiscal stabilizer has been negligible for decades compared to its potential.",
+    "perspectival_gap": "The gap is profound. For industry and low-tax advocates, the system is a Rope—a successful coordination of interests. For the government managing it, it's a Piton—an inertial, performative tool. For those dependent on public services, it is a Snare—a trap of fiscal instability they cannot escape. The analytical observer sees the whole picture as a Tangled Rope, where the 'coordination' for some is enabled by active, coercive extraction from others.",
+    "directionality_logic": "Beneficiaries like the oil industry have arbitrage exit options, driving their directionality (d) near zero and making effective extraction (χ) negative (a subsidy). Victims like public service recipients are trapped, driving their 'd' near one and χ to its maximum, resulting in a Snare. The government is constrained by political ideology, and its perspective is dominated by the high theater ratio, yielding a Piton. The analytical view, balancing these factors, classifies the overall structure as a Tangled Rope.",
+    "mandatrophy_analysis": "This case resolves a potential mandatrophy by demonstrating how a single policy structure can be correctly classified as multiple constraint types simultaneously. It avoids mislabeling the system as 'just' a coordination failure (Rope) or 'just' a degraded institution (Piton) by acknowledging the severe, coercive extraction experienced by its victims (Snare). The framework correctly identifies that the Piton (the fund itself) is a key component of the broader Tangled Rope (the fiscal policy regime)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "provincial_service_level_instability"
+    ]
+  }
+}

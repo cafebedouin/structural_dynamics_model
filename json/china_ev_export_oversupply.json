@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "china_ev_export_oversupply",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Chinese EV Export Oversupply and Market Distortion",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_state",
+      "chinese_ev_manufacturers",
+      "global_consumers_short_term"
+    ],
+    "victims": [
+      "western_automakers",
+      "western_auto_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Western Automaker",
+      "comment": "PERSPECTIVE 1: WESTERN AUTOMAKER (SNARE) — Faces subsidized competition that erodes market share and profitability. Exit is constrained by massive capital investments and national industrial importance. From this view, the constraint is pure extraction with no redeeming coordination function. d≈0.8, f(d)≈1.2, σ=1.2 → χ≈0.86."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Western Auto Worker",
+      "comment": "PERSPECTIVE 2: WESTERN AUTO WORKER (SNARE) — Directly threatened by factory closures and production cuts with limited options to exit the industry or region. Experiences the constraint as a direct threat to livelihood. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.85."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Chinese State",
+      "comment": "PERSPECTIVE 3: CHINESE STATE (ROPE) — The architect of the policy. Experiences the constraint as a pure coordination mechanism to achieve strategic goals: technological dominance, export growth, and geopolitical influence. Can modify the terms at will (arbitrage). d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Global Consumer",
+      "comment": "PERSPECTIVE 4: GLOBAL CONSUMER (ROPE) — In the short term, benefits from a greater supply of lower-cost EVs. Experiences this as a pure coordination benefit, increasing market choice and affordability. The extractive nature is invisible at the point of sale. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.006."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (delivering cheap EVs to a global market) and the severe, asymmetric extraction (undermining foreign industrial bases via state-directed capital). The high extraction and suppression, combined with a real coordination element, define it as a Tangled Rope. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.83."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsidy_vs_efficiency",
+      "question": "What portion of the Chinese EV price advantage is attributable to state subsidies versus genuine manufacturing efficiencies and economies of scale?",
+      "resolution_mechanism": "Forensic accounting of state-owned enterprises, supply chain cost analysis, and comparison with non-subsidized manufacturing costs.",
+      "impact": "If primarily efficiency, the constraint is closer to a Rope (legitimate competition). If primarily subsidies, it confirms the Snare/Tangled Rope classification (illegitimate extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing state subsidies from legitimate production efficiency"
+    },
+    {
+      "id": "consumer_welfare_vs_industrial_base",
+      "question": "Does the short-term consumer welfare gain from cheaper EVs outweigh the long-term strategic cost of losing domestic automotive industrial capacity?",
+      "resolution_mechanism": "Economic modeling of long-term impacts on GDP, employment, and national security versus short-term consumer surplus.",
+      "impact": "This is a core policy debate. Framing it as a consumer issue favors a Rope interpretation; framing it as a strategic/industrial issue favors a Snare interpretation.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Trade-off between short-term consumer benefit and long-term industrial health"
+    },
+    {
+      "id": "inevitable_market_shift",
+      "question": "Is this policy merely accelerating an inevitable market shift towards Chinese EV dominance that would have occurred anyway?",
+      "resolution_mechanism": "Counterfactual analysis of market trends absent Chinese industrial policy.",
+      "impact": "If the shift is inevitable, the policy appears more like a Scaffold (hastening a transition). If not, it is a coercive Snare creating an artificial market outcome.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the policy accelerates an inevitable or creates an artificial outcome"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 2015,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "China's state-led industrial policy has created massive overcapacity in its electric vehicle (EV) sector. This oversupply is increasingly exported to global markets at prices that foreign competitors, operating without equivalent state backing, cannot match. The constraint is the market distortion created by this policy, which simultaneously provides a coordination benefit (lower-cost EVs for consumers) while enacting a powerful extractive mechanism (capturing market share and hollowing out the industrial base of competitor nations).",
+    "key_agents": [
+      "Chinese State: Primary beneficiary (institutional/arbitrage) - Executes a long-term strategy for technological and industrial dominance.",
+      "Western Automakers: Primary victim (institutional/constrained) - Incumbent firms whose business models are directly threatened by subsidized competition.",
+      "Western Auto Workers: Secondary victim (organized/trapped) - Face job losses with few comparable alternatives.",
+      "Global Consumers: Incidental beneficiary (powerless/mobile) - Benefit from lower prices in the short term, unaware of the larger extractive dynamic."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The value being extracted is not just profit, but entire markets, technological leadership, and geopolitical leverage. This is a strategic, not merely commercial, form of extraction. Suppression (0.75): High. Western firms are suppressed by a competitor that does not operate under market logic. Tariffs and trade barriers are the only recourse, but these are slow, politically fraught, and often ineffective against the scale of the oversupply. Theater (0.20): Low. The policy's intent is relatively transparent and aligns with China's stated goals for industrial leadership. The conflict is over the legitimacy of the methods, not their existence.",
+    "perspectival_gap": "The gap is profound. For the Chinese state and the short-term global consumer, the system is a Rope, efficiently coordinating resources to produce a desired good. For Western automakers and their employees, it is a Snare, a coercive trap destroying their economic viability. The analytical observer, weighing both the real coordination benefit and the severe asymmetric extraction, must classify it as a Tangled Rope. This highlights how a single policy can be simultaneously functional and extractive, depending on one's structural position.",
+    "directionality_logic": "The directionality is derived directly from the structural relationships. The Chinese state, as the beneficiary with arbitrage power, has a d-value near zero, resulting in negative effective extraction (a net subsidy). Western automakers and workers, as victims with constrained or trapped exit, have d-values approaching 1.0, experiencing maximum effective extraction. Global consumers, as beneficiaries with mobile exit (they can choose any car), have a low d-value, experiencing the system as a coordination benefit. The model correctly captures these divergent experiences without needing overrides.",
+    "mandatrophy_analysis": "This case is a classic resolution of the mandatrophy. A simplistic analysis might label the policy as 'predatory dumping' (a Snare). Another might focus on 'consumer choice' (a Rope). Deferential Realism avoids this by requiring a multi-perspectival view. The Tangled Rope classification from the analytical perspective correctly identifies that BOTH are happening simultaneously: a genuine coordination function is being used to power a massive extractive engine. The policy's political resilience comes from its ability to present its Rope-like face to beneficiaries while its Snare-like face is felt by victims."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_supply_chain_resilience",
+      "western_deindustrialization",
+      "lithium_ion_battery_geopolitics"
+    ]
+  }
+}

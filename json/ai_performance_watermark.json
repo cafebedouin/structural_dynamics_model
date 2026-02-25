@@ -1,0 +1,166 @@
+{
+  "header": {
+    "constraint_id": "ai_performance_watermark",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandatory Watermarking for Synthetic Media",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creative_ip_holders",
+      "watermark_tech_providers",
+      "legacy_media_platforms"
+    ],
+    "victims": [
+      "open_source_developers",
+      "independent_creators",
+      "public_epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Open-Source Developer",
+      "comment": "PERSPECTIVE 1: OPEN-SOURCE DEVELOPER (SNARE) — Trapped by a mandate that imposes significant computational and compliance costs, stifling innovation. The constraint is pure extraction with no coordination benefit for this agent. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Creative IP Holder",
+      "comment": "PERSPECTIVE 2: CREATIVE IP HOLDER (ROPE) — Experiences the mandate as a pure coordination mechanism to protect likeness and performance rights, solving a collective action problem. Can arbitrage between tech providers and lobby for favorable terms. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (provenance) and the asymmetric extraction from developers to IP holders. The high suppression and active enforcement confirm the hybrid nature. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Government Regulator",
+      "comment": "PERSPECTIVE 4: GOVERNMENT REGULATOR (SCAFFOLD) — Views the mandate as a temporary measure to stabilize the information ecosystem until more robust technologies or norms emerge. The policy has an implicit sunset clause tied to technological maturity. d≈0.40, f(d)≈0.40, σ=1.0 → χ≈0.22."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Late-Stage Compliance Body",
+      "comment": "PERSPECTIVE 5: LATE-STAGE COMPLIANCE BODY (PITON) — After watermarks are routinely bypassed, the functional purpose atrophies, but the compliance bureaucracy persists due to institutional inertia. The high theater_ratio (0.75) reflects the large gap between the performative act of compliance and its actual effectiveness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Championing Politician (False Summit)",
+      "comment": "PERSPECTIVE 6: CHAMPIONING POLITICIAN (FALSE SUMMIT) — Frames the mandate as a permanent, unchangeable law necessary to protect society from the 'threat' of AI. This naturalizes a highly contingent and extractive policy. The engine will detect this as a false summit, as the base properties (ε=0.55, suppression=0.65) are incompatible with a Mountain classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_arms_race",
+      "question": "Will watermark robustness keep pace with adversarial removal techniques, or will it become trivially easy to bypass?",
+      "resolution_mechanism": "Longitudinal analysis of watermark detection success rates against state-of-the-art removal algorithms over time.",
+      "impact": "If watermarks are consistently broken, the constraint degrades into a pure Piton (compliance theater). If they remain robust, the Rope and Tangled Rope classifications are strengthened.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The ongoing arms race between watermark robustness and adversarial removal techniques."
+    },
+    {
+      "id": "market_consolidation_effect",
+      "question": "Will the compliance costs of the mandate lead to significant market consolidation around a few large AI labs and tech providers?",
+      "resolution_mechanism": "Comparative market share analysis of independent/open-source vs. large corporate AI model usage, pre- and post-mandate.",
+      "impact": "High consolidation would confirm the Snare perspective for a larger class of agents and increase the base extractiveness (ε). Low impact on market structure would support the Scaffold/Rope perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compliance costs will squeeze out smaller players and consolidate the market."
+    },
+    {
+      "id": "chilling_effects_on_speech",
+      "question": "To what extent will the mandate be used to de-anonymize or suppress legitimate anonymous speech, parody, or political dissent?",
+      "resolution_mechanism": "Case law analysis and tracking of enforcement actions, particularly those targeting non-commercial or political content.",
+      "impact": "Evidence of use against dissent would dramatically increase the suppression score and validate the Snare classification for anonymous speakers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The potential for the watermarking system to be used for surveillance and censorship."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A proposed regulatory and technical framework mandates a 'digital watermark' on all AI-generated performances, championed by creative guilds and high-profile actors to protect their intellectual property and likeness. While presented as a solution to misinformation and unauthorized use (a coordination function), the mandate imposes significant compliance costs on developers, potentially stifling innovation in the open-source community and consolidating the market around large, well-funded entities (an extraction function). The technical brittleness of watermarks, which can often be removed or bypassed, introduces a high degree of theater, where the appearance of control and safety may exceed the reality.",
+    "key_agents": [
+      "Creative IP Holders: Primary beneficiaries (institutional/arbitrage) who seek to protect their likeness and performance rights.",
+      "Open-Source Developers: Primary victims (powerless/trapped) who bear the compliance and computational costs.",
+      "Watermark Tech Providers: Secondary beneficiaries (powerful/arbitrage) who gain a captive market for their services.",
+      "Independent Creators: Secondary victims (moderate/constrained) who face new barriers to entry and competition.",
+      "The Public Epistemic Commons: An abstract victim (powerless/trapped) that suffers from a false sense of security if watermarks fail.",
+      "Government Regulators: Organized agents (organized/constrained) who see the policy as a temporary fix (scaffold)."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55) is high, reflecting the transfer of value from a broad base of developers (in the form of compliance costs and stifled innovation) to a narrow group of IP holders and technology providers. Suppression (0.65) is high because the legal mandate effectively outlaws non-compliant forms of AI development and distribution, creating a chokepoint. Theater Ratio (0.75) is very high, as research indicates current watermarking technologies are vulnerable to adversarial attacks and removal, meaning the system's claimed function (reliable provenance) is significantly undermined, leaving a performative compliance ritual.",
+    "perspectival_gap": "The gap is stark. IP holders see a necessary coordination tool (Rope) to manage a chaotic new technology. Open-source developers see a costly, coercive barrier to entry imposed by powerful incumbents (Snare). An analyst sees both functions operating simultaneously (Tangled Rope). A regulator may view it as a temporary, imperfect solution (Scaffold), while a future compliance body, overseeing a technically obsolete system, experiences it as pure institutional inertia (Piton). This diversity of classifications from a single set of metrics is a hallmark of a complex, contested socio-technical system.",
+    "directionality_logic": "Beneficiaries (IP holders, tech providers) have arbitrage and institutional power, leading to low or negative directionality (d) and a Rope classification. Victims (developers, creators) are trapped or constrained, leading to high directionality and a Snare classification. The analytical observer's default high-d position reveals the underlying extractive conflict, classifying it as a Tangled Rope. The regulator, as an organized but constrained actor, has a moderate d-value, resulting in the low effective extraction (χ) required for a Scaffold.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that a single policy can be a Rope, Snare, and Piton simultaneously, depending on the observer's index. Labeling it simply 'a regulation' is insufficient. The DR framework correctly identifies that for IP holders, it coordinates; for developers, it extracts; and for a future observer of its technical failure, it is merely a performative ritual. The high theater ratio is critical, as it directly enables the Piton classification, capturing the likely degradation of the system's function over time while its form persists."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  }
+}

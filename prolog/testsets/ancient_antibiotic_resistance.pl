@@ -1,14 +1,14 @@
 % ============================================================================
 % CONSTRAINT STORY: ancient_antibiotic_resistance
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_ancient_antibiotic_resistance, []).
 
-:- use_module(library(plunit)).
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
@@ -40,11 +40,10 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,22 +53,24 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ancient_antibiotic_resistance
  *   human_readable: The Inherent Evolutionary Potential for Antibiotic Resistance
- *   domain: biological/technological
+ *   domain: biological/evolutionary
  *
  * SUMMARY:
- *   The discovery of antibiotic resistance mechanisms in ancient bacteria,
- *   isolated from 5,000-year-old ice, reveals that resistance is not a modern
- *   phenomenon created by human antibiotic use. Instead, it is a deeply
- *   embedded, natural feature of microbial evolution. This constrains human
- *   efforts to combat bacterial infections, framing it not as a winnable war
- *   against a static enemy, but as a permanent negotiation with a dynamic,
- *   adaptive evolutionary system.
+ *   The discovery of antibiotic resistance genes in ancient, isolated
+ *   bacteria (e.g., from 5,000-year-old ice or pristine caves) demonstrates
+ *   that resistance is a natural and ancient feature of the microbial world,
+ *   not a modern phenomenon created by human antibiotic use. This constraint
+ *   represents the fundamental evolutionary potential for resistance to
+ *   emerge. It acts as a permanent boundary condition on medicine and
+ *   biotechnology. Human activity did not create this potential; it merely
+ *   created a massive selective pressure that made latent resistance
+ *   mechanisms clinically relevant on a global scale.
  *
- * KEY AGENTS (by structural relationship):
- *   - Patients with resistant infections: Primary target (powerless/trapped) — experience the constraint as a fatal, unchangeable natural limit.
- *   - Microbiome (bacteria): Primary beneficiary — the constraint is their evolved survival mechanism.
- *   - Medical & Pharmaceutical Researchers: Secondary beneficiary (institutional/arbitrage) — gain knowledge and develop strategies by understanding the constraint's structure.
- *   - Evolutionary Biologists: Analytical observer — see the full structure as a textbook case of natural selection.
+ * KEY AGENTS:
+ *   - Evolutionary Biologists: Analytical observers who see the constraint as a natural law.
+ *   - Pharmaceutical R&D Sector: Institutional actors who must engineer around this fixed obstacle.
+ *   - Public Health Authorities: Organized actors who must manage the consequences of this permanent environmental feature.
+ *   - Microbial Collective: The non-human agents for whom resistance genes are a beneficial survival tool (Rope).
  */
 
 /* ==========================================================================
@@ -77,78 +78,61 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ancient_antibiotic_resistance, 0.05). % The intrinsic biological cost imposed on humans.
-domain_priors:suppression_score(ancient_antibiotic_resistance, 0.0).   % Structural property (raw, unscaled). No coercion, just a lack of alternatives to evolution.
-domain_priors:theater_ratio(ancient_antibiotic_resistance, 0.05).      % Piton detection (>= 0.70). No performative aspect.
+domain_priors:base_extractiveness(ancient_antibiotic_resistance, 0.05).
+domain_priors:suppression_score(ancient_antibiotic_resistance, 0.02).
+domain_priors:theater_ratio(ancient_antibiotic_resistance, 0.0).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(ancient_antibiotic_resistance, extractiveness, 0.05).
-narrative_ontology:constraint_metric(ancient_antibiotic_resistance, suppression_requirement, 0.0).
-narrative_ontology:constraint_metric(ancient_antibiotic_resistance, theater_ratio, 0.05).
+narrative_ontology:constraint_metric(ancient_antibiotic_resistance, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(ancient_antibiotic_resistance, theater_ratio, 0.0).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. These values certify this constraint as a natural law.
-narrative_ontology:constraint_metric(ancient_antibiotic_resistance, accessibility_collapse, 0.95). % We cannot access a world where bacteria do not evolve.
-narrative_ontology:constraint_metric(ancient_antibiotic_resistance, resistance, 0.05).           % Opposition is biologically incoherent.
+narrative_ontology:constraint_metric(ancient_antibiotic_resistance, accessibility_collapse, 0.95).
+narrative_ontology:constraint_metric(ancient_antibiotic_resistance, resistance, 0.05).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(ancient_antibiotic_resistance, mountain).
+narrative_ontology:human_readable(ancient_antibiotic_resistance, "The Inherent Evolutionary Potential for Antibiotic Resistance").
+narrative_ontology:topic_domain(ancient_antibiotic_resistance, "biological/evolutionary").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint is a direct product of natural selection over geological timescales.
 domain_priors:emerges_naturally(ancient_antibiotic_resistance).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a Mountain constraint (natural law), beneficiary/victim declarations
-% are not required. The constraint's effects are universal and not the
-% result of an asymmetric social structure. The "beneficiary" is nature itself.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% This is a uniform-type constraint (Mountain-only). The classification is
-% invariant across all perspectives because its base extractiveness (ε) and
-% suppression are extremely low, meeting the Mountain criteria regardless of
-% the index. The χ value remains negligible for all observers.
-
-% PERSPECTIVE 1: THE PATIENT WITH A RESISTANT INFECTION
-% For this person, the constraint is an absolute, life-threatening physical limit.
-% It is an unchangeable fact of their biological reality.
-constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mountain,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE PHARMACEUTICAL RESEARCHER
-% For researchers, this is a fundamental law of nature they must understand and
-% design around. They cannot change it, only adapt to it. It's a mountain
-% to be mapped and navigated, not a rope to be pulled.
-constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE EVOLUTIONARY BIOLOGIST (ANALYTICAL OBSERVER)
-% The observer sees the constraint as a textbook example of natural selection,
-% a fixed and universal process in biology.
+% PERSPECTIVE 1: ANALYTICAL (MOUNTAIN) — The existence of ancient resistance genes is a fundamental, unchangeable feature of the biosphere. It's a natural law of evolution that cannot be altered, only understood and navigated. Base extraction is near zero; it is a background condition of reality.
 constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+% PERSPECTIVE 2: PHARMACEUTICAL R&D (MOUNTAIN) — From this perspective, the evolutionary potential for resistance is a fixed obstacle and a permanent cost of doing business. Any new antibiotic will eventually face resistance. This is an irreducible physical limit on the long-term efficacy of any single compound.
+constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: PUBLIC HEALTH (MOUNTAIN) — Public health bodies must treat the potential for resistance as a permanent environmental hazard, like volcanoes or earthquakes. It cannot be eliminated, only monitored and managed through stewardship programs. It is a fixed parameter of the system they operate in.
+constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mountain,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: MICROBIAL COLLECTIVE (ROPE) — For bacteria, resistance genes are a pure coordination tool for survival. In an environment with naturally-produced antibiotics from competing microbes, these genes are a public good, shared via horizontal gene transfer, enabling survival. There is no extraction, only a collective benefit.
+constraint_indexing:constraint_classification(ancient_antibiotic_resistance, rope,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(mobile),
+            spatial_scope(local))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -156,28 +140,31 @@ constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mou
 
 :- begin_tests(ancient_antibiotic_resistance_tests).
 
-test(uniform_type_invariance, [nondet]) :-
-    % Verify this is a uniform-type constraint (Mountain) from all key perspectives.
-    constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(ancient_antibiotic_resistance, mountain, context(agent_power(analytical), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(ancient_antibiotic_resistance, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ancient_antibiotic_resistance, TypeOther, context(agent_power(analytical), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(ancient_antibiotic_resistance, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ancient_antibiotic_resistance, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
 test(mountain_threshold_validation) :-
-    % Verify the constraint's metrics adhere to the Mountain classification thresholds.
-    narrative_ontology:constraint_metric(ancient_antibiotic_resistance, extractiveness, E),
-    narrative_ontology:constraint_metric(ancient_antibiotic_resistance, suppression_requirement, S),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(ancient_antibiotic_resistance, ExtMetricName, E),
+    domain_priors:suppression_score(ancient_antibiotic_resistance, S),
     E =< 0.25,
     S =< 0.05.
 
-test(natural_law_profile_validation) :-
-    % Verify it meets the stricter NL profile metrics for Mountain certification.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(ancient_antibiotic_resistance),
     narrative_ontology:constraint_metric(ancient_antibiotic_resistance, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(ancient_antibiotic_resistance, resistance, R),
-    domain_priors:emerges_naturally(ancient_antibiotic_resistance),
-    config:param(natural_law_collapse_min, MinAC),
-    config:param(natural_law_resistance_max, MaxR),
-    AC >= MinAC,
-    R =< MaxR.
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(ancient_antibiotic_resistance_tests).
 
@@ -187,96 +174,46 @@ test(natural_law_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Mountain because it represents a
- *   fundamental, non-human-authored aspect of the natural world: the
- *   evolutionary capacity of bacteria. The metrics reflect this:
- *   - Base Extractiveness (ε=0.05): Low, representing the intrinsic "cost"
- *     nature imposes on human health, not an extraction by a human agent.
- *   - Suppression (0.0): There is no coercion; alternatives are simply
- *     biologically non-existent.
- *   - The Natural Law (NL) profile metrics are key: high accessibility_collapse
- *     (0.95) and low resistance (0.05), combined with the `emerges_naturally`
- *     flag, certify this as a natural law within the system.
+ *   This constraint is classified as a Mountain because it represents a fundamental, unchangeable aspect of biology. Extractiveness (ε=0.05) and Suppression (0.02) are near zero because the *potential* for resistance does not, in itself, extract or coerce. It is a background fact. The Natural Law profile is strong: it `emerges_naturally` from evolution, `accessibility_collapse` (0.95) is high as evidence is found wherever ancient microbes are sampled, and `resistance` (0.05) is low as the phenomenon cannot be altered or wished away.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap; this is a uniform-type constraint. All
- *   agents, from the powerless patient to the institutional researcher,
- *   perceive the constraint as a Mountain. While their *experience* of it
- *   differs dramatically (a fatal limit vs. a research problem), its
- *   fundamental classification as an unchangeable, external reality is
- *   the same for all. This invariance is a hallmark of a true Mountain.
+ *   The primary classification is Mountain, which is stable across most human perspectives (analytical, institutional, organized). The key perspectival gap is with the microbial collective itself. For bacteria, a resistance gene is not a limit but a tool—a pure coordination mechanism (Rope) for surviving in competitive environments. This highlights how the same object (a gene) can be part of a Mountain-class constraint for one species (humans) and a Rope-class solution for another (bacteria).
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality is not a relevant concept for a Mountain constraint. Since
- *   base extraction (ε) is near zero, the effective extraction (χ) is also
- *   near zero for all observers, regardless of their directionality (d). The
- *   `constraint_beneficiary` is technically the entire domain of bacteria, an
- *   actor outside the human social system being modeled.
+ *   As a Mountain, the constraint is largely neutral (d≈0.5) for human observers; it is a symmetric fact of nature. The derived directionality for the microbial collective would be that of a beneficiary (low d), as the genes provide a survival advantage. This correctly yields the Rope classification from their perspective, where the effective extraction (χ) is very low or negative.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies a natural limit, preventing the
- *   error of treating a biological reality as a solvable policy problem (Snare
- *   or Tangled Rope). It clarifies that human policies (e.g., antibiotic
- *   stewardship) are Ropes or Scaffolds built *in response to* this Mountain;
- *   they do not change the Mountain itself. This distinction is critical for
- *   effective policy, focusing efforts on adaptation and mitigation rather
- *   than a futile "war" on evolution.
+ *   This constraint is a critical case for preventing mandatrophy. The modern crisis of clinical antibiotic resistance is a high-extraction Snare or Tangled Rope. However, conflating that downstream effect with its source—the ancient potential for resistance—is a category error. This story correctly identifies the source as a Mountain. This distinction is vital for policy: you cannot 'solve' or 'eliminate' a Mountain. Policy must focus on managing the selective pressures that turn a latent Mountain into an active Snare, for example through antibiotic stewardship. Labeling the ancient potential as a Snare would imply it is an artificial, coercive system that could be dismantled, which is biologically false.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_ancient_antibiotic_resistance,
-    'Is the observed evolutionary potential for resistance an absolute biological limit, or could a higher-order mechanism (e.g., phage therapy, CRISPR-based gene drive) effectively nullify it, turning the Mountain into a solvable problem (Tangled Rope)?',
-    'Long-term empirical results from advanced synthetic biology and virology research programmes over several decades.',
-    'If absolute, humanity is locked into a permanent adaptive race (mitigation). If nullifiable, it becomes a technological and economic problem of scaling the solution (elimination).',
-    confidence_without_resolution(high) % High confidence that it's a fundamental limit for now.
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(ancient_antibiotic_resistance, 0, 10).
+narrative_ontology:interval(ancient_antibiotic_resistance, 0, 5000).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required as base_extractiveness (0.05) is below the 0.46 threshold.
-% The "lifecycle" of this constraint is on an evolutionary, not human, timescale.
-% Placeholder values are included to demonstrate the format.
-narrative_ontology:measurement(aar_tr_t0, ancient_antibiotic_resistance, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(aar_tr_t5, ancient_antibiotic_resistance, theater_ratio, 5, 0.05).
-narrative_ontology:measurement(aar_tr_t10, ancient_antibiotic_resistance, theater_ratio, 10, 0.05).
-
-narrative_ontology:measurement(aar_ex_t0, ancient_antibiotic_resistance, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(aar_ex_t5, ancient_antibiotic_resistance, base_extractiveness, 5, 0.05).
-narrative_ontology:measurement(aar_ex_t10, ancient_antibiotic_resistance, base_extractiveness, 10, 0.05).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type is not applicable for a Mountain constraint, as it has
-% no coordination function.
+narrative_ontology:affects_constraint(ancient_antibiotic_resistance, clinical_antibiotic_resistance).
 
-% Network relationships: This natural law underpins and affects many human-made
-% constraints related to public health and medicine.
-narrative_ontology:affects_constraint(ancient_antibiotic_resistance, superbug_containment_policy).
-narrative_ontology:affects_constraint(ancient_antibiotic_resistance, pharmaceutical_rd_incentives).
+% DUAL FORMULATION NOTE:
+% This constraint, 'ancient_antibiotic_resistance' (ε≈0.05, Mountain), is the upstream natural law that enables the downstream constraint 'clinical_antibiotic_resistance' (ε>0.6, Tangled Rope/Snare). The former is the immutable potential; the latter is the socio-technical crisis created by human selective pressure. They are distinct constraints and must be modeled separately.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed. As a Mountain, directionality is not a significant
-% factor in its classification, and there are no complex institutional
-% dynamics that the standard derivation would misinterpret.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

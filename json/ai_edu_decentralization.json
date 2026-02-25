@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "ai_edu_decentralization",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The AI-Education Decoupling",
+    "topic_domain": "technological/educational/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "edtech_companies",
+      "microschool_operators",
+      "affluent_families"
+    ],
+    "victims": [
+      "public_education_systems",
+      "low_income_families",
+      "teacher_unions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Family",
+      "comment": "PERSPECTIVE 1: LOW-INCOME FAMILIES (SNARE) — Trapped in a declining public system as resources and high-performing peers exit. They bear the full cost of the opportunity gap with no viable exit. For them, this is pure extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The EdTech Innovator",
+      "comment": "PERSPECTIVE 2: EDTECH COMPANIES (ROPE) — Experience the constraint as a pure coordination mechanism. Their technology lowers the cost of delivering personalized education, creating new markets and opportunities. They are net beneficiaries. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (AI enabling new, efficient educational models) and the severe asymmetric extraction (hollowing out the public commons). This is the system's claimed type."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Public School Administrator",
+      "comment": "PERSPECTIVE 4: PUBLIC SCHOOL ADMINISTRATION (PITON) — The function of providing universal, high-quality education is degrading. The administration engages in performative AI adoption ('innovation theater') to appear current, but the core institutional purpose is atrophying due to student/funding flight. The high theater_ratio (0.75) meets the piton gate."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Education Choice Advocate",
+      "comment": "PERSPECTIVE 5: EDUCATION CHOICE ADVOCATES (SCAFFOLD) — View AI as a temporary lever to break the public school monopoly. They believe this disruption is a necessary, transitional phase (a scaffold) toward a more pluralistic and market-based educational ecosystem, with an ideological sunset on the disruption once the new system is established."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Market Libertarian",
+      "comment": "PERSPECTIVE 6: MARKET LIBERTARIAN (MOUNTAIN) — Frames the decoupling as the inevitable, natural law of creative destruction. The failure of a state monopoly when faced with superior technology is seen as an immutable economic principle, not a contingent outcome. The engine will identify this as a false summit, as the base properties (high ε, high suppression) contradict a mountain classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_pedagogical_impact",
+      "question": "Does AI-driven personalized education produce superior long-term cognitive and non-cognitive outcomes compared to traditional models, or does it optimize for short-term metrics at the expense of creativity and resilience?",
+      "resolution_mechanism": "Longitudinal studies comparing cohorts from AI-driven microschools and traditional public schools on measures of creativity, problem-solving, and career success.",
+      "impact": "If outcomes are superior, the coordination aspect is stronger (Rope/Tangled Rope). If outcomes are inferior or merely different, the extractive/performative aspects are stronger (Snare/Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term cognitive and social impact of AI-driven education models"
+    },
+    {
+      "id": "public_system_adaptation",
+      "question": "Are public education systems structurally capable of integrating AI to provide similar benefits at scale, or are they too constrained by bureaucracy and political economy to adapt effectively?",
+      "resolution_mechanism": "Case studies of large public districts attempting to deploy personalized AI learning platforms, measuring cost, implementation fidelity, and student outcomes versus private models.",
+      "impact": "If adaptable, the constraint is a temporary Scaffold. If not, it solidifies as a permanent Snare for those left behind.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Capacity of public education systems to adapt to AI-driven decentralization"
+    },
+    {
+      "id": "regulatory_capture_by_edtech",
+      "question": "To what extent will the emerging regulatory framework for AI in education be shaped by incumbent public interests versus the lobbying of a concentrated EdTech industry?",
+      "resolution_mechanism": "Analysis of lobbying expenditures, campaign contributions, and the legislative text of new education technology regulations.",
+      "impact": "If captured by EdTech, suppression and extractiveness will increase (Snare). If balanced, it may function as a regulatory Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Influence of EdTech industry on future education regulation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 2020,
+    "end": 2030
+  },
+  "commentary": {
+    "narrative_context": "The deployment of AI as a general-purpose technology in education lowers the coordination costs for creating and managing small, personalized learning environments. This fuels a partial decentralization, enabling the rise of microschools and other alternatives to traditional public schooling. While this creates new opportunities, it also establishes a structural tension: a dynamic, innovative private tier for those who can afford it, and a potentially hollowed-out public tier for those who cannot. The constraint is the two-tiered system that emerges from this technological shift.",
+    "key_agents": [
+      "EdTech Companies & Microschool Operators: Primary beneficiaries (institutional/arbitrage) - Profit from selling AI platforms and new educational models.",
+      "Affluent Families: Secondary beneficiaries (powerful/mobile) - Can exit the public system for perceived superior, personalized options.",
+      "Low-Income Families: Primary victims (powerless/trapped) - Left in a public system with diminishing resources and peer effects.",
+      "Public Education Systems: Institutional victims (institutional/constrained) - Face student flight, funding loss, and functional degradation, resorting to performative innovation (Piton).",
+      "Education Choice Advocates: Organized agents (organized/mobile) - See the disruption as a temporary tool (Scaffold) to achieve ideological goals."
+    ],
+    "logic_rationale": "Extractiveness (0.48): Represents the value siphoned from the public commons. This is not a direct tax, but the social and economic cost of a widening opportunity gap and the degradation of a universal public good. Suppression (0.62): High. Alternatives are suppressed for the victims by lack of resources, and for the legacy system by bureaucratic inertia. The momentum of the new paradigm makes resistance difficult. Theater Ratio (0.75): High. Legacy public systems engage in 'innovation theater' by adopting superficial AI initiatives to appear competitive, while the core function of universal quality education erodes. This high ratio is key to the Piton perspective.",
+    "perspectival_gap": "This constraint is a diagnostic exemplar. The same structural reality is perceived radically differently. For EdTech innovators, it's a Rope solving a coordination problem. For trapped families, it's a Snare extracting their children's future opportunities. For a public school administrator, it's a Piton—a degraded institution they must maintain performatively. For a market-oriented reformer, it's a temporary Scaffold to a better future. For a libertarian ideologue, it's an inevitable Mountain of economic law. The analytical observer sees the whole picture: a Tangled Rope, with both genuine coordination and severe, asymmetric extraction.",
+    "directionality_logic": "Beneficiaries (EdTech, affluent families) have arbitrage/mobile exit options, leading to low 'd' values and a Rope classification. Victims (low-income families) are trapped, leading to a high 'd' value and a Snare classification. Institutional actors caught in the middle (public schools) are constrained, leading to intermediate 'd' values and a Piton classification driven by high theater. The analytical view balances these factors to arrive at Tangled Rope.",
+    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that a single constraint can legitimately occupy multiple classifications depending on the indexical position of the observer. The question is not 'Is it a Rope or a Snare?' but 'From whose perspective?' The framework's ability to hold all six classifications in superposition, derived from a single set of base properties, prevents the mislabeling of a complex system as either purely beneficial coordination or purely malicious extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_good_funding_crisis",
+      "credentialing_and_accreditation_standards"
+    ]
+  }
+}

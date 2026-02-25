@@ -1,0 +1,81 @@
+{
+  "header": {
+    "constraint_id": "cap_theorem",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.02,
+    "suppression": 0.01,
+    "theater_ratio": 0.0,
+    "claimed_type": "mountain",
+    "human_readable": "CAP Theorem (Brewer's Theorem)",
+    "topic_domain": "distributed_systems/computer_science",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The System Architect",
+      "comment": "PERSPECTIVE 1: THE SYSTEM ARCHITECT (MOUNTAIN) — The theorem is a fundamental, unchangeable law of the design space for distributed systems. It cannot be exited, only analyzed and designed around. This is the canonical analytical view."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Startup Founder",
+      "comment": "PERSPECTIVE 2: THE STARTUP FOUNDER (MOUNTAIN) — A resource-constrained actor is completely trapped by the theorem's logic. They cannot build a system that violates it, regardless of their goals or resources. It is an immutable environmental constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cloud Provider",
+      "comment": "PERSPECTIVE 3: THE CLOUD PROVIDER (MOUNTAIN) — An institutional actor with vast resources still cannot violate the theorem. Their 'exit' is arbitrage: offering different services that make different trade-offs (e.g., a CP database vs. an AP one), but the underlying constraint remains fixed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 4: THE END USER (MOUNTAIN) — The user experiences the consequences of the trade-offs (e.g., stale data vs. an error message), but the underlying constraint is a fixed limit. Their ability to switch services doesn't change the theorem's validity."
+    }
+  ],
+  "interval": {
+    "start": 2000,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The CAP theorem, or Brewer's theorem, is a fundamental principle in distributed computing. It states that any distributed data store can only provide two of three guarantees simultaneously: Consistency (every read receives the most recent write or an error), Availability (every request receives a non-error response, without guarantee that it contains the most recent write), and Partition Tolerance (the system continues to operate despite an arbitrary number of messages being dropped or delayed by the network between nodes). Since network partitions are a given in real-world distributed systems, the choice is effectively between Consistency and Availability (CP vs. AP). This is not a policy choice but a logical impossibility, making it a classic example of a Mountain constraint.",
+    "key_agents": [
+      "System Architects: Analytical agents who use the theorem as a foundational design principle.",
+      "Startup Founders: Powerless agents (relative to the theorem) who must build their systems within its constraints.",
+      "Cloud Providers: Institutional agents who offer services that embody different CAP trade-offs, but cannot escape the theorem itself.",
+      "End Users: Moderate agents who experience the downstream effects of the design choices mandated by the theorem."
+    ],
+    "logic_rationale": "This constraint is classified as a Mountain because it represents a fundamental, logically derived limit. Extractiveness (ε=0.02) and Suppression (0.01) are near zero because the theorem does not extract value or coerce behavior; it merely describes the possible state space. It emerges naturally (true) from the properties of distributed networks. Resistance (0.05) is minimal as the theorem is formally proven. Accessibility Collapse (0.95) is high; once the terms are understood, the trade-off becomes self-evident and is a cornerstone of distributed systems education. There is no theater (0.0).",
+    "perspectival_gap": "There is no perspectival gap. This is a key diagnostic feature of a true Mountain constraint. All observers, regardless of their power, exit options, or time horizon, converge on the same classification. The theorem is an invariant feature of the environment for all actors.",
+    "directionality_logic": "The constraint is symmetric and non-extractive, so there are no beneficiaries or victims. The directionality `d` for any agent will be derived from canonical fallbacks based on their power level. However, with a base extractiveness (ε) of 0.02, the effective extraction (χ) is negligible (≈0) for all perspectives, reinforcing the Mountain classification across the board.",
+    "mandatrophy_analysis": "The CAP theorem serves as a perfect baseline for identifying true Mountain constraints. It prevents the mandatrophy of misclassifying a fundamental limit as a contingent policy choice or an extractive system. Any attempt to frame the CAP trade-off as a 'snare' imposed by cloud providers, for example, would be immediately falsified by the structural metrics. It is a non-negotiable feature of reality, not an artificial rule."
+  },
+  "network": {
+    "affects_constraints": [
+      "eventual_consistency",
+      "acid_compliance"
+    ],
+    "dual_formulation_note": "The CAP theorem is an upstream logical constraint that necessitates the creation of downstream coordination patterns like 'eventual consistency' to manage the trade-offs it imposes."
+  }
+}

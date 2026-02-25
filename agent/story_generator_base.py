@@ -19,7 +19,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PROMPT_PATH = REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md"
 SCHEMA_PATH = REPO_ROOT / "python" / "constraint_story_schema.json"
-EXAMPLE_PATH = REPO_ROOT / "json" / "antifragility.json"
+EXAMPLE_PATH = REPO_ROOT / "json" / "verification_bottleneck.json"
 JSON_DIR = REPO_ROOT / "json"
 TESTSETS_DIR = REPO_ROOT / "prolog" / "testsets"
 PROLOG_DIR = REPO_ROOT / "prolog"
@@ -250,7 +250,7 @@ def append_to_log(log_path, entry):
 # ---------------------------------------------------------------------------
 def generate_story(source_description, processed_log_path, log_key,
                    context_text="", model=None, max_retries=2,
-                   overwrite=False):
+                   overwrite=False, constraint_id=None):
     """Generate one constraint story end-to-end.
 
     1. Build prompt
@@ -313,6 +313,13 @@ def generate_story(source_description, processed_log_path, log_key,
                 print(f"    - {err}")
             retry_errors = errors
             continue
+
+        # Patch constraint_id if caller specified one and model diverged
+        if constraint_id:
+            actual_id = story_dict.get("header", {}).get("constraint_id", "")
+            if actual_id != constraint_id:
+                story_dict["header"]["constraint_id"] = constraint_id
+                print(f"  Patched constraint_id: {actual_id} -> {constraint_id}")
 
         # Validation passed — save
         json_path, pl_path = save_story(story_dict, overwrite=overwrite)

@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "algorithmic_epistemic_capture",
+    "version": "1.0",
+    "generated_date": "2023-10-27",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Feedback Loop Blindfold",
+    "topic_domain": "technological/social/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "advertisers"
+    ],
+    "victims": [
+      "individual_users",
+      "societal_epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "The user is trapped by network effects and high friction-to-exit. They experience the system as pure extraction of their attention and data, at the cost of a narrowing, distorted worldview. The coordination function is invisible, subsumed by the overwhelming sense of being manipulated. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "From the platform's perspective, the algorithm is a pure coordination mechanism solving the problem of information overload to maximize user satisfaction (proxied by engagement). The extraction is seen as a fair exchange for the service. Negative externalities are off-balance-sheet. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analyst sees both the genuine coordination function (solving content discovery) and the highly extractive, asymmetric consequences (epistemic capture for profit). This is the canonical view that recognizes the hybrid nature of the constraint. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regulator",
+      "comment": "A regulatory body (e.g., EU) sees the problem as a market failure correctable by policy scaffolds like algorithmic transparency laws or data portability mandates. These interventions are temporary supports intended to create a healthier market, with a sunset clause implied by the eventual establishment of new norms. d≈0.40, f(d)≈0.40, σ=1.1 → χ≈0.29."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "harm_intentionality",
+      "question": "Is the resulting epistemic harm an intentional, optimized-for outcome, or an unavoidable negative externality of optimizing for engagement?",
+      "resolution_mechanism": "Internal documentation from platform operators; A/B testing data correlating model changes with polarization metrics.",
+      "impact": "If intentional, the constraint is a pure Snare even from the analytical view. If an externality, the Tangled Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between intentional harm and negative externality"
+    },
+    {
+      "id": "personalization_manipulation_threshold",
+      "question": "At what point does effective content personalization become coercive manipulation?",
+      "resolution_mechanism": "Cognitive science research on choice architecture; legal and ethical standard-setting for digital environments.",
+      "impact": "Defines the boundary between the Rope (coordination) and Snare (extraction) components of the system. A low threshold for manipulation increases the perceived extractiveness.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The threshold between personalization and manipulation"
+    },
+    {
+      "id": "alternative_viability",
+      "question": "Can non-extractive, decentralized alternatives achieve the network effects necessary to provide a viable exit option for trapped users?",
+      "resolution_mechanism": "Market analysis of federated social media adoption rates (e.g., Fediverse) and user retention metrics.",
+      "impact": "If alternatives become viable, the 'trapped' exit option for users becomes 'mobile', fundamentally lowering the system's suppression score and effective extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of non-extractive alternatives to break network effects"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 2008,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the process by which an individual's information diet is shaped by recommendation algorithms optimizing for engagement. While these systems solve a genuine coordination problem (finding relevant content in an ocean of data), their optimization function is not aligned with epistemic health or accuracy. The result is a feedback loop where users are shown progressively more extreme or engaging content, creating a personalized reality bubble that is highly resistant to outside information. This 'blindfold' is not imposed by overt censorship but by the subtle, continuous curation of reality.",
+    "key_agents": [
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) - Profit from maximizing user engagement via ad revenue and data collection.",
+      "Individual Users: Primary victim (powerless/trapped) - Their attention is extracted and their worldview is distorted. Trapped by network effects.",
+      "Societal Epistemic Commons: Secondary victim (powerless/trapped) - Degraded by the spread of misinformation and polarization.",
+      "Regulators: Organized actor (organized/constrained) - Attempt to mitigate harms through policy scaffolds."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65) is high, representing the immense value of captured attention and data, and the high cost of a distorted worldview to the user. Suppression (0.75) is high because while alternatives exist, the friction to switch (loss of social graph, network effects) is immense, effectively trapping users. The theater ratio (0.50) reflects the narrative that these platforms are neutral tools for 'connection' or 'information discovery', which masks the underlying, purely mechanical goal of engagement maximization.",
+    "perspectival_gap": "The gap is profound. The platform operator experiences a highly efficient coordination machine (Rope) that generates profit. The end-user experiences a coercive trap (Snare) that manipulates their reality for someone else's benefit. The regulator sees a correctable market failure that can be managed with temporary rules (Scaffold). The analytical observer, able to see all parts of the system, recognizes it as a Tangled Rope, where a genuine coordination function has been weaponized for asymmetric extraction.",
+    "directionality_logic": "Beneficiaries (platforms) with arbitrage exit options have a very low directionality (d), resulting in a negative effective extraction (χ) - they see it as a Rope. Victims (users) who are trapped have a very high d, leading to a high χ that pushes the classification to Snare. Organized actors (regulators) with constrained exit options have a moderate d, allowing them to perceive the system as a problem to be solved (Scaffold), rather than an inescapable trap.",
+    "mandatrophy_analysis": "This case is a primary exhibit for resolving mandatrophy. To label the system as only a Snare ignores the powerful, genuine coordination function that makes it so attractive and effective. To label it as only a Rope ignores the vast, demonstrable epistemic and social harm it causes. The Tangled Rope classification, from the analytical perspective, correctly holds both truths in tension, identifying the structure as a hybrid system where coordination is the delivery mechanism for extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "political_polarization",
+      "misinformation_spread"
+    ]
+  }
+}

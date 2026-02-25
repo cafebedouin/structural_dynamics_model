@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: banach_fixed_point_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-16
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_banach_fixed_point_theorem, []).
@@ -39,10 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -58,19 +56,19 @@
  *   domain: technological
  *
  * SUMMARY:
- *   The Banach Fixed Point Theorem provides a mathematical guarantee for the
- *   existence and uniqueness of a fixed point for certain contraction mappings
- *   in complete metric spaces. This mathematical "constraint" is a feature of
- *   the logical landscape that enables reliable iterative solutions in various
- *   computational algorithms and physical systems. Its existence and validity
- *   are unchangeable facts that all agents must operate within, making it a
- *   canonical example of a Mountain constraint.
+ *   The Banach Fixed Point Theorem is a fundamental result in mathematical
+ *   analysis. It guarantees the existence and uniqueness of a fixed point for
+ *   any contraction mapping defined on a non-empty complete metric space. In
+ *   practice, this theorem provides a powerful constraint on the behavior of
+ *   iterative processes, ensuring that they will converge to a single, stable
+ *   solution. This makes it a cornerstone for proofs in differential
+ *   equations, numerical analysis, and algorithms used in machine learning
+ *   and economics.
  *
- * KEY AGENTS (by structural relationship):
- *   - Algorithm Designers: Users of the theorem (powerful/arbitrage) — they leverage the theorem's guarantees to build convergent algorithms.
- *   - Students of Mathematics: Learners of the theorem (powerless/trapped) — they must accept the theorem's logic to pass their courses.
- *   - Applied Mathematicians: Practitioners (institutional/mobile) — they apply the theorem to solve real-world problems.
- *   - Analytical Observer: Sees the full logical structure of the theorem.
+ * KEY AGENTS:
+ *   - Applied Mathematicians/Engineers: Practitioners who use the theorem as a tool to guarantee the stability and convergence of algorithms.
+ *   - Theoretical Mathematicians/Logicians: Analytical observers who study the theorem as a structural feature of a logical system.
+ *   - Students of Mathematics: Powerless agents who must learn and accept the theorem as a foundational piece of knowledge.
  */
 
 /* ==========================================================================
@@ -78,85 +76,53 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(banach_fixed_point_theorem, 0.10). % Low extractiveness; it's a tool, not a barrier.
-domain_priors:suppression_score(banach_fixed_point_theorem, 0.05).   % It doesn't suppress alternatives; it describes a specific condition.
-domain_priors:theater_ratio(banach_fixed_point_theorem, 0.01).       % Minimal theatrical application.
+domain_priors:base_extractiveness(banach_fixed_point_theorem, 0.01).
+domain_priors:suppression_score(banach_fixed_point_theorem, 0.01).
+domain_priors:theater_ratio(banach_fixed_point_theorem, 0.0).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(banach_fixed_point_theorem, extractiveness, 0.10).
-narrative_ontology:constraint_metric(banach_fixed_point_theorem, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(banach_fixed_point_theorem, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(banach_fixed_point_theorem, extractiveness, 0.01).
+narrative_ontology:constraint_metric(banach_fixed_point_theorem, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(banach_fixed_point_theorem, theater_ratio, 0.0).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. These are required for a mountain classification.
-narrative_ontology:constraint_metric(banach_fixed_point_theorem, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(banach_fixed_point_theorem, resistance, 0.05).
+narrative_ontology:constraint_metric(banach_fixed_point_theorem, accessibility_collapse, 0.98).
+narrative_ontology:constraint_metric(banach_fixed_point_theorem, resistance, 0.02).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(banach_fixed_point_theorem, mountain).
 narrative_ontology:human_readable(banach_fixed_point_theorem, "Banach Fixed Point Theorem").
 narrative_ontology:topic_domain(banach_fixed_point_theorem, "technological").
 
-% --- Binary flags ---
-% No flags needed for a Mountain constraint.
-
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint is a mathematical truth, emerging naturally from axioms.
 domain_priors:emerges_naturally(banach_fixed_point_theorem).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a Mountain constraint (natural law), the theorem
-% does not have beneficiaries or victims in the structural sense of asymmetric
-% extraction. It is an objective feature of the logical environment. Declaring
-% beneficiaries/victims would incorrectly imply a social or political structure.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% This is a uniform-type constraint (mountain-only). The classification is
-% invariant across all perspectives, demonstrating its status as a natural law.
-
-% PERSPECTIVE 1: THE LEARNER (POWERLESS)
-% A student learning the theorem has no choice but to accept its validity.
-constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE PRACTITIONER (INSTITUTIONAL)
-% An institution (e.g., a research lab) applying the theorem.
-constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 3: THE DESIGNER (POWERFUL)
-% An algorithm designer who can choose to use this theorem or another method.
-constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain,
-    context(agent_power(powerful),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% The default analytical context.
+% PERSPECTIVE 1: ANALYTICAL (MOUNTAIN) — The theorem is a logical consequence of the axioms of complete metric spaces. It is an unchangeable feature of this mathematical landscape. Its truth value is not subject to negotiation or power dynamics.
 constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: PRACTITIONER (MOUNTAIN) — For an engineer using an iterative algorithm, the theorem provides an immutable guarantee of convergence if its conditions are met. They cannot 'exit' this reality; they are constrained by it and leverage it for reliable design.
+constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: STUDENT (MOUNTAIN) — A student learning real analysis is trapped by the theorem's logic. They must accept its proof and apply its consequences to solve problems. There is no alternative to its truth within the given axiomatic system.
+constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
             spatial_scope(universal))).
 
 /* ==========================================================================
@@ -165,24 +131,26 @@ constraint_indexing:constraint_classification(banach_fixed_point_theorem, mounta
 
 :- begin_tests(banach_fixed_point_theorem_tests).
 
-test(perspectival_consistency) :-
-    % Verify all perspectives classify as Mountain.
-    constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain, context(agent_power(powerless),_,_,_)),
-    constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain, context(agent_power(institutional),_,_,_)),
-    constraint_indexing:constraint_classification(banach_fixed_point_theorem, mountain, context(agent_power(analytical),_,_,_)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(banach_fixed_point_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(banach_fixed_point_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    domain_priors:base_extractiveness(banach_fixed_point_theorem, E),
-    E =< 0.25,
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(banach_fixed_point_theorem, ExtMetricName, E),
     domain_priors:suppression_score(banach_fixed_point_theorem, S),
+    E =< 0.25,
     S =< 0.05.
 
-test(nl_profile_valid) :-
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(banach_fixed_point_theorem),
     narrative_ontology:constraint_metric(banach_fixed_point_theorem, accessibility_collapse, AC),
-    AC >= 0.85,
     narrative_ontology:constraint_metric(banach_fixed_point_theorem, resistance, R),
-    R =< 0.15,
-    domain_priors:emerges_naturally(banach_fixed_point_theorem).
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(banach_fixed_point_theorem_tests).
 
@@ -192,91 +160,47 @@ test(nl_profile_valid) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Banach Fixed Point Theorem is modeled as a Mountain because it is a
- *   fundamental mathematical theorem. Its truth is not contingent on social
- *   agreement or enforcement. Its base extractiveness (0.10) is low because
- *   it primarily enables the creation of solutions rather than extracting
- *   value. The suppression score (0.05) is minimal because the theorem does
- *   not prevent the use of other methods; it simply defines the conditions
- *   for guaranteed convergence. The Natural Law profile metrics are met:
- *   accessibility_collapse is high (0.95) as its logical validity is not
- *   contestable within standard mathematics, and resistance is low (0.05)
- *   as one cannot meaningfully "resist" a mathematical proof.
+ *   This constraint is classified as a Mountain because it is a proven mathematical theorem. Extractiveness (ε=0.01) and Suppression (0.01) are near zero because the theorem does not extract resources or coercively suppress alternatives; it simply describes a logical reality. If its preconditions (completeness, contraction mapping) are not met, it doesn't apply, but it doesn't prevent other theorems from being used. The Natural Law profile is met: it 'emerges_naturally' (true) from axioms, has extremely high 'accessibility_collapse' (0.98) as its proof is logically inescapable once understood, and has virtually no 'resistance' (0.02) as one cannot argue with a valid proof.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. All agents, regardless of their power,
- *   time horizon, or exit options, perceive the theorem as a Mountain. This
- *   invariance is the hallmark of a natural law constraint. A student, a
- *   research lab, and a senior engineer all operate under the same logical
- *   reality defined by the theorem.
+ *   There is no perspectival gap. The theorem's classification as a Mountain is invariant across all possible observers, from the student ('powerless'/'trapped') to the professional user ('moderate'/'constrained') to the foundational researcher ('analytical'/'analytical'). This invariance is the hallmark of a true Mountain constraint, whose properties are derived from logical or physical necessity rather than social consensus or power dynamics.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality is not applicable here. The theorem does not have
- *   beneficiaries and victims in a structural sense. It is a universal,
- *   symmetric constraint. While some agents may benefit more from its
- *   application, this is a consequence of their actions, not an asymmetric
- *   extraction imposed by the constraint itself. Therefore, beneficiary and
- *   victim declarations are omitted.
+ *   As a Mountain with near-zero extractiveness, the concepts of beneficiary and victim do not apply. The theorem is a public good—a piece of knowledge available to all. Directionality (d) and effective extraction (χ) are therefore negligible and irrelevant to its classification. The system correctly identifies it as a non-extractive, structural feature of its domain.
  *
  * MANDATROPHY ANALYSIS:
- *   The Mountain classification correctly identifies the theorem as an
- *   objective feature of the logical landscape, preventing its mislabeling
- *   as a Rope (which would imply it's a social coordination device) or a
- *   Snare (which would imply it extracts value asymmetrically).
+ *   This constraint serves as a canonical example of a Mountain, providing a clear baseline for the system. It prevents mandatrophy by demonstrating what a non-negotiable, non-extractive, logically necessary constraint looks like. Any attempt to classify a social or political arrangement with this signature would be immediately flagged as a 'false summit' or an attempt to naturalize a contingent reality. Its unambiguous classification helps calibrate the system to detect such misrepresentations.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_banach,
-    'Could a fundamentally different, consistent system of mathematics emerge that invalidates this theorem?',
-    'Discovery of deep contradictions in ZFC axioms or the development of a new, widely adopted foundational system.',
-    'If true, much of contemporary numerical analysis and algorithm design would need revision; if false, the theorem remains a bedrock principle.',
-    confidence_without_resolution(low)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(banach_fixed_point_theorem, 0, 10).
+narrative_ontology:interval(banach_fixed_point_theorem, 1922, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% As a mathematical theorem, its properties are static. The measurements are
-% flat to reflect this temporal invariance. Data is included for completeness,
-% though not strictly required for low-extraction constraints.
-%
-% Theater ratio over time:
-narrative_ontology:measurement(bft_tr_t0, banach_fixed_point_theorem, theater_ratio, 0, 0.01).
-narrative_ontology:measurement(bft_tr_t5, banach_fixed_point_theorem, theater_ratio, 5, 0.01).
-narrative_ontology:measurement(bft_tr_t10, banach_fixed_point_theorem, theater_ratio, 10, 0.01).
-
-% Extraction over time:
-narrative_ontology:measurement(bft_ex_t0, banach_fixed_point_theorem, base_extractiveness, 0, 0.10).
-narrative_ontology:measurement(bft_ex_t5, banach_fixed_point_theorem, base_extractiveness, 5, 0.10).
-narrative_ontology:measurement(bft_ex_t10, banach_fixed_point_theorem, base_extractiveness, 10, 0.10).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% A mathematical theorem serves as a standard of information about what is
-% logically possible, hence its classification here.
-narrative_ontology:coordination_type(banach_fixed_point_theorem, information_standard).
+narrative_ontology:affects_constraint(banach_fixed_point_theorem, picard_lindelof_theorem).
+narrative_ontology:affects_constraint(banach_fixed_point_theorem, iterative_solver_convergence).
+
+% DUAL FORMULATION NOTE:
+% This theorem is a foundational mathematical object. It is an upstream dependency for numerous other constraints related to the guaranteed convergence of algorithms and the existence of solutions to differential equations.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed as this is a Mountain constraint with no defined
-% beneficiaries or victims, making directionality derivation irrelevant.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

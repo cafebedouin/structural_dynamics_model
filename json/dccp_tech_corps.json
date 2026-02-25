@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "dccp_tech_corps",
+    "version": "1.0",
+    "generated_date": "2024-07-27",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DCCP Tech Corps for AI Dominance",
+    "topic_domain": "geopolitical/technological",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "us_government",
+      "us_tech_corporations"
+    ],
+    "victims": [
+      "host_nations",
+      "local_tech_ecosystems",
+      "competitor_nations_tech_initiatives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Host Nation Government",
+      "comment": "PERSPECTIVE 1: HOST NATION (SNARE) \u2014 For a developing country, this program offers much-needed technical assistance but at the cost of long-term technological dependency. Choosing the US over a rival like China is not a free choice but a selection between two powerful patrons. The 'help' functions as bait, locking the nation into a US-centric ecosystem where standards, data, and future procurement opportunities are extracted. d\u22480.7 (organized victim with constrained exit) \u03c3=1.0 -> \u03c7\u22480.65. This meets the snare threshold."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The US State Department",
+      "comment": "PERSPECTIVE 2: US GOVERNMENT (ROPE) \u2014 The program is framed as a pure coordination effort to build a 'secure and reliable' global digital ecosystem, promoting stability and countering authoritarian digital influence. From this viewpoint, the geopolitical gains are a positive externality of providing a public good. As a primary beneficiary with arbitrage exit (they choose who gets aid), d is very low. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 -> \u03c7\u2248-0.09. The negative extraction implies a net subsidy from this perspective."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Participating US Tech Corporation",
+      "comment": "PERSPECTIVE 3: US TECH CORP (SCAFFOLD) \u2014 For participating companies, the Tech Corps is a temporary government-funded support structure to enter and shape new markets. It lowers the cost of entry and establishes their technologies as the local standard. The program is not permanent (has_sunset_clause: true), serving as a scaffold for future commercial dominance. It provides a coordination function (market-making) they benefit from."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 This perspective recognizes both the genuine coordination function (providing real technical expertise) and the high, asymmetric extraction (creating geopolitical and economic dependency). The program is a hybrid instrument of statecraft, simultaneously building and capturing. The high \u03b5 (0.62) and suppression (0.75) confirm the extractive nature, while the beneficiary/victim structure confirms its coordination/extraction duality. This is the ground truth classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capacity_building_vs_dependency",
+      "question": "Does the program genuinely build self-sustaining local tech ecosystems, or does it create a permanent dependency on US vendors, standards, and expertise?",
+      "resolution_mechanism": "Long-term tracking of procurement contracts, local tech startup success rates, and the ability of host nations to modify or replace the US-provided infrastructure in 10-15 years.",
+      "impact": "If it builds genuine capacity, the extractiveness (\u03b5) is lower, pushing the classification towards Rope. If it creates dependency, the current Snare/Tangled Rope classifications are correct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the program fosters local independence or foreign dependency"
+    },
+    {
+      "id": "geopolitical_stability_vs_hegemony",
+      "question": "Is the primary outcome a more stable and secure global internet, or the reinforcement of US technological hegemony at the expense of a multipolar digital world?",
+      "resolution_mechanism": "Analysis of how standards bodies evolve, whether non-US companies can compete in host nations post-intervention, and whether the program leads to digital balkanization.",
+      "impact": "Resolution towards 'stability' would support the Rope perspective. Resolution towards 'hegemony' confirms the Snare/Tangled Rope classification and highlights the high suppression score.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The program's ultimate impact on global digital governance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2029,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2034,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2029,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2034,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 2024,
+    "end": 2034
+  },
+  "commentary": {
+    "narrative_context": "The US State Department's 'Digital Connectivity and Cybersecurity Partnership' (DCCP) Tech Corps is a program that deploys American tech experts to foreign countries. The stated aim is to help these nations build secure digital infrastructure and develop national AI strategies. However, this initiative is also an explicit instrument of geopolitical competition, designed to counter China's 'Digital Silk Road' and entrench US-aligned technological standards globally. This creates a structural conflict between genuine technical assistance and the strategic goal of creating long-term dependency.",
+    "key_agents": [
+      "US Government: Primary beneficiary (institutional/arbitrage) - Gains geopolitical influence and sets global standards.",
+      "US Tech Corporations: Secondary beneficiary (organized/arbitrage) - Gain privileged access to new markets.",
+      "Host Nations: Primary victim (organized/constrained) - Receive short-term aid at the cost of long-term technological sovereignty.",
+      "Local Tech Ecosystems: Secondary victim (organized/constrained) - Risk being crowded out by US standards and companies.",
+      "Competitor Nations (e.g., China): Target of suppression (institutional/constrained) - Their own influence initiatives are directly challenged."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.62) is high, representing the value of future technological and political lock-in extracted from host nations. Suppression (0.75) is also high, as the program's explicit goal is to limit the choice of non-US (primarily Chinese) technology partners, creating a constrained environment for developing countries. The theater ratio (0.20) is currently low, as the program involves tangible actions (deploying experts), but is expected to rise as it matures. The program is a quintessential Tangled Rope because it possesses both a real coordination function (infrastructure aid) and a powerful, asymmetric extractive function (dependency creation).",
+    "perspectival_gap": "The gap is a classic illustration of geopolitical power dynamics. The US State Department, the architect, perceives a pure coordination mechanism (Rope) for global good. The host nation, the recipient, experiences a coercive trap that limits future choices (Snare). US corporations see a temporary government subsidy to open markets (Scaffold). Only the analytical observer can integrate these views to see the true hybrid structure: a Tangled Rope where 'aid' and 'control' are two sides of the same coin.",
+    "directionality_logic": "The beneficiaries (US Govt, US Tech Corps) have arbitrage exit options, driving their directionality 'd' towards 0 and producing Rope/Scaffold classifications with low or negative effective extraction (\u03c7). The primary victims (Host Nations) are structurally constrained, driving their 'd' value higher and resulting in a Snare classification with high \u03c7. This demonstrates how the same constraint can be simultaneously a subsidy for one party and a severe extraction from another.",
+    "mandatrophy_analysis": "This case prevents the misclassification of geopolitical aid as pure altruism (Rope). By quantifying the high suppression and base extractiveness, the framework correctly identifies the coercive and extractive elements that are obscured by the 'partnership' narrative. It demonstrates that even programs with genuine coordination benefits can function as Snares from the perspective of the less powerful actor, revealing the structure of neo-colonial technological influence."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "china_digital_silk_road"
+    ]
+  }
+}

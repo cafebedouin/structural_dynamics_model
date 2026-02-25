@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "boe_base_rate_policy_2024",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.8,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bank of England's 5.25% Base Interest Rate Policy (2024)",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "savers",
+      "commercial_banks",
+      "fixed_income_investors"
+    ],
+    "victims": [
+      "mortgage_holders",
+      "small_business_borrowers",
+      "the_uk_treasury"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Mortgage Holder",
+      "comment": "PERSPECTIVE 1: MORTGAGE HOLDER (SNARE) — Faces sharply increased monthly payments with no ability to exit their mortgage or influence the rate. The policy acts as a direct, coercive extraction of disposable income. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Saver",
+      "comment": "PERSPECTIVE 2: SAVER (ROPE) — Benefits from higher returns on cash deposits. Perceives the policy as a functional coordination mechanism that correctly prices capital and rewards saving. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.005. Negative effective extraction indicates a net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Bank of England MPC",
+      "comment": "PERSPECTIVE 3: BANK OF ENGLAND (ROPE) — The institution setting the rate views it as its primary tool for macroeconomic coordination, fulfilling its mandate to control inflation. The extractive effects are seen as necessary, temporary side-effects of a legitimate policy. As the primary beneficiary of its own mandate, d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The UK Government (Treasury)",
+      "comment": "PERSPECTIVE 4: UK GOVERNMENT (TANGLED ROPE) — Experiences the policy as a hybrid. It benefits from the inflation control (a coordination goal) but is also a primary victim via massively increased debt servicing costs, constraining its fiscal options. d≈0.70, f(d)≈1.05, σ=1.0 → χ≈0.58."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (inflation targeting) and the severe, asymmetric extraction from borrowers to savers. The high suppression (state monopoly) and active enforcement confirm the hybrid nature. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76. While χ is high enough for a Snare, the undeniable coordination function makes Tangled Rope the correct analytical classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "soft_landing_ambiguity",
+      "question": "Will the high interest rates successfully curb inflation without causing a severe, wealth-destroying recession (a 'soft landing')?",
+      "resolution_mechanism": "Future macroeconomic data on GDP, unemployment, and inflation over the 2024-2026 period.",
+      "impact": "If a soft landing is achieved, the policy's coordination function is validated, making it appear more like a Rope/Scaffold. If a deep recession occurs, the extractive damage dominates, making it appear more like a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the policy achieves a soft landing or triggers a deep recession"
+    },
+    {
+      "id": "transmission_lag_uncertainty",
+      "question": "What is the true lag time for monetary policy transmission, and has the MPC over-tightened by not waiting for previous hikes to take full effect?",
+      "resolution_mechanism": "Retrospective econometric analysis once sufficient time has passed (c. 2026-2027).",
+      "impact": "If the lag is longer than the MPC's model assumes, the policy is excessively extractive (Snare). If the lag is shorter, the policy is a more responsive and legitimate coordination tool (Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Uncertainty in the lag time of monetary policy's effect on the economy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 2021,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The Bank of England's policy of maintaining a 5.25% base interest rate is a textbook example of a macroeconomic constraint with a dual function. Its stated purpose is coordination: to reduce inflation towards a 2% target by increasing the cost of borrowing, thereby cooling economic demand. However, this mechanism operates through significant, asymmetric extraction, transferring wealth from borrowers (households with mortgages, businesses with loans) to savers and lenders. The constraint is enforced by the Bank's monopoly power over the UK's monetary system, leaving domestic actors with no alternative.",
+    "key_agents": [
+      "Bank of England (MPC): Institutional enforcer (institutional/arbitrage) — views the policy as a necessary coordination tool.",
+      "Mortgage Holders & Business Borrowers: Primary victims (powerless/trapped) — bear the direct cost of higher interest payments.",
+      "Savers & Lenders: Primary beneficiaries (moderate/mobile) — receive higher returns on capital.",
+      "The UK Government: A constrained institutional actor (institutional/constrained) — benefits from inflation control but is harmed by higher debt servicing costs.",
+      "Analytical Observer: Sees the full hybrid structure (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55): High. The policy directly transfers a significant percentage of national income from one group (borrowers) to another (savers). Suppression (0.80): Very high. The Bank of England has a state-mandated monopoly on setting the base rate; there are no alternative systems for domestic economic actors. Theater Ratio (0.30): Low-to-moderate. While the announcements are ritualized, the policy's effects are direct and highly functional, not performative.",
+    "perspectival_gap": "The gap is stark. For a mortgage holder, the policy is a Snare, extracting hundreds or thousands of pounds monthly with no recourse. For a saver, it is a Rope, a sensible rule that rewards prudence. For the Bank of England, it is also a Rope, the correct tool for their mandate. The analytical view must hold both realities at once: the coordination function is real, but it is achieved via a mechanism of pure, coercive extraction. This is the definition of a Tangled Rope.",
+    "directionality_logic": "Directionality is derived directly from structural roles. Borrowers are victims with trapped exit, yielding a high 'd' value and a Snare classification. Savers are beneficiaries with mobile exit, yielding a low 'd' and a Rope classification. The Bank of England, as the institutional agent executing its own mandate, is a beneficiary with arbitrage exit, also seeing a Rope. The analytical observer's default 'd' value, combined with the high base extractiveness, correctly identifies the Tangled Rope structure.",
+    "mandatrophy_analysis": "This constraint is a classic case for resolving mandatrophy. A naive analysis might label the policy a 'Snare' based on its painful effects, ignoring the legitimate macroeconomic coordination goal. Conversely, accepting the official 'Rope' narrative ignores the massive, asymmetric wealth transfer. The Tangled Rope classification is essential as it correctly identifies that the constraint has *both* a genuine coordination function *and* a severe extractive component. It prevents the misclassification of necessary but painful policy as pure predation, and prevents the misclassification of extractive mechanisms as pure public good."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_housing_market_affordability",
+      "small_business_solvency_rate"
+    ]
+  }
+}

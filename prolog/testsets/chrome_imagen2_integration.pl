@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: chrome_imagen2_integration
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-24
+% Generated: 2024-05-21
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_chrome_imagen2_integration, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,18 +57,20 @@
  *   domain: technological/economic
  *
  * SUMMARY:
- *   Google is embedding its Imagen 2 AI model directly into the Chrome browser,
- *   offering users "free" image generation from text prompts. This service
- *   functions as a powerful data harvesting mechanism, collecting user prompts
- *   and interactions to train and refine Google's AI models. By bundling this
- *   as a default, convenient feature within the dominant web browser, it also
- *   suppresses the market for competing, independent AI art generation tools.
+ *   Google's integration of its Imagen 2 AI model into the Chrome browser
+ *   offers 'free' image generation to hundreds of millions of users. This
+ *   constraint leverages dominance in one market (web browsers) to establish
+ *   a foothold and suppress competition in an emerging market (generative
+ *   AI). While providing genuine utility to users, the arrangement
+ *   facilitates massive data extraction for model training and solidifies
+ *   ecosystem lock-in, creating a powerful, anti-competitive moat.
  *
- * KEY AGENTS (by structural relationship):
- *   - Google (Alphabet Inc.): Primary beneficiary (institutional/arbitrage) — receives vast training data, reinforces ecosystem lock-in.
- *   - Chrome End Users: Primary target (powerless/trapped) — receive a "free" tool in exchange for their creative labor (prompts) and interaction data.
- *   - Independent AI Tool Creators: Secondary target (organized/constrained) — face a suppressed market due to a powerful, free, default competitor.
- *   - Analytical Observer: Analytical observer — sees the dual function of user utility and systemic extraction.
+ * KEY AGENTS:
+ *   - Google (Alphabet Inc.): Primary beneficiary (institutional/arbitrage) — gains training data, user lock-in, and competitive advantage.
+ *   - Independent AI Developers: Primary victim (moderate/trapped) — unable to compete with a 'free' service integrated into the default web infrastructure.
+ *   - Casual End Users: Secondary victim (powerless/mobile) — receive immediate utility but are the source of extracted data and are locked into Google's ecosystem.
+ *   - Professional Creatives: Mixed role (organized/constrained) — gain a new tool but face devaluation of their skills and increased competition.
+ *   - Analytical Observer: Sees the full structure of utility provision coupled with market suppression.
  */
 
 /* ==========================================================================
@@ -77,92 +78,67 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% High extraction: The value of the training data and market consolidation is the primary driver for the feature's existence.
 domain_priors:base_extractiveness(chrome_imagen2_integration, 0.65).
-% High suppression: A "good enough" tool bundled with the world's dominant browser makes it very difficult for paid alternatives to compete.
-domain_priors:suppression_score(chrome_imagen2_integration, 0.75).   % Structural property (raw, unscaled).
-% Low theater: The tool is functional and delivers the promised utility.
-domain_priors:theater_ratio(chrome_imagen2_integration, 0.15).       % Piton detection (>= 0.70)
+domain_priors:suppression_score(chrome_imagen2_integration, 0.75).
+domain_priors:theater_ratio(chrome_imagen2_integration, 0.3).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(chrome_imagen2_integration, extractiveness, 0.65).
 narrative_ontology:constraint_metric(chrome_imagen2_integration, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(chrome_imagen2_integration, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(chrome_imagen2_integration, theater_ratio, 0.3).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% This is a human-constructed system, not a natural law.
-
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(chrome_imagen2_integration, snare).
-narrative_ontology:topic_domain(chrome_imagen2_integration, "technological/economic").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(chrome_imagen2_integration, tangled_rope).
 narrative_ontology:human_readable(chrome_imagen2_integration, "Integration of \"free\" AI image generation (Imagen 2) into Google Chrome").
+narrative_ontology:topic_domain(chrome_imagen2_integration, "technological/economic").
 
-% --- Binary flags ---
-% Required for Tangled Rope: The system requires Google's server infrastructure and browser integration to function and enforce its market position.
 domain_priors:requires_active_enforcement(chrome_imagen2_integration).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(chrome_imagen2_integration, google_ai_division).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(chrome_imagen2_integration, chrome_end_users).
-narrative_ontology:constraint_victim(chrome_imagen2_integration, independent_ai_tool_creators).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(chrome_imagen2_integration, google_alphabet_inc).
+narrative_ontology:constraint_victim(chrome_imagen2_integration, independent_ai_developers).
+narrative_ontology:constraint_victim(chrome_imagen2_integration, open_source_ai_community).
+narrative_ontology:constraint_victim(chrome_imagen2_integration, professional_creatives).
+narrative_ontology:constraint_victim(chrome_imagen2_integration, end_users_long_term).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE END USER (SNARE)
-% Victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42.
-% χ = 0.65 * 1.42 * 1.0 (national scope) ≈ 0.92. This is > 0.66, making it a Snare.
-% The user is trapped by convenience in an ecosystem that extracts data and limits future choice.
+% PERSPECTIVE 1: INDEPENDENT AI DEVELOPER (SNARE) — Cannot compete with a 'free' service integrated into the world's dominant browser. Their market is suppressed, and their exit option is to abandon the space. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11. This is pure extraction of market viability.
 constraint_indexing:constraint_classification(chrome_imagen2_integration, snare,
-    context(agent_power(powerless),
+    context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
-
-% PERSPECTIVE 2: GOOGLE (ROPE)
-% Beneficiary membership + arbitrage exit -> d ≈ 0.05 -> f(d) ≈ -0.12.
-% χ = 0.65 * -0.12 * 1.0 ≈ -0.08. This is < 0.35, making it a Rope.
-% For Google, this is a pure coordination mechanism to enhance their platform and gather data.
-constraint_indexing:constraint_classification(chrome_imagen2_integration, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Analytical observer -> d ≈ 0.72 -> f(d) ≈ 1.15.
-% χ = 0.65 * 1.15 * 1.2 (global scope) ≈ 0.89. This is between 0.40 and 0.90.
-% The system has a genuine coordination function (provides a tool) but also high
-% asymmetric extraction (data harvesting, market suppression). This is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(chrome_imagen2_integration, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: INDEPENDENT AI TOOL CREATORS (SNARE)
-% Victim membership + constrained exit -> d ≈ 0.9 (estimated).
-% They are constrained by the market dominance of Chrome.
-% χ = 0.65 * f(0.9) * 1.0 ≈ 0.65 * 1.35 * 1.0 ≈ 0.88. This is a clear Snare.
+% PERSPECTIVE 2: GOOGLE (ROPE) — Experiences the constraint as pure coordination: providing a valuable, integrated service to users, enhancing the Chrome ecosystem, and gathering data to improve its products. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. The negative effective extraction signifies a net subsidy/benefit.
+constraint_indexing:constraint_classification(chrome_imagen2_integration, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: CASUAL END USER (SNARE) — Perceives a Rope (a free, convenient tool), but is structurally the target of massive data and ecosystem-lock-in extraction. Their exit option (switching browsers) has high friction, and they are a victim in the long term. The engine correctly classifies their structural position as a Snare despite their positive perception. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.90.
 constraint_indexing:constraint_classification(chrome_imagen2_integration, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: PROFESSIONAL CREATIVE (TANGLED ROPE) — The tool offers genuine utility for brainstorming and workflow (coordination), but simultaneously devalues their skills and represents a long-term threat to their livelihood (extraction). They are constrained to adopt these tools to remain competitive. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.49.
+constraint_indexing:constraint_classification(chrome_imagen2_integration, tangled_rope,
     context(agent_power(organized),
             time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(national))).
 
+% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the dual nature of the constraint: a genuine utility for users (coordination function) inextricably linked to a powerful market-suppressing, data-gathering mechanism (asymmetric extraction). This matches the claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90.
+constraint_indexing:constraint_classification(chrome_imagen2_integration, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -170,21 +146,14 @@ constraint_indexing:constraint_classification(chrome_imagen2_integration, snare,
 
 :- begin_tests(chrome_imagen2_integration_tests).
 
-test(perspectival_gap_user_vs_beneficiary) :-
-    % Verify the gap between the end user (Snare) and the beneficiary (Rope).
-    constraint_indexing:constraint_classification(chrome_imagen2_integration, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(chrome_imagen2_integration, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(chrome_imagen2_integration, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(chrome_imagen2_integration, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    % The analytical perspective must see the combined nature of the constraint.
-    constraint_indexing:constraint_classification(chrome_imagen2_integration, snare, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_gate_requirements_met) :-
-    % A Tangled Rope must have a beneficiary, a victim, and require active enforcement.
-    narrative_ontology:constraint_beneficiary(chrome_imagen2_integration, _),
-    narrative_ontology:constraint_victim(chrome_imagen2_integration, _),
-    domain_priors:requires_active_enforcement(chrome_imagen2_integration).
-
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(chrome_imagen2_integration, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(chrome_imagen2_integration_tests).
 
@@ -194,80 +163,85 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (0.65): Set high because the primary strategic value for Google is not the user-facing service but the massive influx of high-quality, prompted training data and the reinforcement of its ecosystem dominance. The user provides creative labor for free.
- *   - Suppression (0.75): Set high. Bundling a "free" and powerful tool into the default browser for a majority of internet users creates an enormous barrier to entry and sustainability for competing, often paid, services. It suppresses the market by absorbing demand at zero cost to the user.
+ *   Extractiveness (0.65) is high, reflecting the immense value of training data, user behavior insights, and market control, rather than direct financial fees. Suppression (0.75) is very high due to the use of browser market dominance as a distribution channel, creating an extreme barrier for competitors who must convince users to seek out alternatives. Theater Ratio (0.30) is moderate; the tool is functional, but the 'free' framing is a performance that masks the strategic, extractive purpose.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. From Google's institutional perspective (beneficiary), this is a Rope: a coordination tool that improves their products and user engagement, with negative effective extraction (χ < 0). For the end-user and competing developers (victims), it's a Snare. They are trapped in a system where their data is the product and their market alternatives are systematically eroded. The user gets short-term utility, but at the cost of long-term market health and data sovereignty.
+ *   The core gap is between Google's view of this as a Rope (a value-add service), the independent developer's view of it as a Snare (a market-killing tactic), and the end user's perception of it as a Rope (a free gift). The DR system reveals that the user, despite their positive perception, occupies the structural position of a victim in a Snare, as their data and attention are extracted to the benefit of the provider and detriment of the market.
  *
  * DIRECTIONALITY LOGIC:
- *   The direction of value flow is clear: creative prompts and behavioral data flow from `chrome_end_users` to `google_ai_division`. Market pressure flows from Google to `independent_ai_tool_creators`. This asymmetric flow justifies the victim/beneficiary declarations. The engine correctly derives high directionality (`d`) for victims (leading to high `χ`) and low directionality for the beneficiary (leading to negative `χ`).
+ *   Beneficiary status and arbitrage exit for Google result in a low 'd' value and a Rope classification. Victim status and trapped/constrained exit options for developers and creatives result in high 'd' values, leading to Snare and Tangled Rope classifications. The end user, as a victim with mobile exit, also derives a high 'd', demonstrating that even with a theoretical ability to exit, their structural position is that of a target.
  *
  * MANDATROPHY ANALYSIS:
- *   This framework correctly identifies the dual nature of the constraint, classifying it analytically as a Tangled Rope. A simplistic analysis might label it a Rope ("it's a useful free tool!") or a Snare ("it's just data harvesting!"). Both are incomplete. The Tangled Rope classification acknowledges that it *is* a useful tool (the coordination function) but that this function is inextricably linked to a powerful, asymmetric extraction mechanism. This prevents the mislabeling of platform-scale extraction as simple coordination.
+ *   This case resolves the mandatrophy by demonstrating how a single feature can be simultaneously a genuine utility (coordination) and a predatory, anti-competitive mechanism (extraction). The analytical classification of Tangled Rope correctly identifies this hybrid nature, preventing the system from being mislabeled as either a pure public good (Google's claim) or pure predation (a competitor's claim). The truth is the synthesis of both, which the indexical classification reveals.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_chrome_imagen2,
-    'Does bundling free AI tools into dominant platforms lead to market centralization and stifle innovation, or does it accelerate public adoption and create new opportunities?',
-    'Analysis of market share for independent AI tools, venture capital funding in the sector, and diversity of model architectures over a 5-10 year period post-integration.',
-    'If it centralizes, this constraint is a highly effective Snare for the market. If it accelerates adoption, the suppression score may be overstated, and secondary benefits could emerge.',
+    antitrust_intervention_risk,
+    'Will regulators classify this integration as an illegal tying arrangement, forcing Google to unbundle the service from the browser?',
+    'Antitrust lawsuit filings and rulings in major jurisdictions (US, EU).',
+    'If unbundled, suppression drops significantly, and the constraint may re-classify as a Rope or low-grade Tangled Rope. If allowed, it solidifies the Snare/Tangled Rope classification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(antitrust_intervention_risk, empirical, 'The risk of regulatory intervention forcing unbundling of the AI tool from the browser.').
+
+omega_variable(
+    long_term_monetization_strategy,
+    'Is the ''free'' offering a permanent feature or a temporary market-capture strategy to be followed by monetization (ads, subscriptions, API fees)?',
+    'Future changes to Google''s terms of service, product announcements, or the introduction of a pricing model.',
+    'If monetization is introduced, the nature of extraction becomes explicit and financial, potentially increasing ε. If it remains free, extraction remains focused on data and market control.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(long_term_monetization_strategy, empirical, 'Uncertainty over whether the ''free'' model is permanent or a precursor to monetization.').
+
+omega_variable(
+    data_valuation_ambiguity,
+    'What is the true economic value of the user prompt and interaction data being extracted relative to the compute cost of the service provided?',
+    'Internal Google data analysis (inaccessible) or sophisticated economic modeling of training data value.',
+    'If the value of extracted data is far greater than the service cost, it confirms a highly extractive Snare. If the values are comparable, it supports a more balanced Tangled Rope classification.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(data_valuation_ambiguity, conceptual, 'The ambiguity in placing a precise economic value on the extracted user data.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(chrome_imagen2_integration, 0, 10).
+narrative_ontology:interval(chrome_imagen2_integration, 2024, 2029).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This feature is new (T=0). We model a plausible increase in extraction
-% efficiency as Google integrates the data pipeline more deeply and improves
-% the model, making the data exchange more valuable over time.
-% Required for high-extraction constraints (base_extractiveness > 0.46).
+% Theater ratio over time
+narrative_ontology:measurement(chro_tr_t0, chrome_imagen2_integration, theater_ratio, 0, 0.5).
+narrative_ontology:measurement(chro_tr_t2, chrome_imagen2_integration, theater_ratio, 2, 0.4).
+narrative_ontology:measurement(chro_tr_t5, chrome_imagen2_integration, theater_ratio, 5, 0.3).
 
-% Theater ratio over time (expected to remain low and functional)
-narrative_ontology:measurement(chrome_imagen2_integration_tr_t0, chrome_imagen2_integration, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(chrome_imagen2_integration_tr_t5, chrome_imagen2_integration, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(chrome_imagen2_integration_tr_t10, chrome_imagen2_integration, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(chro_be_t0, chrome_imagen2_integration, base_extractiveness, 0, 0.4).
+narrative_ontology:measurement(chro_be_t2, chrome_imagen2_integration, base_extractiveness, 2, 0.55).
+narrative_ontology:measurement(chro_be_t5, chrome_imagen2_integration, base_extractiveness, 5, 0.65).
 
-% Extraction over time (expected to increase in efficiency)
-narrative_ontology:measurement(chrome_imagen2_integration_ex_t0, chrome_imagen2_integration, base_extractiveness, 0, 0.60).
-narrative_ontology:measurement(chrome_imagen2_integration_ex_t5, chrome_imagen2_integration, base_extractiveness, 5, 0.62).
-narrative_ontology:measurement(chrome_imagen2_integration_ex_t10, chrome_imagen2_integration, base_extractiveness, 10, 0.65).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: It allocates Google's vast computational resources to
-% generate images on behalf of users.
 narrative_ontology:coordination_type(chrome_imagen2_integration, resource_allocation).
-
-% Network relationships: This platform-level integration directly impacts
-% the market for digital art and the ecosystem of open-source models.
-narrative_ontology:affects_constraint(chrome_imagen2_integration, digital_art_market).
-narrative_ontology:affects_constraint(chrome_imagen2_integration, open_source_ai_development).
-
+narrative_ontology:affects_constraint(chrome_imagen2_integration, open_source_ai_viability).
+narrative_ontology:affects_constraint(chrome_imagen2_integration, digital_art_market_stability).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for this constraint. The standard derivation chain,
-% based on the declared beneficiary/victim roles and their exit options
-% (trapped, constrained, arbitrage), accurately models the power dynamics
-% and direction of value flow in this scenario.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

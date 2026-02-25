@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "asshole_filter_2015",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Asshole Filter",
+    "topic_domain": "psychological/social",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "transgressive_individuals",
+      "system_maintainers_short_term"
+    ],
+    "victims": [
+      "cooperative_individuals",
+      "organizational_culture",
+      "system_maintainers_long_term"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Cooperative Individual",
+      "comment": "PERSPECTIVE 1: COOPERATIVE INDIVIDUAL (SNARE) — Follows the stated rules and is penalized for it. They are trapped in the system (e.g., by employment) and bear the full cost of the filter's extraction of opportunity and morale. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.68. This high effective extraction crosses the Snare threshold (≥0.66)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Transgressive Individual",
+      "comment": "PERSPECTIVE 2: TRANSGRESSIVE INDIVIDUAL (ROPE) — Exploits the gap between stated and enforced rules for personal gain. From their perspective, the filter is a simple, effective coordination mechanism to get what they want. As a beneficiary with arbitrage exit, their directionality is low. d≈0.10, f(d)≈-0.07, σ=0.8 → χ≈-0.03. Negative extraction signifies a net subsidy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The System Maintainer (Long View)",
+      "comment": "PERSPECTIVE 3: SYSTEM MAINTAINER (PITON) — The manager or leader who created the filter through conflict avoidance. Over time, they see the stated rules have become pure theater. The original function (coordination) has atrophied, but the rules persist inertially. The high theater_ratio (0.75) satisfies the Piton gate (≥0.70)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The New Hire with Options",
+      "comment": "PERSPECTIVE 4: NEW HIRE (SCAFFOLD) — A newcomer who observes the toxic system but has low switching costs. For them, the filter is a temporary problem. Their personal 'sunset clause' is their notice period. They will either see the system reformed or they will leave. The constraint is a temporary support for transgressors that they do not have to tolerate long-term."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The default analytical view. It recognizes both the claimed coordination function (the stated rules) and the severe, asymmetric extraction enabled by non-enforcement. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.83. This falls squarely in the Tangled Rope classification range (0.40 ≤ χ ≤ 0.90)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intent_vs_outcome",
+      "question": "Is the filter an unintentional outcome of conflict avoidance, or a deliberate (if unstated) strategy to attract and reward aggressive 'go-getters'?",
+      "resolution_mechanism": "Behavioral analysis of system maintainers; comparison of their stated values vs. their enforcement actions.",
+      "impact": "If intentional, the system is a more malicious Snare from the maintainer's perspective. If unintentional, it's a Piton or Tangled Rope born of incompetence. The structure for the victim remains a Snare regardless.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between unintentional incompetence and deliberate strategy in the filter's creation."
+    },
+    {
+      "id": "repulsion_vs_attraction",
+      "question": "Is the filter's primary mechanism repelling cooperative people, or is it actively attracting transgressive ones?",
+      "resolution_mechanism": "Longitudinal study of cohort composition in organizations with known filters; entry/exit interviews focusing on norm perception.",
+      "impact": "If repulsion is primary, interventions should focus on supporting and rewarding cooperative actors. If attraction is primary, interventions must focus on robustly enforcing boundaries to make the environment unattractive to transgressors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Determining if the filter works by pushing good actors out or pulling bad actors in."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "The 'Asshole Filter' is a systemic social or organizational constraint where stated rules and boundaries are inconsistently enforced. This dynamic unintentionally repels cooperative individuals who respect the stated rules, while attracting or retaining transgressive individuals who learn that the rules can be ignored for personal gain. The core mechanism is the gap between the 'theater' of the official rules and the reality of what behavior is actually rewarded. Over time, this degrades the social environment, penalizes good actors, and can lead the system's maintainer to falsely conclude that most people are inherently transgressive.",
+    "key_agents": [
+      "Cooperative Individuals: Primary victims (powerless/trapped) — they follow the stated rules and are systematically disadvantaged.",
+      "Transgressive Individuals: Primary beneficiaries (powerful/arbitrage) — they ignore the stated rules and are rewarded with access, resources, or faster outcomes.",
+      "System Maintainers: Institutional actors (institutional/constrained) — they create the filter, often unintentionally, through conflict avoidance. They are short-term beneficiaries (avoiding conflict) but long-term victims (presiding over a toxic culture).",
+      "Organizational Culture: Abstract victim (powerless/trapped) — the collective trust and morale of the group, which is degraded by the filter."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.60): High. The filter allows transgressive individuals to extract significant value (opportunity, attention, resources) at the direct expense of cooperative ones. Suppression (0.65): High. For those trapped in the system (e.g., an employee), the options are to conform to the toxic norm, be exploited, or exit at high personal cost. This lack of viable alternatives is a form of coercion. Theater Ratio (0.75): Very High. The gap between the stated rules (e.g., 'please use the proper channels') and the enforced reality (rewarding those who bypass channels) is the central feature of the constraint. This high ratio enables the Piton classification from the long-term observer's perspective.",
+    "perspectival_gap": "The filter is a powerful example of perspectival divergence. For the cooperative victim, it's a Snare they cannot escape. For the transgressive beneficiary, it's a simple and effective Rope for getting ahead. For the system maintainer who sees the long-term decay, the original rules have become a functionless, inertial Piton. For a new hire with the ability to leave, the filter is a temporary Scaffold supporting a bad system that they can choose to exit. The analytical observer sees the combination of a coordination claim and an extractive reality, classifying it as a Tangled Rope.",
+    "directionality_logic": "The classification for each agent is derived directly from their structural position. The 'Cooperative Individual' is a victim with trapped exit options, leading to a high directionality (d≈0.95) and a Snare classification. The 'Transgressive Individual' is a beneficiary with arbitrage exit options, yielding a low, negative directionality (d≈0.10) and a Rope classification. The analytical observer's canonical directionality (d≈0.72) correctly identifies the underlying Tangled Rope structure.",
+    "mandatrophy_analysis": "This constraint resolves a common mandatrophy where a system is misidentified based on its stated purpose. The 'Asshole Filter' is often created by someone who believes they are establishing a Rope (a fair, clear set of rules for coordination). However, the structural analysis of beneficiaries, victims, and enforcement reveals its true nature as a Tangled Rope or Snare. Deferential Realism prevents this mislabeling by focusing on the observed structural reality of extraction and suppression, rather than the creator's intent or the system's performative claims."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  }
+}

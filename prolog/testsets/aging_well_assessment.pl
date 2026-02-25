@@ -1,16 +1,30 @@
 % ============================================================================
-% CONSTRAINT STORY: aging_longevity_tests
+% CONSTRAINT STORY: aging_well_assessment
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-29
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_aging_longevity_tests, []).
+:- module(constraint_aging_well_assessment, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -25,10 +39,9 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,85 +51,89 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: aging_longevity_tests
- * human_readable: The Commercialized Functional Aging Assessment System
- * domain: health/economic
- * * SUMMARY:
- * A suite of physical proxy tests (e.g., Sitting-Rising, Walking Speed, Grip Strength)
- * originally used for research, now commercialized into a system of assessment,
- * intervention, and billing. While claiming to coordinate healthy aging, the system
- * extracts significant value from patients and creates dependency. The underlying
- * biological realities are Mountain-like, but the system built upon them is a
- * constructed constraint.
- * * KEY AGENTS:
- * - The Aging Patient: Subject (Powerless), faces high costs and pressure.
- * - Healthcare Providers/Industry: Beneficiary (Institutional), profits from the system.
- * - Public Health Analyst: Auditor (Analytical), observes both coordination and extraction.
+ *   constraint_id: aging_well_assessment
+ *   human_readable: The Commercialized Functional Aging Assessment System
+ *   domain: health/economic
+ *
+ * SUMMARY:
+ *   This constraint describes the evolution of functional aging tests (e.g.,
+ *   grip strength, walking speed) from academic research tools into a
+ *   commercialized system. This system packages assessment, intervention
+ *   recommendations, and billing into a product marketed to individuals,
+ *   clinics, and insurers. While it offers a standardized language for
+ *   discussing and tracking functional health (a coordination function), its
+ *   commercial nature introduces significant extraction through service fees
+ *   and the use of data for insurance risk stratification.
+ *
+ * KEY AGENTS:
+ *   - Elderly Patients: Primary targets (powerless/trapped) — pay for services and bear the risk of negative insurance consequences.
+ *   - Assessment Companies & Specialized Clinics: Primary beneficiaries (institutional/arbitrage) — profit from the sale of assessments and interventions.
+ *   - Health Insurers: Secondary beneficiaries (institutional/constrained) — gain data to price risk more accurately, but operate within a regulated environment.
+ *   - General Practitioners: Secondary victims (moderate/constrained) — pressured to adopt the system, which can supersede their holistic clinical judgment.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-% Extraction is high (0.52), representing the financial costs, psychological
-% burden, and over-medicalization imposed by the commercial system.
-domain_priors:base_extractiveness(aging_longevity_tests, 0.52).
-domain_priors:suppression_score(aging_longevity_tests, 0.45).
-domain_priors:theater_ratio(aging_longevity_tests, 0.35).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(aging_well_assessment, 0.55).
+domain_priors:suppression_score(aging_well_assessment, 0.65).
+domain_priors:theater_ratio(aging_well_assessment, 0.4).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(aging_longevity_tests, extractiveness, 0.52).
-narrative_ontology:constraint_metric(aging_longevity_tests, suppression_requirement, 0.45).
-narrative_ontology:constraint_metric(aging_longevity_tests, theater_ratio, 0.35).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(aging_well_assessment, extractiveness, 0.55).
+narrative_ontology:constraint_metric(aging_well_assessment, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(aging_well_assessment, theater_ratio, 0.4).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% The system claims to be a pure coordination mechanism for health.
-narrative_ontology:constraint_claim(aging_longevity_tests, tangled_rope).
-narrative_ontology:human_readable(aging_longevity_tests, "The Commercialized Functional Aging Assessment System").
-narrative_ontology:topic_domain(aging_longevity_tests, "health/economic").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(aging_well_assessment, tangled_rope).
+narrative_ontology:human_readable(aging_well_assessment, "The Commercialized Functional Aging Assessment System").
+narrative_ontology:topic_domain(aging_well_assessment, "health/economic").
 
-% Binary flags
-% The system requires active promotion, certification, and integration into
-% billing systems to maintain its dominance over alternative approaches.
-domain_priors:requires_active_enforcement(aging_longevity_tests).
+domain_priors:requires_active_enforcement(aging_well_assessment).
 
-% Structural property derivation hooks for Tangled Rope classification.
-% has_coordination_function/1 is derived from constraint_beneficiary/2.
-% has_asymmetric_extraction/1 is derived from constraint_victim/2.
-narrative_ontology:constraint_beneficiary(aging_longevity_tests, healthcare_providers).
-narrative_ontology:constraint_victim(aging_longevity_tests, aging_patients).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(aging_well_assessment, assessment_companies).
+narrative_ontology:constraint_beneficiary(aging_well_assessment, specialized_clinics).
+narrative_ontology:constraint_beneficiary(aging_well_assessment, health_insurers).
+narrative_ontology:constraint_victim(aging_well_assessment, elderly_patients).
+narrative_ontology:constraint_victim(aging_well_assessment, general_practitioners).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE AGING PATIENT (SNARE)
-% The system is experienced as a costly, coercive trap. Poor scores lead to
-% expensive, mandatory interventions, creating a cycle of dependency.
-% χ = 0.52 * 1.5 (powerless) * 1.0 (national) = 0.78.
-constraint_indexing:constraint_classification(aging_longevity_tests, tangled_rope,
+% PERSPECTIVE 1: ELDERLY PATIENT (SNARE) — Experiences the system as coercive. Required by their physician or insurer, they pay for assessments and interventions of unclear value, and the results can be used to increase their insurance premiums. They are trapped by their health needs and lack of alternatives. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. Just below the canonical snare threshold, but the high suppression (0.65) makes the snare classification appropriate.
+constraint_indexing:constraint_classification(aging_well_assessment, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: ASSESSMENT COMPANY (ROPE) — As the primary beneficiary, the company experiences the system as a pure coordination mechanism. It standardizes a valuable service, connects clients with providers, and creates a market. From their view, they are simply facilitating better health outcomes. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07. Negative effective extraction indicates a net subsidy.
+constraint_indexing:constraint_classification(aging_well_assessment, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE HEALTHCARE PROVIDER (ROPE)
-% From the institutional view, the system is a valuable coordination tool. It
-% standardizes care, provides clear metrics, and creates a reliable revenue stream.
-% χ = 0.52 * -0.2 (institutional) * 1.0 (national) = -0.104.
-constraint_indexing:constraint_classification(aging_longevity_tests, rope,
+% PERSPECTIVE 3: HEALTH INSURER (TANGLED ROPE) — An institutional actor that is both a beneficiary (gains valuable risk-stratification data) and constrained by regulations and market pressures. They see both the coordination value of standardized metrics and the extractive potential for pricing risk. d≈0.30, f(d)≈0.20, σ=1.0 → χ≈0.11. Low extraction reflects their mixed role.
+constraint_indexing:constraint_classification(aging_well_assessment, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
-            exit_options(mobile),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The analyst sees both the genuine coordination function for providers and the
-% asymmetric extraction imposed on patients. The system is a hybrid.
-% χ = 0.52 * 1.15 (analytical) * 1.2 (global) = 0.7176.
-constraint_indexing:constraint_classification(aging_longevity_tests, tangled_rope,
+% PERSPECTIVE 4: GENERAL PRACTITIONER (TANGLED ROPE) — Constrained by patient demand (driven by marketing) and insurer requirements. They see the clinical utility (coordination) but also the pressure to bill and the potential for over-medicalization (extraction). They are a victim of the system's pressure but also an agent within it. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.51.
+constraint_indexing:constraint_classification(aging_well_assessment, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a genuine coordination function (standardizing functional health metrics) but is coupled with a significant, asymmetric extraction mechanism (billing, insurance risk-pricing). This hybrid nature is the hallmark of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76.
+constraint_indexing:constraint_classification(aging_well_assessment, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -126,21 +143,18 @@ constraint_indexing:constraint_classification(aging_longevity_tests, tangled_rop
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(aging_longevity_tests_tests).
+:- begin_tests(aging_well_assessment_tests).
 
-test(perspectival_gap_snare_vs_rope) :-
-    % Verify the core perspectival gap between the patient (snare) and provider (rope).
-    constraint_indexing:constraint_classification(aging_longevity_tests, tangled_rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(aging_longevity_tests, rope, context(agent_power(institutional), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(aging_well_assessment, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(aging_well_assessment, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_structure_validation) :-
-    % A Tangled Rope requires high extraction, enforcement, a beneficiary, and a victim.
-    domain_priors:base_extractiveness(aging_longevity_tests, E), E >= 0.46,
-    domain_priors:requires_active_enforcement(aging_longevity_tests),
-    narrative_ontology:constraint_beneficiary(aging_longevity_tests, _),
-    narrative_ontology:constraint_victim(aging_longevity_tests, _).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(aging_well_assessment, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-:- end_tests(aging_longevity_tests_tests).
+:- end_tests(aging_well_assessment_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -148,69 +162,73 @@ test(tangled_rope_structure_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * This regeneration corrects the original file's conceptual error. The original
- * conflated the biological 'Mountain' of aging with the 'constructed system'
- * built to measure it. By re-framing the constraint as the commercialized system,
- * the high extraction (0.52) and suppression (0.45) become justifiable. This
- * creates a classic Tangled Rope scenario.
- * The Perspectival Gap is sharp: for the patient, it's a Snare of high costs and
- * medical dependency. For the provider, it's a Rope that coordinates patient
- * management and billing. The analytical view recognizes both functions co-exist,
- * hence 'Tangled Rope'. The addition of beneficiary and victim facts resolves
- * the original lint errors.
- * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification is critical here. It prevents the system from
- * accepting the institutional claim that this is a pure 'Rope' for health
- * coordination. By acknowledging the asymmetric extraction felt by the 'victim'
- * group (patients), the model correctly identifies the coercive, extractive
- * dimension that coexists with the coordination function.
+ *   Extractiveness (ε=0.55) is high, reflecting the direct costs to patients and the indirect costs via insurance premium adjustments. Suppression (0.65) is also high, as patients have few 'official' alternatives if the system is endorsed by their doctor or insurer, and marketing creates strong social pressure to 'age well'. The theater ratio (0.40) is moderate; the tests have real clinical grounding, but the commercial packaging and marketing add a performative layer of promising precise control over the aging process.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark. The company providing the service sees a pure Rope, a tool for empowering users. The patient, facing costs and potential penalties, sees a Snare they cannot easily escape. The insurer and doctor, caught in the middle, see a Tangled Rope, recognizing both the utility of the data and the coercive, extractive pressures the system creates. The analytical view confirms the Tangled Rope, as the system's existence depends on both its coordination function and its ability to extract value.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiaries (assessment companies, insurers) have low derived directionality (d), resulting in low or negative effective extraction (χ), classifying the constraint as a Rope or low-extraction Tangled Rope from their perspective. Victims (patients, GPs) have high derived directionality, leading to high χ and a Snare or high-extraction Tangled Rope classification. The system's structure creates these divergent experiences.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This case is a classic example of how a seemingly beneficial coordination tool (standardizing health metrics) becomes a Tangled Rope when commercialized. A simple analysis might label it a 'scam' (Snare) or a 'health innovation' (Rope). The Deferential Realism framework correctly identifies its dual nature. The system is not purely one or the other; its stability comes from serving a genuine coordination need for some actors while simultaneously extracting from others. This resolves the mandatrophy by showing the structure is a hybrid, not a mis-classified pure type.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_aging_system_net_effect,
-    'Does the commercialized assessment system produce a net positive health outcome compared to non-medicalized, holistic approaches?',
-    'Longitudinal cohort study comparing outcomes and costs between populations using the system vs. those using alternative wellness strategies.',
-    'If net positive, the system is a high-overhead Rope. If net negative or neutral, it is a pure Snare disguised as coordination.',
+    predictive_utility_vs_risk_sorting,
+    'Is the system''s primary function to improve patient health outcomes (coordination) or to provide insurers with granular data for risk-sorting and premium pricing (extraction)?',
+    'Longitudinal studies comparing health outcomes of participants vs. non-participants, controlling for baseline health. Analysis of how insurers change premiums based on assessment scores.',
+    'If outcomes improve significantly, it strengthens the Rope/Scaffold case. If premiums rise for low-scorers without commensurate support, it confirms the Snare/Tangled Rope classification.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(predictive_utility_vs_risk_sorting, empirical, 'Distinguishing between the system''s health benefit and its insurance risk-sorting function.').
+
+omega_variable(
+    intervention_efficacy,
+    'Do the standardized interventions recommended based on the assessments lead to clinically significant improvements, or do they primarily serve as a billable service?',
+    'Randomized controlled trials on the recommended interventions (e.g., specific exercise regimens, supplements) versus generalized lifestyle advice.',
+    'High efficacy supports the coordination function. Low efficacy suggests the interventions are part of the extractive theater, strengthening the Snare classification for victims.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(intervention_efficacy, empirical, 'Determining if recommended interventions are clinically effective or primarily for revenue.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(aging_longevity_tests, 0, 10).
+narrative_ontology:interval(aging_well_assessment, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data models the constraint's evolution from a research tool into a
-% commercial system. Extraction accumulated as the system was monetized.
-% Required because base_extractiveness (0.52) > 0.46.
+% Theater ratio over time
+narrative_ontology:measurement(agin_tr_t0, aging_well_assessment, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(agin_tr_t10, aging_well_assessment, theater_ratio, 10, 0.25).
+narrative_ontology:measurement(agin_tr_t20, aging_well_assessment, theater_ratio, 20, 0.4).
 
-% Theater ratio over time:
-narrative_ontology:measurement(aging_longevity_tests_tr_t0, aging_longevity_tests, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(aging_longevity_tests_tr_t5, aging_longevity_tests, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(aging_longevity_tests_tr_t10, aging_longevity_tests, theater_ratio, 10, 0.35).
+% Extraction over time
+narrative_ontology:measurement(agin_be_t0, aging_well_assessment, base_extractiveness, 0, 0.15).
+narrative_ontology:measurement(agin_be_t10, aging_well_assessment, base_extractiveness, 10, 0.35).
+narrative_ontology:measurement(agin_be_t20, aging_well_assessment, base_extractiveness, 20, 0.55).
 
-% Extraction over time (extraction_accumulation drift):
-narrative_ontology:measurement(aging_longevity_tests_ex_t0, aging_longevity_tests, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(aging_longevity_tests_ex_t5, aging_longevity_tests, base_extractiveness, 5, 0.30).
-narrative_ontology:measurement(aging_longevity_tests_ex_t10, aging_longevity_tests, base_extractiveness, 10, 0.52).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The system functions as a standard for measuring and classifying patient status.
-narrative_ontology:coordination_type(aging_longevity_tests, information_standard).
+narrative_ontology:coordination_type(aging_well_assessment, information_standard).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

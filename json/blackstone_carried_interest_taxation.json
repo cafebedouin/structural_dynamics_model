@@ -1,0 +1,144 @@
+{
+  "header": {
+    "constraint_id": "blackstone_carried_interest_taxation",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.8,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Carried Interest Partnership Taxation",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fund_general_partners"
+    ],
+    "victims": [
+      "us_treasury",
+      "general_taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The General Taxpayer",
+      "comment": "PERSPECTIVE 1: GENERAL TAXPAYER (SNARE) — Experiences the rule as a pure tax loophole for the wealthy, increasing their own relative tax burden or reducing public services. They are trapped within the tax system and have no agency to change the rule. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fund General Partner",
+      "comment": "PERSPECTIVE 2: FUND GENERAL PARTNER (ROPE) — The direct beneficiary. Experiences the rule as a necessary and fair coordination mechanism to incentivize long-term, high-risk investment, aligning their interests with investors. The tax benefit is framed as a legitimate reward for capital at risk. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Tax Policy Analyst",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the claimed coordination function (incentive alignment) and the massive, asymmetric extraction from the public treasury. Recognizes the high degree of suppression (lobbying) required to maintain the system. This is the canonical classification. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Limited Partner (Investor)",
+      "comment": "PERSPECTIVE 4: LIMITED PARTNER (ROPE) — An institutional investor (e.g., pension fund). While not a direct beneficiary of the tax break, they see it as part of the overall compensation structure that aligns the General Partner's incentives with their own. For them, it's a feature of the coordination contract, not an extraction. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.51. Classifies as Tangled Rope by χ, but Rope by narrative due to symmetric alignment with GP."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform-Minded Legislator",
+      "comment": "PERSPECTIVE 5: REFORM-MINDED LEGISLATOR (TANGLED ROPE) — Acknowledges the industry's coordination arguments but primarily views the rule as an extractive loophole to be closed. Their ability to act is constrained by intense industry lobbying and political opposition, highlighting the constraint's high suppression. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.49."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capital_vs_labor_income",
+      "question": "Is carried interest fundamentally a return on capital investment (justifying capital gains treatment) or compensation for labor/managerial services (which should be taxed as ordinary income)?",
+      "resolution_mechanism": "This is a conceptual and legal debate, not strictly empirical. Resolution would require a definitive legislative or judicial re-classification of the income type.",
+      "impact": "If classified as labor, the constraint is a pure Snare. If classified as capital, the Rope/Tangled Rope perspectives are strengthened.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The fundamental legal and economic classification of carried interest income."
+    },
+    {
+      "id": "incentive_versus_windfall",
+      "question": "To what extent does the favorable tax treatment genuinely incentivize new, high-risk investment versus simply providing a windfall for investment activity that would have occurred anyway?",
+      "resolution_mechanism": "Econometric studies comparing investment allocation and risk-taking in jurisdictions with and without similar tax incentives.",
+      "impact": "High incentive effect supports a Rope/Tangled Rope classification. Low incentive effect (i.e., it's a pure windfall) supports a Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the tax break is a true incentive or a pure windfall."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 19,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 38,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 19,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 38,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 1986,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The 'carried interest' tax loophole allows general partners in private equity, venture capital, and hedge funds to have their performance-based compensation taxed at the lower long-term capital gains rate (approx. 20-24%) instead of the higher ordinary income tax rate (up to 37%). This rule is a point of intense political and economic debate, embodying the core dynamics of a Tangled Rope: it possesses a plausible coordination function (aligning manager and investor interests) while simultaneously enabling a massive, asymmetric extraction of wealth from the public treasury to a small group of high-earners. Its persistence is a testament to its high suppression, maintained by one of the most effective lobbying efforts in the United States.",
+    "key_agents": [
+      "Fund General Partners: Primary beneficiaries (institutional/arbitrage) who receive the tax break.",
+      "US Treasury / General Taxpayers: Primary victims (powerless/trapped) who bear the cost of the foregone revenue.",
+      "Limited Partners (Investors): Indirect beneficiaries (powerful/mobile) who see the rule as part of a favorable incentive structure.",
+      "Reform-Minded Legislators: Oppositional agents (organized/constrained) who attempt to close the loophole but are suppressed by lobbying.",
+      "Tax Policy Analysts: Analytical observers who see the dual coordination/extraction nature of the constraint."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65): High. The value represents the significant wealth transfer enabled by the large gap between capital gains and ordinary income tax rates, applied to billions in compensation annually. Suppression (0.80): Very High. Decades of repeated, well-funded, and successful lobbying efforts by the financial industry to defeat legislative attempts to close this loophole demonstrate an extremely effective suppression of alternatives. Theater Ratio (0.40): Moderate. The public justifications rely on complex, often debatable, economic arguments about 'capital formation' and 'risk-taking' that serve to obscure the direct financial transfer, but the rule's primary function is its real economic effect, not performance.",
+    "perspectival_gap": "The gap is profound. For the beneficiaries (GPs and LPs), the constraint is a Rope—a legitimate feature of a contract that aligns incentives for long-term growth. For the victims (the public), it is a Snare—an unfair loophole that extracts public funds for private gain. The analytical perspective resolves this by classifying it as a Tangled Rope, acknowledging that the constraint *simultaneously* has a coordination function and an extractive one. The political battle is essentially a fight over which perspective becomes dominant.",
+    "directionality_logic": "The directionality is derived directly from the structural relationships. 'fund_general_partners' are declared beneficiaries with arbitrage exit, yielding a low 'd' value and perceiving a Rope. 'general_taxpayers' are declared victims with trapped exit, yielding a high 'd' value and perceiving a Snare. This clear opposition in the base properties is what drives the large perspectival gap and makes the Tangled Rope classification from the analytical view robust.",
+    "mandatrophy_analysis": "This constraint is a canonical example of resolving mandatrophy. A naive analysis might label it a 'Snare' (it's a loophole for the rich) or a 'Rope' (it aligns incentives). Both are incomplete. The Tangled Rope classification is essential because it correctly identifies the structure as possessing *both* a genuine coordination function (the 'Rope' part that beneficiaries see) and a severe, asymmetric extraction (the 'Snare' part that victims see). The system's persistence is explained by the beneficiaries' ability to successfully promote the Rope narrative while suppressing challenges to the Snare component."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  }
+}

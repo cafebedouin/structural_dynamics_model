@@ -1,27 +1,28 @@
 {
   "header": {
     "constraint_id": "antifragility",
-    "version": "3.4",
-    "generated_date": "2026-02-05",
-    "status": "RESOLVED MANDATROPHY",
-    "measurement_id_prefix": "anti"
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
   },
   "base_properties": {
-    "extractiveness": 0.75,
+    "extractiveness": 0.5,
     "suppression": 0.65,
-    "theater_ratio": 0.55,
+    "theater_ratio": 0.75,
     "claimed_type": "tangled_rope",
     "human_readable": "Antifragility (Gaining from Disorder)",
     "topic_domain": "technological/economic/biological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "antifragile_practitioner"
+      "complex_adaptive_systems",
+      "evolutionary_processes",
+      "system_architects"
     ],
     "victims": [
-      "fragile_institutions",
-      "optimized_serfs"
+      "individual_fragile_components",
+      "over_optimized_incumbents"
     ],
-    "mandatrophy_resolved": true
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
@@ -30,76 +31,94 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Optimized Serf",
-      "comment": "PERSPECTIVE 1: THE OPTIMIZED SERF (SNARE)"
+      "label": "The Individual Fragile Component",
+      "comment": "PERSPECTIVE 1: FRAGILE COMPONENT (SNARE) — A small business failing in a recession, a species going extinct, or a single server terminated by Chaos Monkey. From this perspective, the 'stressor' that strengthens the system is a catastrophic, uncompensated event. The component is sacrificed for the benefit of the whole. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.71."
     },
     {
       "classification_type": "rope",
-      "agent_power": "individual_moderate",
-      "time_horizon": "biographical",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Barbell Practitioner",
-      "comment": "PERSPECTIVE 2: THE BARBELL PRACTITIONER (ROPE)"
+      "label": "The System Architect",
+      "comment": "PERSPECTIVE 2: SYSTEM ARCHITECT (ROPE) — An engineer implementing chaos engineering, a central banker allowing creative destruction, or evolution itself. This agent benefits from the increased resilience of the total system and sees the imposed stress as a pure coordination mechanism to achieve that goal. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07. The negative extraction indicates a net subsidy."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Resilient Component",
+      "comment": "PERSPECTIVE 3: RESILIENT COMPONENT (TANGLED ROPE) — A muscle fiber growing stronger after being stressed, or a company that successfully adapts during a downturn. This agent experiences both the cost of the stressor and the benefit of adaptation. It is a victim, but its mobility allows it to navigate the constraint. d≈0.85, f(d)≈1.15, σ=0.9 → χ≈0.52."
+    },
+    {
+      "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "immediate",
+      "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Bureaucrat",
-      "comment": "PERSPECTIVE 3: THE BUREAUCRAT (TANGLED ROPE)"
+      "spatial_scope": "global",
+      "label": "The Legacy System Maintainer",
+      "comment": "PERSPECTIVE 4: LEGACY MAINTAINER (PITON) — A regulator trying to bail out failing, fragile incumbents to prevent volatility. Their actions are largely performative attempts to preserve a system that has lost its function, fighting against the natural antifragile dynamics of the market/ecosystem. The theater_ratio of 0.75 meets the Piton gate (≥0.70)."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Evolutionary Observer",
-      "comment": "PERSPECTIVE 4: THE EVOLUTIONARY OBSERVER (MOUNTAIN)"
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) — This perspective frames antifragility as an immutable, amoral law of complex systems, akin to natural selection. It naturalizes the extraction by viewing it as a fundamental feature of reality. The engine will flag this as a false summit, as the base properties (ε=0.50, suppression=0.65) are inconsistent with a true Mountain."
     }
   ],
   "omegas": [
     {
-      "id": "antifragility_extraction_intent",
-      "question": "Is the 0.75 extraction a functional necessity for evolution or predatory?",
-      "resolution_mechanism": "Audit of Skin in the Game metrics",
-      "impact": "If necessity: Mountain. If predatory: Snare.",
+      "id": "extraction_necessity",
+      "question": "Is the sacrifice of components a necessary feature of antifragility, or a bug of its current implementations?",
+      "resolution_mechanism": "Formal modeling of complex systems to find pathways to systemic resilience without component failure; empirical study of systems that adapt via non-destructive transformation.",
+      "impact": "If sacrifice is necessary, the constraint is fundamentally a Tangled Rope/Snare. If not, it could be re-engineered into a Rope.",
       "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether antifragility requires sacrificial components"
+    },
+    {
+      "id": "scale_invariance",
+      "question": "Does antifragility at one scale create fragility at a higher scale?",
+      "resolution_mechanism": "Multi-scale analysis of economic and ecological systems. For example, does a highly antifragile financial sector (that profits from volatility) make the overall economy more fragile?",
+      "impact": "If the property is not scale-invariant, then the 'beneficiary' at one level may be the 'victim' at another, changing the entire directionality map.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether the high extraction is a functional necessity or predatory"
+      "description": "Whether antifragility at one scale induces fragility at another"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.4
     },
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.35
+      "value": 0.45
     },
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.55
+      "value": 0.5
     },
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.5
     },
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.55
+      "value": 0.65
     },
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 10,
       "value": 0.75
     }
@@ -109,13 +128,25 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "Antifragility describes systems that increase in capability or resilience in response to stressors and volatility. For the species, it is a Mountain; for the informed practitioner, a Rope; and for the fragile subject, it is a Snare.",
+    "narrative_context": "Antifragility describes the property of systems that gain capability from stressors, shocks, and volatility. This is distinct from resilience (recovering) or robustness (resisting). The core structural tension arises because the system's gain in strength is often derived from the harm or failure of its individual components. This creates a dynamic of internal extraction for external benefit, where the system as a whole benefits at the direct cost of its most fragile parts.",
     "key_agents": [
-      "The Optimized Serf: Subject (Powerless)",
-      "The Barbell Practitioner: Beneficiary (Moderate)",
-      "The Fragilista/Bureaucrat: Institutional Beneficiary/Enforcer"
+      "Complex Adaptive Systems: Primary beneficiary (abstract) — The ecosystem, market, or organization that becomes more resilient.",
+      "System Architects: Primary beneficiary (institutional/arbitrage) — Agents who design or manage systems to be antifragile (e.g., chaos engineers).",
+      "Individual Fragile Components: Primary victim (powerless/trapped) — The parts of the system that are damaged or destroyed by stressors.",
+      "Over-Optimized Incumbents: Secondary victim (powerful/constrained) — Brittle, established entities that are harmed by volatility.",
+      "Legacy System Maintainers: Institutional actor (institutional/constrained) — Regulators or managers who try to suppress volatility, often performatively."
     ],
-    "logic_rationale": "The extraction score (0.75) reflects the \"convexity bias\" where the antifragile agent harvests upside while downside is externalized to the fragile.",
-    "mandatrophy_analysis": "Resolved via the Tangled Rope classification for the Institutional agent, showing how coordination of short-term order creates predatory long-term debt."
+    "logic_rationale": "Extractiveness (ε=0.50): Represents the significant cost imposed on sacrificed components for the benefit of the whole system. Suppression (0.65): High, as individual components within such a system often cannot opt out of being exposed to potentially fatal stressors. Theater Ratio (0.75): High, reflecting the co-opting of 'antifragility' as a management buzzword, often applied performatively without implementing the necessary structural properties like redundancy and decentralized control. The ratio has increased over the interval as the term gained popularity.",
+    "perspectival_gap": "The gap is profound. The System Architect, who can deploy stressors from a position of safety, sees a beneficial coordination mechanism (Rope). The fragile component that is destroyed by that same stressor experiences a pure extractive trap (Snare). The component that survives and adapts sees a mix of harm and benefit (Tangled Rope). A regulator trying to prevent this 'creative destruction' engages in performative, inertial actions (Piton). Finally, an observer can mistake this brutal extractive process for an amoral law of nature (Mountain), a classification the engine identifies as a false summit.",
+    "directionality_logic": "Beneficiaries (System Architects) with arbitrage exit options have a low 'd' value, resulting in negative effective extraction (χ < 0), classifying the constraint as a Rope. Victims (Fragile Components) with trapped exit options have a high 'd' value, leading to high positive effective extraction (χ > 0.66), classifying it as a Snare. The analytical observer's 'Mountain' classification is a perspectival error, stemming from framing a contingent, extractive process as a natural law.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy between 'natural law' and 'extractive system' by showing they can be perspectives on the same phenomenon. The analytical tendency to classify antifragility as a Mountain is a naturalization error. The framework correctly identifies the underlying structure as a Tangled Rope (ε=0.50, suppression=0.65) and demonstrates that the Mountain view is a false summit, while the Snare view is the ground-truth experience for the system's powerless components."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "market_creative_destruction"
+    ]
   }
 }

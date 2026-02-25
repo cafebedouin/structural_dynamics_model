@@ -71,6 +71,39 @@ def _basic_validate(data):
 
 
 # ---------------------------------------------------------------------------
+# Prolog atom escaping
+# ---------------------------------------------------------------------------
+
+def _pl_escape(text):
+    """Escape a string for use inside a SWI-Prolog single-quoted atom.
+
+    SWI-Prolog's convention: double any embedded single quote.
+    Also strips or replaces characters that break atom parsing:
+      - Backslash sequences that SWI interprets as escape codes
+      - Unbalanced parentheses inside atoms (rare but possible)
+    """
+    if not isinstance(text, str):
+        text = str(text)
+    # Double single quotes (SWI escape convention)
+    text = text.replace("'", "''")
+    # Escape backslashes (SWI treats \n, \t etc. as escape codes in quoted atoms)
+    text = text.replace("\\", "\\\\")
+    return text
+
+
+def _pl_escape_double(text):
+    """Escape a string for use inside a SWI-Prolog double-quoted string.
+
+    Double quotes inside double-quoted strings must be escaped.
+    """
+    if not isinstance(text, str):
+        text = str(text)
+    text = text.replace("\\", "\\\\")
+    text = text.replace('"', '\\"')
+    return text
+
+
+# ---------------------------------------------------------------------------
 # Measurement ID generation
 # ---------------------------------------------------------------------------
 
@@ -391,8 +424,8 @@ def generate_pl(data):
     # Claim
     emit("% --- Constraint claim ---")
     emit(f"narrative_ontology:constraint_claim({cid}, {bp['claimed_type']}).")
-    emit(f'narrative_ontology:human_readable({cid}, "{bp["human_readable"]}").')
-    emit(f'narrative_ontology:topic_domain({cid}, "{bp["topic_domain"]}").')
+    emit(f'narrative_ontology:human_readable({cid}, "{_pl_escape_double(bp["human_readable"])}").')
+    emit(f'narrative_ontology:topic_domain({cid}, "{_pl_escape_double(bp["topic_domain"])}").')
     emit()
 
     # Binary flags
@@ -515,15 +548,15 @@ def generate_pl(data):
             # /5 form (bare)
             emit(f"omega_variable(")
             emit(f"    {omega['id']},")
-            emit(f"    '{omega['question']}',")
-            emit(f"    '{omega['resolution_mechanism']}',")
-            emit(f"    '{omega['impact']}',")
+            emit(f"    '{_pl_escape(omega['question'])}',")
+            emit(f"    '{_pl_escape(omega['resolution_mechanism'])}',")
+            emit(f"    '{_pl_escape(omega['impact'])}',")
             emit(f"    confidence_without_resolution({omega['confidence']})")
             emit(f").")
             emit()
 
             # /3 form (namespaced)
-            emit(f"narrative_ontology:omega_variable({omega['id']}, {omega['type_class']}, '{omega['description']}').")
+            emit(f"narrative_ontology:omega_variable({omega['id']}, {omega['type_class']}, '{_pl_escape(omega['description'])}').")
             emit()
     emit()
 

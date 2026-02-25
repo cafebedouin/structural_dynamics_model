@@ -1,0 +1,170 @@
+{
+  "header": {
+    "constraint_id": "board_of_peace_2026",
+    "version": "1.0",
+    "generated_date": "2024-07-28",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 2026 'Board of Peace' Initiative",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_administration_chair",
+      "aligned_member_states",
+      "private_military_contractors"
+    ],
+    "victims": [
+      "un_multilateral_system",
+      "non_aligned_conflict_states",
+      "global_public_good_of_peace"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Non-Aligned Conflict State",
+      "comment": "PERSPECTIVE 1: NON-ALIGNED CONFLICT STATE (SNARE) — Subject to intervention by a 20,000-strong force controlled by a body they have no say in, outside the UN framework where they might have had a voice or allies. They are trapped by the new geopolitical reality. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The UN Multilateral System",
+      "comment": "PERSPECTIVE 2: THE UN SYSTEM (SNARE) — Experiences the Board as a direct assault on its mandate, legitimacy, and function. It is an extractive mechanism pulling power, funding, and legitimacy away from the established multilateral order. As an institution, it is constrained in its ability to counter a superpower's initiative. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈1.04."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The US Administration (Chair)",
+      "comment": "PERSPECTIVE 3: THE US ADMINISTRATION (ROPE) — As the creator and chair, the administration sees the Board as a pure coordination tool to align allies and project power efficiently, bypassing the perceived bureaucracy of the UN. They benefit directly from the concentration of power. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.11. Negative effective extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Participating Member State",
+      "comment": "PERSPECTIVE 4: PARTICIPATING MEMBER STATE (TANGLED ROPE) — Gains a seat at a US-led table (coordination benefit) but must contribute $1B and cede significant decision-making authority to the Chair (extraction). They have exit options, but at a high diplomatic cost. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.56."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Declining Western Ally",
+      "comment": "PERSPECTIVE 5: DECLINING WESTERN ALLY (PITON) — Nations like France and Germany, who declined to join, see the Board as a performative rejection of established multilateral norms. Its function is secondary to its theatrical role as a parallel power structure. The high theater_ratio (0.75) and their ability to exit (by not joining) leads to a Piton classification. The constraint is inertial and degraded from their viewpoint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees the dual structure: a genuine (though skewed) coordination mechanism for its members, inextricably coupled with a severe, asymmetric extraction of sovereignty, funds, and legitimacy from non-members and the global system. This matches the claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.04."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "operational_effectiveness",
+      "question": "Will the Board's International Stabilization Force prove more effective at conflict resolution than existing UN peacekeeping, or will it primarily serve the geopolitical interests of its chair?",
+      "resolution_mechanism": "Comparative analysis of mission outcomes, casualty rates, and long-term stability in regions of intervention versus UN-led missions over a 5-10 year period.",
+      "impact": "If highly effective, its classification could shift towards Scaffold or Rope for more observers. If ineffective or destabilizing, it confirms the Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the Board is an effective peacekeeper or a tool for power projection"
+    },
+    {
+      "id": "member_state_cohesion",
+      "question": "Will the coalition of member states remain cohesive when faced with the $1 billion renewal fee and potentially controversial unilateral decisions by the Chair?",
+      "resolution_mechanism": "Tracking member state retention rates after the initial three-year period and analyzing voting alignment on contentious resolutions.",
+      "impact": "If cohesion fails, the constraint collapses into a Piton. If it holds, the Tangled Rope/Snare nature is confirmed as stable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cohesion of member states under financial and political pressure"
+    },
+    {
+      "id": "us_political_continuity",
+      "question": "Is the Board of Peace a transient policy tied to a specific US administration, or will it become an institutionalized part of US foreign policy?",
+      "resolution_mechanism": "Observing the policy position of the subsequent US administration regarding the Board's funding, leadership, and mandate.",
+      "impact": "If transient, the constraint is a de facto Scaffold. If institutionalized, it represents a permanent structural shift in global governance, solidifying its Snare/Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the Board will outlast its founding administration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 3
+  },
+  "commentary": {
+    "narrative_context": "The 2026 'Board of Peace' is a hypothetical international body established by a US administration to operate outside the UN framework. While its stated purpose is global peacekeeping, its structure concentrates decision-making power in its Chair, requires significant financial contributions from members, and was launched concurrently with the US withdrawing from numerous UN bodies. This creates a structural conflict between its performative name ('Board of Peace') and its function as a vehicle for unilateral foreign policy, funded by allies.",
+    "key_agents": [
+      "US Administration (Chair): Primary beneficiary (institutional/arbitrage) - gains a powerful foreign policy tool that bypasses multilateral constraints.",
+      "Participating Member States: Secondary beneficiaries/victims (organized/mobile) - gain alignment with the US but pay a high price in funds and sovereignty.",
+      "UN Multilateral System: Primary victim (institutional/constrained) - its role, legitimacy, and mandate are directly suppressed and usurped.",
+      "Non-Aligned Conflict States: Primary victims (powerless/trapped) - face intervention from a new power bloc with no recourse to established international law.",
+      "Declining Western Allies: Observers (institutional/mobile) - perceive the initiative as a degradation of international norms and choose not to participate."
+    ],
+    "logic_rationale": "Extractiveness (0.75) is high due to the mandatory $1B renewal fee and the transfer of sovereign decision-making power to the Board's Chair. Suppression (0.80) is severe, evidenced by the US's simultaneous withdrawal from 66 international organizations, actively dismantling alternatives. Theater Ratio (0.75) is high, as the benevolent name and stated mission of 'peace' stand in stark contrast to the structure of centralized power projection; it meets the Piton threshold (>=0.70).",
+    "perspectival_gap": "The gap is profound. The US administration sees a legitimate coordination tool (Rope). A paying member state sees a mixed-motive alliance with costs (Tangled Rope). The UN and states targeted by the Board see a coercive, illegitimate power grab that extracts resources and sovereignty (Snare). Allies who refuse to join see a performative, degraded institution that exists for show (Piton). The classification depends entirely on whether an agent is wielding the tool, paying for it, being targeted by it, or watching from the sidelines.",
+    "directionality_logic": "Beneficiaries (US Admin) have arbitrage exit and see negative extraction (Rope). Victims (UN, non-aligned states) are trapped or constrained, leading to high directionality (d) values and thus extremely high effective extraction (χ), classifying the constraint as a Snare from their view. Participating members have some agency (mobile exit) but are still subject to extraction, placing them in the middle (Tangled Rope). The directionality derivation correctly maps these structural positions to the wide range of classifications.",
+    "mandatrophy_analysis": "This constraint is a canonical example of mandatrophy. It is presented as a global good and a coordination mechanism ('peace'), but its structure is primarily extractive. The Deferential Realism framework resolves this by refusing to assign a single label. It validates the beneficiary's 'Rope' perspective while simultaneously validating the victim's 'Snare' perspective. The analytical classification of 'Tangled Rope' acknowledges the existence of both functions, while the high base metrics (ε=0.75, suppression=0.80) clearly signal that the extractive component is dominant."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

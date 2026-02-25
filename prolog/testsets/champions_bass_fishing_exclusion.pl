@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: champions_bass_fishing_exclusion
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2024-07-29
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_champions_bass_fishing_exclusion, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,13 +57,23 @@
  *   domain: economic
  *
  * SUMMARY:
- *   This constraint refers to the practices of Champions Bass Fishing (CBF) tournaments. CBF is invite-only and requires significant resources to participate, effectively creating a closed loop for elite anglers. This structure excludes smaller organizations or individual anglers from the primary path to professional success and high-value sponsorships, suppressing alternative competitive avenues.
+ *   This constraint describes the structure of high-stakes professional bass
+ *   fishing tournaments, which function as a de facto gateway to a
+ *   professional angling career. The system is characterized by extremely
+ *   high financial barriers to entry (boats, equipment, travel, fees) and a
+ *   set of unwritten social rules that favor established insiders. While it
+ *   provides a genuine coordination function by organizing large-scale
+ *   competitions, it simultaneously operates an extractive model, funding
+ *   large prizes and organizer profits from the entry fees of a vast number
+ *   of amateur participants with a statistically negligible chance of
+ *   success.
  *
- * KEY AGENTS (by structural relationship):
- *   - Smaller Anglers/Organizations: Primary target (powerless/trapped) — bears extraction from limited competitive opportunities and suppressed career paths.
- *   - Champions Bass Fishing Organization: Primary beneficiary (institutional/arbitrage) — benefits from a consolidated, high-prestige brand and concentrated sponsorship deals.
- *   - Sponsors: Secondary actor (institutional/arbitrage) — benefit from association with prominent anglers and high brand visibility in a controlled environment.
- *   - Analytical observer: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Tournament Organizers: Primary beneficiary (institutional/arbitrage) - Set the rules and profit from fees and sponsorships.
+ *   - Elite Professional Anglers: Primary beneficiary (powerful/mobile) - Benefit from prize money and sponsorships; high entry barriers limit their competition.
+ *   - Aspiring Amateur Anglers: Primary victim (powerless/trapped) - Provide the bulk of the revenue via entry fees but face prohibitive odds.
+ *   - Underrepresented Demographics: Secondary victim (powerless/trapped) - Face additional social and cultural barriers to entry and inclusion.
+ *   - Non-Tournament Anglers: Tertiary victim (moderate/constrained) - Suffer negative externalities like restricted access to public waterways.
  */
 
 /* ==========================================================================
@@ -72,104 +81,68 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(champions_bass_fishing_exclusion, 0.48).
-domain_priors:suppression_score(champions_bass_fishing_exclusion, 0.60).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(champions_bass_fishing_exclusion, 0.2).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(champions_bass_fishing_exclusion, 0.65).
+domain_priors:suppression_score(champions_bass_fishing_exclusion, 0.7).
+domain_priors:theater_ratio(champions_bass_fishing_exclusion, 0.3).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, extractiveness, 0.48).
-narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, suppression_requirement, 0.60).
-narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, theater_ratio, 0.2).
+narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, extractiveness, 0.65).
+narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, suppression_requirement, 0.7).
+narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, theater_ratio, 0.3).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-% narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, accessibility_collapse, [0.85-1.0]).
-% narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, resistance, [0.0-0.15]).
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(champions_bass_fishing_exclusion, tangled_rope).
 narrative_ontology:human_readable(champions_bass_fishing_exclusion, "Champions Bass Fishing Tournament Exclusionary Practices").
 narrative_ontology:topic_domain(champions_bass_fishing_exclusion, "economic").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(champions_bass_fishing_exclusion).      % Mandatory if Scaffold
-domain_priors:requires_active_enforcement(champions_bass_fishing_exclusion). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(champions_bass_fishing_exclusion).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-% domain_priors:emerges_naturally(champions_bass_fishing_exclusion).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(champions_bass_fishing_exclusion, champions_bass_fishing_organization).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(champions_bass_fishing_exclusion, smaller_anglers_organizations).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(champions_bass_fishing_exclusion, tournament_organizers).
+narrative_ontology:constraint_beneficiary(champions_bass_fishing_exclusion, elite_professional_anglers).
+narrative_ontology:constraint_beneficiary(champions_bass_fishing_exclusion, sponsors_and_media_partners).
+narrative_ontology:constraint_victim(champions_bass_fishing_exclusion, aspiring_amateur_anglers).
+narrative_ontology:constraint_victim(champions_bass_fishing_exclusion, underrepresented_demographics).
+narrative_ontology:constraint_victim(champions_bass_fishing_exclusion, non_tournament_anglers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, tangled_rope,
+% PERSPECTIVE 1: ASPIRING AMATEUR (SNARE) — Trapped by the desire to compete professionally. The high costs of entry fees, boats, and gear, combined with low odds of winning, constitute a pure extraction mechanism. The only path to pro status is through this system. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92.
+constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+% PERSPECTIVE 2: TOURNAMENT ORGANIZER (ROPE) — Experiences the system as a pure coordination mechanism. They organize a complex event, create a media product, and allocate prize money, solving a collective action problem for anglers who want to compete. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08. Negative extraction indicates a net beneficiary.
 constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (organizing a competition) and the asymmetric extraction (funneling wealth from a large amateur base to a small elite). The active enforcement of rules and high suppression of alternative paths to professional status confirm the hybrid nature. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90.
 constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% PERSPECTIVE 4: ELITE PRO (ROPE) — As a primary beneficiary, the elite pro experiences the tournament circuit as a coordination system that enables their career. They have mobility between different tournament series and leverage their status for sponsorships. The high barriers to entry protect their elite status. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.01.
+constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, rope,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: NON-TOURNAMENT ANGLER (SNARE) — Experiences the constraint as coercive extraction from a public good. Their access to public waterways is restricted during high-profile events, and they perceive increased fishing pressure without receiving any benefit. Their exit is constrained to fishing at other times or less desirable locations. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.60. χ is just below the snare threshold, but the experience is one of coercion.
+constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, snare,
+    context(agent_power(moderate),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(local))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,15 +151,13 @@ constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, 
 :- begin_tests(champions_bass_fishing_exclusion_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(champions_bass_fishing_exclusion, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(champions_bass_fishing_exclusion, ExtMetricName, E),
-    (E =< 0.25 -> true ; E >= 0.46). % Mountain or high-extraction Snare/Tangled.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(champions_bass_fishing_exclusion, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(champions_bass_fishing_exclusion_tests).
 
@@ -196,110 +167,74 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Base extractiveness is 0.48, signifying that a substantial portion of the value generated by the tournament circuit is captured by the organizing body and its chosen partners, rather than being accessible to the broader field of potential competitors. The suppression score is raised to 0.60 to reflect that this tournament structure is the dominant path to professional success, highly suppressing the viability of alternative competitive avenues. The low theater_ratio of 0.2 indicates the tournament is a functional, value-generating enterprise, not merely performative.
+ *   Extractiveness (ε=0.65) is high, reflecting the significant financial outlay required from participants relative to the highly concentrated prize pool. The majority of anglers pay to lose. Suppression (0.70) is high because there are few, if any, alternative paths to achieving professional status and securing major sponsorships in the sport. One must participate in these specific, high-cost events. Theater Ratio (0.30) is moderate; while there is significant media spectacle (weigh-ins, branded apparel), the core activity of competitive fishing is functional.
  *
  * PERSPECTIVAL GAP:
- *   Smaller anglers/organizations perceive a Snare. For them, the high barriers to entry and invite-only structure trap them outside the primary ecosystem for career advancement and sponsorship, making their own efforts less viable. Champions Bass Fishing perceives a Rope, as they are coordinating a high-value sporting event that benefits their organization, top-tier members, and sponsors through a consolidated, premium product.
+ *   The gap is stark. For organizers and elite pros (beneficiaries), the system is a Rope—a fair and necessary mechanism to coordinate a high-level sporting event. For the aspiring amateur (victim), it is a Snare—a costly trap where their professional ambitions are monetized with little chance of reciprocation. The analytical view recognizes both functions, classifying it as a Tangled Rope where coordination is inextricably linked with asymmetric extraction.
  *
  * DIRECTIONALITY LOGIC:
- *   The CBF organization and its sponsors are the primary beneficiaries, capturing value from exclusivity and brand prestige. Smaller anglers and organizations are the victims, bearing the cost of exclusion from this value-capture system, which limits their income and exposure. The `trapped` exit option for victims reflects that there are no alternative circuits with comparable prestige or financial reward.
+ *   Beneficiaries (organizers, elite pros) have arbitrage or mobile exit options, giving them low directionality (d) values and leading to a Rope classification. Victims (amateurs) are trapped, as this is the only recognized path to professional status, leading to a high d-value and a Snare classification. The system's structure is defined by this differential in power and exit capability, which the directionality derivation correctly captures.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification avoids mislabeling the system as pure extraction. The `tangled_rope` classification from an analytical view correctly identifies that CBF provides a genuine coordination function (organizing large-scale events). However, this coordination is coupled with an extractive structure that asymmetrically benefits the organizers and excludes a class of participants. It is not a pure Snare because the event itself is functional, but it is not a pure Rope because the benefits of coordination are not distributed symmetrically.
+ *   This case resolves a potential mandatrophy by refusing to label the system as either a pure meritocratic competition (Rope) or a simple scam (Snare). The Tangled Rope classification is essential, as it acknowledges the real coordination value the tournaments provide while simultaneously accounting for the structurally embedded, asymmetric extraction from the participant base. To ignore the coordination would be to misrepresent the system's appeal and function; to ignore the extraction would be to endorse a narrative that benefits only the insiders.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_champions_bass_fishing_exclusion,
-    'Is the exclusionary practice a deliberate strategy to maintain a monopoly on talent and sponsorship, or an emergent consequence of the organization\'s scale and prestige?',
-    'Review internal CBF communications, entry criteria evolution, and financial data on revenue sharing with anglers.',
-    'If deliberate, it confirms the high suppression score and Snare/Tangled Rope classifications. If emergent, it might suggest a lower suppression score, shifting the powerless perspective from Snare to Tangled Rope.',
+    meritocracy_vs_gatekeeping,
+    'Are the high financial and social barriers to entry a necessary filter for elite talent (meritocracy) or an intentional gatekeeping mechanism to protect the status of incumbent pros and organizers (extraction)?',
+    'Analysis of career trajectories of new entrants vs. incumbents, controlling for sponsorship levels. Comparison with sports that have lower entry barriers.',
+    'If primarily meritocratic, the system is closer to a Rope. If primarily gatekeeping, it confirms the Snare/Tangled Rope classification.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(meritocracy_vs_gatekeeping, conceptual, 'Distinguishing between meritocratic filtering and extractive gatekeeping in tournament entry barriers.').
+
+omega_variable(
+    unwritten_rules_impact,
+    'What is the quantifiable impact of unwritten social rules and network effects on an angler''s success, independent of skill?',
+    'Sociological network analysis of top anglers; surveys and interviews with aspiring amateurs and underrepresented groups to quantify perceived social barriers.',
+    'A high impact would increase the ''suppression'' score, reinforcing the Snare classification for outsiders. A low impact would suggest the system is more of a pure economic Rope.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(unwritten_rules_impact, empirical, 'Quantifying the impact of social networks and unwritten rules on tournament success.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(champions_bass_fishing_exclusion, 0, 10).
+narrative_ontology:interval(champions_bass_fishing_exclusion, 2004, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(champions_bass_fishing_exclusion_tr_t0, champions_bass_fishing_exclusion, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(champions_bass_fishing_exclusion_tr_t5, champions_bass_fishing_exclusion, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(champions_bass_fishing_exclusion_tr_t10, champions_bass_fishing_exclusion, theater_ratio, 10, 0.2).
+% Theater ratio over time
+narrative_ontology:measurement(cham_tr_t2004, champions_bass_fishing_exclusion, theater_ratio, 2004, 0.15).
+narrative_ontology:measurement(cham_tr_t2014, champions_bass_fishing_exclusion, theater_ratio, 2014, 0.25).
+narrative_ontology:measurement(cham_tr_t2024, champions_bass_fishing_exclusion, theater_ratio, 2024, 0.3).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(champions_bass_fishing_exclusion_ex_t0, champions_bass_fishing_exclusion, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(champions_bass_fishing_exclusion_ex_t5, champions_bass_fishing_exclusion, base_extractiveness, 5, 0.47).
-narrative_ontology:measurement(champions_bass_fishing_exclusion_ex_t10, champions_bass_fishing_exclusion, base_extractiveness, 10, 0.48).
+% Extraction over time
+narrative_ontology:measurement(cham_be_t2004, champions_bass_fishing_exclusion, base_extractiveness, 2004, 0.45).
+narrative_ontology:measurement(cham_be_t2014, champions_bass_fishing_exclusion, base_extractiveness, 2014, 0.55).
+narrative_ontology:measurement(cham_be_t2024, champions_bass_fishing_exclusion, base_extractiveness, 2024, 0.65).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
 narrative_ontology:coordination_type(champions_bass_fishing_exclusion, resource_allocation).
-
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(champions_bass_fishing_exclusion, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(champions_bass_fishing_exclusion, [other_constraint_id]).
-
-% --- Network Decomposition (Constraint Families) ---
-% When a natural-language label covers multiple constraints with different ε
-% values, each gets its own file. Link family members with affects_constraint:
-%
-% DUAL FORMULATION NOTE:
-% This constraint is one of [N] stories decomposed from [colloquial label].
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - [sibling_constraint_1] (ε=[value], [Type])
-%   - [sibling_constraint_2] (ε=[value], [Type])
-%
-% narrative_ontology:affects_constraint(champions_bass_fishing_exclusion, [sibling_constraint_id]).
+narrative_ontology:affects_constraint(champions_bass_fishing_exclusion, public_waterway_access_rights).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(champions_bass_fishing_exclusion, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

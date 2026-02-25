@@ -1,0 +1,162 @@
+{
+  "header": {
+    "constraint_id": "automatic_enrollment_defaults",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.15,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Automatic Enrollment Defaults in Retirement Plans",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employees_with_high_inertia",
+      "financial_service_providers",
+      "employers"
+    ],
+    "victims": [
+      "employees_stuck_at_low_defaults",
+      "employees_unaware_of_fees",
+      "low_income_employees"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Financially Strained Employee",
+      "comment": "PERSPECTIVE 1: THE FINANCIALLY STRAINED EMPLOYEE (SNARE) — Trapped by behavioral inertia and lack of financial literacy. The default contribution, however small, represents immediate financial hardship, while the fees on default funds are a form of pure extraction. Opting out requires overcoming a significant activation energy barrier. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Financial Services Provider",
+      "comment": "PERSPECTIVE 2: THE FINANCIAL SERVICES PROVIDER (ROPE) — Benefits from a larger pool of assets under management. From this perspective, the constraint is a pure coordination mechanism that solves the market failure of under-saving, creating a win-win. Exit via arbitrage is high (can offer plans to thousands of employers). d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.06."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (overcoming procrastination to increase savings rates) and the asymmetric extraction (management fees, employers benefiting from low default rates). The system requires active enforcement by plan administrators and is not a simple convention. This matches the claimed type."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Procrastinating Professional",
+      "comment": "PERSPECTIVE 4: THE PROCRASTINATING PROFESSIONAL (ROPE) — A median employee who knows they should save but lacks the initiative. For them, the default is a welcome nudge that solves a personal time-inconsistency problem. They have the agency and knowledge to change the default but benefit from the initial push. They perceive no extraction, only coordination. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.36."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Social Policy Architect",
+      "comment": "PERSPECTIVE 5: THE SOCIAL POLICY ARCHITECT (SCAFFOLD) — Views auto-enrollment as a temporary support to build a culture of saving. The policy is designed to overcome a specific behavioral failure, with the implicit 'sunset' being the point at which an individual becomes an engaged saver or the social norm of saving is established. The goal is to build a structure that eventually becomes unnecessary."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "savings_vs_fees",
+      "question": "Is the primary structural effect of auto-enrollment the increase in aggregate savings (coordination) or the generation of fees from managed assets (extraction)?",
+      "resolution_mechanism": "Comparative analysis of net wealth accumulation in auto-enrolled vs. actively-enrolled cohorts, controlling for income and factoring in lifetime fees.",
+      "impact": "If net wealth is significantly higher, it strengthens the Rope/Scaffold case. If fees consume a large fraction of the gains, it strengthens the Snare/Tangled Rope case.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether increased savings outweigh lifetime fees from default funds."
+    },
+    {
+      "id": "default_rate_suppression",
+      "question": "Does the 'stickiness' of the default contribution rate lead to lower lifetime savings for employees who would have otherwise chosen a higher rate?",
+      "resolution_mechanism": "Longitudinal study comparing savings trajectories of employees in opt-in vs. opt-out systems with similar demographics.",
+      "impact": "If auto-enrolled employees cluster at low defaults and save less overall, the system functions as a Snare for a larger population. If it serves as a floor that most exceed, it's a Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether default rates anchor employees at sub-optimal savings levels."
+    },
+    {
+      "id": "paternalism_vs_exploitation",
+      "question": "Is leveraging behavioral inertia a legitimate paternalistic intervention (Scaffold) or a subtle form of exploitation (Snare)?",
+      "resolution_mechanism": "This is a conceptual ambiguity, resolvable only by defining a clear ethical boundary for 'nudges' in public policy.",
+      "impact": "The classification depends on the ethical framework. A framework prioritizing autonomy would view it as a Snare; one prioritizing welfare outcomes would view it as a Scaffold or Rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The ethical framing of using behavioral inertia in policy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 2006,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "Automatic enrollment in retirement plans is a choice architecture designed to increase participation by making saving the default option. It leverages behavioral inertia to overcome procrastination. While highly effective at boosting enrollment rates, it creates a structural tension. It serves a genuine coordination function by helping people save who otherwise wouldn't. Simultaneously, it creates an extractive potential for financial service providers (via fees on default funds) and employers (who may benefit from sticky, low default contribution rates that minimize their matching costs).",
+    "key_agents": [
+      "Financially Strained Employee: Primary target (powerless/trapped) — bears cost of contributions and fees with little perceived agency.",
+      "Financial Services Provider: Primary beneficiary (institutional/arbitrage) — benefits from increased assets under management.",
+      "The Employer: Secondary beneficiary (organized/constrained) — benefits from offering a modern plan and potentially lower matching costs.",
+      "The Procrastinating Professional: Beneficiary (moderate/mobile) — benefits from the nudge to overcome personal inertia.",
+      "The Social Policy Architect: Institutional actor (institutional/constrained) — sees the system as a tool to solve a national savings crisis."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.48): This reflects the value extracted through management fees on default investment vehicles and the potential for employers to suppress wage growth or matching contributions by relying on low, sticky default rates. Suppression (0.62): This score is high not because of physical coercion, but because of the powerful force of behavioral inertia. The alternative (opting out) is simple in theory but requires overcoming a significant psychological barrier, making the default highly coercive in practice. Theater Ratio (0.15): The mechanism is highly functional and does exactly what it is designed to do—increase enrollment. There is very little performative action; the structure itself does the work.",
+    "perspectival_gap": "The gap is stark. For a financial firm, this is a Rope that efficiently gathers assets and solves a social problem. For a low-income employee, it's a Snare that siphons money from their paycheck without clear consent or understanding. For a policy maker, it's a Scaffold to build better savings habits. The analytical view must hold both the coordination and extraction in tension, leading to a Tangled Rope classification. The system's character is fundamentally dependent on the observer's position within it.",
+    "directionality_logic": "Beneficiaries include financial providers (institutional/arbitrage, d≈0.05) and employees who need the nudge (moderate/mobile, d≈0.55). Victims are those trapped by inertia at sub-optimal rates or for whom the contribution is a hardship (powerless/trapped, d≈0.95). This wide spread in directionality (d) across the agent population is what generates the diverse classifications from a single set of base properties.",
+    "mandatrophy_analysis": "This constraint is a classic case where a simple classification would fail. Labeling it a 'Rope' (as behavioral economists might) ignores the extractive fee structure. Labeling it a 'Snare' (as a libertarian might) ignores the genuine, welfare-enhancing coordination it provides for many. The Tangled Rope classification, from the analytical perspective, correctly identifies that it is BOTH a coordination mechanism and an extractive one, resolving the mandatrophy by refusing a simplistic label."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "consumer_debt_levels",
+      "social_security_solvency"
+    ]
+  }
+}

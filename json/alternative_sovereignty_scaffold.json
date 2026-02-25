@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "alternative_sovereignty_scaffold",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.4,
+    "suppression": 0.5,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Decentralized Parallel",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "protocol_developers",
+      "early_adopters_and_vcs",
+      "users_in_failed_states"
+    ],
+    "victims": [
+      "incumbent_nation_states",
+      "exploited_retail_users",
+      "global_financial_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exploited Retail User",
+      "comment": "PERSPECTIVE 1: EXPLOITED RETAIL USER (SNARE) — Lured by the promise of high returns, their capital is extracted through scams, hacks, or protocol failures with no recourse. For them, the system is pure extraction. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.68."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Migrant in a Failed State",
+      "comment": "PERSPECTIVE 2: MIGRANT IN FAILED STATE (TANGLED ROPE) — The system offers a genuine coordination benefit (capital preservation, exit), but at the cost of high volatility, fees, and risk. It is both a tool and a danger. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.55."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Protocol Developer",
+      "comment": "PERSPECTIVE 3: PROTOCOL DEVELOPER (SCAFFOLD) — As the builders, they see the system as a temporary structure to bootstrap a new form of sovereignty. They acknowledge the risks and extraction as necessary evils on the path to a stable, decentralized future (the sunset clause). d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.19."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Early Adopter / VC",
+      "comment": "PERSPECTIVE 4: EARLY ADOPTER / VC (ROPE) — Experiences the system as a pure coordination mechanism for allocating capital and governing new protocols. The 'extraction' is perceived as legitimate investment returns. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.005."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incumbent Nation-State",
+      "comment": "PERSPECTIVE 5: INCUMBENT NATION-STATE (TANGLED ROPE) — Views the system as a challenge to its monetary and legal sovereignty. It recognizes some coordination benefits (innovation) but primarily sees an extractive threat (tax evasion, capital flight) that requires active enforcement (regulation) to contain. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.44."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's structure combines a genuine coordination function (enabling action outside state channels) with significant asymmetric extraction (VC allocations, scams, fees). Despite its marketing as a Scaffold, its metrics (ε=0.40, suppression=0.50) place it firmly in the Tangled Rope category. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.55."
+    }
+  ],
+  "interval": {
+    "start": 2015,
+    "end": 2035
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.4
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sunset_clause_viability",
+      "question": "Is the 'sunset clause' a structural reality or merely aspirational marketing?",
+      "resolution_mechanism": "Longitudinal analysis of protocol governance and token distributions to see if they trend towards broader, more stable utility or remain captured by early investors and speculative cycles.",
+      "impact": "If viable, the Scaffold perspective is strengthened. If aspirational, the system is a permanent Tangled Rope or Snare, and the 'scaffold' claim is theatrical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the system can ever transition from speculative scaffold to stable infrastructure."
+    },
+    {
+      "id": "governance_capture",
+      "question": "Can decentralized governance models resist capture by concentrated token holders ('whales') and VCs?",
+      "resolution_mechanism": "Analysis of voting patterns and proposal outcomes in major DAOs, correlating token concentration with decision-making power.",
+      "impact": "If capture is inevitable, the 'decentralized' claim is theatrical (high theater_ratio) and the system functions as a Snare for non-elites. If it can be resisted, the Rope/Scaffold classifications are more credible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The inevitability of governance capture by capital concentration."
+    },
+    {
+      "id": "state_symbiosis",
+      "question": "Is the Decentralized Parallel a true alternative to the state, or a parasitic system reliant on state-provided infrastructure (internet, property rights, legal recourse for exchanges)?",
+      "resolution_mechanism": "Mapping the dependencies of crypto networks on legacy infrastructure and legal systems.",
+      "impact": "If fully dependent, it cannot be a true 'alternative sovereignty' and is better modeled as a Tangled Rope within the existing system. If it can achieve infrastructural independence, the Scaffold-to-Rope thesis is more plausible.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the system is a true alternative or merely symbiotic with the state."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Decentralized Parallel is a framework of crypto-networks and peer-to-peer protocols intended to provide coordination and governance outside traditional state structures. It is marketed and designed as a 'Scaffold'—a temporary, enabling technology allowing populations to migrate away from failing institutional 'Snares.' However, its internal structure is characterized by significant risk, performative rhetoric, and mechanisms for value extraction, leading to a wide perspectival gap.",
+    "key_agents": [
+      "Protocol Developers: The builders of the system (organized/mobile), who see it as a Scaffold.",
+      "Early Adopters & VCs: Primary financial beneficiaries (powerful/arbitrage), who see it as a Rope for capital coordination.",
+      "Users in Failed States: Primary users of the 'sovereignty' function (powerless/mobile), who experience it as a risky but necessary Tangled Rope.",
+      "Exploited Retail Users: Victims of scams and volatility (powerless/trapped), who experience it as a Snare.",
+      "Incumbent Nation-States: The established order being challenged (institutional/constrained), which sees it as a rival Tangled Rope."
+    ],
+    "logic_rationale": "Extractiveness (0.40): Moderate. While claiming to be non-extractive, the system facilitates significant value transfer through gas fees, VC token allocations, MEV, scams, and protocol-level inflation. Suppression (0.50): Moderate. The system doesn't suppress the state, but within its ecosystem, network effects and technical complexity create high barriers to entry and suppress non-participation for those who need an exit. Theater Ratio (0.65): High. The rhetoric of 'decentralization' and 'trustlessness' often masks centralized points of failure and governance capture by capital, making much of the discourse performative.",
+    "perspectival_gap": "The gap is profound. The system's builders (developers) genuinely see a Scaffold, a temporary tool for liberation. Its financiers (VCs) see a clean Rope for coordinating investment. Its most desperate users (migrants) see a Tangled Rope, a lifeline that is also a source of risk. Its most naive users (retail victims) fall into a Snare. The incumbent power (the state) sees a rival Tangled Rope. The analytical classification of Tangled Rope reflects the objective reality that the system has both a genuine coordination function and a significant, asymmetric extractive function.",
+    "directionality_logic": "Beneficiaries like VCs have arbitrage exit, driving their directionality `d` near zero and classifying the system as a Rope. Victims like scammed users are trapped, maximizing `d` and pushing the effective extraction `χ` into the Snare category. Agents with mixed incentives and partial exit, like migrants and nation-states, perceive it as a Tangled Rope. The developers, as organized agents who believe in the mission, have a low `d` that allows them to perceive the system as the Scaffold they intend it to be.",
+    "mandatrophy_analysis": "This case resolves a key mandatrophy: a system's claimed or intended function (Scaffold) can be structurally different from its objective classification (Tangled Rope). The framework does not force a single 'correct' type. Instead, it models how the developers' Scaffold perspective is a valid, indexical truth for them, while the retail victim's Snare perspective is an equally valid truth for their position. The analytical classification of Tangled Rope serves as the objective baseline, acknowledging that the structure contains both the coordination function the developers build and the extractive function the victims experience."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "failing_state_snare",
+      "fiat_currency_debasement"
+    ]
+  }
+}

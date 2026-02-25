@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "bay_of_pigs_operational_silo",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.85,
+    "theater_ratio": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The CIA-Pentagon Intelligence/Action Silo (Operation Zapata)",
+    "topic_domain": "political/military",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cia_operational_autonomy",
+      "executive_plausible_deniability"
+    ],
+    "victims": [
+      "brigade_2506_exiles",
+      "us_foreign_policy_credibility",
+      "operational_viability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Cuban Exile (Brigade 2506)",
+      "comment": "PERSPECTIVE 1: THE CUBAN EXILE (SNARE) — Completely trapped within the operational plan once deployed. Their lives and liberty are extracted by a flawed strategy they have no power to influence or exit. The silo's suppression of dissent directly leads to their capture and death. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.87."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The CIA Planner",
+      "comment": "PERSPECTIVE 2: THE CIA PLANNER (ROPE) — Experiences the silo as a pure coordination mechanism essential for maintaining secrecy, operational control, and plausible deniability. From this viewpoint, the constraint solves the problem of inter-agency leaks and political interference. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.07. Negative extraction indicates a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Pentagon Skeptic (Joint Chiefs)",
+      "comment": "PERSPECTIVE 3: THE PENTAGON SKEPTIC (TANGLED ROPE) — An institutional actor with relevant expertise but constrained from meaningful input by the CIA's silo. Sees both the coordination function (secrecy) and the severe extraction (suppression of military realism, leading to mission failure). d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.75."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The US President (Kennedy)",
+      "comment": "PERSPECTIVE 4: THE US PRESIDENT (TANGLED ROPE) — The ultimate decision-maker, yet constrained by the curated information flowing from the silo. Benefits from the 'plausible deniability' the silo provides, but is a victim of the suppressed intelligence that prevents a sound decision. The constraint extracts his agency. d≈0.50, f(d)≈0.65, σ=1.0 → χ≈0.44."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Taylor Commission)",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The post-mortem analysis sees the full structure. The silo is a hybrid: a tool for coordination (secrecy) that created a pathological, asymmetric extraction of truth and viability from the system, benefiting institutional autonomy at the cost of mission success. This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.94."
+    }
+  ],
+  "interval": {
+    "start": 1960,
+    "end": 1961
+  },
+  "omegas": [
+    {
+      "id": "groupthink_vs_structure",
+      "question": "Was the failure primarily due to the psychology of groupthink among the planners, or was it an inevitable outcome of the structural silo itself?",
+      "resolution_mechanism": "Comparative analysis with other covert operations that had different information-sharing structures but similar psychological pressures.",
+      "impact": "If primarily groupthink, the silo is less causal (lower ε). If primarily structural, the silo is the central failure mechanism (ε is correct).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing psychological groupthink from structural information siloing as the primary cause of failure."
+    },
+    {
+      "id": "deniability_tradeoff",
+      "question": "At what point does the need for 'plausible deniability' become so suppressive that it guarantees operational failure?",
+      "resolution_mechanism": "Game-theoretic modeling of covert actions, correlating secrecy levels with success/failure rates across a large dataset of historical operations.",
+      "impact": "Identifies whether 'plausible deniability' is a manageable risk (Scaffold) or an inherently self-defeating constraint (Snare/Tangled Rope).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Quantifying the tradeoff between plausible deniability and operational viability."
+    },
+    {
+      "id": "pentagon_intervention_impact",
+      "question": "Would full Pentagon involvement have saved the operation, or merely made the failure larger and less deniable?",
+      "resolution_mechanism": "Counterfactual military simulations based on declassified Pentagon assessments of the operational plan.",
+      "impact": "If it would have succeeded, the silo is a pure Snare. If it would have failed anyway, the silo is more of a Piton, performing a ritual of secrecy around an already doomed plan.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Counterfactual analysis of whether Pentagon oversight could have prevented the operational failure."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1961,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1961,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Operation Zapata (the Bay of Pigs invasion) was structurally undermined by an extreme 'need to know' silo between the CIA, the Pentagon, and the Executive branch. This constraint was designed to ensure secrecy and plausible deniability but instead functioned to suppress critical military skepticism and flawed intelligence assessments. By preventing negative feedback from reaching decision-makers, the silo guaranteed the operation's failure, extracting the lives of the exile brigade and the geopolitical credibility of the United States.",
+    "key_agents": [
+      "Brigade 2506 Exiles: Primary victim (powerless/trapped) — their lives and freedom were the primary cost of the silo's dysfunction.",
+      "CIA Planners: Primary beneficiary (institutional/arbitrage) — the silo protected their operational autonomy and control over the mission.",
+      "Pentagon Leadership: Institutional victim (institutional/constrained) — possessed critical expertise that was actively suppressed by the silo.",
+      "President Kennedy: Hybrid beneficiary/victim (powerful/constrained) — sought plausible deniability but was deprived of the information needed for a sound decision.",
+      "Analytical Observers (e.g., Taylor Commission): Post-hoc analysts who identified the silo as a key structural failure."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.68): High. The constraint extracts operational viability, truth, and ultimately human lives from the system. The cost of the failure, borne by the exiles and US prestige, was immense. Suppression (0.85): Very High. The core function of the 'need to know' protocol was to actively suppress information flow and external review, creating near-total lack of alternatives for those inside the planning loop and no voice for those outside. Theater Ratio (0.60): Significant. The performance of 'plausible deniability' and covert action tropes overrode functional, integrated military planning. The process was more about maintaining the appearance of a deniable operation than ensuring its success.",
+    "perspectival_gap": "The gap is stark. For the CIA planners, the silo was a Rope, a necessary tool for coordination in a sensitive environment. For the Brigade 2506 exiles on the beach, it was a Snare, a death trap built from institutional arrogance and lies. For the sidelined Pentagon experts and the analytically-constrained President, it was a Tangled Rope, a dysfunctional system that mixed a legitimate goal (secrecy) with a pathological extraction of reality. The analytical view confirms the Tangled Rope as the most complete description of the structure.",
+    "directionality_logic": "The beneficiaries are abstract institutional principles: the CIA's autonomy and the President's deniability. The victims are concrete: the soldiers on the ground and the nation's credibility. This maps directly to the d-value derivations. The CIA planners, serving institutional autonomy, have a low d-value and see a Rope. The exiles, as trapped victims, have a high d-value and experience a Snare. The Pentagon and President, being both inside and outside the core beneficiary group and having constrained exit, fall in the middle.",
+    "mandatrophy_analysis": "This case is a powerful resolution of mandatrophy. Labeling the silo as simply a 'failure of coordination' (Rope) would be a gross mischaracterization that ignores the lethal extraction imposed on the exiles. Labeling it as pure malice (Snare) ignores the genuine (if flawed) coordination goals of the planners. The Tangled Rope classification, from the analytical view, correctly identifies the structure as a coordination mechanism that became pathologically extractive due to extreme suppression, capturing the dual nature of the failure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_intelligence_community_reform_1960s"
+    ]
+  }
+}

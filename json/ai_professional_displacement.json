@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "ai_professional_displacement",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI-Driven Displacement of Entry-Level Professional Pathways",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporations",
+      "senior_professionals",
+      "ai_tool_providers"
+    ],
+    "victims": [
+      "new_graduates",
+      "universities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The New Graduate",
+      "comment": "PERSPECTIVE 1: NEW GRADUATE (SNARE) — Trapped by student debt and a recently acquired, now partially obsolete skillset. Faces a market where the first rung of the career ladder has been removed. Alternatives are underemployment or gig work. The system extracts their future earning potential. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Corporation",
+      "comment": "PERSPECTIVE 2: CORPORATION (ROPE) — Experiences AI as a pure coordination tool for increasing efficiency and reducing labor costs. Can arbitrage talent globally and automate locally. The constraint solves the problem of allocating resources to routine tasks. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative effective extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Senior Professional",
+      "comment": "PERSPECTIVE 3: SENIOR PROFESSIONAL (TANGLED ROPE) — Benefits from AI-driven productivity gains (coordination) but is aware that the pipeline of junior talent that supports their future work is being disrupted (extraction). Their position is enhanced, but the long-term health of their profession is at risk. d≈0.50, f(d)≈0.65, σ=1.0 → χ≈0.42."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The University",
+      "comment": "PERSPECTIVE 4: UNIVERSITY (PITON) — The primary function of providing a clear pathway to professional employment is degrading. Curricula lag behind industry needs, and the value proposition of a degree is questioned. The institution maintains the theater of career services and alumni networks, but the core function is atrophying. theater_ratio=0.40, but from this perspective, the functional component is even lower."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes the dual nature of the constraint: it is a genuine technological advance that improves productivity (coordination) while simultaneously imposing a severe, asymmetric cost on a specific cohort by removing established pathways for skill development and social mobility (extraction). d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.89."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "job_transformation_vs_destruction",
+      "question": "Will AI ultimately create new, unforeseen entry-level roles at a scale that compensates for the roles it destroys?",
+      "resolution_mechanism": "Longitudinal analysis of labor market data, tracking the emergence of new job titles and skill requirements correlated with AI adoption.",
+      "impact": "If new roles emerge at scale, the constraint may transform into a Scaffold (a temporary disruption). If not, it remains a Snare for the affected generation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether AI will create new entry-level jobs to replace those displaced."
+    },
+    {
+      "id": "apprenticeship_model_obsolescence",
+      "question": "Is the traditional 'apprenticeship' model of learning-by-doing routine tasks a fundamental requirement for developing expert judgment, or can it be replaced by simulations and AI-assisted training?",
+      "resolution_mechanism": "Comparative studies of professional competency between cohorts trained traditionally versus those trained with AI-centric methods.",
+      "impact": "If the model is irreplaceable, its loss represents a long-term degradation of human capital (Snare). If it can be replaced, the constraint is a less severe coordination problem (Rope/Scaffold).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the loss of the traditional apprenticeship model is a critical long-term risk."
+    },
+    {
+      "id": "policy_intervention_efficacy",
+      "question": "Should governments or industries intervene to preserve entry-level pathways, and what form should that intervention take (e.g., training subsidies, hiring quotas, educational reform)?",
+      "resolution_mechanism": "Policy experiments and economic modeling of proposed interventions.",
+      "impact": "The choice of intervention (or non-intervention) reflects a societal preference for market efficiency versus social equity, fundamentally altering the constraint's parameters.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether society should intervene to protect entry-level career pathways."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2027,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2032,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2027,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2032,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 2022,
+    "end": 2032
+  },
+  "commentary": {
+    "narrative_context": "The rapid adoption of advanced AI systems is automating cognitive tasks that historically formed the basis of entry-level professional work in fields like law, finance, and consulting. This automation removes the traditional 'apprenticeship' phase where new graduates learned by doing routine work. As a result, a structural barrier is forming, preventing new entrants from gaining the experience necessary to advance, even as senior professionals see productivity gains. This constraint is not a simple case of technological unemployment but a fundamental restructuring of career pathways and skill development.",
+    "key_agents": [
+      "New Graduates: Primary victims (powerless/trapped) — face a shrinking pool of entry-level jobs and devalued degrees.",
+      "Corporations: Primary beneficiaries (institutional/arbitrage) — gain efficiency and reduce labor costs by automating routine tasks.",
+      "Senior Professionals: Secondary beneficiaries (powerful/mobile) — use AI as a productivity multiplier, but face a future talent pipeline shortage.",
+      "Universities: Secondary victims (institutional/constrained) — their educational model's value proposition is eroded as the career pathways it feeds disappear.",
+      "AI Tool Providers: Primary beneficiaries (institutional/arbitrage) — profit from the widespread adoption of their automation technologies."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The constraint extracts the future economic potential and career trajectory of an entire cohort of young professionals. This value is captured by corporations as cost savings and by senior professionals as augmented productivity. Suppression (0.75): High. For a new graduate in a professional field, there are few-to-no alternatives to the established career ladder. As AI adoption becomes ubiquitous across an industry, exit options vanish, making the suppression nearly total. Theater Ratio (0.40): Moderate. Corporations continue to run university recruitment programs and speak of 'investing in talent,' but these activities become increasingly performative as actual entry-level hiring quotas are slashed. The function of onboarding is replaced by the performance of brand management.",
+    "perspectival_gap": "The gap is stark. For a corporation, AI is a classic Rope: a tool that coordinates resources more efficiently to achieve a goal. For a new graduate, it is a Snare: an inescapable trap that closes off their future. The senior professional experiences it as a Tangled Rope, benefiting from the efficiency (coordination) while recognizing the long-term danger of a broken talent pipeline (extraction). This perspectival divergence is central to the constraint's stability; beneficiaries do not perceive the harm they are imposing because, from their structural position, the system is simply becoming more efficient.",
+    "directionality_logic": "Beneficiaries (corporations, AI providers) have arbitrage exit options, leading to a low derived directionality (d) and negative effective extraction (χ), classifying the constraint as a Rope from their view. Victims (new graduates) are trapped, leading to a high d and a very high χ, classifying it as a Snare. Agents with mixed roles and mobile exit options (senior professionals) fall in the middle, perceiving a Tangled Rope. The system correctly derives these different experiences from the same set of base properties by indexing to each agent's structural position.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by demonstrating that 'Tangled Rope' is the most accurate analytical classification, despite powerful actors perceiving it as a pure 'Rope'. A naive analysis might accept the corporate narrative of 'efficiency gains' at face value. The DR framework, by centering the perspective of the powerless and trapped agent, reveals the severe extractive component. It correctly identifies that a system can have a genuine coordination function (tasks are completed more efficiently) while simultaneously functioning as a high-suppression Snare for those it displaces."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "university_degree_value",
+      "social_mobility_pathways"
+    ]
+  }
+}

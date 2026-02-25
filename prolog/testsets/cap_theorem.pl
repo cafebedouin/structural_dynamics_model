@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: cap_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2024-05-21
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_cap_theorem, []).
@@ -31,7 +32,6 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
@@ -40,10 +40,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,21 +53,27 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: cap_theorem
  *   human_readable: CAP Theorem (Brewer's Theorem)
- *   domain: technological
+ *   domain: distributed_systems/computer_science
  *
  * SUMMARY:
- *   The CAP theorem states that any distributed data store can only provide two
- *   of three guarantees: Consistency (every read receives the most recent write),
- *   Availability (every request receives a response), and Partition Tolerance
- *   (the system continues to operate despite network failures). It is a
- *   fundamental, unchangeable limit in distributed computing, analogous to a
- *   law of physics. As such, it classifies as a Mountain from all perspectives,
- *   defining the landscape upon which other constraints (Ropes, Snares) are built.
+ *   The CAP theorem, or Brewer's theorem, is a fundamental principle in
+ *   distributed computing. It states that any distributed data store can only
+ *   provide two of three guarantees simultaneously: Consistency (every read
+ *   receives the most recent write or an error), Availability (every request
+ *   receives a non-error response, without guarantee that it contains the
+ *   most recent write), and Partition Tolerance (the system continues to
+ *   operate despite an arbitrary number of messages being dropped or delayed
+ *   by the network between nodes). Since network partitions are a given in
+ *   real-world distributed systems, the choice is effectively between
+ *   Consistency and Availability (CP vs. AP). This is not a policy choice but
+ *   a logical impossibility, making it a classic example of a Mountain
+ *   constraint.
  *
- * KEY AGENTS (by structural relationship):
- *   - The On-Call Engineer: Experiences the consequences of the theorem during a failure ([powerless]/[trapped]).
- *   - The Cloud Infrastructure Provider: Builds systems within the theorem's limits ([institutional]/[arbitrage]).
- *   - The Distributed Systems Architect: Analytical observer mapping the trade-offs ([analytical]/[analytical]).
+ * KEY AGENTS:
+ *   - System Architects: Analytical agents who use the theorem as a foundational design principle.
+ *   - Startup Founders: Powerless agents (relative to the theorem) who must build their systems within its constraints.
+ *   - Cloud Providers: Institutional agents who offer services that embody different CAP trade-offs, but cannot escape the theorem itself.
+ *   - End Users: Moderate agents who experience the downstream effects of the design choices mandated by the theorem.
  */
 
 /* ==========================================================================
@@ -77,91 +81,60 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: A logical theorem does not "extract" value; it defines the space
-% of possibility. The cost of trade-offs is a consequence of reality, not an
-% extraction by the theorem itself. ε is therefore near zero.
-domain_priors:base_extractiveness(cap_theorem, 0.05).
-
-% Rationale: The alternative (a CAP-complete system) is logically impossible.
-% Its suppression is absolute and requires no active enforcement, hence a
-% near-zero score.
+domain_priors:base_extractiveness(cap_theorem, 0.02).
 domain_priors:suppression_score(cap_theorem, 0.01).
 domain_priors:theater_ratio(cap_theorem, 0.0).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(cap_theorem, extractiveness, 0.05).
+narrative_ontology:constraint_metric(cap_theorem, extractiveness, 0.02).
 narrative_ontology:constraint_metric(cap_theorem, suppression_requirement, 0.01).
 narrative_ontology:constraint_metric(cap_theorem, theater_ratio, 0.0).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-%
-% Accessibility Collapse: Alternatives are logically impossible.
-narrative_ontology:constraint_metric(cap_theorem, accessibility_collapse, 1.0).
-% Resistance: Meaningful resistance is incoherent.
-narrative_ontology:constraint_metric(cap_theorem, resistance, 0.0).
+narrative_ontology:constraint_metric(cap_theorem, accessibility_collapse, 0.95).
+narrative_ontology:constraint_metric(cap_theorem, resistance, 0.05).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(cap_theorem, mountain).
 narrative_ontology:human_readable(cap_theorem, "CAP Theorem (Brewer's Theorem)").
-narrative_ontology:topic_domain(cap_theorem, "technological").
+narrative_ontology:topic_domain(cap_theorem, "distributed_systems/computer_science").
 
-% --- Emergence flag (required for mountain constraints) ---
-% The theorem is a discovered property of distributed systems, not a human construct.
-% Required for the mountain metric gate.
 domain_priors:emerges_naturally(cap_theorem).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a Mountain (a logical law), the CAP theorem has no beneficiaries or
-% victims in a structural sense. It is an inert feature of the environment.
-% No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The computer scientist sees CAP as a fundamental, unchangeable feature of
-% the computational universe. It is a pure Mountain.
+% PERSPECTIVE 1: THE SYSTEM ARCHITECT (MOUNTAIN) — The theorem is a fundamental, unchangeable law of the design space for distributed systems. It cannot be exited, only analyzed and designed around. This is the canonical analytical view.
 constraint_indexing:constraint_classification(cap_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: THE STARTUP FOUNDER (MOUNTAIN) — A resource-constrained actor is completely trapped by the theorem's logic. They cannot build a system that violates it, regardless of their goals or resources. It is an immutable environmental constraint.
+constraint_indexing:constraint_classification(cap_theorem, mountain,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE INFRASTRUCTURE ARCHITECT (MOUNTAIN)
-% For the CTO or architect, CAP is the terrain upon which they build Ropes
-% (e.g., choosing an AP or CP system). The theorem itself is not the Rope;
-% it is the unchangeable Mountain that necessitates the Rope's design.
-% Their ability to choose between database types (arbitrage) does not
-% change the nature of the underlying theorem.
+% PERSPECTIVE 3: THE CLOUD PROVIDER (MOUNTAIN) — An institutional actor with vast resources still cannot violate the theorem. Their 'exit' is arbitrage: offering different services that make different trade-offs (e.g., a CP database vs. an AP one), but the underlying constraint remains fixed.
 constraint_indexing:constraint_classification(cap_theorem, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ON-CALL ENGINEER (MOUNTAIN)
-% During a network partition, the engineer is trapped in a situation that
-% feels like a Snare. However, the theorem is not the Snare. The Snare is
-% the specific system's failure mode, which is a consequence of the design
-% choices made in the context of the CAP Mountain. The theorem itself remains
-% an inert, unchangeable fact of the situation.
+% PERSPECTIVE 4: THE END USER (MOUNTAIN) — The user experiences the consequences of the trade-offs (e.g., stale data vs. an error message), but the underlying constraint is a fixed limit. Their ability to switch services doesn't change the theorem's validity.
 constraint_indexing:constraint_classification(cap_theorem, mountain,
-    context(agent_power(powerless),
+    context(agent_power(moderate),
             time_horizon(immediate),
-            exit_options(trapped),
+            exit_options(mobile),
             spatial_scope(local))).
 
 /* ==========================================================================
@@ -170,24 +143,26 @@ constraint_indexing:constraint_classification(cap_theorem, mountain,
 
 :- begin_tests(cap_theorem_tests).
 
-test(perspectival_invariance) :-
-    % Verify that as a fundamental law, it is a Mountain from all perspectives.
-    constraint_indexing:constraint_classification(cap_theorem, mountain, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(cap_theorem, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(cap_theorem, mountain, context(agent_power(powerless), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(cap_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(cap_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    % Verify metrics are within Mountain thresholds.
-    narrative_ontology:constraint_metric(cap_theorem, extractiveness, E),
-    narrative_ontology:constraint_metric(cap_theorem, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(cap_theorem, ExtMetricName, E),
+    domain_priors:suppression_score(cap_theorem, S),
     E =< 0.25,
     S =< 0.05.
 
-test(natural_law_profile_validation) :-
-    % Verify the constraint has the required profile for natural law certification.
+test(nl_profile_validation) :-
     domain_priors:emerges_naturally(cap_theorem),
-    narrative_ontology:constraint_metric(cap_theorem, accessibility_collapse, AC), AC >= 0.85,
-    narrative_ontology:constraint_metric(cap_theorem, resistance, R), R =< 0.15.
+    narrative_ontology:constraint_metric(cap_theorem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(cap_theorem, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(cap_theorem_tests).
 
@@ -197,87 +172,47 @@ test(natural_law_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The CAP theorem is a formal, proven limit in distributed computing. Its
- *   metrics reflect this: base extractiveness (ε=0.05) is minimal, as the
- *   theorem itself doesn't extract value but defines the problem space.
- *   Suppression (0.01) is also minimal, as the alternative (a CAP-complete
- *   system) is logically impossible and requires no active suppression. The
- *   addition of the Natural Law profile metrics (accessibility_collapse=1.0,
- *   resistance=0.0, emerges_naturally=true) formally certifies its Mountain
- *   status, ensuring it passes the engine's structural checks for natural laws.
+ *   This constraint is classified as a Mountain because it represents a fundamental, logically derived limit. Extractiveness (ε=0.02) and Suppression (0.01) are near zero because the theorem does not extract value or coerce behavior; it merely describes the possible state space. It emerges naturally (true) from the properties of distributed networks. Resistance (0.05) is minimal as the theorem is formally proven. Accessibility Collapse (0.95) is high; once the terms are understood, the trade-off becomes self-evident and is a cornerstone of distributed systems education. There is no theater (0.0).
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. The theorem is a Mountain for all observers.
- *   The initial intuition that it is a Rope for an architect or a Snare for an
- *   engineer is a category error. Those agents are interacting with systems
- *   (Ropes, Snares) that are *built in response to* the Mountain. The framework
- *   correctly distinguishes the fundamental constraint (the theorem) from the
- *   contingent systems designed around it.
+ *   There is no perspectival gap. This is a key diagnostic feature of a true Mountain constraint. All observers, regardless of their power, exit options, or time horizon, converge on the same classification. The theorem is an invariant feature of the environment for all actors.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain, the constraint is inert and has no directionality. It does
- *   not have structural beneficiaries or victims. It is a feature of the
- *   environment that affects all actors, much like gravity.
+ *   The constraint is symmetric and non-extractive, so there are no beneficiaries or victims. The directionality `d` for any agent will be derived from canonical fallbacks based on their power level. However, with a base extractiveness (ε) of 0.02, the effective extraction (χ) is negligible (≈0) for all perspectives, reinforcing the Mountain classification across the board.
  *
  * MANDATROPHY ANALYSIS:
- *   By classifying the CAP theorem as a Mountain, we avoid mislabeling a
- *   fundamental limit as a form of social or economic extraction. This prevents
- *   the false conclusion that the "costs" imposed by the theorem are the result
- *   of a policy that could be changed, rather than a logical necessity that must
- *   be engineered around.
+ *   The CAP theorem serves as a perfect baseline for identifying true Mountain constraints. It prevents the mandatrophy of misclassifying a fundamental limit as a contingent policy choice or an extractive system. Any attempt to frame the CAP trade-off as a 'snare' imposed by cloud providers, for example, would be immediately falsified by the structural metrics. It is a non-negotiable feature of reality, not an artificial rule.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_cap_theorem,
-    'Is the CAP theorem a true logical primitive, or could a novel computational model (e.g., quantum networking) create a context where the trade-offs are bypassed, revealing it as a Scaffold of classical computing?',
-    'Formal proof of a distributed model that provides C, A, and P simultaneously under a non-classical paradigm.',
-    'If true, the constraint would be reclassified from Mountain to Scaffold, representing a temporary limit of a specific technological era. If false, its Mountain status is further confirmed.',
-    confidence_without_resolution(high)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(cap_theorem, 0, 10).
+narrative_ontology:interval(cap_theorem, 2000, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required. Base extractiveness (0.05) is below the 0.46 threshold for
-% mandatory temporal tracking. As a logical law, its metrics are static.
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-% narrative_ontology:coordination_type(cap_theorem, [type]).
+narrative_ontology:affects_constraint(cap_theorem, eventual_consistency).
+narrative_ontology:affects_constraint(cap_theorem, acid_compliance).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(cap_theorem, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(cap_theorem, pacelc_theorem).
+% DUAL FORMULATION NOTE:
+% The CAP theorem is an upstream logical constraint that necessitates the creation of downstream coordination patterns like 'eventual consistency' to manage the trade-offs it imposes.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed. As a Mountain, the constraint is inert and has no
-% inherent directionality.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

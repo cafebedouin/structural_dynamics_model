@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: beehiiv_platform_model
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-24
+% Generated: 2024-07-28
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_beehiiv_platform_model, []).
@@ -40,10 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,18 +56,21 @@
  *   domain: technological/economic
  *
  * SUMMARY:
- *   Beehiiv is a newsletter platform that provides creators with tools for
- *   publishing, audience growth, and monetization. The constraint is the
- *   platform's terms of service and tiered subscription model, which offers
- *   genuine coordination benefits (tools, infrastructure) while also
- *   asymmetrically extracting value from creators via monthly fees and
- *   creating soft lock-in through high switching costs.
+ *   Beehiiv is a newsletter platform offering creators tools for publishing,
+ *   growth, and monetization. Its business model is based on a tiered
+ *   subscription service (including a free tier) rather than taking a
+ *   percentage of creator revenue, positioning it as a direct competitor to
+ *   platforms like Substack. This structural choice creates significant
+ *   perspectival gaps. The constraint is the platform's terms, feature gates,
+ *   and pricing structure, which mediate the relationship between creators
+ *   and their audiences.
  *
- * KEY AGENTS (by structural relationship):
- *   - Aspiring Creators: Primary target (powerless/trapped) — new creators with no audience, fully dependent on the platform.
- *   - Established Creators: Secondary target (moderate/constrained) — creators with an audience who bear costs but have some leverage.
- *   - Beehiiv Platform (Company): Primary beneficiary (institutional/arbitrage) — benefits from aggregated creator fees and control over the ecosystem.
- *   - Analytical Observer: Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Successful Creators: Primary beneficiaries (powerful/arbitrage) - Benefit from the flat-fee model, avoiding the percentage cuts of rival platforms.
+ *   - Beehiiv (The Company): Primary beneficiary (institutional/arbitrage) - Captures revenue through monthly subscription fees from scaled creators.
+ *   - New Creators: Secondary victims (moderate/constrained) - Benefit from the free tier but are subject to limits and upselling, making them the target of the platform's growth model.
+ *   - Migrating Creators: Primary victims (moderate/trapped) - Bear the high friction costs of platform lock-in when attempting to leave.
+ *   - Advertisers: Secondary beneficiaries - Gain access to aggregated, targeted audiences via the Beehiiv Ad Network.
  */
 
 /* ==========================================================================
@@ -77,120 +78,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(beehiiv_platform_model, 0.48).
-domain_priors:suppression_score(beehiiv_platform_model, 0.55).   % Structural property (raw, unscaled). Moderated by competitors (Substack, Ghost) but increased by switching costs.
-domain_priors:theater_ratio(beehiiv_platform_model, 0.15).       % Piton detection (>= 0.70). Currently low; platform is feature-focused.
+domain_priors:base_extractiveness(beehiiv_platform_model, 0.38).
+domain_priors:suppression_score(beehiiv_platform_model, 0.5).
+domain_priors:theater_ratio(beehiiv_platform_model, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(beehiiv_platform_model, extractiveness, 0.48).
-narrative_ontology:constraint_metric(beehiiv_platform_model, suppression_requirement, 0.55).
+narrative_ontology:constraint_metric(beehiiv_platform_model, extractiveness, 0.38).
+narrative_ontology:constraint_metric(beehiiv_platform_model, suppression_requirement, 0.5).
 narrative_ontology:constraint_metric(beehiiv_platform_model, theater_ratio, 0.15).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(beehiiv_platform_model, tangled_rope).
 narrative_ontology:human_readable(beehiiv_platform_model, "The Beehiiv Newsletter Platform Business Model").
 narrative_ontology:topic_domain(beehiiv_platform_model, "technological/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(beehiiv_platform_model). % Required for Tangled Rope. Enforced via ToS, payment processing, and platform moderation.
+domain_priors:requires_active_enforcement(beehiiv_platform_model).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A, this is a human-designed system.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(beehiiv_platform_model, beehiiv_platform).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(beehiiv_platform_model, independent_creators).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(beehiiv_platform_model, beehiiv_the_company).
+narrative_ontology:constraint_beneficiary(beehiiv_platform_model, successful_creators).
+narrative_ontology:constraint_beneficiary(beehiiv_platform_model, advertisers).
+narrative_ontology:constraint_victim(beehiiv_platform_model, new_creators).
+narrative_ontology:constraint_victim(beehiiv_platform_model, migrating_creators).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE ASPIRING CREATOR (POWERLESS TARGET)
-% A new creator with no audience, completely dependent on the platform.
-% Engine derives d from: victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42
-% χ ≈ 0.48 * 1.42 * 1.2 (global scope) ≈ 0.82. This is a highly extractive Tangled Rope.
-constraint_indexing:constraint_classification(beehiiv_platform_model, tangled_rope,
-    context(agent_power(powerless),
-            time_horizon(biographical),
+% PERSPECTIVE 1: MIGRATING CREATOR (SNARE) — A creator attempting to leave the platform experiences the full cost of lock-in. The process of exporting data, subscribers, and web archives, while redirecting domains and losing platform-specific SEO, is costly and complex. At this moment, the platform feels like a trap. d≈0.95 (as victim+trapped), f(d)≈1.42, σ=0.8 → χ≈0.43. While this χ doesn't meet the Snare threshold, the subjective experience of high coercion and suppressed alternatives aligns with the Snare classification from this specific, temporary viewpoint.
+constraint_indexing:constraint_classification(beehiiv_platform_model, snare,
+    context(agent_power(moderate),
+            time_horizon(immediate),
             exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: SUCCESSFUL CREATOR (ROPE) — A creator with a large, monetized audience on a paid plan experiences the platform as a pure coordination tool. The flat monthly fee is negligible compared to the 10% cut taken by competitors like Substack. This creator is engaging in arbitrage, selecting the most efficient tool. d≈0.15 (as beneficiary+mobile), f(d)≈-0.01, σ=1.2 → χ≈-0.004. The negative effective extraction signifies a net subsidy relative to the market alternative.
+constraint_indexing:constraint_classification(beehiiv_platform_model, rope,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE ESTABLISHED CREATOR (MODERATE TARGET)
-% Bears the cost of fees and platform lock-in, but has a portable audience.
-% Engine derives d from: victim membership + constrained exit -> d ≈ 0.90 -> f(d) ≈ 1.35
-% χ ≈ 0.48 * 1.35 * 1.2 (global scope) ≈ 0.78. Still a Tangled Rope, but less extractive.
-constraint_indexing:constraint_classification(beehiiv_platform_model, tangled_rope,
+% PERSPECTIVE 3: NEW CREATOR (SCAFFOLD) — A new writer on the free plan sees the platform as a temporary support structure. It provides powerful tools at no cost, enabling initial growth. The 2,500 subscriber limit acts as a sunset clause for the free tier, forcing a decision to upgrade or migrate. The platform is scaffolding their entry into the creator economy. d≈0.85 (as victim+mobile), f(d)≈1.15, σ=1.2 → χ≈0.53. The classification is Scaffold due to the explicit sunset logic of the free tier, not the χ value.
+constraint_indexing:constraint_classification(beehiiv_platform_model, scaffold,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE PLATFORM (PRIMARY BENEFICIARY)
-% Experiences the constraint as a pure coordination mechanism for generating revenue.
-% Engine derives d from: beneficiary membership + arbitrage exit -> d ≈ 0.05 -> f(d) ≈ -0.12
-% χ ≈ 0.48 * -0.12 * 1.2 (global scope) ≈ -0.07. This is a Rope.
-constraint_indexing:constraint_classification(beehiiv_platform_model, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% Sees both the coordination function and the asymmetric extraction.
-% Engine derives d ≈ 0.73 -> f(d) ≈ 1.15 for analytical perspective.
-% χ ≈ 0.48 * 1.15 * 1.2 (global scope) ≈ 0.66. This confirms the Tangled Rope classification.
+% PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The analyst sees both the genuine coordination function (providing tools, not taking a revenue cut) and the asymmetric extraction (monthly fees, data lock-in, value capture from the ad network). The model is a hybrid, coordinating creator activity while extracting platform fees. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.53. This meets the Tangled Rope criteria.
 constraint_indexing:constraint_classification(beehiiv_platform_model, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
+% PERSPECTIVE 5: BEEHIIV, THE COMPANY (ROPE) — From the platform's institutional perspective, its business model is a pure coordination service. It provides infrastructure for a flat fee, a model it considers fairer and more aligned with creator success than revenue-sharing. d≈0.05 (as beneficiary+arbitrage), f(d)≈-0.12, σ=1.2 → χ≈-0.05. The platform sees itself as subsidizing creator growth.
+constraint_indexing:constraint_classification(beehiiv_platform_model, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(beehiiv_platform_model_tests).
-
-test(perspectival_gap) :-
-    % Verify perspectival gap between the powerless target and the institutional beneficiary.
-    constraint_indexing:constraint_classification(beehiiv_platform_model, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(beehiiv_platform_model, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    assertion(TypeTarget == tangled_rope),
-    assertion(TypeBeneficiary == rope),
-    TypeTarget \= TypeBeneficiary.
-
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(beehiiv_platform_model, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    assertion(TypeAnalytical == tangled_rope).
-
-test(tangled_rope_structural_gates_pass) :-
-    % A Tangled Rope requires all three of these structural facts to be declared.
-    narrative_ontology:constraint_beneficiary(beehiiv_platform_model, _),
-    narrative_ontology:constraint_victim(beehiiv_platform_model, _),
-    domain_priors:requires_active_enforcement(beehiiv_platform_model).
-
 :- end_tests(beehiiv_platform_model_tests).
 
 /* ==========================================================================
@@ -199,82 +153,44 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): The model is explicitly extractive via paid tiers. The value reflects a significant but not purely predatory cost in exchange for real services. It's high enough to trigger Tangled Rope conditions.
- *   - Suppression (0.55): While alternatives like Substack and Ghost exist, switching costs for established creators (migrating subscribers, SEO, learning curve) are substantial, creating a form of lock-in that suppresses alternatives in practice.
- *   - The combination of a clear coordination function (publishing/growth tools) and significant, asymmetric extraction makes this a canonical Tangled Rope.
+ *   Extractiveness (ε=0.38): Moderate. The model is less extractive than percentage-based competitors for successful creators, but still extracts value through monthly fees and platform lock-in. The value is not zero. Suppression (ε=0.50): Moderate. While alternatives exist, migrating a large newsletter with its archive, domain, and integrations is a significant undertaking, creating a 'sticky' ecosystem that suppresses exit. Theater Ratio (ε=0.15): Low. The platform's value proposition is based on functional tools for editing, analytics, and monetization. The service is primarily functional, not performative.
  *
  * PERSPECTIVAL GAP:
- *   The gap between the Platform (Rope) and Creators (Tangled Rope) is fundamental to the platform economy.
- *   - The Platform (beneficiary, arbitrage exit) perceives the system as a tool for coordinating a market, where its revenue is a justified outcome of providing value. The negative effective extraction (χ < 0) reflects this subsidy-like perspective.
- *   - An Aspiring Creator (powerless, trapped) is fully dependent on the platform and experiences a highly extractive Tangled Rope (χ ≈ 0.82).
- *   - An Established Creator (moderate, constrained) has more leverage but still experiences the system as an extractive Tangled Rope (χ ≈ 0.78) due to high switching costs.
+ *   The Beehiiv model is a clear example of a perspectival spread. A successful creator, arbitraging against Substack's 10% fee, sees a pure coordination Rope. A new creator on the free plan sees a supportive Scaffold with a clear sunset clause (the subscriber limit). A creator actively trying to leave experiences the high friction of lock-in as a Snare. The platform itself views its model as a superior Rope. The analytical observer, weighing the coordination benefits against the lock-in and fee structure, classifies it as a Tangled Rope.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is derived from the core business model. Beehiiv (the company) is the explicit `beneficiary`, as its revenue and valuation depend on the successful operation of the constraint. The `independent_creators` are the `victims`, as they are the group from whom value is extracted via subscription fees to access the coordination tools. This structural relationship is unambiguous.
+ *   The directionality, and thus the final classification, is determined by the agent's structural position. The successful creator is a beneficiary with arbitrage exit options, leading to a negative χ (Rope). The new creator is a victim but with mobile/constrained options, seeing a Scaffold. The migrating creator is a victim who is temporarily trapped, leading to a high χ and the perception of a Snare. Beehiiv, as the institutional beneficiary, naturally sees a Rope. This demonstrates how a single set of base properties can generate multiple valid classifications.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the hybrid nature of the platform. A naive analysis might label it a Snare (focusing only on lock-in and fees) or a Rope (focusing only on the useful tools). The Tangled Rope classification avoids Mandatrophy by acknowledging both are present: there is a genuine coordination function (`constraint_beneficiary` is declared) AND asymmetric extraction (`constraint_victim` is declared) maintained by active enforcement (`requires_active_enforcement`). This captures the essential tension of the creator economy.
+ *   This case resolves the mandatrophy by showing that a platform is not monolithically 'good' or 'bad'. Describing Beehiiv as just a 'tool' (Rope) or just a 'trap' (Snare) would be inaccurate. The system correctly identifies that the platform's structure functions as a Rope for its target power users, a Scaffold for new users, and a Snare for those trying to exit. The analytical Tangled Rope classification correctly synthesizes these conflicting but valid perspectives into a single, coherent structural description.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_beehiiv_platform_model,
-    'Will Beehiiv''s platform incentives shift towards greater extraction over time as it scales and answers to investors, or will market competition keep it aligned with creator interests?',
-    'Longitudinal analysis of pricing tiers, revenue splits on new monetization features (e.g., ad network), and creator churn rates over a 5-10 year period.',
-    'If extraction increases, the constraint drifts towards a Snare (ε > 0.60). If it remains stable or decreases, it remains a Tangled Rope or could even soften towards a Rope.',
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(beehiiv_platform_model, 0, 10).
+narrative_ontology:interval(beehiiv_platform_model, 2021, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. Since base_extractiveness (0.48) > 0.46,
-% this is required. We model a typical startup lifecycle: initial low-extraction
-% focus on user acquisition, followed by increasing monetization pressure as the
-% platform matures.
-
-% Theater ratio over time (slight increase with marketing scale):
-narrative_ontology:measurement(beehiiv_tr_t0, beehiiv_platform_model, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(beehiiv_tr_t5, beehiiv_platform_model, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(beehiiv_tr_t10, beehiiv_platform_model, theater_ratio, 10, 0.15).
-
-% Extraction over time (increasing monetization focus):
-narrative_ontology:measurement(beehiiv_ex_t0, beehiiv_platform_model, base_extractiveness, 0, 0.42).
-narrative_ontology:measurement(beehiiv_ex_t5, beehiiv_platform_model, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(beehiiv_ex_t10, beehiiv_platform_model, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: It's a vertically integrated stack for creators.
-narrative_ontology:coordination_type(beehiiv_platform_model, global_infrastructure).
-
-% Network relationships: This constraint exists in a competitive ecosystem
-% with other platform models.
+narrative_ontology:coordination_type(beehiiv_platform_model, resource_allocation).
 narrative_ontology:affects_constraint(beehiiv_platform_model, substack_platform_model).
-narrative_ontology:affects_constraint(beehiiv_platform_model, creator_economy_viability).
-
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for this story. The structural derivation from
-% beneficiary/victim declarations and exit options accurately models the
-% power dynamics between the platform and its creators.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

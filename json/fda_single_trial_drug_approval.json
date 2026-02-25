@@ -1,0 +1,144 @@
+{
+  "header": {
+    "constraint_id": "fda_single_trial_drug_approval",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FDA Proposal for Single-Trial Drug Approvals",
+    "topic_domain": "regulatory/healthcare",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "biotech_investors"
+    ],
+    "victims": [
+      "patients_receiving_drugs",
+      "public_and_private_insurers",
+      "prescribing_physicians"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Inadequately Protected Patient",
+      "comment": "PERSPECTIVE 1: PATIENT (SNARE) \u2014 For an individual patient, especially one with a serious illness, the regulatory system is a black box they are trapped within. Lowering the evidence standard transfers the unquantified risk of an ineffective or harmful drug directly onto them. The potential for faster access is offset by the risk of receiving a treatment approved on weaker data. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Expedited Innovator",
+      "comment": "PERSPECTIVE 2: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 From the manufacturer's viewpoint, this rule change removes a costly, time-consuming barrier (the second trial), representing a pure coordination win that accelerates revenue. The financial benefit is immense and direct. They can arbitrage this streamlined process against stricter regulatory regimes. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.09."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Constrained Regulator",
+      "comment": "PERSPECTIVE 3: FDA (TANGLED ROPE) \u2014 The FDA is caught between its mandate to ensure drug safety/efficacy (coordination) and pressure from industry and patient advocacy groups for faster approvals (which enables extraction). As the sole national regulator, it cannot exit this role. The policy attempts to serve both goals, embodying the hybrid nature of a Tangled Rope."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL (TANGLED ROPE) \u2014 This is the system's objective classification. The policy has a genuine coordination function (speeding access to potentially life-saving drugs) but is structured to facilitate massive, asymmetric extraction by shifting the financial and health risks of uncertainty from producers to consumers. The high base extraction (\u03b5=0.68) and suppression (0.75) confirm its hybrid nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficacy_tradeoff",
+      "question": "Does the net public health benefit from faster access to some effective drugs outweigh the societal cost of approving more ineffective or harmful ones?",
+      "resolution_mechanism": "Long-term, post-market surveillance data comparing health outcomes and total cost of care for drugs approved under single-trial vs. two-trial standards.",
+      "impact": "If the net benefit is negative, the constraint's coordination function is illusory, making it a pure Snare from a societal viewpoint. If positive, the Tangled Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net public health benefit of faster access versus lower evidence standards."
+    },
+    {
+      "id": "regulatory_capture",
+      "question": "To what extent is this rule change a product of regulatory capture by the pharmaceutical industry versus a good-faith effort to solve access problems for rare diseases?",
+      "resolution_mechanism": "Analysis of industry lobbying expenditures, the 'revolving door' between the FDA and pharmaceutical companies, and internal agency documents detailing the justification for the rule change.",
+      "impact": "If evidence points strongly to capture, the claimed 'coordination' function is purely theatrical, and the constraint is functionally a Snare designed to subsidize industry.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the rule change stems from public interest or industry capture."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 2025,
+    "end": 2035
+  },
+  "commentary": {
+    "narrative_context": "The FDA has proposed a rule change that would no longer strictly require two large, controlled clinical trials for new drug approvals, allowing one to suffice in some cases. The stated purpose is to accelerate the delivery of new medicines, particularly for rare and serious diseases where patient recruitment is challenging. However, this policy structurally transfers risk: the financial risk of a failed second trial is removed from the manufacturer, while the health risk of a potentially ineffective or unsafe drug is transferred to patients and the broader healthcare system.",
+    "key_agents": [
+      "Pharmaceutical Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 Save hundreds of millions in R&D costs and achieve faster market access and revenue.",
+      "Patients: Primary victim (powerless/trapped) \u2014 Bear the ultimate risk of receiving treatments approved on a weaker evidence base.",
+      "FDA: Institutional regulator (institutional/constrained) \u2014 Balances dual pressures of ensuring public safety and facilitating medical innovation.",
+      "Public Citizen & other watchdogs: Analytical observers (organized/analytical) \u2014 Argue the change dangerously weakens consumer protection."
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.68) is high because the value of the transferred risk (avoided trial costs for pharma, potential harm/inefficacy for patients) is substantial. Suppression (0.75) is high because patients have no alternative to the regulated drug market and must trust the FDA's seal of approval; they cannot opt into a 'two-trial-only' system.",
+    "perspectival_gap": "The gap is stark. The manufacturer sees the removal of a 'redundant' hurdle, a pure coordination improvement (Rope). The patient, who relies on that hurdle for safety, experiences the change as a hidden danger they are trapped by (Snare). The FDA, caught between these interests, operates within a Tangled Rope, attempting to achieve a public good (access) through a mechanism that creates private, extractive opportunities. The analytical view aligns with the FDA's structural position, identifying the constraint as a Tangled Rope.",
+    "directionality_logic": "The directionality is derived directly from the structural relationships. Beneficiaries (pharma) have arbitrage exit and reap huge financial gains, giving them a very low, even negative, effective extraction (\u03c7). Victims (patients) are trapped and bear the costs, resulting in a very high derived directionality (d) and a high effective extraction, classifying their experience as a Snare. This gap is the core of the political conflict over the rule.",
+    "mandatrophy_analysis": "This case is a canonical example of potential mandatrophy. The policy is presented as a coordination mechanism (Scaffold/Rope) to 'help patients' by accelerating access. However, its primary structural effect is extractive, shifting risk and cost away from corporations. The Tangled Rope classification correctly identifies this duality, preventing the system from misinterpreting a highly extractive policy as a purely benevolent act of coordination. The lack of a sunset clause further invalidates the 'Scaffold' claim."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "drug_pricing_negotiation",
+      "intellectual_property_patents"
+    ]
+  }
+}

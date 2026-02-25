@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: ai_adoption_stigma
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-22
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_ai_adoption_stigma, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,21 +54,23 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ai_adoption_stigma
  *   human_readable: Workplace Stigma Against Using Generative AI
- *   domain: technological
+ *   domain: technological/social_norms
  *
  * SUMMARY:
- *   An emergent social norm in many workplaces treats the use of generative AI
- *   for core tasks as a form of cheating, incompetence, or a threat to job
- *   security. This stigma forces many employees to use AI tools in secret,
- *   suppressing open discussion, formal training, and the development of new
- *   best practices. The constraint transfers the risk of technological
- *   adoption from the employer to the individual employee.
+ *   An emergent social norm in many professional workplaces treats the use of
+ *   generative AI for core tasks as a form of cheating, incompetence, or a
+ *   threat to job security. This informal constraint is not codified in
+ *   policy but is enforced through social pressure, peer judgment, and
+ *   managerial bias towards observable, traditional effort. It creates a
+ *   conflict between individual incentives for efficiency and collective
+ *   anxieties about technological displacement and skill devaluation.
  *
- * KEY AGENTS (by structural relationship):
- *   - non_technical_knowledge_workers: Primary target (powerless/trapped) — Fear being replaced or seen as incompetent, forcing them to use AI secretly and bear the risks.
- *   - corporate_employers: Primary beneficiary (institutional/arbitrage) — Benefit from productivity gains of secret AI use without investing in training or policy, while retaining leverage over their workforce.
- *   - ai_tool_providers: Secondary beneficiary (powerful/mobile) - Benefit from widespread, albeit unofficial, adoption.
- *   - analytical_observer: Analytical observer — Sees the full structure of asymmetric risk transfer and suppressed coordination.
+ * KEY AGENTS:
+ *   - AI Adopters: Primary victims (powerless/trapped) — seek to improve productivity but face social and career penalties.
+ *   - Traditionalist Knowledge Workers: Primary beneficiaries (moderate/constrained) — their skills and job security are shielded by the norm.
+ *   - Effort-Valuing Managers: Secondary beneficiaries (organized/constrained) — the norm reinforces traditional models of performance evaluation based on visible labor.
+ *   - C-Suite Leadership: Institutional actors (institutional/arbitrage) — see the norm as a temporary cultural barrier to achieving higher organizational productivity.
+ *   - Analytical Observer: The system view (analytical/analytical) — recognizes the dual nature of the constraint as both coordination and extraction.
  */
 
 /* ==========================================================================
@@ -77,70 +78,66 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ai_adoption_stigma, 0.52). % Extraction of psychological safety, career risk, and uncompensated skill development.
-domain_priors:suppression_score(ai_adoption_stigma, 0.75).   % High suppression of open AI use due to fear of reprisal.
-domain_priors:theater_ratio(ai_adoption_stigma, 0.15).       % Low theater; this is an active, coercive norm, not a vestigial one.
+domain_priors:base_extractiveness(ai_adoption_stigma, 0.55).
+domain_priors:suppression_score(ai_adoption_stigma, 0.65).
+domain_priors:theater_ratio(ai_adoption_stigma, 0.4).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ai_adoption_stigma, extractiveness, 0.52).
-narrative_ontology:constraint_metric(ai_adoption_stigma, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(ai_adoption_stigma, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(ai_adoption_stigma, extractiveness, 0.55).
+narrative_ontology:constraint_metric(ai_adoption_stigma, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(ai_adoption_stigma, theater_ratio, 0.4).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(ai_adoption_stigma, tangled_rope).
 narrative_ontology:human_readable(ai_adoption_stigma, "Workplace Stigma Against Using Generative AI").
-narrative_ontology:topic_domain(ai_adoption_stigma, "technological").
+narrative_ontology:topic_domain(ai_adoption_stigma, "technological/social_norms").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(ai_adoption_stigma). % Required for Tangled Rope. The stigma is enforced by fear of job loss/demotion.
+domain_priors:requires_active_enforcement(ai_adoption_stigma).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-narrative_ontology:constraint_beneficiary(ai_adoption_stigma, corporate_employers).
-narrative_ontology:constraint_victim(ai_adoption_stigma, non_technical_knowledge_workers).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(ai_adoption_stigma, traditionalist_knowledge_workers).
+narrative_ontology:constraint_beneficiary(ai_adoption_stigma, effort_valuing_managers).
+narrative_ontology:constraint_victim(ai_adoption_stigma, ai_adopters).
+narrative_ontology:constraint_victim(ai_adoption_stigma, organizational_productivity).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function.
-   The engine derives d from beneficiary/victim membership + exit_options.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (NON-TECHNICAL KNOWLEDGE WORKERS)
-% From the perspective of an employee fearing replacement, the stigma is a
-% coercive trap that forces them into a high-risk, low-reward situation.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(ai_adoption_stigma, tangled_rope,
+% PERSPECTIVE 1: EARLY ADOPTER (SNARE) — Trapped within a team or company culture that penalizes efficiency. Using the best tool for the job leads to social ostracism or negative career consequences. The constraint extracts their potential productivity and forces them into less efficient workflows. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.63. This just misses the snare threshold, but from the agent's view, the coercion is total.
+constraint_indexing:constraint_classification(ai_adoption_stigma, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (CORPORATE EMPLOYERS)
-% From the employer's perspective, the situation is a coordination challenge to
-% be managed. The ambiguity allows them to extract productivity gains while
-% minimizing investment and retaining leverage. It's a "rope" for managing labor.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ.
+% PERSPECTIVE 2: TRADITIONALIST WORKER (ROPE) — Experiences the stigma as a pure coordination mechanism to protect job security, maintain established quality standards, and preserve the value of their experience. The norm coordinates collective resistance to a perceived threat. As a beneficiary with constrained exit, d is low, leading to low χ.
 constraint_indexing:constraint_classification(ai_adoption_stigma, rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: C-SUITE EXECUTIVE (SCAFFOLD) — Views the stigma as a temporary, internal cultural friction impeding productivity. It's a problem to be managed and dismantled via new policies, training, and performance metrics. The 'sunset clause' is the inevitable corporate mandate for AI integration. The constraint is a temporary support for a legacy workflow that must be removed.
+constraint_indexing:constraint_classification(ai_adoption_stigma, scaffold,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analytical view sees both the coordination function (integrating a new
-% technology into the economy) AND the highly asymmetric extraction (transferring
-% risk to workers). The presence of beneficiaries, victims, and active enforcement
-% makes this a canonical Tangled Rope.
-constraint_indexing:constraint_classification(ai_adoption_stigma, snare,
+% PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's default view. The constraint has a genuine (if defensive) coordination function for incumbents (Rope aspect) but also clearly extracts value from adopters and the organization by suppressing productivity gains (Snare aspect). It requires active social enforcement to persist. This matches the claimed_type.
+constraint_indexing:constraint_classification(ai_adoption_stigma, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% PERSPECTIVE 5: THE TECHNOLOGICAL DETERMINIST (MOUNTAIN - FALSE SUMMIT) — This perspective naturalizes the social friction, framing it as an immutable law of human nature ('people always resist new technology'). The engine will flag this as a false summit, as the base properties (high ε and suppression) are inconsistent with a natural law.
+constraint_indexing:constraint_classification(ai_adoption_stigma, mountain,
+    context(agent_power(analytical),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -148,20 +145,14 @@ constraint_indexing:constraint_classification(ai_adoption_stigma, snare,
 
 :- begin_tests(ai_adoption_stigma_tests).
 
-test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(ai_adoption_stigma, snare,
-        context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(ai_adoption_stigma, rope,
-        context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(ai_adoption_stigma, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ai_adoption_stigma, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(ai_adoption_stigma, snare,
-        context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_structural_gates_pass) :-
-    narrative_ontology:constraint_beneficiary(ai_adoption_stigma, _),
-    narrative_ontology:constraint_victim(ai_adoption_stigma, _),
-    domain_priors:requires_active_enforcement(ai_adoption_stigma).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(ai_adoption_stigma, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(ai_adoption_stigma_tests).
 
@@ -171,44 +162,16 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (0.52): This value reflects the non-monetary, but
- *     significant, extraction from workers. It includes the psychological cost
- *     of fear and secrecy, the uncompensated labor of self-training on new
- *     tools, and the career risk of being discovered or becoming obsolete.
- *   - Suppression Score (0.75): The AP News poll indicates nearly 25% of users
- *     are secret, demonstrating a powerful coercive pressure against open use.
- *     This high score reflects the effectiveness of the stigma in suppressing
- *     alternative, more collaborative norms.
+ *   Extractiveness (0.55) is high because the constraint forces efficient workers to adopt inefficient methods, effectively extracting their time and potential output. It also extracts career opportunities from those labeled as 'cheaters'. Suppression (0.65) is high because the alternative (openly using AI) is met with significant social and professional risk, even without a formal rule. Theater (0.40) is moderate; while there is performativity in pretending to work 'the hard way', the social enforcement is a real and functional mechanism.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the employee ('powerless'/'trapped'), the situation is
- *   a Snare: a coercive environment where they are forced to take risks to
- *   remain competitive, with the benefits accruing to their employer. For the
- *   employer ('institutional'/'arbitrage'), this is a Rope: a coordination
- *   problem of managing a new technology to maximize productivity and maintain
- *   workforce control. They benefit from the ambiguity that the employee
- *   experiences as a trap.
+ *   The gap is stark. For the AI Adopter, the stigma is a Snare that punishes them for being effective. For the Traditionalist, it's a Rope coordinating a collective defense of their livelihood. For senior leadership, it's a temporary Scaffold of old work habits that must be dismantled to build a more efficient organization. The analytical view sees a Tangled Rope, acknowledging the validity of both the coordination and extraction functions that define the conflict.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: 'corporate_employers' benefit by receiving productivity
- *     gains without the associated costs of training, policy development, or
- *     severance. They maintain information asymmetry and leverage.
- *   - Victim: 'non_technical_knowledge_workers' bear the costs. They face a
- *     "damned if you do, damned if you don't" dilemma: risk falling behind by
- *     not using AI, or risk being seen as a "cheater" or being made redundant
- *     if they do. This structural relationship drives the directionality.
+ *   Beneficiaries (Traditionalists, certain managers) perceive the constraint as coordination, leading to a low derived directionality (d) and thus low effective extraction (χ), classifying it as a Rope. Victims (AI Adopters) are the direct targets of extraction and are trapped by the culture, leading to a high d and high χ, classifying it as a Snare. The analytical perspective balances these, resulting in the Tangled Rope classification.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the dual nature of the phenomenon.
- *   A simplistic analysis might label it purely as "technological disruption"
- *   (a Mountain) or a simple coordination problem (a Rope). The Tangled Rope
- *   classification correctly captures that while there is a genuine need to
- *   coordinate the adoption of a new technology, the current emergent solution
- *   is deeply entangled with asymmetric extraction and risk transfer. It avoids
- *   mislabeling the coercive pressure on workers as a simple, neutral
- *   coordination challenge. It also highlights the potential for the 'powerless'
- *   group to become 'organized' if they form coalitions (e.g., unions) to
- *   negotiate AI policies, which could alter the classification.
+ *   This constraint is a classic case where a pure 'Snare' classification would be a mandatrophy. It would ignore the genuine, albeit defensive, coordination function the stigma serves for workers anxious about displacement. The Tangled Rope classification correctly identifies that the structure has *both* a coordination element for one group and an extractive element for another. The system's purpose is to see both functions simultaneously, not to pick a side.
  */
 
 /* ==========================================================================
@@ -216,59 +179,68 @@ test(tangled_rope_structural_gates_pass) :-
    ========================================================================== */
 
 omega_variable(
-    omega_ai_stigma_1,
-    'Is the workplace stigma an intentional, implicit strategy by employers to maximize leverage, or is it a temporary, emergent phenomenon of cultural lag that will fade with normalization?',
-    'Analysis of corporate internal communications, paired with longitudinal studies of AI adoption policies over the next 5-10 years.',
-    'If intentional, this is a stable Tangled Rope. If emergent, it is a Scaffold that will eventually be replaced by formal Rope-like policies.',
+    productivity_gain_reality,
+    'Is the productivity gain from generative AI for core tasks substantial and reliable enough to outweigh potential quality degradation?',
+    'Controlled studies comparing AI-assisted vs. traditional workflows on key business metrics (e.g., code quality, report accuracy, customer satisfaction).',
+    'If gains are marginal or quality suffers, the stigma is a rational coordination mechanism (Rope). If gains are substantial, the stigma is primarily an extractive mechanism (Snare/Tangled Rope).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(productivity_gain_reality, empirical, 'Quantifying the actual productivity vs. quality trade-off of AI use.').
+
+omega_variable(
+    source_of_stigma,
+    'Is the stigma rooted in a defense of legitimate, hard-won human skills or primarily in fear of job displacement?',
+    'Sociological surveys and interviews with employees to distinguish between craft-based objections and economic anxiety.',
+    'If craft-based, the constraint has a stronger coordination function. If fear-based, it is more purely extractive.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(source_of_stigma, conceptual, 'Distinguishing between skill-based and fear-based resistance.').
+
+omega_variable(
+    management_intervention_timeline,
+    'At what point will corporate leadership intervene to formally sanction or mandate AI use, thereby dissolving the informal stigma?',
+    'Tracking policy changes in Fortune 500 companies; analysis of competitive pressures forcing adoption.',
+    'A short timeline confirms the ''Scaffold'' perspective. A long or indefinite timeline suggests the ''Tangled Rope'' is a stable, persistent state.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(management_intervention_timeline, preference, 'Predicting the timeline for top-down policy intervention.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ai_adoption_stigma, 0, 10).
+narrative_ontology:interval(ai_adoption_stigma, 0, 5).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint is relatively new but has intensified rapidly.
-% T=0: ~2021 (pre-ChatGPT mainstreaming)
-% T=5: ~2024 (current state)
-% T=10: ~2029 (projected future state, possibly with norms solidifying)
+% Theater ratio over time
+narrative_ontology:measurement(ai_a_tr_t0, ai_adoption_stigma, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(ai_a_tr_t2, ai_adoption_stigma, theater_ratio, 2, 0.3).
+narrative_ontology:measurement(ai_a_tr_t5, ai_adoption_stigma, theater_ratio, 5, 0.4).
 
-% Theater ratio over time:
-narrative_ontology:measurement(ai_adoption_stigma_tr_t0, ai_adoption_stigma, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(ai_adoption_stigma_tr_t5, ai_adoption_stigma, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(ai_adoption_stigma_tr_t10, ai_adoption_stigma, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(ai_a_be_t0, ai_adoption_stigma, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(ai_a_be_t2, ai_adoption_stigma, base_extractiveness, 2, 0.45).
+narrative_ontology:measurement(ai_a_be_t5, ai_adoption_stigma, base_extractiveness, 5, 0.55).
 
-% Extraction over time: The risk and psychological burden on workers have spiked.
-% It may decrease in the future if/as policies and norms are established.
-narrative_ontology:measurement(ai_adoption_stigma_ex_t0, ai_adoption_stigma, base_extractiveness, 0, 0.10).
-narrative_ontology:measurement(ai_adoption_stigma_ex_t5, ai_adoption_stigma, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(ai_adoption_stigma_ex_t10, ai_adoption_stigma, base_extractiveness, 10, 0.30).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The constraint is fundamentally about establishing norms
-% and standards for a new form of information work.
 narrative_ontology:coordination_type(ai_adoption_stigma, information_standard).
-
-% Network relationships: This stigma is structurally linked to broader trends
-% in labor market instability and corporate investment strategies.
-narrative_ontology:affects_constraint(ai_adoption_stigma, labor_market_precarity).
-narrative_ontology:affects_constraint(corporate_training_austerity, ai_adoption_stigma).
+narrative_ontology:affects_constraint(ai_adoption_stigma, imposter_syndrome).
+narrative_ontology:affects_constraint(ai_adoption_stigma, corporate_surveillance).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for this constraint. The standard structural
-% derivation from beneficiary/victim declarations and exit options
-% accurately models the directionality of the constraint for the key agents.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

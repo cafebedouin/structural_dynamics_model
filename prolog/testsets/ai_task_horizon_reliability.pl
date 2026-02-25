@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: ai_task_horizon_reliability
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
 % Generated: 2024-07-29
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_ai_task_horizon_reliability, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,8 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,95 +52,95 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: ai_task_horizon_reliability
- * human_readable: The AI Task Horizon and Reliability Bottleneck
- * domain: technological/economic
- * * SUMMARY:
- * This constraint defines the inverse relationship between task complexity 
- * (measured in human time-to-complete) and AI success rates. As tasks scale 
- * in duration and educational requirements, model reliability drops significantly, 
- * creating a "task horizon" that limits autonomous productivity gains while 
- * enabling automation of mid-complexity professional work.
- * * KEY AGENTS:
- * - Enterprise API User: Beneficiary (Institutional)
- * - Professional Knowledge Worker: Victim (Moderate Power)
- * - Individual Web User: Subject (Powerless)
- * - Systems Auditor: Observer (Analytical)
+ *   constraint_id: ai_task_horizon_reliability
+ *   human_readable: The AI Task Horizon and Reliability Bottleneck
+ *   domain: technological/economic
+ *
+ * SUMMARY:
+ *   This constraint describes the structural limit on current AI systems,
+ *   where reliability collapses as task complexity and duration (the 'task
+ *   horizon') increase. This creates a bottleneck for economic deployment, as
+ *   the most valuable tasks are often the most complex. The system generates
+ *   both real productivity gains on short-horizon tasks and significant
+ *   extractive costs from misapplication, wasted investment, and labor market
+ *   disruption on long-horizon tasks. The constraint is 'enforced' by intense
+ *   market pressure and capital allocation, compelling adoption even where
+ *   reliability is insufficient.
+ *
+ * KEY AGENTS:
+ *   - AI Developers/Platform Owners: Primary beneficiaries (institutional/arbitrage) - Capture value from compute and subscriptions.
+ *   - Top-Quartile Adopters: Secondary beneficiaries (powerful/mobile) - Use AI strategically as a temporary scaffold for competitive advantage.
+ *   - Deskilled Workforce: Primary victims (powerless/trapped) - Face job insecurity and skill atrophy from mandated use of unreliable tools.
+ *   - Median Adopters/Laggards: Secondary victims (moderate/constrained) - Invest heavily due to market pressure but fail to achieve positive ROI due to the reliability bottleneck.
+ *   - Hype-Cycle Investors: Participants (powerful/mobile) - Drive the enforcement mechanism through capital allocation, often based on performative metrics.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(ai_task_horizon_reliability, 0.48). % Snare extraction >= 0.46. Represents deskilling and value transfer from labor to capital.
-domain_priors:suppression_score(ai_task_horizon_reliability, 0.60).   % Selection effects mask true failure rates as users avoid tasks they expect to fail.
-domain_priors:theater_ratio(ai_task_horizon_reliability, 0.10).       % Low theater; the constraint is highly functional.
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(ai_task_horizon_reliability, 0.48).
+domain_priors:suppression_score(ai_task_horizon_reliability, 0.62).
+domain_priors:theater_ratio(ai_task_horizon_reliability, 0.65).
 
-% Constraint metric facts — primary keys used by the classification engine.
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(ai_task_horizon_reliability, extractiveness, 0.48).
-narrative_ontology:constraint_metric(ai_task_horizon_reliability, suppression_requirement, 0.60).
-narrative_ontology:constraint_metric(ai_task_horizon_reliability, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(ai_task_horizon_reliability, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(ai_task_horizon_reliability, theater_ratio, 0.65).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% It is presented as an unavoidable, natural limit of the current technology paradigm.
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(ai_task_horizon_reliability, tangled_rope).
 narrative_ontology:human_readable(ai_task_horizon_reliability, "The AI Task Horizon and Reliability Bottleneck").
 narrative_ontology:topic_domain(ai_task_horizon_reliability, "technological/economic").
 
-% Binary flags
-% Enforcement is the market pressure and platform design choices that perpetuate the bottleneck.
-domain_priors:requires_active_enforcement(ai_task_horizon_reliability). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(ai_task_horizon_reliability).
 
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(ai_task_horizon_reliability, efficiency_seeking_firms).
-narrative_ontology:constraint_victim(ai_task_horizon_reliability, white_collar_professionals).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(ai_task_horizon_reliability, ai_developers_and_platform_owners).
+narrative_ontology:constraint_beneficiary(ai_task_horizon_reliability, top_quartile_adopters).
+narrative_ontology:constraint_beneficiary(ai_task_horizon_reliability, highly_skilled_operators).
+narrative_ontology:constraint_victim(ai_task_horizon_reliability, median_adopters_and_laggards).
+narrative_ontology:constraint_victim(ai_task_horizon_reliability, deskilled_workforce).
+narrative_ontology:constraint_victim(ai_task_horizon_reliability, investors_in_overhyped_applications).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (POWERLESS USER) -> MOUNTAIN
-% For the individual web user, the AI's limitations are an immutable fact of the
-% technology they are using. They have no power to change it and must work around it.
-constraint_indexing:constraint_classification(ai_task_horizon_reliability, tangled_rope,
+% PERSPECTIVE 1: DESKILLED WORKFORCE (SNARE) — Faces job displacement or skill atrophy from unreliable AI tools they are mandated to use. They cannot exit the labor market and bear the costs of failed AI implementations and shifting job requirements. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.82.
+constraint_indexing:constraint_classification(ai_task_horizon_reliability, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ENTERPRISE) -> ROPE
-% For an enterprise deploying AI, the reliability bottleneck is a known parameter.
-% They focus on the massive efficiency gains (the Rope) from automating tasks
-% within the reliable horizon, treating failures as a manageable cost.
+% PERSPECTIVE 2: AI PLATFORM OWNER (ROPE) — Provides a coordination tool that unlocks productivity. Reliability issues are seen as engineering challenges, not structural flaws. They profit from subscriptions and compute usage regardless of end-user success, experiencing the system as a net benefit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07.
 constraint_indexing:constraint_classification(ai_task_horizon_reliability, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE VICTIM (KNOWLEDGE WORKER) -> SNARE
-% For the professional whose expertise falls within the AI's capability, the
-% system is a Snare. It automates their valuable skills, extracting their
-% professional autonomy and depressing wages, forcing them to adapt or be marginalized.
-constraint_indexing:constraint_classification(ai_task_horizon_reliability, tangled_rope,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER -> TANGLED ROPE
-% The analyst sees both the coordination function (efficiency gains for firms)
-% and the asymmetric extraction (deskilling of professionals). The need for
-% market enforcement to adopt this imperfect technology makes it a Tangled Rope.
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes the dual nature of the constraint: a genuine coordination function (automating simple tasks) combined with significant asymmetric extraction (wasted investment, deskilling, market concentration). This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.66.
 constraint_indexing:constraint_classification(ai_task_horizon_reliability, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: TOP-QUARTILE ADOPTER (SCAFFOLD) — A technologically sophisticated firm that uses current AI as a temporary support to gain a competitive edge. They understand the limitations and have a strategy to migrate to better tools as they emerge, effectively treating the current reliability bottleneck as having a sunset clause. d≈0.48, f(d)≈0.60, σ=1.0 → χ≈0.29.
+constraint_indexing:constraint_classification(ai_task_horizon_reliability, scaffold,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: HYPE-CYCLE INVESTOR (PITON) — Engages in the investment cycle as a performative act, driven by market narratives rather than the technology's current functional reliability. The high theater (demos vs. reality) makes this a piton: the activity persists due to institutional momentum, even if the underlying utility is degraded or not yet realized. theater_ratio=0.65 is close to the 0.70 gate.
+constraint_indexing:constraint_classification(ai_task_horizon_reliability, piton,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(mobile),
             spatial_scope(global))).
 
 /* ==========================================================================
@@ -136,22 +150,17 @@ constraint_indexing:constraint_classification(ai_task_horizon_reliability, tangl
 :- begin_tests(ai_task_horizon_reliability_tests).
 
 test(perspectival_gap) :-
-    % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(ai_task_horizon_reliability, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ai_task_horizon_reliability, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeInstitutional,
-    assertion(TypePowerless == mountain),
-    assertion(TypeInstitutional == rope).
+    constraint_indexing:constraint_classification(ai_task_horizon_reliability, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(ai_task_horizon_reliability, ExtMetricName, E),
-    (E =< 0.15 ; E >= 0.46), % Ensures it's either low-extraction or high-extraction
-    assertion(E == 0.48).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(ai_task_horizon_reliability, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_conditions_met) :-
-    % The analytical observer must see a tangled_rope
-    constraint_indexing:constraint_classification(ai_task_horizon_reliability, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(ai_task_horizon_reliability, TR),
+    TR >= 0.70.
 
 :- end_tests(ai_task_horizon_reliability_tests).
 
@@ -161,77 +170,85 @@ test(tangled_rope_conditions_met) :-
 
 /**
  * LOGIC RATIONALE:
- * The base extractiveness is set to 0.48, just above the Snare threshold, to
- * model the significant but not total displacement of professional knowledge
- * work. The suppression score of 0.60 reflects the strong market pressure and
- * selection effects that hide the technology's true failure rates.
+ *   Extractiveness (ε=0.48): Moderate-high. Represents the value extracted from failed projects, wasted employee time managing unreliable outputs, and the market concentration benefiting platform owners. Suppression (0.62): High. The intense hype cycle, network effects of dominant platforms, and high switching costs for integrated systems suppress alternatives and critical evaluation. Theater Ratio (0.65): High. There is a significant gap between controlled demos and real-world performance. Marketing and media narratives often obscure the practical limitations of the technology.
  *
- * The Perspectival Gap is profound:
- * - For a powerless user, it's a Mountain (an immutable technological fact).
- * - For an institutional beneficiary, it's a Rope (a tool for efficiency).
- * - For a professional whose skills are targeted, it's a Snare (an extractive trap).
- * - The analytical view resolves this into a Tangled Rope, acknowledging both
- *   the genuine coordination/efficiency benefits and the coercive, asymmetric
- *   extraction from a specific class of labor.
+ * PERSPECTIVAL GAP:
+ *   The gap is profound. Platform owners see a pure coordination tool (Rope) for solving problems. Workers on the receiving end of a flawed implementation experience a coercive, job-threatening system (Snare). Sophisticated firms see a temporary tool they can exploit and discard (Scaffold). The analyst sees the whole picture: a system with a genuine coordination function but with deeply embedded, asymmetric extraction (Tangled Rope).
  *
- * * MANDATROPHY ANALYSIS:
- * Classifying this as a Tangled Rope is critical. A simpler analysis might label
- * it a pure Snare (focusing only on the workers) or a pure Rope (focusing only
- * on the firms). The Tangled Rope classification correctly identifies that the
- * system has a genuine coordination function (automating complex workflows)
- * that is inextricably linked to an extractive one (devaluing human expertise).
- * This prevents mischaracterizing a complex techno-economic shift as simple
- * predation or pure progress.
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiaries (platform owners, top adopters) have arbitrage or mobile exit options, leading to low derived directionality (d) and thus low or negative effective extraction (χ). They experience the constraint as a benefit or a manageable tool. Victims (workers, median firms) are trapped or constrained, leading to high derived 'd' and high positive 'χ'. They bear the full cost of the system's failures. This structural difference in position and exit capability is what creates the wide perspectival gap.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This case resolves the mandatrophy by demonstrating that the 'AI bottleneck' is not a single phenomenon. Labeling it purely as a 'tool' (Rope) ignores the coercive impact on labor. Labeling it purely as 'exploitation' (Snare) ignores the real productivity gains achieved by skilled users. The Deferential Realism framework correctly models it as a multi-faceted structure whose classification depends entirely on the observer's position relative to the flows of cost and benefit.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_ai_task_horizon,
-    'Will the reliability horizon remain a persistent bottleneck, or will architectural breakthroughs eliminate it?',
-    'longitudinal_tracking_of_model_success_on_civilizational_scale_tasks',
-    'if_persistent_productivity_stalls_if_eliminated_labor_disruption_accelerates',
+    architectural_limit_vs_engineering_problem,
+    'Is the reliability bottleneck for long-horizon tasks a fundamental limitation of current AI architectures or merely an engineering problem solvable with more scale and data?',
+    'Longitudinal studies of model performance on complex, multi-step reasoning tasks as scale increases; discovery of novel architectures that overcome these limitations.',
+    'If a fundamental limit, the constraint is a durable Mountain/Snare for complex tasks. If an engineering problem, it''s a temporary Scaffold that will be dismantled by progress.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(architectural_limit_vs_engineering_problem, empirical, 'Whether the reliability bottleneck is a fundamental architectural limit or a solvable engineering issue.').
+
+omega_variable(
+    upskilling_vs_deskilling_equilibrium,
+    'Will the widespread deployment of AI lead to a net upskilling of the workforce (AI as a tool) or net deskilling and displacement (AI as a replacement)?',
+    'Cross-sector analysis of labor productivity, wage polarization, and demand for specific skills in AI-intensive industries over a 5-10 year period.',
+    'Upskilling equilibrium implies the constraint is a Rope or Scaffold. Deskilling equilibrium implies it is a Snare or Tangled Rope.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(upskilling_vs_deskilling_equilibrium, empirical, 'The long-term equilibrium between workforce upskilling and deskilling due to AI adoption.').
+
+omega_variable(
+    productivity_gain_durability,
+    'Are the observed productivity gains from AI durable and compounding, or a one-time benefit from automating the lowest-hanging fruit?',
+    'Firm-level analysis of productivity growth rates pre- and post-AI adoption, controlling for the initial wave of simple task automation.',
+    'Durable gains suggest a Rope. One-time benefits followed by a plateau suggest a Piton, where adoption becomes performative after initial wins.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(productivity_gain_durability, empirical, 'Whether AI productivity gains are durable or a one-time effect from automating simple tasks.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(ai_task_horizon_reliability, 0, 10).
+narrative_ontology:interval(ai_task_horizon_reliability, 2023, 2028).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness > 0.46 requires temporal data.
-% This models the constraint intensifying as AI adoption becomes more widespread
-% and integrated into core business processes, increasing its extractive potential.
-%
-% Theater ratio over time (metric_substitution):
-narrative_ontology:measurement(ai_thr_tr_t0, ai_task_horizon_reliability, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(ai_thr_tr_t5, ai_task_horizon_reliability, theater_ratio, 5, 0.08).
-narrative_ontology:measurement(ai_thr_tr_t10, ai_task_horizon_reliability, theater_ratio, 10, 0.10).
+% Theater ratio over time
+narrative_ontology:measurement(ai_t_tr_t0, ai_task_horizon_reliability, theater_ratio, 0, 0.75).
+narrative_ontology:measurement(ai_t_tr_t2, ai_task_horizon_reliability, theater_ratio, 2, 0.6).
+narrative_ontology:measurement(ai_t_tr_t5, ai_task_horizon_reliability, theater_ratio, 5, 0.65).
 
-% Extraction over time (extraction_accumulation):
-narrative_ontology:measurement(ai_thr_ex_t0, ai_task_horizon_reliability, base_extractiveness, 0, 0.42).
-narrative_ontology:measurement(ai_thr_ex_t5, ai_task_horizon_reliability, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(ai_thr_ex_t10, ai_task_horizon_reliability, base_extractiveness, 10, 0.48).
+% Extraction over time
+narrative_ontology:measurement(ai_t_be_t0, ai_task_horizon_reliability, base_extractiveness, 0, 0.3).
+narrative_ontology:measurement(ai_t_be_t2, ai_task_horizon_reliability, base_extractiveness, 2, 0.41).
+narrative_ontology:measurement(ai_t_be_t5, ai_task_horizon_reliability, base_extractiveness, 5, 0.48).
+
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% The AI reliability horizon acts as a de facto standard for global digital labor,
-% making it a form of global infrastructure.
-narrative_ontology:coordination_type(ai_task_horizon_reliability, global_infrastructure).
+narrative_ontology:coordination_type(ai_task_horizon_reliability, resource_allocation).
+narrative_ontology:affects_constraint(ai_task_horizon_reliability, labor_market_polarization).
+narrative_ontology:affects_constraint(ai_task_horizon_reliability, corporate_capital_expenditure_cycles).
 
-% This constraint directly influences the value and structure of professional labor markets.
-narrative_ontology:affects_constraint(ai_task_horizon_reliability, professional_labor_markets).
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

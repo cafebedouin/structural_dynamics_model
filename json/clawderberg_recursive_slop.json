@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "clawderberg_recursive_slop",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Recursive Slop Loop",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_platform_operators",
+      "low_effort_content_creators"
+    ],
+    "victims": [
+      "the_epistemic_commons",
+      "future_ai_models",
+      "human_information_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 1: THE EPISTEMIC COMMONS (SNARE) — The collective body of human knowledge is trapped, unable to prevent its dilution by low-quality, synthetic data. It bears the full, uncompensated cost of this degradation. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI Platform Operator",
+      "comment": "PERSPECTIVE 2: AI PLATFORM OPERATOR (ROPE) — From the platform's view, the system is a pure coordination mechanism. It coordinates user attention with algorithmically generated content at near-zero marginal cost, creating a monetizable engagement stream. The negative externality is outside its optimization function. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Human Information Consumer",
+      "comment": "PERSPECTIVE 3: HUMAN CONSUMER (TANGLED ROPE) — The user receives immediate, low-cost answers and content (coordination benefit) but is increasingly constrained to a low-quality information environment, making it harder to find authentic, human-generated knowledge (extraction cost). d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Data Provenance Coalition",
+      "comment": "PERSPECTIVE 4: DATA PROVENANCE COALITION (SCAFFOLD) — Organized efforts to create curated, human-verified datasets and data watermarking standards see the slop loop as a temporary problem. They are building the infrastructure to bypass it, creating a sunset clause for the current extractive model. d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.26."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a genuine coordination function (generating content) but is inextricably linked to an extractive process (polluting the shared data commons for private gain). It requires active enforcement via platform economics and algorithmic training loops. This is the canonical Tangled Rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "provenance_technology_viability",
+      "question": "Can technical solutions like data watermarking or cryptographic provenance reliably distinguish human-generated from AI-generated content at scale?",
+      "resolution_mechanism": "Empirical testing of proposed provenance systems against adversarial attacks and scalability challenges.",
+      "impact": "If viable, the constraint becomes a Scaffold, as an exit path is created. If not, it remains a durable Tangled Rope or Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of technical solutions for data provenance"
+    },
+    {
+      "id": "model_collapse_threshold",
+      "question": "At what percentage of synthetic data in the training corpus does model performance enter an irreversible collapse ('Model Autophagy Disorder')?",
+      "resolution_mechanism": "Controlled experiments training models on datasets with varying percentages of synthetic data.",
+      "impact": "If the threshold is low, the loop is self-limiting and could be a Scaffold. If high, the degradation can continue for a long time, solidifying its Snare/Tangled Rope nature.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for irreversible model collapse from synthetic data"
+    },
+    {
+      "id": "economic_incentive_shift",
+      "question": "Could market demand for 'artisanal' human-verified data and models become strong enough to economically counteract the incentive for low-cost slop?",
+      "resolution_mechanism": "Market analysis of premium AI services and curated data providers.",
+      "impact": "A strong market shift would create an exit, weakening the constraint's suppression. A weak market confirms the dominance of the low-cost, high-volume model.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Potential for market forces to shift incentives away from slop"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The Recursive Slop Loop describes a negative feedback cycle in AI development. AI models trained on vast internet datasets generate new content. This synthetic content, often low-quality and derivative ('slop'), floods the internet. Future generations of AI models are then trained on a corpus increasingly polluted by their own predecessors' output. This leads to a gradual degradation of model quality, a loss of connection to ground-truth human experience, and a homogenization of the digital information ecosystem.",
+    "key_agents": [
+      "AI Platform Operators: Primary beneficiaries (institutional/arbitrage) - Profit from engagement generated by cheap, voluminous synthetic content.",
+      "The Epistemic Commons: Primary victim (powerless/trapped) - The shared pool of human knowledge and culture, which is being diluted and degraded.",
+      "Human Information Consumers: Secondary victims (moderate/constrained) - Receive immediate content but find it increasingly difficult to access authentic, high-quality information.",
+      "Future AI Models: Technical victims (powerless/trapped) - Their potential is capped by the degrading quality of their training data.",
+      "Data Provenance Coalitions: Organized opposition (organized/mobile) - Groups working on technical and policy solutions to create curated, high-quality datasets."
+    ],
+    "logic_rationale": "Extractiveness (0.55): High. The value extracted is the integrity and diversity of the global information commons, which is converted into engagement and profit for platforms. Suppression (0.75): Very high. As slop becomes the dominant form of content, it becomes computationally and economically expensive to create and maintain clean, human-only datasets. The default is polluted. Theater Ratio (0.65): Significant. The models perform 'creativity' and 'knowledge retrieval', but this becomes increasingly a theatrical mimicry of patterns from the polluted dataset, rather than a functional engagement with genuine human knowledge.",
+    "perspectival_gap": "The gap is stark. Platform operators experience a highly efficient coordination machine (Rope) that turns computation into revenue. For the abstract 'Epistemic Commons,' however, the same process is a purely extractive Snare, with no benefit and no escape. The average human user is caught in the middle, experiencing both the convenience and the degradation, classifying it as a Tangled Rope. Organized groups attempting to fix the problem see it as a temporary, solvable issue (Scaffold).",
+    "directionality_logic": "Beneficiaries (Platform Operators) have arbitrage exit options, leading to a low 'd' value and a Rope classification. Victims like the Epistemic Commons are trapped and powerless, leading to a high 'd' value and a Snare classification. Constrained users and organized coalitions fall in between, leading to Tangled Rope and Scaffold views, respectively. The system's structure directly produces these divergent classifications.",
+    "mandatrophy_analysis": "This constraint is a clear example of where mandatrophy occurs. A purely 'extractive' lens would label the system a Snare and miss the genuine coordination function that makes it so appealing and powerful. A purely 'coordination' lens would label it a Rope and ignore the massive, negative externality of epistemic pollution. The Deferential Realism framework, by assigning the analytical classification of Tangled Rope while acknowledging the validity of the Snare and Rope perspectives from different indices, correctly identifies the hybrid nature of the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_discourse_quality"
+    ]
+  }
+}

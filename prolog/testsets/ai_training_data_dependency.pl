@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: ai_training_data_dependency
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_ai_training_data_dependency, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,13 +57,21 @@
  *   domain: technological
  *
  * SUMMARY:
- *   AI models, particularly in specialized fields like semiconductor design, increasingly rely on vast amounts of training data. If a single entity controls access to a significant portion of this data, it creates a dependency where other actors are constrained in their ability to develop competing AI models. This is exemplified by Japanese company JSR's dominance in providing defect inspection data for semiconductor manufacturing.
+ *   The performance of state-of-the-art AI models is critically dependent on
+ *   access to massive, high-quality training datasets. This creates a
+ *   structural constraint where entities controlling such data (typically
+ *   large, incumbent tech firms) gain a significant and durable competitive
+ *   advantage. This 'data moat' functions as both a coordination mechanism
+ *   for the field (advancing the SOTA through scaling) and a powerful
+ *   extraction mechanism (locking out new entrants and concentrating market
+ *   power). The constraint is actively enforced through legal (copyright,
+ *   ToS) and economic (cost of acquisition) barriers.
  *
- * KEY AGENTS (by structural relationship):
- *   - Emerging AI Companies: Primary target (powerless/trapped) — bears extraction due to limited access to training data.
- *   - JSR (Japanese Company): Primary beneficiary (institutional/arbitrage) — benefits from control over crucial training data.
- *   - Semiconductor Manufacturers: Secondary actor (powerful/constrained)
- *   - Analytical observer: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Incumbent Tech Firms: Primary beneficiary (institutional/arbitrage) — Owns or controls proprietary datasets, creating a competitive 'moat'.
+ *   - New Entrants / Startups: Primary victim (powerless/trapped) — Cannot acquire or generate comparable data, creating an insurmountable barrier to entry.
+ *   - Open Source Community: Organized victim (organized/constrained) — Attempts to build public alternative datasets but faces resource and legal constraints.
+ *   - Analytical Observer: Sees the dual nature of coordination and extraction.
  */
 
 /* ==========================================================================
@@ -72,137 +79,66 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ai_training_data_dependency, 0.48).
-domain_priors:suppression_score(ai_training_data_dependency, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(ai_training_data_dependency, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(ai_training_data_dependency, 0.55).
+domain_priors:suppression_score(ai_training_data_dependency, 0.7).
+domain_priors:theater_ratio(ai_training_data_dependency, 0.3).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ai_training_data_dependency, extractiveness, 0.48).
-narrative_ontology:constraint_metric(ai_training_data_dependency, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(ai_training_data_dependency, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(ai_training_data_dependency, extractiveness, 0.55).
+narrative_ontology:constraint_metric(ai_training_data_dependency, suppression_requirement, 0.7).
+narrative_ontology:constraint_metric(ai_training_data_dependency, theater_ratio, 0.3).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-% narrative_ontology:constraint_metric(ai_training_data_dependency, accessibility_collapse, [0.85-1.0]).
-% narrative_ontology:constraint_metric(ai_training_data_dependency, resistance, [0.0-0.15]).
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(ai_training_data_dependency, tangled_rope).
 narrative_ontology:human_readable(ai_training_data_dependency, "AI Training Data Dependency").
 narrative_ontology:topic_domain(ai_training_data_dependency, "technological").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(ai_training_data_dependency).      % Mandatory if Scaffold
-domain_priors:requires_active_enforcement(ai_training_data_dependency). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(ai_training_data_dependency).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-% domain_priors:emerges_naturally(ai_training_data_dependency).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(ai_training_data_dependency, jsr_company).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(ai_training_data_dependency, emerging_ai_companies).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(ai_training_data_dependency, incumbent_tech_firms).
+narrative_ontology:constraint_beneficiary(ai_training_data_dependency, proprietary_data_aggregators).
+narrative_ontology:constraint_victim(ai_training_data_dependency, new_entrants).
+narrative_ontology:constraint_victim(ai_training_data_dependency, open_source_community).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(ai_training_data_dependency, tangled_rope,
+% PERSPECTIVE 1: NEW ENTRANT (SNARE) — Lacking access to proprietary petabyte-scale datasets, a new entrant is trapped. The dependency is a pure barrier to entry, extracting the opportunity for innovation and competition. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94.
+constraint_indexing:constraint_classification(ai_training_data_dependency, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+% PERSPECTIVE 2: INCUMBENT FIRM (ROPE) — For a firm that owns a massive dataset, the dependency is a powerful coordination mechanism. It structures the market, defines the state-of-the-art, and reinforces their competitive advantage (a 'data moat'). d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08. The negative extraction signifies a net subsidy.
 constraint_indexing:constraint_classification(ai_training_data_dependency, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — This view sees both sides: the dependency coordinates the field around scaling laws, enabling rapid progress (Rope function), but it also creates immense barriers to entry and concentrates power (Snare function). The high suppression and extraction are undeniable. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76.
 constraint_indexing:constraint_classification(ai_training_data_dependency, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES (declare when applicable) ---
-% When a constraint operates between institutional actors with different
-% structural relationships, declare separate perspectives for each.
-% The engine differentiates via directionality: different exit_options
-% produce different d values even for the same power atom.
-%
-% Example — Regulatory capture:
-%
-% % Perspective 4A: Captured regulator (institutional, constrained exit)
-% constraint_indexing:constraint_classification(ai_training_data_dependency, [type],
-%     context(agent_power(institutional),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(national))).
-%
-% % Perspective 4B: Regulated company (institutional, arbitrage exit)
-% constraint_indexing:constraint_classification(ai_training_data_dependency, [type],
-%     context(agent_power(institutional),
-%             time_horizon(generational),
-%             exit_options(arbitrage),
-%             spatial_scope(national))).
+% PERSPECTIVE 4: OPEN SOURCE COALITION (SCAFFOLD) — Organized efforts to create public datasets (e.g., LAION, The Pile) or develop data-efficient methods see the dependency as a temporary, surmountable problem. They are building a scaffold (public data infrastructure) to bypass the proprietary data walls, with an implicit sunset clause: once the scaffold is built, the dependency on private data is broken. d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.26.
+constraint_indexing:constraint_classification(ai_training_data_dependency, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
 
-% PERSPECTIVE 5: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, χ ≤ 0.30, theater ≤ 0.70.
-% constraint_indexing:constraint_classification(ai_training_data_dependency, scaffold,
-%     context(agent_power(organized),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(continental))) :-
-%     narrative_ontology:has_sunset_clause(ai_training_data_dependency).
-
+% PERSPECTIVE 5: SCALING LAW ABSOLUTIST (MOUNTAIN) — This perspective frames the dependency as an immutable law of nature for current AI paradigms ('scaling laws'). It posits that model performance is inextricably linked to data volume, making the dependency an unchangeable feature of the technological landscape. The engine will flag this as a false summit, as the base properties (ε=0.55, suppression=0.70) are inconsistent with a natural law.
+constraint_indexing:constraint_classification(ai_training_data_dependency, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -211,15 +147,13 @@ constraint_indexing:constraint_classification(ai_training_data_dependency, tangl
 :- begin_tests(ai_training_data_dependency_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(ai_training_data_dependency, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ai_training_data_dependency, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(ai_training_data_dependency, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ai_training_data_dependency, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(ai_training_data_dependency, ExtMetricName, E),
-    (E =< 0.25 -> true ; E >= 0.46). % Mountain or high-extraction Snare/Tangled.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(ai_training_data_dependency, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(ai_training_data_dependency_tests).
 
@@ -229,113 +163,85 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness is set to 0.48 because control over training data allows the dominant player (JSR) to extract economic value from emerging AI companies. The suppression score is high (0.65) because the lack of alternative data sources hinders the ability of other companies to compete effectively. The theater ratio is low (0.20) because the core function is real data provision, not performative compliance. This constraint is not inertial or non-functional, so a piton classification is inappropriate.
+ *   Extractiveness (0.55): High. The constraint extracts competitive opportunity from the market. The value that could be generated by startups is instead captured by incumbents who control the data resource. Suppression (0.70): High. The combination of legal protections (copyright), high cost of data acquisition, and the sheer technical challenge of managing petabyte-scale data strongly suppresses the emergence of alternatives. Theater (0.30): Low-to-moderate. While the 'data moat' narrative can be performative, the underlying technical requirement for data is very real and functional for current AI architectures.
  *
  * PERSPECTIVAL GAP:
- *   Emerging AI companies see the dependency as a snare because their ability to innovate is directly constrained by JSR's data access. JSR sees the situation as a rope, facilitating a market for their data services and ensuring a return on investment.
+ *   The gap is stark. For an incumbent, the data dependency is a beneficial Rope that organizes the market to their advantage. For a startup, it's a deadly Snare that prevents them from competing. For the open-source community, it's a temporary Scaffold they are actively trying to build their way over. An observer focused on scaling laws might mistake this contingent, market-driven structure for a Mountain, a law of nature. The analytical view must hold all these truths at once to see the full Tangled Rope structure.
  *
  * DIRECTIONALITY LOGIC:
- *   JSR benefits by selling access to the training data, giving them a strong incentive to maintain data exclusivity. Emerging AI companies bear the cost because they are limited in their ability to develop competitive AI models without access to equivalent training data.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   N/A
+ *   Beneficiaries (incumbents) have arbitrage exit options, leading to a low 'd' value and a Rope classification. Victims (startups) are trapped, leading to a high 'd' value and a Snare classification. Organized actors (open source) are constrained but have agency, leading to a moderate 'd' value and a Scaffold classification. The analytical perspective synthesizes these to arrive at Tangled Rope.
  *
  * MANDATROPHY ANALYSIS:
- *   The tangled rope classification prevents mislabeling this as pure coordination by highlighting the asymmetric extraction component. While JSR provides a valuable service, the lack of alternative providers and the high suppression score indicate that this is not a purely cooperative arrangement.
+ *   This case avoids mandatrophy by demonstrating how a single technological reality can be correctly classified in multiple ways depending on the observer's structural position. Mistaking the incumbent's 'Rope' view or the absolutist's 'Mountain' view for the complete picture would be a classic mandatrophy error. The framework correctly identifies the analytical view as a Tangled Rope, acknowledging both the genuine coordination function (scaling enables progress) and the severe, asymmetric extraction (market concentration and barriers to entry).
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_ai_training_data_dependency,
-    'Will alternative training data sources emerge, reducing the dependency on JSR?',
-    'Tracking the development of synthetic data generation techniques and data sharing initiatives.',
-    'If true, the constraint shifts towards a rope. If false, the constraint intensifies as a snare.',
+    synthetic_data_viability,
+    'Can high-quality synthetic data fully substitute for real-world data at scale, thus breaking the dependency?',
+    'Empirical testing of models trained on synthetic vs. real data across diverse, complex domains. Analysis of failure modes unique to synthetic data (e.g., mode collapse, lack of long-tail coverage).',
+    'If viable, the constraint becomes a Scaffold (a temporary technical problem). If not, it remains a Tangled Rope or Snare (a structural economic barrier).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(synthetic_data_viability, empirical, 'Viability of synthetic data as a substitute for real-world training data.').
+
+omega_variable(
+    scaling_law_universality,
+    'Are the current scaling laws a fundamental property of intelligence, or an artifact of the current transformer-based architecture?',
+    'Discovery of novel AI architectures that achieve state-of-the-art performance with significantly less data.',
+    'If laws are fundamental, the ''Mountain'' perspective gains credence. If they are an architectural artifact, the dependency is a contingent technical choice, reinforcing the ''Tangled Rope'' classification.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(scaling_law_universality, conceptual, 'Whether scaling laws are fundamental or an artifact of current architectures.').
+
+omega_variable(
+    data_as_public_utility,
+    'Should foundational datasets be regulated as a public utility to ensure fair access and promote competition?',
+    'Political and legislative debate, followed by policy implementation and observation of market effects.',
+    'If regulated, the constraint could transform into a Rope (a managed public resource). If not, it remains a Tangled Rope dominated by private interests.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(data_as_public_utility, preference, 'Policy question of regulating foundational datasets as a public utility.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(ai_training_data_dependency, 0, 10).
+narrative_ontology:interval(ai_training_data_dependency, 2017, 2027).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(ai_training_data_dependency_tr_t0, ai_training_data_dependency, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(ai_training_data_dependency_tr_t5, ai_training_data_dependency, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(ai_training_data_dependency_tr_t10, ai_training_data_dependency, theater_ratio, 10, 0.25).
+% Theater ratio over time
+narrative_ontology:measurement(ai_t_tr_t2017, ai_training_data_dependency, theater_ratio, 2017, 0.15).
+narrative_ontology:measurement(ai_t_tr_t2022, ai_training_data_dependency, theater_ratio, 2022, 0.25).
+narrative_ontology:measurement(ai_t_tr_t2027, ai_training_data_dependency, theater_ratio, 2027, 0.3).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(ai_training_data_dependency_ex_t0, ai_training_data_dependency, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(ai_training_data_dependency_ex_t5, ai_training_data_dependency, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(ai_training_data_dependency_ex_t10, ai_training_data_dependency, base_extractiveness, 10, 0.48).
+% Extraction over time
+narrative_ontology:measurement(ai_t_be_t2017, ai_training_data_dependency, base_extractiveness, 2017, 0.2).
+narrative_ontology:measurement(ai_t_be_t2022, ai_training_data_dependency, base_extractiveness, 2022, 0.45).
+narrative_ontology:measurement(ai_t_be_t2027, ai_training_data_dependency, base_extractiveness, 2027, 0.55).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-narrative_ontology:coordination_type(ai_training_data_dependency, information_standard).
-
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(ai_training_data_dependency, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(ai_training_data_dependency, [other_constraint_id]).
-
-% --- Network Decomposition (Constraint Families) ---
-% When a natural-language label covers multiple constraints with different ε
-% values, each gets its own file. Link family members with affects_constraint:
-%
-% DUAL FORMULATION NOTE:
-% This constraint is one of [N] stories decomposed from [colloquial label].
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - [sibling_constraint_1] (ε=[value], [Type])
-%   - [sibling_constraint_2] (ε=[value], [Type])
-%
-% narrative_ontology:affects_constraint(ai_training_data_dependency, [sibling_constraint_id]).
+narrative_ontology:coordination_type(ai_training_data_dependency, resource_allocation).
+narrative_ontology:affects_constraint(ai_training_data_dependency, ai_model_monoculture).
+narrative_ontology:affects_constraint(ai_training_data_dependency, computational_hardware_arms_race).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(ai_training_data_dependency, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

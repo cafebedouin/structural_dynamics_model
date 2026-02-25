@@ -1,0 +1,144 @@
+{
+  "header": {
+    "constraint_id": "ancestral_pueblo_hydrology",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ancestral Puebloan Hydrological Debt",
+    "topic_domain": "environmental/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "puebloan_elites"
+    ],
+    "victims": [
+      "puebloan_farmers",
+      "future_generations",
+      "regional_hydrology"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Puebloan Farmer",
+      "comment": "PERSPECTIVE 1: THE FARMER (SNARE) — Trapped by sunk costs in an agricultural system dependent on increasingly unreliable water. Bears the full cost of crop failure and environmental degradation, ultimately forced into migration. The system extracts their livelihood and security. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.83."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Chacoan Elite",
+      "comment": "PERSPECTIVE 2: THE ELITE (ROPE) — Experiences the system as pure coordination. They direct labor to build and maintain water infrastructure, manage food surplus, and lead rituals, all for the perceived collective good. The social hierarchy and resource control are seen as necessary functions of a complex society. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Descendant Communities",
+      "comment": "PERSPECTIVE 3: DESCENDANT COMMUNITIES (TANGLED ROPE) — Inherit both the cultural knowledge of water management (a coordination benefit) and the legacy of collapse and displacement (an extracted cost). They are constrained by this history but organized through cultural continuity. The story of their ancestors is both a guide and a burden."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Fatalist View",
+      "comment": "PERSPECTIVE 4: THE FATALIST VIEW (MOUNTAIN) — This perspective naturalizes the collapse, attributing it solely to an insurmountable external shock (the Great Drought). It frames the outcome as an inevitable clash with natural law, ignoring the social and environmental debt that created the underlying vulnerability. The engine will flag this as a false summit, as the base properties (ε=0.65) are inconsistent with a Mountain."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "label": "The Archaeologist/Climatologist",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full system dynamics. The water management infrastructure was a genuine coordination solution, but it enabled population growth that exceeded the region's long-term carrying capacity, creating a highly extractive system vulnerable to climatic shocks. The classification captures both the coordination function and the asymmetric extraction. d≈0.73, f(d)≈1.15, σ=0.9 → χ≈0.67."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "social_vs_climate_driver",
+      "question": "Was the collapse primarily driven by the severity of the 13th-century Great Drought (external shock) or by internal social dynamics (elite mismanagement, conflict, overpopulation)?",
+      "resolution_mechanism": "Higher-resolution paleoclimatic data correlated with archaeological evidence of social stratification, resource hoarding, and violence just prior to abandonment.",
+      "impact": "A stronger climate driver pushes the classification towards Mountain (an unavoidable natural limit). Stronger social drivers confirm the Tangled Rope/Snare classification (a failure of a human system).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Primary driver of collapse: external climate shock vs. internal social failure."
+    },
+    {
+      "id": "elite_intent_and_knowledge",
+      "question": "Were the elites knowingly operating an unsustainable system for their own benefit, or were they good-faith coordinators overwhelmed by unprecedented environmental change?",
+      "resolution_mechanism": "Analysis of food storage patterns (communal vs. elite-controlled), settlement patterns, and evidence of responses to prior, smaller droughts.",
+      "impact": "Evidence of good-faith coordination strengthens the Rope perspective. Evidence of resource hoarding and control points towards a more extractive Snare.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Degree to which elites understood and managed systemic risk vs. extracted benefits."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 900,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1100,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1300,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 900,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1100,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1300,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 900,
+    "end": 1300
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the socio-environmental system of the Ancestral Puebloans in the Four Corners region, particularly during the period leading to the abandonment of major centers like Chaco Canyon and Mesa Verde around 1300 AD. The 'hydrological debt' represents the accumulated environmental degradation (deforestation, soil erosion, water table depletion) and social fragility resulting from a successful but ultimately unsustainable adaptation to an arid environment. A period of population growth and agricultural intensification, supported by sophisticated water management, created a system that was highly vulnerable to the severe, prolonged 'Great Drought' of the late 13th century.",
+    "key_agents": [
+      "Puebloan Farmers: Primary victims (powerless/trapped) — dependent on the agricultural system and directly exposed to its failure.",
+      "Puebloan Elites: Primary beneficiaries (institutional/arbitrage) — directed the water management projects and controlled the agricultural surplus that supported their status.",
+      "Descendant Communities: Inheritors of the legacy (organized/constrained) — carry forward cultural knowledge but are also shaped by the historical trauma of the collapse.",
+      "Analytical Observer: Modern archaeologist or climatologist (analytical/analytical) — able to reconstruct the long-term dynamics of the climate and social system."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65): High. Represents the rate of resource consumption (water, timber, soil fertility) exceeding the natural rate of replenishment, leading to a systemic deficit or 'debt'. Suppression (0.70): High. The commitment to maize agriculture and settled life in large communities created high sunk costs, suppressing alternatives like nomadic foraging which could not support the established population density. Theater Ratio (0.30): Low. The water management systems and associated social rituals were highly functional for centuries. The ratio rises slightly over time as functional solutions may have begun to fail, increasing reliance on purely supplicatory rituals.",
+    "perspectival_gap": "The gap is stark. For the farmer, the system becomes a Snare as the climate shifts and the land fails, trapping them in a losing battle. For the elite, it remains a Rope—a complex coordination problem they are tasked with solving. The analytical observer sees the synthesis: a Tangled Rope, where the very mechanisms of coordination (waterworks, food storage) are what enable the unsustainable extraction and create the asymmetric risk profile that defines the system's fragility.",
+    "directionality_logic": "Beneficiaries (puebloan_elites) with arbitrage exit options (ability to relocate with retained status/resources) experience the system as coordination, leading to a low 'd' value and a Rope classification. Victims (puebloan_farmers) who are trapped by their agricultural investments bear the full cost of failure, leading to a high 'd' value and a Snare classification. The analytical view balances these, recognizing both functions, resulting in the Tangled Rope classification.",
+    "mandatrophy_analysis": "This case is a powerful example of how a system can be simultaneously a brilliant coordination solution and a devastatingly extractive one. Mandatrophy is avoided by refusing to collapse the analysis into a single judgment. The system wasn't simply 'bad' (a Snare) or 'good' (a Rope). It was a complex adaptation (Tangled Rope) whose internal logic was rational from the perspective of its managers (Rope) but catastrophic for its most vulnerable participants and its environmental foundation (Snare). The DR framework captures this essential duality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  }
+}

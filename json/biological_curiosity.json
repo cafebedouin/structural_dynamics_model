@@ -1,0 +1,164 @@
+{
+  "header": {
+    "constraint_id": "biological_curiosity",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Curiosity (The Information-Seeking Drive)",
+    "topic_domain": "biological/technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "attention_merchants",
+      "scientists_and_explorers",
+      "educators"
+    ],
+    "victims": [
+      "exploited_media_consumers",
+      "risk_taking_explorers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Exploited Media Consumer",
+      "comment": "PERSPECTIVE 1: EXPLOITED CONSUMER (SNARE) — The innate drive to fill information gaps is hijacked by algorithms designed to maximize engagement. The user feels a compulsion they cannot resist, extracting their time and attention for corporate profit. They are trapped by their own biology. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Attention Merchant",
+      "comment": "PERSPECTIVE 2: ATTENTION MERCHANT (ROPE) — For a social media platform or publisher, curiosity is a vast, self-renewing natural resource. They experience it as a pure coordination mechanism to direct user behavior toward monetizable ends. As a full beneficiary with arbitrage, their effective extraction is negative. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Scientist or Explorer",
+      "comment": "PERSPECTIVE 3: THE SCIENTIST (TANGLED ROPE) — Experiences curiosity as a powerful engine for discovery (coordination) but also as a demanding force that requires immense sacrifice of time, resources, and safety (extraction). The drive produces knowledge but extracts a high cost from the individual. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.47."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Educator",
+      "comment": "PERSPECTIVE 4: THE EDUCATOR (SCAFFOLD) — Views curiosity as the fundamental substrate upon which to build knowledge. The educational system is a temporary structure designed to channel this innate drive until the student achieves intellectual autonomy. χ is low because the educator is a beneficiary. The classification is scaffold due to the implicit sunset clause. d≈0.40, f(d)≈0.40, σ=1.0 → χ≈0.24. Sunset Rationale: The goal of education is to make the educator obsolete; the scaffold is removed when the student can learn independently."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Corporate 'Innovator'",
+      "comment": "PERSPECTIVE 5: CORPORATE 'INNOVATOR' (PITON) — In a corporate culture that performatively values 'curiosity' but punishes the risk-taking it entails, the drive's function is degraded. It persists as a theatrical value ('innovation workshops', posters) while its true purpose—unpredictable discovery—is suppressed. The high theater_ratio (0.75) and low effective extraction for this beneficiary (χ≈-0.01) trigger the Piton classification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Primal Organism (False Summit)",
+      "comment": "PERSPECTIVE 6: PRIMAL ORGANISM (MOUNTAIN) — From the perspective of basic survival, curiosity is not a choice but an immutable law of existence, like gravity. It is a fixed, unchangeable drive to map the environment. This perspective frames the drive as a natural law. However, the high base metrics (ε=0.60, S=0.65) mean the engine will flag this as a 'false summit'—a mischaracterization of a high-cost biological compulsion as a zero-cost natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "drive_teleology",
+      "question": "Is curiosity fundamentally a drive to reduce the aversion of an 'information gap' (deprivation) or a drive to seek the pleasure of discovery (exploration)?",
+      "resolution_mechanism": "Neurochemical studies differentiating dopamine pathway activation in response to uncertainty reduction vs. novel stimulus presentation.",
+      "impact": "If deprivation-based, its nature is more extractive (ε is high). If exploration-based, it is more coordinative (ε is lower). This would shift the analytical classification between Tangled Rope and Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether curiosity's primary driver is aversion-reduction or pleasure-seeking."
+    },
+    {
+      "id": "supernormal_stimuli_capture",
+      "question": "Can technological systems create 'supernormal stimuli' for curiosity (e.g., algorithmically generated information gaps) that permanently override biological self-regulation?",
+      "resolution_mechanism": "Longitudinal studies on cognitive function and attention regulation in populations with high vs. low exposure to algorithmic content feeds.",
+      "impact": "If capture is possible, the 'Snare' perspective becomes the dominant social reality, and the base suppression metric may be understated. If self-regulation adapts, the 'Snare' is a temporary state.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The capacity of technology to permanently capture the curiosity drive."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 1970,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "Curiosity is the innate biological drive to seek information and resolve uncertainty. While fundamentally a tool for learning and survival, its compulsive nature can be harnessed, exploited, or suppressed. This constraint story models the drive itself as a high-cost, high-reward mechanism. Its classification varies dramatically depending on the agent's structural relationship to the drive: whether they are its master (a scientist), its victim (an algorithmically-captured user), its cultivator (an educator), or its beneficiary (an attention merchant). The high base metrics reflect the 'Pandora Effect': the drive compels information-seeking even when the outcome may be costly or harmful, making it a powerful source of both progress and vulnerability.",
+    "key_agents": [
+      "Exploited Media Consumer: Primary victim (powerless/trapped) — their attention is extracted by systems hijacking their innate drive.",
+      "Attention Merchant: Primary beneficiary (institutional/arbitrage) — treats curiosity as a natural resource to be harvested for profit.",
+      "Scientist/Explorer: Mixed role (powerful/mobile) — uses the drive for discovery but also bears its high costs and risks.",
+      "Educator: Cultivator (organized/constrained) — channels the drive toward productive ends via temporary support structures.",
+      "Corporate 'Innovator': Performative actor (institutional/constrained) — engages in the theater of curiosity while suppressing its function.",
+      "Analytical Observer: Sees the full structure, including the 'false summit' of framing a costly drive as a neutral natural law."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.60): High. The drive is not neutral; it compels the expenditure of energy, time, and safety resources to close information gaps, regardless of the information's ultimate utility. This represents the biological cost of the 'explore' algorithm. Suppression (S=0.65): High. The internal compulsion to resolve uncertainty is extremely difficult to resist, suppressing other cognitive priorities. This is the mechanism hijacked by clickbait and algorithmic feeds. Theater Ratio (T=0.75): High. In modern social and corporate contexts, the *expression* of curiosity is often performative ('innovation culture') and decoupled from its functional purpose of genuine, risky exploration, which is often penalized.",
+    "perspectival_gap": "This story is a diagnostic exemplar, showing how a single constraint with fixed properties can manifest as all six types. For the Attention Merchant, it's a beneficial Rope. For the user they exploit, it's a Snare. For the scientist who wrestles with it, it's a Tangled Rope. For the educator who channels it, it's a Scaffold. For the corporation that pays it lip service, it's a Piton. For a primal view of survival, it's a Mountain. The gap is not in the constraint's properties but in the agent's structural position relative to its costs and benefits.",
+    "directionality_logic": "Beneficiaries (attention merchants, educators) experience the drive as a resource that enables their function, leading to low or negative effective extraction (Rope, Scaffold). Victims (exploited users) experience the drive as an irresistible compulsion that extracts their resources, leading to high effective extraction (Snare). Agents with a mixed relationship (scientists) experience both the coordinative benefits and extractive costs (Tangled Rope). The directionality `d` is derived from this structural relationship, determining the final classification for each perspective.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that 'type' is not an intrinsic property of a constraint but an emergent feature of the interaction between a constraint's base properties and an observer's indexed position. The question 'What type is curiosity?' is ill-posed. The correct question is 'From which structural position are you observing curiosity?' The ability to derive all six classifications from a single set of metrics validates the indexical approach and shows that perspectival disagreement is a predictable outcome of structural asymmetry, not a sign of analytical failure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_attention_capture",
+      "scientific_method",
+      "pedagogical_models"
+    ]
+  }
+}

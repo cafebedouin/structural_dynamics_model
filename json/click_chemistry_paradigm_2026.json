@@ -1,0 +1,90 @@
+{
+  "header": {
+    "constraint_id": "click_chemistry_paradigm_2026",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.1,
+    "theater_ratio": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Click Chemistry Paradigm",
+    "topic_domain": "scientific/technological",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.8,
+    "beneficiaries": [
+      "research_chemists",
+      "pharmaceutical_industry",
+      "materials_scientists"
+    ],
+    "victims": [
+      "traditional_synthesis_specialists"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pharmaceutical Developer",
+      "comment": "PERSPECTIVE 1: PHARMACEUTICAL DEVELOPER (ROPE) — Experiences the paradigm as a pure coordination good. It lowers R&D costs, accelerates discovery, and standardizes production. Exit is trivial (use other methods), and they are a primary beneficiary. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.01. Negative extraction signifies a net subsidy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Displaced Synthesis Specialist",
+      "comment": "PERSPECTIVE 2: DISPLACED SPECIALIST (ROPE) — An expert in older, more complex synthesis methods whose skills are devalued. They are a structural 'victim' of the paradigm shift. However, because base extractiveness (ε) is so low, the constraint is still a Rope even from their perspective. The harm is from creative destruction, not from extraction inherent in the constraint. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.06. The positive chi reflects the real cost of re-tooling, but it's far below the Tangled Rope threshold."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (ROPE) — The default analytical view correctly identifies the paradigm as a low-extraction, low-suppression coordination mechanism that solves collective action problems in synthesis. It is a canonical example of a Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.07."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The 'Natural Law' Proponent",
+      "comment": "PERSPECTIVE 4: 'NATURAL LAW' PROPONENT (MOUNTAIN - FALSE SUMMIT) — This perspective frames the paradigm as the 'one true way' to do synthesis, an inevitable and optimal endpoint. The engine will flag this as a false summit. The base properties (ε=0.05, suppression=0.10, emerges_naturally=false, resistance=0.80) fail the Mountain classification gates, revealing that this is a contingent technological choice, not a fundamental law of nature."
+    }
+  ],
+  "interval": {
+    "start": 2001,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "Click chemistry, a term coined by K. Barry Sharpless in 2001, is a chemical philosophy that favors simple, reliable, and modular reactions. Instead of complex, low-yield traditional synthesis, it uses a small set of powerful, 'spring-loaded' reactions that work reliably in diverse conditions. This constraint represents the adoption of this paradigm, which functions as a powerful coordination mechanism for the global chemistry community, enabling faster drug discovery, novel materials science, and simplified chemical biology.",
+    "key_agents": [
+      "Research Chemists & Industry: Primary beneficiaries (institutional/arbitrage) — gain a powerful, efficient toolkit that accelerates research and development.",
+      "Traditional Synthesis Specialists: Structural victims (moderate/constrained) — possess deep expertise in older, more complex methods that are partially obsoleted by the new paradigm.",
+      "Analytical Observer: Sees the full structure as a coordination standard."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.05): Extremely low. The paradigm is an open-source set of principles and reactions. It does not inherently extract value; it creates it by increasing efficiency. Suppression (0.10): Very low. Adoption is voluntary and merit-based. Chemists are free to use other methods, but the effectiveness of click chemistry for certain applications creates competitive pressure. Theater Ratio (0.08): Very low. The paradigm is highly functional; its value is in the successful synthesis of molecules, not in performative ritual.",
+    "perspectival_gap": "The perspectival gap is minimal, demonstrating a uniform-type constraint. Nearly all actors experience it as a Rope. The most significant 'victim'—a specialist in older methods—still classifies it as a Rope because the base extractiveness is too low to constitute a Tangled Rope or Snare. Their personal cost is real but stems from technological displacement, not from coercive extraction by the constraint itself. The only major perspectival deviation is the 'false summit' Mountain classification, where an observer mistakes a highly effective convention for a law of nature. The engine's metrics correctly identify this as a misclassification.",
+    "directionality_logic": "Beneficiaries (chemists, industry) have arbitrage exit and benefit directly, leading to a low 'd' value and negative effective extraction (χ < 0), signifying a net subsidy. The structural victims (displaced specialists) have constrained exit and bear the costs of the paradigm shift, leading to a higher 'd' value and a positive, but still very low, effective extraction (χ > 0). This correctly models the asymmetric costs of technological adoption without mislabeling it as a coercive or extractive system.",
+    "mandatrophy_analysis": "This story is a canonical example of a Rope, preventing mandatrophy by correctly identifying a beneficial scientific paradigm as a coordination mechanism. It avoids the error of classifying the creative destruction inherent in technological progress as a form of extraction. The low base metrics (ε and suppression) ensure that even from the perspective of those negatively impacted, the constraint's fundamental nature as a coordination tool is preserved. It demonstrates that not all structural change that produces winners and losers is a Tangled Rope or Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "drug_discovery_pipelines"
+    ]
+  }
+}

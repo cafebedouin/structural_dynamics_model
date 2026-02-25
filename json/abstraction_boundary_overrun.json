@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "abstraction_boundary_overrun",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Leaky Black-Box Collapse",
+    "topic_domain": "technological/computational",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.6,
+    "beneficiaries": [
+      "platform_maintainers",
+      "early_adopters"
+    ],
+    "victims": [
+      "downstream_developers",
+      "end_users"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Downstream Developer",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM DEVELOPER (SNARE) — Trapped by dependency on the abstraction. The cost of migrating the entire system is prohibitive. Leaks are a constant, coercive tax on time and cognitive load, extracting productivity. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Maintainer",
+      "comment": "PERSPECTIVE 2: PLATFORM MAINTAINER (ROPE) — Experiences the abstraction as a pure coordination good. Leaks are seen as bugs or advanced features, not structural flaws. Their specialized knowledge becomes a source of power and consulting revenue, a net benefit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (simplifying development) and the asymmetric extraction (the hidden costs of leaks borne by users). This is the canonical view of the constraint. d≈0.72, f(d)≈1.15, σ=1.0 → χ≈0.63."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The New Adopter",
+      "comment": "PERSPECTIVE 4: NEW ADOPTER (SCAFFOLD) — Sees the abstraction as a temporary tool to accelerate initial development. At this stage, exit is cheap and the leaks haven't appeared. The abstraction provides support with an implicit sunset clause: 'I'll use it until it becomes a problem'. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.51. Note: χ is high, but the 'scaffold' classification is perspectival, based on perceived temporariness."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy System Maintainer",
+      "comment": "PERSPECTIVE 5: LEGACY MAINTAINER (PITON) — The original coordination benefit has atrophied; the system is now maintained through inertia. The abstraction's promise of simplicity is pure theater compared to the daily reality of working around its quirks. The rules remain because removing them is too costly. theater_ratio=0.65 is high, driving this perspectival classification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Purist",
+      "comment": "PERSPECTIVE 6: THEORETICAL PURIST (MOUNTAIN) — Argues from the 'Law of Leaky Abstractions' that all non-trivial abstractions are inherently leaky. This perspective naturalizes the constraint as an unavoidable law of computing. The engine will flag this as a false summit, as the base properties (ε=0.55, suppression=0.75) fail the mountain gates."
+    }
+  ],
+  "interval": {
+    "start": 2005,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.65
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inherent_vs_contingent_leakiness",
+      "question": "Is the degree of leakiness an inherent, unavoidable property of this type of abstraction (Mountain), or a contingent result of specific design choices and under-investment (Tangled Rope)?",
+      "resolution_mechanism": "Comparative analysis with alternative, less-leaky abstractions in the same problem domain. Formal verification of the abstraction boundary.",
+      "impact": "If inherent, the constraint is a Mountain and efforts should focus on mitigation. If contingent, it is a Tangled Rope or Snare that could be fixed or replaced.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing between inherent leakiness (Mountain) and contingent design flaws (Tangled Rope)."
+    },
+    {
+      "id": "intentionality_of_complexity",
+      "question": "Is the complexity and leakiness a result of unintentional scope creep, or is it implicitly or explicitly maintained to create vendor lock-in and a market for expert consulting?",
+      "resolution_mechanism": "Analysis of platform maintainers' business models, support contracts, and responses to community-submitted simplification patches.",
+      "impact": "If unintentional, it's a classic Tangled Rope. If intentional, it's a Snare from more perspectives, as the extraction is deliberate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Determining if the leakiness is a bug (Tangled Rope) or a feature (Snare)."
+    },
+    {
+      "id": "cost_quantification_for_exit",
+      "question": "Can the cumulative cost of developer time spent debugging leaks be reliably quantified against the projected cost of migrating to a new platform?",
+      "resolution_mechanism": "Analysis of engineering time-tracking data, bug report frequencies, and developer surveys, compared with cost models for large-scale software re-platforming.",
+      "impact": "If the cost of leaks is demonstrably higher than migration, the 'trapped' exit condition weakens, potentially shifting the classification from Snare to Tangled Rope for developers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the extraction cost to evaluate the viability of exit."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In software engineering, an abstraction is a simplified interface to a complex system. The 'Leaky Black-Box Collapse' occurs when this simplification fails, forcing users (developers) to grapple with the underlying complexity the abstraction was meant to hide. This creates a structural conflict: the abstraction provides a real coordination benefit (faster development initially) but imposes a severe extractive cost when it fails, a cost borne entirely by those who depend on it.",
+    "key_agents": [
+      "Downstream Developers: Primary victims (powerless/trapped) — build on the abstraction and are forced to pay the 'leak tax' in time and effort.",
+      "Platform Maintainers: Primary beneficiaries (institutional/arbitrage) — create and control the abstraction; their expert knowledge becomes a source of power and revenue.",
+      "New Adopters: Prospective users (moderate/mobile) — see only the initial coordination benefit, viewing the tool as a temporary scaffold.",
+      "Legacy System Maintainers: Inertial users (organized/constrained) — experience the abstraction as a degraded set of rules to be worked around.",
+      "Theoretical Purists: Analytical observers (analytical/analytical) — frame the issue as an unavoidable 'natural law' of computing."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Represents the significant developer time and cognitive overhead lost to debugging the abstraction's internal workings. This is a direct extraction of productivity from the victims. Suppression (0.75): High, reflecting the prohibitive cost and risk of migrating a complex system off a foundational technology. This locks users in and prevents them from switching to less-leaky alternatives. Theater Ratio (0.65): High. There is a large gap between the marketed simplicity of the abstraction ('just use this one simple command!') and the complex reality of its failure modes.",
+    "perspectival_gap": "The constraint is a powerful diagnostic because its classification depends entirely on the observer's position. For the maintainer who profits from their expertise, it's a Rope. For the developer trapped by it, it's a Snare. For the analyst, it's a Tangled Rope. For the newcomer, it's a Scaffold. For the maintainer of a 10-year-old system, it's a Piton. For the theorist, it's a Mountain. The same base metrics produce all six classifications, revealing that the 'type' is not inherent to the object but to the relationship between the object and the observer.",
+    "directionality_logic": "Beneficiaries (platform_maintainers) have arbitrage exit and benefit from the information asymmetry, leading to a low/negative derived directionality (d). Victims (downstream_developers) are trapped and bear the full cost of the leaks, leading to a very high derived d. This structural difference in power and exit options drives the massive perspectival gap between seeing the constraint as a Rope versus a Snare.",
+    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that a single phenomenon can be correctly classified in multiple ways. The error is to insist on a single 'true' classification. The DR framework shows that the Rope, Snare, and Tangled Rope perspectives are all valid structural readings from different positions. The system's value is in mapping this presheaf of perspectives, not in collapsing it to one privileged view. The 'Mountain' perspective is revealed as a false summit, an attempt to naturalize a contingent technological arrangement."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "technical_debt_interest_rate",
+      "developer_burnout_cycle"
+    ]
+  }
+}

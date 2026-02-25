@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: bwb_adeg_rewesale_conditions
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-10-27
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_bwb_adeg_rewesale_conditions, []).
@@ -38,13 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,23 +53,24 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: bwb_adeg_rewesale_conditions
  *   human_readable: BWB Conditions on Rewe's Adeg Store Divestment
- *   domain: economic
+ *   domain: economic_regulation
  *
  * SUMMARY:
- *   The Austrian Federal Competition Authority (BWB) imposed conditions on the
- *   transfer of 75 Adeg grocery stores from the Rewe Group to independent
- *   merchants. These conditions are designed to ensure the merchants'
- *   independence, particularly by preventing Rewe from forcing them into
- *   exclusive purchasing agreements, thereby preserving competition among
- *   suppliers and protecting smaller market participants.
+ *   The Austrian Federal Competition Authority (BWB) imposed binding
+ *   conditions on the Rewe Group's divestment of 75 Adeg grocery stores to
+ *   independent merchants. This regulatory action serves as a classic example
+ *   of a state-enforced market-shaping constraint. The BWB's stated goal is
+ *   to preserve competition in the Austrian food retail sector, preventing
+ *   increased market concentration that could harm consumers and smaller
+ *   businesses. The constraint is not a simple rule but a complex set of
+ *   obligations that reallocates market power and opportunity.
  *
- * KEY AGENTS (by structural relationship):
- *   - rewe_group: Primary target (powerful/constrained) — bears extraction by having its market power and deal-making ability constrained.
- *   - independent_merchants: Primary beneficiary (organized/mobile) — benefits from enhanced autonomy and protection from coercive contracts.
- *   - food_and_beverage_suppliers: Secondary beneficiary (moderate/mobile) - benefits from a more diverse and competitive purchasing landscape.
- *   - bwb_austria: Inter-institutional architect (institutional/arbitrage) — designs and enforces the constraint to fulfill its mandate.
- *   - end_consumers: Powerless observers (powerless/trapped) - experience the market structure as an unchangeable fact.
- *   - analytical_observer: Analytical observer — sees the full structure as a Tangled Rope.
+ * KEY AGENTS:
+ *   - Rewe Group: Primary target/victim (institutional/constrained) — A major retail corporation whose transactional freedom is being curtailed.
+ *   - Independent Merchants: Primary beneficiaries (organized/mobile) — Smaller businesses who gain an opportunity to acquire stores under favorable conditions.
+ *   - Austrian Consumers: Secondary beneficiaries (powerless/trapped) — The public group intended to benefit from maintained competition.
+ *   - BWB (Federal Competition Authority): Institutional enforcer/beneficiary (institutional/arbitrage) — The state body fulfilling its regulatory mandate.
+ *   - Analytical Observer: External viewpoint (analytical/analytical) — Assesses the structure of the intervention impartially.
  */
 
 /* ==========================================================================
@@ -78,103 +78,66 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(bwb_adeg_rewesale_conditions, 0.48).
-domain_priors:suppression_score(bwb_adeg_rewesale_conditions, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(bwb_adeg_rewesale_conditions, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(bwb_adeg_rewesale_conditions, 0.55).
+domain_priors:suppression_score(bwb_adeg_rewesale_conditions, 0.75).
+domain_priors:theater_ratio(bwb_adeg_rewesale_conditions, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, extractiveness, 0.48).
-narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, extractiveness, 0.55).
+narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, theater_ratio, 0.15).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(bwb_adeg_rewesale_conditions, tangled_rope).
+narrative_ontology:human_readable(bwb_adeg_rewesale_conditions, "BWB Conditions on Rewe's Adeg Store Divestment").
+narrative_ontology:topic_domain(bwb_adeg_rewesale_conditions, "economic_regulation").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(bwb_adeg_rewesale_conditions). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(bwb_adeg_rewesale_conditions).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, independent_merchants).
-narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, food_and_beverage_suppliers).
-narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, bwb_austria). % Fulfills its mandate
-
-% Who bears disproportionate cost?
+narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, austrian_consumers).
+narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, bwb_regulatory_mandate).
 narrative_ontology:constraint_victim(bwb_adeg_rewesale_conditions, rewe_group).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (REWE GROUP)
-% Agent whose market power is constrained. Engine derives d from:
-%   victim membership + constrained exit -> d approx 0.9 -> f(d) approx 1.35 -> high chi
-% The high suppression and extraction makes this feel like a snare, trapping
-% them in a sub-optimal deal structure.
+% PERSPECTIVE 1: REWE GROUP (SNARE) — As the target of the regulation, Rewe experiences the conditions as pure coercive extraction. Their freedom to transact on their preferred terms is removed by state power. The coordination benefits to the wider market are an externality they are forced to subsidize. d is high due to victim status + constrained exit, pushing χ > 0.66.
 constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, snare,
-    context(agent_power(powerful),
-            time_horizon(generational),
+    context(agent_power(institutional),
+            time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (INDEPENDENT MERCHANTS)
-% Agent who benefits from the protection. Engine derives d from:
-%   beneficiary membership + mobile exit -> d approx 0.15 -> f(d) approx -0.01 -> low/negative chi
-% From their view, it's a pure coordination mechanism that enables fair competition.
+% PERSPECTIVE 2: INDEPENDENT MERCHANTS (ROPE) — As beneficiaries, the merchants see the BWB's conditions as a pure coordination mechanism that creates a viable market for them to acquire stores and compete. The constraint reduces the power asymmetry with Rewe. d is low due to beneficiary status, resulting in low/negative χ.
 constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, rope,
     context(agent_power(organized),
             time_horizon(biographical),
             exit_options(mobile),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context. Recognizes both the coordination function and
-% the asymmetric extraction, hence classifying it as a Tangled Rope.
-% This classification serves as the ground truth for the constraint_claim.
+% PERSPECTIVE 3: AUSTRIAN CONSUMERS (ROPE) — Consumers are the intended indirect beneficiaries. Despite being powerless and trapped within the market, the constraint is designed to work in their favor by preserving competition. The derivation chain prioritizes their beneficiary status, leading to a low d value and a Rope classification.
+constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, rope,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes both the genuine coordination function (preserving market competition) and the coercive, asymmetric extraction from Rewe. It is a textbook example of a state-enforced hybrid constraint, correctly classified as a Tangled Rope.
 constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% The regulator (BWB) and the regulated (Rewe) are both powerful actors
-% with different structural relationships to the constraint.
-
-% PERSPECTIVE 4A: THE REGULATOR (BWB)
-% As the architect, the BWB sees the constraint as a tool to fulfill its
-% mandate of ensuring market competition. It is a pure coordination mechanism.
-% Engine derives d from: beneficiary membership + arbitrage exit -> d approx 0.05 -> f(d) approx -0.12
+% PERSPECTIVE 5: BWB (ROPE) - The regulator itself experiences the constraint as the fulfillment of its mandate. It is a tool for coordination that it wields with full agency. As the primary institutional beneficiary with arbitrage exit (it can change the rules), it perceives no extraction.
 constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
-
-% PERSPECTIVE 5: THE END CONSUMER (MOUNTAIN)
-% A single consumer in a town with one of the affected stores. They are
-% powerless to change the regulatory conditions and trapped by their local
-% geography. From this viewpoint, the constraint is an unchangeable feature
-% of their economic landscape, appearing as a Mountain.
-constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tangled_rope,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(local))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -183,22 +146,13 @@ constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tang
 :- begin_tests(bwb_adeg_rewesale_conditions_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between the target (Rewe) and a beneficiary (BWB).
-    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, TypeTarget, context(agent_power(powerful), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    assertion(TypeTarget == snare),
-    assertion(TypeBeneficiary == rope),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_conditions_met) :-
-    % Verify that all structural preconditions for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, _),
-    narrative_ontology:constraint_victim(bwb_adeg_rewesale_conditions, _),
-    domain_priors:requires_active_enforcement(bwb_adeg_rewesale_conditions).
-
-test(analytical_view_is_tangled_rope) :-
-    narrative_ontology:constraint_claim(bwb_adeg_rewesale_conditions, tangled_rope),
-    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(bwb_adeg_rewesale_conditions, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(bwb_adeg_rewesale_conditions_tests).
 
@@ -208,86 +162,73 @@ test(analytical_view_is_tangled_rope) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): Set moderately high. The constraint doesn't seize assets, but it significantly extracts potential monopoly profits and market control from Rewe by severing tied purchasing agreements. This represents a substantial transfer of economic power.
- *   - Suppression Score (s=0.65): High. As the national competition authority, the BWB's decision is binding. Rewe's alternative is to cancel the entire divestment, which may be commercially untenable. This gives the BWB strong coercive power in this context.
- *   - Theater Ratio (τ=0.10): Low. This is a concrete, legally enforceable set of conditions with clear economic impact, not a performative gesture.
+ *   Extractiveness (ε=0.55): Moderate. The constraint extracts significant value from Rewe, not just in monetary terms but in strategic flexibility and the freedom to dispose of assets on its own terms. Suppression (0.75): High. As a state regulator, the BWB's decision is backed by legal force. Rewe's alternatives are severely limited; non-compliance would result in legal penalties or the transaction being blocked entirely. Theater Ratio (0.15): Low. This is a functional, not performative, regulatory action with direct and intended economic consequences.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. The target, Rewe Group, experiences the constraint as a Snare. From its viewpoint, the rules are coercive (high suppression) and extract significant value (high ε), trapping it in a less favorable transaction. The beneficiaries—independent merchants and the BWB itself—see a Rope. For them, it is a pure coordination device that corrects a market failure, levels the playing field, and enables fair competition. The disagreement is not about the facts, but about the structural position of each agent relative to the flow of costs and benefits.
+ *   The gap is stark and structurally determined. Rewe, the target, experiences the constraint as a Snare because the costs are direct and coercive, while the market-wide benefits are an externality. The merchants and the BWB, as beneficiaries, experience it as a Rope because it facilitates a desirable coordination outcome (market entry, mandate fulfillment). Consumers also see a Rope, as the rule is designed to protect them. The analytical observer, weighing both the coercive extraction from Rewe and the genuine coordination goal, classifies it as a Tangled Rope.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality `d` is derived automatically from the declared structural relationships.
- *   - Beneficiaries: `independent_merchants`, `food_and_beverage_suppliers`, and the `bwb_austria` (which benefits by fulfilling its mandate). These agents receive a low `d`, resulting in a low or negative effective extraction (χ).
- *   - Victim: `rewe_group` is the sole victim, bearing the costs of the constraint. This assigns it a high `d`, leading to a high χ from its perspective.
- *   This mapping directly reflects the economic reality of the regulatory intervention.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This case perfectly illustrates an inter-institutional dynamic. Both the BWB (`institutional`) and Rewe (`powerful`) are significant actors. However, their relationship to the constraint is oppositional. The BWB, with `exit_options(arbitrage)` (it designed the rule), sees a Rope. Rewe, with `exit_options(constrained)` (it must accept the rule to proceed), sees a Snare. The model correctly captures that even powerful actors can be targets of extraction depending on the regulatory context.
+ *   Directionality is derived from the clear structural roles. Rewe is the designated victim, and its constrained exit options lead to a high 'd' value, resulting in high effective extraction (χ) and a Snare classification. The merchants, consumers, and BWB are designated beneficiaries; their mobile or arbitrage exit options (or, for consumers, the protective intent of the law) result in low 'd' values, low/negative χ, and a Rope classification. The system correctly models how the same regulatory act is perceived differently based on one's position relative to the flow of value and coercion.
  *
  * MANDATROPHY ANALYSIS:
- *   The Tangled Rope classification is crucial for avoiding mandatrophy. A simplistic analysis might label this regulation as either purely beneficial "pro-competition policy" (Rope) or purely harmful "government overreach" (Snare). The Tangled Rope designation correctly identifies that it is BOTH: it has a genuine coordination function that benefits some market actors (`constraint_beneficiary` is declared) while simultaneously imposing asymmetric costs on another (`constraint_victim` is declared). This dual nature is the hallmark of effective, but non-neutral, regulation.
+ *   This constraint is a clear case for the necessity of the Tangled Rope category. Labeling it purely as a Snare (Rewe's view) would ignore its legitimate pro-competitive coordination function. Labeling it purely as a Rope (the BWB's view) would erase the coercive extraction imposed on a market actor. The Tangled Rope classification, adopted by the analytical perspective, correctly identifies the hybrid nature of most economic regulation: it is simultaneously a coordination mechanism for the market as a whole and an extractive mechanism against specific, targeted entities.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_bwb_adeg,
-    'Will Rewe Group find structural workarounds (e.g., through complex wholesale incentives or loyalty programs) to re-establish de facto purchasing control over the theoretically independent merchants?',
-    'Long-term audit of supplier diversity and purchasing prices for the divested stores over a 5-10 year period.',
-    'If True, the constraint degrades into a Piton (high theater, low function), and the initial extraction was temporary. If False, the constraint remains an effective Tangled Rope.',
+    long_term_merchant_viability,
+    'Will the independent merchants who acquire the stores remain competitive in the long term, or will they eventually fail or be re-acquired, rendering the intervention ineffective?',
+    'Longitudinal market share analysis of the divested stores over a 5-10 year period.',
+    'If merchants fail, the constraint''s coordination function was illusory, and it was closer to a pure Snare on Rewe with no lasting public benefit. If they thrive, the Tangled Rope classification is robust.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_bwb_adeg, empirical, 'Whether Rewe can structurally bypass the conditions to re-establish de facto purchasing control.').
+narrative_ontology:omega_variable(long_term_merchant_viability, empirical, 'Long-term competitive viability of merchants post-divestment').
+
+omega_variable(
+    consumer_price_impact,
+    'Did the divestment conditions lead to demonstrably lower prices or higher quality for consumers compared to a counterfactual where the stores were closed or sold without conditions?',
+    'Econometric analysis of grocery price indices in the affected regions, comparing them to control regions.',
+    'A significant positive impact on consumers confirms the strength of the coordination function. No impact suggests the extraction from Rewe did not translate into public benefit, weakening the Tangled Rope case.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(consumer_price_impact, empirical, 'Measurable impact of the conditions on consumer welfare').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(bwb_adeg_rewesale_conditions, 0, 10).
+narrative_ontology:interval(bwb_adeg_rewesale_conditions, 2022, 2025).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data for this new constraint models its intended stability.
-% A future audit could detect drift (e.g., rising theater) if enforcement wanes.
-% Required because base_extractiveness > 0.46.
+% Theater ratio over time
+narrative_ontology:measurement(bwb__tr_t2022, bwb_adeg_rewesale_conditions, theater_ratio, 2022, 0.15).
+narrative_ontology:measurement(bwb__tr_t2023, bwb_adeg_rewesale_conditions, theater_ratio, 2023, 0.15).
+narrative_ontology:measurement(bwb__tr_t2024, bwb_adeg_rewesale_conditions, theater_ratio, 2024, 0.15).
 
-% Theater ratio over time (stable):
-narrative_ontology:measurement(bwb_adeg_tr_t0, bwb_adeg_rewesale_conditions, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(bwb_adeg_tr_t5, bwb_adeg_rewesale_conditions, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(bwb_adeg_tr_t10, bwb_adeg_rewesale_conditions, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(bwb__be_t2022, bwb_adeg_rewesale_conditions, base_extractiveness, 2022, 0.55).
+narrative_ontology:measurement(bwb__be_t2023, bwb_adeg_rewesale_conditions, base_extractiveness, 2023, 0.55).
+narrative_ontology:measurement(bwb__be_t2024, bwb_adeg_rewesale_conditions, base_extractiveness, 2024, 0.55).
 
-% Extraction over time (stable):
-narrative_ontology:measurement(bwb_adeg_ex_t0, bwb_adeg_rewesale_conditions, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(bwb_adeg_ex_t5, bwb_adeg_rewesale_conditions, base_extractiveness, 5, 0.48).
-narrative_ontology:measurement(bwb_adeg_ex_t10, bwb_adeg_rewesale_conditions, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This is a classic regulatory enforcement mechanism for market structure.
 narrative_ontology:coordination_type(bwb_adeg_rewesale_conditions, enforcement_mechanism).
-
-% Network relationships (structural influence edges)
-% This constraint influences the general balance of power in the Austrian grocery supply chain.
-narrative_ontology:affects_constraint(bwb_adeg_rewesale_conditions, austrian_grocery_supplier_leverage).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this constraint. The automatic derivation
-% based on the declared beneficiary/victim groups and the agents' exit
-% options accurately captures the structural dynamics of the situation.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: asean_ceasefire_2011
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2024-07-29
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_asean_ceasefire_2011, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,20 +57,22 @@
  *   domain: geopolitical
  *
  * SUMMARY:
- *   Following deadly border clashes near the Preah Vihear temple, Thailand
- *   and Cambodia agreed to an ASEAN-mediated ceasefire in February 2011. The
- *   agreement involved allowing unarmed Indonesian observers into the
- *   disputed area to monitor the truce. This constraint represents the
- *   ceasefire itself—a temporary coordination mechanism intended to de-escalate
- *   conflict and pave the way for a permanent solution.
+ *   Following deadly border clashes near the Preah Vihear temple in early
+ *   2011, ASEAN, under Indonesia's chairmanship, mediated a ceasefire
+ *   agreement between Thailand and Cambodia. The agreement called for a
+ *   cessation of hostilities and the deployment of unarmed Indonesian
+ *   observers. However, the ceasefire was fragile and ultimately failed to
+ *   hold, as it did not address the root cause of the conflict: the
+ *   undemarcated border. The agreement functioned primarily as a performative
+ *   de-escalation to satisfy the international community, while the
+ *   underlying structural conflict remained unresolved until a 2013 ICJ
+ *   ruling.
  *
- * KEY AGENTS (by structural relationship):
- *   - Thai/Cambodian Governments: Primary beneficiaries (institutional/constrained) — benefit from stopping a costly armed conflict.
- *   - Border Region Civilians: Primary beneficiaries (powerless/trapped) — benefit from the cessation of violence.
- *   - Nationalist Factions: Primary targets/victims (organized/mobile) — their goal of territorial gain through force is suppressed.
- *   - ASEAN (specifically Indonesia): Mediator/Beneficiary (institutional/arbitrage) — benefits reputationally from successful diplomacy.
- *   - Short-term Observer: Sees immediate de-escalation as pure coordination (moderate/mobile).
- *   - Analytical Observer: Sees the full structure as a temporary support.
+ * KEY AGENTS:
+ *   - Displaced Border Civilians: Primary victims (powerless/trapped) — bear the direct costs of the failed ceasefire.
+ *   - ASEAN Diplomatic Corps: Primary beneficiary (institutional/arbitrage) — gains prestige from its role as a regional mediator.
+ *   - Thai & Cambodian Governments: State actors (powerful/constrained) — experience the agreement as a mixed tool for de-escalation and a source of political cost.
+ *   - Frontline Soldiers: Secondary victims (powerless/trapped) — face death and injury when the ceasefire breaks down.
  */
 
 /* ==========================================================================
@@ -79,89 +80,67 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(asean_ceasefire_2011, 0.15).
-domain_priors:suppression_score(asean_ceasefire_2011, 0.25).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(asean_ceasefire_2011, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(asean_ceasefire_2011, 0.55).
+domain_priors:suppression_score(asean_ceasefire_2011, 0.65).
+domain_priors:theater_ratio(asean_ceasefire_2011, 0.75).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(asean_ceasefire_2011, extractiveness, 0.15).
-narrative_ontology:constraint_metric(asean_ceasefire_2011, suppression_requirement, 0.25).
-narrative_ontology:constraint_metric(asean_ceasefire_2011, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(asean_ceasefire_2011, extractiveness, 0.55).
+narrative_ontology:constraint_metric(asean_ceasefire_2011, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(asean_ceasefire_2011, theater_ratio, 0.75).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(asean_ceasefire_2011, rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(asean_ceasefire_2011, tangled_rope).
 narrative_ontology:human_readable(asean_ceasefire_2011, "2011 ASEAN-mediated Thai-Cambodian Ceasefire Agreement").
 narrative_ontology:topic_domain(asean_ceasefire_2011, "geopolitical").
 
-% --- Binary flags ---
-narrative_ontology:has_sunset_clause(asean_ceasefire_2011).      % Mandatory if Scaffold
-domain_priors:requires_active_enforcement(asean_ceasefire_2011). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(asean_ceasefire_2011).
+narrative_ontology:has_sunset_clause(asean_ceasefire_2011).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(asean_ceasefire_2011, thai_cambodian_governments).
-narrative_ontology:constraint_beneficiary(asean_ceasefire_2011, border_region_civilians).
-narrative_ontology:constraint_beneficiary(asean_ceasefire_2011, asean_mediators).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(asean_ceasefire_2011, nationalist_factions).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(asean_ceasefire_2011, asean_diplomatic_corps).
+narrative_ontology:constraint_beneficiary(asean_ceasefire_2011, incumbent_political_elites).
+narrative_ontology:constraint_victim(asean_ceasefire_2011, displaced_border_civilians).
+narrative_ontology:constraint_victim(asean_ceasefire_2011, frontline_soldiers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% This is primarily a Scaffold, as its function is temporary support. However,
-% from a short-term perspective focused only on immediate de-escalation, it
-% appears as a pure Rope, creating a perspectival gap based on time horizon.
-
-% PERSPECTIVE 1: THE BELLIGERENT STATES (PRIMARY BENEFICIARIES)
-% For the governments of Thailand and Cambodia, the ceasefire is a temporary
-% support structure to escape a negative-sum conflict.
-constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(regional))).
-
-% PERSPECTIVE 2: THE CIVILIANS (SECONDARY BENEFICIARIES)
-% For civilians in the conflict zone, the ceasefire is a life-saving
-% temporary measure. They are beneficiaries, even with trapped exit options.
-constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
+% PERSPECTIVE 1: DISPLACED CIVILIAN (SNARE) — For those living in the conflict zone, the ceasefire is a failed promise that does not provide lasting security. They are trapped by geography and bear the full cost of the agreement's collapse (death, injury, displacement) with no recourse. The agreement functions as a pure extraction of their safety and stability. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.70.
+constraint_indexing:constraint_classification(asean_ceasefire_2011, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(regional))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analytical view sees the explicit temporary nature, the coordination
-% function, and the low extraction, classifying it as a textbook Scaffold.
+% PERSPECTIVE 2: ASEAN MEDIATOR (ROPE) — From the perspective of the ASEAN diplomatic corps (led by Indonesia), the agreement is a pure coordination success. It halted a hot war between member states, affirmed ASEAN's role as a regional peacemaker, and enhanced its international prestige. The costs are externalized. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.06.
 constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: STATE ACTOR (TANGLED ROPE) — For the governments of Thailand and Cambodia, the agreement is a hybrid. It provides a genuine coordination benefit (de-escalation, avoiding further military/political costs) but also imposes significant extraction (accepting foreign observers, ceding some sovereignty, managing domestic nationalist backlash). They are constrained by international pressure and the lack of better alternatives. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.61.
+constraint_indexing:constraint_classification(asean_ceasefire_2011, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: OPTIMISTIC DIPLOMAT (SCAFFOLD) — This perspective sees the ceasefire not as an end but as a temporary support structure. Its purpose is to create stability for a permanent resolution (e.g., via the ICJ). The implicit sunset clause is the final border demarcation, which would render the ceasefire obsolete. From this view, it's a necessary, temporary coordination tool. d≈0.15, f(d)≈-0.01, σ=0.9 → χ≈-0.005.
+constraint_indexing:constraint_classification(asean_ceasefire_2011, scaffold,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes both the coordination function and the severe extractive costs. The high theater ratio (0.75) indicates its performative nature, while the high base extractiveness (0.55) and suppression (0.65) confirm its coercive and costly structure for those trapped within it. This matches the system's claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76.
+constraint_indexing:constraint_classification(asean_ceasefire_2011, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ASEAN MEDIATOR (INTER-INSTITUTIONAL)
-% For the mediator (Indonesia), this is a reputational win and a successful
-% act of regional coordination. Their arbitrage exit option gives them a
-% very low directionality score, reinforcing the low-extraction view.
-constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(regional))).
-
-% PERSPECTIVE 5: THE SHORT-TERM OBSERVER (ROPE)
-% A foreign diplomat or journalist focused on the immediate de-escalation sees
-% a pure coordination mechanism (a Rope). The temporary, structural-support
-% aspect (Scaffold) is only apparent over a longer time horizon. This
-% perspective provides the necessary type variance to pass the linter.
-constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
-    context(agent_power(moderate),
-            time_horizon(immediate),
-            exit_options(mobile),
-            spatial_scope(regional))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -170,17 +149,13 @@ constraint_indexing:constraint_classification(asean_ceasefire_2011, rope,
 :- begin_tests(asean_ceasefire_2011_tests).
 
 test(perspectival_gap) :-
-    % Verify the perspectival gap between the analytical view (Scaffold)
-    % and the short-term observer view (Rope).
-    constraint_indexing:constraint_classification(asean_ceasefire_2011, Type1, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(asean_ceasefire_2011, Type2, context(agent_power(moderate), _, _, _)),
-    Type1 \= Type2.
+    constraint_indexing:constraint_classification(asean_ceasefire_2011, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(asean_ceasefire_2011, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(scaffold_structural_requirement_met) :-
-    % Scaffolds require a sunset clause to be correctly classified.
-    narrative_ontology:has_sunset_clause(asean_ceasefire_2011),
-    % They also must declare a beneficiary to have a coordination function.
-    narrative_ontology:constraint_beneficiary(asean_ceasefire_2011, _).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(asean_ceasefire_2011, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(asean_ceasefire_2011_tests).
 
@@ -190,55 +165,16 @@ test(scaffold_structural_requirement_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.15): The constraint's primary function is to
- *     STOP a mutually destructive, negative-sum activity (war). The "cost"
- *     is the mutual foregoing of potential military gains and sovereignty
- *     concessions (allowing foreign observers). This cost is low compared
- *     to the benefit of peace, hence a low ε.
- *   - Suppression (0.25): The constraint suppresses the alternative preferred
- *     by nationalist factions (military conflict), but since the alternative
- *     is so costly, the suppression requirement is low.
- *   - Sunset Clause: The agreement is explicitly temporary, designed to
- *     create conditions for a "permanent cease-fire" negotiation. This
- *     temporary, goal-oriented nature is the defining feature of a Scaffold.
+ *   Extractiveness (0.55): High. This reflects the severe cost of the agreement's failure, which is borne by civilians and soldiers in the form of death, injury, and displacement. The failure to secure peace is a form of extraction. Suppression (0.65): High. At the peak of the crisis, there were few viable alternatives to ASEAN mediation, forcing both parties into an agreement they were not fully committed to. Theater Ratio (0.75): Very High. The agreement was largely for an international audience, a way to demonstrate that action was being taken. Its rapid collapse reveals its low functional value compared to its high performative value. The `has_sunset_clause` is considered true because the ceasefire was implicitly temporary, designed to hold only until a permanent diplomatic or legal resolution was found.
  *
  * PERSPECTIVAL GAP:
- *   The primary perspectival gap is between Scaffold and Rope, driven by the
- *   time_horizon axis. Actors with a long-term or structural view (states,
- *   analytical observers) perceive the temporary support function and classify
- *   it as a Scaffold. In contrast, an observer with an `immediate` time horizon,
- *   such as a journalist focused on the daily cessation of violence, sees only
- *   the pure coordination function and classifies it as a Rope, as the
- *   "temporary" nature is not salient to their index.
+ *   The gap is stark. For ASEAN diplomats, the agreement is a successful coordination mechanism (Rope) that burnishes their institutional credentials. For a civilian in the line of fire, it is a cruel trap (Snare) that offers the illusion of safety before collapsing. For the state actors themselves, it is a complex, costly, and necessary tool of statecraft (Tangled Rope). The classification depends entirely on whether the observer benefits from the performance, is constrained by the structure, or is a victim of its failure.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: The state governments and border civilians directly
- *     benefit from the cessation of hostilities. ASEAN benefits
- *     reputationally. These declarations give these agents low directionality
- *     (d) scores, resulting in very low or negative effective extraction (χ).
- *   - Victims: Nationalist factions who advocate for a military solution are
- *     the structural victims. Their goals are actively thwarted by this
- *     constraint. This declaration assigns them a high `d` score, meaning from
- *     their perspective, the ceasefire is extractive (of their political goals).
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The model distinguishes between the two institutional beneficiaries. The
- *   belligerent states (Thailand/Cambodia) have `exit_options(constrained)`
- *   because unilaterally leaving the ceasefire re-ignites a costly war. The
- *   mediator (ASEAN/Indonesia) has `exit_options(arbitrage)` because they can
- *   withdraw their diplomatic support and observers without suffering the
- *   direct consequences of renewed fighting. This structural difference is
- *   captured by the engine's directionality derivation.
+ *   The directionality derivations drive the perspectival classifications. The `displaced_border_civilians` are victims with trapped exit options, maximizing their directionality (d≈0.95) and thus the effective extraction (χ), leading to a Snare classification. The `asean_diplomatic_corps` are beneficiaries with arbitrage exit options, minimizing their directionality (d≈0.05) and making the effective extraction negative, hence a Rope. The state actors are in a mixed position, modeled as victims with constrained exit, resulting in a high-but-not-maximal directionality (d≈0.75) that classifies as a Tangled Rope.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the constraint as a Scaffold, a
- *   temporary support. This prevents two common errors:
- *   1. Mislabeling it as a permanent Rope: This would ignore its inherent
- *      instability and the fact it's a means to an end, not the end itself.
- *   2. Mislabeling it as a Piton: Currently, the ceasefire is highly
- *      functional. Calling it a Piton would be incorrect. However, if decades
- *      pass with the "temporary" ceasefire still in place and no permanent
- *      treaty, it would decay into a Piton (a frozen conflict).
+ *   This case resolves the mandatrophy by demonstrating that a single diplomatic instrument is not monolithically a 'coordination' or 'extraction' mechanism. Its classification is indexical. Labeling the ceasefire as a pure Rope (the ASEAN view) would ignore the immense costs borne by local populations. Labeling it as a pure Snare (the civilian view) would ignore the genuine, if temporary, de-escalation it provided at the state level. The Deferential Realism framework correctly identifies it as a multi-faceted object whose character changes with the observer's structural relationship to it.
  */
 
 /* ==========================================================================
@@ -246,55 +182,57 @@ test(scaffold_structural_requirement_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_asean_ceasefire_2011,
-    'Will this temporary Scaffold successfully transition into a permanent Rope (a lasting peace treaty), or will it decay into a Piton (a frozen conflict)?',
-    'Observation of subsequent diplomatic negotiations and border stability over a 5-10 year period.',
-    'If it transitions to a Rope, the Scaffold was successful. If it decays to a Piton, the initial coordination function atrophied, leaving only the inertial structure.',
+    mediator_intent_vs_outcome,
+    'Was the agreement''s primary function genuine conflict resolution or a performative act to enhance ASEAN''s institutional prestige?',
+    'Analysis of internal ASEAN communications and diplomatic memoirs from the period to distinguish stated goals from revealed preferences.',
+    'If intent was prestige, it confirms the high theater and extractive nature (Tangled Rope/Snare). If intent was genuine resolution, it was a well-intentioned but failed Scaffold.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(mediator_intent_vs_outcome, empirical, 'Distinguishing between genuine resolution intent and institutional prestige-seeking in ASEAN''s mediation.').
+
+omega_variable(
+    domestic_nationalist_capture,
+    'To what extent were the Thai and Cambodian governments constrained by domestic nationalist factions, making a permanent resolution politically impossible?',
+    'Comparative political analysis of the influence of nationalist groups on government policy in both nations during 2011-2013.',
+    'High nationalist capture implies the conflict was a Mountain of domestic politics, making the ceasefire merely theater. Low capture suggests the failure was in the diplomatic instrument itself.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(domestic_nationalist_capture, empirical, 'Assessing the degree of state capture by domestic nationalist factions.').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(asean_ceasefire_2011, 0, 10).
+narrative_ontology:interval(asean_ceasefire_2011, 2011, 2013).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Although not a high-extraction constraint, modeling its potential decay from
-% a functional Scaffold to a theatrical Piton is instructive.
+% Theater ratio over time
+narrative_ontology:measurement(asea_tr_t0, asean_ceasefire_2011, theater_ratio, 0, 0.7).
+narrative_ontology:measurement(asea_tr_t1, asean_ceasefire_2011, theater_ratio, 1, 0.72).
+narrative_ontology:measurement(asea_tr_t2, asean_ceasefire_2011, theater_ratio, 2, 0.75).
 
-% Theater ratio over time: starts low (functional) and could rise if it fails
-% to produce a permanent solution.
-narrative_ontology:measurement(asean_ceasefire_2011_tr_t0, asean_ceasefire_2011, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(asean_ceasefire_2011_tr_t5, asean_ceasefire_2011, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(asean_ceasefire_2011_tr_t10, asean_ceasefire_2011, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(asea_be_t0, asean_ceasefire_2011, base_extractiveness, 0, 0.3).
+narrative_ontology:measurement(asea_be_t1, asean_ceasefire_2011, base_extractiveness, 1, 0.45).
+narrative_ontology:measurement(asea_be_t2, asean_ceasefire_2011, base_extractiveness, 2, 0.55).
 
-% Extraction over time: remains stable and low.
-narrative_ontology:measurement(asean_ceasefire_2011_ex_t0, asean_ceasefire_2011, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(asean_ceasefire_2011_ex_t5, asean_ceasefire_2011, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(asean_ceasefire_2011_ex_t10, asean_ceasefire_2011, base_extractiveness, 10, 0.15).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The ceasefire is enforced by third-party monitors.
 narrative_ontology:coordination_type(asean_ceasefire_2011, enforcement_mechanism).
-
-% Network relationships: This ceasefire is a precursor to a potential treaty.
-narrative_ontology:affects_constraint(asean_ceasefire_2011, preah_vihear_sovereignty_treaty).
+narrative_ontology:affects_constraint(asean_ceasefire_2011, south_china_sea_code_of_conduct).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for this constraint. The structural declarations of
-% beneficiaries and victims, combined with the distinct exit options of the
-% institutional actors, allow the engine to derive accurate directionality
-% values automatically.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

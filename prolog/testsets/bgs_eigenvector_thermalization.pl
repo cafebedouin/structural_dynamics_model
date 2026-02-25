@@ -1,9 +1,10 @@
 % ============================================================================
-% CONSTRAINT STORY: BGS_EIGENVECTOR_THERMALIZATION
+% CONSTRAINT STORY: bgs_eigenvector_thermalization
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-02-11
+% Generated: 2024-07-15
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_bgs_eigenvector_thermalization, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -20,6 +34,7 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
@@ -27,7 +42,7 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,49 +53,28 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: bgs_eigenvector_thermalization
- *   human_readable: Eigenvector Thermalization Hypothesis — ETH as
- *                   Enforcement of Quantum Chaos Orthodoxy
- *   domain: scientific (mathematical physics / quantum chaos)
+ *   human_readable: Eigenvector Thermalization Hypothesis — ETH as Enforcement of Quantum Chaos Orthodoxy
+ *   domain: mathematical_physics/quantum_chaos
  *
  * SUMMARY:
- *   The eigenvector component of the BGS conjecture: that the eigenstates
- *   of quantum systems with chaotic classical limits satisfy the Eigenstate
- *   Thermalization Hypothesis (ETH) — i.e., expectation values of local
- *   observables in energy eigenstates approximate microcanonical averages.
- *   Unlike spectral universality (which is a pure mathematical regularity),
- *   eigenvector thermalization involves a SOCIAL enforcement mechanism:
- *   the quantum chaos community enforces ETH compliance as a gating
- *   criterion for publication, marginalizing researchers who study
- *   non-thermal systems (quantum scars, MBL) as "fine-tuned exceptions."
+ *   The Eigenvector Thermalization Hypothesis (ETH) posits that individual
+ *   eigenstates of a generic, isolated quantum chaotic system are effectively
+ *   thermal. This is the eigenvector-level component of the broader BGS
+ *   conjecture. Unlike the spectral component (level statistics matching
+ *   RMT), which is empirically robust and close to a Mountain (ε≈0.08), the
+ *   ETH component is contested. Counterexamples like many-body localization
+ *   and quantum scars exist, making ETH a powerful but non-universal
+ *   organizing principle. This story models ETH not as a physical law, but as
+ *   an institutional constraint: a scientific orthodoxy that provides a
+ *   valuable coordination function for the field while simultaneously
+ *   extracting resources (attention, funding, career opportunities) from
+ *   researchers pursuing non-compliant phenomena.
  *
- *   Base extractiveness is 0.42: significantly higher than spectral
- *   universality (0.08) because the ETH orthodoxy extracts conformity
- *   from researchers — you must demonstrate ETH compliance to publish
- *   in mainstream quantum chaos venues.
- *
- * DUAL-FORMULATION NOTE (Epsilon Invariance Principle):
- *   The original BGS conjecture conflated two structurally distinct claims:
- *   (1) Spectral universality (constraint_bgs_spectral_universality):
- *       eigenvalue statistics follow RMT. epsilon = 0.08, Mountain-only.
- *   (2) Eigenvector thermalization (this file): eigenstate expectation
- *       values satisfy ETH. epsilon = 0.42, Tangled Rope.
- *   Because epsilon differs across these observables, the Epsilon Invariance
- *   Principle requires decomposition into separate constraint stories linked
- *   by affects_constraint/2. See epsilon_invariance_principle.md.
- *
- * KEY AGENTS (by structural relationship):
- *   - Non-thermal systems researcher: Constrained entity (powerless / trapped)
- *       — must frame quantum scars as "fine-tuned" to survive peer review
- *   - Quantum chaos mainstream: Enforcing institution (institutional / arbitrage)
- *       — benefits from ETH orthodoxy through citation and funding networks
- *   - Analytical observer: (analytical / analytical)
- *       — sees both the genuine coordination function and the extraction
- *
- * STRUCTURAL NOTE:
- *   This is a Tangled Rope: real coordination (ETH genuinely helps predict
- *   thermalization) entangled with extraction (non-thermal researchers bear
- *   the cost of orthodoxy enforcement). Requires active enforcement via
- *   peer review norms.
+ * KEY AGENTS:
+ *   - ETH-Aligned Theorists: Primary beneficiaries (institutional/arbitrage) — gain a powerful, standard toolkit for analyzing complex systems.
+ *   - Non-ETH Research Programs: Primary victims (moderate/constrained) — researchers studying MBL, quantum scars, etc., face higher barriers to publication and funding.
+ *   - Epistemic Pluralism: Abstract victim (powerless/trapped) — the overall diversity of theoretical approaches is reduced by the dominance of a single paradigm.
+ *   - Analytical Observer: Neutral viewpoint (analytical/analytical) — recognizes both the coordination and extraction functions of the hypothesis-as-orthodoxy.
  */
 
 /* ==========================================================================
@@ -88,75 +82,62 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Extraction is moderate: the ETH orthodoxy extracts conformity from
-% researchers. To publish in quantum chaos, you must demonstrate ETH
-% compliance or frame violations as "fine-tuned exceptions."
 domain_priors:base_extractiveness(bgs_eigenvector_thermalization, 0.42).
+domain_priors:suppression_score(bgs_eigenvector_thermalization, 0.65).
+domain_priors:theater_ratio(bgs_eigenvector_thermalization, 0.3).
 
-% Suppression is moderate: alternatives to ETH (MBL, quantum scars,
-% Hilbert space fragmentation) exist but are framed as "exceptions"
-% rather than challenges to the paradigm.
-domain_priors:suppression_score(bgs_eigenvector_thermalization, 0.45).
-
-% Theater ratio reflects genuine functional content: ETH does correctly
-% predict thermalization in many systems, but the enforcement mechanism
-% extends beyond what the physics justifies.
-domain_priors:theater_ratio(bgs_eigenvector_thermalization, 0.35).
-
-% --- Constraint metric facts (engine primary keys) ---
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(bgs_eigenvector_thermalization, extractiveness, 0.42).
-narrative_ontology:constraint_metric(bgs_eigenvector_thermalization, suppression_requirement, 0.45).
-narrative_ontology:constraint_metric(bgs_eigenvector_thermalization, theater_ratio, 0.35).
+narrative_ontology:constraint_metric(bgs_eigenvector_thermalization, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(bgs_eigenvector_thermalization, theater_ratio, 0.3).
 
-% --- Constraint claim (Analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(bgs_eigenvector_thermalization, tangled_rope).
-narrative_ontology:human_readable(bgs_eigenvector_thermalization, "Eigenvector Thermalization Hypothesis — ETH as").
-narrative_ontology:topic_domain(bgs_eigenvector_thermalization, "scientific (mathematical physics / quantum chaos)").
+narrative_ontology:human_readable(bgs_eigenvector_thermalization, "Eigenvector Thermalization Hypothesis — ETH as Enforcement of Quantum Chaos Orthodoxy").
+narrative_ontology:topic_domain(bgs_eigenvector_thermalization, "mathematical_physics/quantum_chaos").
 
-% --- Binary flags ---
-% Requires active enforcement: peer review norms gate publication on ETH compliance.
 domain_priors:requires_active_enforcement(bgs_eigenvector_thermalization).
 
-% --- Structural relationships (REQUIRED for directionality) ---
-narrative_ontology:constraint_beneficiary(bgs_eigenvector_thermalization, quantum_chaos_mainstream_community).
-narrative_ontology:constraint_victim(bgs_eigenvector_thermalization, non_thermal_systems_researchers).
-
-% Coordination type for Boltzmann analysis
-narrative_ontology:coordination_type(bgs_eigenvector_thermalization, information_standard).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(bgs_eigenvector_thermalization, eth_aligned_theorists).
+narrative_ontology:constraint_beneficiary(bgs_eigenvector_thermalization, field_narrative_coherence).
+narrative_ontology:constraint_victim(bgs_eigenvector_thermalization, non_eth_research_programs).
+narrative_ontology:constraint_victim(bgs_eigenvector_thermalization, epistemic_pluralism).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE NON-THERMAL SYSTEMS RESEARCHER
-% Studies quantum scars (Bernien et al. 2017), many-body localization,
-% or Hilbert space fragmentation. Must frame all results as "fine-tuned
-% exceptions to ETH" to pass peer review. Powerless relative to the
-% mainstream consensus, trapped by funding and publication norms.
-% High d (victim), trapped exit -> High Chi -> Snare.
-constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, tangled_rope,
+% PERSPECTIVE 1: EPISTEMIC PLURALISM (SNARE) — The abstract principle of diverse research approaches cannot exit the dominant paradigm. It bears the full cost of narrowed focus, as funding and attention are channeled away from non-ETH models. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.71.
+constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, snare,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(generational),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE QUANTUM CHAOS MAINSTREAM
-% Benefits from ETH as an organizing principle: it provides a clear
-% research program (verify thermalization in system X), generates
-% citations, and maintains funding streams. Institutional power with
-% arbitrage exit (can pivot to quantum computing applications).
-% Low d (beneficiary), arbitrage exit -> Low/Negative Chi -> Rope.
+% PERSPECTIVE 2: NON-ETH RESEARCHER (SNARE) — Researchers studying counterexamples (e.g., quantum scars, MBL) face higher bars for funding and publication. They are constrained by the dominant orthodoxy and experience it as an extractive gatekeeping mechanism. d≈0.90, f(d)≈1.35, σ=1.2 → χ≈0.68.
+constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: ETH-ALIGNED THEORIST (ROPE) — For researchers working within the paradigm, ETH is a powerful coordination tool. It provides a standard model, a common language, and a set of reliable assumptions for making progress on complex problems. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.06. Negative extraction indicates a net subsidy.
 constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(biographical),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (Philosophy of Physics)
-% Sees both the genuine predictive power of ETH (coordination function)
-% and the extraction cost imposed on non-thermal researchers. Recognizes
-% this as a Tangled Rope: real physics entangled with sociology of science.
+% PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The neutral observer sees both functions. ETH provides genuine coordination (a shared framework for thermalization) but also enables extraction by creating an orthodoxy that marginalizes alternative approaches and creates career asymmetries. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.58.
 constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: THE BGS PURIST (MOUNTAIN / FALSE SUMMIT) — This perspective views ETH as a fundamental law of nature, an inevitable consequence of quantum chaos on par with spectral statistics. It sees the constraint as unchangeable. However, the base properties (ε=0.42, suppression=0.65) fail the Mountain classification gates, revealing this as a 'false summit'—a naturalization of a contingent, contested scientific hypothesis.
+constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -169,17 +150,9 @@ constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, ta
 :- begin_tests(bgs_eigenvector_thermalization_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, tangled_rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, rope, context(agent_power(institutional), _, _, _)).
-
-test(tangled_rope_gate) :-
-    domain_priors:requires_active_enforcement(bgs_eigenvector_thermalization),
-    narrative_ontology:constraint_beneficiary(bgs_eigenvector_thermalization, _),
-    narrative_ontology:constraint_victim(bgs_eigenvector_thermalization, _).
-
-test(analytical_classification) :-
-    constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, tangled_rope,
-        context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(bgs_eigenvector_thermalization, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
 :- end_tests(bgs_eigenvector_thermalization_tests).
 
@@ -189,91 +162,78 @@ test(analytical_classification) :-
 
 /**
  * LOGIC RATIONALE:
- *   Base extractiveness is 0.42 — substantially higher than spectral
- *   universality (0.08) — because the ETH orthodoxy extracts real costs
- *   from researchers working on non-thermal systems. The suppression score
- *   (0.45) reflects the framing of quantum scars and MBL as "exceptions"
- *   rather than counter-evidence. Theater ratio (0.35) acknowledges that
- *   ETH has genuine predictive power: it does correctly predict thermal
- *   behavior in many-body quantum systems.
+ *   Extractiveness (ε=0.42): Significant. The career and funding advantages of aligning with the dominant ETH paradigm are substantial. Work that challenges ETH often faces a higher burden of proof and may be marginalized. Suppression (0.65): High. While research on counterexamples is not impossible, it is difficult. The default assumption in many subfields is that chaotic systems obey ETH, creating a strong institutional inertia that suppresses alternative viewpoints. Theater Ratio (0.30): Moderate. Citing ETH can sometimes be a performative substitute for a detailed, system-specific analysis of thermalization, but the hypothesis also has genuine, non-performative predictive power.
  *
  * PERSPECTIVAL GAP:
- *   The gap is driven by directionality (d). For the mainstream community,
- *   ETH is a productive organizing principle (d ~ 0.10). For researchers
- *   studying non-thermal phenomena, ETH enforcement is a publication gate
- *   that requires framing their work as exceptions (d ~ 0.85).
+ *   The gap is stark. For a theorist using ETH as a tool, it is a pure Rope—a convention that enables collective progress. For a researcher whose work on quantum scars is dismissed as 'non-generic,' the same hypothesis functions as a Snare—a coercive barrier to career progression. The analytical observer sees the full picture: a Tangled Rope, where a genuine coordination function (providing a theory of thermalization) is intertwined with asymmetric extraction (the creation of an orthodoxy). The 'BGS Purist' perspective illustrates a common failure mode: naturalizing a contested hypothesis into a Mountain, a mistake the engine's metric gates are designed to detect.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiary declaration (quantum_chaos_mainstream_community) + arbitrage
- *   exit maps to negative Chi, identifying the constraint as a subsidizing
- *   mechanism for the mainstream. Victim declaration (non_thermal_systems_
- *   researchers) + trapped exit maps to high positive Chi (Snare).
- *
- * DECOMPOSITION RATIONALE:
- *   If BGS were kept as one constraint, epsilon would depend on whether
- *   you measured eigenvalues (0.08) or eigenvectors (0.42). This violates
- *   the Epsilon Invariance Principle: epsilon is a property of the
- *   constraint, not the observable. The decomposition into spectral
- *   universality + eigenvector thermalization resolves this by giving
- *   each component its own constraint story with its own epsilon.
+ *   Beneficiaries (ETH-aligned theorists) have institutional power and arbitrage in problem selection, leading to a low 'd' value and a Rope classification. Victims (non-ETH researchers) are structurally constrained, facing higher career friction, which leads to a high 'd' value and a Snare classification. The abstract victim (epistemic pluralism) is trapped with no agency, experiencing maximal extraction. The analytical observer's default 'd' value places the effective extraction χ squarely in the Tangled Rope regime.
  *
  * MANDATROPHY ANALYSIS:
- *   Tangled Rope classification prevents mislabeling eigenvector
- *   thermalization as a Mountain (which would deny the extraction
- *   component) or as a pure Snare (which would deny the genuine
- *   coordination function of ETH).
+ *   This constraint story resolves a potential mandatrophy by decomposing the colloquial term 'BGS conjecture' into its structurally distinct parts. To label the entire BGS conjecture as a Mountain would be a category error, ignoring the contested, extractive nature of the ETH component. Conversely, labeling it a Snare would ignore its genuine and powerful coordination function. By isolating ETH as a Tangled Rope, the framework correctly identifies a system that is simultaneously a valuable scientific tool and a mechanism of institutional gatekeeping.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES — IRREDUCIBLE UNCERTAINTIES
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
 omega_variable(
-    omega_eth_k_locality_saving,
-    'Does k-locality save ETH from the Magan-Wu counterexamples, making thermalization generic in physically realistic systems?',
-    'Resolution requires either: (a) a proof that k-local Hamiltonians with chaotic classical limits always satisfy ETH, or (b) a systematic physical counterexample in a k-local system that violates ETH without fine-tuning. Current evidence (kicked top at k=N*pi/2) suggests violations exist but may be fine-tuned.',
-    'If True (k-locality saves ETH): the Tangled Rope classification holds — enforcement is justified for k-local systems. If False: the orthodoxy enforces a claim that is generically false, and the constraint shifts toward Snare.',
-    confidence_without_resolution(low)
+    eth_universality,
+    'Is ETH a universal feature of quantum chaotic systems, or are known counter-examples (quantum scars, MBL) indicative of a fundamentally incomplete picture?',
+    'Discovery of new, robust classes of non-thermalizing chaotic systems, or a mathematical proof bounding the scope of ETH.',
+    'If ETH is not universal, its classification shifts further towards Snare as its enforcement as an orthodoxy becomes less justified. If it is proven universal (with specified exceptions), it moves closer to a Mountain.',
+    confidence_without_resolution(high)
 ).
 
+narrative_ontology:omega_variable(eth_universality, empirical, 'Whether ETH is a universal property or has fundamental exceptions').
+
 omega_variable(
-    omega_eth_quantum_scars,
-    'Are quantum scars (persistent non-thermal eigenstates) generic features of chaotic systems or fine-tuned exceptions?',
-    'Resolution requires understanding whether the PXP model scars (Bernien et al. 2017) and their generalizations arise from a structural mechanism present in generic Hamiltonians, or whether they require special symmetry structure. The QMBS (quantum many-body scar) tower construction suggests structure, but genericity is unresolved.',
-    'If Generic: ETH fails broadly and the Tangled Rope classification understates the extraction — should be closer to Snare. If Fine-Tuned: ETH holds generically and the mainstream enforcement is justified, maintaining Tangled Rope.',
+    mbl_stability,
+    'Is the Many-Body Localized (MBL) phase, a key violator of ETH, stable in the thermodynamic limit, or is it a long-lived transient phenomenon?',
+    'Rigorous mathematical proofs or definitive large-scale numerical simulations that overcome existing finite-size limitations.',
+    'If MBL is stable, it represents a robust counter-paradigm, strengthening the Snare classification of ETH orthodoxy. If MBL is unstable, ETH''s domain expands, strengthening its Rope/Mountain classification.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(mbl_stability, empirical, 'The stability of the Many-Body Localized phase as a counter-example to ETH').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(bgs_eigenvector_thermalization, 0, 10).
+narrative_ontology:interval(bgs_eigenvector_thermalization, 1994, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required: base_extractiveness (0.42) is below the 0.46 threshold.
-% Temporal measurements are optional at this epsilon level.
+% Theater ratio over time
+narrative_ontology:measurement(bgs__tr_t0, bgs_eigenvector_thermalization, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(bgs__tr_t15, bgs_eigenvector_thermalization, theater_ratio, 15, 0.2).
+narrative_ontology:measurement(bgs__tr_t30, bgs_eigenvector_thermalization, theater_ratio, 30, 0.3).
+
+% Extraction over time
+narrative_ontology:measurement(bgs__be_t0, bgs_eigenvector_thermalization, base_extractiveness, 0, 0.2).
+narrative_ontology:measurement(bgs__be_t15, bgs_eigenvector_thermalization, base_extractiveness, 15, 0.35).
+narrative_ontology:measurement(bgs__be_t30, bgs_eigenvector_thermalization, base_extractiveness, 30, 0.42).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Network relationships: eigenvector thermalization is structurally
-% influenced by both the Ehrenfest barrier (which sets the semiclassical
-% regime in which ETH operates) and spectral universality (which provides
-% circumstantial evidence for thermalization).
-narrative_ontology:affects_constraint(ehrenfest_barrier, bgs_eigenvector_thermalization).
-narrative_ontology:affects_constraint(bgs_spectral_universality, bgs_eigenvector_thermalization).
+narrative_ontology:coordination_type(bgs_eigenvector_thermalization, information_standard).
+narrative_ontology:affects_constraint(bgs_eigenvector_thermalization, black_hole_information_paradox).
+narrative_ontology:affects_constraint(bgs_eigenvector_thermalization, many_body_localization_stability).
+
+% DUAL FORMULATION NOTE:
+% This constraint is part of the 'BGS conjecture' family. It is structurally distinct from its sibling, 'bgs_spectral_universality' (ε≈0.08, Mountain). The spectral claim is about statistical properties of eigenvalues and is empirically near-universal. This claim is about the structure of individual eigenvectors and is known to have exceptions. They are linked because the success of the spectral claim provides institutional support for the eigenvector claim, but their different ε values require them to be modeled as separate constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not using explicit overrides — canonical d derivation from power atoms
-% and beneficiary/victim declarations is sufficient for this constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

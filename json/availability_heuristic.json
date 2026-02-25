@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "availability_heuristic",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "Availability Heuristic (as exploited by information systems)",
+    "topic_domain": "cognitive/social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "media_platforms",
+      "advertisers",
+      "political_campaigns"
+    ],
+    "victims": [
+      "general_public",
+      "rational_discourse",
+      "evidence_based_policymakers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The General Public",
+      "comment": "PERSPECTIVE 1: THE GENERAL PUBLIC (SNARE) — Individually trapped within information ecosystems that algorithmically amplify vivid, emotionally charged, and recent events. This extracts attention and shapes beliefs, making exit from the distorted perception of reality nearly impossible. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.16. This extreme effective extraction firmly classifies the constraint as a Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Media Platform",
+      "comment": "PERSPECTIVE 2: THE MEDIA PLATFORM (ROPE) — Experiences the system as a pure coordination mechanism for matching users with 'engaging' content. The extraction of attention is framed as a fair value exchange for the service. From this position, the heuristic is a tool for efficient market-making. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. Negative effective extraction signifies a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Cognitive Scientist",
+      "comment": "PERSPECTIVE 3: THE COGNITIVE SCIENTIST (TANGLED ROPE) — The analytical view recognizes both the coordination function (rapidly disseminating salient information) and the severe, asymmetric extraction (systematic distortion of risk perception for profit). The underlying heuristic is a neutral cognitive mechanism, but its industrial-scale exploitation creates a classic Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.94."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Evidence-Based Policymaker",
+      "comment": "PERSPECTIVE 4: THE POLICYMAKER (TANGLED ROPE) — Constrained by a public whose priorities are shaped by the heuristic, making it difficult to address statistically significant but less 'available' threats. They are victims of the constraint but must also work within it, using communication strategies that acknowledge public perception. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.51."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Evolutionary Psychologist (Natural Law View)",
+      "comment": "PERSPECTIVE 5: THE EVOLUTIONARY PSYCHOLOGIST (MOUNTAIN) — This perspective frames the heuristic as a fixed, immutable feature of human cognition, an evolved adaptation that is unchangeable. This naturalizes the constraint, viewing its effects as an inevitable consequence of our mental hardware. The engine will flag this as a false summit, as the high ε and suppression values are properties of the *exploitative system*, not the cognitive bias in isolation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intent_vs_emergence",
+      "question": "Is the large-scale exploitation of the availability heuristic a result of deliberate strategic design by platforms or an emergent property of optimizing for engagement metrics?",
+      "resolution_mechanism": "Analysis of internal platform design documents, A/B test results for ranking algorithms, and interviews with system architects.",
+      "impact": "If primarily deliberate, the Snare classification is strengthened. If primarily emergent, the Tangled Rope classification becomes more accurate from the analytical perspective, as the 'coordination' function (engagement) is the driver.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between deliberate exploitation and emergent properties of engagement optimization."
+    },
+    {
+      "id": "cognitive_malleability",
+      "question": "To what extent can individuals be trained to consciously override the availability heuristic, even when immersed in an amplifying information system?",
+      "resolution_mechanism": "Longitudinal studies on the effectiveness of media literacy and cognitive bias training programs.",
+      "impact": "High malleability would suggest a Scaffold-based intervention is possible, reducing the constraint's power. Low malleability reinforces the Snare classification for individuals.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Assessing the potential for training to mitigate the heuristic's effects."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The availability heuristic is a cognitive shortcut where individuals judge the frequency or likelihood of an event by the ease with which examples come to mind. While a natural part of human cognition, this heuristic is systematically exploited by modern information systems (social media, news algorithms, advertising networks). These systems amplify vivid, recent, and emotionally charged information, creating a significant gap between an individual's perceived reality and statistical reality. This manufactured availability extracts attention for profit and shapes public opinion for political gain.",
+    "key_agents": [
+      "General Public: Primary target (powerless/trapped) — Their perception of risk and reality is distorted, leading to poor decision-making and heightened anxiety.",
+      "Media Platforms & Advertisers: Primary beneficiaries (institutional/arbitrage) — Profit by capturing and selling the attention generated by exploiting the heuristic.",
+      "Political Campaigns: Secondary beneficiaries (organized/arbitrage) — Manipulate public opinion and voter behavior by making certain issues or threats feel more salient.",
+      "Evidence-Based Policymakers: Victims (organized/constrained) — Their ability to govern based on statistical reality is undermined by a public reacting to manufactured crises.",
+      "Rational Discourse: Abstract victim (powerless/trapped) — The quality of public debate degrades as it becomes dominated by emotional reaction rather than reasoned analysis."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.68): High. The value is extracted in the form of attention, which is then monetized or converted into political capital. The asymmetry is severe: platforms gain immense value, while the public's decision-making quality is degraded. Suppression (0.75): High. Algorithmic feeds and filter bubbles actively suppress less sensational, more nuanced, or statistically representative information. It is structurally difficult for a typical user to seek out and weigh a balanced set of information. Theater Ratio (0.60): The presentation of information is optimized for engagement (the 'theater') over accuracy or context (the 'function'). Headlines, thumbnails, and content selection are performative acts designed to trigger a cognitive shortcut.",
+    "perspectival_gap": "The gap is profound. Beneficiaries (platforms) see a benign Rope, a tool for coordinating user attention with relevant content. The primary victims (the public) are caught in a Snare, their cognitive biases turned against them. The analytical observer sees a Tangled Rope, acknowledging the system's dual role in both disseminating information and extractively distorting perception. A different analytical view (evolutionary psychology) might misclassify it as an unchangeable Mountain, a naturalization fallacy the framework is designed to detect by pointing to the high, non-natural ε and suppression scores.",
+    "directionality_logic": "The directionality is derived from the clear beneficiary/victim structure. Media Platforms, as beneficiaries with arbitrage exit, have a very low directionality (d), resulting in negative effective extraction (χ < 0). The General Public, as victims with trapped exit, have a very high directionality (d≈1.0), resulting in an effective extraction (χ) that is significantly amplified from the base ε, confirming the Snare classification from their perspective.",
+    "mandatrophy_analysis": "This constraint story resolves a key mandatrophy: distinguishing a natural cognitive bias from its artificial, industrial-scale exploitation. A naive analysis might label the heuristic itself a Mountain ('it's just how people think'). The DR framework avoids this by focusing on the *system* that exploits it. The high ε and suppression values are not properties of the human mind; they are properties of the technological and economic system built around it. This correctly identifies the structure as a contingent, extractive arrangement (Snare/Tangled Rope) rather than a natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "political_polarization",
+      "financial_market_volatility"
+    ]
+  }
+}
