@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: basel_problem_convergence
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
 % Generated: 2024-07-15
-% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_basel_problem_convergence, []).
@@ -40,8 +39,12 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -56,19 +59,27 @@
  *   domain: mathematical
  *
  * SUMMARY:
- *   The Basel Problem, posed by Pietro Mengoli in 1644, asks for the precise
- *   sum of the infinite series of the reciprocals of the squares of the
- *   natural numbers. For 90 years, it remained a major unsolved problem in
- *   mathematics until Leonhard Euler found the solution to be exactly π²/6 in
- *   1734. This constraint represents the fundamental, unchangeable
- *   mathematical truth of this sum. It is not a human convention or a social
- *   rule, but a discovered property of the mathematical universe.
+ *   The Basel Problem, posed in 1644 and solved by Leonhard Euler in 1734,
+ *   asks for the precise sum of the infinite series of the reciprocals of the
+ *   squares of the natural numbers. The sum is exactly pi^2 / 6. This fact
+ *   represents a fundamental, unchangeable limit in number theory. As a
+ *   mathematical truth, it is a natural law, classifying as a Mountain from
+ *   all perspectives.
  *
- * KEY AGENTS:
- *   - Pre-Eulerian Mathematicians (e.g., the Bernoulli family): Constrained by the difficulty of finding the closed-form sum (moderate/constrained).
- *   - Leonhard Euler: The discoverer who revealed the structure of the constraint.
- *   - Modern Mathematicians and Students: Observers for whom the result is a foundational piece of established knowledge (moderate/mobile).
- *   - Analytical Observer: The timeless perspective viewing the inherent mathematical structure (analytical/analytical).
+ * KEY AGENTS (by structural relationship):
+ *   - The Partial Sum Sequence (Subject): The sequence of partial sums, which
+ *     is trapped by the limit.
+ *   - The Mathematical Community (Observer/Beneficiary): Utilizes the proven
+ *     fact as a tool for further research in number theory and physics.
+ *   - Analytical Observer: Sees the full structure as a fixed law of mathematics.
+ *
+ * ε-INVARIANCE NOTE:
+ *   This story models the *mathematical fact* of the series' convergence. The
+ *   historical *difficulty of finding the proof* is a separate constraint with
+ *   a much higher ε (cognitive effort) and suppression (lack of known methods).
+ *   Conflating the two would violate the ε-invariance principle. The historical
+ *   struggle was a temporary Scaffold or Snare, but the underlying truth has
+ *   always been a Mountain.
  */
 
 /* ==========================================================================
@@ -76,49 +87,80 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(basel_problem_convergence, 0.0).
-domain_priors:suppression_score(basel_problem_convergence, 0.0).
-domain_priors:theater_ratio(basel_problem_convergence, 0.0).
+domain_priors:base_extractiveness(basel_problem_convergence, 0.02).
+domain_priors:suppression_score(basel_problem_convergence, 0.01).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(basel_problem_convergence, 0.0).       % Piton detection (>= 0.70)
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(basel_problem_convergence, extractiveness, 0.0).
-narrative_ontology:constraint_metric(basel_problem_convergence, suppression_requirement, 0.0).
+narrative_ontology:constraint_metric(basel_problem_convergence, extractiveness, 0.02).
+narrative_ontology:constraint_metric(basel_problem_convergence, suppression_requirement, 0.01).
 narrative_ontology:constraint_metric(basel_problem_convergence, theater_ratio, 0.0).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(basel_problem_convergence, accessibility_collapse, 0.98).
-narrative_ontology:constraint_metric(basel_problem_convergence, resistance, 0.02).
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+narrative_ontology:constraint_metric(basel_problem_convergence, accessibility_collapse, 1.0).
+narrative_ontology:constraint_metric(basel_problem_convergence, resistance, 0.0).
 
-% --- Constraint claim ---
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(basel_problem_convergence, mountain).
 narrative_ontology:human_readable(basel_problem_convergence, "The Basel Problem (Convergence of Sum of Reciprocal Squares)").
 narrative_ontology:topic_domain(basel_problem_convergence, "mathematical").
 
+% --- Emergence flag (required for mountain constraints) ---
+% This constraint emerges naturally from the structure of mathematics.
 domain_priors:emerges_naturally(basel_problem_convergence).
 
-% --- Structural relationships ---
-% No enrichment needed. As a Mountain (physical limit), this constraint does
-% not have beneficiaries or victims in the structural sense.
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% As a Mountain, this constraint does not require beneficiary/victim declarations
+% for classification, but they are included for narrative context.
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(basel_problem_convergence, analytical_number_theory).
+narrative_ontology:constraint_beneficiary(basel_problem_convergence, quantum_mechanics).
+%
+% Who bears disproportionate cost?
+% The slow convergence extracts computational effort, but this is a property of
+% the approximation method, not the fact itself.
+narrative_ontology:constraint_victim(basel_problem_convergence, computational_brute_force).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE UNSOLVED PROBLEM — For mathematicians before Euler, the problem was a significant barrier. Their inability to solve it was a constraint on their knowledge. However, the underlying mathematical fact was always a Mountain; the constraint was one of epistemic access, not a property of the series itself.
-constraint_indexing:constraint_classification(basel_problem_convergence, mountain,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(global))).
+% This is a uniform-type constraint (Mountain-only). The classification is
+% invariant across all perspectives because it is a natural law of mathematics.
+% We include multiple perspectives to demonstrate this invariance.
 
-% PERSPECTIVE 2: THE TEXTBOOK RESULT — For a modern student of mathematics, the Basel problem is a settled fact and a classic example in analysis. The constraint is the requirement to learn and understand the proof. The result itself is an unchangeable feature of the mathematical landscape.
+% PERSPECTIVE 1: THE PARTIAL SUM SEQUENCE (THE SUBJECT)
+% The sequence of partial sums is trapped by the limit, which acts as an
+% unchangeable law of mathematical gravity.
 constraint_indexing:constraint_classification(basel_problem_convergence, mountain,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(global))).
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER — From a timeless, structural perspective, the convergence of the series to pi^2/6 is an immutable property of the number system. It has zero degrees of freedom and is independent of any observer, culture, or historical period. This is the canonical view of a mathematical truth as a Mountain.
+% PERSPECTIVE 2: THE MATHEMATICAL COMMUNITY (THE BENEFICIARY)
+% For mathematicians and physicists, the proven fact is a fixed, reliable
+% foundation upon which other theories are built.
+constraint_indexing:constraint_classification(basel_problem_convergence, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% The analytical observer sees the constraint for what it is: a fundamental,
+% fixed property of the number system.
 constraint_indexing:constraint_classification(basel_problem_convergence, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -131,22 +173,20 @@ constraint_indexing:constraint_classification(basel_problem_convergence, mountai
 
 :- begin_tests(basel_problem_convergence_tests).
 
-test(invariance_check) :-
-    % Verify that as a Mountain, the classification is uniform across perspectives.
-    constraint_indexing:constraint_classification(basel_problem_convergence, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(basel_problem_convergence, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget == TypeBeneficiary,
-    TypeTarget == mountain.
+test(classification_is_invariant_mountain) :-
+    % Verify that the classification is Mountain from multiple perspectives.
+    constraint_indexing:constraint_classification(basel_problem_convergence, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(basel_problem_convergence, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(basel_problem_convergence, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 == mountain,
+    Type2 == mountain,
+    Type3 == mountain.
 
-test(mountain_threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(basel_problem_convergence, ExtMetricName, E),
-    domain_priors:suppression_score(basel_problem_convergence, S),
-    E =< 0.25,
-    S =< 0.05.
+test(natural_emergence_is_declared) :-
+    domain_priors:emerges_naturally(basel_problem_convergence).
 
-test(nl_profile_validation) :-
-    domain_priors:emerges_naturally(basel_problem_convergence),
+test(nl_profile_metrics_are_present) :-
+    % Verify that the required metrics for natural law certification are present.
     narrative_ontology:constraint_metric(basel_problem_convergence, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(basel_problem_convergence, resistance, R),
     AC >= 0.85,
@@ -160,46 +200,62 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   This constraint is classified as a Mountain because it represents a fundamental mathematical truth. Extractiveness (ε=0.0) and Suppression (0.0) are zero because a mathematical fact does not extract value or coerce behavior; it simply is. The NL Profile metrics confirm this: it 'emerges_naturally' from the axioms of arithmetic, has near-total 'accessibility_collapse' (once a proof is understood, the conclusion is inescapable), and near-zero 'resistance' (one cannot logically resist a valid proof).
+ *   - Base Extractiveness (ε=0.02): Extremely low. A mathematical truth does
+ *     not extract resources; it provides a foundation for understanding. The
+ *     minor value reflects the cognitive cost of grasping the concept, but
+ *     not the cost of its discovery (which is a separate constraint).
+ *   - Suppression (S=0.01): Extremely low. The fact that the sum is pi^2/6
+ *     suppresses falsehoods, but it does not coerce agents or prevent valid
+ *     alternatives where none exist. Resistance is incoherent.
+ *   - NL Profile: Accessibility Collapse is 1.0 because no other sum is
+ *     mathematically conceivable. Resistance is 0.0 because one cannot
+ *     meaningfully "resist" a mathematical proof.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. This is a uniform-type constraint, classifying as a Mountain from all possible perspectives. The experience of the constraint may change (e.g., from an unsolved mystery to a textbook example), but its underlying structure and classification remain invariant. This uniformity is a key signature of a true Mountain, representing a fact of natural law rather than a contingent social arrangement.
+ *   There is no perspectival gap. As a natural law of mathematics, the
+ *   constraint is a Mountain from all possible perspectives. The historical
+ *   view of the problem as a "Snare" for the Bernoulli brothers was due to
+ *   a lack of tools, modeling the constraint of "unsolved problem" rather
+ *   than the constraint of the "proven fact." This story models the latter
+ *   to adhere to the ε-invariance principle.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality is not applicable to this constraint. As a Mountain with zero extraction, there are no beneficiaries or victims. The mathematical truth is symmetric and indifferent to all observers. The d value for all agents is effectively undefined or irrelevant, and the effective extraction χ is always zero.
+ *   As a Mountain, directionality is not a primary driver of classification.
+ *   The beneficiary/victim declarations are for narrative context, identifying
+ *   fields that build upon this fact and methods that are inefficient for
+ *   approximating it.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint serves as a baseline case, demonstrating a pure Mountain with no potential for mandatrophy. Its zero-valued metrics for extraction, suppression, and theater make it impossible to misclassify as a Snare, Tangled Rope, or Piton. It highlights the system's ability to distinguish between unchangeable structural realities (Mountains) and contingent, human-created systems of coordination and extraction.
+ *   The classification as a uniform Mountain is robust. The extremely low
+ *   extraction and suppression scores, combined with the natural law profile
+ *   (emerges_naturally, high collapse, low resistance), prevent any
+ *   misclassification as a Rope or Piton.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
+omega_variable(
+    omega_basel_problem_convergence,
+    'At what point of computational precision does the Mountain of the limit become a Scaffold of floating-point error?',
+    'Numerical analysis of double-precision sum drift in the first 10^12 iterates versus arbitrary-precision results.',
+    'If noise dominates the delta between terms, the abstract Mountain becomes a practical Snare for naive computational models.',
+    confidence_without_resolution(medium)
+).
+
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_basel_problem_convergence, empirical, 'The practical limit of computability for the series due to floating-point error accumulation.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(basel_problem_convergence, 1644, 1734).
-
-/* ==========================================================================
-   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
-   ========================================================================== */
-
-
-/* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA
-   ========================================================================== */
-
-narrative_ontology:affects_constraint(basel_problem_convergence, riemann_zeta_function).
-
-% DUAL FORMULATION NOTE:
-% The solution to the Basel problem is the specific value of the Riemann zeta function at s=2, i.e., ζ(2). The Basel problem can be seen as a specific instance or entry point into the broader structural constraint represented by the Riemann zeta function.
-
-/* ==========================================================================
-   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
-   ========================================================================== */
+% Required for external script parsing
+narrative_ontology:interval(basel_problem_convergence, 0, 10).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

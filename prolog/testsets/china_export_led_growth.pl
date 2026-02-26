@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: china_export_led_growth
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
-% Status: [ACTIVE]
+% Generated: 2024-05-21
 % ============================================================================
 
 :- module(constraint_china_export_led_growth, []).
@@ -41,10 +40,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -57,21 +56,19 @@
  *   domain: economic/political
  *
  * SUMMARY:
- *   China's state-directed, export-led growth model is a form of industrial
- *   policy that systematically prioritizes manufacturing investment and
- *   exports over domestic consumption. It achieves this through a combination
- *   of direct subsidies, an undervalued currency, and financial repression
- *   (artificially low interest rates on household savings, which provides
- *   cheap capital for state-favored industries). This has been
- *   extraordinarily successful at driving GDP growth and industrialization
- *   but has created massive internal and external imbalances.
+ *   This constraint represents China's state-directed industrial policy, which
+ *   prioritizes massive investment in manufacturing and export-led growth.
+ *   This model suppresses domestic consumption to fuel production, creating
+ *   large trade surpluses by exporting goods (e.g., EVs, solar panels) at
+ *   prices that foreign competitors, operating without similar state backing,
+ *   cannot match.
  *
- * KEY AGENTS:
- *   - Chinese State/CCP: Primary beneficiary (institutional/arbitrage) - Gains geopolitical power, revenue, and social stability.
- *   - Chinese Households/Labor: Primary victim (powerless/trapped) - Experiences wage suppression and wealth transfer via financial repression.
- *   - Foreign Competitors: Secondary victim (organized/constrained) - Loses market share to subsidized Chinese firms.
- *   - Global Consumers: Indirect beneficiary (moderate/mobile) - Benefits from access to low-cost manufactured goods.
- *   - Analytical Observer: Sees the full structure (analytical/analytical) - Recognizes both the coordination and extraction functions.
+ * KEY AGENTS (by structural relationship):
+ *   - Foreign Manufacturers: Primary target (powerless/trapped) — faces subsidized competition, leading to market share loss and factory closures.
+ *   - Chinese Domestic Consumers: Secondary target (powerless/trapped) — their consumption power is structurally suppressed to maximize savings and investment.
+ *   - Chinese State & Exporters: Primary beneficiary (institutional/arbitrage) — benefits from economic growth, global market dominance, and geopolitical leverage.
+ *   - US/EU Governments: Secondary target (institutional/constrained) — experiences industrial base erosion but is constrained by WTO rules and political costs of retaliation (e.g., tariffs).
+ *   - Analytical Observer: Sees the full structure of coordination and extraction.
  */
 
 /* ==========================================================================
@@ -79,65 +76,101 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(china_export_led_growth, 0.65).
-domain_priors:suppression_score(china_export_led_growth, 0.75).
-domain_priors:theater_ratio(china_export_led_growth, 0.3).
+domain_priors:base_extractiveness(china_export_led_growth, 0.48).
+domain_priors:suppression_score(china_export_led_growth, 0.65).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(china_export_led_growth, 0.20).       % Piton detection (>= 0.70)
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(china_export_led_growth, extractiveness, 0.65).
-narrative_ontology:constraint_metric(china_export_led_growth, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(china_export_led_growth, theater_ratio, 0.3).
+narrative_ontology:constraint_metric(china_export_led_growth, extractiveness, 0.48).
+narrative_ontology:constraint_metric(china_export_led_growth, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(china_export_led_growth, theater_ratio, 0.20).
 
-% --- Constraint claim ---
+% --- NL Profile Metrics (required for mountain constraints) ---
+% N/A for this constraint.
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(china_export_led_growth, tangled_rope).
-narrative_ontology:human_readable(china_export_led_growth, "China's State-Directed Export-Led Growth Model").
-narrative_ontology:topic_domain(china_export_led_growth, "economic/political").
 
-domain_priors:requires_active_enforcement(china_export_led_growth).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(china_export_led_growth). % Required for Tangled Rope
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(china_export_led_growth, chinese_state_and_soes).
-narrative_ontology:constraint_beneficiary(china_export_led_growth, global_consumers).
-narrative_ontology:constraint_victim(china_export_led_growth, chinese_households_and_labor).
-narrative_ontology:constraint_victim(china_export_led_growth, foreign_competitors).
+% --- Emergence flag (required for mountain constraints) ---
+% N/A for this constraint.
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(china_export_led_growth, chinese_state_and_exporters).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(china_export_led_growth, foreign_manufacturers).
+narrative_ontology:constraint_victim(china_export_led_growth, chinese_domestic_consumers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: CHINESE HOUSEHOLD (SNARE) — Trapped by capital controls and the Hukou system, this agent experiences the model as pure extraction. Wage growth is suppressed relative to productivity, and low interest rates on savings transfer wealth to state-owned enterprises. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92. This is a clear Snare.
-constraint_indexing:constraint_classification(china_export_led_growth, snare,
+% PERSPECTIVE 1: THE PRIMARY TARGET (FOREIGN MANUFACTURER)
+% Agent who bears the most extraction. Engine derives d from:
+%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
+constraint_indexing:constraint_classification(china_export_led_growth, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: THE CHINESE STATE (ROPE) — As the architect and primary beneficiary, the state perceives the model as a pure coordination mechanism for national development, geopolitical influence, and social stability. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. The negative effective extraction indicates a net subsidy from the state's perspective.
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (CHINESE STATE)
+% Agent who benefits most. Engine derives d from:
+%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
 constraint_indexing:constraint_classification(china_export_led_growth, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: FOREIGN COMPETITOR (TANGLED ROPE) — An organized industrial sector in another country experiences this as a hybrid. It recognizes the coordination function but is a direct target of the extraction (loss of market share to subsidized competition). Exit is constrained, as it cannot easily abandon global markets. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.59.
-constraint_indexing:constraint_classification(china_export_led_growth, tangled_rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: GLOBAL CONSUMER (ROPE) — This agent is an indirect beneficiary, experiencing the system as a pure coordination benefit that delivers low-cost goods. They have mobile exit options (can buy other products) but are incentivized to participate. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.01. Effectively zero extraction.
-constraint_indexing:constraint_classification(china_export_led_growth, rope,
-    context(agent_power(moderate),
-            time_horizon(immediate),
-            exit_options(mobile),
-            spatial_scope(global))).
-
-% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes both the historically successful coordination function (lifting millions from poverty, rapid industrialization) and the severe, systemic extraction from domestic households and foreign industries required to fuel it. This matches the claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% Default analytical context. With beneficiary, victim, and enforcement, the
+% high ε and suppression scores lead to a Tangled Rope classification.
 constraint_indexing:constraint_classification(china_export_led_growth, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(global))).
+
+% --- INTER-INSTITUTIONAL PERSPECTIVES (declare when applicable) ---
+% The constraint operates between institutional actors with different
+% structural relationships. The engine differentiates them via their
+% victim/beneficiary status and exit options, producing different d values.
+
+% PERSPECTIVE 4A: US/EU GOVERNMENTS (Institutional Target)
+% As a victim with constrained exit options (tariffs are costly and politically
+% difficult), this institutional actor experiences significant extraction.
+% The derived d will be high for an institutional actor.
+constraint_indexing:constraint_classification(china_export_led_growth, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4B: CHINESE GOVERNMENT (Institutional Beneficiary)
+% As the architect and beneficiary with arbitrage exit (full policy control),
+% this actor experiences the constraint as pure coordination. This perspective
+% is identical to Perspective 2 but is included here for direct comparison.
+constraint_indexing:constraint_classification(china_export_led_growth, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
 /* ==========================================================================
@@ -146,14 +179,25 @@ constraint_indexing:constraint_classification(china_export_led_growth, tangled_r
 
 :- begin_tests(china_export_led_growth_tests).
 
-test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(china_export_led_growth, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(china_export_led_growth, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+test(perspectival_gap_target_beneficiary) :-
+    % Verify perspectival gap between powerless target and institutional beneficiary.
+    constraint_indexing:constraint_classification(china_export_led_growth, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(china_export_led_growth, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(china_export_led_growth, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(perspectival_gap_inter_institutional) :-
+    % Verify the gap between the two institutional actors.
+    constraint_indexing:constraint_classification(china_export_led_growth, TypeTarget, context(agent_power(institutional), _, exit_options(constrained), _)),
+    constraint_indexing:constraint_classification(china_export_led_growth, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
+    (TypeTarget = tangled_rope ; TypeTarget = snare),
+    TypeBeneficiary = rope,
+    TypeTarget \= TypeBeneficiary.
+
+test(tangled_rope_conditions_met) :-
+    % Verify the analytical claim meets the Tangled Rope structural requirements.
+    narrative_ontology:constraint_claim(china_export_led_growth, tangled_rope),
+    narrative_ontology:constraint_beneficiary(china_export_led_growth, _),
+    narrative_ontology:constraint_victim(china_export_led_growth, _),
+    domain_priors:requires_active_enforcement(china_export_led_growth).
 
 :- end_tests(china_export_led_growth_tests).
 
@@ -163,16 +207,24 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.65) is high because the transfer of wealth from the household sector to the industrial/state sector is a core, intentional feature of the policy, not a side effect. Suppression (0.75) is high due to the state's active enforcement through capital controls, state-controlled labor unions, and industrial policy that picks winners and suppresses market-based alternatives. Theater Ratio (0.30) is moderate; while there is significant state propaganda, the underlying economic mechanism is highly functional and effective at achieving its goals.
+ *   - Base Extractiveness (ε=0.48): Represents a significant, structural transfer of economic value from foreign industrial bases and suppressed Chinese domestic consumption towards China's export sector. It's not 1:1 theft, but a systemic distortion of capital allocation, hence the high but not extreme value.
+ *   - Suppression Score (S=0.65): High. The model's success depends on suppressing alternatives: foreign firms cannot compete with state-backed pricing, and domestic policy limits the growth of a consumption-based economy. WTO rules and supply chain dependencies also suppress effective international responses.
+ *   - Theater Ratio (T=0.20): Low. While there is official rhetoric about "win-win cooperation" and "high-quality development," the underlying economic mechanism is highly functional and non-performative.
  *
  * PERSPECTIVAL GAP:
- *   The profound perspectival gap is central to this constraint. The Chinese state views it as a Rope, a successful national coordination project. The Chinese worker, whose savings are devalued and wages suppressed, experiences it as a Snare. Foreign industries, outcompeted by subsidized players, see a Tangled Rope. Global consumers, enjoying cheap goods, see a beneficial Rope. This divergence highlights how an agent's structural position determines their classification of the same underlying economic reality.
+ *   The gap is profound. For a foreign auto manufacturer, this is a Snare; their business is directly threatened by a flood of subsidized goods they cannot compete with. For the Chinese state, it's a Rope; a highly effective tool for coordinating national resources to achieve strategic goals of technological leadership and economic growth. This disagreement is not a matter of opinion but of structural position.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is derived directly from the structural relationships. The State, as a beneficiary with arbitrage, has a low 'd' value, resulting in a negative effective extraction (Rope). The trapped household victim has a very high 'd', leading to high effective extraction (Snare). The constrained foreign competitor has a moderate-high 'd' (Tangled Rope). The mobile consumer beneficiary has a low 'd' (Rope). The analytical perspective's canonical 'd' value correctly identifies the hybrid Tangled Rope nature.
+ *   - Beneficiary: `chinese_state_and_exporters`. They gain market share, profits, and geopolitical power. Their `arbitrage` exit option reflects their control over the policy levers.
+ *   - Victims: `foreign_manufacturers` and `chinese_domestic_consumers`. They bear the direct and indirect costs. Foreign firms lose revenue; domestic consumers have their potential quality of life traded for national industrial capacity. Their `trapped` exit status reflects their inability to escape these effects.
+ *
+ * INTER-INSTITUTIONAL DYNAMICS:
+ *   This is a key feature of the constraint. Both the US/EU governments and the Chinese government are `institutional` actors, but their experiences diverge based on their structural relationship to the constraint.
+ *   - China: As the beneficiary with `arbitrage` exit, it experiences the constraint as a Rope.
+ *   - US/EU: As a victim with `constrained` exit (retaliation is possible but costly), it experiences the constraint as a Tangled Rope. The system is extracting from their industrial base, but they are not entirely powerless, creating a hybrid classification. This measurable gap in effective extraction (χ) between two institutional peers is the central insight of the inter-institutional analysis.
  *
  * MANDATROPHY ANALYSIS:
- *   This case is a powerful resolution of mandatrophy. To label the model a pure 'Rope' (as its proponents do) is to ignore the systemic extraction from households. To label it a pure 'Snare' (as its victims experience it) is to ignore the genuine coordination function that lifted hundreds of millions from poverty. The analytical classification of Tangled Rope correctly holds both truths in tension, identifying the structure as a hybrid of coordination and asymmetric extraction, which is precisely what it is.
+ *   This framework correctly identifies the dual nature of the policy as a Tangled Rope. A simpler analysis might label it purely as a Snare (ignoring its powerful internal coordination function for China) or a Rope (ignoring the massive negative externalities imposed on others). The Tangled Rope classification captures both aspects, preventing mischaracterization and providing a more accurate model of the system's dynamics.
  */
 
 /* ==========================================================================
@@ -180,69 +232,59 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    internal_rebalancing_capacity,
-    'Can the Chinese state successfully pivot from an export/investment-led model to a domestic consumption-led model?',
-    'Tracking the ratio of household consumption to GDP, growth in real wages, and reforms to the financial system over the next decade.',
-    'Successful pivot would lower base extractiveness (ε), shifting the constraint towards a Rope. Failure would risk stagnation, increasing theater and turning it into a Piton.',
+    omega_china_export_led_growth,
+    'Is the suppression of domestic consumption a deliberate policy choice to fuel exports, or an emergent, unintended consequence of an investment-heavy growth model?',
+    'Analysis of internal CCP economic planning documents and comparison with private statements from policymakers.',
+    'If deliberate, the constraint is more extractive (closer to a pure Snare). If emergent, it is a more complex systemic imbalance (a classic Tangled Rope).',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(internal_rebalancing_capacity, empirical, 'The state''s capacity to shift from export-led to consumption-led growth.').
-
-omega_variable(
-    geopolitical_blowback_threshold,
-    'At what point does international backlash (tariffs, trade blocs, sanctions) become severe enough to force a structural change in the model?',
-    'Monitoring the scale and scope of trade restrictions imposed by major trading partners and their impact on Chinese export volumes and GDP.',
-    'High blowback would reduce the effectiveness of the export subsidy, potentially lowering suppression and extractiveness. Low blowback allows the model to persist.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(geopolitical_blowback_threshold, empirical, 'The threshold of international trade pressure required to alter the model.').
-
-omega_variable(
-    demographic_drag,
-    'Is the model structurally resilient to China''s shrinking working-age population and the erosion of its low-cost labor advantage?',
-    'Analysis of productivity growth in high-tech manufacturing vs. the decline in labor supply and rising wage pressures.',
-    'If productivity cannot outpace demographic decline, the model''s core advantage erodes, potentially making it a Mountain (an unavoidable economic limit) from a future perspective.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(demographic_drag, empirical, 'The model''s resilience to demographic decline and shrinking labor surplus.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(china_export_led_growth, 1990, 2025).
+% Required for external script parsing
+narrative_ontology:interval(china_export_led_growth, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(chin_tr_t1990, china_export_led_growth, theater_ratio, 1990, 0.15).
-narrative_ontology:measurement(chin_tr_t2005, china_export_led_growth, theater_ratio, 2005, 0.25).
-narrative_ontology:measurement(chin_tr_t2025, china_export_led_growth, theater_ratio, 2025, 0.3).
+% This model has intensified over the last decade as China moved into higher-value
+% industries. Temporal data tracks this accumulation of extractive potential.
+% Interval: 2015 (t=0) to 2025 (t=10).
 
-% Extraction over time
-narrative_ontology:measurement(chin_be_t1990, china_export_led_growth, base_extractiveness, 1990, 0.3).
-narrative_ontology:measurement(chin_be_t2005, china_export_led_growth, base_extractiveness, 2005, 0.5).
-narrative_ontology:measurement(chin_be_t2025, china_export_led_growth, base_extractiveness, 2025, 0.65).
+% Theater ratio over time (slight increase as international scrutiny grew):
+narrative_ontology:measurement(china_export_led_growth_tr_t0, china_export_led_growth, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(china_export_led_growth_tr_t5, china_export_led_growth, theater_ratio, 5, 0.15).
+narrative_ontology:measurement(china_export_led_growth_tr_t10, china_export_led_growth, theater_ratio, 10, 0.20).
 
+% Extraction over time (intensified as China dominated more advanced sectors):
+narrative_ontology:measurement(china_export_led_growth_ex_t0, china_export_led_growth, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(china_export_led_growth_ex_t5, china_export_led_growth, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(china_export_led_growth_ex_t10, china_export_led_growth, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+% Coordination type (enables Boltzmann floor + complexity offset)
+% This policy is a textbook case of state-level resource allocation.
 narrative_ontology:coordination_type(china_export_led_growth, resource_allocation).
-narrative_ontology:affects_constraint(china_export_led_growth, global_supply_chains).
-narrative_ontology:affects_constraint(china_export_led_growth, us_deindustrialization).
-narrative_ontology:affects_constraint(china_export_led_growth, rare_earth_monopoly).
+
+% Network relationships (structural influence edges)
+% This policy directly impacts competition in specific global markets.
+narrative_ontology:affects_constraint(china_export_led_growth, global_ev_market_competition).
+narrative_ontology:affects_constraint(china_export_led_growth, global_solar_panel_supply).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides are necessary for this constraint. The structural derivation
+% chain, using the declared beneficiary/victim groups combined with the
+% different exit_options for the institutional actors (constrained vs.
+% arbitrage), accurately captures the directionality dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

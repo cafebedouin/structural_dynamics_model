@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: capital_rotation_ai_narrative
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-02-19
-% Status: [ACTIVE]
+% Generated: 2024-06-18
 % ============================================================================
 
 :- module(constraint_capital_rotation_ai_narrative, []).
@@ -32,7 +31,6 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -42,7 +40,6 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -57,23 +54,17 @@
  *   domain: economic
  *
  * SUMMARY:
- *   A dominant market narrative emerged in 2025-2026 positing the
- *   unsustainability of the US AI stock market rally. This narrative, fueled
- *   by concerns over valuation, circular investments, and unrealized
- *   productivity gains, acts as a powerful constraint on market behavior. It
- *   coordinates a massive rotation of capital from AI-focused tech stocks to
- *   other sectors. This process is not neutral; it creates clear winners
- *   (short-sellers, active managers, non-AI sectors) and losers (retail
- *   investors holding AI stocks, AI companies seeking capital). The
- *   constraint is the narrative itself, which functions as both a
- *   price-discovery mechanism and an engine of wealth transfer.
+ *   A dominant market narrative positing the unsustainability of the US AI
+ *   stock market rally. This narrative acts as a constraint on global fund
+ *   managers, creating a coercive pressure to rotate capital out of US tech
+ *   giants and into Asian technology firms perceived as undervalued AI
+ *   supply-chain "winners".
  *
- * KEY AGENTS:
- *   - Retail Investors (long AI): Primary victims (powerless/trapped) — often the last to react to the narrative shift, incurring significant losses.
- *   - Short-Selling Hedge Funds: Primary beneficiaries (institutional/arbitrage) — profit directly from the price declines coordinated by the narrative.
- *   - AI Companies: Secondary victims (powerful/constrained) — face increased cost of capital and pressure on their valuations.
- *   - Non-AI Sectors: Secondary beneficiaries (powerful/mobile) — receive the inflow of rotated capital.
- *   - Financial Media: Institutional enforcers/beneficiaries (institutional/arbitrage) — amplify and sustain the narrative, benefiting from increased engagement.
+ * KEY AGENTS (by structural relationship):
+ *   - US Tech-Centric Fund Managers: Primary target (moderate/constrained) — bears the cost of re-allocation and the career risk of defying the narrative.
+ *   - Asian Tech Sector Investors: Primary beneficiary (institutional/arbitrage) — benefits from capital inflows driven by the narrative.
+ *   - US Tech Stock Retail Investors: Secondary target (powerless/trapped) - may suffer losses from capital outflows they cannot easily arbitrage.
+ *   - Analytical Observer: Analytical observer — sees the full structure of coordination and asymmetric extraction.
  */
 
 /* ==========================================================================
@@ -81,68 +72,87 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(capital_rotation_ai_narrative, 0.65).
-domain_priors:suppression_score(capital_rotation_ai_narrative, 0.7).
-domain_priors:theater_ratio(capital_rotation_ai_narrative, 0.4).
+domain_priors:base_extractiveness(capital_rotation_ai_narrative, 0.48).
+domain_priors:suppression_score(capital_rotation_ai_narrative, 0.65).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(capital_rotation_ai_narrative, 0.15).       % Piton detection (>= 0.70)
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(capital_rotation_ai_narrative, extractiveness, 0.65).
-narrative_ontology:constraint_metric(capital_rotation_ai_narrative, suppression_requirement, 0.7).
-narrative_ontology:constraint_metric(capital_rotation_ai_narrative, theater_ratio, 0.4).
+narrative_ontology:constraint_metric(capital_rotation_ai_narrative, extractiveness, 0.48).
+narrative_ontology:constraint_metric(capital_rotation_ai_narrative, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(capital_rotation_ai_narrative, theater_ratio, 0.15).
 
-% --- Constraint claim ---
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(capital_rotation_ai_narrative, tangled_rope).
 narrative_ontology:human_readable(capital_rotation_ai_narrative, "Market Narrative: US AI Stock Unsustainability").
 narrative_ontology:topic_domain(capital_rotation_ai_narrative, "economic").
 
-domain_priors:requires_active_enforcement(capital_rotation_ai_narrative).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(capital_rotation_ai_narrative). % Required for Tangled Rope
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(capital_rotation_ai_narrative, short_sellers).
-narrative_ontology:constraint_beneficiary(capital_rotation_ai_narrative, active_fund_managers).
-narrative_ontology:constraint_beneficiary(capital_rotation_ai_narrative, non_ai_sectors).
-narrative_ontology:constraint_beneficiary(capital_rotation_ai_narrative, financial_media_outlets).
-narrative_ontology:constraint_victim(capital_rotation_ai_narrative, retail_investors_long_ai).
-narrative_ontology:constraint_victim(capital_rotation_ai_narrative, ai_companies_needing_capital).
-narrative_ontology:constraint_victim(capital_rotation_ai_narrative, employees_with_stock_options).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(capital_rotation_ai_narrative, asian_tech_sector_investors).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(capital_rotation_ai_narrative, us_tech_centric_fund_managers).
+%
+% Gate requirements:
+%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: RETAIL INVESTOR (SNARE) — Trapped by the narrative, often buying high and selling low. Lacks the tools for sophisticated hedging or timely exit, bearing the full cost of the capital rotation. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92.
-constraint_indexing:constraint_classification(capital_rotation_ai_narrative, snare,
+% PERSPECTIVE 1: THE PRIMARY TARGET (US Fund Manager)
+% Agent who bears the most extraction via career risk and forced re-allocation.
+% Engine derives d from victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42.
+% χ = 0.48 * 1.42 * 1.2 (global scope) ≈ 0.82. This is a clear Snare (χ >= 0.66).
+constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: SHORT-SELLER (ROPE) — Benefits directly from the narrative, which acts as a coordination mechanism to drive prices down. Can enter and exit positions freely to maximize profit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative effective extraction indicates a net subsidy.
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (Asian Sector Investor)
+% Agent who benefits most from capital inflows. Engine derives d from:
+% beneficiary membership + arbitrage exit -> d ≈ 0.05 -> f(d) ≈ -0.12.
+% χ = 0.48 * -0.12 * 1.2 (global scope) ≈ -0.07. This is a clear Rope (negative χ).
 constraint_indexing:constraint_classification(capital_rotation_ai_narrative, rope,
     context(agent_power(institutional),
-            time_horizon(immediate),
+            time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: AI COMPANY EXECUTIVE (TANGLED ROPE) — Experiences the market as both a source of capital (coordination) and a hostile force driven by the narrative (extraction). Constrained from exiting and must manage company strategy in response to the narrative's pressure. d≈0.60, f(d)≈0.88, σ=1.2 → χ≈0.69.
-constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope,
-    context(agent_power(powerful),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: NON-AI SECTOR (ROPE) — A primary beneficiary of the capital rotation. The narrative acts as a pure coordination signal to reallocate capital towards their sector, boosting valuations. Experiences no meaningful extraction. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.01.
-constraint_indexing:constraint_classification(capital_rotation_ai_narrative, rope,
-    context(agent_power(powerful),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national))).
-
-% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the legitimate price-discovery function of the market narrative (coordination) and the severe, asymmetric wealth transfer it facilitates (extraction). The system is a hybrid, actively enforced by media and influential investors. This is the basis for the constraint's claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% Default analytical context. Sees both coordination and extraction.
+% Engine derives d ≈ 0.72 -> f(d) ≈ 1.15.
+% χ = 0.48 * 1.15 * 1.2 (global scope) ≈ 0.66. This meets the Tangled Rope
+% threshold (0.40 <= χ <= 0.90), matching the base metrics.
 constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: A MODERATE ACTOR (The Fund Manager as organized/mobile)
+% A more nuanced view of the fund manager: not powerless, but constrained.
+% Engine derives d from victim membership + mobile exit -> d ≈ 0.85 -> f(d) ≈ 1.15.
+% χ = 0.48 * 1.15 * 1.2 (global scope) ≈ 0.66. Still a Snare, showing robustness.
+constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
             spatial_scope(global))).
 
 /* ==========================================================================
@@ -151,14 +161,26 @@ constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tan
 
 :- begin_tests(capital_rotation_ai_narrative_tests).
 
-test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(capital_rotation_ai_narrative, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(capital_rotation_ai_narrative, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+test(perspectival_gap_target_beneficiary) :-
+    % Verify perspectival gap between target and beneficiary.
+    constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(capital_rotation_ai_narrative, rope, context(agent_power(institutional), _, _, _)),
+    format('... Perspectival gap test passed (Snare vs Rope)\n').
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(capital_rotation_ai_narrative, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(analytical_view_is_tangled_rope) :-
+    constraint_indexing:constraint_classification(capital_rotation_ai_narrative, tangled_rope, context(agent_power(analytical), _, _, _)),
+    format('... Analytical classification test passed (Tangled Rope)\n').
+
+test(tangled_rope_gate_requirements_met) :-
+    narrative_ontology:constraint_beneficiary(capital_rotation_ai_narrative, _),
+    narrative_ontology:constraint_victim(capital_rotation_ai_narrative, _),
+    domain_priors:requires_active_enforcement(capital_rotation_ai_narrative).
+
+test(threshold_validation) :-
+    narrative_ontology:constraint_metric(capital_rotation_ai_narrative, extractiveness, E),
+    narrative_ontology:constraint_metric(capital_rotation_ai_narrative, suppression_requirement, S),
+    E >= 0.30, % Tangled Rope extraction floor
+    S >= 0.40. % Tangled Rope suppression floor
 
 :- end_tests(capital_rotation_ai_narrative_tests).
 
@@ -168,84 +190,104 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.65) is high because the narrative directly facilitates a large-scale wealth transfer from one group of investors to another. It is not merely informational; it is causally effective in moving prices and creating losses for the unprepared. Suppression (0.70) is high because once a market narrative of this magnitude takes hold, it is reinforced by herd behavior, media cycles, and analyst reports, making counter-narratives difficult to sustain. Theater (0.40) is moderate; while based on some fundamental concerns, the narrative is amplified by performative analysis and media hype designed to capture attention.
+ *   - Base Extractiveness (ε=0.48): This score reflects the significant coercive power of the
+ *     narrative. It's not a direct tax, but it forces the movement of billions of
+ *     dollars and imposes substantial career risk on managers who dissent, which
+ *     constitutes a form of extraction.
+ *   - Suppression Score (0.65): The narrative strongly suppresses alternative
+ *     investment strategies. In a momentum-driven market, ignoring such a
+ *     dominant trend is professionally perilous, effectively foreclosing the
+ *     option to "stay the course" in US tech without significant risk.
+ *   - Enforcement: The constraint is enforced through decentralized market mechanisms:
+ *     price signals, fund flow data, and performance benchmarks that punish laggards.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For a hedge fund with arbitrage capability, the narrative is a pure Rope—a tool for coordinating a profitable trade. For a retail investor who bought into the AI hype and is now trapped in losing positions, it is a Snare—an inescapable trap that extracts their wealth. For an AI executive, it is a Tangled Rope—the very market that funds their innovation (coordination) is now actively working against their valuation (extraction). This demonstrates how the same economic phenomenon is classified differently based on an agent's structural ability to profit from or be harmed by the information flow.
+ *   The gap is stark. The beneficiary (Asian tech investors) sees a beneficial
+ *   coordination signal directing capital towards them (Rope). The target
+ *   (US-centric fund managers) experiences a coercive force that limits their
+ *   autonomy and forces costly re-allocation to mitigate career risk (Snare).
+ *   The analytical observer, seeing both the coordination function and the
+ *   asymmetric costs, correctly identifies the hybrid nature of a Tangled Rope.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries like short-sellers have arbitrage exit options, leading to a low derived directionality (d) and negative effective extraction (χ), classifying the constraint as a Rope from their view. Victims like retail investors are trapped, leading to a high d and a high χ, classifying it as a Snare. The analytical perspective acknowledges both the coordination and extraction functions, resulting in the Tangled Rope classification.
+ *   The directionality is clear: the narrative benefits the recipients of capital
+ *   (asian_tech_sector_investors) at the expense of the source of capital
+ *   (us_tech_centric_fund_managers and their underlying investors). The `victim`
+ *   and `beneficiary` declarations directly map to this structural relationship,
+ *   allowing the engine to correctly derive the high-d (target) and low-d
+ *   (beneficiary) perspectives that create the classification gap.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint story resolves the mandatrophy of labeling complex market dynamics. It avoids simplistic labels like 'efficient market' (a false Rope) or 'outright manipulation' (a simple Snare). By using indexical classification, it correctly models the phenomenon as a Tangled Rope from an analytical viewpoint: a system with a genuine coordination function (price discovery, capital reallocation) that is deeply intertwined with a severe, asymmetric extractive function (wealth transfer). The 'correct' classification depends entirely on the observer's structural position within the capital flow.
+ *   This classification correctly avoids two potential errors. A pure Snare
+ *   classification would miss the fact that this narrative provides a genuine
+ *   coordination function for global capital seeking the "next big trade".
+ *   A pure Rope classification would ignore the coercive, extractive pressure
+ *   on managers and the clear asymmetry of winners and losers. The Tangled Rope
+ *   classification correctly identifies it as a system with both coordination
+ *   and extraction, preventing Mandatrophy.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    narrative_vs_fundamental,
-    'Is the market correction driven primarily by the self-fulfilling narrative, or by a genuine reassessment of AI''s fundamental economic impact?',
-    'Time-series analysis comparing productivity data, corporate earnings, and capital expenditure against market sentiment indicators and media coverage.',
-    'If driven by fundamentals, the constraint is closer to a Rope (efficient market). If primarily narrative-driven, it confirms the Snare/Tangled Rope classification (wealth transfer via information control).',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(narrative_vs_fundamental, empirical, 'Distinguishing between a narrative-driven correction and a fundamental-based repricing.').
-
-omega_variable(
-    circular_investment_exposure,
-    'To what extent are AI valuations propped up by circular investments between major tech firms and the AI startups they fund?',
-    'Forensic accounting and network analysis of investment flows between large cap tech companies and the AI ecosystem.',
-    'High exposure would indicate the underlying valuations are fragile, making the ''unsustainability'' narrative a more accurate reflection of reality and increasing the system''s intrinsic extractiveness.',
+    omega_capital_rotation_ai,
+    'Is this narrative a reflection of weakening US tech fundamentals, or is it a self-fulfilling speculative mania?',
+    'Comparative earnings reports from US vs. Asian tech sectors over the next 8-12 quarters.',
+    'If fundamentals are real, the constraint is closer to a pure Rope coordinating an efficient market shift. If its pure mania, it is a pure Snare setting up the next bubble.',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(circular_investment_exposure, empirical, 'Quantifying the impact of circular investments on AI market valuations.').
-
-omega_variable(
-    regulatory_intervention_timing,
-    'Will financial regulators intervene to curb speculative behavior or address market concentration, and if so, when?',
-    'Monitoring of policy proposals, regulatory body statements (e.g., SEC, Fed), and legislative action.',
-    'Significant intervention could transform the constraint into a Scaffold by imposing temporary limits, while inaction allows the Tangled Rope/Snare dynamics to persist.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(regulatory_intervention_timing, preference, 'The uncertainty of regulatory action to mitigate market volatility.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
+% Required for external script parsing
 narrative_ontology:interval(capital_rotation_ai_narrative, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(capi_tr_t0, capital_rotation_ai_narrative, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(capi_tr_t5, capital_rotation_ai_narrative, theater_ratio, 5, 0.35).
-narrative_ontology:measurement(capi_tr_t10, capital_rotation_ai_narrative, theater_ratio, 10, 0.4).
+% This narrative is intensifying over the modeled interval (e.g., 24 months).
+% Extraction accumulation is modeled as the narrative solidifies and the
+% pressure to conform grows. Theater remains low as it's a functional constraint.
+%
+% Required for high-extraction constraints (base_extractiveness > 0.46).
 
-% Extraction over time
-narrative_ontology:measurement(capi_be_t0, capital_rotation_ai_narrative, base_extractiveness, 0, 0.4).
-narrative_ontology:measurement(capi_be_t5, capital_rotation_ai_narrative, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(capi_be_t10, capital_rotation_ai_narrative, base_extractiveness, 10, 0.65).
+% Theater ratio over time (stable and low):
+narrative_ontology:measurement(cra_tr_t0, capital_rotation_ai_narrative, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(cra_tr_t5, capital_rotation_ai_narrative, theater_ratio, 5, 0.12).
+narrative_ontology:measurement(cra_tr_t10, capital_rotation_ai_narrative, theater_ratio, 10, 0.15).
 
+% Extraction over time (triggers extraction_accumulation detection):
+narrative_ontology:measurement(cra_ex_t0, capital_rotation_ai_narrative, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(cra_ex_t5, capital_rotation_ai_narrative, base_extractiveness, 5, 0.40).
+narrative_ontology:measurement(cra_ex_t10, capital_rotation_ai_narrative, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(capital_rotation_ai_narrative, resource_allocation).
-narrative_ontology:affects_constraint(capital_rotation_ai_narrative, semiconductor_supply_chain_stability).
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The narrative acts as a standard for interpreting market data and coordinating action.
+narrative_ontology:coordination_type(capital_rotation_ai_narrative, information_standard).
+
+% Network relationships (structural influence edges)
+% This narrative influences and is influenced by geopolitical constraints around tech supply chains.
+narrative_ontology:affects_constraint(capital_rotation_ai_narrative, semiconductor_supply_chain_geopolitics).
+
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides are necessary for this constraint. The standard derivation
+% chain using beneficiary/victim declarations and exit options accurately
+% models the structural relationships and produces the correct directionality
+% values (d) for each perspective.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

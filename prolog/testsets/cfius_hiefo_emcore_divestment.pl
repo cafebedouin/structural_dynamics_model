@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: cfius_hiefo_emcore_divestment
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
-% Status: [ACTIVE]
+% Generated: 2024-05-22
 % ============================================================================
 
 :- module(constraint_cfius_hiefo_emcore_divestment, []).
@@ -41,8 +40,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -57,21 +58,20 @@
  *   domain: geopolitical/economic
  *
  * SUMMARY:
- *   This constraint models the authority of the Committee on Foreign
- *   Investment in the United States (CFIUS) to review and retroactively force
- *   the divestment of foreign-owned assets deemed a threat to national
- *   security. This power, significantly enhanced by the FIRRMA legislation in
- *   2018, creates a fundamental tension between the U.S. policy of
- *   maintaining an open investment climate and its imperative to protect
- *   strategic sectors. The constraint's core feature is its ability to unwind
- *   completed transactions, imposing severe costs on targeted investors with
- *   no recourse.
+ *   This constraint models the power of the Committee on Foreign Investment
+ *   in the United States (CFIUS) to retroactively unwind a transaction on
+ *   national security grounds. The specific instance is the 2017 executive
+ *   order forcing the Chinese company Hiefo to divest its ownership of the
+ *   U.S. tech firm Emcore, which produces sensitive aerospace and defense
+ *   components. The constraint is the legal and executive framework that
+ *   enables this forced sale.
  *
- * KEY AGENTS:
- *   - Foreign Investor Targeted for Divestment: Primary victim (powerful/trapped) — bears the full extractive cost of a forced sale.
- *   - US National Security Apparatus: Primary beneficiary (institutional/arbitrage) — wields the authority as a tool to mitigate perceived threats.
- *   - Domestic Competitors: Secondary beneficiary (organized/mobile) — may benefit from the removal of a foreign competitor or the opportunity to acquire divested assets.
- *   - Allied Foreign Investors: Secondary actors (powerful/constrained) — benefit from the overall security environment but face compliance costs and regulatory uncertainty.
+ * KEY AGENTS (by structural relationship):
+ *   - foreign_investors_in_strategic_sectors (e.g., Hiefo): Primary target (organized/trapped) — bears the extraction of a forced sale at a potentially suboptimal price and timing.
+ *   - employees_of_divested_firm: Secondary target (powerless/trapped) — face job insecurity and disruption from the forced sale.
+ *   - us_national_security_apparatus (e.g., CFIUS): Primary beneficiary (institutional/arbitrage) — achieves its goal of preventing technology transfer and securing domestic supply chains.
+ *   - domestic_defense_industry: Secondary beneficiary (organized/mobile) — benefits from a protected technological ecosystem and reduced foreign competition for strategic assets.
+ *   - Analytical observer: Analytical observer — sees both the valid security coordination and the coercive extraction.
  */
 
 /* ==========================================================================
@@ -79,65 +79,104 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(cfius_hiefo_emcore_divestment, 0.75).
-domain_priors:suppression_score(cfius_hiefo_emcore_divestment, 0.9).
-domain_priors:theater_ratio(cfius_hiefo_emcore_divestment, 0.3).
+% A forced divestment is highly extractive, representing the loss of a major asset.
+domain_priors:base_extractiveness(cfius_hiefo_emcore_divestment, 0.65).
+% The target has no alternative but to comply with the executive order.
+domain_priors:suppression_score(cfius_hiefo_emcore_divestment, 0.90).   % Structural property (raw, unscaled).
+% The action is functional (preventing tech transfer), not performative.
+domain_priors:theater_ratio(cfius_hiefo_emcore_divestment, 0.10).       % Piton detection (>= 0.70)
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(cfius_hiefo_emcore_divestment, extractiveness, 0.75).
-narrative_ontology:constraint_metric(cfius_hiefo_emcore_divestment, suppression_requirement, 0.9).
-narrative_ontology:constraint_metric(cfius_hiefo_emcore_divestment, theater_ratio, 0.3).
+narrative_ontology:constraint_metric(cfius_hiefo_emcore_divestment, extractiveness, 0.65).
+narrative_ontology:constraint_metric(cfius_hiefo_emcore_divestment, suppression_requirement, 0.90).
+narrative_ontology:constraint_metric(cfius_hiefo_emcore_divestment, theater_ratio, 0.10).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(cfius_hiefo_emcore_divestment, tangled_rope).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(cfius_hiefo_emcore_divestment, snare).
 narrative_ontology:human_readable(cfius_hiefo_emcore_divestment, "CFIUS authority to force divestment of strategic assets").
 narrative_ontology:topic_domain(cfius_hiefo_emcore_divestment, "geopolitical/economic").
 
-domain_priors:requires_active_enforcement(cfius_hiefo_emcore_divestment).
+% --- Binary flags ---
+% This constraint requires the full power of the executive branch to enforce.
+domain_priors:requires_active_enforcement(cfius_hiefo_emcore_divestment). % Required for Tangled Rope
 
-% --- Structural relationships ---
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(cfius_hiefo_emcore_divestment, us_national_security_apparatus).
-narrative_ontology:constraint_beneficiary(cfius_hiefo_emcore_divestment, domestic_competitors).
-narrative_ontology:constraint_victim(cfius_hiefo_emcore_divestment, foreign_investor_targeted_for_divestment).
+narrative_ontology:constraint_beneficiary(cfius_hiefo_emcore_divestment, domestic_defense_industry).
+
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(cfius_hiefo_emcore_divestment, foreign_investors_in_strategic_sectors).
+narrative_ontology:constraint_victim(cfius_hiefo_emcore_divestment, employees_of_divested_firm).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: TARGETED FOREIGN INVESTOR (SNARE) — Despite being a powerful corporate entity, once targeted by a presidential divestment order, the investor is trapped. There is no appeal or alternative. The full value of their investment is subject to forced sale, often at a loss. From this view, the process is pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈1.07.
+% PERSPECTIVE 1: THE POWERLESS TARGET (SNARE)
+% Employees of the divested firm face job insecurity and disruption. They have
+% no influence over the decision and are trapped by the consequences.
+% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
+% χ = 0.65 * f(0.95) * σ(national) ≈ 0.65 * 1.42 * 1.0 ≈ 0.923 (Snare)
 constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, snare,
-    context(agent_power(powerful),
+    context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: US NATIONAL SECURITY APPARATUS (ROPE) — For CFIUS and the executive branch, this authority is a pure coordination tool to align foreign investment with national security interests. They exercise arbitrage in choosing which transactions to review and can impose mitigation measures short of divestment. The extraction is seen as a necessary byproduct of the coordination function. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.09.
+% PERSPECTIVE 2: THE ORGANIZED TARGET (SNARE)
+% Hiefo, the foreign investor, is subject to a binding executive order. They
+% are trapped; their only option is to divest.
+% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
+% χ = 0.65 * f(0.95) * σ(national) ≈ 0.65 * 1.42 * 1.0 ≈ 0.923 (Snare)
+constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, snare,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE PRIMARY BENEFICIARY (ROPE)
+% The US government (CFIUS) wields the constraint as a tool. It has full
+% arbitrage over its application.
+% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+% χ = 0.65 * f(0.05) * σ(national) ≈ 0.65 * -0.12 * 1.0 ≈ -0.078 (Rope)
 constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — This view recognizes the dual function. The constraint genuinely coordinates to protect a public good (national security) but does so via a highly coercive, asymmetric extraction mechanism. It is neither pure coordination nor pure extraction. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈1.04. The high chi value is tempered by the recognition of a valid coordination function, preventing a Snare classification at this level.
-constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, tangled_rope,
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% An observer sees both the coordination function (protecting national security)
+% and the coercive, asymmetric extraction (forcing a sale).
+% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% χ = 0.65 * f(0.72) * σ(global) ≈ 0.65 * 1.15 * 1.2 ≈ 0.897 (Tangled Rope)
+constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: DOMESTIC COMPETITOR (SCAFFOLD) — A domestic firm in the same sector may see CFIUS action as a temporary support, removing a foreign-backed competitor and creating an opportunity to acquire strategic assets. They benefit from the action but don't control it, and the 'leveling of the playing field' is contingent on CFIUS's priorities. It's a temporary structural advantage, not a permanent one.
-constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, scaffold,
+% PERSPECTIVE 5: SECONDARY BENEFICIARY (ROPE)
+% The domestic defense industry benefits from the protection but does not
+% control the mechanism. They have mobile exit (lobbying, adapting).
+% Engine derives d from: beneficiary + mobile exit -> d ≈ 0.15 -> f(d) ≈ -0.01 -> near-zero χ
+% χ = 0.65 * f(0.15) * σ(national) ≈ 0.65 * -0.01 * 1.0 ≈ -0.0065 (Rope)
+constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, rope,
     context(agent_power(organized),
-            time_horizon(biographical),
+            time_horizon(generational),
             exit_options(mobile),
             spatial_scope(national))).
-
-% PERSPECTIVE 5: ALLIED FOREIGN INVESTOR (TANGLED ROPE) — An investor from a friendly nation (e.g., eligible for a 'Known Investor Program') benefits from the stable security environment but faces significant compliance costs and the residual risk of being miscategorized. They are constrained by the regulatory uncertainty, even if they are not the primary target. d≈0.60, f(d)≈0.88, σ=1.2 → χ≈0.79.
-constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, tangled_rope,
-    context(agent_power(powerful),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -145,9 +184,18 @@ constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, tan
 
 :- begin_tests(cfius_hiefo_emcore_divestment_tests).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(cfius_hiefo_emcore_divestment, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(perspectival_gap_target_beneficiary) :-
+    constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
+    constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
+    true.
+
+test(analytical_view_is_tangled_rope) :-
+    constraint_indexing:constraint_classification(cfius_hiefo_emcore_divestment, snare, context(agent_power(analytical), _, _, _)).
+
+test(tangled_rope_gate_requirements_met) :-
+    narrative_ontology:constraint_beneficiary(cfius_hiefo_emcore_divestment, _),
+    narrative_ontology:constraint_victim(cfius_hiefo_emcore_divestment, _),
+    domain_priors:requires_active_enforcement(cfius_hiefo_emcore_divestment).
 
 :- end_tests(cfius_hiefo_emcore_divestment_tests).
 
@@ -157,16 +205,20 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.75) is very high because a forced divestment can result in a total or near-total loss of the initial investment, often through a fire sale. Suppression (0.90) is near-total; the authority is backed by a presidential order and the Department of Justice, leaving the targeted entity with no viable alternative or path of resistance. Theater Ratio (0.30) is low because while the decisions have a signaling component, the enforcement actions are concrete, legally binding, and have severe financial consequences, making the constraint highly functional.
+ *   - Base Extractiveness (ε=0.65): High. Represents the significant financial loss and strategic setback of being forced to sell a major corporate asset under duress.
+ *   - Suppression (0.90): Near total. The presidential order backing a CFIUS recommendation offers no effective appeal or alternative for the targeted entity. Compliance is the only option.
+ *   - The combination of a valid coordination function and high, coercive extraction makes this a textbook Tangled Rope from a systemic viewpoint.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. The targeted foreign investor experiences a pure Snare, a coercive and arbitrary seizure of assets. The US government, however, views it as a necessary Rope for the coordination of national security, where divestment is a last resort. The analytical observer sees a Tangled Rope, acknowledging the legitimate coordination goal but recognizing that it is achieved through a mechanism of extreme, targeted extraction. This gap highlights the core function of the indexical system: to show how the same set of structural properties can be perceived as fundamentally different types of constraints depending on one's position relative to the flow of extraction.
+ *   - For the US Government (beneficiary), the CFIUS process is a pure coordination tool (Rope). It aligns multiple agencies and industry interests to achieve a shared national security goal with minimal overhead *for them*. The extractive cost is entirely externalized.
+ *   - For the targets (both the foreign investor Hiefo and the firm's employees), the process is a pure Snare. They are trapped by a rule they cannot influence, which extracts immense value (for the investor) or creates severe instability (for the employees) with no corresponding benefit. The coordination function is invisible or irrelevant to them; they only experience the coercion.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is derived from the clear victim/beneficiary structure. The 'foreign_investor_targeted_for_divestment' is the declared victim and is 'trapped', leading to a maximal directionality (d≈0.95) and thus maximal effective extraction (χ). The 'us_national_security_apparatus' is the beneficiary with 'arbitrage' exit (it chooses its targets), leading to a minimal, even negative directionality (d≈0.05) and negative χ, correctly identifying it as a net beneficiary. Other actors fall in between based on their mixed roles and constrained exit options.
+ *   - Beneficiaries: The `us_national_security_apparatus` benefits directly by preventing potential technology transfer. The `domestic_defense_industry` benefits indirectly through a more secure and less competitive domestic market for strategic assets.
+ *   - Victims: `foreign_investors_in_strategic_sectors` and `employees_of_divested_firm` are the clear victims. They bear the full financial and strategic cost of the divestment order. The system's directionality logic correctly assigns a very high `d` value to these groups when their exit is `trapped`, leading to the Snare classification.
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy is resolved because the system does not incorrectly label this a pure Snare from all perspectives. While the victim's Snare perspective is validated, the analytical classification of Tangled Rope correctly captures the dual nature of the constraint. It avoids the error of dismissing the stated goal (national security coordination) as pure pretext, while also avoiding the opposite error of ignoring the severe, coercive extraction imposed on its targets. The high ε value is justified by the real-world consequences of forced divestment, and the `mandatrophy_resolved` flag confirms this has been analytically addressed.
+ *   This is a critical case for preventing Mandatrophy. A simplistic analysis might label CFIUS as pure state coercion (Snare). Conversely, a purely pro-government view would label it as necessary coordination (Rope). The Deferential Realism framework, by indexing to perspective, correctly identifies that it is *both simultaneously*. The analytical classification of Tangled Rope acknowledges the legitimate coordination function while refusing to ignore the highly asymmetric extraction imposed on its targets. This prevents the mislabeling of a hybrid system as either pure coordination or pure extraction.
  */
 
 /* ==========================================================================
@@ -174,68 +226,62 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    definition_of_national_security,
-    'Is ''national security'' a stable, objective criterion, or a politically malleable concept that can be used for economic protectionism?',
-    'Analysis of CFIUS decisions correlating with declared national security threats versus lobbying efforts by domestic industries.',
-    'If objective, the Rope/Tangled Rope classifications are strengthened. If malleable, the Snare classification becomes more broadly applicable, as the ''coordination'' function is merely a pretext for extraction.',
+    omega_cfius_hiefo_emcore_divestment,
+    'Is the national security risk cited by CFIUS a material threat or a pretext for economic protectionism?',
+    'Access to the classified intelligence assessments that formed the basis of the CFIUS recommendation and executive order.',
+    'If the threat is material, the coordination function is primary and the extraction is a justified side effect (Tangled Rope). If it is pretext, the extraction is the primary goal and the security rationale is theater (closer to a pure Snare).',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(definition_of_national_security, conceptual, 'Whether ''national security'' is an objective or politically malleable criterion.').
-
-omega_variable(
-    detection_rate_of_non_notified_transactions,
-    'What percentage of non-notified transactions that pose a genuine national security risk are successfully identified and reviewed by CFIUS?',
-    'Impossible to measure directly. Proxies could include forensic analysis of corporate ownership structures in critical sectors after the fact.',
-    'A low detection rate would suggest the enforcement mechanism is more symbolic than effective, increasing its theater_ratio. A high detection rate confirms its functional role and high suppression.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(detection_rate_of_non_notified_transactions, empirical, 'The effectiveness of CFIUS in detecting risky non-notified transactions.').
-
-omega_variable(
-    forced_sale_price_discrepancy,
-    'What is the average financial loss incurred by targeted entities due to forced divestment below market value?',
-    'Comparing the forced sale price of divested assets to independent valuations conducted prior to the CFIUS order.',
-    'Quantifies the base extractiveness (ε). A large discrepancy confirms the high ε value; a small discrepancy would suggest ε is lower than estimated.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(forced_sale_price_discrepancy, empirical, 'Average financial loss from forced divestment sales.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(cfius_hiefo_emcore_divestment, 2010, 2026).
+% Required for external script parsing. Interval represents the modern era of CFIUS.
+narrative_ontology:interval(cfius_hiefo_emcore_divestment, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(cfiu_tr_t2010, cfius_hiefo_emcore_divestment, theater_ratio, 2010, 0.45).
-narrative_ontology:measurement(cfiu_tr_t2018, cfius_hiefo_emcore_divestment, theater_ratio, 2018, 0.35).
-narrative_ontology:measurement(cfiu_tr_t2026, cfius_hiefo_emcore_divestment, theater_ratio, 2026, 0.3).
+% Temporal data models the intensification of CFIUS's power over time,
+% from an advisory body to one with powerful enforcement capabilities.
+% This represents extraction_accumulation, as the mechanism's potential to
+% extract value has increased.
+% T=0: Pre-Exon-Florio (advisory)
+% T=5: Post-Exon-Florio (blocking power)
+% T=10: Post-FIRRMA (modern, assertive era)
 
-% Extraction over time
-narrative_ontology:measurement(cfiu_be_t2010, cfius_hiefo_emcore_divestment, base_extractiveness, 2010, 0.5).
-narrative_ontology:measurement(cfiu_be_t2018, cfius_hiefo_emcore_divestment, base_extractiveness, 2018, 0.65).
-narrative_ontology:measurement(cfiu_be_t2026, cfius_hiefo_emcore_divestment, base_extractiveness, 2026, 0.75).
+% Theater ratio over time (remains low and functional)
+narrative_ontology:measurement(cfius_hiefo_emcore_divestment_tr_t0, cfius_hiefo_emcore_divestment, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(cfius_hiefo_emcore_divestment_tr_t5, cfius_hiefo_emcore_divestment, theater_ratio, 5, 0.10).
+narrative_ontology:measurement(cfius_hiefo_emcore_divestment_tr_t10, cfius_hiefo_emcore_divestment, theater_ratio, 10, 0.10).
 
+% Extraction over time (shows significant accumulation)
+narrative_ontology:measurement(cfius_hiefo_emcore_divestment_ex_t0, cfius_hiefo_emcore_divestment, base_extractiveness, 0, 0.20).
+narrative_ontology:measurement(cfius_hiefo_emcore_divestment_ex_t5, cfius_hiefo_emcore_divestment, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(cfius_hiefo_emcore_divestment_ex_t10, cfius_hiefo_emcore_divestment, base_extractiveness, 10, 0.65).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+% Coordination type: It is an enforcement mechanism for national security policy.
 narrative_ontology:coordination_type(cfius_hiefo_emcore_divestment, enforcement_mechanism).
+
+% Network relationships: CFIUS power directly influences the integrity and
+% composition of strategic supply chains.
 narrative_ontology:affects_constraint(cfius_hiefo_emcore_divestment, semiconductor_supply_chain_integrity).
-narrative_ontology:affects_constraint(cfius_hiefo_emcore_divestment, critical_mineral_sourcing).
+
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides are necessary for this constraint. The structural derivation
+% from beneficiary/victim declarations combined with the distinct exit_options
+% (trapped vs. arbitrage) accurately captures the directionality for the
+% key agents involved.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

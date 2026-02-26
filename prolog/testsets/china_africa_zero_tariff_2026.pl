@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: china_africa_zero_tariff_2026
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
-% Status: [ACTIVE]
+% Generated: 2026-02-15
 % ============================================================================
 
 :- module(constraint_china_africa_zero_tariff_2026, []).
@@ -41,7 +40,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -54,26 +56,20 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: china_africa_zero_tariff_2026
  *   human_readable: China-Africa Zero-Tariff Trade Framework
- *   domain: economic/geopolitical
+ *   domain: economic
  *
  * SUMMARY:
- *   The China-Africa Zero-Tariff Trade Framework, effective May 2026, offers
- *   preferential market access to 53 African nations. While presented as a
- *   mechanism for shared development (a Rope), it operates within a
- *   pre-existing and growing structural trade imbalance where Africa
- *   primarily exports raw materials and imports higher-value manufactured
- *   goods from China. This creates a core tension between its coordination
- *   function (facilitating trade) and its extractive function (reinforcing
- *   dependency and providing geopolitical leverage). The framework's
- *   structure also includes explicit political conditionality, with Eswatini
- *   excluded due to its diplomatic ties with Taiwan.
+ *   China implements zero-tariff treatment for 53 African nations to expand
+ *   market access. While nominally a coordination mechanism (Rope) for trade,
+ *   the inclusion of "green channels" and "joint economic partnership pacts"
+ *   introduces structural extraction through standard-setting and diplomatic
+ *   alignment.
  *
- * KEY AGENTS:
- *   - Chinese State & Industry: Primary beneficiary (institutional/arbitrage) - Gains market access, resource security, and geopolitical influence.
- *   - Participating African Nations: Secondary beneficiaries/victims (organized/constrained) - Gain market access but risk deeper economic dependency.
- *   - Eswatini Government: Primary victim (organized/trapped) - Excluded on political grounds, bearing the full coercive force of the framework's conditionality.
- *   - Western Trade Blocs (USA, EU): Structural victims (institutional/constrained) - Face diminished market share and geopolitical leverage in Africa.
- *   - Uncompetitive African Domestic Industries: Indirect victims (powerless/trapped) - May struggle to compete with the influx of Chinese goods facilitated by the deepened trade relationship.
+ * KEY AGENTS (by structural relationship):
+ *   - smallholder_african_farmers: Primary target (powerless/trapped) — bears highest compliance costs, lacks capital to meet standards.
+ *   - organized_african_exporters: Secondary target (moderate/constrained) — can meet standards but at a significant cost.
+ *   - china_state_actors: Primary beneficiary (institutional/arbitrage) — gains geopolitical alignment and resource security.
+ *   - focac_administrators: Analytical observer — monitors the Forum on China-Africa Cooperation (FOCAC) outcomes.
  */
 
 /* ==========================================================================
@@ -81,62 +77,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(china_africa_zero_tariff_2026, 0.55).
-domain_priors:suppression_score(china_africa_zero_tariff_2026, 0.65).
-domain_priors:theater_ratio(china_africa_zero_tariff_2026, 0.4).
+% Base extraction reflects the administrative/political cost of "Partnership Pacts".
+domain_priors:base_extractiveness(china_africa_zero_tariff_2026, 0.32).
+domain_priors:suppression_score(china_africa_zero_tariff_2026, 0.45).
+domain_priors:theater_ratio(china_africa_zero_tariff_2026, 0.20).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(china_africa_zero_tariff_2026, extractiveness, 0.55).
-narrative_ontology:constraint_metric(china_africa_zero_tariff_2026, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(china_africa_zero_tariff_2026, theater_ratio, 0.4).
+narrative_ontology:constraint_metric(china_africa_zero_tariff_2026, extractiveness, 0.32).
+narrative_ontology:constraint_metric(china_africa_zero_tariff_2026, suppression_requirement, 0.45).
+narrative_ontology:constraint_metric(china_africa_zero_tariff_2026, theater_ratio, 0.20).
 
-% --- Constraint claim ---
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(china_africa_zero_tariff_2026, tangled_rope).
 narrative_ontology:human_readable(china_africa_zero_tariff_2026, "China-Africa Zero-Tariff Trade Framework").
-narrative_ontology:topic_domain(china_africa_zero_tariff_2026, "economic/geopolitical").
+narrative_ontology:topic_domain(china_africa_zero_tariff_2026, "economic").
 
+% --- Binary flags ---
 domain_priors:requires_active_enforcement(china_africa_zero_tariff_2026).
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(china_africa_zero_tariff_2026, chinese_state_and_industry).
-narrative_ontology:constraint_beneficiary(china_africa_zero_tariff_2026, participating_african_exporters).
-narrative_ontology:constraint_victim(china_africa_zero_tariff_2026, eswatini_government).
-narrative_ontology:constraint_victim(china_africa_zero_tariff_2026, western_trade_blocs).
-narrative_ontology:constraint_victim(china_africa_zero_tariff_2026, uncompetitive_african_domestic_industries).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(china_africa_zero_tariff_2026, china_state_actors).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(china_africa_zero_tariff_2026, african_producers_and_exporters).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: ESWATINI (SNARE) - As a nation-state, Eswatini is 'organized' but is 'trapped' outside this framework due to political conditionality (Taiwan relations). The constraint acts as pure coercive extraction of political alignment, offering no coordination benefit and suppressing its access relative to its neighbors. d is derived high from victim+trapped status, leading to high χ and a Snare classification.
-constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, snare,
-    context(agent_power(organized),
-            time_horizon(generational),
+% PERSPECTIVE 1: THE PRIMARY TARGET (TANGLED ROPE)
+% Smallholder farmers who lack the capital to meet 'Green Channel' standards.
+% Engine derives d from: victim membership + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ
+constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, tangled_rope,
+    context(agent_power(powerless),
+            time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(regional))).
+            spatial_scope(national))).
 
-% PERSPECTIVE 2: CHINA (ROPE) - As the architect, China has 'arbitrage' exit and experiences the framework as a pure coordination mechanism to secure resources, expand markets, and build geopolitical influence. The structural trade imbalance is viewed as a feature, not a bug. d is derived low from beneficiary+arbitrage status, yielding negative χ (net benefit).
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
+% Chinese state actors who view the framework as pure coordination.
+% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
 constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: PARTICIPATING AFRICAN NATION (TANGLED ROPE) - Experiences both a genuine coordination benefit (tariff-free market access) and asymmetric extraction (risk of dependency, exacerbation of trade imbalance). Exit is 'constrained' by the high economic and diplomatic costs of withdrawal. This mixed experience is the canonical Tangled Rope.
+% PERSPECTIVE 3: THE ORGANIZED EXPORTER (TANGLED ROPE)
+% Larger exporters who can comply but still face high costs and standard-setting asymmetry.
 constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, tangled_rope,
-    context(agent_power(organized),
+    context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
-            spatial_scope(national))).
+            spatial_scope(continental))).
 
-% PERSPECTIVE 4: WESTERN POWERS (TANGLED ROPE) - View the framework as a hybrid of legitimate trade coordination and an extractive geopolitical tool that undermines their own leverage and market access. Their ability to offer a competitive alternative is 'constrained'. They are a structural victim of the shift in influence.
-constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, tangled_rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(global))).
-
-% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) - The system's default view. It recognizes the genuine coordination function (market access) but also the high base extraction (ε=0.55) from the structural trade imbalance and the high suppression (0.65) from political conditionality and lack of alternatives. This confirms the Tangled Rope classification.
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
+% Default analytical context.
+% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -149,9 +156,16 @@ constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, tan
 
 :- begin_tests(china_africa_zero_tariff_2026_tests).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(china_africa_zero_tariff_2026, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(perspectival_gap) :-
+    % Verify perspectival gap between target and beneficiary.
+    constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(china_africa_zero_tariff_2026, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget \= TypeBeneficiary.
+
+test(tangled_rope_gate) :-
+    narrative_ontology:constraint_beneficiary(china_africa_zero_tariff_2026, _),
+    narrative_ontology:constraint_victim(china_africa_zero_tariff_2026, _),
+    domain_priors:requires_active_enforcement(china_africa_zero_tariff_2026).
 
 :- end_tests(china_africa_zero_tariff_2026_tests).
 
@@ -161,16 +175,30 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.55): High. This score reflects the significant, persistent trade deficit Africa runs with China, which this framework may exacerbate. The extraction is not a tariff but the structural value transfer from a raw material exporter to a manufacturing superpower. Suppression (0.65): High. The political exclusion of Eswatini is a direct act of suppression. For participants, the deal is so advantageous compared to alternatives (often laden with Western political conditionality) that it suppresses the formation of a unified negotiating bloc or the pursuit of other partnerships. Theater (0.40): Moderate. The 'win-win' and 'South-South cooperation' narrative is a key part of the framework's political maintenance, but it partially masks the underlying extractive imbalance.
+ *   Base extractiveness (0.32) is set above the mountain floor but below the
+ *   pure snare threshold because the removal of tariffs is a genuine subsidy
+ *   to trade. However, the requirement for "diplomatic relations" and
+ *   "partnership pacts" creates a suppression score (0.45) representing the
+ *   foreclosure of political non-alignment.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. China, the architect, sees a beneficial coordination Rope. Eswatini, the excluded target, sees a coercive political Snare. Participating African nations, caught in the middle, experience the quintessential Tangled Rope: a genuine benefit (market access) tangled with a significant structural cost (dependency and trade imbalance). Western competitors also see a Tangled Rope, recognizing the mix of legitimate trade and strategic extraction of influence.
+ *   China (Institutional) sees a 'Rope' because the system lowers their
+ *   import costs (negative chi). African producers (Powerless/Moderate) see a
+ *   'Tangled Rope' because the 'Zero Tariff' benefit is tied to 'Green Channel'
+ *   compliance—a standard-setting mechanism they do not control. The gap
+ *   between the powerless farmer and the organized exporter is small, as both
+ *   face the same asymmetric standard.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiary/victim declarations drive the perspectival classifications. China (beneficiary, arbitrage exit) has its effective extraction (χ) driven negative, classifying as Rope. Eswatini (victim, trapped exit) has its χ amplified to the maximum, classifying as Snare. Participating nations (beneficiary/victim, constrained exit) have a moderately high χ, landing squarely in the Tangled Rope category. This demonstrates the system's ability to derive nuanced classifications from structural relationships.
+ *   African producers and exporters are victims of standard-setting asymmetry
+ *   (d ≈ 0.85-0.95), while China is the architect and beneficiary of the
+ *   resulting resource-flow stability (d ≈ 0.05).
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is a classic case for resolving mandatrophy. A simplistic analysis might label it a purely benevolent Rope (China's narrative) or a purely predatory Snare (a critical perspective). The Deferential Realism framework, by using indexical classification, shows that both are incomplete. The analytical classification of Tangled Rope correctly identifies the dual nature of the constraint: it possesses both a genuine coordination function and a significant, asymmetric extractive component. The perspectival analysis further clarifies that Rope and Snare are indeed the experienced realities for agents at the structural extremes of the system.
+ *   The classification prevents mislabeling this as 'Pure Rope' by
+ *   highlighting the 'Active Enforcement' required to maintain the
+ *   diplomatic and technical standards of the Green Channel, which is the
+ *   primary vector of extraction.
  */
 
 /* ==========================================================================
@@ -178,67 +206,52 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    imbalance_entrenchment,
-    'Will the zero-tariff framework reduce Africa''s trade deficit with China, or will it entrench the existing pattern of raw material exports vs. manufactured goods imports?',
-    'Longitudinal analysis of trade data post-2026, tracking the value-add of African exports to China.',
-    'If the deficit shrinks and export composition diversifies, the constraint''s extractiveness (ε) is lower than estimated. If the deficit grows, ε is higher, and the constraint trends towards a Snare.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(imbalance_entrenchment, empirical, 'Whether the framework reduces or entrenches the China-Africa trade imbalance.').
-
-omega_variable(
-    industrialization_catalyst,
-    'Can African nations leverage the preferential market access to build domestic manufacturing and industrial capacity?',
-    'Tracking metrics of industrialization (e.g., manufacturing as % of GDP, employment in secondary sectors) in participating countries.',
-    'Successful industrialization would indicate a strong coordination function, classifying the constraint as a Scaffold from a developmental perspective. Failure would confirm the extractive Tangled Rope/Snare dynamic.',
+    omega_china_africa_2026,
+    'The degree to which "Green Channel" standards function as non-tariff barriers.',
+    'Review of 2027 export rejection rates for African agricultural goods.',
+    'If standards are prohibitive, ε shifts from 0.32 to > 0.46 (Snare).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(industrialization_catalyst, empirical, 'Whether market access translates into genuine industrial capacity building.').
-
-omega_variable(
-    geopolitical_vs_economic_driver,
-    'Is the primary function of the framework economic development for Africa or securing geopolitical alignment and resource access for China?',
-    'Analysis of Chinese state documents, voting patterns of participating African nations in international forums (e.g., UN), and terms of associated infrastructure loans.',
-    'If primarily geopolitical, the ''coordination'' function is largely theater, and the constraint is more accurately a Snare. If economic drivers are primary, the Tangled Rope classification holds.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(geopolitical_vs_economic_driver, conceptual, 'The primary driver of the framework: economic development vs. geopolitical leverage.').
-
+narrative_ontology:omega_variable(omega_china_africa_2026, empirical, 'Non-tariff barrier impact of green channel standards').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(china_africa_zero_tariff_2026, 2024, 2036).
+% Required for external script parsing
+narrative_ontology:interval(china_africa_zero_tariff_2026, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(chin_tr_t2024, china_africa_zero_tariff_2026, theater_ratio, 2024, 0.5).
-narrative_ontology:measurement(chin_tr_t2030, china_africa_zero_tariff_2026, theater_ratio, 2030, 0.45).
-narrative_ontology:measurement(chin_tr_t2036, china_africa_zero_tariff_2026, theater_ratio, 2036, 0.4).
+% Theater ratio over time (Anticipated rise as pacts become more performative)
+narrative_ontology:measurement(catz_tr_t0, china_africa_zero_tariff_2026, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(catz_tr_t5, china_africa_zero_tariff_2026, theater_ratio, 5, 0.15).
+narrative_ontology:measurement(catz_tr_t10, china_africa_zero_tariff_2026, theater_ratio, 10, 0.20).
 
-% Extraction over time
-narrative_ontology:measurement(chin_be_t2024, china_africa_zero_tariff_2026, base_extractiveness, 2024, 0.48).
-narrative_ontology:measurement(chin_be_t2030, china_africa_zero_tariff_2026, base_extractiveness, 2030, 0.52).
-narrative_ontology:measurement(chin_be_t2036, china_africa_zero_tariff_2026, base_extractiveness, 2036, 0.55).
-
+% Extraction over time (Drift as "Green Channel" standards tighten)
+narrative_ontology:measurement(catz_ex_t0, china_africa_zero_tariff_2026, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(catz_ex_t5, china_africa_zero_tariff_2026, base_extractiveness, 5, 0.28).
+narrative_ontology:measurement(catz_ex_t10, china_africa_zero_tariff_2026, base_extractiveness, 10, 0.32).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+% Coordination type (enables Boltzmann floor + complexity offset)
 narrative_ontology:coordination_type(china_africa_zero_tariff_2026, resource_allocation).
-narrative_ontology:affects_constraint(china_africa_zero_tariff_2026, belt_and_road_initiative).
+
+% Network: Influences the broader African Continental Free Trade Area (AfCFTA)
+% narrative_ontology:affects_constraint(china_africa_zero_tariff_2026, afcfta_coordination).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides needed; structural derivation from beneficiary/victim + exit
+% options accurately models the directionality.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: arg_ev_tariff
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-28
-% Status: [ACTIVE]
+% Generated: 2024-05-23
 % ============================================================================
 
 :- module(constraint_arg_ev_tariff, []).
@@ -41,8 +40,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -57,22 +58,21 @@
  *   domain: economic/political
  *
  * SUMMARY:
- *   Argentina's potential tariff on Chinese electric vehicles represents a
- *   classic case of protectionism, creating a structural conflict between
- *   different economic actors. The policy, mirroring moves by the US and EU,
- *   aims to foster a domestic EV industry by raising the cost of competitive
- *   imports. This directly extracts value from Argentine consumers and
- *   Chinese manufacturers, transferring it to the government (as revenue) and
- *   nascent domestic producers (as market protection). The constraint's
- *   classification varies dramatically depending on the observer's structural
- *   position in this value transfer.
+ *   Argentina's government under Javier Milei is contemplating imposing
+ *   tariffs on Chinese electric vehicles (EVs), mirroring similar protectionist
+ *   measures by the US and EU. This policy serves a dual purpose: it aligns
+ *   Argentina geopolitically with Western powers while simultaneously
+ *   suppressing lower-cost competition to protect established Western
+ *   automakers and potentially foster a domestic EV industry. The constraint
+ *   is the tariff itself, a regulatory barrier that reallocates market access
+ *   and consumer surplus.
  *
- * KEY AGENTS:
- *   - Argentine Consumers: Primary victim (powerless/trapped) — face higher prices and fewer choices.
- *   - Argentine Domestic Auto Industry: Primary beneficiary (organized/constrained) — shielded from competition.
- *   - Chinese EV Manufacturers: Primary target (powerful/mobile) — face market access barriers but can pivot to other markets.
- *   - Argentine Government: Enforcer and beneficiary (institutional/arbitrage) — gains revenue and a tool for industrial policy.
- *   - Analytical Observer: External analyst (analytical/analytical) — views the full system of coordination and extraction.
+ * KEY AGENTS (by structural relationship):
+ *   - Argentine Consumers: Primary target (powerless/trapped) — face higher prices and fewer affordable options.
+ *   - Chinese EV Manufacturers: Primary target (organized/mobile) — face market exclusion and lost revenue.
+ *   - US/EU Automakers: Primary beneficiary (institutional/arbitrage) — gain market share from suppressed competition.
+ *   - Argentine State (Milei Govt): Architect & secondary beneficiary (institutional/constrained) — gains geopolitical alignment, but constrained by trade bloc (Mercosur) politics and economic realities.
+ *   - Analytical Observer: Sees the full structure of coordination and extraction.
  */
 
 /* ==========================================================================
@@ -80,67 +80,104 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(arg_ev_tariff, 0.65).
-domain_priors:suppression_score(arg_ev_tariff, 0.75).
-domain_priors:theater_ratio(arg_ev_tariff, 0.3).
+domain_priors:base_extractiveness(arg_ev_tariff, 0.55).
+domain_priors:suppression_score(arg_ev_tariff, 0.75).   % Structural property (raw, unscaled). High due to direct suppression of alternatives.
+domain_priors:theater_ratio(arg_ev_tariff, 0.20).       % Piton detection (>= 0.70)
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(arg_ev_tariff, extractiveness, 0.65).
+narrative_ontology:constraint_metric(arg_ev_tariff, extractiveness, 0.55).
 narrative_ontology:constraint_metric(arg_ev_tariff, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(arg_ev_tariff, theater_ratio, 0.3).
+narrative_ontology:constraint_metric(arg_ev_tariff, theater_ratio, 0.20).
 
-% --- Constraint claim ---
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(arg_ev_tariff, tangled_rope).
 narrative_ontology:human_readable(arg_ev_tariff, "Argentine Tariff on Chinese Electric Vehicles").
 narrative_ontology:topic_domain(arg_ev_tariff, "economic/political").
 
-domain_priors:requires_active_enforcement(arg_ev_tariff).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(arg_ev_tariff). % Required for Tangled Rope
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(arg_ev_tariff, argentine_domestic_auto_industry).
-narrative_ontology:constraint_beneficiary(arg_ev_tariff, argentine_government).
-narrative_ontology:constraint_beneficiary(arg_ev_tariff, western_ev_manufacturers).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(arg_ev_tariff, us_eu_automakers).
+narrative_ontology:constraint_beneficiary(arg_ev_tariff, argentine_state_geopolitical).
+%
+% Who bears disproportionate cost?
 narrative_ontology:constraint_victim(arg_ev_tariff, argentine_consumers).
 narrative_ontology:constraint_victim(arg_ev_tariff, chinese_ev_manufacturers).
+%
+% Gate requirements:
+%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: ARGENTINE CONSUMER (SNARE) — Trapped within the national market, the consumer bears the full cost of the tariff through higher prices and reduced choice, with no ability to exit. The policy is pure extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92.
-constraint_indexing:constraint_classification(arg_ev_tariff, snare,
+% PERSPECTIVE 1: THE PRIMARY TARGET (ARGENTINE CONSUMER)
+% Bears the full cost of higher prices and reduced choice.
+% Engine derives d from: victim membership + trapped exit → d≈0.95 → f(d)≈1.42 → high χ
+% χ = 0.55 * 1.42 * 1.0 (national) ≈ 0.78. This exceeds the Snare threshold (χ≥0.66).
+constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: DOMESTIC AUTO INDUSTRY (ROPE) — For the protected domestic industry and its workers, the tariff is a pure coordination mechanism. It shields them from foreign competition, enabling their survival and growth. d≈0.30, f(d)≈0.20, σ=1.0 → χ≈0.13.
-constraint_indexing:constraint_classification(arg_ev_tariff, rope,
-    context(agent_power(organized),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: CHINESE EV MANUFACTURER (TANGLED ROPE) — As a multinational, the manufacturer sees an extractive barrier but is not trapped. It can redirect exports to other markets (mobile exit). The tariff is a coercive rule to be navigated, not an inescapable snare. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.90.
-constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope,
-    context(agent_power(powerful),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: ARGENTINE GOVERNMENT (ROPE) — As the enforcer and a beneficiary (via tariff revenue and political goals), the government experiences the policy as a low-extraction coordination tool for industrial and foreign policy. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08.
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (US/EU AUTOMAKERS)
+% Benefits from suppressed competition.
+% Engine derives d from: beneficiary membership + arbitrage exit → d≈0.05 → f(d)≈-0.12 → negative χ
 constraint_indexing:constraint_classification(arg_ev_tariff, rope,
     context(agent_power(institutional),
-            time_horizon(biographical),
+            time_horizon(generational),
             exit_options(arbitrage),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees both the claimed coordination function (protecting domestic industry) and the clear asymmetric extraction from consumers and foreign producers. This is the canonical view of a protectionist tariff. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90.
-constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% Sees both the geopolitical coordination and the asymmetric extraction.
+% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% χ = 0.55 * 1.15 * 1.2 (global) ≈ 0.76. Meets Tangled Rope criteria (0.40 ≤ χ ≤ 0.90).
+constraint_indexing:constraint_classification(arg_ev_tariff, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% --- INTER-INSTITUTIONAL PERSPECTIVES ---
+% The constraint operates differently on different institutional actors.
+
+% PERSPECTIVE 4A: THE ARCHITECT (ARGENTINE STATE)
+% An institutional beneficiary, but with constrained options.
+% Engine derives d from: beneficiary + constrained exit → d≈0.25 → f(d)≈0.14
+% χ = 0.55 * 0.14 * 1.0 (national) ≈ 0.08. Clearly a Rope from this view.
+constraint_indexing:constraint_classification(arg_ev_tariff, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4B: THE EXCLUDED COMPETITOR (CHINESE EV MANUFACTURERS)
+% An organized victim, but with mobile exit (can sell elsewhere).
+% Engine derives d from: victim + mobile exit → d≈0.85 → f(d)≈1.15
+% χ = 0.55 * 1.15 * 1.0 (national) ≈ 0.63. Below Snare threshold but high,
+% qualifying as a Tangled Rope as they see the geopolitical coordination but
+% primarily experience the extraction.
+constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -148,14 +185,24 @@ constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope,
 
 :- begin_tests(arg_ev_tariff_tests).
 
-test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(arg_ev_tariff, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(arg_ev_tariff, TypeOther, context(agent_power(organized), _, _, _)),
-    TypePowerless \= TypeOther.
+test(perspectival_gap_target_beneficiary) :-
+    % Verify perspectival gap between consumer and western automaker.
+    constraint_indexing:constraint_classification(arg_ev_tariff, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
+    constraint_indexing:constraint_classification(arg_ev_tariff, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(arg_ev_tariff, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(perspectival_gap_inter_institutional) :-
+    % Verify gap between the Argentine state and Chinese manufacturers.
+    constraint_indexing:constraint_classification(arg_ev_tariff, rope, context(agent_power(institutional), _, exit_options(constrained), _)),
+    constraint_indexing:constraint_classification(arg_ev_tariff, tangled_rope, context(agent_power(organized), _, exit_options(mobile), _)).
+
+test(analytical_claim_matches_type) :-
+    narrative_ontology:constraint_claim(arg_ev_tariff, tangled_rope),
+    constraint_indexing:constraint_classification(arg_ev_tariff, snare, context(agent_power(analytical), _, _, _)).
+
+test(tangled_rope_gates_pass) :-
+    narrative_ontology:constraint_beneficiary(arg_ev_tariff, _),
+    narrative_ontology:constraint_victim(arg_ev_tariff, _),
+    domain_priors:requires_active_enforcement(arg_ev_tariff).
 
 :- end_tests(arg_ev_tariff_tests).
 
@@ -165,84 +212,84 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.65) is high, reflecting the significant price increase and market distortion imposed on consumers and foreign firms. Suppression (0.75) is also high, as the tariff's primary function is to coercively block a more efficient market alternative. Theater Ratio (0.30) is moderate; while there is a political signaling component (aligning with Western trade policy), the tariff's main purpose is its direct economic effect of protection and revenue generation.
+ *   - Base Extractiveness (ε=0.55): Set high to reflect the significant price advantage of Chinese EVs, meaning a tariff to neutralize this advantage is highly extractive for consumers.
+ *   - Suppression (0.75): The explicit goal of the tariff is to suppress a category of market actor, justifying a high score.
+ *   - The combination of high extraction and high suppression, alongside a clear coordination function, makes this a canonical Tangled Rope.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For consumers, who are trapped and bear all costs, the tariff is a Snare. For the domestic industry it is intended to protect, it is a Rope—a pure coordination good. For the targeted Chinese firms, with global operations and an ability to exit, it is a Tangled Rope—a coercive but navigable rule. The analytical view, which must account for both the protectionist (coordination) intent and the extractive effect, also lands on Tangled Rope, confirming it as the most complete classification.
+ *   The gap is stark. For an Argentine consumer, the tariff is a pure Snare: it removes affordable options and raises prices with no direct benefit. For a Western automaker, it's a perfect Rope: it coordinates the market to their advantage, eliminating a key competitor at no cost to them. The Argentine state sees it as a Rope, a tool for achieving geopolitical alignment. The analytical view correctly identifies this hybrid nature as a Tangled Rope.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality `d` is derived from structural roles. The consumer is a trapped victim (d≈0.95), leading to maximum effective extraction (χ) and a Snare classification. The domestic industry is a constrained beneficiary (d≈0.30), leading to low χ and a Rope classification. The government is a beneficiary with arbitrage (d≈0.05), leading to negative χ (net benefit). The mobile victim (Chinese firms, d≈0.85) and the analytical observer (d≈0.73) both experience high but not maximal extraction, placing them in the Tangled Rope category.
+ *   - Beneficiaries: `us_eu_automakers` gain direct market access. `argentine_state_geopolitical` benefits from aligning with powerful trade blocs, a non-monetary but structurally significant gain.
+ *   - Victims: `argentine_consumers` pay the direct monetary cost. `chinese_ev_manufacturers` suffer the direct market exclusion. These declarations directly inform the directionality `d` for each perspective.
+ *
+ * INTER-INSTITUTIONAL DYNAMICS:
+ *   This story highlights how two institutional actors experience the same constraint differently. The Argentine state (architect) sees it as a coordination tool (Rope) because their exit is `constrained` by geopolitical pressures. Chinese manufacturers (target) see it as a coercive, extractive barrier (Tangled Rope) because while they are `mobile` and can sell elsewhere, they are the direct target of the extraction within this scope.
  *
  * MANDATROPHY ANALYSIS:
- *   This case resolves the mandatrophy by demonstrating that a single policy is simultaneously a Rope, a Snare, and a Tangled Rope. An analysis that only considered the government's stated intent would misclassify it as a Rope (coordination). An analysis that only considered the consumer's experience would misclassify it as a Snare (pure predation). The Deferential Realism framework, by indexing to different structural positions, correctly identifies it as a Tangled Rope from the comprehensive analytical view, acknowledging both its coordination function and its highly extractive nature.
+ *   This classification correctly avoids two common errors. It does not label the tariff as a pure Snare, which would ignore its genuine (if debatable) function in geopolitical coordination. It also avoids labeling it as a benign Rope, which would ignore the significant, quantifiable extraction imposed on consumers and Chinese firms. The Tangled Rope classification captures this essential duality.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    domestic_industry_viability,
-    'Will a protected domestic EV industry become genuinely competitive, or will the tariff merely subsidize inefficiency?',
-    'Longitudinal analysis of domestic EV production costs, quality, and innovation rates compared to global benchmarks over a 5-10 year period.',
-    'If viable, the ''coordination'' function is real, supporting the Tangled Rope classification. If not, the coordination is illusory, and the constraint is functionally a pure Snare on consumers.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(domestic_industry_viability, empirical, 'Whether the protected domestic industry achieves long-term competitiveness.').
-
-omega_variable(
-    consumer_welfare_impact,
-    'What is the net economic effect when accounting for the deadweight loss to consumers versus the gains for domestic producers and government revenue?',
-    'Computable general equilibrium (CGE) modeling of the Argentine economy with and without the tariff.',
-    'A large net negative welfare impact would strengthen the Snare classification from most non-beneficiary perspectives. A net positive impact would support the Tangled Rope/Rope views.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(consumer_welfare_impact, empirical, 'Net economic welfare effect of the tariff on the Argentine economy.').
-
-omega_variable(
-    geopolitical_motivation,
-    'Is the primary driver of the tariff economic protectionism or geopolitical alignment with Western powers against China?',
-    'Analysis of diplomatic communications, timing of the policy relative to US/EU actions, and statements by policymakers.',
-    'If primarily geopolitical, the ''theater_ratio'' is likely underestimated, and the constraint''s function is partly performative signaling, which could shift it towards a Piton if the economic effects are negligible.',
+    omega_arg_ev_tariff,
+    'Will the tariff successfully foster a competitive domestic or regional (Mercosur) EV industry?',
+    'Empirical observation of investment flows, factory construction, and market share of domestic/regional EVs over a 5-10 year period.',
+    'If YES, the constraint has a stronger long-term coordination function, potentially reducing its perceived extractiveness over a generational timescale. If NO, it solidifies its status as a pure transfer of wealth from consumers to foreign (Western) corporations, making the Snare perspective dominant.',
     confidence_without_resolution(low)
 ).
-
-narrative_ontology:omega_variable(geopolitical_motivation, conceptual, 'The balance between economic protectionism and geopolitical signaling as the core motivation.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
+% Required for external script parsing
 narrative_ontology:interval(arg_ev_tariff, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(arg__tr_t0, arg_ev_tariff, theater_ratio, 0, 0.4).
-narrative_ontology:measurement(arg__tr_t5, arg_ev_tariff, theater_ratio, 5, 0.35).
-narrative_ontology:measurement(arg__tr_t10, arg_ev_tariff, theater_ratio, 10, 0.3).
+% This is a high-extraction constraint (ε=0.55 > 0.46), so temporal data
+% is required to model its implementation over time.
+% We model the period from pre-policy (T=0) to full implementation (T=5).
 
-% Extraction over time
-narrative_ontology:measurement(arg__be_t0, arg_ev_tariff, base_extractiveness, 0, 0.6).
-narrative_ontology:measurement(arg__be_t5, arg_ev_tariff, base_extractiveness, 5, 0.62).
-narrative_ontology:measurement(arg__be_t10, arg_ev_tariff, base_extractiveness, 10, 0.65).
+% Theater ratio over time (stable and low):
+narrative_ontology:measurement(arg_ev_tariff_tr_t0, arg_ev_tariff, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(arg_ev_tariff_tr_t5, arg_ev_tariff, theater_ratio, 5, 0.20).
+narrative_ontology:measurement(arg_ev_tariff_tr_t10, arg_ev_tariff, theater_ratio, 10, 0.20).
 
+% Extraction over time (ramps up as tariff is implemented):
+narrative_ontology:measurement(arg_ev_tariff_ex_t0, arg_ev_tariff, base_extractiveness, 0, 0.0).
+narrative_ontology:measurement(arg_ev_tariff_ex_t5, arg_ev_tariff, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(arg_ev_tariff_ex_t10, arg_ev_tariff, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(arg_ev_tariff, enforcement_mechanism).
-narrative_ontology:affects_constraint(arg_ev_tariff, arg_lithium_export_policy).
+% Coordination type: The tariff primarily functions to allocate market share.
+narrative_ontology:coordination_type(arg_ev_tariff, resource_allocation).
+
+% Network relationships: This policy is a node in a larger network of
+% geopolitical and trade conflicts.
+narrative_ontology:affects_constraint(us_china_trade_war, arg_ev_tariff).
+narrative_ontology:affects_constraint(eu_protectionism, arg_ev_tariff).
+narrative_ontology:affects_constraint(arg_ev_tariff, mercosur_trade_policy).
+
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides are needed for this story. The default structural derivation
+% (beneficiary/victim + exit_options -> d) accurately captures the
+% perspectival differences between the consumers, western automakers,
+% the Argentine state, and Chinese manufacturers.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

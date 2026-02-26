@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: algeria_france_colonial_legacy
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
-% Status: [ACTIVE]
+% Generated: 2024-05-20
 % ============================================================================
 
 :- module(constraint_algeria_france_colonial_legacy, []).
@@ -41,8 +40,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -57,21 +58,18 @@
  *   domain: geopolitical/economic
  *
  * SUMMARY:
- *   This constraint models the enduring, multi-generational impact of
- *   France's 132-year colonization of Algeria. After formal independence in
- *   1962, the deep structures of economic dependency, political influence,
- *   and cultural orientation remained. These structures were not accidental;
- *   they were the result of a colonial project designed for resource
- *   extraction and the suppression of indigenous sovereignty. The legacy
- *   persists through linguistic ties, established trade routes, monetary
- *   policy influence (historically via the Franc zone), and the vested
- *   interests of both French corporations and a co-opted Algerian elite.
+ *   This constraint represents the enduring economic, political, and cultural
+ *   effects of France's 132-year colonization of Algeria (1830-1962). The
+ *   Algerian parliament's recent vote to declare colonization a crime highlights
+ *   the ongoing nature of this constraint, which manifests as demands for
+ *   restitution, return of archives, and reparations for nuclear testing. The
+ *   constraint is defined by a historical power asymmetry whose consequences
+ *   persist in present-day international relations and economic structures.
  *
- * KEY AGENTS:
- *   - Algerian Populace: Primary target (powerless/trapped) — bears the costs of underdevelopment and limited sovereignty.
- *   - French State and Corporations: Primary beneficiary (institutional/arbitrage) — reaps economic and geopolitical benefits from the established relationship.
- *   - Algerian Comprador Elites: Secondary beneficiary/enforcer (powerful/mobile) — maintains power and wealth by managing the extractive system.
- *   - Post-Colonial Analyst: Analytical observer (analytical/analytical) — identifies the hybrid nature of the constraint.
+ * KEY AGENTS (by structural relationship):
+ *   - Algerian State & People: Primary target (organized/constrained) — bears the historical and ongoing costs of extraction and suppressed development.
+ *   - French State & Beneficiaries: Primary beneficiary (institutional/arbitrage) — benefits from historical resource extraction and maintains structural advantages.
+ *   - Analytical Observer: A historian or international relations scholar who sees the full hybrid structure of coordination and extraction.
  */
 
 /* ==========================================================================
@@ -79,59 +77,95 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(algeria_france_colonial_legacy, 0.68).
-domain_priors:suppression_score(algeria_france_colonial_legacy, 0.75).
-domain_priors:theater_ratio(algeria_france_colonial_legacy, 0.35).
+domain_priors:base_extractiveness(algeria_france_colonial_legacy, 0.75).
+domain_priors:suppression_score(algeria_france_colonial_legacy, 0.80).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(algeria_france_colonial_legacy, 0.20).       % Piton detection (>= 0.70)
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(algeria_france_colonial_legacy, extractiveness, 0.68).
-narrative_ontology:constraint_metric(algeria_france_colonial_legacy, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(algeria_france_colonial_legacy, theater_ratio, 0.35).
+narrative_ontology:constraint_metric(algeria_france_colonial_legacy, extractiveness, 0.75).
+narrative_ontology:constraint_metric(algeria_france_colonial_legacy, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(algeria_france_colonial_legacy, theater_ratio, 0.20).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(algeria_france_colonial_legacy, tangled_rope).
+% --- NL Profile Metrics (required for mountain constraints) ---
+% N/A for this constraint.
+
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(algeria_france_colonial_legacy, snare).
 narrative_ontology:human_readable(algeria_france_colonial_legacy, "The persistent structural legacy of French colonization in Algeria").
 narrative_ontology:topic_domain(algeria_france_colonial_legacy, "geopolitical/economic").
 
-domain_priors:requires_active_enforcement(algeria_france_colonial_legacy).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(algeria_france_colonial_legacy). % Required for Tangled Rope
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(algeria_france_colonial_legacy, french_state_and_corporations).
-narrative_ontology:constraint_beneficiary(algeria_france_colonial_legacy, algerian_comprador_elites).
-narrative_ontology:constraint_victim(algeria_france_colonial_legacy, algerian_populace).
-narrative_ontology:constraint_victim(algeria_france_colonial_legacy, algerian_sovereign_development).
+% --- Emergence flag (required for mountain constraints) ---
+% N/A for this constraint.
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(algeria_france_colonial_legacy, french_colonial_state_and_beneficiaries).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(algeria_france_colonial_legacy, algerian_state_and_people).
+%
+% Gate requirements:
+%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three met)
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: ALGERIAN POPULACE (SNARE) — Experiences the legacy as a trap of limited economic opportunity, political disenfranchisement, and cultural dependency. Exit is impossible for the vast majority. High base extraction and trapped status yield a χ value deep in the snare category (χ ≈ 0.96), reflecting a system of pure coercive extraction.
+% PERSPECTIVE 1: THE PRIMARY TARGET (INDIVIDUAL)
+% An individual Algerian citizen whose family history and economic opportunities
+% are shaped by the colonial legacy.
+% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 constraint_indexing:constraint_classification(algeria_france_colonial_legacy, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: FRENCH STATE (ROPE) — Perceives the relationship as a beneficial coordination mechanism for managing trade, migration, and geopolitical interests. With arbitrage exit options, the directionality is inverted, resulting in negative effective extraction (χ ≈ -0.10). The constraint is a net subsidy, appearing as pure coordination.
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (FRENCH STATE)
+% The French state, which inherited the geopolitical and economic advantages
+% of the colonial era.
+% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
 constraint_indexing:constraint_classification(algeria_france_colonial_legacy, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(historical),
             exit_options(arbitrage),
-            spatial_scope(global))).
+            spatial_scope(continental))).
 
-% PERSPECTIVE 3: ALGERIAN ELITE (TANGLED ROPE) — Benefits from the extractive system but is also constrained by it. Their power depends on maintaining the structure, which requires active management of both popular dissent and the relationship with France. They see both the coordination function (maintaining power) and the extraction they facilitate. High suppression and active enforcement are salient features.
-constraint_indexing:constraint_classification(algeria_france_colonial_legacy, tangled_rope,
-    context(agent_power(powerful),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national))).
-
-% PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's true nature. It possesses a genuine (though perverse) coordination function (language, trade routes, elite networks) layered onto a foundation of severe asymmetric extraction. The high suppression of alternatives and requirement for active enforcement confirm the Tangled Rope classification, distinguishing it from a natural economic outcome.
-constraint_indexing:constraint_classification(algeria_france_colonial_legacy, tangled_rope,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% Default analytical context (civilizational/analytical/global).
+% Recognizes both the coordination function (imposing a state structure) and
+% the massive asymmetric extraction, classifying it as a Tangled Rope.
+constraint_indexing:constraint_classification(algeria_france_colonial_legacy, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% --- INTER-INSTITUTIONAL PERSPECTIVE ---
+% The Algerian state as an organized political actor. While organized, its options
+% for escaping the historical legacy are highly constrained by established
+% international power dynamics and economic path dependencies.
+% Engine derives d from victim membership + constrained exit, yielding a high d.
+constraint_indexing:constraint_classification(algeria_france_colonial_legacy, snare,
+    context(agent_power(organized),
+            time_horizon(historical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -139,14 +173,32 @@ constraint_indexing:constraint_classification(algeria_france_colonial_legacy, ta
 
 :- begin_tests(algeria_france_colonial_legacy_tests).
 
-test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(algeria_france_colonial_legacy, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(algeria_france_colonial_legacy, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+test(perspectival_gap_target_beneficiary) :-
+    % Verify perspectival gap between powerless target and institutional beneficiary.
+    constraint_indexing:constraint_classification(algeria_france_colonial_legacy, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(algeria_france_colonial_legacy, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    (TypeTarget == snare ; TypeTarget == tangled_rope),
+    TypeBeneficiary == rope,
+    TypeTarget \= TypeBeneficiary.
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(algeria_france_colonial_legacy, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(perspectival_gap_inter_institutional) :-
+    % Verify perspectival gap between the two nation-state actors.
+    constraint_indexing:constraint_classification(algeria_france_colonial_legacy, TypeAlgeria, context(agent_power(organized), _, exit_options(constrained), _)),
+    constraint_indexing:constraint_classification(algeria_france_colonial_legacy, TypeFrance, context(agent_power(institutional), _, exit_options(arbitrage), _)),
+    (TypeAlgeria == snare ; TypeAlgeria == tangled_rope),
+    TypeFrance == rope,
+    TypeAlgeria \= TypeFrance.
+
+test(analytical_claim_matches_type) :-
+    % The analytical observer's classification must match the declared constraint_claim
+    narrative_ontology:constraint_claim(algeria_france_colonial_legacy, ClaimedType),
+    constraint_indexing:constraint_classification(algeria_france_colonial_legacy, AnalyticalType, context(agent_power(analytical), _, _, _)),
+    ClaimedType == AnalyticalType.
+
+test(tangled_rope_gates_pass) :-
+    narrative_ontology:constraint_beneficiary(algeria_france_colonial_legacy, _),
+    narrative_ontology:constraint_victim(algeria_france_colonial_legacy, _),
+    domain_priors:requires_active_enforcement(algeria_france_colonial_legacy).
 
 :- end_tests(algeria_france_colonial_legacy_tests).
 
@@ -156,84 +208,86 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.68) is high, reflecting persistent unequal terms of trade, capital flight, and brain drain that systematically benefit the French economy at the expense of Algerian development. Suppression (0.75) is also high; the colonial project actively dismantled or co-opted pre-existing institutions, and post-colonial structures make it extremely difficult and costly for Algeria to pursue truly independent development paths. Theater Ratio (0.35) is moderate; while there is significant diplomatic and cultural performance around the 'special relationship,' the underlying economic extraction is highly functional and not merely inertial.
+ *   - Base Extractiveness (ε=0.75): Set very high to reflect over a century of systematic resource transfer, land appropriation, and wealth extraction from Algeria to France.
+ *   - Suppression Score (0.80): Colonialism is defined by the violent suppression of indigenous political, economic, and cultural alternatives. The Algerian War of Independence is testament to the extreme measures required to overcome this suppression.
+ *   - Theater Ratio (0.20): While colonial powers employed rhetoric like the "civilizing mission," the primary function was brutally direct extraction, not performance. The theater was a justification, not the core mechanism.
+ *   - This combination of high extraction, high suppression, and the presence of both beneficiaries and victims makes it a canonical Tangled Rope from an analytical view.
  *
  * PERSPECTIVAL GAP:
- *   The profound perspectival gap is central to this constraint's persistence. The French state experiences a beneficial Rope, a natural and efficient coordination of mutual interests. The Algerian populace experiences a coercive Snare, a system from which they cannot escape and which extracts their future. The Algerian elite navigates a Tangled Rope, benefiting from their position while being bound to the system's logic. The analytical view confirms the Tangled Rope, recognizing that the 'coordination' seen by the beneficiary is the very mechanism of extraction experienced by the victim.
+ *   The gap is profound. The French state (beneficiary) can selectively focus on the infrastructure built or the state structure imposed, viewing it as a coordination mechanism (Rope). For Algerians (victims), the experience was one of overwhelming coercion, violence, and extraction with no meaningful exit, making it a clear Snare. This gap is the source of ongoing diplomatic friction.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality derivation correctly captures the structural positions. The French state (beneficiary + arbitrage) has a low 'd' value, leading to negative effective extraction (a subsidy). The Algerian populace (victim + trapped) has a very high 'd' value, leading to maximum effective extraction. The Algerian elite (beneficiary + mobile) has a low 'd', but their national scope and role as enforcers place them in a complex hybrid position. The analytical observer's default 'd' value, combined with the high base metrics, correctly identifies the severe extraction inherent in the system's structure.
+ *   - Beneficiary: `french_colonial_state_and_beneficiaries`. The French state, its corporations, and settlers were the direct financial and political beneficiaries. Their institutional power and `arbitrage` exit options (they can choose how to engage with history) give them a very low directionality score (d), resulting in a low effective extraction (χ) and a Rope classification.
+ *   - Victim: `algerian_state_and_people`. The native population bore the costs. Their status as victims with `trapped` or `constrained` exit options gives them a very high directionality score (d), maximizing effective extraction (χ) and leading to a Snare classification.
+ *
+ * INTER-INSTITUTIONAL DYNAMICS:
+ *   This is a core feature of the story. Both France and Algeria are institutional actors (nation-states), but their relationship to the historical constraint is asymmetric.
+ *   - France (`institutional`/`arbitrage`): Has the power to set the terms of debate, delay reparations, and leverage its economic/diplomatic weight. Its exit is "arbitrage" because it can profit from the legacy while controlling the narrative.
+ *   - Algeria (`organized`/`constrained`): Is an organized state actor, but it cannot simply "exit" its own history. Its development path, national identity, and international relations are fundamentally constrained by the colonial past. This difference in exit options is what drives the different classifications despite both being state actors.
  *
  * MANDATROPHY ANALYSIS:
- *   This case is a powerful resolution of mandatrophy. A simplistic analysis might label the entire system a Snare, ignoring the agency and benefits accrued by local elites, or a Rope, echoing the neocolonial narrative of 'cooperation.' The Tangled Rope classification is essential, as it correctly identifies the simultaneous existence of a genuine coordination function (for the elites and France) and a deeply extractive function (for the populace). It forces an analysis of *who* benefits and *who* pays, revealing that the coordination *is* the extraction.
+ *   [RESOLVED MANDATROPHY] The Tangled Rope classification is crucial here. A simple Snare classification would miss the (perverse) coordination function that the colonial state imposed. A Rope classification would be a whitewashing of history, ignoring the immense extraction. Tangled Rope correctly identifies that a system of organization was created *for the purpose* of asymmetric extraction. It prevents the mislabeling of coercive extraction as benign coordination.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    endogenous_vs_exogenous_factors,
-    'Are Algeria''s developmental challenges primarily a direct result of the colonial legacy, or are they driven by internal governance failures and broader global economic pressures?',
-    'Comparative analysis with non-colonized nations with similar resource profiles; econometric models isolating the causal impact of specific colonial-era institutions.',
-    'If primarily legacy-driven, the Snare/Tangled Rope classifications are confirmed. If primarily internal/global, the constraint might be better modeled as a Rope with high friction or a Mountain of development economics.',
-    confidence_without_resolution(high)
+    omega_algeria_france_colonial_legacy,
+    'What is the true, quantifiable net economic impact of colonization on Algeria, against a counterfactual of independent development?',
+    'A comprehensive, multi-generational economic analysis modeling resource flows, suppressed industrialization, and human capital costs. This is likely impossible to calculate with high precision.',
+    'A definitive high value would strengthen claims for restitution (Snare). A lower or ambiguous value would allow the beneficiary to frame the legacy as more coordinative (Rope).',
+    confidence_without_resolution(low)
 ).
-
-narrative_ontology:omega_variable(endogenous_vs_exogenous_factors, empirical, 'Distinguishing colonial legacy impact from other developmental factors').
-
-omega_variable(
-    elite_agency,
-    'To what degree are Algerian elites independent actors pursuing their own interests versus agents structurally determined by the post-colonial system?',
-    'Analysis of capital flight patterns, policy decisions that deviate from French interests, and elite network formation outside the Franco-Algerian sphere.',
-    'High agency suggests their perspective is closer to a beneficiary of a Rope they help maintain. Low agency suggests they are also partially victims of a Tangled Rope, trapped in a system they must perpetuate.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(elite_agency, conceptual, 'Assessing the independent agency of Algerian elites').
-
-omega_variable(
-    pathway_to_exit,
-    'Can alternative economic and political alliances (e.g., with China, Russia, or Pan-African blocs) provide a genuine exit from the constraint, or do they merely substitute one form of dependency for another?',
-    'Longitudinal study of trade balance, debt structure, and policy sovereignty in nations that have attempted similar geopolitical pivots.',
-    'If genuine exit is possible, the ''suppression'' score is too high and the system is less coercive than a Snare. If it''s dependency substitution, the high suppression score is validated.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(pathway_to_exit, empirical, 'Viability of alternative alliances as an exit from dependency').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(algeria_france_colonial_legacy, 0, 62).
+% Required for external script parsing. Interval represents the colonial period.
+narrative_ontology:interval(algeria_france_colonial_legacy, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(alge_tr_t0, algeria_france_colonial_legacy, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(alge_tr_t31, algeria_france_colonial_legacy, theater_ratio, 31, 0.25).
-narrative_ontology:measurement(alge_tr_t62, algeria_france_colonial_legacy, theater_ratio, 62, 0.35).
+% Temporal data for the colonial period (1830s to 1960s, normalized to 0-10).
+% Required because base_extractiveness (0.75) > 0.46.
 
-% Extraction over time
-narrative_ontology:measurement(alge_be_t0, algeria_france_colonial_legacy, base_extractiveness, 0, 0.8).
-narrative_ontology:measurement(alge_be_t31, algeria_france_colonial_legacy, base_extractiveness, 31, 0.72).
-narrative_ontology:measurement(alge_be_t62, algeria_france_colonial_legacy, base_extractiveness, 62, 0.68).
+% Theater ratio over time: increased as "civilizing mission" rhetoric developed.
+narrative_ontology:measurement(afcl_tr_t0, algeria_france_colonial_legacy, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(afcl_tr_t5, algeria_france_colonial_legacy, theater_ratio, 5, 0.15).
+narrative_ontology:measurement(afcl_tr_t10, algeria_france_colonial_legacy, theater_ratio, 10, 0.20).
 
+% Extraction over time: intensified as colonial administration became more efficient.
+narrative_ontology:measurement(afcl_ex_t0, algeria_france_colonial_legacy, base_extractiveness, 0, 0.60).
+narrative_ontology:measurement(afcl_ex_t5, algeria_france_colonial_legacy, base_extractiveness, 5, 0.70).
+narrative_ontology:measurement(afcl_ex_t10, algeria_france_colonial_legacy, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+% Coordination type: The colonial state was a mechanism for re-routing resources.
 narrative_ontology:coordination_type(algeria_france_colonial_legacy, resource_allocation).
-narrative_ontology:affects_constraint(algeria_france_colonial_legacy, francafrique_system).
+
+% Network relationships: The colonial legacy has direct structural impacts on
+% modern geopolitical and economic constraints.
+narrative_ontology:affects_constraint(algeria_france_colonial_legacy, european_north_african_migration_policy).
+narrative_ontology:affects_constraint(algeria_france_colonial_legacy, algerian_energy_exports_to_europe).
+
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides are needed for this constraint. The structural derivation chain
+% correctly computes directionality (d) from the declared beneficiary/victim
+% groups and their respective exit options (arbitrage vs. constrained),
+% accurately capturing the asymmetric relationship between the French and
+% Algerian states.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

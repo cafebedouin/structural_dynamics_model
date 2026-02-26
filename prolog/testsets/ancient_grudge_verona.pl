@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: ancient_grudge_verona
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
-% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
-% Status: [ACTIVE]
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-22
 % ============================================================================
 
 :- module(constraint_ancient_grudge_verona, []).
@@ -12,19 +11,6 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
-
-% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
-% Each constraint story must have a single, stable base extractiveness (ε).
-% If changing the observable used to evaluate this constraint would change ε,
-% you are looking at two distinct constraints. Write separate .pl files for
-% each, link them with affects_constraint/2, and document the relationship
-% in both files' narrative context sections.
-%
-% The context tuple is CLOSED at arity 4: (P, T, E, S).
-% Do not add measurement_basis, beneficiary/victim, or any other arguments.
-% Linter Rule 23 enforces context/4.
-%
-% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -41,8 +27,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -52,101 +38,103 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: ancient_grudge_verona
- *   human_readable: The Montague-Capulet Feud
- *   domain: social/political
- *
- * SUMMARY:
- *   The 'ancient grudge' between the houses of Montague and Capulet is a
- *   transgenerational social constraint that mandates conflict and suppresses
- *   affiliation in Renaissance Verona. Its origins are forgotten, but its
- *   enforcement is immediate and lethal, structuring social life around
- *   arbitrary enmity. The feud functions as a powerful, self-perpetuating
- *   cycle of violence that ultimately consumes its own children,
- *   demonstrating how a social construct can attain the force of a natural
- *   law for those trapped within it.
- *
- * KEY AGENTS:
- *   - Younger Generation (Romeo, Juliet, Tybalt): Primary victims and enforcers (powerless/moderate, trapped/constrained)
- *   - Family Patriarchs (Lords Montague & Capulet): Primary beneficiaries of the honor system (institutional/arbitrage)
- *   - The Prince of Verona: Institutional authority whose power is undermined by the feud (institutional/constrained)
- *   - Friar Laurence: External organized agent attempting to build a temporary resolution (organized/constrained)
- *   - Citizens of Verona: Collateral victims of the public violence (powerless/trapped)
+ * * constraint_id: ancient_grudge_verona
+ * human_readable: The Montague-Capulet Feud
+ * domain: social/political
+ * * SUMMARY:
+ * An inherited, transgenerational conflict ("ancient grudge") that mandates
+ * spontaneous violence between two noble houses in Renaissance Verona. This
+ * constraint overrides civil law and personal desire, functioning as the
+ * primary filter for all social interaction and ultimately extracting the
+ * lives of the houses' heirs.
+ * * KEY AGENTS:
+ * - Romeo & Juliet: Subjects (Powerless), whose lives are entirely circumscribed by the feud.
+ * - Tybalt & Lord Capulet: Beneficiaries (Powerful/Institutional), who enforce the feud to maintain household honor and identity.
+ * - Prince Escalus & Friar Lawrence: Auditors (Institutional/Analytical), who attempt to manage or resolve the feud from outside its core logic.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% --- Numerical metrics ---
-domain_priors:base_extractiveness(ancient_grudge_verona, 0.75).
-domain_priors:suppression_score(ancient_grudge_verona, 0.8).
-domain_priors:theater_ratio(ancient_grudge_verona, 0.75).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ancient_grudge_verona, 0.80). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(ancient_grudge_verona, 0.70).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+domain_priors:theater_ratio(ancient_grudge_verona, 0.65).       % Piton detection (>= 0.70)
 
-% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ancient_grudge_verona, extractiveness, 0.75).
-narrative_ontology:constraint_metric(ancient_grudge_verona, suppression_requirement, 0.8).
-narrative_ontology:constraint_metric(ancient_grudge_verona, theater_ratio, 0.75).
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(ancient_grudge_verona, extractiveness, 0.80).
+narrative_ontology:constraint_metric(ancient_grudge_verona, suppression_requirement, 0.70).
+narrative_ontology:constraint_metric(ancient_grudge_verona, theater_ratio, 0.65).
 
-% --- Constraint claim ---
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+% The feud is presented by its participants as an unchangeable, natural fact of their world.
 narrative_ontology:constraint_claim(ancient_grudge_verona, tangled_rope).
 narrative_ontology:human_readable(ancient_grudge_verona, "The Montague-Capulet Feud").
 narrative_ontology:topic_domain(ancient_grudge_verona, "social/political").
 
-domain_priors:requires_active_enforcement(ancient_grudge_verona).
+% Binary flags
+domain_priors:requires_active_enforcement(ancient_grudge_verona). % Required for Tangled Rope
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(ancient_grudge_verona, family_patriarchs).
-narrative_ontology:constraint_beneficiary(ancient_grudge_verona, concept_of_familial_honor).
-narrative_ontology:constraint_victim(ancient_grudge_verona, younger_generation_members).
-narrative_ontology:constraint_victim(ancient_grudge_verona, citizens_of_verona).
-narrative_ontology:constraint_victim(ancient_grudge_verona, the_princes_authority).
+% Structural property derivation hooks:
+%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+% Both are required for Tangled Rope.
+narrative_ontology:constraint_beneficiary(ancient_grudge_verona, veronese_noble_houses).
+narrative_ontology:constraint_victim(ancient_grudge_verona, house_heirs).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE LOVERS (SNARE) — For Romeo and Juliet, the feud is a pure extraction mechanism. They are trapped by their family identities, and any attempt to build an alternative life is suppressed, leading directly to their deaths. The constraint extracts their future, their love, and their lives. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.85.
+% PERSPECTIVE 1: THE SUBJECT (ROMEO & JULIET) - MOUNTAIN
+% From their perspective, the feud is an immutable law of nature, a "star-crossed"
+% fate they cannot escape. The high extraction feels absolute.
+% χ = 0.80 * π(powerless:1.5) * σ(regional:0.9) = 1.08
 constraint_indexing:constraint_classification(ancient_grudge_verona, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 2: THE ENFORCER (TYBALT) - TANGLED ROPE
+% For an enforcer like Tybalt, the feud is a coordination mechanism for honor
+% and identity (Rope aspect) that also requires violent enforcement and produces
+% victims (Snare aspect). He is a willing participant.
+% χ = 0.80 * π(powerful:0.6) * σ(local:0.8) = 0.384
+constraint_indexing:constraint_classification(ancient_grudge_verona, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(local))).
 
-% PERSPECTIVE 2: THE PATRIARCHS (ROPE) — From the perspective of the heads of house, the feud functions as a costly but effective coordination mechanism. It enforces in-group loyalty, solidifies family identity against an external other, and provides a framework for maintaining honor. They possess the agency to escalate or de-escalate (arbitrage), externalizing the costs onto the younger generation. d≈0.05, f(d)≈-0.12, σ=0.8 → χ≈-0.07. Negative extraction indicates a net perceived benefit.
+% PERSPECTIVE 3: THE SOVEREIGN (PRINCE ESCALUS) - SNARE
+% From the perspective of the state, the feud is a purely destructive, coercive
+% trap that undermines civil order and extracts the lives of his subjects. It has
+% no redeeming coordination value for the city as a whole.
+% χ = 0.80 * π(institutional:-0.2) * σ(regional:0.9) = -0.144 (a net cost)
 constraint_indexing:constraint_classification(ancient_grudge_verona, rope,
     context(agent_power(institutional),
             time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(local))).
-
-% PERSPECTIVE 3: THE LOYAL KINSMAN (TANGLED ROPE) — For an agent like Tybalt, the feud is both a source of identity (coordination) and a mandate for violence (extraction). He is constrained to participate to uphold his honor, but also actively enforces the feud's rules. He experiences both its cohesive and destructive functions simultaneously. d≈0.55, f(d)≈0.75, σ=0.8 → χ≈0.45.
-constraint_indexing:constraint_classification(ancient_grudge_verona, tangled_rope,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(local))).
-
-% PERSPECTIVE 4: THE PRINCE (PITON) — The Prince sees the feud as a degraded institution. Its original purpose is forgotten ('ancient grudge'), and it now functions primarily as performative, pointless violence that undermines his authority and civil peace. The high theater_ratio (0.75) and its persistence despite his decrees mark it as a Piton—a system maintained by institutional inertia within the families, not by any remaining legitimate function. His exit is constrained; he cannot abandon his city.
-constraint_indexing:constraint_classification(ancient_grudge_verona, piton,
-    context(agent_power(institutional),
-            time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(regional))).
 
-% PERSPECTIVE 5: THE FRIAR (SCAFFOLD) — Friar Laurence attempts to construct a temporary solution to bypass the feud. His plan—the secret marriage, the sleeping potion—is a scaffold designed to support Romeo and Juliet until the feud can be resolved and the structure dismantled. It has a clear, if tragic, sunset clause. He acts as an organized agent trying to build a temporary bridge over a structural conflict.
-constraint_indexing:constraint_classification(ancient_grudge_verona, scaffold,
-    context(agent_power(organized),
-            time_horizon(immediate),
-            exit_options(constrained),
-            spatial_scope(local))).
-
-% PERSPECTIVE 6: THE TRAGIC THEORIST (MOUNTAIN) — A detached, civilizational observer might frame the feud as an immutable law of human tribalism or a tragic flaw inherent to social structures. This perspective naturalizes the conflict, viewing it as an unchangeable feature of the human condition. The engine will flag this as a false summit, as the feud is a contingent social construct, not a physical law, evidenced by its eventual resolution.
-constraint_indexing:constraint_classification(ancient_grudge_verona, mountain,
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER - TANGLED ROPE
+% The analytical view recognizes both the genuine coordination function (household
+% identity, honor) and the highly coercive, asymmetric extraction (death of heirs).
+% This dual nature is the definition of a Tangled Rope.
+% χ = 0.80 * π(analytical:1.15) * σ(global:1.2) = 1.104
+constraint_indexing:constraint_classification(ancient_grudge_verona, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(universal))).
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -154,18 +142,22 @@ constraint_indexing:constraint_classification(ancient_grudge_verona, mountain,
 
 :- begin_tests(ancient_grudge_verona_tests).
 
-test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(ancient_grudge_verona, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ancient_grudge_verona, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+test(perspectival_gap_subject_vs_enforcer) :-
+    % Verify the gap between the powerless victims (Mountain) and powerful enforcers (Tangled Rope).
+    constraint_indexing:constraint_classification(ancient_grudge_verona, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ancient_grudge_verona, tangled_rope, context(agent_power(powerful), _, _, _)),
+    constraint_indexing:constraint_classification(ancient_grudge_verona, rope, context(agent_power(institutional), _, _, _)).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(ancient_grudge_verona, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(threshold_validation_high_extraction) :-
+    % This constraint must be classified as high-extraction.
+    narrative_ontology:constraint_metric(ancient_grudge_verona, extractiveness, E),
+    E >= 0.46.
 
-test(piton_threshold) :-
-    domain_priors:theater_ratio(ancient_grudge_verona, TR),
-    TR >= 0.70.
+test(tangled_rope_structural_requirements) :-
+    % Verify that the necessary structural properties for a Tangled Rope are declared.
+    domain_priors:requires_active_enforcement(ancient_grudge_verona),
+    narrative_ontology:constraint_beneficiary(ancient_grudge_verona, _),
+    narrative_ontology:constraint_victim(ancient_grudge_verona, _).
 
 :- end_tests(ancient_grudge_verona_tests).
 
@@ -175,75 +167,85 @@ test(piton_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.75) is severe, as the feud directly extracts lives, happiness, and the future of the next generation. Suppression (0.80) is extremely high; the social cost of defying the feud is total ostracization or death, leaving no viable alternatives for members of the houses. Theater Ratio (0.75) is high because the original grievance is lost to time, and the conflict persists as a series of performative honor-defenses and public brawls rather than a dispute over a tangible resource.
+ * The base extractiveness of 0.80 represents the total capture of biological
+ * surplus (the lives of the heirs) by the transgenerational feud. The high
+ * suppression score of 0.70 reflects the lack of viable alternatives; any
+ * attempt at peace or reconciliation is actively suppressed by enforcers like
+ * Tybalt.
  *
- * PERSPECTIVAL GAP:
- *   The feud is a diagnostic exemplar. For the lovers, it is a pure Snare, trapping and killing them. For the patriarchs, it is a Rope of social coordination, enforcing loyalty. For Tybalt, it is a Tangled Rope, a source of both identity and fatal obligation. For the Prince, it is a Piton, a decayed and functionless ritual of violence he cannot stop. For Friar Laurence, it is a problem to be solved with a temporary Scaffold. For a distant observer, it can be misread as a Mountain of human nature. The vast gap between these perspectives, all derived from the same base metrics, reveals the indexical nature of the classification system.
+ * The Perspectival Gap is profound:
+ * - For Romeo and Juliet (powerless), the feud is an inescapable Mountain of fate.
+ * - For Tybalt (powerful), it's a Tangled Rope of honor coordination and violent enforcement.
+ * - For Prince Escalus (institutional), it's a Snare that destroys civic peace.
  *
- * DIRECTIONALITY LOGIC:
- *   The beneficiaries are the abstract concept of 'honor' and the patriarchs who are its stewards; they experience the feud as a tool for maintaining social order and identity, giving them a low directionality (d). The victims are the younger generation and the city's populace, who bear the full, lethal costs of the conflict, giving them a high directionality (d). This asymmetry is the core engine of the tragedy.
+ * This divergence prevents a monolithic classification and reveals the constraint's
+ * complex social function.
  *
- * MANDATROPHY ANALYSIS:
- *   This constraint resolves the mandatrophy by demonstrating that a single, highly extractive phenomenon can legitimately occupy all six classifications depending on the observer's structural position. The 'correct' classification is the full set of perspectives. Labeling the feud as only a 'Snare' would miss its function as a 'Rope' for the patriarchs, and labeling it only a 'Rope' would erase the lethal extraction experienced by the youth. The system correctly models this complex reality without collapsing it to a single, inadequate label.
+ * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * The high extraction (0.80) could be misread as a pure Snare (Mandatrophy).
+ * However, the Tangled Rope classification from the analytical and enforcer
+ * perspectives correctly identifies that the feud possesses a genuine, albeit
+ * destructive, coordination function: the maintenance of household identity and
+ * honor. This coordination is what gives the constraint its stability and
+ * prevents it from being a simple predatory trap. The system is predatory, but
+ * its persistence is owed to its coordination role for the beneficiaries.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    origin_of_grudge,
-    'What was the original cause of the ''ancient grudge''?',
-    'Historical/textual analysis to determine if the feud began from a material dispute (e.g., land, wealth) versus a symbolic one (e.g., honor, insult).',
-    'A material origin would suggest a more rational, though prolonged, Tangled Rope. A purely symbolic and forgotten origin reinforces the Piton classification, where the function has completely atrophied into theater.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(origin_of_grudge, conceptual, 'Whether the feud''s origin was material or purely symbolic').
-
-omega_variable(
-    princes_power_limit,
-    'Was the Prince''s inability to stop the feud a failure of political will or a structural lack of enforcement power against noble houses?',
-    'Analysis of the political structure of Renaissance Verona to determine the actual balance of power between the Prince and the major families.',
-    'If the Prince had the power but not the will, the feud is a Snare maintained by elite impunity. If he structurally lacked the power, the feud itself acts as a competing sovereign, closer to a Mountain of local politics.',
+    omega_ancient_grudge_verona_1,
+    'Is the feud a Mountain of ingrained human tribalism or a constructed Snare that could have been dismantled by effective governance?',
+    'Comparative historical analysis of other Renaissance city-states that successfully suppressed noble feuds.',
+    'If Mountain, the tragedy is inevitable. If Snare, the tragedy is a failure of the Prince''s policy.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(princes_power_limit, empirical, 'The structural limit of the Prince''s authority vs noble power').
-
+omega_variable(
+    omega_ancient_grudge_verona_2,
+    'Is the 0.80 extraction a functional necessity for household sovereignty in a weak state, or a performative choice for tribal ego?',
+    'Audit of household resource allocation vs. peace mediation efforts in the historical record.',
+    'If necessity, the feud has a stronger coordination claim. If performative, it is closer to a pure Snare.',
+    confidence_without_resolution(low)
+).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ancient_grudge_verona, 0, 100).
+% Required for external script parsing
+narrative_ontology:interval(ancient_grudge_verona, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(anci_tr_t0, ancient_grudge_verona, theater_ratio, 0, 0.3).
-narrative_ontology:measurement(anci_tr_t50, ancient_grudge_verona, theater_ratio, 50, 0.6).
-narrative_ontology:measurement(anci_tr_t100, ancient_grudge_verona, theater_ratio, 100, 0.75).
+% Temporal data enables drift detection (metric_substitution,
+% extraction_accumulation) by providing measurements at multiple time points.
+% Required for high-extraction constraints (base_extractiveness > 0.46).
 
-% Extraction over time
-narrative_ontology:measurement(anci_be_t0, ancient_grudge_verona, base_extractiveness, 0, 0.6).
-narrative_ontology:measurement(anci_be_t50, ancient_grudge_verona, base_extractiveness, 50, 0.7).
-narrative_ontology:measurement(anci_be_t100, ancient_grudge_verona, base_extractiveness, 100, 0.75).
+% Theater ratio: Rising from functional household defense (0.20) to
+% inertial "Honor Theater" (0.65) that mandates lethal brawls over trivial insults.
+narrative_ontology:measurement(feud_tr_t0, ancient_grudge_verona, theater_ratio, 0, 0.20).
+narrative_ontology:measurement(feud_tr_t5, ancient_grudge_verona, theater_ratio, 5, 0.45).
+narrative_ontology:measurement(feud_tr_t10, ancient_grudge_verona, theater_ratio, 10, 0.65).
 
+% Extraction: Progressive liquidation of the "fatal loins" (heirs) as the
+% "new mutiny" escalates from civil brawls to total biological extraction.
+narrative_ontology:measurement(feud_ex_t0, ancient_grudge_verona, base_extractiveness, 0, 0.30).
+narrative_ontology:measurement(feud_ex_t5, ancient_grudge_verona, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(feud_ex_t10, ancient_grudge_verona, base_extractiveness, 10, 0.80).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
    ========================================================================== */
 
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The feud functions as a mechanism to enforce tribal honor and identity.
 narrative_ontology:coordination_type(ancient_grudge_verona, enforcement_mechanism).
-narrative_ontology:affects_constraint(ancient_grudge_verona, veronese_civil_order).
-narrative_ontology:affects_constraint(ancient_grudge_verona, patriarchal_marriage_contracts).
-
-/* ==========================================================================
-   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
-   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

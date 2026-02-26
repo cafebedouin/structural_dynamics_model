@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: adversarial_truth_decay
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
-% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
-% Status: [ACTIVE]
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-05-22
 % ============================================================================
 
 :- module(constraint_adversarial_truth_decay, []).
@@ -12,19 +11,6 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
-
-% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
-% Each constraint story must have a single, stable base extractiveness (ε).
-% If changing the observable used to evaluate this constraint would change ε,
-% you are looking at two distinct constraints. Write separate .pl files for
-% each, link them with affects_constraint/2, and document the relationship
-% in both files' narrative context sections.
-%
-% The context tuple is CLOSED at arity 4: (P, T, E, S).
-% Do not add measurement_basis, beneficiary/victim, or any other arguments.
-% Linter Rule 23 enforces context/4.
-%
-% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -41,10 +27,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,101 +39,91 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: adversarial_truth_decay
- *   human_readable: The Epistemic Siege
- *   domain: social/technological/political
- *
- * SUMMARY:
- *   The 'Epistemic Siege' describes a structural reality where the cost to
- *   generate high-fidelity, synthetic misinformation has fallen below the
- *   cost to verify information. This fundamental economic asymmetry creates a
- *   powerful new vector for social manipulation, eroding the shared factual
- *   basis required for functional democracies and social trust. The
- *   constraint is not the AI technology itself, but the cost imbalance it
- *   creates, which can be weaponized at scale.
- *
- * KEY AGENTS:
- *   - Disinformation Creators: Primary beneficiaries (organized/arbitrage) - Exploit the low cost to generate influence.
- *   - General Public: Primary victims (powerless/trapped) - Bear the cognitive and social costs of a polluted information environment.
- *   - Social Media Platforms: Institutional actors (institutional/arbitrage) - Maintain a performative moderation system while benefiting from engagement.
- *   - Fact-Checkers & Journalists: Secondary victims (moderate/constrained) - Face unsustainable costs in their mission to verify truth.
- *   - AI Tool Creators: Institutional beneficiaries (institutional/arbitrage) - Frame the crisis as a temporary, solvable problem (a scaffold).
- *   - Democratic Institutions: Abstract victim (powerless/trapped) - The epistemic commons on which they depend is degraded.
+ * * constraint_id: adversarial_truth_decay
+ * human_readable: The Epistemic Siege
+ * domain: social/technological/political
+ * * SUMMARY:
+ * A scenario where the cost of generating high-fidelity misinformation via
+ * generative AI is significantly lower than the cost of verifying truth. This
+ * "Rope" for adversarial actors to coordinate influence operations becomes
+ * a "Snare" for the public, liquidating the shared informational commons
+ * and forcing subjects into a state of low-trust paralysis where
+ * collective action is impossible.
+ * * KEY AGENTS:
+ * - Information Consumer: Subject (Powerless)
+ * - Influence Architect: Beneficiary (Institutional)
+ * - Epistemic Auditor: Auditor (Analytical)
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% --- Numerical metrics ---
-domain_priors:base_extractiveness(adversarial_truth_decay, 0.75).
-domain_priors:suppression_score(adversarial_truth_decay, 0.8).
-domain_priors:theater_ratio(adversarial_truth_decay, 0.75).
+% High extraction (0.89) because the decay liquidates the subject's ability
+% to make informed decisions, siphoning their cognitive autonomy into
+% a managed reality controlled by the highest-volume producer.
+domain_priors:base_extractiveness(adversarial_truth_decay, 0.89).
+domain_priors:suppression_score(adversarial_truth_decay, 0.78). % High suppression: factual alternatives are drowned out.
+domain_priors:theater_ratio(adversarial_truth_decay, 0.94).    % Extreme theater: "fact-checking" rituals that lack the velocity to catch up.
 
-% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(adversarial_truth_decay, extractiveness, 0.75).
-narrative_ontology:constraint_metric(adversarial_truth_decay, suppression_requirement, 0.8).
-narrative_ontology:constraint_metric(adversarial_truth_decay, theater_ratio, 0.75).
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(adversarial_truth_decay, extractiveness, 0.89).
+narrative_ontology:constraint_metric(adversarial_truth_decay, suppression_requirement, 0.78).
+narrative_ontology:constraint_metric(adversarial_truth_decay, theater_ratio, 0.94).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(adversarial_truth_decay, tangled_rope).
+% Constraint self-claim (what does the constraint claim to be?)
+% The architects claim it's a coordination tool for sentiment, hiding its extractive nature.
+narrative_ontology:constraint_claim(adversarial_truth_decay, piton).
 narrative_ontology:human_readable(adversarial_truth_decay, "The Epistemic Siege").
 narrative_ontology:topic_domain(adversarial_truth_decay, "social/technological/political").
 
-domain_priors:requires_active_enforcement(adversarial_truth_decay).
-narrative_ontology:has_sunset_clause(adversarial_truth_decay).
-
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(adversarial_truth_decay, disinformation_creators).
-narrative_ontology:constraint_beneficiary(adversarial_truth_decay, platform_shareholders).
-narrative_ontology:constraint_victim(adversarial_truth_decay, general_public).
-narrative_ontology:constraint_victim(adversarial_truth_decay, democratic_institutions).
-narrative_ontology:constraint_victim(adversarial_truth_decay, professional_journalists).
+% Binary flags and structural properties for Tangled Rope classification.
+domain_priors:requires_active_enforcement(adversarial_truth_decay). % The information flood is an active enforcement mechanism.
+narrative_ontology:constraint_beneficiary(adversarial_truth_decay, influence_architects).
+narrative_ontology:constraint_victim(adversarial_truth_decay, information_consumers).
+narrative_ontology:coordination_vitality(adversarial_truth_decay, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PUBLIC (SNARE) — Trapped in an information ecosystem where the cost of verification is offloaded onto them. The sheer volume of high-fidelity falsehoods acts as a coercive force, eroding trust and the ability to make informed decisions. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.28 (capped at 1.0). This is a maximal extraction scenario.
-constraint_indexing:constraint_classification(adversarial_truth_decay, snare,
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The consumer is trapped: verifying every piece of data is biologically
+% impossible, yet acting on unverified data is increasingly dangerous.
+constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(global))).
-
-% PERSPECTIVE 2: DISINFORMATION CREATOR (ROPE) — For malicious actors, generative AI is a pure coordination tool. It dramatically lowers the cost of influence operations, enabling them to achieve political or financial goals with unprecedented efficiency. They experience no extraction. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.01. Negative effective extraction signifies a net subsidy.
-constraint_indexing:constraint_classification(adversarial_truth_decay, rope,
-    context(agent_power(organized),
-            time_horizon(immediate),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE FACT-CHECKER (TANGLED ROPE) — Experiences the dual nature of the technology. AI tools can aid in research (coordination), but the firehose of AI-generated falsehoods makes their primary job nearly impossible (extraction). They are constrained to operate within this hostile environment. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.86. This high chi value reflects the severe extractive pressure on their work.
-constraint_indexing:constraint_classification(adversarial_truth_decay, tangled_rope,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE AI DEVELOPER (SCAFFOLD) — Views the current epistemic crisis as a temporary, transitional phase. They argue that better detection tools and new social norms will eventually emerge, creating a 'sunset' for the current problem. This perspective frames the technology as a scaffold for a new, more advanced information infrastructure. The `has_sunset_clause` is based on this claimed technological and social evolution.
-constraint_indexing:constraint_classification(adversarial_truth_decay, scaffold,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 5: THE PLATFORM (PITON) — The platform's content moderation and AI detection systems are largely performative. Given the cost asymmetry, they cannot possibly vet all content. Their efforts persist due to regulatory pressure and PR concerns, not because they solve the underlying problem. The high theater_ratio (0.75) triggers the Piton classification, reflecting a system whose primary function (ensuring information quality) has atrophied.
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% The architect views the decay as a Rope—the most efficient way to
+% coordinate mass sentiment and suppress counter-narratives without
+% the friction of traditional censorship.
 constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
     context(agent_power(institutional),
-            time_horizon(immediate),
-            exit_options(arbitrage),
+            time_horizon(generational),
+            exit_options(mobile),
             spatial_scope(global))).
 
-% PERSPECTIVE 6: THE DETERMINIST (MOUNTAIN) — Argues that major technological shifts (like the printing press) inevitably cause periods of epistemic chaos. This view naturalizes the crisis as an unchangeable law of technological progress. The engine will identify this as a false summit, as the high ε, high suppression, and active enforcement are hallmarks of a contingent, artificial system, not a natural law.
-constraint_indexing:constraint_classification(adversarial_truth_decay, mountain,
+% PERSPECTIVE 3: THE SYSTEMS AUDITOR (PITON)
+% Theater ratio (0.94) > 0.70 triggers Piton: "Truth-verification"
+% protocols are an inertial spike; they provide the optics of security
+% without the functional capacity to resolve the flood.
+constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
+    context(agent_power(analytical),
+            time_horizon(historical),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Detects the hybrid nature: a coordination function for architects that
+% relies on asymmetric extraction from consumers, requiring active enforcement.
+constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
-            exit_options(analytical),
+            exit_options(arbitrage),
             spatial_scope(universal))).
 
 /* ==========================================================================
@@ -156,17 +133,24 @@ constraint_indexing:constraint_classification(adversarial_truth_decay, mountain,
 :- begin_tests(adversarial_truth_decay_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(adversarial_truth_decay, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(adversarial_truth_decay, TypeOther, context(agent_power(organized), _, _, _)),
-    TypePowerless \= TypeOther.
+    % Verify Snare for the subject vs Rope for the institutional architect.
+    constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
+        context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
+        context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
+        context(agent_power(analytical), _, _, _)).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(adversarial_truth_decay, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(piton_trigger) :-
+    % Ensure extreme theater (0.94) correctly triggers the Piton classification.
+    domain_priors:theater_ratio(adversarial_truth_decay, TR), TR > 0.70,
+    constraint_indexing:constraint_classification(adversarial_truth_decay, piton,
+        context(agent_power(analytical), _, _, _)).
 
-test(piton_threshold) :-
-    domain_priors:theater_ratio(adversarial_truth_decay, TR),
-    TR >= 0.70.
+test(threshold_validation) :-
+    % Ensure high extraction (0.89) is consistent with Snare/Tangled Rope.
+    narrative_ontology:constraint_metric(adversarial_truth_decay, extractiveness, E),
+    E >= 0.46.
 
 :- end_tests(adversarial_truth_decay_tests).
 
@@ -176,86 +160,78 @@ test(piton_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.75) is very high, representing the massive offloading of verification costs onto society and individuals. Suppression (0.80) is also very high; the sheer volume of falsehoods effectively suppresses truth through noise, a 'firehose of falsehood' strategy that makes finding reliable information exceptionally difficult. Theater Ratio (0.75) is high because platform-level interventions (content moderation, AI detectors) are largely performative; they address symptoms at the margins without altering the core cost asymmetry, thus creating an illusion of control.
+ * The extraction score (0.89) reflects a "Mandatrophy" state where the
+ * "coordination" of social consensus is achieved by liquidating the
+ * subject's access to reality. The high theater ratio (0.94) represents
+ * the performative, but ineffective, nature of mainstream fact-checking
+ * initiatives that cannot keep pace with generative adversarial content.
  *
- * PERSPECTIVAL GAP:
- *   This constraint is a diagnostic exemplar, producing all six classifications from a single set of base properties. For the powerless public, it's a Snare. For the malicious creator, it's a Rope. For the overwhelmed fact-checker, it's a Tangled Rope. For the optimistic AI developer, it's a Scaffold. For the platform maintaining appearances, it's a Piton. For the determinist who naturalizes the chaos, it's a Mountain. The gap reveals that the 'nature' of the constraint is entirely dependent on one's structural relationship to the underlying cost asymmetry.
+ * * PERSPECTIVAL GAP:
+ * The Information Consumer feels a Snare because their cognitive environment
+ * is weaponized against them. The Influence Architect sees a Rope because
+ * the decay coordinates the dissolution of opposition and the
+ * consolidation of attention. The Analytical Observer sees a Tangled Rope,
+ * recognizing both the coordination function and the severe asymmetric extraction.
  *
- * DIRECTIONALITY LOGIC:
- *   Beneficiaries (disinformation creators) have arbitrage exit and low structural costs, leading to a negative chi (Rope). Primary victims (the public) are trapped with no exit, leading to a maximal chi (Snare). Constrained actors (journalists) face high costs but have some agency, resulting in a high-but-not-maximal chi (Tangled Rope). The classification for institutional actors like platforms and AI developers is determined by other gates: the high theater_ratio for platforms makes it a Piton, while the claimed sunset clause for developers makes it a Scaffold.
- *
- * MANDATROPHY ANALYSIS:
- *   This story resolves the mandatrophy by demonstrating that a single, severe constraint (ε=0.75) is not monolithically a 'Snare'. Its classification is a function of the observer's index. The analytical error is to pick one perspective (usually the victim's Snare or the beneficiary's Rope) and declare it the 'true' type. The Deferential Realism model shows that all six perspectives are structurally valid readings of the same underlying reality. The complete description is the full set of indexed classifications, not any single one.
+ * * [RESOLVED MANDATROPHY]:
+ * The Mandatrophy is resolved by the Tangled Rope classification. This prevents
+ * the system from misclassifying the constraint as a pure Snare (ignoring its
+ * coordination function for beneficiaries) or a pure Rope (ignoring the
+ * devastating extraction from victims). The Piton classification from a
+ * different analytical lens further clarifies the situation by highlighting
+ * the failure of institutional countermeasures.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Required for high-extraction constraints (> 0.46).
 omega_variable(
-    detection_scaling_parity,
-    'Can AI-driven verification and detection tools ever achieve cost and scale parity with AI-driven generation tools?',
-    'Economic and performance analysis of red-teaming vs. blue-teaming AI models; tracking the marginal cost of detection vs. generation over time.',
-    'If parity is possible, the constraint could evolve into a Rope (an arms race with symmetric costs). If not, it remains a Snare for the public.',
+    omega_epistemic_velocity,
+    'Can verification speed ever match generation speed (Snare vs Mountain)?',
+    'Tracking the delta between "misinformation release" and "effective debunk penetration" over time.',
+    'If delta is fixed: Mountain of Information Theory. If delta can shrink: Snare of current tech.',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(detection_scaling_parity, empirical, 'Whether detection can ever scale as cheaply as generation').
-
-omega_variable(
-    cognitive_adaptation_rate,
-    'Will human populations develop cognitive ''antibodies'' and new media literacy heuristics faster than generative models can adapt to circumvent them?',
-    'Longitudinal studies of media consumption habits, belief formation, and susceptibility to misinformation in high-exposure populations.',
-    'Rapid adaptation would lower the effective extractiveness (ε). Slow or no adaptation means ε remains high.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(cognitive_adaptation_rate, empirical, 'The rate of human cognitive adaptation to AI misinformation').
-
-omega_variable(
-    regulatory_effectiveness,
-    'What level of platform regulation (e.g., watermarking, liability shifts) can effectively mitigate harm without causing unacceptable censorship or chilling effects?',
-    'Comparative policy analysis of different regulatory regimes implemented globally.',
-    'Effective regulation could increase suppression for malicious actors and lower it for the public, fundamentally altering the constraint''s structure. Ineffective regulation could increase theater.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(regulatory_effectiveness, preference, 'The impact and trade-offs of different regulatory interventions').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(adversarial_truth_decay, 2020, 2030).
+% Required for external script parsing
+narrative_ontology:interval(adversarial_truth_decay, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(adve_tr_t0, adversarial_truth_decay, theater_ratio, 0, 0.4).
-narrative_ontology:measurement(adve_tr_t5, adversarial_truth_decay, theater_ratio, 5, 0.6).
-narrative_ontology:measurement(adve_tr_t10, adversarial_truth_decay, theater_ratio, 10, 0.75).
+% Temporal data enables drift detection (metric_substitution,
+% extraction_accumulation) by providing measurements at multiple time points.
+% T=0: Pre-AI era, modest theater. T=5: Early deepfake era. T=10: Current state.
 
-% Extraction over time
-narrative_ontology:measurement(adve_be_t0, adversarial_truth_decay, base_extractiveness, 0, 0.3).
-narrative_ontology:measurement(adve_be_t5, adversarial_truth_decay, base_extractiveness, 5, 0.65).
-narrative_ontology:measurement(adve_be_t10, adversarial_truth_decay, base_extractiveness, 10, 0.75).
+% Theater ratio rising: "fact-checking" theater intensifying over time.
+narrative_ontology:measurement(adversarial_truth_decay_tr_t0, adversarial_truth_decay, theater_ratio, 0, 0.40).
+narrative_ontology:measurement(adversarial_truth_decay_tr_t5, adversarial_truth_decay, theater_ratio, 5, 0.70).
+narrative_ontology:measurement(adversarial_truth_decay_tr_t10, adversarial_truth_decay, theater_ratio, 10, 0.94).
 
+% Extraction rising: information commons being progressively liquidated.
+narrative_ontology:measurement(adversarial_truth_decay_ex_t0, adversarial_truth_decay, base_extractiveness, 0, 0.50).
+narrative_ontology:measurement(adversarial_truth_decay_ex_t5, adversarial_truth_decay, base_extractiveness, 5, 0.72).
+narrative_ontology:measurement(adversarial_truth_decay_ex_t10, adversarial_truth_decay, base_extractiveness, 10, 0.89).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
    ========================================================================== */
 
-narrative_ontology:coordination_type(adversarial_truth_decay, information_standard).
+% The coordination type is an enforcement mechanism: it enforces a desired
+% narrative by making alternatives prohibitively expensive to find and verify.
+narrative_ontology:coordination_type(adversarial_truth_decay, enforcement_mechanism).
+
+% This constraint directly degrades the informational foundations required
+% for other political and social constraints to function.
 narrative_ontology:affects_constraint(adversarial_truth_decay, electoral_integrity).
 narrative_ontology:affects_constraint(adversarial_truth_decay, public_health_compliance).
-narrative_ontology:affects_constraint(adversarial_truth_decay, financial_market_stability).
-
-/* ==========================================================================
-   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
-   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

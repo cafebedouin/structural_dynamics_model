@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: attention_market_cannibalization
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
-% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
-% Status: [ACTIVE]
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2026-01-28
 % ============================================================================
 
 :- module(constraint_attention_market_cannibalization, []).
@@ -12,19 +11,6 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
-
-% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
-% Each constraint story must have a single, stable base extractiveness (ε).
-% If changing the observable used to evaluate this constraint would change ε,
-% you are looking at two distinct constraints. Write separate .pl files for
-% each, link them with affects_constraint/2, and document the relationship
-% in both files' narrative context sections.
-%
-% The context tuple is CLOSED at arity 4: (P, T, E, S).
-% Do not add measurement_basis, beneficiary/victim, or any other arguments.
-% Linter Rule 23 enforces context/4.
-%
-% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -41,8 +27,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -52,123 +38,132 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: attention_market_cannibalization
- *   human_readable: The Cognitive Exhaustion Loop
- *   domain: economic/psychological/technological
- *
- * SUMMARY:
- *   The Cognitive Exhaustion Loop describes a systemic process where digital
- *   platforms, competing in a finite attention market, progressively
- *   'cannibalize' the cognitive resources of their users. This is driven by
- *   business models that equate engagement with revenue. The result is a
- *   negative feedback loop: as users become more cognitively depleted, their
- *   ability to self-regulate diminishes, making them more susceptible to the
- *   platforms' engagement tactics, thus deepening the exhaustion. This
- *   constraint story models the structural reality of this loop, which
- *   manifests as all six constraint types depending on the observer's
- *   position.
- *
- * KEY AGENTS:
- *   - Individual Users: Primary victims (powerless/trapped) — their finite attention is the resource being extracted.
- *   - Platform Operators: Primary beneficiaries (institutional/arbitrage) — design and control the system to maximize engagement and revenue.
- *   - Advertisers: Secondary beneficiaries (organized/mobile) — purchase access to the extracted attention.
- *   - Digital Wellness Advocates: Organized resistance (organized/constrained) — attempt to create exit ramps through regulation and ethical design advocacy.
- *   - Legacy Media Institutions: Constrained participants (institutional/constrained) — forced to adopt the system's extractive logic to survive, degrading their original function.
- *   - Analytical Observer: The systemic view (analytical/analytical) — recognizes both the coordination and extraction functions.
+ * * constraint_id: attention_market_cannibalization
+ * human_readable: The Cognitive Exhaustion Loop
+ * domain: economic/psychological/technological
+ * * SUMMARY:
+ * A scenario where competing digital platforms optimize for "engagement" by
+ * siphoning more of a subject's finite attentional bandwidth than is
+ * required for the subject to maintain their primary life-functions (work,
+ * health, relationships). This coordination mechanism for content distribution
+ * becomes a "Snare" as the subject's long-term cognitive agency is
+ * liquidated to satisfy immediate algorithmic reward signals, trapping
+ * the user in a territory of terminal distraction where the cost of "opting
+ * out" is total social or economic exclusion.
+ * * KEY AGENTS:
+ * - Digital Participant: Subject (Powerless)
+ * - Attention Platform: Beneficiary (Institutional)
+ * - Neuro-Economic Auditor: Auditor (Analytical)
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% --- Numerical metrics ---
-domain_priors:base_extractiveness(attention_market_cannibalization, 0.65).
-domain_priors:suppression_score(attention_market_cannibalization, 0.75).
-domain_priors:theater_ratio(attention_market_cannibalization, 0.75).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(attention_market_cannibalization, 0.91). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(attention_market_cannibalization, 0.84).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+domain_priors:theater_ratio(attention_market_cannibalization, 0.88).       % Piton detection (>= 0.70)
 
-% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(attention_market_cannibalization, extractiveness, 0.65).
-narrative_ontology:constraint_metric(attention_market_cannibalization, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(attention_market_cannibalization, theater_ratio, 0.75).
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(attention_market_cannibalization, extractiveness, 0.91).
+narrative_ontology:constraint_metric(attention_market_cannibalization, suppression_requirement, 0.84).
+narrative_ontology:constraint_metric(attention_market_cannibalization, theater_ratio, 0.88).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(attention_market_cannibalization, tangled_rope).
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(attention_market_cannibalization, snare).
 narrative_ontology:human_readable(attention_market_cannibalization, "The Cognitive Exhaustion Loop").
 narrative_ontology:topic_domain(attention_market_cannibalization, "economic/psychological/technological").
 
-domain_priors:requires_active_enforcement(attention_market_cannibalization).
+% Binary flags
+domain_priors:requires_active_enforcement(attention_market_cannibalization). % Required for Tangled Rope
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(attention_market_cannibalization, platform_operators).
-narrative_ontology:constraint_beneficiary(attention_market_cannibalization, advertisers).
-narrative_ontology:constraint_victim(attention_market_cannibalization, individual_users).
+% Structural property derivation hooks:
+%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+% Both are required for Tangled Rope.
+narrative_ontology:constraint_beneficiary(attention_market_cannibalization, attention_platform).
+narrative_ontology:constraint_victim(attention_market_cannibalization, digital_participant).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: INDIVIDUAL USER (SNARE) — Trapped by network effects and addictive design. Experiences the system as pure extraction of cognitive resources, leading to burnout and diminished agency. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11.
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The participant is trapped: the "Rope" of connection liquidates their
+% capacity for sustained focus, making exit psychologically and socially impossible.
 constraint_indexing:constraint_classification(attention_market_cannibalization, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(global))).
+            spatial_scope(national))).
 
-% PERSPECTIVE 2: PLATFORM OPERATOR (ROPE) — Experiences the system as a pure coordination mechanism, connecting users, content creators, and advertisers. Extraction is framed as the price of service. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09.
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% The platform views the system as a Rope—the only way to coordinate
+% a global market for information and remain competitive.
 constraint_indexing:constraint_classification(attention_market_cannibalization, rope,
     context(agent_power(institutional),
-            time_horizon(immediate),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function and the severe, asymmetric extraction of attentional resources. This is the canonical classification. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90.
-constraint_indexing:constraint_classification(attention_market_cannibalization, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: DIGITAL WELLNESS ADVOCATE (SCAFFOLD) — Views the current system as a temporary, harmful state. Works to build alternatives through regulation and ethical design, creating a sunset clause for the extractive model. d≈0.40, f(d)≈0.40, σ=1.0 → χ≈0.26.
-constraint_indexing:constraint_classification(attention_market_cannibalization, scaffold,
-    context(agent_power(organized),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 5: LEGACY MEDIA INSTITUTION (PITON) — Forced to participate in the attention market, adopting clickbait tactics that degrade its core mission. Its engagement strategies are largely performative, chasing metrics while its original function atrophies. The high theater_ratio (0.75) triggers the Piton classification.
-constraint_indexing:constraint_classification(attention_market_cannibalization, piton,
-    context(agent_power(institutional),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 6: LIBERTARIAN TECHNOLOGIST (MOUNTAIN) — Frames the attention economy as an immutable, emergent law of free information exchange. Any attempt at regulation is seen as futile. The engine will flag this as a 'false summit' as the base properties (high ε, high suppression) contradict a Mountain classification.
-constraint_indexing:constraint_classification(attention_market_cannibalization, mountain,
-    context(agent_power(powerful),
             time_horizon(generational),
             exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Detects high extraction (0.91) and high suppression (0.84) masking as
+% essential coordination. The presence of beneficiaries, victims, and active
+% enforcement confirms the Tangled Rope classification.
+constraint_indexing:constraint_classification(attention_market_cannibalization, snare,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
             spatial_scope(universal))).
+
+% PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
+% The high theater ratio (0.88) triggers a Piton classification. The "Terms of Service"
+% agreement is an inertial spike; it performatively signals consent for a
+% process that has already bypassed biological agency.
+constraint_indexing:constraint_classification(attention_market_cannibalization, piton,
+    context(agent_power(analytical),
+            time_horizon(historical),
+            exit_options(analytical),
+            spatial_scope(global))) :-
+    domain_priors:theater_ratio(attention_market_cannibalization, TR), TR > 0.70.
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(attention_market_cannibalization_tests).
+:- begin_tests(attention_cannibalization_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(attention_market_cannibalization, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(attention_market_cannibalization, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+    % Verify Snare for the powerless participant vs Rope for the institutional platform.
+    constraint_indexing:constraint_classification(attention_market_cannibalization, snare,
+        context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(attention_market_cannibalization, rope,
+        context(agent_power(institutional), _, _, _)),
+    \+ constraint_indexing:constraint_classification(attention_market_cannibalization, rope,
+        context(agent_power(powerless), _, _, _)).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(attention_market_cannibalization, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
-
-test(piton_threshold) :-
+test(piton_trigger) :-
+    % Ensure high theater ratio (0.88) correctly triggers the Piton classification.
     domain_priors:theater_ratio(attention_market_cannibalization, TR),
-    TR >= 0.70.
+    TR > 0.70,
+    constraint_indexing:constraint_classification(attention_market_cannibalization, piton,
+        context(agent_power(analytical), _, _, _)).
 
-:- end_tests(attention_market_cannibalization_tests).
+test(snare_from_high_extraction) :-
+    % Verify that high base extraction (0.91) results in a Snare classification for the powerless.
+    domain_priors:base_extractiveness(attention_market_cannibalization, E),
+    E > 0.46,
+    constraint_indexing:constraint_classification(attention_market_cannibalization, snare,
+        context(agent_power(powerless), _, _, _)).
+
+:- end_tests(attention_cannibalization_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -176,84 +171,68 @@ test(piton_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.65): High. Represents the quantified cost of lost productivity, increased mental health burdens (anxiety, depression, ADHD-like symptoms), and degraded decision-making capacity imposed on users. Suppression (0.75): High. Network effects, social pressures, and intentionally addictive design patterns (e.g., infinite scroll, variable rewards) make opting out extremely costly. Theater Ratio (0.75): High. Reflects the rise of performative 'digital well-being' features (e.g., screen time reports) that signal concern without altering the core extractive business model. These features serve as public relations theater rather than functional solutions.
+ * The extraction score (0.91) is extremely high, reflecting a "Mandatrophy" state where the "coordination" benefit of information access is achieved by liquidating the subject's primary biological capacity for agency. The suppression score (0.84) represents the high psychological and social cost of opting out. The high theater ratio (0.88) reflects performative "Digital Wellbeing" features that mask the underlying extraction.
  *
- * PERSPECTIVAL GAP:
- *   This constraint is a diagnostic exemplar, showing how a single set of metrics produces all six classifications. For the user, it's a Snare. For the platform that built it, it's a Rope for coordinating advertisers and users. For advocates, it's a temporary Scaffold to be dismantled by regulation. For legacy media caught in the loop, it's a Piton—a degraded version of their original purpose. For a technologist who sees it as inevitable, it's a Mountain. The analytical observer, seeing all parts, classifies it as a Tangled Rope. The 'truth' of the constraint is the complete set of these perspectives.
+ * * PERSPECTIVAL GAP:
+ * The Digital Participant experiences a Snare because their "leisure" has become high-extraction labor they cannot stop. The Platform, however, views this as a Rope, as the total capture of attention is the only way to coordinate a legible and monetizable global social fabric and remain competitive.
  *
- * DIRECTIONALITY LOGIC:
- *   The directionality is starkly asymmetric. Beneficiaries (platform_operators, advertisers) have arbitrage and mobility, leading to low or negative effective extraction (χ). They experience the system as coordination. The primary victims (individual_users) are trapped, leading to a maximally amplified extraction factor (d≈0.95, f(d)≈1.42), classifying their experience as a Snare. Organized agents (advocates) have more agency, which lowers their effective extraction and allows for a Scaffold classification, as they are actively building an exit.
- *
- * MANDATROPHY ANALYSIS:
- *   This story resolves the mandatrophy by demonstrating that the conflict between 'is it coordination?' (Rope) and 'is it extraction?' (Snare) is not a contradiction but a perspectival gap. The system is structurally both. Mandatrophy arises when one perspective (typically the beneficiary's Rope) is used to describe the entire system, erasing the victim's experience of it as a Snare. The Deferential Realism framework makes this gap explicit and measurable, showing that the full characterization of the constraint requires acknowledging all valid perspectives.
+ * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * The system resolves this extreme extraction by not defaulting to a simple Snare classification. The analytical perspective reveals a more complex structure. The high theater ratio triggers a Piton classification, correctly identifying features like "Terms of Service" or "Wellness Dashboards" as inert, performative artifacts. The combination of a clear coordination function (for the platform) and asymmetric extraction (for the user) also leads to a Tangled Rope classification. This prevents the system from mislabeling the coordination aspect as pure, simple extraction, providing a more nuanced analysis of the failure mode.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Required for high-extraction constraints (> 0.46).
 omega_variable(
-    design_vs_necessity,
-    'Is cognitive exhaustion an inevitable consequence of information abundance (a Mountain), or a direct result of specific, profit-driven design choices (a Snare)?',
-    'Comparative analysis of platforms with non-extractive business models (e.g., subscription-based, public-funded) versus ad-based models.',
-    'If exhaustion persists even with ethical design, the constraint is more Mountain-like. If it abates, the Snare/Tangled Rope classification is confirmed.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(design_vs_necessity, empirical, 'Distinguishing between inherent information overload and engineered addiction.').
-
-omega_variable(
-    regulatory_effectiveness,
-    'Can top-down regulation (e.g., a fiduciary duty for platforms to protect user attention) effectively curb extraction without destroying the coordination benefits?',
-    'Policy experiments and analysis of jurisdictions implementing digital wellness regulations (e.g., EU''s Digital Services Act).',
-    'Effective regulation would confirm the Scaffold perspective, providing a viable sunset clause. Ineffective regulation would reinforce the Snare/Tangled Rope view.',
+    omega_attentional_recovery_limit,
+    'Can "Cognitive Sovereignty" laws restore the Rope, or is capture a physical law of neural networks (Snare vs Mountain)?',
+    'Tracking the success rate of "Device-Free Zones" in restoring deep-work capacity in urban professionals.',
+    'If recovery holds: Snare of current culture. If it fails: Mountain of Neurological Entropy.',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(regulatory_effectiveness, empirical, 'Assessing the viability of regulatory solutions to attention extraction.').
-
-omega_variable(
-    collapse_threshold,
-    'At what point does the cannibalization of cognitive resources lead to a systemic collapse in user productivity and engagement, making the system unprofitable?',
-    'Longitudinal economic modeling correlating population-level mental health and productivity metrics with platform revenue.',
-    'Identifying a threshold would imply a natural limit to extraction, potentially a self-correcting mechanism. The absence of one suggests the system can remain a stable Snare.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(collapse_threshold, conceptual, 'Determining the systemic failure point of the attention economy.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(attention_market_cannibalization, 2010, 2024).
+% Required for external script parsing
+narrative_ontology:interval(attention_market_cannibalization, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(atte_tr_t2010, attention_market_cannibalization, theater_ratio, 2010, 0.1).
-narrative_ontology:measurement(atte_tr_t2017, attention_market_cannibalization, theater_ratio, 2017, 0.4).
-narrative_ontology:measurement(atte_tr_t2024, attention_market_cannibalization, theater_ratio, 2024, 0.75).
+% Temporal data enables drift detection (metric_substitution,
+% extraction_accumulation) by providing measurements at multiple time points.
+% Required for high-extraction constraints (base_extractiveness > 0.46).
 
-% Extraction over time
-narrative_ontology:measurement(atte_be_t2010, attention_market_cannibalization, base_extractiveness, 2010, 0.3).
-narrative_ontology:measurement(atte_be_t2017, attention_market_cannibalization, base_extractiveness, 2017, 0.55).
-narrative_ontology:measurement(atte_be_t2024, attention_market_cannibalization, base_extractiveness, 2024, 0.65).
+% Theater ratio: Rising from functional engagement optimization (0.20)
+% to extreme "Digital Wellbeing" theater (0.88) that performatively signals
+% care while siphoning attention surplus.
+narrative_ontology:measurement(cannibal_tr_t0, attention_market_cannibalization, theater_ratio, 0, 0.20).
+narrative_ontology:measurement(cannibal_tr_t5, attention_market_cannibalization, theater_ratio, 5, 0.54).
+narrative_ontology:measurement(cannibal_tr_t10, attention_market_cannibalization, theater_ratio, 10, 0.88).
 
+% Extraction: Progressive accumulation of attentional capture as platform
+% competition liquidates the subject's primary life-function bandwidth.
+narrative_ontology:measurement(cannibal_ex_t0, attention_market_cannibalization, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(cannibal_ex_t5, attention_market_cannibalization, base_extractiveness, 5, 0.72).
+narrative_ontology:measurement(cannibal_ex_t10, attention_market_cannibalization, base_extractiveness, 10, 0.91).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
    ========================================================================== */
 
-narrative_ontology:coordination_type(attention_market_cannibalization, information_standard).
-narrative_ontology:affects_constraint(attention_market_cannibalization, public_discourse_integrity).
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(attention_market_cannibalization, global_infrastructure).
 
-/* ==========================================================================
-   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
-   ========================================================================== */
+% Network relationships (structural influence edges)
+% narrative_ontology:affects_constraint(attention_market_cannibalization, mental_health_degradation).
+% narrative_ontology:affects_constraint(attention_market_cannibalization, labor_market_precarity).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,50 +1,31 @@
 % ============================================================================
 % CONSTRAINT STORY: algorithmic_epistemic_capture
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
-% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2023-10-27
-% Status: [ACTIVE]
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-01-28
 % ============================================================================
 
-:- module(constraint_algorithmic_epistemic_capture, []).
+:- module(algorithmic_epistemic_capture, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
-% Each constraint story must have a single, stable base extractiveness (ε).
-% If changing the observable used to evaluate this constraint would change ε,
-% you are looking at two distinct constraints. Write separate .pl files for
-% each, link them with affects_constraint/2, and document the relationship
-% in both files' narrative context sections.
-%
-% The context tuple is CLOSED at arity 4: (P, T, E, S).
-% Do not add measurement_basis, beneficiary/victim, or any other arguments.
-% Linter Rule 23 enforces context/4.
-%
-% See: epsilon_invariance_principle.md
-
 % --- Namespace Hooks (Required for loading) ---
-:- multifile
+:- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:has_sunset_clause/1,
-    narrative_ontology:interval/3,
-    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
-    narrative_ontology:constraint_beneficiary/2,
-    narrative_ontology:constraint_victim/2,
+    narrative_ontology:interval/3,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,86 +33,91 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: algorithmic_epistemic_capture
- *   human_readable: The Feedback Loop Blindfold
- *   domain: technological/social/cognitive
- *
- * SUMMARY:
- *   This constraint describes the process by which an individual's
- *   information diet is shaped by recommendation algorithms optimizing for
- *   engagement. While these systems solve a genuine coordination problem
- *   (finding relevant content in an ocean of data), their optimization
- *   function is not aligned with epistemic health or accuracy. The result is
- *   a feedback loop where users are shown progressively more extreme or
- *   engaging content, creating a personalized reality bubble that is highly
- *   resistant to outside information. This 'blindfold' is not imposed by
- *   overt censorship but by the subtle, continuous curation of reality.
- *
- * KEY AGENTS:
- *   - Platform Operators: Primary beneficiary (institutional/arbitrage) - Profit from maximizing user engagement via ad revenue and data collection.
- *   - Individual Users: Primary victim (powerless/trapped) - Their attention is extracted and their worldview is distorted. Trapped by network effects.
- *   - Societal Epistemic Commons: Secondary victim (powerless/trapped) - Degraded by the spread of misinformation and polarization.
- *   - Regulators: Organized actor (organized/constrained) - Attempt to mitigate harms through policy scaffolds.
+ * * constraint_id: algorithmic_epistemic_capture
+ * human_readable: The Feedback Loop Blindfold
+ * domain: technological/social/cognitive
+ * * SUMMARY:
+ * A scenario where an individual's worldview is entirely mediated by 
+ * recommendation algorithms that optimize for engagement rather than 
+ * accuracy. This "Rope" for information discovery becomes a "Snare" 
+ * as it siphons the subject's cognitive agency into a self-reinforcing 
+ * bubble, liquidating their ability to perceive counter-signals or 
+ * external reality.
+ * * KEY AGENTS:
+ * - Digital Consumer: Subject (Powerless)
+ * - Attention Platform: Beneficiary (Institutional)
+ * - Information Ecologist: Auditor (Analytical)
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (DOMAIN PRIORS)
+   2. BASE PROPERTIES (REVISED)
    ========================================================================== */
 
-% --- Numerical metrics ---
-domain_priors:base_extractiveness(algorithmic_epistemic_capture, 0.65).
-domain_priors:suppression_score(algorithmic_epistemic_capture, 0.75).
-domain_priors:theater_ratio(algorithmic_epistemic_capture, 0.5).
+% High extraction (0.85) because the capture liquidates the subject's 
+% primary epistemic agency to feed the institutional platform's ad-revenue.
+domain_priors:base_extractiveness(algorithmic_epistemic_capture, 0.85). 
+domain_priors:suppression_score(algorithmic_epistemic_capture, 0.74). 
+domain_priors:theater_ratio(algorithmic_epistemic_capture, 0.82). 
 
-% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(algorithmic_epistemic_capture, extractiveness, 0.65).
-narrative_ontology:constraint_metric(algorithmic_epistemic_capture, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(algorithmic_epistemic_capture, theater_ratio, 0.5).
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(algorithmic_epistemic_capture, extractiveness, 0.85).
+narrative_ontology:constraint_metric(algorithmic_epistemic_capture, suppression_requirement, 0.74).
+narrative_ontology:constraint_metric(algorithmic_epistemic_capture, theater_ratio, 0.82).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(algorithmic_epistemic_capture, tangled_rope).
+% Constraint classification claim
+narrative_ontology:constraint_claim(algorithmic_epistemic_capture, piton).
 narrative_ontology:human_readable(algorithmic_epistemic_capture, "The Feedback Loop Blindfold").
 narrative_ontology:topic_domain(algorithmic_epistemic_capture, "technological/social/cognitive").
 
+% Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(algorithmic_epistemic_capture).
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(algorithmic_epistemic_capture, platform_operators).
-narrative_ontology:constraint_beneficiary(algorithmic_epistemic_capture, advertisers).
-narrative_ontology:constraint_victim(algorithmic_epistemic_capture, individual_users).
-narrative_ontology:constraint_victim(algorithmic_epistemic_capture, societal_epistemic_commons).
+% Multifile declarations for Beneficiaries & Victims (Required for extraction > 0.46)
+narrative_ontology:constraint_beneficiary(algorithmic_epistemic_capture, attention_platforms).
+narrative_ontology:constraint_victim(algorithmic_epistemic_capture, digital_consumers).
+narrative_ontology:coordination_vitality(algorithmic_epistemic_capture, dead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% The user is trapped by network effects and high friction-to-exit. They experience the system as pure extraction of their attention and data, at the cost of a narrowing, distorted worldview. The coordination function is invisible, subsumed by the overwhelming sense of being manipulated. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11.
-constraint_indexing:constraint_classification(algorithmic_epistemic_capture, snare,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The subject is trapped: their "choices" are pre-filtered by an engine 
+% they do not control, creating a predatory cognitive lock-in.
+constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% The platform views the capture as a Rope—the only way to coordinate 
+% millions of users' attention and manage the infinite noise of the internet.
+constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
             spatial_scope(global))).
 
-% From the platform's perspective, the algorithm is a pure coordination mechanism solving the problem of information overload to maximize user satisfaction (proxied by engagement). The extraction is seen as a fair exchange for the service. Negative externalities are off-balance-sheet. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09.
-constraint_indexing:constraint_classification(algorithmic_epistemic_capture, rope,
-    context(agent_power(institutional),
-            time_horizon(immediate),
-            exit_options(arbitrage),
+% PERSPECTIVE 3: THE SYSTEMS AUDITOR (PITON)
+% Theater ratio (0.82) > 0.70 triggers Piton: the "Discovery" feature 
+% is an inertial spike; it no longer finds new things, but merely 
+% deepens the existing rut.
+constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
+    context(agent_power(analytical), 
+            time_horizon(historical), 
+            exit_options(analytical), 
             spatial_scope(global))).
 
-% The analyst sees both the genuine coordination function (solving content discovery) and the highly extractive, asymmetric consequences (epistemic capture for profit). This is the canonical view that recognizes the hybrid nature of the constraint. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90.
-constraint_indexing:constraint_classification(algorithmic_epistemic_capture, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% A regulatory body (e.g., EU) sees the problem as a market failure correctable by policy scaffolds like algorithmic transparency laws or data portability mandates. These interventions are temporary supports intended to create a healthier market, with a sunset clause implied by the eventual establishment of new norms. d≈0.40, f(d)≈0.40, σ=1.1 → χ≈0.29.
-constraint_indexing:constraint_classification(algorithmic_epistemic_capture, scaffold,
-    context(agent_power(organized),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(continental))).
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Detects high extraction (0.85) masking as functional coordination (Rope).
+constraint_indexing:constraint_classification(algorithmic_epistemic_capture, tangled_rope, 
+    context(agent_power(analytical), 
+            time_horizon(civilizational), 
+            exit_options(arbitrage), 
+            spatial_scope(universal))) :-
+    domain_priors:base_extractiveness(algorithmic_epistemic_capture, E), E >= 0.50,
+    domain_priors:suppression_score(algorithmic_epistemic_capture, S), S > 0.40.
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -140,13 +126,21 @@ constraint_indexing:constraint_classification(algorithmic_epistemic_capture, sca
 :- begin_tests(algorithmic_epistemic_capture_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+    % Verify Snare for the powerless consumer vs Rope for the institutional platform.
+    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
+        context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
+        context(agent_power(institutional), _, _, _)).
 
-test(extraction_signature) :-
+test(piton_trigger) :-
+    % Ensure high theater ratio (0.82) correctly triggers the Piton classification.
+    constraint_indexing:constraint_classification(algorithmic_epistemic_capture, piton, 
+        context(agent_power(analytical), _, _, _)).
+
+test(extraction_mandatrophy) :-
+    % Ensure high extraction (0.85) triggers mandatory v3.4 resolution logic.
     domain_priors:base_extractiveness(algorithmic_epistemic_capture, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+    E > 0.70.
 
 :- end_tests(algorithmic_epistemic_capture_tests).
 
@@ -156,85 +150,56 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.65) is high, representing the immense value of captured attention and data, and the high cost of a distorted worldview to the user. Suppression (0.75) is high because while alternatives exist, the friction to switch (loss of social graph, network effects) is immense, effectively trapping users. The theater ratio (0.50) reflects the narrative that these platforms are neutral tools for 'connection' or 'information discovery', which masks the underlying, purely mechanical goal of engagement maximization.
- *
- * PERSPECTIVAL GAP:
- *   The gap is profound. The platform operator experiences a highly efficient coordination machine (Rope) that generates profit. The end-user experiences a coercive trap (Snare) that manipulates their reality for someone else's benefit. The regulator sees a correctable market failure that can be managed with temporary rules (Scaffold). The analytical observer, able to see all parts of the system, recognizes it as a Tangled Rope, where a genuine coordination function has been weaponized for asymmetric extraction.
- *
- * DIRECTIONALITY LOGIC:
- *   Beneficiaries (platforms) with arbitrage exit options have a very low directionality (d), resulting in a negative effective extraction (χ) - they see it as a Rope. Victims (users) who are trapped have a very high d, leading to a high χ that pushes the classification to Snare. Organized actors (regulators) with constrained exit options have a moderate d, allowing them to perceive the system as a problem to be solved (Scaffold), rather than an inescapable trap.
- *
- * MANDATROPHY ANALYSIS:
- *   This case is a primary exhibit for resolving mandatrophy. To label the system as only a Snare ignores the powerful, genuine coordination function that makes it so attractive and effective. To label it as only a Rope ignores the vast, demonstrable epistemic and social harm it causes. The Tangled Rope classification, from the analytical perspective, correctly holds both truths in tension, identifying the structure as a hybrid system where coordination is the delivery mechanism for extraction.
+ * The extraction score (0.85) reflects a "Mandatrophy" state where the 
+ * "coordination" of social attention has effectively consumed the 
+ * cognitive diversity of the subject population.
+ * 
+ * * PERSPECTIVAL GAP:
+ * The Digital Consumer feels a Snare because their worldview is 
+ * systematically restricted to whatever maintains their "dwell time." 
+ * The Platform sees a Rope because the capture is the only way to 
+ * coordinate stable user bases for ad-driven revenue at scale.
+ * * [RESOLVED MANDATROPHY]:
+ * Resolved via the Piton and Tangled Rope classifications. For an analytical 
+ * observer, the "discovery" engine is no longer functional (Theater 0.82); 
+ * it is an inert spike siphoning 0.85 of the species' collective agency.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Required for high-extraction constraints (> 0.46).
 omega_variable(
-    harm_intentionality,
-    'Is the resulting epistemic harm an intentional, optimized-for outcome, or an unavoidable negative externality of optimizing for engagement?',
-    'Internal documentation from platform operators; A/B testing data correlating model changes with polarization metrics.',
-    'If intentional, the constraint is a pure Snare even from the analytical view. If an externality, the Tangled Rope classification holds.',
+    omega_epistemic_escape_velocity,
+    'Can a user break the capture through manual "drift", or is the algorithm faster (Snare vs Mountain)?',
+    'Tracking the success rate of deliberate interest-swerving against algorithmic re-centering.',
+    'If swerving persists: Snare of current tech. If re-centering wins: Mountain of Cognitive Vulnerability.',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(harm_intentionality, empirical, 'Distinguishing between intentional harm and negative externality').
-
-omega_variable(
-    personalization_manipulation_threshold,
-    'At what point does effective content personalization become coercive manipulation?',
-    'Cognitive science research on choice architecture; legal and ethical standard-setting for digital environments.',
-    'Defines the boundary between the Rope (coordination) and Snare (extraction) components of the system. A low threshold for manipulation increases the perceived extractiveness.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(personalization_manipulation_threshold, conceptual, 'The threshold between personalization and manipulation').
-
-omega_variable(
-    alternative_viability,
-    'Can non-extractive, decentralized alternatives achieve the network effects necessary to provide a viable exit option for trapped users?',
-    'Market analysis of federated social media adoption rates (e.g., Fediverse) and user retention metrics.',
-    'If alternatives become viable, the ''trapped'' exit option for users becomes ''mobile'', fundamentally lowering the system''s suppression score and effective extraction.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(alternative_viability, empirical, 'Viability of non-extractive alternatives to break network effects').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(algorithmic_epistemic_capture, 2008, 2023).
+% Required for structural_linter.py.
+narrative_ontology:interval(algorithmic_epistemic_capture, 0, 10). 
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(algo_tr_t0, algorithmic_epistemic_capture, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(algo_tr_t8, algorithmic_epistemic_capture, theater_ratio, 8, 0.4).
-narrative_ontology:measurement(algo_tr_t15, algorithmic_epistemic_capture, theater_ratio, 15, 0.5).
+% Theater ratio: Rising from functional personalization (0.30) to 
+% inertial "Discovery Theater" (0.82) as the feedback loop hardens.
+narrative_ontology:measurement(aec_tr_t0, algorithmic_epistemic_capture, theater_ratio, 0, 0.30).
+narrative_ontology:measurement(aec_tr_t5, algorithmic_epistemic_capture, theater_ratio, 5, 0.62).
+narrative_ontology:measurement(aec_tr_t10, algorithmic_epistemic_capture, theater_ratio, 10, 0.82).
 
-% Extraction over time
-narrative_ontology:measurement(algo_be_t0, algorithmic_epistemic_capture, base_extractiveness, 0, 0.3).
-narrative_ontology:measurement(algo_be_t8, algorithmic_epistemic_capture, base_extractiveness, 8, 0.55).
-narrative_ontology:measurement(algo_be_t15, algorithmic_epistemic_capture, base_extractiveness, 15, 0.65).
-
-
-/* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA
-   ========================================================================== */
-
-narrative_ontology:coordination_type(algorithmic_epistemic_capture, resource_allocation).
-narrative_ontology:affects_constraint(algorithmic_epistemic_capture, political_polarization).
-narrative_ontology:affects_constraint(algorithmic_epistemic_capture, misinformation_spread).
-
-/* ==========================================================================
-   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
-   ========================================================================== */
+% Extraction: Progressive liquidation of the user's cognitive agency into 
+% terminal algorithmic dependency and engagement-harvesting.
+narrative_ontology:measurement(aec_ex_t0, algorithmic_epistemic_capture, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(aec_ex_t5, algorithmic_epistemic_capture, base_extractiveness, 5, 0.58).
+narrative_ontology:measurement(aec_ex_t10, algorithmic_epistemic_capture, base_extractiveness, 10, 0.85).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

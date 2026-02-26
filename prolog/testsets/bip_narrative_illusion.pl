@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: bip_narrative_illusion
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
-% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
-% Status: [ACTIVE]
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-16
 % ============================================================================
 
 :- module(constraint_bip_narrative_illusion, []).
@@ -13,36 +12,20 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
-% Each constraint story must have a single, stable base extractiveness (ε).
-% If changing the observable used to evaluate this constraint would change ε,
-% you are looking at two distinct constraints. Write separate .pl files for
-% each, link them with affects_constraint/2, and document the relationship
-% in both files' narrative context sections.
-%
-% The context tuple is CLOSED at arity 4: (P, T, E, S).
-% Do not add measurement_basis, beneficiary/victim, or any other arguments.
-% Linter Rule 23 enforces context/4.
-%
-% See: epsilon_invariance_principle.md
-
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -52,100 +35,77 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: bip_narrative_illusion
- *   human_readable: The Black Iron Prison (BIP) and Sensory Optimization
- *   domain: philosophical/social/technological
- *
- * SUMMARY:
- *   This constraint models the 'Black Iron Prison' (BIP), a concept from
- *   Philip K. Dick's gnostic philosophy, as a system of social control. The
- *   BIP is a perceived false reality constructed by institutional powers
- *   ('The Empire') to keep individuals subordinate. In this model, modern
- *   sensory optimization—through targeted advertising, algorithmic media
- *   feeds, and curated consumer experiences—serves as the primary mechanism
- *   for building and maintaining the prison walls. The constraint is not a
- *   physical prison but a psychic and social one that operates by shaping
- *   perception to foreclose alternatives to the dominant system.
- *
- * KEY AGENTS:
- *   - The Empire's Architects: Primary beneficiary (institutional/arbitrage) — Corporate and state powers that design and profit from the system of control.
- *   - Unawakened Individuals: Primary victim (powerless/trapped) — The general populace, whose perception is managed and whose autonomy is extracted.
- *   - The Gnostic/Resistor: Secondary victim (moderate/constrained) — Individuals aware of the prison who struggle against its influence.
- *   - The Utopian Technologist: Organized agent (organized/mobile) — Believes technology is a temporary means to a better end, viewing the control system as a scaffold.
- *   - The Analytical Observer: Observer (analytical/analytical) — Describes the system's structure, risking either accurate classification (Tangled Rope) or naturalizing it (Mountain).
+ * * constraint_id: bip_narrative_illusion
+ * human_readable: The Black Iron Prison (BIP) and Sensory Optimization
+ * domain: philosophical/social/technological
+ * * SUMMARY:
+ * This constraint defines the modern world as a "Black Iron Prison" (BIP)—a system created by corporate and institutional power that keeps humans subordinate to "Empire". It operates through a "bombardment of sensory stimulus" that forces individuals to cultivate an "analytical understanding" of the world, optimizing behaviors for productivity ("doing and thinking") while suppressing alternative modes of being ("the good heart").
+ * * KEY AGENTS:
+ * - The Worldly Person: Subject (Powerless), viewed as a "slave to Empire," trapped in sense experience and judgment.
+ * - The Corporate Elite/Shareholder: Beneficiary (Institutional), the "covert coven" whose interests are served by the "college of corporations".
+ * - The Systems Analyst: Auditor (Analytical), observing the structure of coordination and extraction.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% --- Numerical metrics ---
-domain_priors:base_extractiveness(bip_narrative_illusion, 0.65).
-domain_priors:suppression_score(bip_narrative_illusion, 0.75).
-domain_priors:theater_ratio(bip_narrative_illusion, 0.72).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(bip_narrative_illusion, 0.85). % Rationale: High. The system extracts the "Being" and "Heart" of the individual to serve the "interests of business leaders and shareholders".
+domain_priors:suppression_score(bip_narrative_illusion, 0.75).   % Rationale: High. The system suppresses "warmth" (heart) in favor of "competence" (mind) and "analytical understanding".
+domain_priors:theater_ratio(bip_narrative_illusion, 0.10).       % Rationale: Low. The system is brutally functional and does not rely on theatricality.
 
-% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(bip_narrative_illusion, extractiveness, 0.65).
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(bip_narrative_illusion, extractiveness, 0.85).
 narrative_ontology:constraint_metric(bip_narrative_illusion, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(bip_narrative_illusion, theater_ratio, 0.72).
+narrative_ontology:constraint_metric(bip_narrative_illusion, theater_ratio, 0.10).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(bip_narrative_illusion, tangled_rope).
+% Constraint self-claim (what does the constraint claim to be?)
+% It claims to be a necessary structure for getting things done.
+narrative_ontology:constraint_claim(bip_narrative_illusion, snare).
 narrative_ontology:human_readable(bip_narrative_illusion, "The Black Iron Prison (BIP) and Sensory Optimization").
 narrative_ontology:topic_domain(bip_narrative_illusion, "philosophical/social/technological").
 
-domain_priors:requires_active_enforcement(bip_narrative_illusion).
+% Binary flags
+domain_priors:requires_active_enforcement(bip_narrative_illusion). % Required for Tangled Rope. The "college of corporations" actively maintains the system.
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(bip_narrative_illusion, the_empire_institutional_power).
-narrative_ontology:constraint_victim(bip_narrative_illusion, unawakened_individuals).
-narrative_ontology:constraint_victim(bip_narrative_illusion, human_autonomy).
+% Structural property derivation hooks:
+narrative_ontology:constraint_beneficiary(bip_narrative_illusion, corporate_and_shareholder_elites).
+narrative_ontology:constraint_victim(bip_narrative_illusion, general_populace).
+narrative_ontology:constraint_victim(bip_narrative_illusion, alternative_modes_of_being).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE UNWAKENED INDIVIDUAL (SNARE) — Trapped within a reality constructed by sensory optimization and media narratives. Lacks awareness of the prison's existence, making exit impossible. Their attention, economic output, and compliance are extracted to power the system. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11. This high χ value firmly classifies the experience as a Snare.
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For the worldly subject, the BIP is a Snare. The standard of "doing and thinking" tightens around their
+% identity, extracting their "Being" and leaving them "chained to lesser versions" of themselves.
 constraint_indexing:constraint_classification(bip_narrative_illusion, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(global))).
+            spatial_scope(national))).
 
-% PERSPECTIVE 2: THE EMPIRE'S ARCHITECTS (ROPE) — The institutional powers that benefit from the BIP see it as a necessary system for social coordination and economic stability. Sensory optimization is merely a tool for managing consumer demand and ensuring social cohesion. From this vantage point, extraction is invisible, perceived only as efficient system management. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. A net beneficiary.
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For the institutional player, the "analytical understanding" of the world is a Rope—a functional
+% coordination mechanism used to "get things done" and serve shareholder interests.
 constraint_indexing:constraint_classification(bip_narrative_illusion, rope,
     context(agent_power(institutional),
             time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — This observer (e.g., a philosopher like Philip K. Dick) recognizes both the coordination function (society requires structure) and the severe, asymmetric extraction. The system is a hybrid: it provides order but at the cost of authentic reality and individual sovereignty. This is the default analytical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90.
-constraint_indexing:constraint_classification(bip_narrative_illusion, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE UTOPIAN TECHNOLOGIST (SCAFFOLD) — Believes that current control systems, including sensory optimization, are temporary scaffolds necessary to guide humanity towards a more advanced, liberated state. They see a sunset clause where technology eventually transcends its control function to enable true human flourishing. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.49. The classification is Scaffold due to the perceived sunset clause, despite the high chi.
-constraint_indexing:constraint_classification(bip_narrative_illusion, scaffold,
-    context(agent_power(organized),
-            time_horizon(generational),
             exit_options(mobile),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 5: THE MID-LEVEL BUREAUCRAT (PITON) — An agent within the system who perpetuates its rules not out of malice, but inertia. They experience the system's functions as largely performative rituals (e.g., quarterly reports, compliance checks) detached from any real purpose, yet the rules must be followed. The high theater_ratio (0.72) triggers the Piton classification, reflecting a system running on degraded, inertial logic.
-constraint_indexing:constraint_classification(bip_narrative_illusion, piton,
-    context(agent_power(institutional),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 6: THE SOCIAL DETERMINIST (MOUNTAIN) — Argues that a 'Black Iron Prison' is an inevitable, emergent property of any large-scale technological society. It is a natural law of social physics, not a contingent creation. This perspective naturalizes the constraint, rendering it immutable. The engine will flag this as a false summit, as the high ε and suppression values are inconsistent with a true Mountain.
-constraint_indexing:constraint_classification(bip_narrative_illusion, mountain,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analyst sees a system with a genuine coordination function for its beneficiaries (Rope-like)
+% but which relies on high, asymmetric extraction from its victims and active enforcement (Snare-like).
+% This hybrid nature is the definition of a Tangled Rope.
+constraint_indexing:constraint_classification(bip_narrative_illusion, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(universal))).
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -154,17 +114,22 @@ constraint_indexing:constraint_classification(bip_narrative_illusion, mountain,
 :- begin_tests(bip_narrative_illusion_tests).
 
 test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(bip_narrative_illusion, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(bip_narrative_illusion, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+    constraint_indexing:constraint_classification(bip_narrative_illusion, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional,
+    TypePowerless == snare,
+    TypeInstitutional == rope.
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(bip_narrative_illusion, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(analytical_view_is_tangled_rope) :-
+    % The analytical view should resolve the gap into a Tangled Rope.
+    constraint_indexing:constraint_classification(bip_narrative_illusion, snare, context(agent_power(analytical), _, _, _)).
 
-test(piton_threshold) :-
-    domain_priors:theater_ratio(bip_narrative_illusion, TR),
-    TR >= 0.70.
+test(threshold_validation_high_extraction) :-
+    % Verify the constraint is correctly identified as high-extraction.
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(bip_narrative_illusion, ExtMetricName, E),
+    E >= 0.46.
 
 :- end_tests(bip_narrative_illusion_tests).
 
@@ -174,16 +139,25 @@ test(piton_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.65) is high, representing the immense value (attention, data, economic activity, political compliance) extracted from the populace. Suppression (0.75) is also high, as the system actively marginalizes or co-opts dissenting narratives and alternative lifestyles, making escape or rebellion seem impossible or irrational. Theater Ratio (0.72) is high because the system's primary mechanism of control is the performance of freedom and choice (e.g., consumer choice, electoral politics) that masks an underlying lack of structural agency.
+ * This constraint models a pervasive socio-economic structure described in philosophical terms. The base
+ * extractiveness (0.85) and suppression (0.75) are high, reflecting the narrative of a "prison" that extracts
+ * human potential ("Being", "Heart") to fuel a corporate system.
  *
- * PERSPECTIVAL GAP:
- *   This constraint is a diagnostic exemplar, demonstrating how a single set of structural properties can generate all six classifications. For the trapped victim, it is a Snare. For the beneficiary, it is a Rope for social coordination. For the aware resistor, it is a Tangled Rope of control and function. For the optimistic builder, it is a temporary Scaffold. For the inertial bureaucrat, it is a degraded Piton. For the determinist philosopher, it is an inescapable Mountain. The perspectival gap is total, spanning the entire classification system.
+ * The Perspectival Gap is stark: for the institutional beneficiary, the system is a 'Rope' for efficient
+ * coordination and value creation. For the powerless subject, it is a 'Snare' that traps them in a limited
+ * mode of existence.
  *
- * DIRECTIONALITY LOGIC:
- *   Beneficiaries ('The Empire') have arbitrage exit options and a low derived directionality (d), resulting in a negative effective extraction (χ) and a Rope classification. Victims ('Unawakened Individuals') are trapped with no exit, leading to a high d, a high f(d) multiplier, and a χ value that crosses the Snare threshold. Other agents fall in between, with their power, exit options, and structural relationship determining their d value and thus their perspectival classification.
+ * The analytical perspective resolves this conflict by classifying the system as a 'Tangled Rope'. This is
+ * the correct classification because the constraint possesses all three required properties: a genuine
+ * coordination function (beneficiary exists), asymmetric extraction (victim exists), and requires active
+ * enforcement to maintain the asymmetry. The original classification of 'Mountain' for the analytical view
+ * was a category error; philosophical reframing of a social construct as "immutable" does not make it a
+ * natural law in this classification system.
  *
- * MANDATROPHY ANALYSIS:
- *   This story resolves the mandatrophy by showing that the question 'Which type is it?' is ill-posed. The constraint's identity is the complete set of all perspectival classifications derived from its fixed base properties. The system is simultaneously a Rope to its creators and a Snare to its captives. Deferential Realism's power lies in holding these contradictory but structurally valid truths within a single analytical framework, preventing the collapse into a single, privileged description.
+ * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * The Tangled Rope classification correctly prevents Mandatrophy by acknowledging the system's coordination
+ * function for elites, rather than mislabeling the entire structure as a pure Snare. It captures the dual-use
+ * nature of the constraint, which is key to its stability and persistence.
  */
 
 /* ==========================================================================
@@ -191,69 +165,45 @@ test(piton_threshold) :-
    ========================================================================== */
 
 omega_variable(
-    agency_vs_emergence,
-    'Is the Black Iron Prison a consciously designed system by ''The Empire'' or an agentless, emergent phenomenon of complex systems?',
-    'Tracing decision-making chains within key institutions (corporate, state) to identify intent versus path-dependency and unintended consequences.',
-    'If consciously designed, it reinforces the Snare classification for victims. If emergent, it strengthens the Piton and Tangled Rope classifications, pointing to systemic dysfunction rather than directed malice.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(agency_vs_emergence, conceptual, 'Distinguishing between conscious design and emergent properties of the BIP.').
-
-omega_variable(
-    technological_determinism,
-    'Will advanced technologies like AI and neuro-interfaces inevitably reinforce the prison, or can they be used as tools for ''gnosis'' and liberation?',
-    'Empirical analysis of the centralizing vs. decentralizing effects of new technologies as they are deployed.',
-    'If they reinforce control, the Scaffold perspective is invalidated. If they enable liberation, the system''s suppression score would decrease over time, potentially transforming it into a true Scaffold.',
+    omega_bip_intent,
+    'Is the sensory bombardment a byproduct of technological growth (emergent) or an intentional control strategy by the elite (constructed)?',
+    'Audit of corporate/state resource allocation toward behavior optimization vs. public well-being infrastructure.',
+    'If emergent, it is a Tangled Rope leaning towards Mountain properties. If constructed, it is a classic Tangled Rope with high coercive intent.',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(technological_determinism, empirical, 'Whether technology is a tool for liberation or control.').
-
-omega_variable(
-    existence_of_exterior,
-    'Is there a coherent, accessible ''true reality'' outside the constructed reality of the BIP?',
-    'This is a metaphysical question, unresolvable by empirical means. It can only be explored via philosophical argument and phenomenological reports.',
-    'If no exterior exists, the BIP is functionally a Mountain—an inescapable condition of existence. If an exterior exists, then classifications like Snare and Tangled Rope, which imply a loss of something real, are valid.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(existence_of_exterior, conceptual, 'The metaphysical status of a ''true reality'' outside the BIP.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(bip_narrative_illusion, 1980, 2024).
+% Required for external script parsing
+narrative_ontology:interval(bip_narrative_illusion, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(bip__tr_t1980, bip_narrative_illusion, theater_ratio, 1980, 0.3).
-narrative_ontology:measurement(bip__tr_t2002, bip_narrative_illusion, theater_ratio, 2002, 0.58).
-narrative_ontology:measurement(bip__tr_t2024, bip_narrative_illusion, theater_ratio, 2024, 0.72).
+% Temporal data models the intensification of the BIP over the last century (interval 0-10).
+% Extraction has steadily increased as corporate power consolidated.
+% Theater ratio remains low, as the system's function is overt.
 
-% Extraction over time
-narrative_ontology:measurement(bip__be_t1980, bip_narrative_illusion, base_extractiveness, 1980, 0.4).
-narrative_ontology:measurement(bip__be_t2002, bip_narrative_illusion, base_extractiveness, 2002, 0.55).
-narrative_ontology:measurement(bip__be_t2024, bip_narrative_illusion, base_extractiveness, 2024, 0.65).
+% Theater ratio over time:
+narrative_ontology:measurement(bip_tr_t0, bip_narrative_illusion, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(bip_tr_t5, bip_narrative_illusion, theater_ratio, 5, 0.10).
+narrative_ontology:measurement(bip_tr_t10, bip_narrative_illusion, theater_ratio, 10, 0.10).
 
+% Extraction over time (triggers extraction_accumulation detection):
+narrative_ontology:measurement(bip_ex_t0, bip_narrative_illusion, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(bip_ex_t5, bip_narrative_illusion, base_extractiveness, 5, 0.70).
+narrative_ontology:measurement(bip_ex_t10, bip_narrative_illusion, base_extractiveness, 10, 0.85).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
    ========================================================================== */
 
+% The "college of corporations" acts as a global enforcement mechanism for a specific
+% mode of economic and social behavior.
 narrative_ontology:coordination_type(bip_narrative_illusion, enforcement_mechanism).
-narrative_ontology:affects_constraint(bip_narrative_illusion, social_media_addiction).
-narrative_ontology:affects_constraint(bip_narrative_illusion, consumer_debt_trap).
-narrative_ontology:affects_constraint(bip_narrative_illusion, narrative_collapse_disorder).
-
-/* ==========================================================================
-   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
-   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

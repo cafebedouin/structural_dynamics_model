@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: bor_tax_exemption_nl
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
 % Generated: 2024-07-28
-% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_bor_tax_exemption_nl, []).
@@ -39,9 +38,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
+    constraint_indexing:directionality_override/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -56,22 +57,20 @@
  *   domain: economic/political
  *
  * SUMMARY:
- *   The Dutch Business Succession Scheme (BOR) is a tax regulation designed
- *   to facilitate the transfer of family businesses by providing substantial
- *   exemptions from inheritance and gift tax. While its stated purpose is to
- *   ensure business continuity and preserve employment, it functions as a
- *   major tax shelter that disproportionately benefits wealthy families. This
- *   creates a structural conflict between a legitimate coordination goal
- *   (avoiding forced liquidation of viable businesses) and a massive,
- *   asymmetric extraction of value from the public tax base, which is borne
- *   by all other taxpayers and heirs of non-business assets.
+ *   The Dutch "Bedrijfsopvolgingsregeling" (BOR) is a tax regulation that
+ *   provides a substantial exemption on inheritance and gift tax when a family
+ *   business is passed to the next generation. Ostensibly designed to ensure
+ *   business continuity and prevent forced sales to cover tax bills, it has
+ *   become a mechanism for the Netherlands' wealthiest families to transfer
+ *   vast fortunes almost tax-free. The scheme costs the treasury over €2.3
+ *   billion annually, shifting the tax burden to the general public, and its
+ *   benefits are highly concentrated among the super-rich.
  *
- * KEY AGENTS:
- *   - Family Business Heirs: Primary beneficiaries (powerful/arbitrage) who receive tax-free intergenerational wealth transfers.
- *   - Non-Business Heirs: Primary victims (powerless/trapped) who pay full inheritance tax on other assets.
- *   - General Taxpayers: Diffuse victims (powerless/trapped) who bear the cost of forgone state revenue.
- *   - Policymakers: Institutional actors (institutional/constrained) who must balance economic goals with public criticism over inequality.
- *   - Financial Advisors: Organized beneficiaries (organized/mobile) who profit from the scheme's complexity.
+ * KEY AGENTS (by structural relationship):
+ *   - wealthy_business_owning_families: Primary beneficiary (institutional/arbitrage) — Receives massive tax breaks, preserving generational wealth.
+ *   - general_dutch_taxpayers: Primary target (powerless/trapped) — Bears the cost of the €2.3 billion tax shortfall through higher taxes elsewhere or reduced public services.
+ *   - dutch_government: Institutional actor (institutional/constrained) — Creates and maintains the regulation, balancing lobbying from beneficiaries against public criticism.
+ *   - economic_policy_analysts: Analytical observer — Sees both the stated coordination goal and the severe extractive reality.
  */
 
 /* ==========================================================================
@@ -79,67 +78,87 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(bor_tax_exemption_nl, 0.68).
-domain_priors:suppression_score(bor_tax_exemption_nl, 0.75).
-domain_priors:theater_ratio(bor_tax_exemption_nl, 0.4).
+domain_priors:base_extractiveness(bor_tax_exemption_nl, 0.75). % Represents the massive tax revenue foregone, concentrated on a tiny group.
+domain_priors:suppression_score(bor_tax_exemption_nl, 0.80).   % Structural property (raw, unscaled). Political lobbying and path dependency make alternatives (e.g., a flat inheritance tax) difficult to implement.
+domain_priors:theater_ratio(bor_tax_exemption_nl, 0.40).       % The 'business continuity' argument has some merit but is theatrically used to justify a scheme that primarily facilitates tax-free wealth transfer for the ultra-rich.
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(bor_tax_exemption_nl, extractiveness, 0.68).
-narrative_ontology:constraint_metric(bor_tax_exemption_nl, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(bor_tax_exemption_nl, theater_ratio, 0.4).
+narrative_ontology:constraint_metric(bor_tax_exemption_nl, extractiveness, 0.75).
+narrative_ontology:constraint_metric(bor_tax_exemption_nl, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(bor_tax_exemption_nl, theater_ratio, 0.40).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(bor_tax_exemption_nl, tangled_rope).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(bor_tax_exemption_nl, snare).
 narrative_ontology:human_readable(bor_tax_exemption_nl, "Dutch Business Succession Scheme (BOR)").
 narrative_ontology:topic_domain(bor_tax_exemption_nl, "economic/political").
 
-domain_priors:requires_active_enforcement(bor_tax_exemption_nl).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(bor_tax_exemption_nl). % The Tax Authority (Belastingdienst) must administer this complex regulation.
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(bor_tax_exemption_nl, family_business_heirs).
-narrative_ontology:constraint_beneficiary(bor_tax_exemption_nl, family_business_owners).
-narrative_ontology:constraint_beneficiary(bor_tax_exemption_nl, financial_advisors).
-narrative_ontology:constraint_victim(bor_tax_exemption_nl, non_business_heirs).
-narrative_ontology:constraint_victim(bor_tax_exemption_nl, general_taxpayers).
-narrative_ontology:constraint_victim(bor_tax_exemption_nl, competing_non_family_businesses).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(bor_tax_exemption_nl, wealthy_business_owning_families).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(bor_tax_exemption_nl, general_dutch_taxpayers).
+%
+% Gate requirements:
+%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: NON-BUSINESS HEIR (SNARE) — Inheriting non-business assets, this agent is trapped in the standard high-tax regime with no access to exemptions. They perceive the BOR as a pure extraction from the common tax base that benefits a privileged class. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.97.
+% PERSPECTIVE 1: THE PRIMARY TARGET (GENERAL TAXPAYERS)
+% Experiences the constraint as a pure cost—a mechanism that forces them to
+% cover a tax shortfall created for the benefit of others.
+% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
 constraint_indexing:constraint_classification(bor_tax_exemption_nl, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: FAMILY BUSINESS HEIR (ROPE) — As the direct beneficiary, this agent experiences the BOR as a pure coordination mechanism that solves the problem of business continuity against a punitive tax backdrop. They can arbitrage this scheme against other financial planning tools. d≈0.10, f(d)≈-0.07, σ=1.0 → χ≈-0.05. Negative effective extraction signifies a net subsidy.
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (WEALTHY FAMILIES)
+% Experiences the constraint as a vital coordination tool for generational
+% wealth transfer, enabling business continuity with minimal friction.
+% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ.
 constraint_indexing:constraint_classification(bor_tax_exemption_nl, rope,
-    context(agent_power(powerful),
+    context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — This observer sees both the genuine coordination function (preventing forced sales) and the massive asymmetric extraction (concentrating wealth, reducing state revenue). The high ε and suppression, combined with a clear beneficiary/victim structure, make Tangled Rope the correct analytical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.94.
-constraint_indexing:constraint_classification(bor_tax_exemption_nl, tangled_rope,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% Recognizes both the stated coordination function (business continuity) and the
+% massive, asymmetric extraction, classifying it as a hybrid.
+% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+constraint_indexing:constraint_classification(bor_tax_exemption_nl, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE POLICYMAKER (TANGLED ROPE) — Constrained by powerful lobbying interests and political mandates, the policymaker must manage the scheme's dual function. They see it as a necessary, if flawed, tool for economic stability, constantly trying to patch loopholes (the extraction) while preserving the core function (the coordination).
-constraint_indexing:constraint_classification(bor_tax_exemption_nl, tangled_rope,
+% --- INTER-INSTITUTIONAL PERSPECTIVE ---
+% The Dutch Government maintains the rule. It benefits from political stability
+% and lobbying support, but is constrained by public opinion and the rule's complexity.
+% Its position is structurally different from the pure beneficiaries. The constrained
+% exit option reflects its limited room to maneuver politically.
+constraint_indexing:constraint_classification(bor_tax_exemption_nl, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 5: THE FINANCIAL ADVISOR (ROPE) — This agent profits from the scheme's complexity. For them, it is a stable coordination mechanism that creates a market for specialized advisory services. They are mobile and can shift their practice if the rules change.
-constraint_indexing:constraint_classification(bor_tax_exemption_nl, rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(mobile),
             spatial_scope(national))).
 
 /* ==========================================================================
@@ -149,13 +168,22 @@ constraint_indexing:constraint_classification(bor_tax_exemption_nl, rope,
 :- begin_tests(bor_tax_exemption_nl_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(bor_tax_exemption_nl, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(bor_tax_exemption_nl, TypeOther, context(agent_power(powerful), _, _, _)),
-    TypePowerless \= TypeOther.
+    % Verify perspectival gap between target (Snare) and beneficiary (Rope).
+    constraint_indexing:constraint_classification(bor_tax_exemption_nl, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
+    constraint_indexing:constraint_classification(bor_tax_exemption_nl, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
+    format('Perspectival gap confirmed: Snare (powerless) vs Rope (institutional).~n', []).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(bor_tax_exemption_nl, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(tangled_rope_structural_requirements) :-
+    % Verify that all three structural predicates for a Tangled Rope are present.
+    narrative_ontology:constraint_beneficiary(bor_tax_exemption_nl, _),
+    narrative_ontology:constraint_victim(bor_tax_exemption_nl, _),
+    domain_priors:requires_active_enforcement(bor_tax_exemption_nl),
+    format('Tangled Rope structural requirements met.~n', []).
+
+test(analytical_claim_matches_type) :-
+    narrative_ontology:constraint_claim(bor_tax_exemption_nl, ClaimedType),
+    constraint_indexing:constraint_classification(bor_tax_exemption_nl, AnalyticalType, context(agent_power(analytical), _, _, _)),
+    ClaimedType == AnalyticalType.
 
 :- end_tests(bor_tax_exemption_nl_tests).
 
@@ -165,83 +193,103 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.68) is high, representing the significant tax revenue forgone by the state, which constitutes a direct transfer of value to a small, wealthy demographic. Suppression (0.75) is high because the scheme completely forecloses the alternative of equal tax treatment for all forms of inheritance, trapping non-business heirs in a comparatively punitive system. Theater Ratio (0.40) is moderate; the narrative of 'saving jobs' is a powerful justification (the theater) for a policy whose primary effect is wealth preservation (the function).
+ *   - Base Extractiveness (ε=0.75): This value reflects the scale of the tax
+ *     revenue lost (€2.3 billion/year), which is a direct transfer of fiscal
+ *     capacity from the public to a very small, wealthy group.
+ *   - Suppression (0.80): The political power wielded by the beneficiaries
+ *     has historically suppressed simpler, more equitable alternatives. This
+ *     high score reflects the political difficulty of meaningful reform.
+ *   - Theater (0.40): The "business continuity" argument is a genuine coordination
+ *     narrative, but its role is secondary to the wealth preservation function,
+ *     making it a significant but not dominant component of theater.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the beneficiary heir, the BOR is a Rope that solves a critical coordination problem. For the non-business heir, it is a Snare that institutionalizes unfairness. The analytical observer, accounting for both the coordination function and the massive extractive side-effect, classifies it as a Tangled Rope. This divergence is not a contradiction but the core of indexical analysis: the constraint's classification depends on the observer's structural relationship to it.
+ *   The gap is profound. For the `general_dutch_taxpayers` (powerless, trapped),
+ *   the regulation is a Snare: a coercive system they cannot opt out of that
+ *   extracts resources for others' benefit. For the `wealthy_business_owning_families`
+ *   (institutional, arbitrage), it is a Rope: a pure coordination mechanism that
+ *   smooths intergenerational transfers, with no perceived extraction (χ is negative).
+ *   This gap is the hallmark of a Tangled Rope.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries (family business heirs) have arbitrage exit options, leading to a low derived directionality (d) and negative effective extraction (χ), correctly identifying them as subsidized. Victims (non-business heirs) are trapped, leading to a high derived 'd' and extremely high χ, correctly identifying them as the primary targets of the relative extraction. This structural data drives the perspectival gap.
+ *   - Beneficiary: `wealthy_business_owning_families`. They directly benefit from
+ *     the tax exemption, which can be worth billions for a single family. Their
+ *     `arbitrage` exit options (international tax planning) give them immense
+ *     leverage, driving their directionality `d` close to 0.
+ *   - Victim: `general_dutch_taxpayers`. They bear the cost indirectly through
+ *     the national budget. Their `trapped` status within the tax system drives
+ *     their directionality `d` close to 1.0.
+ *   The engine correctly maps these structural roles to opposing directionalities,
+ *   which explains the Rope vs. Snare classification.
  *
  * MANDATROPHY ANALYSIS:
- *   This case is a classic resolution of mandatrophy. To label the BOR a pure Snare would be to ignore its genuine, if overstated, coordination function in preventing business liquidations. To label it a pure Rope would be to ignore the billions in forgone tax revenue and its contribution to wealth inequality. The Tangled Rope classification correctly identifies that the constraint possesses BOTH a real coordination function AND a severe, asymmetric extractive component, which are inextricably linked.
+ *   [RESOLVED MANDATROPHY] This is a classic case where a pure extraction
+ *   mechanism (Snare) is disguised as a coordination mechanism (Rope). Without
+ *   the Tangled Rope classification, one would be forced to choose between
+ *   labeling it a "necessary evil for business" (Rope) or a "purely predatory
+ *   loophole" (Snare). Tangled Rope correctly identifies its dual nature: it
+ *   possesses a genuine (if overstated) coordination function *and* a massive,
+ *   asymmetric extractive function, maintained by active enforcement.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    economic_necessity_vs_wealth_preservation,
-    'Is the BOR''s tax relief level truly necessary to prevent widespread forced sales and job losses, or is it primarily a mechanism for dynastic wealth preservation?',
-    'Comparative analysis of business continuity rates in jurisdictions with and without similar schemes, controlling for economic sector and firm size.',
-    'If proven necessary, the coordination function is stronger, pushing classification towards Rope for more observers. If proven excessive, the extractive function dominates, pushing it towards Snare.',
+    omega_bor_tax_exemption_nl,
+    'Is the business continuity function essential or purely theatrical?',
+    'A counterfactual economic analysis of business failures/sales that would occur under a standard inheritance tax regime, compared to the current system.',
+    'If essential, the coordination aspect is stronger, making it a "purer" Tangled Rope. If theatrical, the constraint is functionally a Snare disguised with a thin narrative veneer, and ε is even higher than estimated.',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(economic_necessity_vs_wealth_preservation, empirical, 'Distinguishing the BOR''s role in economic necessity versus wealth preservation.').
-
-omega_variable(
-    quantify_market_distortion,
-    'To what extent does the BOR distort the market for business acquisitions by making intra-family transfers overwhelmingly more tax-efficient than sales to external parties?',
-    'Econometric analysis of M&A activity for family-owned vs. non-family-owned firms, and surveys of private equity and corporate acquirers on valuation adjustments due to the BOR.',
-    'High distortion confirms high suppression and strengthens the Snare classification from the perspective of competing businesses. Low distortion would weaken it.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(quantify_market_distortion, empirical, 'Measuring the BOR''s distortionary effect on the M&A market.').
-
-omega_variable(
-    active_vs_passive_asset_boundary,
-    'Where is the conceptual and legal boundary between an ''active business'' eligible for the BOR and a passive investment vehicle holding business-like assets?',
-    'Analysis of case law and legislative definitions to determine the porosity of the boundary. A porous boundary allows for greater tax avoidance.',
-    'A clear, restrictive boundary limits extraction. A vague or permissive boundary increases the scheme''s extractive potential by allowing passive wealth to be sheltered.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(active_vs_passive_asset_boundary, conceptual, 'The conceptual boundary between active business and passive investment for BOR eligibility.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(bor_tax_exemption_nl, 2005, 2025).
+% Required for external script parsing
+narrative_ontology:interval(bor_tax_exemption_nl, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(bor__tr_t2005, bor_tax_exemption_nl, theater_ratio, 2005, 0.25).
-narrative_ontology:measurement(bor__tr_t2015, bor_tax_exemption_nl, theater_ratio, 2015, 0.35).
-narrative_ontology:measurement(bor__tr_t2025, bor_tax_exemption_nl, theater_ratio, 2025, 0.4).
+% Temporal data enables drift detection. The BOR has existed for years, and its
+% use for wealth preservation beyond simple business continuity has arguably grown.
+% Required because base_extractiveness (0.75) > 0.46.
 
-% Extraction over time
-narrative_ontology:measurement(bor__be_t2005, bor_tax_exemption_nl, base_extractiveness, 2005, 0.5).
-narrative_ontology:measurement(bor__be_t2015, bor_tax_exemption_nl, base_extractiveness, 2015, 0.6).
-narrative_ontology:measurement(bor__be_t2025, bor_tax_exemption_nl, base_extractiveness, 2025, 0.68).
+% Theater ratio over time: The initial justification has become weaker as the scale of exploitation for pure wealth transfer has become public knowledge.
+narrative_ontology:measurement(bor_tax_exemption_nl_tr_t0, bor_tax_exemption_nl, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(bor_tax_exemption_nl_tr_t5, bor_tax_exemption_nl, theater_ratio, 5, 0.35).
+narrative_ontology:measurement(bor_tax_exemption_nl_tr_t10, bor_tax_exemption_nl, theater_ratio, 10, 0.40).
 
+% Extraction over time: As tax lawyers have optimized its use, the effective extraction from the public purse has increased.
+narrative_ontology:measurement(bor_tax_exemption_nl_ex_t0, bor_tax_exemption_nl, base_extractiveness, 0, 0.65).
+narrative_ontology:measurement(bor_tax_exemption_nl_ex_t5, bor_tax_exemption_nl, base_extractiveness, 5, 0.70).
+narrative_ontology:measurement(bor_tax_exemption_nl_ex_t10, bor_tax_exemption_nl, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+% Coordination type (enables Boltzmann floor + complexity offset)
+% This regulation allocates the national tax burden.
 narrative_ontology:coordination_type(bor_tax_exemption_nl, resource_allocation).
+
+% Network relationships (structural influence edges)
+% This tax policy is a major driver of wealth inequality.
+narrative_ontology:affects_constraint(bor_tax_exemption_nl, wealth_inequality_nl).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides are needed for this story. The structural derivation chain
+% (beneficiary/victim + exit_options) accurately captures the directionality
+% for all key agents, including the distinct position of the constrained
+% institutional government actor.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

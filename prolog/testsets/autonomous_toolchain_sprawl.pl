@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: autonomous_toolchain_sprawl
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
-% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-28
-% Status: [ACTIVE]
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-05-21
 % ============================================================================
 
 :- module(constraint_autonomous_toolchain_sprawl, []).
@@ -12,19 +11,6 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
-
-% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
-% Each constraint story must have a single, stable base extractiveness (ε).
-% If changing the observable used to evaluate this constraint would change ε,
-% you are looking at two distinct constraints. Write separate .pl files for
-% each, link them with affects_constraint/2, and document the relationship
-% in both files' narrative context sections.
-%
-% The context tuple is CLOSED at arity 4: (P, T, E, S).
-% Do not add measurement_basis, beneficiary/victim, or any other arguments.
-% Linter Rule 23 enforces context/4.
-%
-% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -41,10 +27,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:topic_domain/2,
+    narrative_ontology:coordination_vitality/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,86 +39,90 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: autonomous_toolchain_sprawl
- *   human_readable: The Recursive Maintenance Trap
- *   domain: technological
- *
- * SUMMARY:
- *   An organization adopts autonomous agents and CI/CD tools to automate
- *   infrastructure management and software deployment. Initially, this
- *   provides significant efficiency gains. However, these tools require their
- *   own configuration, integration, and maintenance. To manage this, more
- *   automation is added, creating a recursive loop. Over time, the
- *   engineering team spends an increasing portion of its resources
- *   maintaining the toolchain itself, rather than building the core product.
- *   This 'Recursive Maintenance Trap' transforms a coordination solution into
- *   an extractive system that consumes innovation capacity.
- *
- * KEY AGENTS:
- *   - Platform Engineering Team: Primary victim (powerless/trapped) — tasked with maintaining the sprawling toolchain, their time is extracted to service the system.
- *   - Senior Management: Primary beneficiary (institutional/arbitrage) — sees initial cost savings and velocity metrics, remaining insulated from the underlying complexity.
- *   - Automation Tool Vendors: Secondary beneficiary (institutional/arbitrage) — profit from selling an expanding portfolio of tools to solve problems created by other tools.
- *   - Application Developers: Secondary victim (moderate/mobile) — benefit from automation when it works but are harmed by its brittleness and the platform team's lack of bandwidth.
+ * * constraint_id: autonomous_toolchain_sprawl
+ * human_readable: The Recursive Maintenance Trap
+ * domain: technological
+ * * SUMMARY:
+ * An organization deploys autonomous agents and CI/CD tools to manage infrastructure.
+ * The "meta-tools" required to coordinate these agents proliferate faster than the
+ * primary output. This intended "Rope" for efficiency becomes a "Snare" for engineers,
+ * who are trapped in "infinite maintenance" of the toolchain itself, liquidating
+ * creative surplus into recursive upkeep.
+ * * KEY AGENTS:
+ * - DevOps Engineer: Subject (Powerless)
+ * - Cloud Infrastructure Provider: Beneficiary (Institutional)
+ * - Systems Auditor: Auditor (Analytical)
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% --- Numerical metrics ---
-domain_priors:base_extractiveness(autonomous_toolchain_sprawl, 0.55).
-domain_priors:suppression_score(autonomous_toolchain_sprawl, 0.65).
-domain_priors:theater_ratio(autonomous_toolchain_sprawl, 0.4).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(autonomous_toolchain_sprawl, 0.84). % Mountain <= 0.15, Rope <= 0.15, Snare >= 0.46
+domain_priors:suppression_score(autonomous_toolchain_sprawl, 0.68).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(autonomous_toolchain_sprawl, 0.79).       % Piton detection (>= 0.70)
 
-% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(autonomous_toolchain_sprawl, extractiveness, 0.55).
-narrative_ontology:constraint_metric(autonomous_toolchain_sprawl, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(autonomous_toolchain_sprawl, theater_ratio, 0.4).
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(autonomous_toolchain_sprawl, extractiveness, 0.84).
+narrative_ontology:constraint_metric(autonomous_toolchain_sprawl, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(autonomous_toolchain_sprawl, theater_ratio, 0.79).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(autonomous_toolchain_sprawl, tangled_rope).
+% Constraint self-claim (what does the constraint claim to be?)
+% The toolchain is presented as an essential coordination mechanism.
+narrative_ontology:constraint_claim(autonomous_toolchain_sprawl, snare).
 narrative_ontology:human_readable(autonomous_toolchain_sprawl, "The Recursive Maintenance Trap").
 narrative_ontology:topic_domain(autonomous_toolchain_sprawl, "technological").
 
-domain_priors:requires_active_enforcement(autonomous_toolchain_sprawl).
+% Binary flags
+% The complexity requires active enforcement of standards and practices to prevent collapse.
+domain_priors:requires_active_enforcement(autonomous_toolchain_sprawl). % Required for Tangled Rope
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(autonomous_toolchain_sprawl, senior_management).
-narrative_ontology:constraint_beneficiary(autonomous_toolchain_sprawl, automation_tool_vendors).
-narrative_ontology:constraint_victim(autonomous_toolchain_sprawl, platform_engineering_team).
-narrative_ontology:constraint_victim(autonomous_toolchain_sprawl, application_developers).
+% Structural property derivation hooks:
+narrative_ontology:constraint_beneficiary(autonomous_toolchain_sprawl, cloud_infrastructure_provider).
+narrative_ontology:constraint_victim(autonomous_toolchain_sprawl, devops_engineer).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: PLATFORM ENGINEER (SNARE) — Trapped by escalating complexity. Their role shifts from enabling product development to servicing the automation infrastructure itself. Exit is blocked by the high cost of re-architecting the entire system. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78.
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The engineer is trapped: they cannot "unplug" the automation without
+% systemic collapse, yet they spend most of their time fixing the automation.
 constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: SENIOR MANAGEMENT (ROPE) — Sees the toolchain as a pure coordination solution for reducing headcount and increasing deployment velocity. The maintenance overhead is abstracted away in operational budgets. They can pivot strategy (arbitrage) if the promised efficiency gains don't materialize on their dashboards. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07.
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% The institution views the complex toolchain as a Rope—the only way
+% to coordinate global-scale infrastructure with sub-second latency.
 constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, rope,
     context(agent_power(institutional),
-            time_horizon(immediate),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: APPLICATION DEVELOPER (TANGLED ROPE) — Experiences both the coordination benefits (faster deployments when the system works) and the extractive costs (brittle tooling, unresponsive platform team). They have a mobile exit (can leave the company), which moderates the extraction. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.63.
-constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, tangled_rope,
-    context(agent_power(moderate),
-            time_horizon(biographical),
+            time_horizon(generational),
             exit_options(mobile),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 4: SYSTEMS ARCHITECT (TANGLED ROPE) — The analytical view correctly identifies the dual nature of the constraint. The coordination function is real, but the recursive maintenance loop creates severe, asymmetric extraction of engineering resources. The high chi value reflects the severity of the trap. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76.
-constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, tangled_rope,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The default analytical view, detecting both the coordination function and
+% the severe asymmetric extraction (0.84).
+constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
+% A different analytical view focusing on inertia. The high theater ratio (0.79)
+% triggers a Piton classification: the "Efficiency Metrics" are performative,
+% and the toolchain is maintained out of habit, not current utility.
+constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, snare,
+    context(agent_power(analytical),
+            time_horizon(historical),
+            exit_options(arbitrage),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -140,13 +131,25 @@ constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, tangl
 :- begin_tests(autonomous_toolchain_sprawl_tests).
 
 test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+    constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless == snare,
+    TypeInstitutional == rope,
+    TypePowerless \= TypeInstitutional.
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(autonomous_toolchain_sprawl, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(piton_trigger) :-
+    % Ensure high theater ratio (0.79) correctly triggers the Piton classification.
+    domain_priors:theater_ratio(autonomous_toolchain_sprawl, TR),
+    TR >= 0.70,
+    constraint_indexing:constraint_classification(autonomous_toolchain_sprawl, piton, context(agent_power(analytical), _, exit_options(arbitrage), _)).
+
+test(tangled_rope_properties) :-
+    % Verify that all structural requirements for a Tangled Rope are met.
+    narrative_ontology:constraint_beneficiary(autonomous_toolchain_sprawl, _), % -> has_coordination_function
+    narrative_ontology:constraint_victim(autonomous_toolchain_sprawl, _),     % -> has_asymmetric_extraction
+narrative_ontology:coordination_vitality(autonomous_toolchain_sprawl, dead).
+    domain_priors:requires_active_enforcement(autonomous_toolchain_sprawl).
 
 :- end_tests(autonomous_toolchain_sprawl_tests).
 
@@ -156,16 +159,26 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.55): High. The constraint directly extracts engineering time and focus—the most valuable resources in a tech organization—and converts them into system maintenance with diminishing returns. Suppression (0.65): High. The cost and risk of ripping out a deeply embedded, complex toolchain are immense, effectively suppressing alternatives. The organization is locked in by sunk costs and operational dependency. Theater Ratio (0.40): Moderate. Significant activity is dedicated to maintaining and reporting on the health of the automation tools themselves. Dashboards showing high deployment frequency can mask declining product innovation, creating a performative illusion of productivity.
+ * This constraint models a common failure mode in complex technological systems,
+ * where maintenance costs ("meta-work") consume the surplus generated by the
+ * system itself. The base extractiveness of 0.84 represents the proportion of
+ * engineering time and cognitive load siphoned into maintaining the automation
+ * rather than producing primary value. The high theater ratio (0.79) reflects
+ * the state where the organization continues to justify the system based on
+ * its original promise ("automation ROI") even though it no longer delivers net
+ * benefits, a classic sign of a Piton.
  *
- * PERSPECTIVAL GAP:
- *   The gap is stark. Senior Management perceives a Rope, a coordination tool delivering on promises of speed and efficiency, as measured by their high-level dashboards. The Platform Engineers, however, experience a Snare—a trap that consumes their work lives and from which there is no easy escape. This gap persists because the costs (maintenance complexity) and benefits (deployment velocity) are measured at different levels of the organization and are difficult to reconcile.
+ * The dual analytical perspectives (Tangled Rope vs. Piton) capture the lifecycle
+ * of this decay. An analysis focused on structure sees a Tangled Rope: it has
+ * beneficiaries, victims, and requires enforcement. An analysis focused on
+ * function and inertia sees a Piton: its primary purpose has atrophied into
+ * theatrical maintenance. The temporal data confirms this drift.
  *
- * DIRECTIONALITY LOGIC:
- *   The directionality is driven by the structural asymmetry. Beneficiaries like Senior Management have arbitrage exit options; they can change strategy or re-org if KPIs falter, leading to a low 'd' value and a Rope classification. Victims like the Platform Team are trapped by the system's complexity, giving them a high 'd' value and a Snare classification. The Application Developers' mobile exit option moderates their 'd' value, placing them in the Tangled Rope category, reflecting their mixed experience.
- *
- * MANDATROPHY ANALYSIS:
- *   This case resolves the mandatrophy by demonstrating how a system with a genuine, undeniable coordination function (automating CI/CD) can simultaneously function as a highly extractive mechanism. Labeling it purely as a Rope (management's view) would ignore the massive resource drain. Labeling it purely as a Snare (the platform team's view) would ignore its real benefits. The analytical classification of Tangled Rope correctly captures this duality, acknowledging both the coordination purpose and the severe extractive side-effects.
+ * * [RESOLVED MANDATROPHY]:
+ * The high extraction is resolved by classifying the system as a degraded
+ * Tangled Rope that has become a Piton. This prevents misclassifying it as a
+ * simple Snare by acknowledging its coordination origins, while the Piton
+ * classification correctly identifies its current inertial, non-functional state.
  */
 
 /* ==========================================================================
@@ -173,68 +186,47 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    inherent_vs_accidental_complexity,
-    'Is the toolchain''s complexity an inherent property of the problem domain, or is it accidental complexity caused by suboptimal tool choices and integration patterns?',
-    'Comparative analysis with organizations that solved similar problems with a radically simpler, unified toolchain. Audit of tool overlap and integration points.',
-    'If inherent, the constraint is closer to a Mountain. If accidental, it confirms the Snare/Tangled Rope classification and points to a clear resolution path (simplification).',
+    omega_toolchain_convergence,
+    'Is the observed complexity sprawl an artifact of current architectural choices (a fixable Snare) or an irreducible property of large-scale software systems (a Mountain)?',
+    'Tracking the ratio of "Maintenance Tickets" to "Feature Releases" across multiple organizations adopting different "No-Ops" platforms over a 5-year horizon.',
+    'If ratio drops significantly with new platforms: it was a Snare of architecture. If ratio remains high or rises: it is a Mountain of Software Complexity.',
     confidence_without_resolution(medium)
 ).
-
-narrative_ontology:omega_variable(inherent_vs_accidental_complexity, empirical, 'Distinguishing inherent problem complexity from accidental tool-induced complexity.').
-
-omega_variable(
-    negative_value_threshold,
-    'At what point does the maintenance overhead (in engineering hours) exceed the value generated by the automation (in saved deployment time and incident response)?',
-    'Total cost of ownership analysis, tracking engineering hours spent on toolchain maintenance vs. hours saved by automation. This requires rigorous activity-based costing.',
-    'Quantifying this threshold would make the extractive nature of the constraint undeniable to institutional beneficiaries, potentially triggering a strategic shift.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(negative_value_threshold, empirical, 'The threshold at which toolchain maintenance costs exceed automation benefits.').
-
-omega_variable(
-    unified_platform_fallacy,
-    'Would a single, unified ''super-platform'' solve the sprawl, or would it merely centralize the maintenance burden and create a monolithic single point of failure?',
-    'Analysis of case studies of companies that attempted large-scale platform consolidation. Modeling the failure modes of a monolithic vs. a distributed-but-complex toolchain.',
-    'If a unified platform is viable, it represents a clear exit from the trap. If not, it suggests the trap is a more fundamental consequence of pursuing automation in complex systems.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(unified_platform_fallacy, conceptual, 'Whether a unified platform is a solution or a different version of the same problem.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
+% Required for external script parsing
 narrative_ontology:interval(autonomous_toolchain_sprawl, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(auto_tr_t0, autonomous_toolchain_sprawl, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(auto_tr_t5, autonomous_toolchain_sprawl, theater_ratio, 5, 0.25).
-narrative_ontology:measurement(auto_tr_t10, autonomous_toolchain_sprawl, theater_ratio, 10, 0.4).
+% Theater ratio: Rising from functional toolchain coordination (0.15)
+% to inertial "Automation ROI" theater (0.79) as maintenance outpaces output.
+narrative_ontology:measurement(sprawl_tr_t0, autonomous_toolchain_sprawl, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(sprawl_tr_t5, autonomous_toolchain_sprawl, theater_ratio, 5, 0.48).
+narrative_ontology:measurement(sprawl_tr_t10, autonomous_toolchain_sprawl, theater_ratio, 10, 0.79).
 
-% Extraction over time
-narrative_ontology:measurement(auto_be_t0, autonomous_toolchain_sprawl, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(auto_be_t5, autonomous_toolchain_sprawl, base_extractiveness, 5, 0.35).
-narrative_ontology:measurement(auto_be_t10, autonomous_toolchain_sprawl, base_extractiveness, 10, 0.55).
-
-
-/* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA
-   ========================================================================== */
-
-narrative_ontology:coordination_type(autonomous_toolchain_sprawl, resource_allocation).
-narrative_ontology:affects_constraint(autonomous_toolchain_sprawl, developer_burnout).
-narrative_ontology:affects_constraint(autonomous_toolchain_sprawl, product_innovation_velocity).
+% Extraction: Progressive accumulation of maintenance debt liquidating
+% the engineer's creative surplus into recursive meta-layer upkeep.
+narrative_ontology:measurement(sprawl_ex_t0, autonomous_toolchain_sprawl, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(sprawl_ex_t5, autonomous_toolchain_sprawl, base_extractiveness, 5, 0.62).
+narrative_ontology:measurement(sprawl_ex_t10, autonomous_toolchain_sprawl, base_extractiveness, 10, 0.84).
 
 /* ==========================================================================
-   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
    ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The toolchain is a form of infrastructure for managing other infrastructure.
+narrative_ontology:coordination_type(autonomous_toolchain_sprawl, global_infrastructure).
+
+% Network relationships (structural influence edges)
+% The sprawl directly impacts the working conditions and well-being of engineers.
+narrative_ontology:affects_constraint(autonomous_toolchain_sprawl, platform_engineer_burnout).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: alzheimers_nlrp3_inflammasome
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
-% Status: [ACTIVE]
+% Generated: 2024-05-21
 % ============================================================================
 
 :- module(constraint_alzheimers_nlrp3_inflammasome, []).
@@ -41,8 +40,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,25 +55,24 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: alzheimers_nlrp3_inflammasome
  *   human_readable: Alzheimer's Disease Pathogenesis via NLRP3 Inflammasome
- *   domain: medical/biological
+ *   domain: technological
  *
  * SUMMARY:
- *   This constraint models the pathological role of the NLRP3 inflammasome, a
- *   component of the innate immune system, in driving the neuroinflammation
- *   and neuronal death characteristic of Alzheimer's Disease (AD). While the
- *   pathway is a natural biological mechanism, its chronic activation by
- *   AD-related proteins like amyloid-beta creates a self-perpetuating cycle
- *   of damage. The classification of this constraint is highly dependent on
- *   the observer's structural position: it is simultaneously a fundamental
- *   law of biology to a researcher, a solvable technical challenge to a drug
- *   company, and a devastating, life-destroying trap to a patient.
+ *   This constraint models the biological mechanism of Alzheimer's-related
+ *   cognitive decline as driven by the NLRP3 inflammasome pathway. The
+ *   pathway, when pathologically activated, extracts cognitive function,
+ *   memory, and quality of life from individuals. The constraint is the
+ *   biological reality that must be overcome by therapeutic intervention,
+ *   as described in recent research on reversing its effects in mice.
  *
- * KEY AGENTS:
- *   - Patients and Families: Primary victims (powerless/trapped) — bear the full, irreversible cost of the disease's progression.
- *   - Neuronal Cells: The direct biological target of the extractive process.
- *   - Pharmaceutical Developers: Institutional beneficiaries (institutional/arbitrage) — the existence of a clear, targetable pathway creates a market for therapeutic intervention.
- *   - Public Health Systems: Organized victims (organized/constrained) — must manage the societal costs of care and lost productivity.
- *   - Analytical Researchers: Observers (analytical/analytical) — seek to understand the mechanism as a natural process.
+ * KEY AGENTS (by structural relationship):
+ *   - alzheimers_patients: Primary target (powerless/trapped) — bear the full
+ *     extraction of cognitive function.
+ *   - pharma_and_care_industry: Primary beneficiary (institutional/arbitrage) —
+ *     benefits from the status quo of managing an incurable disease with
+ *     existing palliative treatments and long-term care services.
+ *   - research_community: Analytical observer — sees the full biological
+ *     structure and its devastating effects.
  */
 
 /* ==========================================================================
@@ -80,60 +80,82 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(alzheimers_nlrp3_inflammasome, 0.72).
-domain_priors:suppression_score(alzheimers_nlrp3_inflammasome, 0.95).
-domain_priors:theater_ratio(alzheimers_nlrp3_inflammasome, 0.1).
+domain_priors:base_extractiveness(alzheimers_nlrp3_inflammasome, 0.85).
+domain_priors:suppression_score(alzheimers_nlrp3_inflammasome, 0.90).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(alzheimers_nlrp3_inflammasome, 0.05).       % Piton detection (>= 0.70)
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(alzheimers_nlrp3_inflammasome, extractiveness, 0.72).
-narrative_ontology:constraint_metric(alzheimers_nlrp3_inflammasome, suppression_requirement, 0.95).
-narrative_ontology:constraint_metric(alzheimers_nlrp3_inflammasome, theater_ratio, 0.1).
+narrative_ontology:constraint_metric(alzheimers_nlrp3_inflammasome, extractiveness, 0.85).
+narrative_ontology:constraint_metric(alzheimers_nlrp3_inflammasome, suppression_requirement, 0.90).
+narrative_ontology:constraint_metric(alzheimers_nlrp3_inflammasome, theater_ratio, 0.05).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(alzheimers_nlrp3_inflammasome, tangled_rope).
+% --- NL Profile Metrics (required for mountain constraints) ---
+% N/A. While a "natural" biological process, its high extraction and
+% suppression disqualify it from being a Mountain. A disease is not a
+% fundamental, neutral law of physics; it is an extractive process.
+
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(alzheimers_nlrp3_inflammasome, snare).
 narrative_ontology:human_readable(alzheimers_nlrp3_inflammasome, "Alzheimer's Disease Pathogenesis via NLRP3 Inflammasome").
-narrative_ontology:topic_domain(alzheimers_nlrp3_inflammasome, "medical/biological").
+narrative_ontology:topic_domain(alzheimers_nlrp3_inflammasome, "technological").
 
-domain_priors:requires_active_enforcement(alzheimers_nlrp3_inflammasome).
+% --- Binary flags ---
+% N/A: No sunset clause, no active human enforcement needed.
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(alzheimers_nlrp3_inflammasome, pharmaceutical_developers).
-narrative_ontology:constraint_beneficiary(alzheimers_nlrp3_inflammasome, innate_immune_system_signaling).
-narrative_ontology:constraint_victim(alzheimers_nlrp3_inflammasome, patients_and_families).
-narrative_ontology:constraint_victim(alzheimers_nlrp3_inflammasome, neuronal_cells).
-narrative_ontology:constraint_victim(alzheimers_nlrp3_inflammasome, public_health_systems).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(alzheimers_nlrp3_inflammasome, pharma_and_care_industry).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(alzheimers_nlrp3_inflammasome, alzheimers_patients).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PATIENT (SNARE) — Experiences the biological pathway as a purely extractive process, removing cognitive function, identity, and life. They are trapped within their own biology with no exit. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.82. This is a clear Snare.
+% PERSPECTIVE 1: THE PRIMARY TARGET (THE PATIENT)
+% The patient is powerless and trapped within the biological progression of
+% the disease. The high extraction and suppression make it a perfect Snare.
+% Engine derives d from: victim + trapped → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(local))). % Disease is experienced locally by the individual.
 
-% PERSPECTIVE 2: PHARMACEUTICAL DEVELOPER (ROPE) — The well-defined biological pathway is a valuable target. It coordinates research, investment, and drug development. For this agent, the constraint is a problem to be solved, and its existence enables a multi-billion dollar industry. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.12. The negative effective extraction signifies a net beneficiary.
-constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, rope,
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (THE INDUSTRY)
+% The pharmaceutical and long-term care industries have business models built
+% around managing the chronic, incurable nature of the disease. From this
+% perspective, the disease's existence is a stable "coordination" point for
+% a massive market.
+% Engine derives d from: beneficiary + arbitrage → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, scaffold,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: PUBLIC HEALTH SYSTEM (TANGLED ROPE) — Faces a dual problem: coordinating a massive care and resource allocation effort for millions of patients (coordination function) while bearing the immense, unrecoverable costs of the disease (extractive function). It is constrained by the biological reality of the disease. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.54.
-constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, tangled_rope,
-    context(agent_power(organized),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) — Views the NLRP3 pathway as a fundamental, unchangeable law of biology. From this perspective, it's a mechanism to be understood, not a system of extraction. However, the engine will flag this as a 'false summit': the high base extractiveness (ε=0.72) and suppression (0.95) are inconsistent with a true Mountain, revealing that what appears as natural law is, in its effect, a highly coercive system.
-constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, mountain,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (THE RESEARCH COMMUNITY)
+% Researchers see the underlying biology, the immense extraction from patients,
+% and the industrial incentives. They recognize the process is not a functional
+% coordination but a pathological extraction of life and function.
+% The classification aligns with the victim's experience: it's a Snare.
+constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(universal))).
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -141,14 +163,23 @@ constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, mou
 
 :- begin_tests(alzheimers_nlrp3_inflammasome_tests).
 
-test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
+    % Verify the core perspectival gap between patient and industry.
+    constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
+    constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(alzheimers_nlrp3_inflammasome, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(analytical_view_is_snare, [nondet]) :-
+    % Verify the analytical view matches the constraint claim.
+    constraint_indexing:constraint_classification(alzheimers_nlrp3_inflammasome, snare, context(agent_power(analytical), _, _, _)).
+
+test(snare_threshold_validation) :-
+    % Verify that the base metrics meet the criteria for a Snare.
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(suppression_metric_name, SupMetricName),
+    narrative_ontology:constraint_metric(alzheimers_nlrp3_inflammasome, ExtMetricName, E),
+    narrative_ontology:constraint_metric(alzheimers_nlrp3_inflammasome, SupMetricName, S),
+    E >= 0.46,
+    S >= 0.60.
 
 :- end_tests(alzheimers_nlrp3_inflammasome_tests).
 
@@ -158,16 +189,41 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.72) is very high, representing the severe and irreversible loss of cognitive function and neuronal life caused by the chronic neuroinflammatory process. Suppression (0.95) is near-total, as there are no biological alternatives for a neuron to 'opt out' of the inflammatory environment. The 'requires_active_enforcement' flag is true because the continuous presence of pathological proteins like Aβ and tau actively triggers and sustains the inflammasome's activation. The theater ratio (0.10) is low, as this is a direct and non-performative biological process.
+ *   - Base Extractiveness (0.85): Extremely high, representing the near-total
+ *     destruction of cognitive function, memory, and quality of life over the
+ *     course of the disease.
+ *   - Suppression Score (0.90): High, as the pathological inflammatory cascade
+ *     actively suppresses normal neural function and is biologically
+ *     inescapable without a targeted intervention.
+ *   - Theater Ratio (0.05): Very low. The biological process itself has no
+ *     performative aspect.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For a patient, the disease is a Snare (χ≈0.82), a pure extraction of self. For a pharmaceutical company, the same mechanism is a Rope (χ≈-0.12), a coordination point for R&D that promises immense profit. The most significant gap is with the analytical observer, who frames the mechanism as a Mountain—a law of nature. The system's 'false summit' detection mechanism is critical here: it uses the high base metrics (ε=0.72) to show that this 'Mountain' is an illusion that naturalizes a deeply extractive process. What one agent sees as an object of study, another experiences as a trap.
+ *   The gap is profound. For the patient (powerless/trapped), the disease is a
+ *   Snare that consumes their identity and future. For the incumbent industry
+ *   (institutional/arbitrage), the disease's intractability creates a stable,
+ *   predictable market for palliative drugs and long-term care services, making
+ *   the status quo a Rope that coordinates their economic activity. The discovery
+ *   of a potential cure threatens this Rope.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is derived from the clear victim/beneficiary structure. Patients and their families are the ultimate victims with no exit, leading to a high directionality (d≈0.95) and the Snare classification. Pharmaceutical developers are clear beneficiaries who can choose to invest or not (arbitrage), leading to a low, even negative, directionality (d≈0.05) and the Rope classification. The public health system is a victim but has organizational capacity, placing it in the middle as a Tangled Rope.
+ *   - Victim: 'alzheimers_patients' are the unambiguous victims. They bear 100% of
+ *     the biological cost. The engine assigns them a high directionality (d),
+ *     leading to a high effective extraction (χ) and a Snare classification.
+ *   - Beneficiary: 'pharma_and_care_industry' benefits economically from the
+ *     existence of a large patient population requiring management, not cure. The
+ *     engine assigns them a low directionality (d), a negative χ, and a Rope
+ *     classification. This correctly models their structural incentive to maintain
+ *     the system.
  *
  * MANDATROPHY ANALYSIS:
- *   This case resolves the mandatrophy by demonstrating that a single, high-extraction biological process can be correctly classified as a Snare, a Rope, and a (false) Mountain simultaneously. The resolution is not to pick one 'correct' type, but to recognize that the classification is an indexical property of the observer's relationship to the constraint. The framework correctly identifies the patient's experience as a Snare while also modeling the pharma company's experience as a Rope, preventing the mislabeling of a devastating disease as a mere 'coordination problem' from the victim's perspective.
+ *   [RESOLVED MANDATROPHY] This model correctly avoids mislabeling a devastating
+ *   disease as a "natural" or "neutral" phenomenon (a Mountain). By focusing
+ *   on the extractive and suppressive metrics from the victim's perspective,
+ *   it classifies the disease's mechanism as a Snare. It simultaneously
+ *   captures why an institutional actor would perceive this same reality as a
+ *   Rope of pure coordination, revealing the structural incentives that can
+ *   create inertia against disruptive cures.
  */
 
 /* ==========================================================================
@@ -175,71 +231,70 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    causality_vs_correlation,
-    'Is chronic NLRP3 inflammasome activation a primary cause of Alzheimer''s neurodegeneration, or a downstream consequence of other pathologies like amyloid-beta accumulation?',
-    'Longitudinal human studies with early-stage intervention trials targeting NLRP3. If inhibition halts cognitive decline, causality is strongly supported.',
-    'If causal, the Snare classification is correct. If merely correlational, the constraint is misidentified; NLRP3 is a symptom, and the true Snare lies further upstream (e.g., in Aβ production).',
-    confidence_without_resolution(high)
+    omega_alzheimers_nlrp3,
+    'Is the NLRP3 inflammasome pathway a primary causal driver of Alzheimer`s, or a significant but secondary downstream effect of another process (like amyloid plaques)?',
+    'Longitudinal human clinical trials of NLRP3 inhibitors, measuring both cognitive outcomes and other biomarkers like amyloid/tau levels.',
+    'If causal, this constraint is the core Snare to be dismantled. If secondary, dismantling it may only provide partial relief, and the primary Snare remains elsewhere.',
+    confidence_without_resolution(low)
 ).
-
-narrative_ontology:omega_variable(causality_vs_correlation, empirical, 'Distinguishing whether NLRP3 activation is a root cause or a symptom of AD.').
-
-omega_variable(
-    therapeutic_tractability,
-    'Can the NLRP3 pathway be safely and effectively inhibited in humans over long periods without compromising essential immune functions?',
-    'Completion of Phase II and III clinical trials for NLRP3 inhibitors, assessing both efficacy in slowing AD and long-term safety profiles.',
-    'If tractable, the constraint transforms into a Scaffold for patients (a temporary problem being managed). If intractable due to side effects, it remains a hard Snare/Mountain.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(therapeutic_tractability, empirical, 'Whether NLRP3 inhibitors are a viable long-term therapy for AD.').
-
-omega_variable(
-    off_target_effects,
-    'What are the systemic consequences of downregulating a core component of the innate immune system in an elderly population?',
-    'Post-market surveillance and long-term observational studies of patients on NLRP3 inhibitors.',
-    'If off-target effects are severe (e.g., increased susceptibility to infections), the ''solution'' creates a new Snare, trading one disease for another. If manageable, the Rope/Scaffold view holds.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(off_target_effects, empirical, 'Unintended consequences of long-term NLRP3 inhibition in the elderly.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(alzheimers_nlrp3_inflammasome, 2001, 2026).
+% Required for external script parsing. Interval represents disease progression.
+narrative_ontology:interval(alzheimers_nlrp3_inflammasome, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(alzh_tr_t0, alzheimers_nlrp3_inflammasome, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(alzh_tr_t12, alzheimers_nlrp3_inflammasome, theater_ratio, 12, 0.08).
-narrative_ontology:measurement(alzh_tr_t25, alzheimers_nlrp3_inflammasome, theater_ratio, 25, 0.1).
+% Required as base_extractiveness > 0.46.
+% Models the progression of the disease within a patient's biographical timeline.
+% T=0 is early stage, T=10 is late stage.
 
-% Extraction over time
-narrative_ontology:measurement(alzh_be_t0, alzheimers_nlrp3_inflammasome, base_extractiveness, 0, 0.3).
-narrative_ontology:measurement(alzh_be_t12, alzheimers_nlrp3_inflammasome, base_extractiveness, 12, 0.55).
-narrative_ontology:measurement(alzh_be_t25, alzheimers_nlrp3_inflammasome, base_extractiveness, 25, 0.72).
+% Theater ratio over time (remains negligible):
+narrative_ontology:measurement(az_tr_t0, alzheimers_nlrp3_inflammasome, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(az_tr_t5, alzheimers_nlrp3_inflammasome, theater_ratio, 5, 0.05).
+narrative_ontology:measurement(az_tr_t10, alzheimers_nlrp3_inflammasome, theater_ratio, 10, 0.05).
 
+% Extraction over time (increases as disease worsens):
+narrative_ontology:measurement(az_ex_t0, alzheimers_nlrp3_inflammasome, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(az_ex_t5, alzheimers_nlrp3_inflammasome, base_extractiveness, 5, 0.70).
+narrative_ontology:measurement(az_ex_t10, alzheimers_nlrp3_inflammasome, base_extractiveness, 10, 0.85).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(alzheimers_nlrp3_inflammasome, enforcement_mechanism).
-narrative_ontology:affects_constraint(alzheimers_nlrp3_inflammasome, amyloid_beta_cascade).
-narrative_ontology:affects_constraint(alzheimers_nlrp3_inflammasome, tau_pathology_propagation).
+% The pathological immune response can be seen as a misapplication of biological
+% resources, hence 'resource_allocation'.
+narrative_ontology:coordination_type(alzheimers_nlrp3_inflammasome, resource_allocation).
+
+% --- Network Decomposition (Constraint Families) ---
+% Alzheimer's is a complex disease. This constraint story focuses on one
+% specific mechanism (NLRP3). It is part of a larger family of constraints
+% that collectively constitute the disease.
 
 % DUAL FORMULATION NOTE:
-% This constraint is downstream of the mechanisms that produce amyloid-beta and tau pathologies. While those constraints have their own ε values related to protein misfolding, this constraint's ε=0.72 specifically measures the extractive damage caused by the immune system's response to them.
+% This constraint is one of several stories decomposed from the colloquial label
+% "Alzheimer's Disease". Decomposed because ε differs across observables
+% (e.g., measuring cognitive decline vs. measuring plaque density).
+%
+% Related stories:
+%   - alzheimers_amyloid_plaque (ε≈0.55, Tangled Rope) - The classic hypothesis.
+%   - alzheimers_tau_tangles (ε≈0.65, Snare) - Another key pathological feature.
+
+narrative_ontology:affects_constraint(alzheimers_amyloid_plaque, alzheimers_nlrp3_inflammasome).
+narrative_ontology:affects_constraint(alzheimers_nlrp3_inflammasome, alzheimers_tau_tangles).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides needed. The automatic derivation from beneficiary/victim groups
+% and exit options accurately captures the structural relationships between
+% patients and the healthcare/pharma industry in this context.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

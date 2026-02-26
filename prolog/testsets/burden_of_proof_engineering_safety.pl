@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: burden_of_proof_engineering_safety
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
-% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
 % Generated: 2024-05-21
-% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_burden_of_proof_engineering_safety, []).
@@ -12,19 +11,6 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
-
-% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
-% Each constraint story must have a single, stable base extractiveness (ε).
-% If changing the observable used to evaluate this constraint would change ε,
-% you are looking at two distinct constraints. Write separate .pl files for
-% each, link them with affects_constraint/2, and document the relationship
-% in both files' narrative context sections.
-%
-% The context tuple is CLOSED at arity 4: (P, T, E, S).
-% Do not add measurement_basis, beneficiary/victim, or any other arguments.
-% Linter Rule 23 enforces context/4.
-%
-% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -41,8 +27,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -52,95 +38,86 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: burden_of_proof_engineering_safety
- *   human_readable: Reversal of the Engineering Burden of Proof
- *   domain: technological/safety_engineering
- *
- * SUMMARY:
- *   This constraint models the institutional and cultural shift within
- *   high-stakes engineering organizations where the burden of proof for
- *   safety is reversed. Instead of engineers being required to prove a system
- *   is safe to operate, a culture emerges where managers and marketers demand
- *   that engineers prove a system is definitively unsafe to delay or stop its
- *   launch. This transfers immense, often hidden, risk from the organization
- *   to its end-users. The Boeing 737 MAX crashes are a canonical example of
- *   this dynamic, where internal pressure to compete with Airbus led to the
- *   suppression of engineering concerns and a reversal of the normal safety
- *   validation process.
- *
- * KEY AGENTS:
- *   - Corporate Management: Primary beneficiary (institutional/arbitrage) - Benefits from faster time-to-market and lower development costs.
- *   - End-Users (Passengers, Operators): Primary victim (powerless/trapped) - Bear the ultimate physical risk without knowledge or consent.
- *   - Dissenting Engineers: Secondary victim (moderate/constrained) - Face career risk for upholding traditional engineering ethics.
- *   - Captured Regulators: Institutional actor (institutional/constrained) - Maintain the performance of oversight while lacking the resources or independence to enforce standards, becoming a Piton.
- *   - Engineering Epistemic Integrity: Abstract victim (powerless/trapped) - The professional standard itself is degraded.
+ * * constraint_id: burden_of_proof_engineering_safety
+ * human_readable: Reversal of the Engineering Burden of Proof
+ * domain: technological
+ * * SUMMARY:
+ * This constraint represents a specific institutional failure where the
+ * "burden of proof" shifted from requiring proof that it was SAFE to fly
+ * to requiring proof that it was UNSAFE to fly. This technical/
+ * engineering variety of the constraint is distinct from legal burdens
+ * as it operates on the threshold of physical system failure rather
+ * than social culpability, as seen in the 1986 Challenger Launch Decision.
+ * * KEY AGENTS:
+ * - Thiokol Engineers (e.g., Roger Boisjoly): Subject (Powerless)
+ * - NASA Management (e.g., Lawrence Mulloy): Beneficiary (Institutional)
+ * - The Rogers Commission: Auditor (Analytical)
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% --- Numerical metrics ---
-domain_priors:base_extractiveness(burden_of_proof_engineering_safety, 0.65).
-domain_priors:suppression_score(burden_of_proof_engineering_safety, 0.75).
-domain_priors:theater_ratio(burden_of_proof_engineering_safety, 0.75).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(burden_of_proof_engineering_safety, 0.9). % Rationale: Reversing the burden extracts the safety margin, ultimately trading crew life for schedule adherence.
+domain_priors:suppression_score(burden_of_proof_engineering_safety, 0.8).   % Rationale: The demand for "conclusive data" of failure suppresses valid engineering intuition and historical erosion data.
+domain_priors:theater_ratio(burden_of_proof_engineering_safety, 0.1).       % Rationale: The constraint was brutally functional, not theatrical.
 
-% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, extractiveness, 0.65).
-narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, theater_ratio, 0.75).
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, extractiveness, 0.9).
+narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, suppression_requirement, 0.8).
+narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, theater_ratio, 0.1).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(burden_of_proof_engineering_safety, tangled_rope).
+% Constraint self-claim (what does the constraint claim to be?)
+% It claims to be a coordination mechanism for making decisions under uncertainty.
+narrative_ontology:constraint_claim(burden_of_proof_engineering_safety, snare).
 narrative_ontology:human_readable(burden_of_proof_engineering_safety, "Reversal of the Engineering Burden of Proof").
-narrative_ontology:topic_domain(burden_of_proof_engineering_safety, "technological/safety_engineering").
+narrative_ontology:topic_domain(burden_of_proof_engineering_safety, "technological").
 
-domain_priors:requires_active_enforcement(burden_of_proof_engineering_safety).
+% Binary flags
+domain_priors:requires_active_enforcement(burden_of_proof_engineering_safety). % NASA management explicitly demanded Thiokol "prove it" was unsafe.
 
-% --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(burden_of_proof_engineering_safety, corporate_management).
-narrative_ontology:constraint_beneficiary(burden_of_proof_engineering_safety, shareholders).
-narrative_ontology:constraint_victim(burden_of_proof_engineering_safety, end_users).
-narrative_ontology:constraint_victim(burden_of_proof_engineering_safety, flight_crews).
-narrative_ontology:constraint_victim(burden_of_proof_engineering_safety, dissenting_engineers).
-narrative_ontology:constraint_victim(burden_of_proof_engineering_safety, engineering_epistemic_integrity).
+% Structural property derivation hooks:
+narrative_ontology:constraint_beneficiary(burden_of_proof_engineering_safety, nasa_launch_schedule).
+narrative_ontology:constraint_victim(burden_of_proof_engineering_safety, crew_safety).
+narrative_ontology:constraint_victim(burden_of_proof_engineering_safety, engineering_integrity).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
    ========================================================================== */
 
-% PERSPECTIVE 1: END-USER (SNARE) — The end-user is unaware of the reversed burden of proof and has no ability to exit the system or assess the increased risk. They bear the full, uncompensated cost of a failure. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.24. This is extreme extraction.
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The engineer is trapped by a demand for impossible proof. The effective
+% extraction χ = 0.9 (ε) * 1.5 (π(powerless)) * 0.8 (σ(local)) = 1.08, which
+% is an extreme Snare. It feels like a Mountain due to its immovability, but
+% its constructed, high-extraction nature makes it a Snare.
 constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, snare,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(immediate),
             exit_options(trapped),
-            spatial_scope(global))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 2: CORPORATE MANAGEMENT (ROPE) — From this perspective, the constraint is a coordination mechanism to overcome 'excessive' engineering caution, meet deadlines, and deliver shareholder value. It aligns the organization toward market goals. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08. A net subsidy.
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% Management sees this as a tool to filter "emotional" engineering concerns
+% and coordinate a complex launch. The effective extraction is negative:
+% χ = 0.9 (ε) * -0.2 (π(institutional)) * 1.0 (σ(national)) = -0.18.
+% This classifies as a Rope, creating a severe perspectival gap.
 constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, rope,
     context(agent_power(institutional),
-            time_horizon(immediate),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: DISSENTING ENGINEER (TANGLED ROPE) — This agent understands both the coordination function (shipping a product) and the severe extraction of safety margins. They are constrained by career risk and organizational pressure, unable to easily exit or reverse the policy. d≈0.85, f(d)≈1.32, σ=1.0 → χ≈0.86.
-constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, tangled_rope,
-    context(agent_power(moderate),
             time_horizon(biographical),
-            exit_options(constrained),
+            exit_options(mobile),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: CAPTURED REGULATOR (PITON) — The regulatory body maintains the rituals of safety certification, but its function has atrophied due to industry pressure or resource starvation. The process is performative, not functional. The high theater_ratio (0.75) satisfies the piton gate.
-constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, piton,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's objective classification. It recognizes the genuine (if perverse) coordination function of aligning the company to a goal, but also the severe, asymmetric extraction of safety from victims. This is the canonical definition of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90.
-constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, tangled_rope,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SNARE)
+% The Rogers Commission, with analytical distance, sees the system's true
+% nature. The effective extraction is very high:
+% χ = 0.9 (ε) * 1.15 (π(analytical)) * 1.2 (σ(global)) = 1.242.
+% This is a clear Snare that chokes out safety data to serve a schedule.
+constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, snare,
     context(agent_power(analytical),
-            time_horizon(civilizational),
+            time_horizon(historical),
             exit_options(analytical),
             spatial_scope(global))).
 
@@ -150,18 +127,21 @@ constraint_indexing:constraint_classification(burden_of_proof_engineering_safety
 
 :- begin_tests(burden_of_proof_engineering_safety_tests).
 
-test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+test(perspectival_gap_snare_vs_rope) :-
+    % Verify the gap between the engineer (powerless) and management (institutional).
+    constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, TypePowerless,
+        context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, TypeInstitutional,
+        context(agent_power(institutional), _, _, _)),
+    assertion(TypePowerless == snare),
+    assertion(TypeInstitutional == rope),
+    TypePowerless \= TypeInstitutional.
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(burden_of_proof_engineering_safety, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
-
-test(piton_threshold) :-
-    domain_priors:theater_ratio(burden_of_proof_engineering_safety, TR),
-    TR >= 0.70.
+test(high_extraction_and_suppression) :-
+    narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, extractiveness, E),
+    narrative_ontology:constraint_metric(burden_of_proof_engineering_safety, suppression_requirement, S),
+    assertion(E >= 0.9),
+    assertion(S >= 0.8).
 
 :- end_tests(burden_of_proof_engineering_safety_tests).
 
@@ -171,74 +151,69 @@ test(piton_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.65) is high because the value being extracted is the safety margin, a critical component of product value, which is transferred as risk to users. Suppression (0.75) is high, reflecting the organizational mechanisms used to silence dissent, ignore negative data, and push projects forward against the warnings of technical experts. Theater Ratio (0.75) is high because the formal safety review processes are maintained for legal and regulatory compliance, but their actual function of ensuring safety is hollowed out, becoming a box-checking exercise.
+ * The core of this constraint is the perspectival gap between a Snare and a Rope.
+ * For NASA management (institutional), demanding conclusive proof of failure was
+ * a coordination mechanism (Rope) to prevent delays based on what they perceived
+ * as ambiguous engineering concerns. For the engineers (powerless), this demand
+ * was an impossible task that suppressed valid safety data, extracting the crew's
+ * lives to meet a schedule (Snare). The engineer feels trapped as if by a Mountain,
+ * but the constraint is artificial and extractive, hence it is a Snare.
+ * The analysis confirms that the presence of a safer, traditional alternative
+ * (requiring proof of SAFETY) that was actively suppressed solidifies the Snare
+ * classification from any non-beneficiary perspective.
  *
- * PERSPECTIVAL GAP:
- *   The gap is stark. Management perceives a necessary coordination tool (Rope) for achieving business objectives. The powerless end-user, if they knew the facts, would perceive a deadly trap (Snare). The engineer caught in the system sees the conflict clearly: a system that coordinates action (the 'rope' part) but does so by extracting a critical good—safety (the 'tangled' part). The regulator's perspective as a Piton shows institutional decay, where form persists long after function has ceased.
- *
- * DIRECTIONALITY LOGIC:
- *   Beneficiaries (management) have arbitrage exit options and an immediate time horizon, leading to a low 'd' value and a Rope classification. Victims (end-users) are trapped with no exit, leading to a high 'd' value and a Snare classification. The dissenting engineer is constrained, not fully trapped, placing them in the Tangled Rope category. This distribution of directionality based on structural position is what allows a single set of base metrics to generate multiple, valid classifications.
- *
- * MANDATROPHY ANALYSIS:
- *   This constraint is a prime example of resolving mandatrophy. A naive analysis might label the corporation's actions as purely evil (Snare) or the process as simply 'how business is done' (Rope). Deferential Realism shows that both are structurally correct perspectives. The system *is* a Snare to the passenger and *is* a Rope to the executive. The analytical classification of Tangled Rope correctly identifies the core structure: a mechanism that combines a genuine coordination function with a severe, asymmetric extraction of value.
+ * [RESOLVED MANDATROPHY]
+ * The system correctly identifies this as a high-extraction Snare, not a
+ * Tangled Rope, because the "coordination" function claimed by management is
+ * entirely subsumed by its extractive purpose. There is no genuine, separable
+ * coordination benefit for the victims; the coordination only serves the extraction.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    intent_vs_emergence,
-    'Was the reversal of the burden of proof a deliberate, conscious decision by management for profit, or an emergent cultural property born from market pressures and organizational complexity?',
-    'Internal communications, whistleblower testimony, and board-level meeting minutes.',
-    'If deliberate, the constraint is closer to a pure Snare. If emergent, it is more accurately a Tangled Rope, where the coordination function is a genuine (though misguided) aspect of the system''s behavior.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(intent_vs_emergence, conceptual, 'Distinguishing between deliberate extraction and emergent institutional failure.').
-
-omega_variable(
-    restoration_pathway,
-    'Can external events (e.g., a catastrophic failure, new legislation) successfully and permanently restore the original ''prove it is safe'' burden of proof?',
-    'Longitudinal study of organizational behavior and safety metrics following a major incident and regulatory intervention.',
-    'If restoration is possible, the constraint can be dismantled. If the culture is permanently altered, the constraint becomes a persistent Piton, with safety processes remaining theatrical despite reforms.',
+    omega_burden_of_proof,
+    "Can an engineering organization ever define a 'safe' burden of proof that is not ultimately a subjective value judgment?",
+    "Comparative analysis of probabilistic risk assessment (PRA) standards across nuclear vs. aerospace industries.",
+    "If Yes: The burden of proof can be a stable Rope. If No: It is always at risk of degrading into a Snare or an institutional Mountain.",
     confidence_without_resolution(low)
 ).
-
-narrative_ontology:omega_variable(restoration_pathway, empirical, 'Feasibility of reversing the cultural shift in engineering safety standards.').
-
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(burden_of_proof_engineering_safety, 1990, 2020).
+% Required for external script parsing
+narrative_ontology:interval(burden_of_proof_engineering_safety, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(burd_tr_t1990, burden_of_proof_engineering_safety, theater_ratio, 1990, 0.25).
-narrative_ontology:measurement(burd_tr_t2005, burden_of_proof_engineering_safety, theater_ratio, 2005, 0.5).
-narrative_ontology:measurement(burd_tr_t2020, burden_of_proof_engineering_safety, theater_ratio, 2020, 0.75).
+% Temporal data models the degradation of NASA's safety culture leading up
+% to the Challenger disaster. Extraction (pressure to launch) increased while
+% the process remained brutally functional (low theater).
+%
+% Theater ratio over time (metric_substitution):
+narrative_ontology:measurement(bopes_tr_t0, burden_of_proof_engineering_safety, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(bopes_tr_t5, burden_of_proof_engineering_safety, theater_ratio, 5, 0.08).
+narrative_ontology:measurement(bopes_tr_t10, burden_of_proof_engineering_safety, theater_ratio, 10, 0.1).
 
-% Extraction over time
-narrative_ontology:measurement(burd_be_t1990, burden_of_proof_engineering_safety, base_extractiveness, 1990, 0.2).
-narrative_ontology:measurement(burd_be_t2005, burden_of_proof_engineering_safety, base_extractiveness, 2005, 0.45).
-narrative_ontology:measurement(burd_be_t2020, burden_of_proof_engineering_safety, base_extractiveness, 2020, 0.65).
-
+% Extraction over time (extraction_accumulation):
+narrative_ontology:measurement(bopes_ex_t0, burden_of_proof_engineering_safety, base_extractiveness, 0, 0.7).
+narrative_ontology:measurement(bopes_ex_t5, burden_of_proof_engineering_safety, base_extractiveness, 5, 0.8).
+narrative_ontology:measurement(bopes_ex_t10, burden_of_proof_engineering_safety, base_extractiveness, 10, 0.9).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
    ========================================================================== */
 
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The constraint functions as a perverse rule for decision-making.
 narrative_ontology:coordination_type(burden_of_proof_engineering_safety, enforcement_mechanism).
-narrative_ontology:affects_constraint(burden_of_proof_engineering_safety, regulatory_capture).
-
-/* ==========================================================================
-   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
-   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

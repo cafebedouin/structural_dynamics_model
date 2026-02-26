@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: bonbon_drop_sticker_craze
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-28
-% Status: [ACTIVE]
+% Generated: 2024-05-21
 % ============================================================================
 
 :- module(constraint_bonbon_drop_sticker_craze, []).
@@ -32,18 +31,13 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3,
-    narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2.
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,25 +47,21 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: bonbon_drop_sticker_craze
  *   human_readable: UHA Mikakuto's "Bonbon Drop" Collectible Sticker Promotion
- *   domain: economic/social
+ *   domain: economic
  *
  * SUMMARY:
- *   The UHA Mikakuto 'Bonbon Drop' sticker promotion is a classic example of
- *   a gacha (randomized collectible) mechanic applied to a low-cost consumer
- *   good. By bundling collectible, scarce stickers with candy, the system
- *   incentivizes repeat purchases far beyond the consumer's desire for the
- *   base product. This is amplified by social dynamics, including peer
- *   pressure among children and a nostalgia-driven resurgence of 'Heisei
- *   Joji' (90s/00s girl) culture among adults. The resulting manufactured
- *   scarcity creates a frantic consumer culture ('sticker patrols') and a
- *   lucrative secondary market for resellers.
+ *   The Japanese candy company UHA Mikakuto packages its "Bonbon Drop" candy
+ *   with collectible stickers featuring popular characters. The stickers are
+ *   distributed randomly, with certain designs being extremely rare. This has
+ *   created a speculative frenzy, with consumers buying large quantities of
+ *   the candy solely to acquire the stickers, driving a secondary market
+ *   where rare stickers sell for hundreds of times the candy's price.
  *
- * KEY AGENTS:
- *   - UHA Mikakuto & Q-LiA: Primary beneficiaries (institutional/arbitrage) - Drive candy sales and brand engagement through manufactured scarcity.
- *   - Collectors (Children & Adults): Primary victims (powerless/trapped to moderate/mobile) - Bear the financial cost of the gacha mechanic.
- *   - Parents of Collectors: Secondary victims (moderate/constrained) - Provide the funding for children's collections under social pressure.
- *   - Resellers: Secondary beneficiaries (organized/mobile) - Exploit the manufactured scarcity for profit on the secondary market.
- *   - Analytical Observer: Sees the full structure of coordination and extraction.
+ * KEY AGENTS (by structural relationship):
+ *   - Sticker Collectors: Primary target (powerless/trapped) — bear the cost of the chase, buying unwanted products for a chance at a rare item.
+ *   - UHA Mikakuto (Manufacturer): Primary beneficiary (institutional/arbitrage) — benefits from massively inflated sales and brand visibility.
+ *   - Retailers (e.g., Don Quijote): Secondary beneficiary (organized/constrained) — benefit from increased sales and foot traffic, but have less control than the manufacturer.
+ *   - Analytical Observer: Analytical observer — sees the full structure of the engineered scarcity and value extraction.
  */
 
 /* ==========================================================================
@@ -79,66 +69,85 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(bonbon_drop_sticker_craze, 0.55).
-domain_priors:suppression_score(bonbon_drop_sticker_craze, 0.65).
-domain_priors:theater_ratio(bonbon_drop_sticker_craze, 0.3).
+domain_priors:base_extractiveness(bonbon_drop_sticker_craze, 0.75).
+domain_priors:suppression_score(bonbon_drop_sticker_craze, 0.80).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(bonbon_drop_sticker_craze, 0.20).       % Piton detection (>= 0.70)
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(bonbon_drop_sticker_craze, extractiveness, 0.55).
-narrative_ontology:constraint_metric(bonbon_drop_sticker_craze, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(bonbon_drop_sticker_craze, theater_ratio, 0.3).
+narrative_ontology:constraint_metric(bonbon_drop_sticker_craze, extractiveness, 0.75).
+narrative_ontology:constraint_metric(bonbon_drop_sticker_craze, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(bonbon_drop_sticker_craze, theater_ratio, 0.20).
 
-% --- Constraint claim ---
-narrative_ontology:constraint_claim(bonbon_drop_sticker_craze, tangled_rope).
-narrative_ontology:human_readable(bonbon_drop_sticker_craze, "UHA Mikakuto's \"Bonbon Drop\" Collectible Sticker Promotion").
-narrative_ontology:topic_domain(bonbon_drop_sticker_craze, "economic/social").
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(bonbon_drop_sticker_craze, snare).
 
-domain_priors:requires_active_enforcement(bonbon_drop_sticker_craze).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(bonbon_drop_sticker_craze). % The company must actively manage rarity ratios.
 
-% --- Structural relationships ---
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(bonbon_drop_sticker_craze, uha_mikakuto).
-narrative_ontology:constraint_beneficiary(bonbon_drop_sticker_craze, sticker_manufacturer_qlia).
-narrative_ontology:constraint_beneficiary(bonbon_drop_sticker_craze, resellers).
-narrative_ontology:constraint_victim(bonbon_drop_sticker_craze, collectors).
-narrative_ontology:constraint_victim(bonbon_drop_sticker_craze, parents_of_collectors).
+narrative_ontology:constraint_beneficiary(bonbon_drop_sticker_craze, retailers).
+
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(bonbon_drop_sticker_craze, sticker_collectors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% From the perspective of a child collector, the system is a snare. Participation is driven by peer dynamics and the desire for specific rare stickers. Exit (quitting) means social exclusion. The 'gacha' mechanic feels coercive and frustrating when desired stickers are not found, extracting allowance money for unwanted candy. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. This just misses the snare threshold of 0.66, but the lived experience is one of being trapped.
+% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
+% Agent who bears the most extraction. Engine derives d from:
+%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
+%   χ = 0.75 * f(0.95) * σ(national) ≈ 0.75 * 1.42 * 1.0 ≈ 1.065
 constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(national))).
 
-% The manufacturer experiences the system as a pure coordination mechanism (Rope). It coordinates consumer demand, drives sales, and builds brand loyalty. The manufactured scarcity is a feature, not a bug, that increases engagement. As the primary beneficiary with full control, they experience no extraction. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07 (net subsidy).
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
+% Agent who benefits most. Engine derives d from:
+%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+%   χ = 0.75 * f(0.05) * σ(national) ≈ 0.75 * -0.12 * 1.0 ≈ -0.09
 constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, rope,
     context(agent_power(institutional),
-            time_horizon(biographical),
+            time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% Adult collectors, often driven by nostalgia, see both sides. They enjoy the community, trading, and the thrill of the hunt (coordination), but are also aware of the financial cost and exploitative gacha mechanic (extraction). They have mobile exit options (they can switch hobbies), making the constraint a Tangled Rope rather than a Snare. d≈0.85, f(d)≈1.15, σ=0.9 → χ≈0.57.
-constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, tangled_rope,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(regional))).
-
-% The analytical view confirms the Tangled Rope classification. The system possesses a genuine coordination function (creating a collector community) and a clear, asymmetric extraction mechanism (profiting from randomized, scarcity-driven repeat purchases). Both components are essential to its function. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76.
-constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, tangled_rope,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SNARE)
+% Default analytical context. Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+%   χ = 0.75 * f(0.72) * σ(global) ≈ 0.75 * 1.15 * 1.2 ≈ 1.035
+constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
-% Resellers are organized beneficiaries. They see the system as a coordination mechanism for profit, coordinating scarce supply with high demand. They are not the primary institutional beneficiary but exploit the system's properties. Their exit is mobile (they can scalp the next popular item), and for them, the system is a pure Rope for generating income. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.005.
+% --- INTER-INSTITUTIONAL PERSPECTIVE ---
+
+% PERSPECTIVE 4: THE RETAILERS (ROPE)
+% Beneficiaries, but with less power and control than the manufacturer. Their exit is
+% constrained by competitive pressure. The engine derives a higher d than the
+% primary beneficiary, but still well below the symmetric point.
+% A beneficiary with 'constrained' exit implies d ≈ 0.30 -> f(d) ≈ 0.20
+%   χ = 0.75 * f(0.30) * σ(national) ≈ 0.75 * 0.20 * 1.0 ≈ 0.15
 constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, rope,
     context(agent_power(organized),
-            time_horizon(immediate),
-            exit_options(mobile),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(national))).
 
 /* ==========================================================================
@@ -148,13 +157,18 @@ constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, rope,
 :- begin_tests(bonbon_drop_sticker_craze_tests).
 
 test(perspectival_gap) :-
-    constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, TypeOther, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeOther.
+    % Verify perspectival gap between target (collector) and beneficiary (manufacturer).
+    constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(bonbon_drop_sticker_craze, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget \= TypeBeneficiary.
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(bonbon_drop_sticker_craze, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(snare_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(bonbon_drop_sticker_craze, ExtMetricName, E),
+    E >= 0.46,
+    config:param(suppression_metric_name, SupMetricName),
+    narrative_ontology:constraint_metric(bonbon_drop_sticker_craze, SupMetricName, S),
+    S >= 0.60.
 
 :- end_tests(bonbon_drop_sticker_craze_tests).
 
@@ -164,73 +178,115 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (ε=0.55): Moderately high. The core extraction is the value paid for unwanted candy to obtain a chance at a desired sticker. While the candy has some value, the purchasing behavior is driven by the randomized reward, indicating a significant portion of the price is pure extraction. Suppression (0.65): High. There is no alternative way to obtain new stickers from the primary source; one must buy the candy. This forces participation in the gacha system or the inflated secondary market. Theater Ratio (0.30): Moderate. While social performance like trading and 'sticker patrols' is part of the craze, the core economic function of selling candy is direct and non-performative.
+ *   - Base Extractiveness (ε=0.75): Extremely high. The value is not in the
+ *     primary product (candy) but in the secondary, randomized item (sticker).
+ *     The vast difference between the product cost (~¥250) and the secondary
+ *     market value of rare items (up to ¥100,000) demonstrates massive value
+ *     extraction from consumer desire, channeled to the manufacturer through
+ *     repeat purchases. This is a classic "gacha" or "loot box" mechanic.
+ *   - Suppression Score (0.80): High. The manufacturer is the sole official
+ *     source of the stickers. There are no alternative legitimate channels;
+ *     participation requires buying the bundled product, effectively
+ *     suppressing all other means of acquisition and forcing engagement with
+ *     the extractive lottery.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. The manufacturer (UHA Mikakuto) sees a brilliant marketing campaign (Rope). The child collector, subject to peer pressure and allowance limits, experiences a coercive and frustrating chase (Snare). The adult collector, with more agency and funds, recognizes the exploitative nature but also derives genuine nostalgic joy and community, landing on a mixed classification (Tangled Rope). This highlights how the same system can be perceived as pure coordination, pure extraction, or a hybrid, depending on the agent's power and exit options.
+ *   The gap is stark. From the perspective of UHA Mikakuto (institutional),
+ *   this is a Rope: a brilliant coordination mechanism to align consumer
+ *   desire with corporate profit, resulting in a net subsidy (negative χ).
+ *   For the dedicated sticker collector (powerless, trapped), it is a Snare: a
+ *   coercive and expensive trap that leverages completionist psychology to
+ *   extract significant financial resources for minimal tangible return.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries are the company and resellers, who profit from the system. Their structural position gives them a low directionality (d). Victims are the collectors and their parents, who bear the financial costs and psychological pressure. Their structural position gives them a high directionality (d). The engine's derivation from these declarations correctly models the flow of value, resulting in negative or low effective extraction (χ) for beneficiaries and high χ for victims.
+ *   The constraint is highly directional. Value flows from the `sticker_collectors`
+ *   (the victim group) to `uha_mikakuto` (the primary beneficiary). The
+ *   mechanism is designed to obscure this flow by bundling the extraction
+ *   vehicle (the sticker lottery) with a low-cost consumable good. Retailers
+ *   are secondary beneficiaries, profiting from the increased sales volume but
+ *   having less control over the system's core parameters (rarity, distribution).
+ *   The model considers whether the `powerless` collectors could achieve
+ *   `organized` status via coalition. While possible (e.g., through boycotts
+ *   or collective trading pacts), the current narrative shows them acting as
+ *   competing individuals, which maintains their `powerless` status.
  *
  * MANDATROPHY ANALYSIS:
- *   This case effectively resolves the mandatrophy. To label the craze as merely a 'fun hobby' (Rope) would ignore the structurally coercive and extractive gacha mechanic at its core. Conversely, to label it a pure 'scam' (Snare) would ignore the genuine coordination function it serves in creating a vibrant collector community and tapping into powerful nostalgic sentiment. The analytical classification of Tangled Rope correctly identifies that both functions are present and structurally essential to the phenomenon's success.
+ *   [RESOLVED MANDATROPHY] This case is a powerful example of how a commercial
+ *   activity, framed as "fun" or "collecting," can be structurally identical
+ *   to a Snare. An analysis that ignores directionality might misclassify this
+ *   as a Rope (coordinating a hobby) or a Tangled Rope. However, the lack of
+ *   a genuine, primary coordination function (the community is a side effect,
+ *   not the goal) and the sheer scale of the asymmetric extraction (high ε)
+ *   firmly place it in the Snare category from any non-beneficiary perspective.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    nostalgia_vs_speculation,
-    'Is the market primarily driven by genuine collector nostalgia (''Heisei Joji'' culture) or by secondary market speculation and hype?',
-    'Analysis of secondary market sales volume and price velocity versus social media sentiment and community forum activity focused on collecting itself.',
-    'If nostalgia-driven, the coordination aspect is stronger (Rope/Tangled Rope). If speculation-driven, the extraction is more severe (Tangled Rope/Snare).',
-    confidence_without_resolution(medium)
+    omega_bonbon_drop_sticker_craze,
+    'Is the collector behavior primarily driven by voluntary fun or by coercive, addiction-like psychological mechanisms inherent in gacha systems?',
+    'Longitudinal psychological studies of collector cohorts, measuring self-reported enjoyment versus stress, financial strain, and compulsion.',
+    'If voluntary fun, the constraint might be better modeled as a Tangled Rope (a coordination game with high extraction). If coercive, the Snare classification is correct.',
+    confidence_without_resolution(high) % Confidence in the Snare classification is high given the structural parallels to gambling.
 ).
 
-narrative_ontology:omega_variable(nostalgia_vs_speculation, empirical, 'Distinguishing between nostalgia-driven collecting and market speculation').
-
-omega_variable(
-    saturation_point,
-    'At what point does collector burnout or market saturation cause the craze to collapse?',
-    'Longitudinal tracking of sales data, secondary market prices for common and rare stickers, and social media engagement metrics.',
-    'Identifies the natural lifecycle of such manufactured-scarcity systems, determining if it''s a short-term phenomenon (Scaffold-like) or a durable extractive model (Snare-like).',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(saturation_point, empirical, 'The market saturation and burnout threshold for the sticker craze').
-
+% /3 form: typed classification for reporting engine (REQUIRED)
+% The reporting engine reads narrative_ontology:omega_variable/3 with structure
+% (ID, TypeClass, Description) where TypeClass is one of:
+%   empirical   — resolvable by gathering more data
+%   conceptual  — depends on definitional or theoretical framing
+%   preference  — depends on value judgments or policy choices
+% The /3 form is what the engine reads; /5 provides narrative context.
+narrative_ontology:omega_variable(omega_bonbon_drop_sticker_craze, conceptual, 'Is collector behavior voluntary fun or driven by coercive gacha mechanics?').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(bonbon_drop_sticker_craze, 0, 24).
+% Required for external script parsing
+narrative_ontology:interval(bonbon_drop_sticker_craze, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(bonb_tr_t0, bonbon_drop_sticker_craze, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(bonb_tr_t12, bonbon_drop_sticker_craze, theater_ratio, 12, 0.25).
-narrative_ontology:measurement(bonb_tr_t24, bonbon_drop_sticker_craze, theater_ratio, 24, 0.3).
+% Temporal data enables drift detection. This craze intensified over time.
+% Required because base_extractiveness (0.75) > 0.46.
 
-% Extraction over time
-narrative_ontology:measurement(bonb_be_t0, bonbon_drop_sticker_craze, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(bonb_be_t12, bonbon_drop_sticker_craze, base_extractiveness, 12, 0.48).
-narrative_ontology:measurement(bonb_be_t24, bonbon_drop_sticker_craze, base_extractiveness, 24, 0.55).
+% Theater ratio over time (stable and low):
+narrative_ontology:measurement(bdsc_tr_t0, bonbon_drop_sticker_craze, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(bdsc_tr_t5, bonbon_drop_sticker_craze, theater_ratio, 5, 0.15).
+narrative_ontology:measurement(bdsc_tr_t10, bonbon_drop_sticker_craze, theater_ratio, 10, 0.20).
 
+% Extraction over time (intensified as the craze grew):
+narrative_ontology:measurement(bdsc_ex_t0, bonbon_drop_sticker_craze, base_extractiveness, 0, 0.50).
+narrative_ontology:measurement(bdsc_ex_t5, bonbon_drop_sticker_craze, base_extractiveness, 5, 0.65).
+narrative_ontology:measurement(bdsc_ex_t10, bonbon_drop_sticker_craze, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(bonbon_drop_sticker_craze, resource_allocation).
+% This constraint is primarily extractive, not coordinative. Therefore,
+% coordination_type and boltzmann_floor_override are not applicable.
+% No clear network relationships to other constraints in the corpus are
+% immediately apparent, though it belongs to a class of "gacha mechanics"
+% which could be linked in a broader analysis.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+% No overrides are necessary for this constraint. The automatic directionality
+% derivation from beneficiary/victim declarations and exit options accurately
+% models the structural relationships between the manufacturer, retailers,
+% and consumers.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
