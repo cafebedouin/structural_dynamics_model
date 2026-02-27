@@ -384,6 +384,12 @@ Your practical ability to route around or escape the constraint.
 - No alternatives, no negotiating power
 - Full constraint force
 
+**identity_locked** — Structurally mobile but cognitively/identity-fused
+- Example: Captured regulator fused with industry identity, trauma-bonded partner, ideologically committed state
+- Exit would require becoming a different person, not just paying a cost
+- Binding is cognitive (identity fusion, epistemic closure) rather than material
+- Hub 2: mountain at immediate, rope at biographical and beyond (perceptual filter, not structural immobility)
+
 **constrained** â€” Can exit but at high cost
 - Example: Professional with golden handcuffs, homeowner in declining market
 - Exit possible but destroys accumulated capital
@@ -501,7 +507,7 @@ valid_context(context(
     spatial_scope(S).
 ```
 
-**Note:** Coherence checks (e.g., `incoherent_power_exit/2`, `incoherent_time_scope/2`) are not currently enforced. Any valid dimension combination is accepted. Context terms use tagged wrappers (`agent_power(P)`, etc.) rather than bare atoms.
+**Note:** Coherence checks (e.g., `incoherent_power_exit/2`, `incoherent_time_scope/2`) are not currently enforced. Any valid dimension combination is accepted. Context terms use tagged wrappers (`agent_power(P)`, etc.) rather than bare atoms. The `identity_locked` exit option is coherent with all power levels including `analytical` (an analyst can recognize their own identity lock while being unable to break it — this instantiates the Classical Oracle Gap, Theorem 4).
 
 In practice, most real indices cluster around:
 - `(powerless/moderate, biographical, constrained, national)` â€” typical citizen

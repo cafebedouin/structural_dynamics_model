@@ -36,10 +36,40 @@ I ::= (P, T, E, S)
 where:
   P (Power)  ∈ {powerless, moderate, powerful, organized, institutional, analytical}
   T (Time)   ∈ {immediate, biographical, generational, civilizational}
-  E (Exit)   ∈ {trapped, constrained, mobile, arbitrage, analytical}
+  E (Exit)   ∈ {trapped, identity_locked, constrained, mobile, arbitrage, analytical}
   S (Scope)  ∈ {local, regional, national, continental, global, universal}
 
 ```
+
+#### identity_locked — Cognitive/Identity-Based Entrapment
+
+`identity_locked` captures agents who are structurally mobile but functionally trapped by internalized framing, identity fusion, epistemic closure, or cognitive capture. The binding mechanism is internal (the agent's identity is constituted through the constraint) rather than external (physical, legal, or economic barriers to exit).
+
+**Immutability profile:**
+
+| TimeHorizon | trapped | identity_locked | constrained |
+|---|---|---|---|
+| immediate | mountain | mountain | mountain |
+| biographical | mountain | **rope** | mountain |
+| generational | rope | rope | rope |
+
+The critical distinction: at biographical time, `identity_locked` returns **rope** (perceives the constraint as changeable in principle) while both `trapped` and `constrained` return **mountain** (perceives the constraint as unchangeable). This reflects a real structural difference: an identity-locked agent *could* perceive mutability if their identity frame shifted, whereas a trapped or constrained agent perceives immutability regardless of framing. The identity lock is a perceptual filter on top of structural mobility, not structural immobility itself.
+
+This creates a diagnostic signal. When the engine classifies a constraint as mountain from a `trapped` perspective but rope from an `identity_locked` perspective at the same biographical time horizon, the gap reveals that the binding mechanism is cognitive rather than structural. The constraint is changeable — the agent just can't see this from within their identity frame.
+
+**When to use `identity_locked` vs. `constrained` vs. `trapped`:**
+
+* **`trapped`**: The agent faces material barriers to exit — physical confinement, legal prohibition, economic dependency with no alternative, geographic isolation. Removing the barriers changes the agent's exit capacity immediately.
+* **`constrained`**: The agent faces high but surmountable costs to exit — career damage, social penalty, financial loss, relocation burden. The barriers are real and external, but exit is possible at a price.
+* **`identity_locked`**: The agent's identity is constituted through the constraint. Exit would require not just paying a cost but *becoming a different person* — abandoning a professional identity, breaking from an ideological commitment, dissolving a fused relational identity. The agent may have structural mobility (`constrained`-level or even `mobile`-level barriers) but cannot exercise it because their identity frame makes exit literally unthinkable from within.
+
+**Scale-invariant examples:**
+
+* **Interpersonal**: Trauma-bonded partner (structurally mobile — has income, housing options, legal protections — but identity fused with the relationship). Cult member (could physically leave but identity is constituted through group membership).
+* **Organizational**: Captured regulator whose professional identity and career trajectory are fused with the regulated industry. Institutional actor that has "become" the policy it was created to oversee.
+* **State**: Nation locked into an alliance by ideological commitment rather than material necessity. Post-colonial state whose governing identity is constituted through the institutional framework inherited from the colonial period.
+
+**The analytical edge case.** `(analytical, identity_locked)` is coherent but unusual. An analyst can recognize their own identity lock while being unable to break it — meta-cognitive awareness does not equal freedom from the frame. This combination is a concretization of the framework's own U₄ paradox (Theorem 4: the Classical Oracle Gap): the analytical observer's native instruments cannot detect the structure that cross-position analysis reveals. An identity-locked analyst is demonstrating exactly *why* single-position analysis fails — the analyst needs the framework to see what their identity frame prevents them from seeing. When writing a perspective with `(analytical, identity_locked)`, document in commentary why the analytical position is itself captured, and note explicitly that this perspective instantiates the oracle gap.
 
 The tuple is closed at arity 4. These four axes, combined with ε and the χ formula, fully determine classification. No additional contextual axis can change the classification outcome when ε and (P,T,E,S) are fixed. Observable-dependent constraints are handled by network decomposition (separate stories with different ε values), not by adding axes. See "Constraint Identity and the ε-Invariance Principle" below.
 
@@ -69,6 +99,8 @@ f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
 | Victim + mobile (organized) | mobile | 0.55 | 0.75 | organized (0.40) |
 | Victim + mobile | mobile | 0.85 | 1.15 | moderate (1.00) |
 | Victim + trapped | trapped | 0.95 | 1.42 | powerless (1.50) |
+| Victim + identity_locked | identity_locked | 0.89 | 1.28 | — (new) |
+| Beneficiary + identity_locked | identity_locked | 0.20 | 0.02 | — (new) |
 | Observer | analytical | 0.72 | 1.15 | analytical (1.15) |
 
 Canonical fallback values (used when no beneficiary/victim data exists):
@@ -81,6 +113,8 @@ Canonical fallback values (used when no beneficiary/victim data exists):
 | moderate | 0.65 | 1.00 | 1.00 |
 | analytical | 0.73 | 1.15 | 1.15 |
 | powerless | 1.00 | 1.42 | 1.50 |
+
+Note: `identity_locked` does not have its own canonical d — it is always derived from beneficiary/victim declarations + exit_modulation. If no structural data exists, it falls back to the power atom's canonical d. This is by design: identity_locked is meaningful only when the agent's structural relationship to the constraint is declared.
 
 The derivation chain priority:
 1. **Explicit override** (a `directionality_overrides` entry) — per story, if declared
@@ -280,6 +314,63 @@ Declare beneficiaries and victims from the constraint's structure, not from the 
 
 **Declare same-level actor perspectives when:** peer manipulation (communal narcissism, workplace bullying), inter-firm extraction (gatekeeping, norm-setting among competitors), interstate dynamics (regulatory arbitrage, sanctions between similar-sized states), intra-community dynamics (HOA enforcement, professional guild gatekeeping). See: `docs/observer_position_same_level_actors.md`.
 
+**Interpersonal and Identity-Based Dynamics:**
+
+Interpersonal constraints — relationships, family structures, mentorship dynamics, therapeutic relationships, community bonds — follow the same classification logic as institutional constraints but require specific authoring discipline because the mechanisms are psychologically legible in ways that tempt authorial shortcuts.
+
+**Decomposition principle: expect interpersonal constraints to split along domain lines.** A single relationship (a marriage, a mentorship, a business partnership) typically contains multiple structurally distinct constraints with different ε values. Financial coordination within the marriage has one ε; emotional dynamics have another; child-rearing coordination has a third. The ε-invariance principle applies: if the observable you use to evaluate the constraint changes ε, you are looking at a different constraint. Write separate stories and link them with `network.affects_constraints`.
+
+Worked example — an abusive marriage:
+```
+Marriage constraint family (3 stories):
+  marriage_financial_coordination (ε=0.55, Tangled Rope)
+    — One partner controls finances; genuine coordination of shared expenses
+      exists alongside asymmetric extraction
+    └→ marriage_emotional_dynamics (ε=0.72, Snare)
+        — Emotional manipulation cycle with minimal coordination function;
+          intermittent reinforcement sustains the lock
+    └→ marriage_childcare_coordination (ε=0.30, Tangled Rope)
+        — Genuine coordination of childcare with embedded extraction
+          (one partner bears disproportionate labor)
+
+Each story gets its own perspectives, its own beneficiary/victim declarations,
+and its own measurements. The identity_locked exit option appears in the
+emotional dynamics story (the target is structurally mobile but identity-fused)
+but NOT in the financial coordination story (where the target may be
+genuinely trapped by economic dependency).
+```
+
+**Suppression ambiguity in interpersonal constraints.** Suppression in interpersonal contexts can be structural (economic dependency, legal barriers, geographic isolation) or internalized (the target believes they deserve the treatment, has been isolated from reality-testing contacts, or has fused their identity with the relationship). The suppression metric is a single scalar and does not distinguish these mechanisms. Handle this through omega variables:
+
+```json
+{
+  "id": "suppression_mechanism_ambiguity",
+  "question": "Is the measured suppression structural or internalized?",
+  "resolution_mechanism": "Post-exit suppression trajectory: if suppression persists after the extractive mechanism is removed, reclassify as partially internalized.",
+  "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.",
+  "confidence": "medium",
+  "type_class": "empirical",
+  "description": "Structural vs. internalized suppression mechanism"
+}
+```
+
+**Cyclical dynamics in measurements.** Interpersonal constraints often oscillate rather than drift monotonically: tension → incident → reconciliation → calm → tension. The measurement entries can represent this (extractiveness values that rise, drop, rise, drop across time points). When writing measurements for cyclical constraints, include enough time points to show at least one full cycle — typically 8–10 measurements rather than the minimum 6. Document the cyclical pattern in `commentary.logic_rationale` and note that the oscillation itself is the extraction mechanism (intermittent reinforcement), not noise.
+
+This pattern scales to institutional dynamics: crisis → reform → regulatory relaxation → accumulation → crisis. IMF structural adjustment cycles, financial regulation boom-bust patterns, and labor organizing cycles all show the same measurement signature. When you see cyclical measurements in an institutional constraint, check whether the interpersonal mechanism (intermittent reinforcement) maps to the institutional one (crisis-driven reform followed by regulatory capture during calm periods).
+
+**`identity_locked` in interpersonal contexts.** Use `identity_locked` when the target's identity is constituted through the constraint:
+
+* The target cannot imagine themselves outside the relationship (identity fusion)
+* The target's self-concept depends on the role the constraint assigns them (caregiver identity, "the strong one," "the loyal partner")
+* The target has internalized the beneficiary's framing of the constraint as natural or necessary
+* Exit would require the target to abandon not just the relationship but the identity they constructed within it
+
+Do NOT use `identity_locked` when:
+
+* The target's barriers to exit are primarily material (use `trapped` or `constrained`)
+* The target has not internalized the constraint's framing — they see the extraction clearly but can't leave for structural reasons (use `constrained` or `trapped` based on cost magnitude)
+* The target is organizationally committed but not identity-fused (a regulator who follows industry preferences because of career incentives, not because they've internalized the industry's worldview — use `constrained`)
+
 **Exception — Uniform-Type Constraints:**
 
 Some constraints classify identically from ALL perspectives. In these cases, the perspectival minimum is relaxed — you do not need powerless/institutional if they would produce the same type:
@@ -296,6 +387,9 @@ Explain your reasoning for specific scores. Explicitly address:
 * **Inter-institutional dynamics** (if applicable): How different institutional actors experience the same constraint differently. Why they have different exit options.
 * **Same-level actor dynamics** (if applicable): How actors at the same nominal power level experience this constraint differently. What constraint-specific factors differentiate their exit options. Why agent_power differs despite equal global standing.
 * **Mandatrophy Analysis**: How does the classification prevent mislabeling coordination as pure extraction (or vice versa)?
+* **Identity-lock dynamics** (if applicable): What specific identity-fusion mechanism binds the agent? Is it professional identity (career path dependence), relational identity (self-concept constituted through the relationship), ideological identity (worldview that makes exit unthinkable), or institutional identity (the organization has "become" its function)? How would the classification change if the identity frame broke?
+* **Suppression mechanism** (for interpersonal constraints): Is suppression structural (external barriers), internalized (cognitive patterns that persist after barrier removal), or both? If both, what proportion is each? This informs the omega variable.
+* **Cyclical pattern** (if measurements oscillate): What drives the cycle? Is the oscillation itself an extraction mechanism (intermittent reinforcement) or a side effect of external factors? At what phase of the cycle were the base_properties metrics measured?
 
 | Commentary Topic | JSON Field |
 |---|---|
@@ -351,12 +445,31 @@ Declare optional Boltzmann-related properties that enable structural purity and 
 
 | Field | JSON Path | Purpose |
 |---|---|---|
-| Coordination type | `boltzmann.coordination_type` | Valid: `information_standard`, `resource_allocation`, `enforcement_mechanism`, `global_infrastructure` |
+| Coordination type | `boltzmann.coordination_type` | Valid: `information_standard`, `attachment_coordination`, `resource_allocation`, `identity_coordination`, `enforcement_mechanism`, `global_infrastructure` |
 | Floor override | `boltzmann.boltzmann_floor_override` | Value in [0.0, 1.0]. Override default floor for this coordination type. |
 
 Declare `coordination_type` when the constraint has an identifiable coordination function — it enables complexity-adjusted Boltzmann thresholds and floor calculations. Omit for constraints with no coordination role.
 
 Only declare `boltzmann_floor_override` when domain knowledge justifies a different floor than the type default (e.g., a resource allocation mechanism that operates with unusually low overhead). Most constraints should use the type default.
+
+**Coordination type selection:**
+
+Each coordination type has a complexity offset (raising the Boltzmann coupling threshold — higher offset means more coupling is tolerated before flagging non-compliance) and a Boltzmann floor (minimum inherent extraction treated as coordination cost rather than extractive overhead). Choose the type that matches the constraint's *primary* coordination function:
+
+| Type | Offset | Floor | Use when |
+|---|---|---|---|
+| `information_standard` | 0.00 | 0.02 | Naming conventions, encoding standards, measurement units, protocols. Minimal complexity, minimal inherent cost. |
+| `attachment_coordination` | 0.04 | 0.08 | Emotional bonds, caregiving norms, kinship obligations, alliance commitments, relational stability mechanisms. Structurally simple (dyadic or small-group) but requiring continuous maintenance. |
+| `resource_allocation` | 0.05 | 0.15 | Markets, distribution mechanisms, allocation systems, multi-party resource sharing. Moderate complexity, significant inherent transaction costs. |
+| `identity_coordination` | 0.04 | 0.08 | Group membership, professional licensing, national identity, social norms, reputation systems. Coordinates boundary maintenance and membership claims against evolving criteria. |
+| `enforcement_mechanism` | 0.08 | 0.10 | Legal systems, regulatory frameworks, governance structures. Requires dedicated enforcement infrastructure. |
+| `global_infrastructure` | 0.15 | 0.20 | Planetary-scale coordination: power grids, internet protocols, global supply chains. Maximum complexity, maximum inherent cost. |
+
+**Why the new types have conservative floors.** The Boltzmann floor represents the minimum extraction inherent to coordination — extraction below the floor is treated as necessary cost, not extractive overhead. Setting the floor too high pre-adjudicates what the engine should detect. "Relationships are hard" and "belonging has a price" are exactly the cover stories that extractive interpersonal and identity constraints use. A conservative floor (0.08 for both `attachment_coordination` and `identity_coordination`) means more constraints will show non-zero excess extraction, which is diagnostically appropriate — flag for review rather than pass unchallenged. Floors can be calibrated upward after corpus data establishes where genuine coordination cost sits for each type.
+
+**When a constraint coordinates multiple functions.** A marriage norm coordinates attachment (emotional bonds), resources (household economics), and identity (social role). Do NOT declare multiple coordination types for one story. Either decompose (preferred — write separate stories per the ε-invariance principle, each with its own coordination type) or choose the *dominant* coordination function for the single story. The dominant function is the one whose failure would most directly cause the coordination problem the constraint exists to solve.
+
+**FNL gaming risk with identity_coordination.** Identity narratives ("this is just how our culture works," "this is who we are") are among the most common cover stories for extractive constraints. The identity_coordination type has a complexity offset of 0.04, which gives constraints of this type slightly more leeway in the Boltzmann coupling test. This is warranted — identity coordination genuinely involves complex boundary maintenance. But be alert to constraints that claim identity coordination to justify coupling that is actually extractive. If a constraint classified as `identity_coordination` shows strong Power × Scope coupling that concentrates extraction on powerless agents at large scope, the coupling is likely nonsensical regardless of the complexity offset. The offset accommodates genuine complexity; it does not excuse asymmetric extraction.
 
 ### Network Relationships
 
@@ -454,11 +567,17 @@ Before outputting your JSON, verify:
 * [ ] **Same-Level Actor Check**: If the constraint involves extraction between actors at the same nominal power level, are `exit_options` differentiated for each actor? Do the perspectives produce a perspectival gap (not all the same type)?
 * [ ] **Temporal Data**: If `base_properties.extractiveness` > 0.46, include `measurements[]` entries at 3+ time points for `theater_ratio` and `base_extractiveness` (6 entries minimum).
 * [ ] **Constraint Claim**: Does the JSON declare `base_properties.claimed_type`? This is required for Boltzmann compliance analysis and false natural law detection.
-* [ ] **Coordination Type**: If the constraint has a coordination function, is `boltzmann.coordination_type` declared with one of the four valid types?
+* [ ] **Coordination Type**: If the constraint has a coordination function, is `boltzmann.coordination_type` declared with one of the six valid types?
 * [ ] **Network Relationships**: If the constraint is part of a known constraint cluster, are `network.affects_constraints[]` entries declared?
 * [ ] **Directionality Overrides**: If overrides are used, does the commentary explain WHY the derivation would produce the wrong d?
 * [ ] **Perspective Tuple**: Each perspective object has exactly 5 required fields: `classification_type`, `agent_power`, `time_horizon`, `exit_options`, `spatial_scope`. Do not add beneficiary/victim, measurement_basis, or any other data to perspectives.
 * [ ] **Constraint Identity**: If this constraint could be evaluated via different observables that yield different ε values, have you decomposed into separate stories? Each story must have a single, stable ε. If ε changes when you change how you measure, you have two constraints — write two files and link with `network.affects_constraints`.
+* [ ] **identity_locked Check**: If any perspective uses `exit_options: "identity_locked"`, does the commentary explain the specific identity-fusion mechanism? Is the binding cognitive rather than material? Would `constrained` be more accurate (high-cost external barriers) or `trapped` (insurmountable external barriers)?
+* [ ] **identity_locked Decomposition**: If `identity_locked` appears in an interpersonal constraint, has the relationship been decomposed into structurally distinct stories per the ε-invariance principle? A single relationship typically contains multiple constraints with different ε values.
+* [ ] **Analytical identity_locked**: If a perspective uses `(analytical, identity_locked)`, does the commentary explicitly note that this instantiates the oracle gap (Theorem 4) — the analyst's identity frame prevents seeing structure that cross-position analysis reveals?
+* [ ] **New Coordination Types**: If using `attachment_coordination` or `identity_coordination`, is the coordination function genuine? Does the constraint actually coordinate emotional bonds / group membership, or is it using relational/identity framing as a cover story for extraction?
+* [ ] **Cyclical Measurements**: If the constraint shows cyclical dynamics (oscillating extractiveness over time), are there enough measurement points to show at least one full cycle (8–10 minimum)? Is the cyclical pattern documented in commentary?
+* [ ] **Suppression Ambiguity**: For interpersonal constraints with suppression ≥ 0.40, is there an omega variable addressing whether the suppression is structural or internalized?
 
 ---
 
@@ -476,6 +595,8 @@ The corpus needs balanced representation across all six types. When choosing sce
 | **Mountain** (well-covered, needs NL metrics) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.25, suppression ≤ 0.05, accessibility_collapse ≥ 0.85, resistance ≤ 0.15, emerges_naturally | No beneficiary/victim needed |
 | **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.45, χ ≤ 0.35 | beneficiaries; victims usually absent |
 | **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.25, theater ≥ 0.70 | victims possible; beneficiaries unlikely |
+| **Interpersonal dynamics** (NEW, needed) | Abusive relationships, mentorship dynamics, family structures, therapeutic boundaries, cult dynamics, community bonds | Varies by decomposed story; expect constraint families of 2–4 linked stories | identity_locked exit, attachment_coordination or identity_coordination type, cyclical measurements, suppression ambiguity omegas |
+| **Cognitive capture** (NEW, needed) | Regulatory capture with identity fusion, ideological lock-in, institutional identity crisis, post-colonial institutional inheritance, organizational culture traps | identity_locked at institutional power; perspectival gap between identity_locked and arbitrage institutional actors | identity_locked exit differentiating captured from non-captured institutional actors |
 
 **Scenarios that produce the richest perspectival gaps** come from: economic policy, labor regulation, healthcare access, housing markets, immigration systems, platform economics, and **inter-institutional dynamics** (regulatory capture, trade agreements, sanctions regimes). These domains naturally generate multiple institutional perspectives with different directionalities.
 

@@ -392,10 +392,12 @@ coordination_type_offset(C, Offset) :-
 coordination_type_offset(_, Offset) :-
     config:param(complexity_offset_default, Offset).
 
-coordination_type_to_offset_param(information_standard,  complexity_offset_information_standard).
-coordination_type_to_offset_param(resource_allocation,   complexity_offset_resource_allocation).
-coordination_type_to_offset_param(enforcement_mechanism, complexity_offset_enforcement_mechanism).
-coordination_type_to_offset_param(global_infrastructure, complexity_offset_global_infrastructure).
+coordination_type_to_offset_param(information_standard,    complexity_offset_information_standard).
+coordination_type_to_offset_param(attachment_coordination, complexity_offset_attachment_coordination).
+coordination_type_to_offset_param(resource_allocation,     complexity_offset_resource_allocation).
+coordination_type_to_offset_param(identity_coordination,   complexity_offset_identity_coordination).
+coordination_type_to_offset_param(enforcement_mechanism,   complexity_offset_enforcement_mechanism).
+coordination_type_to_offset_param(global_infrastructure,   complexity_offset_global_infrastructure).
 
 /* ----------------------------------------------------------------
    EPISTEMIC ACCESS CHECK
@@ -452,10 +454,12 @@ boltzmann_floor_for(C, Floor) :-
 boltzmann_floor_for(_, Floor) :-
     config:param(boltzmann_floor_default, Floor).
 
-coordination_type_to_floor_param(information_standard,  boltzmann_floor_information_standard).
-coordination_type_to_floor_param(resource_allocation,   boltzmann_floor_resource_allocation).
-coordination_type_to_floor_param(enforcement_mechanism, boltzmann_floor_enforcement_mechanism).
-coordination_type_to_floor_param(global_infrastructure, boltzmann_floor_global_infrastructure).
+coordination_type_to_floor_param(information_standard,    boltzmann_floor_information_standard).
+coordination_type_to_floor_param(attachment_coordination, boltzmann_floor_attachment_coordination).
+coordination_type_to_floor_param(resource_allocation,     boltzmann_floor_resource_allocation).
+coordination_type_to_floor_param(identity_coordination,   boltzmann_floor_identity_coordination).
+coordination_type_to_floor_param(enforcement_mechanism,   boltzmann_floor_enforcement_mechanism).
+coordination_type_to_floor_param(global_infrastructure,   boltzmann_floor_global_infrastructure).
 
 /* ----------------------------------------------------------------
    BOLTZMANN-INVARIANT MOUNTAIN TEST

@@ -200,21 +200,25 @@ param_spec(boltzmann_min_classifications,       integer, positive,        "Min c
 % 18. COMPLEXITY OFFSETS
 % ============================================================
 
-param_spec(complexity_offset_information_standard,  number, range(0.0, 1.0), "Coupling offset: information standards").
-param_spec(complexity_offset_resource_allocation,   number, range(0.0, 1.0), "Coupling offset: resource allocation").
-param_spec(complexity_offset_enforcement_mechanism, number, range(0.0, 1.0), "Coupling offset: enforcement mechanisms").
-param_spec(complexity_offset_global_infrastructure, number, range(0.0, 1.0), "Coupling offset: global infrastructure").
-param_spec(complexity_offset_default,               number, range(0.0, 1.0), "Coupling offset: default/unknown type").
+param_spec(complexity_offset_information_standard,    number, range(0.0, 1.0), "Coupling offset: information standards").
+param_spec(complexity_offset_attachment_coordination, number, range(0.0, 1.0), "Coupling offset: attachment coordination").
+param_spec(complexity_offset_resource_allocation,     number, range(0.0, 1.0), "Coupling offset: resource allocation").
+param_spec(complexity_offset_identity_coordination,   number, range(0.0, 1.0), "Coupling offset: identity coordination").
+param_spec(complexity_offset_enforcement_mechanism,   number, range(0.0, 1.0), "Coupling offset: enforcement mechanisms").
+param_spec(complexity_offset_global_infrastructure,   number, range(0.0, 1.0), "Coupling offset: global infrastructure").
+param_spec(complexity_offset_default,                 number, range(0.0, 1.0), "Coupling offset: default/unknown type").
 
 % ============================================================
 % 19. BOLTZMANN FLOOR (Price of Anarchy)
 % ============================================================
 
-param_spec(boltzmann_floor_information_standard,  number, range(0.0, 1.0), "Min extraction inherent to info standards").
-param_spec(boltzmann_floor_resource_allocation,   number, range(0.0, 1.0), "Min extraction inherent to resource allocation").
-param_spec(boltzmann_floor_enforcement_mechanism, number, range(0.0, 1.0), "Min extraction inherent to enforcement").
-param_spec(boltzmann_floor_global_infrastructure, number, range(0.0, 1.0), "Min extraction inherent to global infra").
-param_spec(boltzmann_floor_default,               number, range(0.0, 1.0), "Min extraction inherent: default type").
+param_spec(boltzmann_floor_information_standard,    number, range(0.0, 1.0), "Min extraction inherent to info standards").
+param_spec(boltzmann_floor_attachment_coordination, number, range(0.0, 1.0), "Min extraction inherent to attachment coordination").
+param_spec(boltzmann_floor_resource_allocation,     number, range(0.0, 1.0), "Min extraction inherent to resource allocation").
+param_spec(boltzmann_floor_identity_coordination,   number, range(0.0, 1.0), "Min extraction inherent to identity coordination").
+param_spec(boltzmann_floor_enforcement_mechanism,   number, range(0.0, 1.0), "Min extraction inherent to enforcement").
+param_spec(boltzmann_floor_global_infrastructure,   number, range(0.0, 1.0), "Min extraction inherent to global infra").
+param_spec(boltzmann_floor_default,                 number, range(0.0, 1.0), "Min extraction inherent: default type").
 
 % ============================================================
 % 20. REFORMABILITY SCORING

@@ -296,7 +296,9 @@ param(boltzmann_min_classifications,       3).
 %
 % Applied as: effective_threshold = base_threshold + offset
 param(complexity_offset_information_standard,  0.00).
+param(complexity_offset_attachment_coordination, 0.04).
 param(complexity_offset_resource_allocation,   0.05).
+param(complexity_offset_identity_coordination, 0.04).
 param(complexity_offset_enforcement_mechanism, 0.08).
 param(complexity_offset_global_infrastructure, 0.15).
 param(complexity_offset_default,               0.00).
@@ -309,7 +311,9 @@ param(complexity_offset_default,               0.00).
 % These are provisional values — calibration against the corpus
 % will refine them. Testsets can override via boltzmann_floor_override/2.
 param(boltzmann_floor_information_standard,  0.02).
+param(boltzmann_floor_attachment_coordination, 0.08).
 param(boltzmann_floor_resource_allocation,   0.15).
+param(boltzmann_floor_identity_coordination, 0.08).
 param(boltzmann_floor_enforcement_mechanism, 0.10).
 param(boltzmann_floor_global_infrastructure, 0.20).
 param(boltzmann_floor_default,               0.05).

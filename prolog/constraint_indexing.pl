@@ -87,6 +87,7 @@ time_horizon(civilizational).        % 500+ years
 % ----------------------------------------------------------------------------
 
 exit_options(trapped).               % No physical/conceptual exit
+exit_options(identity_locked).       % Structurally mobile but cognitively/identity-fused
 exit_options(constrained).           % Exit costly but possible
 exit_options(mobile).                % Can leave, alternatives visible
 exit_options(arbitrage).             % Can play systems against each other
@@ -169,16 +170,19 @@ constraint_claim_indexed(Constraint, Type) :-
 % Returns: mountain (unchangeable) or rope (changeable)
 
 effective_immutability(immediate, trapped, mountain).
+effective_immutability(immediate, identity_locked, mountain).
 effective_immutability(immediate, constrained, mountain).
 effective_immutability(immediate, mobile, rope).
 effective_immutability(immediate, arbitrage, rope).
 
 effective_immutability(biographical, trapped, mountain).
+effective_immutability(biographical, identity_locked, rope).    % Perceptual filter, not structural immobility
 effective_immutability(biographical, constrained, mountain).
 effective_immutability(biographical, mobile, rope).
 effective_immutability(biographical, arbitrage, rope).
 
 effective_immutability(generational, trapped, mountain).
+effective_immutability(generational, identity_locked, rope).
 effective_immutability(generational, constrained, rope).
 effective_immutability(generational, mobile, rope).
 effective_immutability(generational, arbitrage, rope).
@@ -192,6 +196,7 @@ effective_immutability(civilizational, analytical, mountain).
 effective_immutability(civilizational, analytical, rope).
 % Non-analytical exit options still perceive everything as changeable (rope)
 effective_immutability(civilizational, trapped, rope).
+effective_immutability(civilizational, identity_locked, rope).
 effective_immutability(civilizational, constrained, rope).
 effective_immutability(civilizational, mobile, rope).
 effective_immutability(civilizational, arbitrage, rope).
@@ -321,11 +326,12 @@ power_role_heuristic(analytical,    _, _,     0.72).
 %  Adjust directionality based on exit options.
 %  Trapped agents have higher effective directionality (more affected).
 %  Agents with arbitrage have lower (can escape).
-exit_modulation(trapped,     0.05).
-exit_modulation(constrained, 0.02).
-exit_modulation(mobile,      0.00).
-exit_modulation(arbitrage,  -0.03).
-exit_modulation(analytical,  0.00).
+exit_modulation(trapped,         0.05).
+exit_modulation(identity_locked, 0.04).
+exit_modulation(constrained,     0.02).
+exit_modulation(mobile,          0.00).
+exit_modulation(arbitrage,      -0.03).
+exit_modulation(analytical,      0.00).
 
 %% clamp(+Value, +Min, +Max, -Clamped)
 %  Clamp Value to [Min, Max].
@@ -431,10 +437,11 @@ discover_my_context(Context) :-
     writeln(''),
     writeln('What exit options do you have?'),
     writeln('  1. Trapped (no exit visible)'),
-    writeln('  2. Constrained (exit costly)'),
-    writeln('  3. Mobile (can leave)'),
-    writeln('  4. Arbitrage (can play systems)'),
-    writeln('  5. Analytical (observer)'),
+    writeln('  2. Identity-locked (structurally mobile, cognitively fused)'),
+    writeln('  3. Constrained (exit costly)'),
+    writeln('  4. Mobile (can leave)'),
+    writeln('  5. Arbitrage (can play systems)'),
+    writeln('  6. Analytical (observer)'),
     read(ExitChoice),
     map_exit(ExitChoice, Exit),
     
@@ -472,10 +479,11 @@ map_time(4, historical).
 map_time(5, civilizational).
 
 map_exit(1, trapped).
-map_exit(2, constrained).
-map_exit(3, mobile).
-map_exit(4, arbitrage).
-map_exit(5, analytical).
+map_exit(2, identity_locked).
+map_exit(3, constrained).
+map_exit(4, mobile).
+map_exit(5, arbitrage).
+map_exit(6, analytical).
 
 map_scope(1, local).
 map_scope(2, regional).

@@ -1,0 +1,402 @@
+# Axioms and Consequences of Observer-Dependent Classification
+
+**A Formal Framework for Systems Where What You See Depends on Where You Stand**
+
+**v6 — Restructured from v5**
+
+---
+
+**Abstract.** We present a formal framework for classification systems where the result depends irreducibly on the observer's position. The framework models classification as a presheaf on a site of observer contexts, deliberately refusing the sheaf gluing axiom so that perspectival disagreement becomes a measurable structural feature rather than a defect to be resolved. We separate the framework into three layers: (1) axioms — the design commitments that define the measurement apparatus, (2) theorems — structural consequences that follow deductively from the axioms without reference to any corpus, and (3) empirical observations — corpus-dependent findings that validate the engine and characterize specific datasets. The axioms encode a single core hypothesis: power modulates the perception of extraction. The theorems derive non-obvious consequences: extraction necessarily requires a cover story (it can never be universally recognized as extraction under power-modulated perception), observer disagreement clusters in discrete blocs rather than distributing smoothly, the institutional observer carries 97% of the spectral weight in classification disputes, and single-position analysis with full information detects less than 3% of the observer-dependent structure that cross-position analysis reveals. These are properties of the axioms, not of any dataset. Two independently generated corpora with inverted input distributions confirm the engine correctly computes these consequences and converge to identical framework-level outputs. An honest assessment distinguishes strict categorical correspondences from structural analogies.
+
+---
+
+## 1. Introduction
+
+The classification of social structures — laws, norms, institutions, regulatory mechanisms — depends on who is classifying. A labor regulation that appears as an immutable feature of the economic landscape to a worker trapped within it may appear as a reformable coordination mechanism to a legislator, and as an extractive rent-seeking device to an analyst examining its distributional effects. This is not a failure of classification but a structural feature of the domain.
+
+The standard response to perspectival dependence is to resolve it — to identify the "correct" classification by privileging one observer position or aggregating across positions. This paper takes the opposite approach. We model perspectival dependence using presheaf theory, where disagreement has formal mathematical structure, and the standard tools of topos theory — cohomology, descent, naturality — produce quantitative invariants that characterize any domain where classification depends on perspective.
+
+The framework, *Deferential Realism* (DR), is *realist* in that it treats constraints as having objective structural properties (extractiveness, suppression, coordination function) that exist independently of any observer; it is *deferential* in that it treats the *classification* of those properties as irreducibly dependent on the observer's structural position. The presheaf is emphatically not a sheaf: the gluing axiom is intentionally violated because perspectival disagreement is a diagnostic signal, not a defect.
+
+Previous versions of this paper presented framework properties and corpus statistics in an interleaved fashion that made it difficult to distinguish architectural consequences from empirical findings. This version separates them cleanly: §2 states the axioms as design commitments, §3 derives the theorems that follow from those axioms alone, §4 presents the computational engine that implements the axioms and computes the consequences, §5 reports corpus-dependent empirical findings, §6 provides the honest assessment, and §7 discusses related work.
+
+---
+
+## 2. The Axioms
+
+This section states the framework's design commitments explicitly. Each axiom is a modeling choice. For each, we state what it is, why we chose it, what alternatives exist, and what would change under a different choice. The axioms together define the measurement apparatus; the theorems in §3 are consequences of this apparatus.
+
+### Axiom 1: Four Observer Positions on a Linear Power Axis
+
+Each observer is characterized by a context tuple (Power, TimeHorizon, ExitOptions, Scope). For computational tractability, we fix four standard contexts:
+
+| Context | Power | Time | Exit | Scope |
+|---------|-------|------|------|-------|
+| U₁ (powerless) | powerless | biographical | trapped | local |
+| U₂ (moderate) | moderate | biographical | mobile | national |
+| U₃ (institutional) | institutional | generational | arbitrage | national |
+| U₄ (analytical) | analytical | civilizational | analytical | global |
+
+These form a linear poset category **C** with morphisms U₁ → U₂ → U₃ → U₄ determined by power ordering. This is the simplest non-trivial site that captures perspectival transitions.
+
+**Why this choice.** Fewer contexts lack resolution to detect perspectival transitions; more complicate analysis without adding qualitative insight. The four contexts represent structurally distinct positions: subject (U₁), moderate agent (U₂), institutional actor (U₃), and detached analyst (U₄).
+
+**What would change.** The site choice is normative. A Marxist analysis might separate epistemic access from material power as independent morphism dimensions. A feminist standpoint epistemology might add an embodiment axis. A richer site with non-linear power relationships would produce different invariants — in particular, the gap structure derived in Theorem 2 depends on linearity and would not hold on a non-linear site. The framework is a functor from site choices to invariants; the current 4-element chain is one instantiation.
+
+**Where political commitments enter the mathematics.** The site is where they enter. The invariants the framework computes are geometry-relative — properties of this measurement apparatus — not world-relative assertions about the constraints themselves. The framework makes that entry point explicit rather than hiding it behind a claim of objectivity.
+
+### Axiom 2: Power-Modulated Perception of Extraction (The Sigmoid)
+
+The core empirical commitment: **power reduces experienced extraction.** This is encoded as a multiplicative formula. Each constraint has a base extractiveness ε that is observer-independent — a design axiom (ε-invariance). The *experienced* extractiveness varies by observer:
+
+$$\chi = \varepsilon \times f(d(P)) \times \sigma(S(P))$$
+
+where d(P) is a directionality value derived from the observer's structural relationship to the constraint (beneficiary, victim, neither), σ is a sigmoid scaling, and S is a scope modifier. The formula factors multiplicatively as (observer-independent) × (observer-dependent).
+
+The specific power modifiers for the four standard contexts:
+
+| Context | Power Modifier π | Effect |
+|---------|-----------------|--------|
+| U₁ (powerless) | 1.5 | Extraction amplified |
+| U₂ (moderate) | 1.0 | Baseline |
+| U₃ (institutional) | −0.2 | Sign flip — extraction experienced as coordination |
+| U₄ (analytical) | 1.15 | Slight amplification above baseline |
+
+The critical feature is the **sign flip at institutional power** (π = −0.2). The institutional observer, with generational time horizon and arbitrage exit options, experiences positive extraction as negative — what others experience as extraction, this observer experiences as coordination working in their favor.
+
+**Why multiplicative factorization.** The multiplicative form guarantees χ ≥ 0 for all non-negative inputs (sigmoid outputs are positive and ε ≥ 0). It also has a categorical consequence: restriction maps compose telescopically (Theorem 5). An additive factorization (as in the Avellaneda-Stoikov reservation price formula) also satisfies the functor axiom but allows negative valuations.
+
+**What would change.** A different sigmoid calibration — moving π(institutional) toward π(moderate) — would reduce the spectral dominance of the institutional observer (Theorem 3), weaken the gap structure (Theorem 2), and eventually eliminate the cover-story guarantee (Theorem 1). A linear power-to-perception function would preserve the cover-story theorem (any monotone decreasing function suffices) but alter the specific gap structure and eigenvalue spectrum.
+
+### Axiom 3: Two Independent Input Channels (The Two-Hub Architecture)
+
+Observer-dependence enters the classification system through exactly two independent channels:
+
+**Hub 1: Power-Scaled Extraction (continuous).** The directionality chain d(P) → σ(P) → χ maps observer position to experienced extraction. Small changes in power produce small changes in χ. All threshold-based classification differences (snare vs. tangled_rope vs. rope) are downstream of this hub.
+
+**Hub 2: Effective Immutability (discrete).** An 18-row lookup table maps (TimeHorizon, ExitOptions) pairs to perceived mutability levels. This is a discrete function producing categorical outputs: mountain, rope, or neither. An observer with biographical time horizon and no exit options perceives a constraint as immutable; an observer with generational time horizon and systemic exit perceives the same constraint as mutable.
+
+**Why two hubs rather than one.** They measure different things (experience of extraction vs. perception of mutability), have different mathematical characters (continuous vs. discrete), and interact productively at specific points. False mountains — actively enforced extraction perceived as natural law — are detectable *because* the two hubs are independent. A unified hub would blend the signals and lose the diagnostic.
+
+**Independence verification.** The hubs are independent by construction: the BaseEps check prevents any constraint from simultaneously classifying as mountain (Hub 2) and at snare-level extraction (Hub 1). This independence is confirmed empirically: zero Type A conflicts in both corpora tested.
+
+### Axiom 4: The Presheaf Structure (Refusal of Sheafification)
+
+For each constraint C, we define a contravariant functor:
+
+$$F_C : \mathbf{C}^{op} \to \mathbf{Set}$$
+
+setting F_C(U_i) = dr_type(C, U_i). This assigns a classification type at each observer context. The restriction maps are determined by the power-scaling formula (Axiom 2).
+
+**The presheaf is not a sheaf.** The gluing axiom requires that local sections agreeing on overlaps extend to a global section. The entire diagnostic infrastructure exists because local sections *fail to glue*: a constraint may classify as "mountain" from U₄ and "rope" from U₃, with no consistent global classification available. This perspectival gap is the framework's central diagnostic signal.
+
+**The refusal of sheafification is a principled commitment.** Sheafification would force descent — producing a "consensus classification" by resolving perspectival disagreements. For the [snare, snare, rope, snare] orbit (H¹ = 3), sheafification under majority-rule topology forces "snare"; under institutional-authority topology forces "rope." The choice of Grothendieck topology IS the choice of whose perspective is definitive. The framework preserves the diagnostic signal rather than forcing consensus.
+
+### Axiom 5: The Type Space
+
+The codomain of the classification presheaf is the type space:
+
+$$\Omega = \{\text{mountain, rope, tangled\_rope, snare, scaffold, piton, naturalized, unknown}\}$$
+
+Each type has a structural interpretation: mountain (immutable natural constraint), rope (legitimate coordination), tangled_rope (coordination with embedded extraction), snare (extractive trap), scaffold (temporary coordination with sunset clause), piton (performative constraint — more display than substance), naturalized (contradictory metrics), unknown (residual).
+
+The type space carries a priority monoid under composition with two absorbing elements (mountain and piton). This is not a Heyting algebra — the presence of two absorbing elements prevents lattice structure. This means the type space is not the subobject classifier of a topos, which is an honest limitation of the formal structure.
+
+### Axiom 6: Classification by Deterministic Threshold Cascade
+
+Classification flows through a deterministic rule cascade (`classify_from_metrics/6`) that applies approximately 65 binary structural gates organized in two tiers:
+
+**Tier 1 (structural screening):** Five base boolean gates plus threshold gates test structural properties: Does the constraint emerge naturally? Is it actively enforced? Does it coordinate? Does it extract asymmetrically? Does it expire?
+
+**Tier 2 (cross-index factorization):** Boltzmann compliance, false natural law detection, false CI-rope detection. These require cross-index analysis across the Power × Scope grid and test whether structural properties *factorize* correctly across independent observer dimensions.
+
+The cascade is deterministic: given fixed inputs, the output is fully determined. This is not a trained classifier. The invariants it computes are formal properties of the classification presheaf, not performance metrics of a learned model.
+
+---
+
+## 3. Theorems
+
+The following results are deductive consequences of Axioms 1–6. They hold for any corpus processed by the framework. No empirical data is required for their derivation.
+
+### Theorem 1: Extraction Necessarily Requires a Cover Story
+
+**Statement.** Under any monotone decreasing power-to-perception function (Axiom 2), for any constraint with finite base extractiveness ε > 0, there exists at least one observer position from which the extraction is reclassified as coordination or as structurally irrelevant. Extractive constraints in H⁰ (the space of globally agreed classifications) are structurally impossible except at pathological calibration boundaries.
+
+**Proof sketch.** Hub 1's sigmoid maps different power levels to different experienced-extractiveness values. For a constraint to appear as a snare at every context, the sigmoid would need to push χ above the snare threshold at every power level. But the sigmoid is calibrated so that higher power systematically reduces experienced extractiveness (the institutional modifier flips the sign). For any constraint with finite ε, there exists a power position — specifically the institutional position with π = −0.2 — from which experienced extraction drops below the snare threshold. The classification changes; the extraction becomes invisible from that position.
+
+**What this means.** The persistence of extraction structurally requires a cover story — at least one observer position from which the extraction is reclassified as legitimate. This is not a conspiracy; it is a structural inevitability under power-modulated perception. The cover story is not optional.
+
+**Falsification condition.** Find a widely recognized extractive system where every observer — including the most powerful institutional beneficiaries — agrees it is extractive. If such a system exists, the theorem's premise (monotone decreasing power-to-perception) is empirically falsified.
+
+### Theorem 2: Disagreement Clusters in Discrete Blocs (The Gap at H¹ = 1, 2)
+
+**Statement.** On a linearly ordered 4-element site with classification by monotone threshold-crossing on continuous metrics, no constraint can have exactly 1 or 2 disagreeing observer-pairs (out of 6 possible pairs). When disagreement emerges, it emerges in blocs of at least 3 disagreeing pairs. H¹ ∈ {0, 3, 4, 5, 6}, never {1, 2}.
+
+**Proof.** The four standard contexts are ordered on a one-dimensional power axis. The classification cascade uses fixed thresholds on continuous metrics scaled by a monotone sigmoid. When a constraint's experienced extractiveness crosses a classification threshold, it crosses at a single power boundary — say, between U₂ and U₃. Because the ordering is linear, this creates a partition: contexts on one side of the boundary see one type, contexts on the other side see another. A single threshold transition on a 4-element linear site generates a 3+1 or 2+2 split, producing exactly 3 or 4 disagreeing pairs. No partition of a linearly ordered 4-element set produces exactly 1 or 2 disagreeing pairs. Multiple threshold crossings produce H¹ = 5 or 6.
+
+**Falsification condition.** Modifying the sigmoid parameters to reduce the institutional sign-flip would weaken the gap. A non-linear site (e.g., adding a power dimension orthogonal to the current axis) could produce H¹ = 1 or 2 by enabling non-adjacent threshold crossings.
+
+### Theorem 3: Institutional Spectral Dominance
+
+**Statement.** The sheaf Laplacian L₀ on the 4-element linear site with restriction ratios determined by Axiom 2's sigmoid parameters has eigenvalues λ = {0, 0.0152, 2.9953, 72.1839}. The dominant eigenmode (λ₄ = 72.18, carrying 97% of spectral weight) is localized on the institutional vertex (eigenvector loading 0.9927). The institutional observer occupies an isolated eigenspace, effectively decoupled from the other three observers.
+
+**Derivation.** L₀ is fully determined by the restriction map ratios r_ij = σ(π(Uᵢ)) / σ(π(Uⱼ)), which depend only on the sigmoid parameters in the configuration — specifically the canonical directionality values and scope modifiers — not on any property of any corpus. The spectral gap λ₂ = 0.0152 is three orders of magnitude below λ₄ = 72.18, with the dominant mode concentrated at the institutional position because the sign flip (π = −0.2) creates the largest restriction-map discontinuity in the system.
+
+**What this means.** The institutional observer is not one voice among four. It is the structurally decisive perspective. The 97% spectral weight means that in any classification dispute involving observer-dependence, the institutional position determines the outcome. The moderate→institutional boundary is where the framework's context geometry concentrates its discriminating power.
+
+### Theorem 4: The Classical Oracle Gap
+
+**Statement.** A Maximum Entropy classifier operating on observer-independent metrics (a "classical oracle" with access to all structural data but no indexing by observer position) systematically fails to detect observer-dependent structure. The failure rate varies by observer position: near-total at the analytical context (smooth 1.37× scaling is absorbed by profile recalibration), near-zero at the institutional context (the sign flip cannot be absorbed).
+
+**Mechanism.** At the analytical context, the power modifier scales χ by approximately 1.37 relative to ε. The MaxEnt Gaussian likelihoods shift right by 37% but preserve their shape; relative type probabilities barely change. Mean corrected total variation distance at the analytical context is approximately 0.0006 (effectively zero). At the institutional context (χ/ε ≈ −0.04), the sigmoid maps positive extraction to negative experienced extractiveness. No profile recalibration can absorb a sign change.
+
+The gap exists because most observer-dependence produces categorical classification shifts (crossing deterministic thresholds) without producing large probabilistic shifts (the Gaussian likelihoods are broad enough that raw metrics are compatible with multiple types). The classical oracle fails not by getting wrong answers but by failing to detect that answers *differ* across positions.
+
+**What this means.** Single-position analysis with full information is provably almost blind to cross-position structure. The observer-dependent structure lives in the *relationships between* positions, not in any single position's view. Examining a system carefully from one vantage point misses more than 97% of what comparing across vantage points reveals.
+
+### Theorem 5: Boltzmann Factorizability = Functor Axiom
+
+**Statement.** The Boltzmann factorizability test — checking whether χ separates into observer-independent and observer-dependent factors — is exactly the functor axiom for Hub 1's restriction maps.
+
+**Proof.** Hub 1's formula χ(P) = ε · [f(d(P)) · σ(S(P))] separates into (observer-independent) × (observer-dependent). The restriction map from context Pⱼ to context Pᵢ acts by the ratio of observer-dependent parts:
+
+$$\rho(P_j \to P_i): \chi \mapsto \chi \cdot \frac{\sigma(\pi(P_i))}{\sigma(\pi(P_j))}$$
+
+Composition check: ρ(P₂ → P₃) ∘ ρ(P₁ → P₂)(χ₁) = χ₁ · [σ(π(P₂))/σ(π(P₁))] · [σ(π(P₃))/σ(π(P₂))]. The σ(π(P₂)) terms cancel telescopically, yielding χ₁ · σ(π(P₃))/σ(π(P₁)) = ρ(P₁ → P₃)(χ₁). QED.
+
+This works because ratios compose telescopically — (a/b)(b/c) = a/c — regardless of whether a, b, c are linear, sigmoidal, or anything else. The Boltzmann compliance test already running in the classification pipeline is performing formal verification of the functor axiom.
+
+Hub 2's lookup table satisfies the functor axioms trivially: singleton stalks admit unique maps, and composition of unique maps is unique.
+
+### Theorem 6: H¹ Band–Hub Correspondence
+
+**Statement.** The two-hub architecture gives the H¹ distribution an internal structure:
+
+| H¹ band | Mechanism | Hub |
+|---------|-----------|-----|
+| 0 | Neither hub diverges. All observers agree. | — |
+| 3 | Sigmoid pushes χ across threshold at a single power boundary | Hub 1 |
+| 4 | Immutability table flips between mountain and non-mountain | Hub 2 |
+| 5–6 | Multiple interactions between both hubs | Both |
+
+**Derivation.** H¹ = 3 corresponds to a single threshold crossing, which is Hub 1's mechanism (the sigmoid producing a 3+1 split). H¹ = 4 corresponds to the discrete immutability flip, which is Hub 2's mechanism (the lookup table switching mountain classification at the powerless/moderate boundary). Higher H¹ values involve multiple crossings or interactions between both hubs.
+
+---
+
+## 4. The Computational Engine
+
+The axioms are implemented as a Prolog codebase comprising 77 modules with approximately 1,150 test cases. This section documents the implementation at the level needed to understand the empirical results; the full codebase is open-source under CC0.
+
+### 4.1 Classification Pipeline
+
+The classification presheaf is evaluated by `classify_from_metrics/6`, which applies the binary gate cascade (Axiom 6) to the metrics at each observer context. The presheaf evaluation, naturality testing, cohomological computation, and diagnostic synthesis are all computed by the Prolog engine.
+
+### 4.2 Diagnostic Stack (Summary)
+
+The engine includes a diagnostic stack that measures properties of the presheaf beyond the classification itself:
+
+**Gauge orbits:** The complete presheaf evaluation across all contexts — the constraint's identity in the presheaf topos. Constraints sharing identical orbits are structurally isomorphic under observer shifts.
+
+**MaxEnt shadow classification:** A probabilistic classifier assigning Gaussian-likelihood distributions over the type space. Operates in both classical mode (using observer-independent ε) and indexed mode (using power-scaled χ). The divergence between these modes measures the probabilistic effect of observer-dependence. Forms a Markov category (Fritz 2020) rather than a Giry monad — the correct abstraction for indexical systems that refuse to posit a prior over observer positions (pending verification of delete-map naturality).
+
+**Naturality certificates and failure witnesses:** CI Rope (passes all four naturality conditions — a certificate that the classification is well-behaved), False Natural Law (presents as natural law but fails Boltzmann factorizability — "physics-washed"), False CI Rope (appears as structurally sound rope but fails structural tests — "coordination-washed"). The FCR detection is the primary mechanism driving the ~62% tangled_rope convergence (§5.2).
+
+**Abductive synthesis:** 16 trigger classes functioning as cross-diagnostic consistency checks. Category A triggers (T1–T11) detect when diagnostics disagree. Category B triggers (T13–T16) detect when diagnostic agreement is misleading — when the classical oracle is confident but wrong. See codebase documentation for full trigger specifications.
+
+**Purity and contamination network:** Composite naturality health scores propagated through agent-sharing graphs. Monotone operator converging to a fixed point (Knaster-Tarski).
+
+**Diagnostic integration:** 12 subsystems aggregated into GREEN/YELLOW/RED verdicts. Expected conflict catalog (P1–P11) filters known architectural artifacts from genuine tensions. The verdict does not change classification — it provides meta-analytical confidence assessment.
+
+### 4.3 Corpus Provenance
+
+**Corpus A (Haiku 4.5).** 907 constraints generated by Anthropic's Claude Haiku 4.5 using generation prompt v1.1.
+
+**Corpus B (Gemini Flash 2.0).** 887 constraints generated by Google's Gemini Flash 2.0 using generation prompt v1.2.
+
+The two corpora are deliberately different: different LLM architectures, different generation prompts, and — critically — inverted input metric distributions. Corpus A is tangled_rope-dominated (68.2% by raw metrics). Corpus B is snare-dominated (50.5% by raw metrics). Both exhibit d-pattern anchoring artifacts (43% and 75% concentration on a single directionality pattern), creating a stress test of framework robustness.
+
+The continuous metrics (extractiveness ε, suppression, theater ratio, resistance-to-change) are specified in the constraint stories and have not been subjected to inter-rater reliability testing. A configuration sensitivity sweep (118 parameters perturbed at ±10% and ±25%) found 87% of parameters inert at ±25%, with one genuinely critical parameter: the analytical power modifier.
+
+---
+
+## 5. Empirical Results
+
+This section reports what the engine finds when run on the two corpora. The central validation is the separation between theorem-confirmed structural properties (stable across both corpora, as predicted by §3) and corpus-dependent statistical properties (varying between corpora, reported as ranges).
+
+### 5.1 Theorems Confirmed
+
+**Cover story (Theorem 1):** Extractive constraints in H⁰ are 0 in Corpus A, 1 borderline case in Corpus B (ε = 0.75, classification confidence 0.01, rival type tangled_rope at 0.95). Confirmed.
+
+**Gap structure (Theorem 2):** H¹ = 1 and H¹ = 2 are empty in both corpora. Confirmed.
+
+| H¹ | Corpus A (907) | Corpus B (887) |
+|----|---------------|----------------|
+| 0 | 692 (76.3%) | 181 (20.3%) |
+| 1 | **0 (0.0%)** | **0 (0.0%)** |
+| 2 | **0 (0.0%)** | **0 (0.0%)** |
+| 3 | 64 (7.1%) | 353 (39.8%) |
+| 4 | 12 (1.3%) | 14 (1.6%) |
+| 5 | 94 (10.4%) | 320 (36.1%) |
+| 6 | 45 (5.0%) | 19 (2.1%) |
+
+**Spectral invariance (Theorem 3):** Sheaf Laplacian eigenvalues identical to four decimal places across both corpora: [0, 0.0152, 2.9953, 72.1839]. Institutional eigenvector loading 0.9927 in both. 97% spectral weight at institutional vertex in both. Confirmed.
+
+**Oracle gap (Theorem 4):** At the analytical context, T13 fires on 6 constraints in Corpus A (2.8% of H¹ > 0) and 12 in Corpus B (1.7%). Mean corrected total variation distance at analytical: 0.0006. At institutional context, detection rate approximately 97%. Confirmed.
+
+**Band–hub correspondence (Theorem 6):** H¹ = 3 band dominated by Hub 1 sigmoid-driven divergence (institutional observer sees rope where others see extraction). H¹ = 4 band corresponds to Hub 2 immutability flips. Confirmed in both corpora.
+
+### 5.2 Convergence Under Inversion
+
+The strongest empirical validation: two corpora with opposite input distributions converge to identical framework-level outputs.
+
+**Type distribution convergence:**
+
+| Type | Flash metric | Flash post | Haiku metric | Haiku post |
+|------|-------------|-----------|-------------|-----------|
+| snare | 448 (50.5%) | 109 (12.3%) | 152 (16.8%) | 175 (19.3%) |
+| tangled_rope | 287 (32.4%) | 549 (62.0%) | 619 (68.2%) | 567 (62.5%) |
+| mountain | 139 (15.7%) | 139 (15.7%) | 129 (14.2%) | 129 (14.2%) |
+
+Both corpora converge to approximately 62% tangled_rope after signature integration, despite inverted pre-override distributions. The FCR override acts as a fixed-point attractor. Mountains are invariant under signature integration (Δ = 0 in both).
+
+**Complete invariant table:** The following properties are identical or functionally equivalent across both corpora:
+
+| Finding | Status |
+|---------|--------|
+| Sheaf Laplacian eigenvalues | Identical to 4 decimal places |
+| Spectral gap λ₂ = 0.0152 | Identical |
+| r₂₃² spectral weight = 97% | Identical |
+| H¹ gap at values 1 and 2 | Present in both |
+| Post-override tangled_rope rate | ~62% in both |
+| Confidence bands (deep/moderate/borderline) | ~75%/5%/20% in both |
+| Mountain population | ~14–16% in both |
+| Institutional dissent direction (U₃ sees rope) | Confirmed in both |
+| Zero Type A hub conflicts | Confirmed in both |
+
+These invariants hold despite 43% and 75% d-pattern concentration, different LLM architectures, different generation prompts, and inverted type distributions.
+
+### 5.3 Corpus-Dependent Findings
+
+The following vary between corpora and are reported as ranges:
+
+**Descent rate:** 20.3% (Corpus B) to 76.3% (Corpus A). The wide range reflects different ε distributions: models generating more polarized constraint stories produce higher gauge-invariance.
+
+**Gauge-variance rate:** 23.7% (Corpus A) to 79.7% (Corpus B). Inverted relative to descent rate.
+
+**Coalition structure:** Corpus A is dominated by uniform_tangled (73% of tangled_ropes — all observers agree). Corpus B is dominated by institutional_dissent and split_field (99% combined — observers actively disagree). The inversion is complete: every corpus-dependent measure points in opposite directions while framework-dependent measures are stable.
+
+**Tangled rope ψ structure:** Corpus B is bimodal (mass at ψ ≈ 0 and ψ ≈ 1.0, only 1.8% genuinely tangled). Corpus A is unimodal (73.4% genuinely tangled). Both classified as tangled_rope through different mechanisms (signature override vs. metric ambiguity).
+
+**Institutional dissent population:** 40 (Corpus A) to 246 (Corpus B). The binary split within institutional dissent — 213 low-snare vs. 33 high-snare in Corpus B, with rank-biserial r = 1.0 — is confirmed but too asymmetric in Corpus A (39:1) for cross-corpus generalization.
+
+**Per-constraint obstruction energy correlation:** E(C)–H¹ Spearman ρ = 0.66 (Corpus B) vs. ρ = 0.20 (Corpus A). The correlation weakens when most constraints are gauge-invariant. The eigenvalues are a framework property; the correlation strength tracks the gauge-variance rate.
+
+**Epistemic restriction vs. frame-dependence:** Approximately 1.5% overlap — nearly disjoint phenomena. Epistemic restriction is having a reduced information set; frame-dependence is processing full information through a different structural relationship.
+
+---
+
+## 6. Honest Assessment
+
+This section distinguishes what the framework proves from what it suggests.
+
+### 6.1 Three-Level Rigor Classification
+
+- **STRICT**: the categorical correspondence holds mathematically.
+- **STRUCTURAL**: the analogy is productive and behavior matches, but full categorical verification is absent.
+- **LOOSE**: the categorical language would mislead if taken literally.
+
+### 6.2 What Is STRICT
+
+The site, the presheaf, the naturality condition, the Boltzmann = functor axiom equivalence, the naturality witnesses (FNL, CI Rope), H⁰ and descent, gauge orbits, the Galois connection, Hub 1 as restriction map, Hub 2 as classification gate, hub independence, binary gate computations, NMI analysis, T13 divergence measurement, mountain zero-divergence, the sheaf Laplacian construction, cross-model spectral invariance, confidence band distribution, post-override attractor convergence. See §2.4 of v5 for complete proofs.
+
+The three-way equivalence (Lawvere ↔ Grothendieck ↔ Noether) is two-out-of-three STRICT: naturality ↔ descent is strict; the Noether column maps to discrete group invariance, which is the precondition of Noether's theorem rather than the theorem itself.
+
+### 6.3 What Is STRUCTURAL
+
+MaxEnt as Markov category (pending delete-map naturality verification). Information geometry of T13 (Fisher-Rao geodesic ball applies to KL divergence, not L∞). FPN as terminal coalgebra (convergence proved via Knaster-Tarski, but full coalgebra axioms unverified). Abductive engine as naturality auditor (triggers are hand-crafted, not derived from categorical constructions). H¹ proxy (combinatorial descent-failure count on the Alexandrov site, not formal Čech H¹). H¹ band–hub correspondence (empirical, not derived). Oracle gap mechanism (architectural, corpus-specific magnitudes). Diagnostic verdict synthesis (threshold-based, not derived).
+
+### 6.4 What Is LOOSE
+
+Type space as Heyting algebra (two absorbing elements prevent it). Power scaling as adjunction (triangle identities unverified). Signature resolution as lattice meet (priority dispatch table, not lattice operation). All five Girard/Linear Logic mappings (confusing computing a quantity with consuming a resource). The quantum measurement analogy (breaks at reversibility, determinism, and locality). "Quantum" naming in verification triggers (evocative but misleading if taken formally).
+
+### 6.5 What the Framework Cannot Do
+
+Plan under resource constraints (computes costs but does not enforce budgets — the genuine gap identified by Girard analysis). Perform metric-level sensitivity analysis (parameter robustness is tested, input metric robustness is not). Extend to infinite or non-linear sites (the H¹ gap and spectral structure depend on the specific site geometry). Establish causation (detects structural patterns, does not explain *why* extraction emerged or *whether* reform would succeed). Model lateral extraction (power axis is vertical; the victim must be coded as powerless/trapped, misrepresenting the actual geometry).
+
+### 6.6 What Would Strengthen the Framework
+
+1. **Metric-level sensitivity analysis.** Systematically varying input metrics within plausible ranges to measure reclassification rates.
+2. **Vector-valued sheaf Laplacian.** Replacing scalar χ stalks with MaxEnt distribution vectors (Δ⁷ ⊂ ℝ⁸) to capture both hub contributions.
+3. **Clean corpus without d-pattern anchoring.** D-pattern concentration below 30% for proper perspective diversity.
+4. **Extension to enriched sites.** Temporal morphisms creating bigraded cohomology H^{p,q}. H^{1,1} would detect constraints whose observer-dependence itself changes over time.
+5. **Financial regulation beta corpus.** Testing portability to a domain with quantitative ground truth.
+6. **Lateral extraction formalization.** A relational dimension representing same-level relationships.
+7. **The sheafification question remains open.** See Axiom 4 for the argument against.
+
+---
+
+## 7. Related Work
+
+**Standpoint epistemology** (Harding 1986; Haraway 1988). DR formalizes the claim that knowledge is perspectival by providing presheaf-theoretic machinery where the "standpoint" is a point of the site. The formalization adds quantitative invariants: the descent rate measures *how much* is perspectival; the H¹ distribution measures the *structure*; the Galois lattice identifies *which* standpoints are decisive. What DR lacks is standpoint epistemology's rich account of how standpoints are constituted.
+
+**Social choice theory** (Arrow 1951; Sen 1970). Arrow's impossibility theorem shows no aggregation rule satisfies a set of desirable axioms; the cover-story theorem (Theorem 1) shows no observer position universalizes extraction. The formal structures are different (preference lattices vs. presheaves on sites), but the impossibility results are spiritually related.
+
+**Institutional analysis** (Ostrom 1990). Ostrom asks "what kind of institution is this?" from a single analytical perspective; DR asks "what kind does this look like to different observers?" The approaches are complementary: Ostrom provides institutional semantics that DR currently lacks.
+
+**Topos-theoretic approaches in physics** (Isham and Butterfield 1998; Döring and Isham 2008). Both are presheaves on sites of contexts; both formalize context-dependent truth. Key disanalogy: quantum measurement involves irreversibility, stochasticity, and entanglement, none of which are present in DR.
+
+**Computational social science.** DR is not machine learning. Classification is computed from continuous metrics via a hand-designed deterministic rule cascade, and the central question is not "which label is correct?" but "how does the label depend on who is labeling?"
+
+**Markov categories** (Fritz 2020). The correct abstraction for DR's MaxEnt layer — capturing compositionality without requiring the Giry monad's distribution-over-distributions structure.
+
+**Sheaf Laplacians** (Hansen and Ghrist 2019). Applied to DR's path-graph site, confirms the institutional phase transition as the dominant spectral feature.
+
+---
+
+## 8. Conclusion
+
+Classification of social structures depends irreducibly on who is observing. This paper shows that this dependence has formal mathematical structure and derives specific consequences from a small set of axioms.
+
+The framework's core commitment is a single empirical hypothesis: power modulates the perception of extraction. Encoded as a presheaf on a site of observer positions, this hypothesis produces consequences that are not visible from the informal intuition alone. Extraction necessarily requires a cover story. Disagreement clusters in discrete blocs. The institutional observer carries 97% of the spectral weight. Single-position analysis is provably almost blind to cross-position structure. These are theorems, not findings.
+
+Two independently generated corpora with inverted input distributions confirm the engine correctly computes these consequences and converge to identical framework-level outputs — the strongest validation that the structural properties are fixed-point attractors of the axioms rather than artifacts of any particular dataset.
+
+But a clarification is warranted: the framework does not explain *why* extraction requires perspectival cover — that remains a sociological claim requiring domain theory. What the framework provides is formal machinery to establish *that* it does, to measure *how much* it does, and to identify the specific coalition structure of the cover. The categorical vocabulary organizes the diagnostic machinery; explanation requires a theory of the domain.
+
+We close with the open question that the framework itself raises: should the presheaf be sheafified? The answer remains no. The framework's value lies precisely in measuring perspectival fracture — in quantifying the gap between local truth and global truth, and in identifying the structural patterns in that gap. The descent rate, the H¹ distribution, the near-absence of snares from H⁰, the institutional observer as dominant dissenter, the oracle gap — these are features of the presheaf's failure to be a sheaf. Sheafification would erase them. The truth of a social system, on this account, is not the consensus but the fracture itself.
+
+---
+
+## References
+
+Amari, S., & Nagaoka, H. (2000). *Methods of Information Geometry*. American Mathematical Society.
+
+Arrow, K. J. (1951). *Social Choice and Individual Values*. Wiley.
+
+Čencov, N. N. (1982). *Statistical Decision Rules and Optimal Inference*. American Mathematical Society.
+
+Döring, A., & Isham, C. J. (2008). "What is a thing?": Topos theory in the foundations of physics. In *New Structures for Physics*, Springer.
+
+Fritz, T. (2020). A synthetic approach to Markov kernels, conditional independence and theorems on sufficient statistics. *Advances in Mathematics*, 370.
+
+Hansen, J., & Ghrist, R. (2019). Toward a spectral theory of cellular sheaves. *Journal of Applied and Computational Topology*, 3.
+
+Haraway, D. (1988). Situated knowledges. *Feminist Studies*, 14(3).
+
+Harding, S. (1986). *The Science Question in Feminism*. Cornell University Press.
+
+Isham, C. J., & Butterfield, J. (1998). A topos perspective on the Kochen–Specker theorem. *International Journal of Theoretical Physics*, 37(11).
+
+Lawvere, F. W. (1969). Adjointness in foundations. *Dialectica*, 23(3–4).
+
+Mac Lane, S., & Moerdijk, I. (1992). *Sheaves in Geometry and Logic*. Springer.
+
+Noether, E. (1918). Invariante Variationsprobleme. *Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen*.
+
+Ostrom, E. (1990). *Governing the Commons*. Cambridge University Press.
+
+Sen, A. K. (1970). *Collective Choice and Social Welfare*. Holden-Day.
+
+Wheeler, J. A. (1989). Information, physics, quantum. In *Complexity, Entropy, and the Physics of Information*, Addison-Wesley.
+
+Yuen, H. (2023). A quantum complexity-theoretic reduction for the unitary synthesis problem. arXiv:2306.13073.

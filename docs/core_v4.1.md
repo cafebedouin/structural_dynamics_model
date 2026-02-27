@@ -1,6 +1,6 @@
 # Deferential Realism: Core Principles
 
-**Version 4.0**  
+**Version 4.1**  
 **Purpose:** Gateway introduction to the Deferential Realism framework  
 **Read this first.** If the core framework makes sense, the domain extensions follow naturally.
 
@@ -15,7 +15,7 @@
 **Deferential Realism prevents both errors** through systematic constraint classification.
 
 **The framework provides:**
-- Seven constraint categories (Mountains, Ropes, Tangled Ropes, Snares, Scaffolds, Pitons, Naturalized)
+- Six constraint categories (Mountains, Ropes, Tangled Ropes, Snares, Scaffolds, Pitons)
 - Four indices for specifying perspective (WHO/WHEN/WHERE/HOW_MUCH)
 - Tests distinguishing each category
 - Power-scaling mechanism (same constraint experienced differently by power position)
@@ -67,7 +67,7 @@ Deferential Realism integrates five philosophical branches with three applied do
 - **Containment capacity** - Some tensions are structurally permanent; skillful navigation holds paradox without forcing resolution
 - **Lifecycle awareness** - Constraints emerge, mature, degrade, and die; temporal dynamics matter
 
-**Empirical validation:** Framework tested against +725 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures. Corpus is actively growing via automated generation pipeline. Tangled Rope prevalence: 36% of social constraints, 60%+ of functional democratic institutions. Power-scaling eliminates classification collisions (8.2% without it, 0% with it). See `validation/validation_report.md` for complete findings and `limitations.md` for empirically confirmed failure modes.
+**Empirical validation:** Framework tested against 1,023 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures. Corpus is actively growing via automated generation pipeline. Tangled Rope prevalence: 36% of social constraints, 60%+ of functional democratic institutions. Power-scaling eliminates classification collisions (8.2% without it, 0% with it). See `validation/validation_report.md` for complete findings and `limitations.md` for empirically confirmed failure modes.
 
 ---
 
@@ -84,11 +84,11 @@ All four are **objectively true** because they're answering from different power
 
 **Power-scaling mechanism:**
 ```
-Base extraction Îµ = 0.40
+Base extraction ε = 0.40
 
-Consumer: Ï‡ = 0.40 Ã— 1.5 = 0.60 (Snare threshold - extraction amplified)
-Small business: Ï‡ = 0.40 Ã— 1.0 = 0.40 (Tangled Rope - baseline)
-Corporation: Ï‡ = 0.40 Ã— 0.6 = 0.24 (Rope - extraction reduced)
+Consumer: χ = 0.40 × 1.5 = 0.60 (Snare threshold - extraction amplified)
+Small business: χ = 0.40 × 1.0 = 0.40 (Tangled Rope - baseline)
+Corporation: χ = 0.40 × 0.6 = 0.24 (Rope - extraction reduced)
 ```
 
 This **proves** indexical relativity: same structure genuinely IS different types from different positions, based on observable power (control over exit, enforcement, resources).
@@ -99,7 +99,7 @@ The problem isn't disagreement about facts. It's **indexical underspecification*
 
 ## The Constraint Categories (Climbing Terrain & Equipment)
 
-Every constraint falls into one of seven fundamental types, distinguished by how they function:
+Every constraint falls into one of six fundamental types, distinguished by how they function:
 
 ### 1. Mountains (Immovable Terrain)
 
@@ -130,7 +130,7 @@ Every constraint falls into one of seven fundamental types, distinguished by how
 
 ### 2. Ropes (Coordination Tools)
 
-**Definition:** Constructed systems solving genuine coordination problems, broadly beneficial with low extraction (Îµ â‰¤ 0.15).
+**Definition:** Constructed systems solving genuine coordination problems, broadly beneficial with low extraction. (See logic.md for formal thresholds.)
 
 **Test:** Does this prevent collisions or manage scarcity? Who benefits? Is benefit approximately reciprocal?
 
@@ -157,16 +157,16 @@ Every constraint falls into one of seven fundamental types, distinguished by how
 **Examples across domains:** 
 - **Economic**: Carbon credits (climate coordination + financial rent), health insurance (risk pooling + admin extraction)
 - **Social**: Monogamy norms (expectation coordination + alternative suppression), professional networking (opportunity discovery + insider advantage), family caregiving (elder support + gendered extraction)
-- **Institutional**: Two-round elections (majority legitimacy + centrist compression), CentrÃ£o budget amendments (coalition governance + pork extraction), party-list PR with threshold (prevents fragmentation + suppresses near-threshold parties)
+- **Institutional**: Two-round elections (majority legitimacy + centrist compression), Centrão budget amendments (coalition governance + pork extraction), party-list PR with threshold (prevents fragmentation + suppresses near-threshold parties)
 - **Psychological**: Perfectionism (quality standards + worth-contingency), people-pleasing (genuine care + self-abandonment), achievement drive (goal pursuit + worth-contingency)
 
 **Response:** **Reform** - preserve coordination, excise extraction. Requires surgical precision: cutting whole rope destroys coordination; keeping all maintains extraction.
 
 **Power-scaling effect:** Same base extraction experienced differently by position:
-- **Powerless agents**: Extraction amplified (Ï€ = 1.5, often feels like Snare)
-- **Moderate agents**: See both functions (Ï€ = 1.0, recognize Tangled Rope)
-- **Powerful agents**: Extraction reduced (Ï€ = 0.6, may feel like Rope)
-- **Institutional actors**: Net beneficiaries (Ï€ = -0.2, experience as Rope)
+- **Powerless agents**: Extraction amplified (π = 1.5, often feels like Snare)
+- **Moderate agents**: See both functions (π = 1.0, recognize Tangled Rope)
+- **Powerful agents**: Extraction reduced (π = 0.6, may feel like Rope)
+- **Institutional actors**: Net beneficiaries (π = -0.2, experience as Rope)
 
 **Why this is the most important category:**
 - Most complex systems operate this way (norm, not exception)
@@ -182,7 +182,7 @@ Every constraint falls into one of seven fundamental types, distinguished by how
 
 ### 4. Snares (Extraction Traps)
 
-**Definition:** Structures extracting asymmetrically through power maintenance, often masquerading as Mountains (natural) or Ropes (coordination). Base extraction Îµ â‰¥ 0.46.
+**Definition:** Structures extracting asymmetrically through power maintenance, often masquerading as Mountains (natural) or Ropes (coordination). Extraction dominates coordination (roughly half or more of the value is captured). See logic.md for formal gates.
 
 **Test:** Who benefits systematically? Who loses? What enforcement maintains this? Are alternatives suppressed?
 
@@ -260,22 +260,6 @@ Every constraint falls into one of seven fundamental types, distinguished by how
 
 ---
 
-### 7. Naturalized (Power-Scaling Ambiguity)
-
-**Definition:** Constraints with high base extraction (ε > 0.45) but low power-scaled extraction (χ < 0.40). Power-scaling is doing enough work to mask the extraction — the constraint "naturalizes" differently depending on who's looking.
-
-**Test:** Does power position dramatically change whether this looks extractive? Is base extraction high but effective extraction low for the classifier's position?
-
-**Examples:**
-- Professional credentialing (high cost to outsiders, invisible to insiders)
-- Cultural norms that powerful agents experience as coordination but powerless agents experience as extraction
-
-**Response:** `investigate_naturalization` — the power-scaling naturalization itself is the primary finding. Re-evaluate from multiple indices (powerless, moderate, institutional). The naturalization often reveals that the constraint is a Tangled Rope or Snare from lower-power indices.
-
-**Key insight:** Naturalized is a diagnostic category, not a stable structural type. It flags constraints where the analyst's power position is doing so much work that the classification itself becomes suspect.
-
----
-
 ## The Four Indices (WHO/WHEN/WHERE/HOW_MUCH)
 
 **Every classification requires specifying position:**
@@ -283,14 +267,14 @@ Every constraint falls into one of seven fundamental types, distinguished by how
 ### WHO - Agent Power
 
 Observable power position (not subjective feeling):
-- **Powerless**: Subject to outcomes, minimal influence, high exit costs (Ï€ = 1.5)
-- **Moderate**: Some agency, negotiation capacity, moderate costs (Ï€ = 1.0)
-- **Powerful**: High agency, strong position, low exit costs (Ï€ = 0.6)
-- **Collective**: Organized group, shared resources (Ï€ = 0.4)
-- **Institutional**: Organization-level, sets rules (Ï€ = -0.2)
-- **Analytical**: Outside observer (π = 1.15 — breaks moderate-analytical degeneracy)
+- **Powerless**: Subject to outcomes, minimal influence, high exit costs (π = 1.5)
+- **Moderate**: Some agency, negotiation capacity, moderate costs (π = 1.0)
+- **Powerful**: High agency, strong position, low exit costs (π = 0.6)
+- **Collective**: Organized group, shared resources (π = 0.4)
+- **Institutional**: Organization-level, sets rules (π = -0.2)
+- **Analytical**: Outside observer (π = 1.0)
 
-**Why power matters:** Determines extraction experience. Same base Îµ becomes different effective Ï‡.
+**Why power matters:** Determines extraction experience. Same base ε becomes different effective χ.
 
 ### WHEN - Time Horizon
 
@@ -305,6 +289,7 @@ Observable power position (not subjective feeling):
 ### WHERE - Exit Options
 
 - **Trapped**: Cannot leave (family, economics, legal bonds)
+- **Identity-locked**: Structurally mobile but cognitively fused — exit requires becoming a different person (identity fusion, epistemic closure, trauma bonding)
 - **Constrained**: High cost to exit but possible
 - **Mobile**: Moderate cost, can relocate/switch
 - **Arbitrage**: Can move freely between contexts
@@ -329,28 +314,28 @@ Observable power position (not subjective feeling):
 
 **The mechanism:**
 ```
-Effective extraction Ï‡(C, P) = Base extraction Îµ(C) Ã— Power modifier Ï€(P)
+Effective extraction χ(C, P) = Base extraction ε(C) × Power modifier π(P)
 
 Where:
-- Îµ(C) = structural property of constraint (observable)
+- ε(C) = structural property of constraint (observable)
 - P = agent's power position (observable: exit control, enforcement control, resources)
-- Ï€(P) = modifier based on position
+- π(P) = modifier based on position
 
 Modifiers:
-Ï€(powerless) = 1.5 (extraction amplified)
-Ï€(moderate) = 1.0 (baseline)
-Ï€(powerful) = 0.6 (extraction reduced)
-Ï€(collective) = 0.4 (shared burden)
-Ï€(institutional) = -0.2 (net beneficiary)
+π(powerless) = 1.5 (extraction amplified)
+π(moderate) = 1.0 (baseline)
+π(powerful) = 0.6 (extraction reduced)
+π(collective) = 0.4 (shared burden)
+π(institutional) = -0.2 (net beneficiary)
 ```
 
 **Critical insight:** Power must be **observable** (control over exit, enforcement, resources), not subjective, to avoid circularity.
 
-**Example: Professional networking (Îµ = 0.40)**
+**Example: Professional networking (ε = 0.40)**
 ```
-Without network (powerless): 0.40 Ã— 1.5 = 0.60 (Snare - locked out)
-Moderate network: 0.40 Ã— 1.0 = 0.40 (Tangled Rope - sees both)
-Strong network (powerful): 0.40 Ã— 0.6 = 0.24 (Rope - opportunities flow)
+Without network (powerless): 0.40 × 1.5 = 0.60 (Snare - locked out)
+Moderate network: 0.40 × 1.0 = 0.40 (Tangled Rope - sees both)
+Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 ```
 
 **This explains:**
@@ -444,7 +429,7 @@ Strong network (powerful): 0.40 Ã— 0.6 = 0.24 (Rope - opportunities flow)
 
 **Ropes:** Designed to solve coordination problems
 - Creation event: Problem recognized + solution proposed + collective adoption
-- Initial extraction low (Îµ â‰¤ 0.15)
+- Initial extraction low
 
 **Tangled Ropes:** Two paths
 - **Designed hybrid:** Coordination + extraction from inception (carbon credits)
@@ -460,7 +445,7 @@ Strong network (powerful): 0.40 Ã— 0.6 = 0.24 (Rope - opportunities flow)
 
 ### Degradation (Drift Events)
 
-**Eleven drift event types** (seven core + four structural):
+**Seven drift event types:**
 
 1. **Metric Substitution**: Proxy becomes goal (social media: connection â†’ engagement)
 2. **Extraction Accumulation**: Rent-seeking added (academic publishing capture)
@@ -468,14 +453,7 @@ Strong network (powerful): 0.40 Ã— 0.6 = 0.24 (Rope - opportunities flow)
 4. **Function Obsolescence**: Environment shifts (fax requirements in email era)
 5. **Sunset Violation**: Temporary becomes permanent (Thailand Senate)
 6. **Extraction Dried Up**: Mechanism fails but structure persists (Soviet committees post-1991)
-7. **Algorithm Shutdown → I-Piton**: Extraction mechanism removed but habits remain (creepiest path)
-
-**Stages 7-9 add four structural drift types** (see logic_extensions.md §4):
-
-8. **Coupling Drift**: Independent dimensions start entangling (app adds location + contacts + camera access)
-9. **Boltzmann Floor Drift**: Minimum necessary extraction rises (coordination problem got harder, not more extractive)
-10. **Purity Drift**: Structural health declining even when metrics appear stable
-11. **Network Drift**: Constraint degrades because its neighbors are degrading (induced contamination)
+7. **Algorithm Shutdown â†’ I-Piton**: Extraction mechanism removed but habits remain (creepiest path)
 
 ### Terminal States
 
@@ -532,13 +510,13 @@ Use Six-Test Battery (from epistemology.md):
 - If no coordination â†’ skip to power test (likely Snare or Piton)
 
 **Test 3: Extraction Present**
-- Low extraction (Îµ â‰¤ 0.15) â†’ Rope
-- Moderate extraction (0.40 â‰¤ Îµ â‰¤ 0.90) + coordination â†’ Tangled Rope
-- High extraction (Îµ â‰¥ 0.46) â†’ Snare
+- Low extraction → Rope
+- Mixed extraction + coordination function → Tangled Rope
+- Extraction dominates → Snare
 
 **Test 4: Power-Scaling Assessment**
-- Apply Ï€(P) to base Îµ
-- Effective extraction Ï‡ determines type from your position
+- Apply π(P) to base ε
+- Effective extraction χ determines type from your position
 
 **Test 5: Temporal Limitation**
 - Designed to sunset? â†’ Scaffold (orthogonal property)
@@ -632,7 +610,7 @@ Classification is ongoing practice, not one-time assessment.
 
 ## Empirical Development & Epistemic Status
 
-**What we've done:** Systematic analysis of +725 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures over several months. Corpus actively growing via automated generation pipeline (RSS ingestion + Gemini API). Corpus-wide audit conducted February 2026 including 13-file deep review testing predicted parser failure modes.
+**What we've done:** Systematic analysis of 1,023 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures over several months. Corpus actively growing via automated generation pipeline (RSS ingestion + Gemini API). Corpus-wide audit conducted February 2026 including 13-file deep review testing predicted parser failure modes.
 
 **Within tested corpus:**
 - 0% collision rate when indices fully specified
@@ -661,7 +639,7 @@ Classification is ongoing practice, not one-time assessment.
 **Testable predictions:**
 - France 2027: Compression dynamics will match Colombia 2026 pattern
 - Thailand post-2026: Judicial gatekeeping will continue
-- Brazil 2026: CentrÃ£o dynamics will persist
+- Brazil 2026: Centrão dynamics will persist
 - U.S. 2026: Safe seat dominance continues (>88%)
 
 **Falsification criteria:** If power-scaling doesn't reduce collisions, if Tangled Ropes are always separable, if containment protocol consistently fails, if index specification doesn't resolve apparent contradictions â†’ framework needs revision.
@@ -711,8 +689,9 @@ Classification is ongoing practice, not one-time assessment.
 - Indexed objectivity (classifications true/false within specified position)
 - Practical utility (distinguishing changeable from unchangeable aids allocation)
 - Cross-domain applicability (same logic for internal/social/institutional constraints)
-- Empirical grounding (developed through systematic testing, open to falsification)
+- Empirical grounding (1,023-constraint corpus with formal invariants, open to falsification)
 - Power-scaling necessity (8.2% collisions without it, 0% with it)
+- Observer-dependence as default (80% of corpus constraints classify differently by position)
 - Tangled Rope prevalence (36% of social, 60%+ of democratic institutions)
 - Lifecycle dynamics (constraints have temporal trajectories)
 
@@ -735,9 +714,35 @@ Classification is ongoing practice, not one-time assessment.
 
 ---
 
+## What We Found When We Tested It
+
+The framework's core thesis — same constraint, different types from different positions — was developed from worked examples and structural reasoning. A 1,023-constraint corpus with formal invariants now provides empirical grounding. Four findings stand out.
+
+**Observer-dependence is the default, not the exception.** Of 1,023 social constraints in the corpus, only 212 — roughly one in five — classify identically from every observer position. The remaining 811 produce different types depending on where the observer stands. Observer-independent classification is the minority case. This means indexical specification isn't a refinement of constraint analysis; it's the baseline requirement. Without it, four out of five classifications are incomplete.
+
+**Extraction always has a cover story.** No extractive constraint in the corpus looks extractive from every position. There is always at least one powerful position — usually the institutional one — from which extraction is invisible, reclassified as legitimate coordination. This is not a flaw in the observer's reasoning; from a position with genuine power to reform or exit a constraint, the extractive features are structurally less relevant. The classification is correct from that position. But the consequence is that extraction persists partly because there is always a vantage point from which it cannot be seen. If every observer saw the snare from every position, reform pressure would be overwhelming.
+
+The cover story is not purely perceptual or purely strategic — it is itself a tangled rope. At moderate benefit levels, the institutional observer genuinely doesn't see the extraction; the structural irrelevance of extractive features from a high-power position produces honest blindness. As benefits increase, the reclassification acquires a strategic dimension — the observer may recognize the extraction but has incentive to maintain the coordination framing. The sincerity of the cover story tracks the benefit level, the same way experienced extraction tracks power. This means the cover story is hardest to dislodge precisely where it matters most: at the highest benefit positions, where genuine belief and strategic interest are structurally entangled.
+
+**Disagreement comes in blocks, not drips.** When observers disagree about a constraint's type, the disagreement is never isolated to a single pair of observers. It always affects at least three observer-pairs simultaneously. This is a structural consequence of power being organized hierarchically: when you cross a power threshold, everyone on one side sees one thing and everyone on the other side sees another. The practical implication is that political and relational disagreements feel like factional blocks — "us vs. them" — not because of tribalism, but because power thresholds create categorical boundaries in what different positions can see.
+
+**The institutional dissenter.** In roughly 44% of the corpus, the institutional observer — the one with generational time horizon and the ability to move between contexts — is the lone voice classifying an extractive constraint as coordination. Everyone else sees a trap; the institution sees a tool. This is the most specific finding: institutional power systematically reclassifies extraction as coordination, not out of malice but out of structural position. The mechanism is the power modifier itself — at π = −0.2, effective extraction can drop below the threshold where it registers as a different type.
+
+**Formal tools used:** These findings were derived using tools from algebraic topology and category theory (presheaf cohomology, Galois connections) to measure the structure of observer disagreement. The mathematics is in the accompanying paper; the findings above are what the mathematics shows.
+
+**Honest limits of these findings:**
+
+These are properties of a specific corpus, not universal constants. The corpus is hand-constructed (with automated generation assistance), not sampled from naturally occurring constraints. A different domain would likely produce different numbers — different ratios, different prevalence rates — but the same kind of structural invariants. The 20/80 split and the 44% institutional-dissenter rate describe this corpus; they should not be cited as base rates for all social constraints.
+
+The sensitivity sweep confirmed the system is stable: 87% of parameters are inert at ±25% perturbation. But the input metrics themselves — extractiveness, theater ratio, suppression — haven't been independently validated. The diagnostic machinery works; the calibration of what feeds it remains an open question.
+
+See the accompanying paper for formal proofs and `validation/validation_report.md` for corpus-level methodology.
+
+---
+
 ## Known Limitations and Failure Modes
 
-**Framework maturity:** Developed over several months, tested on +725 constraint stories across 35+ domains. Shows internal coherence and practical utility. **Not validated through independent replication or peer review.** Corpus-wide audit (February 2026) confirmed several failure modes empirically.
+**Framework maturity:** Developed over several months, tested on 1,023 constraint stories across 35+ domains. Shows internal coherence and practical utility. **Not validated through independent replication or peer review.** Corpus-wide audit (February 2026) confirmed several failure modes empirically.
 
 **Theoretical failure modes:**
 - Classification requires good information (power limits evidence access)
@@ -748,7 +753,7 @@ Classification is ongoing practice, not one-time assessment.
 - Containment feels like giving up (culture demands resolution)
 
 **Empirically confirmed failure modes (corpus audit, February 2026):**
-- **Mountain naturalization:** LLM parsers classify constructed, actively-enforced systems as natural law. 252 of 594 files flagged by Prolog engine's False Mountain report; 96 with extraction > 0.15 directly violating Mountain definition. The framework's core concern — calling extraction "nature" — reproduced by the framework's own implementation pipeline.
+- **Mountain naturalization:** LLM parsers classify constructed, actively-enforced systems as natural law. 252 of 594 files flagged by Prolog engine's False Mountain report; 96 with extraction > 0.25 directly violating Mountain definition. The framework's core concern — calling extraction "nature" — reproduced by the framework's own implementation pipeline.
 - **WHO assignment vulnerability:** Parser reads emotional valence rather than structural power dynamics. Narrative manipulation (narcissistic communication, media framing) inverts beneficiary/victim assignment. No mechanical check catches this; WHO assignment remains irreducible human judgment.
 - **Self-referential blind spot:** LLMs naturalizing AI-related constraints at higher rates than other domains. Confirmed case: AI professional displacement classified as "structural market law" (Mountain) while file's own metrics show ε=0.71, TR=0.55, requires_active_enforcement — all incompatible with Mountain by definition.
 - **Dominant cultural narrative embedding:** Parser adopts most statistically likely English-language frame for contested political situations, embedding editorial bias as classification input. Confirmed in geopolitical constraints (Israel-Gaza, Xi-Mao centralization).
@@ -773,8 +778,8 @@ See `limitations.md` for full empirical findings, `epistemology.md` for methodol
 ---
 
 **End of Core Document**  
-**Version 4.0**  
-**Word count: ~5,500 words**
+**Version 4.1**  
+**Word count: ~6,100 words**
 
 **Next steps:** Read `field_manual.md` for one-page quick reference, then explore domain documents based on interest:
 - **psychology.md** for internal navigation
