@@ -24,8 +24,8 @@ if str(root_path) not in sys.path:
 
 from agent.orchestrator import DRAuditOrchestrator, PipelineResult  # noqa: E402
 
-st.set_page_config(page_title="DR-Audit Studio", layout="wide")
-st.title("DR-Audit Studio")
+st.set_page_config(page_title="Deferential Realism: Process Illustrator", layout="wide")
+st.title("Deferential Realism: Process Illustrator")
 
 # ---------------------------------------------------------------------------
 # Sidebar controls
@@ -110,11 +110,20 @@ if st.button("Run DR Audit", type="primary"):
             except Exception:
                 continue
 
-            # Parse verdict for color banner
-            verdict_match = re.search(r"VERDICT:\s*(.+)", text)
-            verdict = verdict_match.group(1).strip() if verdict_match else ""
-
+            # Prefer JSON sidecar for verdict; fall back to regex on markdown
             label = rpath.stem.replace("_report", "")
+            sidecar_path = rpath.with_suffix(".json")
+            verdict = ""
+            if sidecar_path.exists():
+                try:
+                    sidecar = json.loads(sidecar_path.read_text(encoding="utf-8"))
+                    verdict = sidecar.get("verdict", "")
+                except (json.JSONDecodeError, OSError):
+                    pass
+            if not verdict:
+                verdict_match = re.search(r"VERDICT:\s*(.+)", text)
+                verdict = verdict_match.group(1).strip() if verdict_match else ""
+
             if "GREEN" in verdict.upper():
                 st.success(f"{label}: {verdict}")
             elif "YELLOW" in verdict.upper():

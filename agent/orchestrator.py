@@ -707,18 +707,17 @@ class DRAuditOrchestrator:
 
         # YELLOW cases
         tensions = parsed_report.get("tensions", [])
-        convergent = parsed_report.get("convergent_rejections", "none")
+        convergent = parsed_report.get("convergent_rejections", "none") or "none"
 
         # YELLOW with convergent rejections → iterate
         if convergent.lower() != "none":
             return True
 
         # YELLOW with low confidence → iterate
-        confidence = parsed_report.get("classification", {}).get("confidence", 1.0)
-		if confidence is None:
-            return False
-
-        if confidence < 0.3:
+        # Note: .get("confidence", 1.0) only defaults when key is MISSING;
+        # JSON sidecars can have explicit null, so guard against None.
+        confidence = parsed_report.get("classification", {}).get("confidence")
+        if confidence is not None and confidence < 0.3:
             return True
 
         # YELLOW with only expected-conflict codes and no tensions → accept
